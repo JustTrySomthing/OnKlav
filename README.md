@@ -94,12 +94,14 @@ and app interface screenshots are from development builds. Select an image to en
 
 ## Themes
 
-Choose a built-in look under **Settings → Appearance**. These previews show
-the wallpapers included with each preset.
+Choose a built-in look under **Settings → Appearance**. The same conversation
+looks different in each preset, from the wallpaper and header accent to the
+message bubbles and their text.
 
-| Starry Nights | Neon Synthwave | The Great Wave | Water Lilies |
-| :---: | :---: | :---: | :---: |
-| <a href="android/shared/src/main/assets/backgrounds/starry.webp"><img src="android/shared/src/main/assets/backgrounds/starry.webp" width="155" alt="Starry Nights, a Van Gogh-inspired night sky"></a> | <a href="android/shared/src/main/assets/backgrounds/synthwave.webp"><img src="android/shared/src/main/assets/backgrounds/synthwave.webp" width="155" alt="Neon Synthwave, a retro neon landscape"></a> | <a href="android/shared/src/main/assets/backgrounds/greatwave.webp"><img src="android/shared/src/main/assets/backgrounds/greatwave.webp" width="155" alt="The Great Wave, a stylized ocean wave"></a> | <a href="android/shared/src/main/assets/backgrounds/waterlilies.webp"><img src="android/shared/src/main/assets/backgrounds/waterlilies.webp" width="155" alt="Water Lilies, a painterly pond"></a> |
+<a href="artwork/github-previews/message-themes.webp"><img src="artwork/github-previews/message-themes.webp" width="680" alt="Four illustrated message conversations showing Starry Nights in gold, Neon Synthwave in purple, The Great Wave in light blue, and Water Lilies in mint"></a>
+
+*Illustrated previews using OnKlav’s built-in wallpapers and message colors.*
+You can also save and share your own [theme packages](docs/THEME-PACKAGES.md).
 
 ## Included games
 
