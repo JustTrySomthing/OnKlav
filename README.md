@@ -6,29 +6,23 @@
 
 *Pronounced “Enclave,” a protected, self-contained territory.*
 
-OnKlav puts you in control of more of your Android experience. Set up a desktop
-that works for you, install apps and games shared directly by their creators,
-and get free access to built-in tools, games, and public-domain books. You can
-do more on your phone with less reliance on Google Play.
+**[Download OnKlav for Android · 133 MB APK](https://github.com/JustTrySomthing/OnKlav/releases/download/v0.101.49-rc1/OnKlav-0.101.49-RC.apk)** · [Release notes and SDK downloads](https://github.com/JustTrySomthing/OnKlav/releases/tag/v0.101.49-rc1)
+
+**Android 10+ · ARM64 · Prerelease 0.101.49-rc1 · 39 built-in apps and tools · 8 games**
+
+OnKlav puts you in control of more of your Android experience. Customize your
+desktop, share and install apps and games directly, and discover free tools,
+games, ebooks, and audiobooks with less reliance on Google Play.
 
 **Messaging is at the heart of OnKlav.** Keep your closest friends and family
 a tap away with built-in Messages and Groups. Share photos and everyday updates,
-or turn a text exchange into a turn-based game with a friend.
+or invite a friend to a turn-based game.
 
-Organize your everyday tools, listen to live radio streams from around the world
-and transform them into hypnotic visualizations, or play a bundled game offline.
-OnKlav runs inside Android and includes both App and Game SDKs.
+Listen to live radio streams from around the world and transform them into
+hypnotic visualizations, or play a bundled game offline. Everything runs inside
+Android from one optimized, signed APK.
 
-**[Download OnKlav for Android · 133 MB APK](https://github.com/JustTrySomthing/OnKlav/releases/download/v0.101.49-rc1/OnKlav-0.101.49-RC.apk)** · [Release notes and SDK downloads](https://github.com/JustTrySomthing/OnKlav/releases/tag/v0.101.49-rc1)
-
-Start with the essentials in one optimized, signed APK. Get **39 built-in apps
-and tools** for messaging, browsing, files, listening, and editing, plus **8 games**.
-They’re ready to open after installation.
-
-This **0.101.49-rc1** prerelease supports ARM64 devices running Android 10 or newer.
-Download the APK, open it on Android, and follow the installation prompt.
-
-[See OnKlav in action](#see-onklav) · [Themes](#themes) · [Included games](#included-games) · [Included apps](#included-apps) · [Make, share, and install](#make-share-and-install)
+[Install and set up](#install-and-set-up) · [See OnKlav in action](#see-onklav) · [Themes](#themes) · [Games](#included-games) · [Apps](#included-apps) · [Contribute](#help-improve-onklav)
 
 ## Keep your favorite people one tap away
 
@@ -48,17 +42,18 @@ Download the APK, open it on Android, and follow the installation prompt.
   to individual messages, and reply with animated emoji reactions.
 - **Share with your circle.** [Real Social](docs/REAL-SOCIAL.md) lets you share
   posts, replies, and media directly with accepted friends over SMS and MMS.
+  Carrier charges may apply.
 
-On first launch, follow OnKlav’s setup checklist. To use Messages for SMS and MMS,
-choose OnKlav as the default messaging app when Android asks and review the
-requested permissions. Then open Messages or Groups and start a conversation.
-Setup can be finished later from Settings.
+## Install and set up
+
+1. Download the signed APK, open it on your Android device, and follow the installation prompt.
+2. Open OnKlav and follow its setup checklist. For SMS and MMS, choose OnKlav as the
+   default messaging app when Android asks and review the requested permissions.
+3. Open **Messages** or **Groups** to start a conversation, or explore **Apps** and
+   **Games**. You can finish setup later from Settings.
 
 ## What to try first
 
-- **Start with your favorite people.** Open Messages or Groups to text your
-  friends and family. Pin the conversations you return to, share photos and
-  files, and listen to individual messages with Read Aloud.
 - **Set up your own space.** Put your favorite apps within reach and give the
   desktop a look you can save and share with [theme packages](docs/THEME-PACKAGES.md).
 - **Find your next free read or listen.** Browse free ebooks from Project
@@ -204,21 +199,14 @@ Find these built-in tools on the Apps desktop or bottom navigation.
   </tr>
 </table>
 
-## Built for everyday use
-
-- **Keep your tools together.** Install signed `.onklav-a` apps and `.onklav-g`
-  games inside OnKlav. It runs them in sandboxed environments and mediates
-  access to supported device capabilities.
-- **Stay in touch.** Use Messages and Groups for SMS and MMS. [Real Social](docs/REAL-SOCIAL.md)
-  shares posts and replies with accepted friends over SMS, and uses MMS for media attachments.
-  Carrier charges may apply.
 ## Make, share, and install
 
 Build the app, utility, or game you want using the [App SDK](developer/README.md)
 or [Game SDK](developer/games/README.md). Sign your package, then share the file
 directly with friends or publish it wherever you like. Once OnKlav is installed,
 its apps and games install **inside OnKlav without separate APKs or a Google Play
-Store listing**.
+Store listing**. OnKlav runs signed packages in sandboxed environments and
+mediates access to supported device capabilities.
 
 1. **Get the package.** Use a signed file you made, downloaded, or received from someone else.
 2. **Open OnKlav’s installer.** For an app (`.onklav-a`), go to **Settings → Apps → Install App**.
@@ -262,7 +250,7 @@ Try the prerelease and [report a bug](https://github.com/JustTrySomthing/OnKlav/
 improve a guide or share a theme, or contribute code. The
 [contributor guide](CONTRIBUTING.md) explains setup, tests, and pull requests.
 Browse [good first issues](https://github.com/JustTrySomthing/OnKlav/labels/good%20first%20issue)
-if you’d like a small place to start.
+if you’d like a small place to start. [SDK checks](https://github.com/JustTrySomthing/OnKlav/actions/workflows/sdk-checks.yml) run on pull requests.
 
 ## License
 
