@@ -1,0 +1,183 @@
+{
+  "version": "0.100.12-rc1",
+  "scope": "Focused Android framework host and headless UI checks; phone/provider acceptance separate",
+  "checks": {
+    "FileSelectionTest.revokedAccessKeepsUnfiledSaveAndFolderSelectionUsesTheSharedBrowser": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.12/initial-functional.log"
+    },
+    "FileSelectionTest.connectedFoldersUseTheSameFilesLocationsAndRespectRemovedAndroidGrants": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.12/initial-functional.log"
+    },
+    "FileSelectionTest.actualSignedFilesControllerSelectsOneReadableFileWithoutCopyingOrExposingPaths": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.12/initial-functional.log"
+    },
+    "FileSelectionTest.defaultContractsLaunchOnlyOurNonExportedHostPickerAndPreserveResults": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.12/initial-functional.log"
+    },
+    "FileSelectionTest.saveCommitUsesRustImportAndUpdatesRealListingSizeWhileKeepingNamesUnique": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.12/initial-functional.log"
+    },
+    "FileSelectionTest.filtersAndNamesRejectUnsupportedTypesWithoutHidingFolders": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.12/initial-functional.log"
+    },
+    "PhotoCanvasTest.transformedImageIsClippedInsideCanvasWithRealTransparentEdges": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.12/geometry-and-save-review.log"
+    },
+    "PhotoCanvasTest.rotationScalePerspectiveNeverResizeOrRotateTheCropCanvas": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.12/geometry-and-save-review.log"
+    },
+    "PhotoCanvasTest.fitAndResetChangeImageOnlyAndPrecisionCombinesLegacyQuarterTurns": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.12/geometry-and-save-review.log"
+    },
+    "PhotoCropConsistencyTest.extremePerspectiveDoesNotCollapseOrInvertTheVisibleSelection": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.12/initial-functional.log"
+    },
+    "PhotoCropConsistencyTest.cropContextIncludesAllEditsAndSelectedPixelsMatchExport": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.12/initial-functional.log"
+    },
+    "PhotoCropConsistencyTest.transformedHandlesUseInverseMappingAndPreserveEveryOtherEdit": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.12/initial-functional.log"
+    },
+    "PhotoCropUiTest.returningToCropShowsGeometryColorAndEffectsAndKeepsHandlesUsable": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.12/android-host-check.log"
+    },
+    "PhotoEditorHostTest.geometryHandlesAndColorEffectsHaveRealOutput": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.12/initial-functional.log"
+    },
+    "PhotoEditorHostTest.tonesTransparencyAndParameterRoundTrip": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.12/initial-functional.log"
+    },
+    "PhotoEditorHostTest.cropHandlesClampMoveAndKeepOtherEdits": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.12/initial-functional.log"
+    },
+    "PhotoEditorHostTest.geometryPreservesOriginalAndFlipsActualPixels": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.12/initial-functional.log"
+    },
+    "PhotoEditorUiTest.editingToolsAndExportAreReachable": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.12/android-host-check.log"
+    },
+    "PhotoEffectsTest.fourLooksHaveDistinctGradingAndZeroStrengthIsNeutral": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.12/initial-functional.log"
+    },
+    "PhotoEffectsTest.hdrAddsStructureWithoutLiftingBlacksOrWashingTonalRange": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.12/initial-functional.log"
+    },
+    "PhotoEffectsTest.renderedLookContactSheet": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.12/initial-functional.log"
+    },
+    "PhotoEffectsTest.hdrDoesNotDrawHalosAroundHardEdges": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.12/initial-functional.log"
+    },
+    "PhotoEffectsTest.sharpeningHasVisibleStrengthWithoutChangingFlatAreasOrAlpha": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.12/initial-functional.log"
+    },
+    "PhotoSaveTest.processInterruptionJournalRecoversOriginalOnNextLaunch": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.12/android-host-check.log"
+    },
+    "PhotoSaveTest.changedSourcesAndRevokedAccessNeverOverwriteTheCurrentImage": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.12/android-host-check.log"
+    },
+    "PhotoSaveTest.saveChangesReplacesNamedImageAndRetainsPreviousVersionInTrash": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.12/android-host-check.log"
+    },
+    "PhotoSaveTest.failureAfterArchivingRestoresOriginalAndNeverLosesEitherImage": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.12/android-host-check.log"
+    },
+    "PhotoCanvasTest.fitCentersPerspectiveWithinTheSelectedCanvas": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.12/geometry-and-save-review.log"
+    },
+    "PhotoProviderSaveTest.revocationAfterOpeningDestinationDoesNotAttemptAnotherWrite": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.12/provider-final.log"
+    },
+    "PhotoProviderSaveTest.providerFailureRestoresOriginalWhenPermissionStillAllowsIt": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.12/provider-final.log"
+    },
+    "PhotoProviderSaveTest.writableProviderRetainsPreviousBytesAndSaveBackUsesOriginalFormat": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.12/provider-final.log"
+    },
+    "PhotoSaveTest.interruptedOpenNeverBindsNewSourceToThePreviousTarget": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.12/android-host-check.log"
+    }
+  },
+  "corrections": [
+    "Vector icons replace unavailable Material imports",
+    "Rotate actions moved into visible menu area",
+    "External backup creates recovery directory",
+    "Interrupted Open preserves source/target binding"
+  ],
+  "lint": {
+    "status": "passed",
+    "severity_counts": {
+      "Warning": 285,
+      "Information": 1
+    },
+    "evidence": "docs/evidence/v0.100.12/full-lint-recovered.log",
+    "initial_failure": "Gradle binary dependency cache; fresh daemon rerun passed"
+  },
+  "apk": {
+    "status": "passed",
+    "version": "0.100.12-rc1",
+    "version_code": 121,
+    "sha256": "e61fc91e130294daca0c37cbe4d0eca9c11b436b0f7de0fc7c01d868f59fabd8",
+    "bytes": 102302582,
+    "signer_sha256": "6ed975c5fc27d19f6291f751a8bb00fa8a2c2e7d268bffc7b6ddf7e1b1a7a69d",
+    "defined_classes_verified": [
+      "app/onklav/home/PhotoCanvasPreviewKt",
+      "app/onklav/home/PhotoImageSave",
+      "app/onklav/home/PhotoCropFrameKt",
+      "app/onklav/home/ExoRadioStream",
+      "androidx/media3/exoplayer/hls/HlsMediaSource",
+      "app/onklav/shared/Mp3Codec",
+      "app/onklav/home/FileBrowserActivity",
+      "app/onklav/home/VideoEditorModel"
+    ],
+    "standard_proof": "docs/apk-verification-debug.json"
+  },
+  "runtime_bundle": {
+    "compiled_kotlin_classes": 3148,
+    "stale": 0
+  },
+  "remaining_acceptance": [
+    "Real-phone touch and large-image memory",
+    "External provider close/process interruption",
+    "Previously documented phone/carrier gates"
+  ],
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/PhotoEditor.kt": "cedef4b0f07dfdc11676d7a09edca5ad2cd70fcdaac16a67c8f9bf871e01148b",
+    "android/app/src/main/kotlin/app/onklav/home/PhotoCropFrame.kt": "723d3f8dd72fce66f4089ec264d91e0d9994b9ce20ec751e3a52f69819847528",
+    "android/app/src/main/kotlin/app/onklav/home/PhotoCanvasPreview.kt": "a1a56e4f332b02ac8ec18860f9be0188d2ea73e0ba14e37b23a630d1eadfd5e4",
+    "android/app/src/main/kotlin/app/onklav/home/PhotoImageSave.kt": "9aafb8ca4c441bbcbcf9b265b2b9ef70691b81639f90aa9b1a384f4fd0071c48"
+  }
+}

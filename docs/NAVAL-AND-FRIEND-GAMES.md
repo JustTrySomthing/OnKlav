@@ -1,0 +1,11 @@
+# Naval Battle and SMS friend games —0.100.48/code157
+
+Air Hockey now has one wide Start action and Single Player Only beneath it. Naval Battle, Cats vs Dogs and Blackjack retain Single Player and Play a Friend. Catalog and Messages magic wand use one native contact/app-check/invitation/acceptance flow, based on the inspected Inner Circle reference. The readable question asks whether the friend has OnKlav. Machine data uses the new scoped OnKlav protocol; legacy Java was not copied into the app.
+
+Naval Battle is rebuilt in the shared Godot4.7.2 engine: five ships (5/4/3/3/2), manual touch placement, dock/board dragging, tap rotation, random legal setup, own/enemy tabs, coordinate labels, target preview and Fire confirmation, hit/miss/sunk feedback, private friend fleets, solo hunt/target computer, winner/loser state and saved return. All shots alternate turns, including hits. Opponent ships are never transmitted in friend games. Existing valid built-in web Naval saves migrate once without deleting originals; invalid saves remain untouched. Native reference-app saves are not imported.
+
+The same canonical toolbar, centered dialogs, music/effects, silent options, direct Pause/Play and New/Resume flow apply to every bundled game and SDK template. Shared helpers and controls fingerprints are checked during export. SDK0.5 introduces signed play_modes and a constrained native SMS broker; developer guidance is in developer/games/SMS-TURNS.md. Users install/share independently, without platform-owner approval. Hockey is deliberately excluded from SMS because it needs real-time play.
+
+Cats vs Dogs preserves side selection and legal alternating drops. Friend Blackjack is ten equal-player hands, alternating first player, no betting/dealer, hidden opponent first card until the hand finishes; the inviter starts the next hand. Its public deterministic deal is not cryptographic anti-cheat.
+
+Verification evidence is under docs/evidence/game-sdk and developer/games/VERIFICATION.json. No APK was requested for this increment;0.100.47/code156 remains the last built APK and does not contain this source. Physical two-phone/SIM delivery, touch feel, speaker audio and device performance remain to be accepted on157.

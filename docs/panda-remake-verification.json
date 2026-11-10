@@ -1,0 +1,153 @@
+{
+  "scope": "Crash Test Panda preinstalled first, full solo/friend build-launch campaign and polish",
+  "panda_model_checks": 706,
+  "all_game_checks": {
+    "rules_checks": 12,
+    "hockey_checks": 80,
+    "naval_turn_checks": 247,
+    "cats_dogs_checks": 361,
+    "blackjack_checks": 179,
+    "panda_checks": 706
+  },
+  "android_tests": [
+    {
+      "name": "app.onklav.home.FriendGamesTest",
+      "tests": 9,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "name": "app.onklav.shared.NativeBridgeTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "name": "app.onklav.shared.Mp3CodecTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "name": "app.onklav.shared.ThemePackageTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "name": "app.onklav.shared.LauncherLayoutTest",
+      "tests": 8,
+      "failures": 0,
+      "errors": 0
+    }
+  ],
+  "android_runtime_bundle_matches": true,
+  "solo_browser": [
+    {
+      "viewport": [
+        432,
+        800
+      ],
+      "original_music_rms": 0.003635065737242203,
+      "touch_pull_aim_launch": true,
+      "pause_freezes_physics_music": true,
+      "shockwave_consumes_charge_and_real_score": true,
+      "midflight_json_restore": true,
+      "drag_rotate_reposition_reserve": true,
+      "random_reset_fill": true,
+      "saved_draft_new_resume": true,
+      "master_mute": true,
+      "errors": []
+    },
+    {
+      "viewport": [
+        320,
+        560
+      ],
+      "original_music_rms": 0.022501162045285943,
+      "touch_pull_aim_launch": true,
+      "pause_freezes_physics_music": true,
+      "shockwave_consumes_charge_and_real_score": true,
+      "midflight_json_restore": true,
+      "drag_rotate_reposition_reserve": true,
+      "random_reset_fill": true,
+      "saved_draft_new_resume": true,
+      "master_mute": true,
+      "errors": []
+    }
+  ],
+  "friend_browser": {
+    "isolated_players": true,
+    "paired_round_and_reversed_builders": true,
+    "same_fixed_step_final_blocks_and_scores": true,
+    "paused_arrival_silent": true,
+    "future_next_queued_behind_flight": true,
+    "powers_and_timeout_turns": true,
+    "duplicate_delivery_no_cues": true,
+    "native_sequence_saved_return": true,
+    "real_carrier_tested": false,
+    "errors": []
+  },
+  "source_sha256": {
+    "games/engine-checks/panda/model.gd": "481a830f3171dd4cfb0cb604e1bbbe8bfa0c2a719c8324c95db439b96368f2bf",
+    "games/engine-checks/panda/main.gd.uid": "9e337b897040a25e9bbcc3d79ef9f2bb574f9ade5cd3e2635c940224e8d4f282",
+    "games/engine-checks/panda/hud.gd.uid": "450e0506119ba50bae0addf631eb32cef7b63d20927bbb947d0d0301c09e48bd",
+    "games/engine-checks/panda/tests.gd.uid": "eafff06b10f03e3a257a39b18233627dce96c3ef8748108cb05e548f84c3d974",
+    "games/engine-checks/panda/model.gd.uid": "c752cd7b78eb82b0fac2c125c508b7cb466cc969e12cdebf30a45f116c477070",
+    "games/engine-checks/panda/main.gd": "2bd5876d8f1b973cc86fc54a746ccbb4e6fa2bb516a836a706c7258ece943bb0",
+    "games/engine-checks/panda/tests.gd": "b9c39fd0a87ba98a8ba3fec53caa8d4092d06225219a336b8ffa1eb19c025dad",
+    "games/engine-checks/panda/hud.gd": "d7b658951488b9817056d71817a1b0da0fe3dfa974bef4a3c9c5266128b0a178",
+    "games/engine-checks/panda/arena.gd": "48eda2898544a116ca4bf53bcb8a491ca1693a41425bb9bb15b6795b73ed6a18",
+    "games/engine-checks/panda/physics.gd": "5e4e296dbce6c7665ff6f1b3bb7aa0bd18ff0fdaf2685f9039270b78e9500301",
+    "games/engine-checks/panda/audio.gd": "c1ed3e0cc952aae9be2e4067088924d6a59cf2d6c68af6ce5b369f09b81b6032",
+    "games/engine-checks/panda/arena.gd.uid": "a10a673bdbb98fb76fecc3aa12a8393c07a3e7a2dc0207720a9ca9bd8fe7456c",
+    "games/engine-checks/panda/audio.gd.uid": "b8c299dd121522deb7a2172874d3ab7e76be8b631356dce082d57a6930403df3",
+    "games/engine-checks/panda/physics.gd.uid": "70652aae3a2673229b7d3bca6162c1b792c57f916cd452c94acaef0cf7114216",
+    "games/engine-checks/panda/audio/panda_block.wav": "eaf22437f146f8e291b7bc1be01464401fa53b19bacbb321e7504ec5f4d12f45",
+    "games/engine-checks/panda/audio/music0.ogg": "621ab5f83ee30603bf7dabb307bcb11dacfedfe382f8bb4a6291df42be43069d",
+    "games/engine-checks/panda/audio/music1.ogg.import": "966bb49891b9a14f0eb9cb3be0351a572d17aefe9737842b4fcb9ca3e09c0c73",
+    "games/engine-checks/panda/audio/panda_pull.wav.import": "3a66abb0b3979d037b720b0077d13b2ff09fd4037c1003f32643c0a6b19abac8",
+    "games/engine-checks/panda/audio/music1.ogg": "e33cc1c0564052f82ebb580d2a4b3aca5d963687135c71ced4b0206110c5b60b",
+    "games/engine-checks/panda/audio/panda_hit.wav.import": "00285352b3651af5a7c700aa949421a499bd95c7a33734b72478690227834cfe",
+    "games/engine-checks/panda/audio/panda_launch.wav.import": "a598faeaa83511ff0fc5dfa83eda0903a95d09ae678b68a1ca65de5da2038bc9",
+    "games/engine-checks/panda/audio/panda_launch.wav": "aa5e551e3f0158af474fe9658c004c87e4b638329be1ff4df30d8dd711976990",
+    "games/engine-checks/panda/audio/panda_block.wav.import": "1325182432ce6e29284d5bacc2af1880fec3e24eafbc23490c64275751a233c2",
+    "games/engine-checks/panda/audio/music2.ogg": "9a200b685f38a9209d07af1ea384d3a498bc06cce84367b77ef60f66255f21c8",
+    "games/engine-checks/panda/audio/music0.ogg.import": "9e961922cd0e9eee453ded256f6f9ae4121a2ba3694cc59a9ac96f24f4a99686",
+    "games/engine-checks/panda/audio/panda_pull.wav": "7c1e9af68c53f1bb390de63aeeb8c270b8062fb32bf556614bb82d5d5a73b782",
+    "games/engine-checks/panda/audio/panda_hit.wav": "005fde0c3027b7ac40a68a078f9367d81f2938b6f3596ebd52de146bb5386f7e",
+    "games/engine-checks/panda/audio/music2.ogg.import": "de39feca6da068ce20c76308d12ffa84f456995766603604ef811e705b720fc6",
+    "games/engine-checks/panda/art/background.webp.import": "801a06e219caafa3504c22484fb4b07290fb73b209c342369b651f4f5c44764d",
+    "games/engine-checks/panda/art/background2.webp": "51f7d76d8240944e68e3a09a034f2b9eeb1dd39aa96472a72bb1c1f7342bcf6d",
+    "games/engine-checks/panda/art/piece2.webp": "bfaab967c9da46f67f3e90b5d0b8bae1bd5c4041f1b1b6d45ef3fc8e70bb0e32",
+    "games/engine-checks/panda/art/piece1.webp": "2c594744810cafbe213fc3f8ec70285d4c60a1175d7d046e0dd724467fee647b",
+    "games/engine-checks/panda/art/icon.webp": "bc6b2d825d65ee7687b719aefec315a96af47a760416a07612833db55c3b13c6",
+    "games/engine-checks/panda/art/background3.webp": "e7a959d26e29dbfc6db06d6a762b13d85cacc3f5113e6adad6febf79a1614817",
+    "games/engine-checks/panda/art/background.webp": "7caaca9e3679e2c2e2e1581f09a403704165cbc6bc777cc4528009fc34611416",
+    "games/engine-checks/panda/art/background3.webp.import": "57a823105923a5ae06cdf24f03205f26b774b37a4784fd8408b3661f63e0454b",
+    "games/engine-checks/panda/art/background2.webp.import": "631f5559913683fe4c2792e615d45187c3630926248605bee04e31fb67e4ab1d",
+    "games/engine-checks/panda/art/piece1.webp.import": "41f68914374bdaf238d4e27aba22867905745b30a074a16b8e9ef3c267bf955c",
+    "games/engine-checks/panda/art/piece2.webp.import": "bebc9bd42b9f698fc1c0d911c932c90aaec419e0ca8c06c014c8bba7ca7908b1",
+    "games/engine-checks/panda/art/icon.webp.import": "dcfa96c8729bb786053d6d2434d5012f48b96fa8de3fb3abc201dd900e0b4d6d",
+    "android/app/src/main/kotlin/app/onklav/home/Catalog.kt": "0686667be752fccbcef0301ea894f106d2d8c36702dad45611f1636dda90dbc2",
+    "android/app/src/main/kotlin/app/onklav/home/GamesCatalog.kt": "55dbbee287310cb27c70233e416bf4ae3e4e553e3cd64e5fc934bd6538736aaa",
+    "android/app/src/main/kotlin/app/onklav/home/WebGameActivity.kt": "f149cf60aa9204afee1bdfb7c6c352a241ec0d542b4b226fdff2d90e5c80ba97",
+    "android/app/src/main/kotlin/app/onklav/home/FriendGames.kt": "eb157b292e150c27bab47f220fd3b8a31118ebf651f205ef1bc0df5c9cd25831",
+    "android/app/src/main/kotlin/app/onklav/home/FriendGameWire.kt": "091c8d8c57693ea739bda4c4ab19096dc0bb4e86bc0dfcef8a32e1bad3ab96e2"
+  },
+  "shared_helpers_match_templates": true,
+  "post_friend_test_change": "Only larger fireworks/rings and winner portrait; model, physics, intent processing and save restore are unchanged. Final solo checks and shared build cover that visual update.",
+  "attempt_notes": [
+    "Corrected angular perpendicular direction in the adapted solver.",
+    "Normalized JSON enum/score numbers and queued actor IDs for save adoption.",
+    "Added pt1 to the native invitation grammar after a focused test caught the missing registration.",
+    "Added a one-time first-game migration while retaining unknown installed IDs and subsequent owner reordering.",
+    "Fixed an absent UI metadata key log; friend flow passed with no script/browser errors.",
+    "Reload verification waits for actual IndexedDB commit instead of an unreliable fixed600ms delay; no shared SDK source change was made."
+  ],
+  "apk_built": true,
+  "latest_delivered_apk": "0.100.51-rc1/code160",
+  "physical_phone_performance_accessibility_and_carrier": "pending",
+  "assets": "Original Panda art/effects; original melodies newly arranged offline; no new library or permission",
+  "apk_evidence": "docs/apk51-verification.json"
+}

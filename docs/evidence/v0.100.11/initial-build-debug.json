@@ -1,0 +1,27 @@
+{
+  "plan": {
+    "sdk_apps": "reuse",
+    "mobile_rust": "reuse",
+    "games": "reuse",
+    "android_tests": "not requested",
+    "variant": "debug",
+    "abis": [
+      "arm64-v8a"
+    ]
+  },
+  "phases": [
+    {
+      "phase": "assemble-debug",
+      "seconds": 49.79,
+      "returncode": 0,
+      "log": "docs/evidence/v0.100.11/assemble-debug.log"
+    },
+    {
+      "phase": "verify-debug",
+      "seconds": 1.32,
+      "returncode": 1,
+      "log": "docs/evidence/v0.100.11/verify-debug.log"
+    }
+  ],
+  "status": "failed"
+}

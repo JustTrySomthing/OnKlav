@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.WriteEnglishTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-29T15:58:13" hostname="3d3a46c2e56a" time="5.289">
+  <properties/>
+  <testcase name="bundledDictionaryChecksInflectionsAndCommonMisspellingsWithoutAndroidService" classname="app.onklav.home.WriteEnglishTest" time="4.994"/>
+  <testcase name="suggestionsNeverBecomeFormattingOrSilentlyRewriteDocument" classname="app.onklav.home.WriteEnglishTest" time="0.2"/>
+  <testcase name="englishGrammarRetainsOffsetsAndLeavesUrlsCodeAndValidArticlesAlone" classname="app.onklav.home.WriteEnglishTest" time="0.095"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

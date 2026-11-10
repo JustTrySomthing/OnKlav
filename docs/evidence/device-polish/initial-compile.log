@@ -1,0 +1,202 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.11.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :android:app
+WARNING: The option setting 'android.aapt2FromMavenOverride=/workspace/scratch/d853f89e99b7/android-env/sdk/build-tools/35.0.0/aapt2' is experimental.
+WARNING: platform-tools package is not installed.
+
+> Task :android:app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:app:preBuild UP-TO-DATE
+> Task :android:app:preDebugBuild UP-TO-DATE
+> Task :android:games:preBuild UP-TO-DATE
+> Task :android:games:preDebugBuild UP-TO-DATE
+> Task :android:games:writeDebugAarMetadata UP-TO-DATE
+> Task :android:shared:preBuild UP-TO-DATE
+> Task :android:shared:preDebugBuild UP-TO-DATE
+> Task :android:shared:writeDebugAarMetadata UP-TO-DATE
+> Task :android:tools:preBuild UP-TO-DATE
+> Task :android:tools:preDebugBuild UP-TO-DATE
+> Task :android:tools:writeDebugAarMetadata UP-TO-DATE
+> Task :android:app:checkDebugAarMetadata UP-TO-DATE
+> Task :android:app:generateDebugResValues UP-TO-DATE
+> Task :android:games:generateDebugResValues UP-TO-DATE
+> Task :android:games:generateDebugResources UP-TO-DATE
+> Task :android:games:packageDebugResources UP-TO-DATE
+> Task :android:shared:generateDebugResValues UP-TO-DATE
+> Task :android:shared:generateDebugResources
+> Task :android:shared:packageDebugResources
+> Task :android:tools:generateDebugResValues UP-TO-DATE
+> Task :android:tools:generateDebugResources UP-TO-DATE
+> Task :android:tools:packageDebugResources UP-TO-DATE
+> Task :android:app:mapDebugSourceSetPaths
+> Task :android:app:generateDebugResources UP-TO-DATE
+> Task :android:app:mergeDebugResources
+> Task :android:app:packageDebugResources UP-TO-DATE
+> Task :android:app:parseDebugLocalResources UP-TO-DATE
+> Task :android:app:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :android:app:extractDeepLinksDebug UP-TO-DATE
+> Task :android:games:extractDeepLinksDebug UP-TO-DATE
+> Task :android:games:processDebugManifest UP-TO-DATE
+> Task :android:shared:extractDeepLinksDebug UP-TO-DATE
+> Task :android:shared:processDebugManifest UP-TO-DATE
+> Task :android:tools:extractDeepLinksDebug UP-TO-DATE
+> Task :android:tools:processDebugManifest UP-TO-DATE
+> Task :android:app:processDebugMainManifest UP-TO-DATE
+> Task :android:app:processDebugManifest UP-TO-DATE
+> Task :android:app:processDebugManifestForPackage UP-TO-DATE
+> Task :android:games:compileDebugLibraryResources UP-TO-DATE
+> Task :android:games:parseDebugLocalResources UP-TO-DATE
+> Task :android:games:generateDebugRFile UP-TO-DATE
+> Task :android:shared:parseDebugLocalResources
+> Task :android:shared:compileDebugLibraryResources
+> Task :android:tools:compileDebugLibraryResources UP-TO-DATE
+> Task :android:tools:parseDebugLocalResources UP-TO-DATE
+> Task :android:tools:generateDebugRFile UP-TO-DATE
+> Task :android:games:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:shared:generateDebugRFile
+> Task :android:games:compileDebugKotlin UP-TO-DATE
+> Task :android:games:javaPreCompileDebug UP-TO-DATE
+> Task :android:games:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:games:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :android:shared:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:app:processDebugResources
+> Task :android:shared:javaPreCompileDebug UP-TO-DATE
+> Task :android:tools:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:tools:javaPreCompileDebug UP-TO-DATE
+
+> Task :android:shared:compileDebugKotlin
+w: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/Chrome.kt:266:24 'var statusBarColor: Int' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/Chrome.kt:267:24 'var navigationBarColor: Int' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/Chrome.kt:268:65 'var isStatusBarContrastEnforced: Boolean' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/LauncherLayout.kt:4:27 Non-public primary constructor is exposed via the generated 'copy()' method of the 'data' class.
+
+The generated 'copy()' will change its visibility in future releases.
+
+To suppress the warning do one of the following:
+- Annotate the data class with the '@ConsistentCopyVisibility' annotation.
+- Use the '-Xconsistent-data-class-copy-visibility' compiler flag.
+- Annotate the data class with the '@ExposedCopyVisibility' annotation 
+  (Discouraged, but can be used to keep binary compatibility).
+
+To learn more, see the documentation of the '@ConsistentCopyVisibility' and '@ExposedCopyVisibility' annotations.
+
+This will become an error in Kotlin 2.2.
+
+> Task :android:shared:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:shared:bundleLibCompileToJarDebug
+> Task :android:tools:compileDebugKotlin
+> Task :android:tools:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:tools:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :android:app:compileDebugKotlin
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/CameraScreen.kt:108:1258 Unresolved reference 'camera_switch_arrows'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/ClockScreen.kt:61:106 Unresolved reference 'AvTimer'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:43:112 Unresolved reference 'export'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:44:175 Unresolved reference 'cancel'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:44:354 Unresolved reference 'cancel'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:122:426 Unresolved reference 'cancel'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:193:26 Unresolved reference 'tick'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:193:41 Unresolved reference 'tick'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:193:51 Unresolved reference 'player'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:193:69 Unresolved reference 'player'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:193:81 Unresolved reference 'playing'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:193:95 Unresolved reference 'dropPlaybackFocus'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:194:28 Unresolved reference 'busy'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:194:34 Unresolved reference 'project'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:194:65 Unresolved reference 'destination'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:194:81 'fun launch(context: CoroutineContext = ..., start: CoroutineStart = ..., block: suspend CoroutineScope.() -> Unit): Job' is deprecated. 'launch' can not be called without the corresponding coroutine scope. Consider wrapping 'launch' in 'coroutineScope { }', using 'runBlocking { }', or using some other 'CoroutineScope'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:194:88 Argument type mismatch: actual type is 'String', but 'CoroutineContext' was expected.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:195:23 Unresolved reference 'getApplication'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:196:13 Unresolved reference 'authorize'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:196:33 Unresolved reference 'store'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:196:142 Unresolved reference 'project'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:196:150 Unresolved reference 'store'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:196:163 Unresolved reference 'project'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:197:43 Unresolved reference 'getApplication'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:197:109 Unresolved reference 'getApplication'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:197:160 Unresolved reference 'project'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:197:253 Unresolved reference 'project'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:197:768 Unresolved reference 'transformer'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:197:808 Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+val ViewModel.viewModelScope: CoroutineScope
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:197:889 Unresolved reference 'path'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:198:17 Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+val ViewModel.viewModelScope: CoroutineScope
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:198:110 Unresolved reference 'getApplication'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:198:264 Unresolved reference 'progress'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:198:350 Unresolved reference 'status'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:198:360 Unresolved reference 'progress'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:198:388 Unresolved reference 'progress'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:198:433 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:198:453 Unresolved reference 'parentFile'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:198:465 Unresolved reference 'usableSpace'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:200:13 Unresolved reference 'transformer'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:200:30 Unresolved reference 'progress'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:200:43 Unresolved reference 'status'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:201:13 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:201:13 Not enough information to infer type argument for 'T'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:201:41 Unresolved reference 'authorize'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:201:66 Unresolved reference 'getApplication'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:201:148 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:201:148 Not enough information to infer type argument for 'R'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:201:152 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:201:157 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:201:157 Not enough information to infer type argument for 'T'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:201:220 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:201:220 Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun <T : Closeable?, R> T.use(block: (T) -> R): R
+    [R|Contract description]
+     <
+        CallsInPlace(block, EXACTLY_ONCE)
+    >
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:201:224 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:201:308 Unresolved reference 'authorize'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:201:332 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:201:332 Cannot access 'fun <T> PersistentCompositionLocalMap.read(key: CompositionLocal<T>): T': it is internal in file.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:201:344 'operator' modifier is required on 'FirNamedFunctionSymbol kotlin/compareTo' in 'compareTo'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:201:357 Unresolved reference 'write'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:202:26 Unresolved reference 'status'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:202:47 Unresolved reference 'progress'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:203:18 Unresolved reference 'transformer'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:203:40 Unresolved reference 'transformer'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:203:62 Unresolved reference 'delete'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:203:188 Unresolved reference 'getApplication'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:203:241 Unresolved reference 'destination'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:205:21 Unresolved reference 'recording'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:205:31 Unresolved reference 'stopVoiceover'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:205:51 Unresolved reference 'busy'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:205:56 Unresolved reference 'commit'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:205:65 Unresolved reference 'job'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:205:79 Unresolved reference 'transformer'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:206:5 Modifier 'override' is not applicable to 'top level function'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:206:30 Unresolved reference 'compatibleFile'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:206:66 Unresolved reference 'recording'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:206:76 Unresolved reference 'stopVoiceover'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:206:92 Unresolved reference 'job'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:206:106 Unresolved reference 'thumbs'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:206:123 Unresolved reference 'transformer'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:207:1 Syntax error: Expecting a top level declaration.
+
+> Task :android:app:compileDebugKotlin FAILED
+[Incubating] Problems report is available at: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':android:app:compileDebugKotlin'.
+> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+   > Compilation error. See log for more details
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.11.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 1m 14s
+50 actionable tasks: 12 executed, 38 up-to-date

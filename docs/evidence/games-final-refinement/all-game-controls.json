@@ -1,0 +1,22 @@
+[
+  {
+    "game": "naval",
+    "audio_settings_pause_snapshot_and_resume": true,
+    "errors": []
+  },
+  {
+    "game": "four",
+    "audio_settings_pause_snapshot_and_resume": true,
+    "errors": []
+  },
+  {
+    "game": "blackjack",
+    "audio_settings_pause_snapshot_and_resume": true,
+    "errors": []
+  },
+  {
+    "game": "panda",
+    "audio_settings_pause_snapshot_and_resume": true,
+    "errors": []
+  }
+]

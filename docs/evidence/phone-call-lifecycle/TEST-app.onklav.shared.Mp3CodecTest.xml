@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.shared.Mp3CodecTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-11-02T14:53:03" hostname="13575fdd974e" time="0.653">
+  <properties/>
+  <testcase name="cancellationMalformedInputAndMimeAliasesAreHandled" classname="app.onklav.shared.Mp3CodecTest" time="0.318"/>
+  <testcase name="realEncoderDecoderRoundtripPreservesRateDurationAndDistinctStereoChannels" classname="app.onklav.shared.Mp3CodecTest" time="0.335"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,11 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.12s
+     Running unittests src/lib.rs (core/target/debug/deps/onklav_core-087bd982837cfcbb)
+
+running 4 tests
+test group_wire::tests::strict_parse_preserves_unknown_text ... ok
+test group_wire::tests::parent_targets_are_bounded_and_unknown_actors_stay_visible ... ok
+test group_wire::tests::reactions_are_actor_scoped_idempotent_and_removable ... ok
+test group_wire::tests::missing_ambiguous_or_media_targets_never_hide_events ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 165 filtered out; finished in 0.00s
+

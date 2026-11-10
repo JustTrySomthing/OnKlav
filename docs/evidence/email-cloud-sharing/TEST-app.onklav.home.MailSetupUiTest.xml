@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.MailSetupUiTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-11-02T17:08:22" hostname="13575fdd974e" time="11.31">
+  <properties/>
+  <testcase name="googleInstructionsOpenOfficialHelp" classname="app.onklav.home.MailSetupUiTest" time="10.356"/>
+  <testcase name="paperclipOffersCloudSharingInsteadOfContactCard" classname="app.onklav.home.MailSetupUiTest" time="0.471"/>
+  <testcase name="fourChoicesRemainReadableAndOpenTheCorrectProvider" classname="app.onklav.home.MailSetupUiTest" time="0.305"/>
+  <testcase name="yahooInstructionsOpenOfficialHelp" classname="app.onklav.home.MailSetupUiTest" time="0.178"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,15 @@
+extends SceneTree
+func _initialize() -> void:
+	call_deferred("run")
+func run() -> void:
+	var scene = load("res://main.tscn").instantiate()
+	root.add_child(scene)
+	await process_frame
+	var game = scene.get_child(0)
+	if game.get_script().resource_path != "res://air_hockey/main.gd" or not game.loaded or game.score.model != game.state:
+		push_error("Exported pack did not start the real Air Hockey port")
+		quit(1)
+		return
+	print("PACK_SMOKE Air Hockey production root, match model and checkpoint loaded")
+	scene.free()
+	quit()

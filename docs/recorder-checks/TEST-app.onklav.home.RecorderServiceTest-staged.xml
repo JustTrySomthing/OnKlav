@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.RecorderServiceTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-30T18:58:06" hostname="e89dc6ba27f3" time="10.871">
+  <properties/>
+  <testcase name="pauseResumeStaleControlsAndDuplicateStopKeepOneDurableRecording" classname="app.onklav.home.RecorderServiceTest" time="7.941"/>
+  <testcase name="failedBackendKeepsItsInterruptedDraftAndReleasesResources" classname="app.onklav.home.RecorderServiceTest" time="2.93"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

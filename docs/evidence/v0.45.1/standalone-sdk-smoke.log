@@ -1,0 +1,54 @@
+{
+  "build": [],
+  "restore_bundles": [],
+  "reuse": [
+    "Notes",
+    "Counter",
+    "RSS",
+    "ReadAloud",
+    "Browser",
+    "YouTube",
+    "Annotation",
+    "Social",
+    "WalkieTalkie"
+  ],
+  "unselected_stale": []
+}
+
+{
+  "build": [],
+  "restore_bundles": [],
+  "reuse": [
+    "Notes",
+    "Counter",
+    "RSS",
+    "ReadAloud",
+    "Browser",
+    "YouTube",
+    "Annotation",
+    "Social",
+    "WalkieTalkie"
+  ],
+  "unselected_stale": []
+}
+{"built": [], "bundles_restored": [], "all_packages_current": true}
+
+test_changed_program_requires_version_bump_and_same_publisher (test_sdk_build_plan.SelectiveSdkBuildTest.test_changed_program_requires_version_bump_and_same_publisher) ... ok
+test_complete_freshness_accepts_standalone_starter (test_sdk_build_plan.SelectiveSdkBuildTest.test_complete_freshness_accepts_standalone_starter) ... ok
+test_complete_freshness_rejects_missing_package_and_new_sources (test_sdk_build_plan.SelectiveSdkBuildTest.test_complete_freshness_rejects_missing_package_and_new_sources) ... ok
+test_complete_freshness_rejects_stale_per_package_proof_and_bundle (test_sdk_build_plan.SelectiveSdkBuildTest.test_complete_freshness_rejects_stale_per_package_proof_and_bundle) ... ok
+test_damaged_output_rebuilds_only_owner_but_bundle_damage_only_recopies (test_sdk_build_plan.SelectiveSdkBuildTest.test_damaged_output_rebuilds_only_owner_but_bundle_damage_only_recopies) ... ok
+test_duplicate_archive_entries_are_not_reusable (test_sdk_build_plan.SelectiveSdkBuildTest.test_duplicate_archive_entries_are_not_reusable) ... ok
+test_malformed_package_records_fail_closed (test_sdk_build_plan.SelectiveSdkBuildTest.test_malformed_package_records_fail_closed) ... ok
+test_new_local_source_and_manifest_change_are_detected (test_sdk_build_plan.SelectiveSdkBuildTest.test_new_local_source_and_manifest_change_are_detected) ... ok
+test_one_app_edit_rebuilds_only_that_app (test_sdk_build_plan.SelectiveSdkBuildTest.test_one_app_edit_rebuilds_only_that_app) ... ok
+test_partial_build_cannot_certify_another_stale_app (test_sdk_build_plan.SelectiveSdkBuildTest.test_partial_build_cannot_certify_another_stale_app) ... ok
+test_partial_flags_upgrade_keeps_other_packages_stale (test_sdk_build_plan.SelectiveSdkBuildTest.test_partial_flags_upgrade_keeps_other_packages_stale) ... ok
+test_shared_sdk_or_unknown_source_edit_rebuilds_all (test_sdk_build_plan.SelectiveSdkBuildTest.test_shared_sdk_or_unknown_source_edit_rebuilds_all) ... ok
+test_standalone_sdk_has_no_host_asset_copy_requirement (test_sdk_build_plan.SelectiveSdkBuildTest.test_standalone_sdk_has_no_host_asset_copy_requirement) ... ok
+test_unchanged_legacy_proof_reuses_every_package (test_sdk_build_plan.SelectiveSdkBuildTest.test_unchanged_legacy_proof_reuses_every_package) ... ok
+
+----------------------------------------------------------------------
+Ran 14 tests in 0.369s
+
+OK

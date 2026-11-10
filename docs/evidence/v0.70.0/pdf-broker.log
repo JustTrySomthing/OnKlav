@@ -1,0 +1,23 @@
+Publisher key created. Keep it private and backed up.
+   Compiling zmij v1.0.23
+   Compiling serde_core v1.0.229
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/workspace/scratch/75acf774e3b8/work/OnKlav/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/work/OnKlav/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/workspace/scratch/75acf774e3b8/work/OnKlav/developer/examples/pdf-reader)
+    Finished `release` profile [optimized] target(s) in 9.45s
+Created /tmp/onklav-verify-fsahm9u3/check.onklav-a
+{
+  "project": "/workspace/scratch/75acf774e3b8/work/OnKlav/developer/examples/pdf-reader",
+  "signature_install_startup": "passed",
+  "scenario": {
+    "passed": 5,
+    "runtime": "production Rust app broker",
+    "android_ui_tested": false
+  },
+  "signer": "disposable local test author; key and package discarded",
+  "shipping_package_created": false,
+  "native_phone_acceptance_required": true
+}

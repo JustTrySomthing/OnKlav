@@ -1,0 +1,16 @@
+   Compiling onklav-ui v0.3.0 (/workspace/scratch/ed752e8a1957/current/OnKlav/developer/components)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.25s
+     Running unittests src/lib.rs (current/OnKlav/developer/components/target/debug/deps/onklav_ui-6a05aeef2f5cf60f)
+
+running 2 tests
+test tests::host_navigation_and_dialogs ... ok
+test tests::reference_controller_matches_included_notes ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests onklav_ui
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

@@ -1,0 +1,27 @@
+{
+  "schema": "onklav.godot.web.build.v1",
+  "upstream_version": "4.7.2-stable",
+  "build_name": "onklav1",
+  "source_url": "https://github.com/godotengine/godot/releases/download/4.7.2-stable/godot-4.7.2-stable.tar.xz",
+  "source_sha512": "15e23f8423003f5d32da07c34a8651e43af23b050cc0dea2d4fba6944ca445d079edb52b66fdf82b6d5739bba1fe707b9e27b8836b19f09f64f313966160f8fc",
+  "upstream_checksums_url": "https://github.com/godotengine/godot/releases/download/4.7.2-stable/SHA512-SUMS.txt",
+  "upstream_checksum_verified": true,
+  "emscripten": "4.0.20",
+  "emsdk_release": "c387d7a7e9537d0041d2c3ae71b7538cc978104e",
+  "patch": "third_party/godot-web-fixes/worker-group-cleanup.patch",
+  "patch_sha256": "42d21288b7f3e7024262df385dc58282579786d17f7f6952c856ed931b8e6a36",
+  "patched_file": "core/object/worker_thread_pool.cpp",
+  "original_file_sha256": "34c2c18535ea8c6f86b658f07921e891becbdd6a9deec8c99fdb8e79b54b16a8",
+  "patched_file_sha256": "7981566985dbae62324d6076daa69916f1590b1c6fc9709113f5f1196071557f",
+  "scons_args": [
+    "platform=web",
+    "target=template_release",
+    "threads=no",
+    "production=yes",
+    "optimize=size",
+    "lto=thin",
+    "linkflags=-Wl,--thinlto-jobs=2",
+    "-j6"
+  ],
+  "export_template_sha256": "2d7e6d7e95a754a8207be9ba35b1067587b56312233f1dc9fbcfa6b89f85c5a7"
+}

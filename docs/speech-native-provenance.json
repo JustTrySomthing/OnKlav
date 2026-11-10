@@ -1,0 +1,28 @@
+{
+  "engine": "official sherpa-onnx Rust1.13.8; original native Piper/eSpeak frontend",
+  "model": "kitten-nano-en-v0_8-fp32",
+  "default_speaker": 2,
+  "other_speaker": 0,
+  "inputs": {
+    "core/speech/Cargo.lock": "9f77f3ead01616d1ce5d58f12a75abf30352e71a0746d82cf6d9ce1b0cbabd3d",
+    "core/speech/Cargo.toml": "a22184aaf98849cf7e0f45d884d8865f169a48ef98dd795cebe63986a1cec40f",
+    "core/speech/src/audio.rs": "39eb29f1f9a342175673229b663e90cbdeb3e7b6a4190afa28de767118b959b1",
+    "core/speech/src/lib.rs": "955cad04d61acbc5fb0466f1d4903bc960c77609589d470d3d766f46e051f7da",
+    "core/speech/src/ring.rs": "0f909368b48953e2032256aedd01d4f2e61b7aae2210fffa8c14e644d08cccdd",
+    "docs/speech-dependencies.json": "8353e6222a0c672f2e01daa27427624b5f47e74dba6fc563082ad9e9cc3f6f63",
+    "scripts/build_compact_speech.py": "a6f455c72c77515b920425a8e9eb15e6c75dcf9376b82d8fccd8f197eae27c9d",
+    "scripts/build_speech.py": "19b2914f0a7d4132e8530f1015b45d2781820cf342059fb19deea783741f25f0"
+  },
+  "outputs": {
+    "android/shared/src/main/jniLibs/arm64-v8a/libonklav_speech.so": "381ba7eb88fd5eaf23448b5e818429d8943abb24852627921b3b18b13580247a",
+    "android/shared/src/main/jniLibs/arm64-v8a/libsherpa-onnx-c-api.so": "c85e2382e2ca12b0513826be926eaccfea896b4cbf568182e287671ba526f80d",
+    "android/shared/src/main/jniLibs/arm64-v8a/libonnxruntime.so": "33847ad43bffe204699fd4a27f7f3603452a8cdaf2f9a44983a0bc31ffcf2da1",
+    "core/speech/host-libs/linux-x86_64/libonklav_speech.so": "fac5e2e9ac4aa73f93bd4fa5b725cbe2eb43d2f0fb384af1891093dc46c53c87",
+    "core/speech/host-libs/linux-x86_64/libsherpa-onnx-c-api.so": "b8351ca1632571ac108adbb317bcc4bf7cfe84b72690e3017316b0da3e1e344f",
+    "core/speech/host-libs/linux-x86_64/libonnxruntime.so": "4b3607aebd1784b26b6f9b20e4bd974c7ab8287043e4d095cb7d2cb40b5e566e",
+    "android/shared/src/main/assets/speech/english.voicepack": "cb36c3f4595ae23784bcd624bf685d208c7b84f9951068f1f4949d0825aa868c",
+    "android/shared/src/main/assets/speech/english.json": "bc760010d19db599602a69af4fdc544fbe52b162a4296069cb4cee8ee4a34d93"
+  },
+  "audio_output": "native AAudio,24kHz mono float, preallocated10second SPSC queue",
+  "android_device_tested": false
+}

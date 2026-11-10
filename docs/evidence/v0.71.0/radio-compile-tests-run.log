@@ -1,0 +1,8 @@
+radio-compile-tests: 20s
+radio-compile-tests: 40s
+radio-compile-tests: 60s
+radio-compile-tests: 80s
+radio-compile-tests: 100s
+radio-compile-tests: 120s
+radio-compile-tests: 140s
+radio-compile-tests: exit 0 in 159.5s

@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "version": "0.101.33-rc1",
+  "version_code": 212,
+  "apk": "OnKlav-0.101.33-Cats-vs-Dogs.apk",
+  "base": "OnKlav-0.101.32.apk",
+  "changed_entries": [
+    "AndroidManifest.xml"
+  ],
+  "sha256": "02c96453af801774fe526565e6502c88f23b85884b9c18bc17ba3025587df11c",
+  "physical_android_test": "pending"
+}

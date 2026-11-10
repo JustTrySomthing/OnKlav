@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.HistoryApplyTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-10-22T22:27:14" hostname="276516236850" time="0.713">
+  <properties/>
+  <testcase name="providerChangeDuringPostCaptureStopsMetadataMerge" classname="app.onklav.home.HistoryApplyTest" time="0.122"/>
+  <testcase name="secondMessageFailureKeepsFirstAndCleansOnlyIncompleteInsert" classname="app.onklav.home.HistoryApplyTest" time="0.062"/>
+  <testcase name="stopAfterCommitPreservesPartialOutcomeMapAndReceipt" classname="app.onklav.home.HistoryApplyTest" time="0.06"/>
+  <testcase name="freshPhoneComparisonSkipsExistingRowsAndAbsentCommittedRowsBlockReplay" classname="app.onklav.home.HistoryApplyTest" time="0.093"/>
+  <testcase name="changedContentOrWrongPostIdsLeaveMetadataUntouchedAndReceiptsIntact" classname="app.onklav.home.HistoryApplyTest" time="0.108"/>
+  <testcase name="productionGateBlocksBeforeSafAndProviderSnapshot" classname="app.onklav.home.HistoryApplyTest" time="0.036"/>
+  <testcase name="postSnapshotRemapsFlagsAndFoldersAndDisarmsOldReminders" classname="app.onklav.home.HistoryApplyTest" time="0.059"/>
+  <testcase name="changedArchiveAndMissingMmsIdentitiesFailBeforeFirstInsert" classname="app.onklav.home.HistoryApplyTest" time="0.044"/>
+  <testcase name="checkedArchiveFeedsTypedExecutorAndPersistsActualIdsWithoutOldIds" classname="app.onklav.home.HistoryApplyTest" time="0.058"/>
+  <testcase name="metadataEditedDuringInsertsWinsOverArchiveEntries" classname="app.onklav.home.HistoryApplyTest" time="0.069"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

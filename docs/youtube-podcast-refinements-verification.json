@@ -1,0 +1,48 @@
+{
+  "version": "0.81.0-media-podcasts1",
+  "version_code": 89,
+  "status": "Completed; signed ARM64 APK assembled and verified",
+  "changes": {
+    "youtube": [
+      "Bookmarks lists only saved videos using the host89 videos.query videos filter, applied before pagination. Existing channels remain in Channels and backups. Bookmark addition is disabled on non-video pages.",
+      "Tapping the current panel icon closes it; tapping another switches panels; Home closes panels and navigates home. Drawer titles are History and Bookmarks.",
+      "Explicit message-video playback clears mute/defaultMute and restores video/player volume before playback, including a video that is already playing muted. A later manual mute is preserved."
+    ],
+    "messages": [
+      "Video attachments have a play icon plus Video button immediately beneath their thumbnail. Audio and YouTube play buttons use the same contrasting theme-aware treatment.",
+      "Button/background colors are chosen from theme pairs for contrast against the actual bubble base; text/icon contrast is at least4.5."
+    ],
+    "podcasts": [
+      "Feed reads allow bounded16MiB documents, longer feed network time and64KiB read chunks. Public HTTP enclosure/redirect addresses are upgraded to TLS before any connection.",
+      "Podcast audio has its own resolver supporting12 public TLS hops with a30-second total deadline and10-second per-hop timeout; it no longer uses the shorter radio redirect limit.",
+      "Podcast decoding probes initial headers and supports Last-Modified or validated-length206 reads without requiring an ETag. Servers ignoring Range can use a bounded prefix skip. Redirects remain denied inside the decoder and every read retains permission checks.",
+      "Ordinary playback no longer depends on applying optional playback-rate settings."
+    ]
+  },
+  "sdk": {
+    "host_build": 89,
+    "youtube_min_host": 89,
+    "native": "Linux/main/diagnostic ARM64 match source;16KiB alignment verified",
+    "packages": "All affected signed apps rebuilt with original publisher identity"
+  },
+  "checks": {
+    "rust_core": 274,
+    "focused_android": 21,
+    "final_navigation_rechecks": 2,
+    "javascript": "Production ad/metadata/autoplay/viewport scripts passed, including explicit unmute and later manual mute",
+    "lint": {
+      "errors": 0,
+      "warnings": 172
+    },
+    "public_sources": "Four real publisher feeds passed the Android parser. Four enclosures reached audio/mpeg206 responses. Servers with Last-Modified-only and no validators were observed."
+  },
+  "limits": [
+    "Actual Samsung decoding, speaker output and live YouTube behavior remain unverified.",
+    "Public source outages, premium/sign-in-only episodes and unsupported formats can still fail."
+  ],
+  "apk": {
+    "name": "OnKlav-0.81.0-ARM64.apk",
+    "bytes": 71322730,
+    "sha256": "52dd5780ccfaf60fdc2d1284402ff4535405cb08df61bb541155e1c4e10c7256"
+  }
+}

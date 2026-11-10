@@ -1,0 +1,7 @@
+rust-tests: starting
+rust-tests: passed in 5.8s
+host-native: starting
+host-native: passed in 7.7s
+android-native: starting
+android-native: passed in 106.1s
+Working JNI saved; released mobile JNI/provenance unchanged

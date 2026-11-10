@@ -1,0 +1,4 @@
+radio-host-tests: 20s
+radio-host-tests: 40s
+radio-host-tests: 60s
+radio-host-tests: exit 1 in 67.9s

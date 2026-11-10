@@ -1,0 +1,18 @@
+   Compiling jni-sys v0.3.1
+   Compiling jni v0.21.1
+   Compiling onklav-core v0.8.0 (/workspace/scratch/ed752e8a1957/current/OnKlav/core)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 25.10s
+     Running unittests src/lib.rs (core/target/debug/deps/onklav_core-087bd982837cfcbb)
+
+running 2 tests
+test content::notes_backup_tests::notes_backup_validates_every_record_before_import_and_rejects_symlinks ... ok
+test content::notes_backup_tests::notes_backup_roundtrip_keeps_current_and_trashed_notes_and_is_repeatable ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 171 filtered out; finished in 0.03s
+
+     Running unittests src/bin/onklav-pack.rs (core/target/debug/deps/onklav_pack-14d0c9308310c091)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

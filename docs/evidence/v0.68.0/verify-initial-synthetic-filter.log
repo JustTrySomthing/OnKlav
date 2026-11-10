@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/ed752e8a1957/current/OnKlav/scripts/verify_apks.py", line 138, in <module>
+    assert not re.search(r"^org\.godotengine\.godot\.",usage,re.MULTILINE), "Godot native callback members removed"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Godot native callback members removed

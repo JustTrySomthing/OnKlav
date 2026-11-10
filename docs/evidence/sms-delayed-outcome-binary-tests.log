@@ -1,0 +1,14 @@
+
+running 9 tests
+test messaging::tests::one_delivered_part_does_not_hide_another_failed_part ... ok
+test messaging::tests::complete_delivery_clears_earlier_delivery_failure ... ok
+test messaging::tests::delayed_delivery_overrides_failure_and_survives_reopen ... ok
+test messaging::tests::delivery_and_unknown_result_never_imply_success ... ok
+test messaging::tests::drafts_folders_and_flags_survive_reload ... ok
+test messaging::tests::invalid_updates_preserve_previous_state ... ok
+test messaging::tests::multipart_callbacks_are_idempotent_and_late_success_reconciles ... ok
+test messaging::tests::metadata_restore_is_checked_atomic_and_never_replays_sends_or_reminders ... ok
+test messaging::tests::picker_reactions_persist_and_remove_without_rejecting_supported_emoji ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 282 filtered out; finished in 0.12s
+

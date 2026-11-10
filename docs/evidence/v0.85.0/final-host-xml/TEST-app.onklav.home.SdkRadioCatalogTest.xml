@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.SdkRadioCatalogTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-26T21:49:24" hostname="844ebfe47829" time="7.558">
+  <properties/>
+  <testcase name="bundledLiveCatalogAddsUniqueIcecastStationsAndSurvivesRefreshFailure" classname="app.onklav.home.SdkRadioCatalogTest" time="7.558"/>
+  <system-out><![CDATA[Merged catalog: raw=37693, browserUnique=28260, mergedUnique=28603, additionalIcecast=347
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

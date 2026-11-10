@@ -1,0 +1,65 @@
+Booting software device; one attempt, 300-second limit
+Waiting for boot 0 seconds
+List of devices attached
+
+
+
+Waiting for boot 32 seconds
+List of devices attached
+emulator-5554	offline
+
+
+
+Waiting for boot 64 seconds
+List of devices attached
+emulator-5554	offline
+
+
+
+Waiting for boot 101 seconds
+List of devices attached
+emulator-5554	device
+
+
+running
+
+Waiting for boot 143 seconds
+List of devices attached
+emulator-5554	device
+
+
+stopped
+
+Waiting for boot 179 seconds
+List of devices attached
+emulator-5554	device
+
+
+stopped
+
+Waiting for boot 212 seconds
+List of devices attached
+emulator-5554	device
+
+
+stopped
+
+Waiting for boot 246 seconds
+List of devices attached
+emulator-5554	device
+
+
+stopped
+
+Waiting for boot 279 seconds
+List of devices attached
+emulator-5554	device
+
+
+stopped
+
+Traceback (most recent call last):
+  File "/workspace/scratch/39f240a7e5bd/check_device_fixed.py", line 49, in <module>
+    else: raise TimeoutError('Boot limit reached; no automatic restart')
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TimeoutError: Boot limit reached; no automatic restart

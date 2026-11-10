@@ -1,0 +1,83 @@
+{
+  "date": "2026-11-04",
+  "apk_built": false,
+  "physical_device_tested": false,
+  "focused_checks": 68,
+  "duel_checks": 48404,
+  "legacy_checks": 2102,
+  "audit_checks": 15,
+  "no_impact_courses": 12,
+  "score_scale": 0.1,
+  "new_physics_hz": 120,
+  "old_flight_physics_hz": 240,
+  "bounded_catch_up_seconds": 0.2,
+  "source_sha256": {
+    "games/engine-checks/panda/main.gd": "bad4cca74602e029e1eee6298570bf386663ec1ea824fc9f3e6895a290748a66",
+    "games/engine-checks/panda/hud.gd": "759c1e08172fb42d0553c6abfee26f6a62025d7d13c13972a67a4dd57544bd7c",
+    "games/engine-checks/panda/arena.gd": "e06bb5e44b26da0b5befe0456fb77b9524ca2b861782e33746bae2cab1242647",
+    "games/engine-checks/panda/duel_tests.gd": "7bb497e05f72a9815124592c81fa782370b5ee201833e81eb5197175d49fbbb0",
+    "games/engine-checks/panda/physics.gd": "d0d8426a71fb4738f75ba495991c3ee9288d1ede88f9aef6d4a9ec04e1ace793",
+    "games/engine-checks/panda/volley_tests.gd": "5fe15621d538796ce930bfaaab38b830006df8b32fe0104aed8dfb56d86e3232",
+    "games/engine-checks/panda/audio.gd": "5c2cff9a76fb77fe7910ef7697fde98e0f3e28db13a2cb1c22243d12773ca0af",
+    "games/engine-checks/panda/performance_tests.gd": "6ccdbba402a78f9df84ba91a18d6b676696e283db2f9a8c6ab8748f7bc8fff71",
+    "games/engine-checks/panda/battle_arena.gd": "1dd38bd17f699721ee47e3f3167683f04c1e8cacedaa980c9eabe82a38244815",
+    "games/engine-checks/panda/audit_tests.gd": "b12c46436be7f2ad9a0dba611f826dce9931f73cb7643cdfb4d3b7eaa5a3a576",
+    "games/engine-checks/panda/duel.gd": "7661d45c71745b0fe6fd5c8d23c390d118743825b90c7abdc977814a13862130",
+    "games/engine-checks/panda/flight_clock.gd": "ae20b491dc8e120bcd1c7a2370695ddb6ca82afe02c71607757fbf0b77e1851e",
+    "games/engine-checks/panda/battle_hud.gd": "a9cc992da863a0b217df12e3c2cfd3c16f913213ba44313fb7eb9a17c81e1305",
+    "games/engine-checks/panda/duel_physics.gd": "b23c15373e546dccfaa18d54b9ff9f80bfa0687b4fc8bac81065c99e08562b4f",
+    "games/engine-checks/panda/tests.gd": "3ee735eb38e256770e50ba4743bd97d9d0ddef45aa3feb9a3fc3683513f5545d",
+    "games/engine-checks/panda/model.gd": "5e5b52cd2d4026d982c5ec2f64d641361128966e510d67ccea46537009f3e6ba"
+  },
+  "limitations": [
+    "Host CPU timings are not phone frame-rate acceptance.",
+    "Existing APK 0.100.60 does not include this source refinement."
+  ],
+  "browser": [
+    {
+      "viewport": [
+        360,
+        780
+      ],
+      "real_touch_full_pull": true,
+      "resize_cancels_pull_without_shot": true,
+      "direct_start_and_resume": true,
+      "complete_player_then_rival_volley": true,
+      "center_shot_scores": true,
+      "sound_pause_preserves_flight": true,
+      "saved_towers_and_scores_preserved": true,
+      "round_continues_without_building": true,
+      "profile_write_failure_retry": true
+    },
+    {
+      "viewport": [
+        320,
+        640
+      ],
+      "real_touch_full_pull": true,
+      "resize_cancels_pull_without_shot": true,
+      "direct_start_and_resume": true,
+      "complete_player_then_rival_volley": true,
+      "center_shot_scores": true,
+      "sound_pause_preserves_flight": true,
+      "saved_towers_and_scores_preserved": true,
+      "round_continues_without_building": true,
+      "profile_write_failure_retry": true
+    },
+    {
+      "viewport": [
+        640,
+        360
+      ],
+      "real_touch_full_pull": true,
+      "resize_cancels_pull_without_shot": true,
+      "direct_start_and_resume": true,
+      "complete_player_then_rival_volley": true,
+      "center_shot_scores": true,
+      "sound_pause_preserves_flight": true,
+      "saved_towers_and_scores_preserved": true,
+      "round_continues_without_building": true,
+      "profile_write_failure_retry": true
+    }
+  ]
+}

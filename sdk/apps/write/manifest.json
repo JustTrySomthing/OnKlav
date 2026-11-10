@@ -1,0 +1,16 @@
+{
+  "schema": "onklav.app.v1",
+  "runtime": "rust-wasm-ui.v1",
+  "id": "app.onklav.write",
+  "name": "Write",
+  "version": 2,
+  "min_host": 95,
+  "icon": {
+    "symbol": "edit"
+  },
+  "capabilities": [
+    "storage.private",
+    "clipboard.read",
+    "clipboard.write"
+  ]
+}

@@ -1,0 +1,52 @@
+{
+  "version": "0.85.0-radio-catalog1",
+  "next_android_version_code": 93,
+  "sdk_host_build": 92,
+  "status": "Complete source update; no APK requested or produced",
+  "directory_sources": [
+    "https://api.radio-browser.info/",
+    "https://dir.xiph.org/yp.xml"
+  ],
+  "bundled_catalog": {
+    "compatible_raw_rows_after_host_validation": 37693,
+    "radio_browser_deduplicated": 28260,
+    "merged_stations": 28603,
+    "icecast_primary_rows_after_merge": 347,
+    "net_additional_unique_rows": 343,
+    "source_projection": "docs/evidence/v0.85.0/live-source-counts.json",
+    "generated_by": "scripts/import_radio_catalog.py",
+    "note": "Snapshot counts change as public directories change; only compatible public HTTPS MP3/AAC entries are included."
+  },
+  "core_tests": 281,
+  "controller_tests": 127,
+  "focused_radio_controller_tests": 8,
+  "selected_android_cases": {
+    "SdkRadioCatalogTest.sameStreamsAndAlternateQualitiesMergeAcrossBothSourcesWithoutLosingAliases": "PASSED",
+    "SdkRadioCatalogTest.icecastExportRejectsMissingUnsafeAndUnsupportedStreamsAndDtds": "PASSED",
+    "SdkRadioCatalogTest.duplicateBridgesMergeTransitivelyButDifferentCountriesAndGenericNamesStaySeparate": "PASSED",
+    "SdkRadioCatalogTest.streamedBrowserParserSkipsExtraFieldsAndHonorsSafetyProjection": "PASSED",
+    "SdkRadioCatalogTest.searchAndPagingCoverTheEntireUnifiedCatalogNotOnlyFirstThousand": "PASSED",
+    "SdkRadioCatalogTest.bundledLiveCatalogAddsUniqueIcecastStationsAndSurvivesRefreshFailure": "PASSED",
+    "SdkRadioTest.signInPagesDowngradesPrivateTargetsAndRevocationFailClosed": "PASSED",
+    "SdkRadioTest.directoryProjectionIsBoundedAndNeverReturnsCredentialsArtworkOrStreamUrls": "PASSED",
+    "SdkRadioTest.redirectResolutionValidatesEveryTargetAndDoesNotAddCredentials": "PASSED",
+    "SdkRadioPolishTest.signedRadioHasOneTabRowCompactFiltersCleanListsAndSettings": "PASSED"
+  },
+  "lint": {
+    "errors": 0,
+    "warnings": 177
+  },
+  "native": "Host/main/diagnostic ARM64 source matched,16KiB alignment",
+  "sdk_packages": "All16included apps current, original publisher preserved",
+  "phone_or_live_new_station_playback_verified": false,
+  "limitations": [
+    "Metadata cannot prove every duplicate when identities are absent or ambiguous. Generic/ambiguous names remain distinct.",
+    "Station availability and provider metadata vary; each stream is resolved and validated at playback.",
+    "Country/language filters exclude Icecast-only entries with unknown metadata instead of guessing."
+  ],
+  "remaining": [
+    "Build a new APK when requested; current released APK remains0.84.",
+    "Actual phone playback/performance qualification."
+  ],
+  "details": "docs/RADIO-CATALOG.md"
+}

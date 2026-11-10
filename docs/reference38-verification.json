@@ -1,0 +1,74 @@
+{
+  "chunk": 38,
+  "status": "initial public reference application source set implemented; documented workflow gaps and provider/Android/device qualification remain",
+  "controllers": [
+    "reference_apps::weather",
+    "reference_apps::listening",
+    "reference_apps::tile_map",
+    "reference_apps::mail"
+  ],
+  "projects": [
+    "developer/examples/reference-weather",
+    "developer/examples/reference-listening",
+    "developer/examples/reference-map",
+    "developer/examples/reference-mail"
+  ],
+  "production_path": "Thin signed project -> same public onklav-ui reference controller crate -> existing signed capability broker/private collections/native shared widgets -> actual pending clock/HTTP/account/media services",
+  "controller_cases_passed": 4,
+  "existing_included_notes_regression_passed": 1,
+  "contract_cases_passed": 5,
+  "signed_granted_scenario_steps_passed": 16,
+  "signed_weather_denial_steps_passed": 4,
+  "scenario_breakdown": {
+    "weather": 8,
+    "listening": 2,
+    "map": 5,
+    "mail": 1,
+    "weather_denied": 4
+  },
+  "native_evidence_limits": "Signed scenarios stop at actual pending clock.read/http.request/accounts.list; they do not fake native replies or contact a provider. Controller unit cases use a callback seam. No Android UI/device or real provider acceptance is inferred.",
+  "behavior": [
+    "Weather persists a manual place before opening cached conditions and preserves Back/reopen",
+    "Listening uses explicit user-selected feed/stream/status URLs, preserves old episodes on failures, invalidates stale radio titles and uses one shared host player",
+    "Tile-map preview bounds center/zoom and queries private cache before conditional HTTP; loads only one center tile with explicit blank-coverage label",
+    "Mail uses host public account labels/picker, hides handles and header content on account menu, validates private snapshot binding, and offers explicit refresh/More/clear/disconnect"
+  ],
+  "remaining_workflow_gaps": [
+    "Full multi-tile/slippy-map and geocoding/routing app navigation",
+    "Complete connected-mail body/compose/account and uncertain-send recovery flows",
+    "Raw MIME/local attachment upload and automatic provider discovery remain unsupported",
+    "Listening URL/episode session persistence and broader reference-app polish",
+    "Compact mail view shows only first40 saved headers and labels that limit"
+  ],
+  "remaining_qualification": [
+    "Full Android HTTP/JNI/shared UI integration with recorded unavailable dependencies restored",
+    "Chosen-provider/API/terms/OAuth/media codec and phone/TalkBack/layout/process acceptance",
+    "Chunks39/40 physical-device/two-phone environment gates",
+    "Chunk41 sustained memory/performance/security qualification"
+  ],
+  "core_or_kotlin_changed": false,
+  "native_rebuilt": false,
+  "native_source_and_artifact_hashes_verified": true,
+  "apk_created": false,
+  "bundled_app_replaced": false,
+  "shipping_package_created": false,
+  "sdk_release_created": false,
+  "source_sha256": {
+    "developer/components/src/reference_apps/weather.rs": "1b576e4f0d15b0eef68681bc97c12cfddbb21203048818fb0d0c6f341da1cda8",
+    "developer/components/src/reference_apps/listening.rs": "7f9371e1d1e09de57f2193914d7b39614a89fc2b8f9eda0bdb7a1bbb0945322c",
+    "developer/components/src/reference_apps/tile_map.rs": "6086abffbe2e84ef6e609b2249395fe31148204c900926a39e001374b9d2e9ff",
+    "developer/components/src/reference_apps/mail.rs": "5ef30d5045f287be4bc352179885c624b505b8dae8abb2101ea6b318d1671ee9",
+    "developer/components/src/reference_apps/mod.rs": "80956ac3f89100ee2bfedbfff812421bfc613cd7fa1963727b415817f596cd9f",
+    "developer/components/src/reference_apps/service_tests.rs": "d3a35385ef1f4f54c510384a57034073c30d611297842e6ce3ec48fcaefe580a"
+  },
+  "logs": [
+    "docs/evidence/v0.70.0/reference38-tests-final.log",
+    "docs/evidence/v0.70.0/reference38-contract.log",
+    "docs/evidence/v0.70.0/reference38-weather.log",
+    "docs/evidence/v0.70.0/reference38-listening.log",
+    "docs/evidence/v0.70.0/reference38-map.log",
+    "docs/evidence/v0.70.0/reference38-mail.log",
+    "docs/evidence/v0.70.0/reference38-denied.log"
+  ],
+  "next_plan_chunk": 39
+}

@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="320" height="104" viewBox="0 0 320 104">
+<defs><linearGradient id="plate" x2="0" y2="1"><stop stop-color="#788888"/><stop offset=".28" stop-color="#354752"/><stop offset="1" stop-color="#172731"/></linearGradient></defs>
+<path d="M2 20L22 3H291L318 19V86L297 101H22L2 88Z" fill="url(#plate)" stroke="#172433" stroke-width="3"/>
+<path d="M14 20h292M19 7h275" stroke="#acb0a0" stroke-width="2"/>
+<g transform="translate(10 15)"><path d="M5 12h41v43H5z" fill="#3e4d54" stroke="#849092"/><path d="M12 25h27v8H12z" fill="#121f2b"/><path d="M14 27h23v3H14z" fill="#a97146"/><path d="M9 16h3m26 0h3M9 50h3m26 0h3" stroke="#c1a77a" stroke-width="2"/></g>
+<g transform="translate(61 15)"><path d="M5 12h41v43H5z" fill="#3e4d54" stroke="#849092"/><path d="M12 25h27v8H12z" fill="#121f2b"/><path d="M14 27h23v3H14z" fill="#a97146"/><path d="M9 16h3m26 0h3M9 50h3m26 0h3" stroke="#c1a77a" stroke-width="2"/></g>
+<g transform="translate(112 15)"><path d="M5 12h41v43H5z" fill="#3e4d54" stroke="#849092"/><path d="M12 25h27v8H12z" fill="#121f2b"/><path d="M14 27h23v3H14z" fill="#a97146"/><path d="M9 16h3m26 0h3M9 50h3m26 0h3" stroke="#c1a77a" stroke-width="2"/></g>
+<g transform="translate(163 15)"><path d="M5 12h41v43H5z" fill="#3e4d54" stroke="#849092"/><path d="M12 25h27v8H12z" fill="#121f2b"/><path d="M14 27h23v3H14z" fill="#a97146"/><path d="M9 16h3m26 0h3M9 50h3m26 0h3" stroke="#c1a77a" stroke-width="2"/></g>
+<g transform="translate(214 15)"><path d="M5 12h41v43H5z" fill="#3e4d54" stroke="#849092"/><path d="M12 25h27v8H12z" fill="#121f2b"/><path d="M14 27h23v3H14z" fill="#a97146"/><path d="M9 16h3m26 0h3M9 50h3m26 0h3" stroke="#c1a77a" stroke-width="2"/></g>
+<g transform="translate(265 15)"><path d="M5 12h41v43H5z" fill="#3e4d54" stroke="#849092"/><path d="M12 25h27v8H12z" fill="#121f2b"/><path d="M14 27h23v3H14z" fill="#a97146"/><path d="M9 16h3m26 0h3M9 50h3m26 0h3" stroke="#c1a77a" stroke-width="2"/></g>
+<path d="M9 78h302v5H9z" fill="#a27851"/><path d="M8 92h302l-16 8H25Z" fill="#162331"/>
+</svg>

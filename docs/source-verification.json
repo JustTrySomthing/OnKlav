@@ -1,0 +1,237 @@
+{
+  "date": "2026-10-24",
+  "timezone": "America/Chicago",
+  "source_version": "0.70.0-rc1",
+  "source_version_code": 78,
+  "target_sdk": 36,
+  "scope": "Comprehensive non-game SDK review: one controller library, authoring conveniences, shared UI behavior, signed desktop metadata and safe cache collection",
+  "apk_built": true,
+  "tests": {
+    "passed": 247,
+    "failed": 0,
+    "skipped": 0,
+    "counting": "189 core +6 shared GUI +15 build planner +7 developer tools +2 deadlines +9 author workflow +5 contract +14 unique affected Android cases. Template/example/clean-extraction assertions are supplementary, not added again. Shared12 baseline cases not rerun/count-added.",
+    "templates_built_and_exercised": 14,
+    "cookbook_projects_verified": 3,
+    "evidence": "docs/evidence/v0.70.0"
+  },
+  "native_proof": "docs/native-provenance.json",
+  "sdk_proof": "docs/app-sdk-provenance.json",
+  "review": "docs/SDK-REVIEW-0.4.md",
+  "internal_packages": [
+    "WalkieTalkie"
+  ],
+  "full_rewrite_complete": false,
+  "handset_acceptance": false,
+  "carrier_acceptance": false,
+  "store_certified": false,
+  "independent_security_audit": false,
+  "games_deferred": true,
+  "sdk": {
+    "tools": "0.4.0",
+    "ui_components": "0.4.0",
+    "templates": 14,
+    "included_apps_using_public_library": 9,
+    "portable_by_default": true,
+    "signed_minimum_host": true,
+    "signed_desktop_icons": true,
+    "external_carrier_available": false,
+    "clean_extraction": "passed: fresh extraction, doctor, portable form project and key-free verify with4 persistence assertions"
+  },
+  "lint": {
+    "fresh_full_run": false,
+    "baseline": "docs/evidence/v0.67.0/lint-results-optimized.xml",
+    "baseline_errors": 0,
+    "baseline_warnings": 143,
+    "note": "Optimized assembly runs vital lint; no claim of a fresh zero-warning full audit.",
+    "vital_lint": "passed in optimized assembly"
+  },
+  "note": "Linux and ARM64 JNI freshly rebuilt after actual metadata/cache changes. All9 included packages rebuilt with existing publisher and increased versions. No games changed. Raw host reports retained; one icon-query assertion was corrected after inspecting merged semantics.",
+  "apk": {
+    "name": "host",
+    "variant": "optimized",
+    "package": "app.onklav.home.prototype.rewrite",
+    "version_name": "0.70.0-rc1",
+    "version_code": 78,
+    "target_sdk": 36,
+    "bytes": 39455436,
+    "sha256": "f9ee41fed805988be183b68f4e8c648f4c3c49306e2e4df3fbd63395840a36e1",
+    "signer_sha256": "6ed975c5fc27d19f6291f751a8bb00fa8a2c2e7d268bffc7b6ddf7e1b1a7a69d",
+    "signature_v2_verified": true,
+    "zip_integrity": "pass",
+    "zipalign_16kb": "pass",
+    "abis": [
+      "arm64-v8a"
+    ],
+    "elf_minimum_load_alignment": {
+      "lib/arm64-v8a/libandroidx.graphics.path.so": 16384,
+      "lib/arm64-v8a/libc++_shared.so": 16384,
+      "lib/arm64-v8a/libgodot_android.so": 16384,
+      "lib/arm64-v8a/libonklav_core.so": 16384
+    },
+    "native_library_sha256": {
+      "lib/arm64-v8a/libandroidx.graphics.path.so": "41e9a793c43a0f4fddb19e33f346bace464f30f888ba7b9eaf96294ea115bfb6",
+      "lib/arm64-v8a/libc++_shared.so": "ad74bf43eb1fd576518168f664ad16a74e00eeda9595875c33dd87f6dd197869",
+      "lib/arm64-v8a/libgodot_android.so": "9e10c5ebda9bb629c671929441cdde3b4a8ab0e5542fc7e88de8d71f2b9840db",
+      "lib/arm64-v8a/libonklav_core.so": "c3a4d7dd21b6b9ea9c0aa12217e2cf9e7b1381455442a34f296ed62dcf2d58d0"
+    },
+    "legacy_defined_classes": 0,
+    "defined_class_count": 4721,
+    "permissions": [
+      "android.permission.INTERNET",
+      "android.permission.ACCESS_NETWORK_STATE",
+      "android.permission.VIBRATE",
+      "android.permission.READ_SMS",
+      "android.permission.READ_CONTACTS",
+      "android.permission.SEND_SMS",
+      "android.permission.RECEIVE_SMS",
+      "android.permission.RECEIVE_MMS",
+      "android.permission.RECEIVE_WAP_PUSH",
+      "android.permission.READ_PHONE_STATE",
+      "android.permission.READ_PHONE_NUMBERS",
+      "android.permission.POST_NOTIFICATIONS",
+      "android.permission.RECORD_AUDIO",
+      "android.permission.RECEIVE_BOOT_COMPLETED",
+      "app.onklav.home.prototype.rewrite.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+    ],
+    "rust_libraries": {
+      "arm64-v8a": "c3a4d7dd21b6b9ea9c0aa12217e2cf9e7b1381455442a34f296ed62dcf2d58d0"
+    }
+  },
+  "build_evidence": "docs/evidence/v0.70.0/build-optimized.json",
+  "working_tree": {
+    "status": "unreleased SDK ergonomics changes",
+    "release_artifacts_current": false,
+    "release_outputs_deferred_by_user": true,
+    "note": "Existing247-case report is the stable0.70 baseline. Working changes need their own scoped checks and future package/native provenance before release.",
+    "tests": {
+      "passed": 162,
+      "failed": 0,
+      "scope": "25 shared GUI/records/files +8 authoring +5 content +2 file broker +5 contract +85 native UI/lifecycle/accessibility/drawing/audio/storage/devices +3 host cache +1 signed migration update +4 permissions/scaffolding +3 local reload +2 process deadlines +2 staged text imports +3 secrets broker/redaction +4 device services broker +3 preview authoring/broker +3 carrier isolation broker +2 routed multi-app broker +2 device preview CLI",
+      "counting": "Cumulative tracked coverage162, adding2 multipart crash/duplicate cases,1 oversized-route case and1 real-core audio/receipt/reconnect/removal case. This continuation passed52 unique affected checks (30 Android host,5 broker,17 carrier/session Rust); final route hashing reran only3 affected cases, counted once.",
+      "native_environment": "Robolectric; existing JNI exercises unchanged lifecycle/form-fixture/picker interfaces. New renderer semantics are tested directly; new guest frame hints are checked in shared Rust and fresh desktop core authoring tests. No handset/TalkBack acceptance.",
+      "release_ready": false
+    },
+    "incremental_host": {
+      "source_refresh_seconds": 2.045,
+      "unchanged_seconds": 0.086,
+      "unchanged_binary_reused": true
+    },
+    "source_examples": 4,
+    "secrets": {
+      "status": "unreleased source API",
+      "capability": "storage.secrets",
+      "android_keystore_device_tested": false,
+      "integrated_mobile_broker_tested": false,
+      "crypto_unit_backend": "real AES-GCM with injected JCE test keys",
+      "plaintext_fallback": false,
+      "automatic_grant": false,
+      "integrated_android_host_jni_tested": true
+    },
+    "device_services": {
+      "status": "unreleased source APIs",
+      "capabilities": [
+        "camera.capture",
+        "notifications.post"
+      ],
+      "camera_limits": "Read/decode <=20MB and100MP; normalized <=1800px/600KB; temporary external writer is not hard quota limited",
+      "notifications": "Immediate:8 active/app. Scheduled:8/app,32/host,60 seconds\u201330 days, persisted inexact Android jobs, replace/cancel, live signed owner/grants, bounded pre-consumption retries; no guest background execution or delivery guarantee.",
+      "physical_camera_tested": false,
+      "physical_notifications_tested": false,
+      "integrated_new_mobile_broker_tested": false,
+      "physical_reboot_doze_force_stop_tested": false,
+      "integrated_android_host_jni_tested": true
+    },
+    "app_host_polish": {
+      "status": "unreleased source",
+      "pending_token_history": "one current launched token; foreign/stale callbacks rejected",
+      "cross_app_model_reuse": "rejected without discarding existing draft",
+      "owner_teardown": "cancel debounce/feed request, clear native cache/callback, enqueue core-session close on host dispatcher",
+      "action_menus": "shared disabled/busy policy; long actions exposed in toolbar overflow and panels",
+      "native_permission_choices": "one labelled checkbox target; disabled during apply; tested320dp/200% text",
+      "included_controllers_verified": 9,
+      "physical_device_tested": false
+    },
+    "native_preview": {
+      "status": "unreleased source PNG preview",
+      "interactive": false,
+      "renderer": "host Compose widgets, shared responsive body layout and shared centered dialogs under Robolectric",
+      "requires": "full host source, JDK17, Android SDK36 and test dependencies",
+      "device_widgets": "labelled placeholders",
+      "drawers": "shared production drawer, width limits, title, close control, scrolling and contents; static PNG",
+      "os_replies_simulated": false,
+      "sensitive_apps": "storage.secrets rejected",
+      "output": "new0600 PNG; never overwrite",
+      "end_to_end_renders": [
+        {
+          "width": 432,
+          "height": 936,
+          "dark": false,
+          "font_scale": 1,
+          "visually_inspected": true
+        },
+        {
+          "width": 320,
+          "height": 640,
+          "dark": true,
+          "font_scale": 1.5,
+          "visually_inspected": true
+        }
+      ],
+      "cached_second_renderer_seconds": 16,
+      "physical_device_tested": false,
+      "headers": "shared production title/back/actions/counter/loading chrome, including disabled and long-press action semantics",
+      "drawer_preview_seconds": 17,
+      "drawer_preview_visually_inspected": true,
+      "interactive_device_path": "device-preview CLI + debug-only shell-protected activity; on-device permission review; private generic status/service feedback",
+      "interactive_host_test_passed": true,
+      "actual_adb_device_deployment_tested": false
+    },
+    "carrier_isolation": {
+      "status": "unreleased source implementation: external app/publisher routing enabled with explicit live grants",
+      "confirmed_request": "fresh core authorization plus signed id/publisher metadata; execution shares install/removal/grant lock",
+      "external_voice": "owned connected-session routing; offline external clips stay local; live capability and publisher checks at send/receipt",
+      "native_send_ui": "eligible app sessions only; external sessions must be connected",
+      "wire_app_publisher_routing_implemented": true,
+      "fresh_desktop_broker_tested": true,
+      "native_policy_tests": "injected authorizer/executor; no carrier send",
+      "updated_integrated_mobile_jni_tested": false,
+      "physical_carrier_tested": false,
+      "updated_android_host_jni_tested": true,
+      "arm64_library_compiled": true
+    },
+    "unreleased_native_build": {
+      "proof": "docs/working-native-verification.json",
+      "linux_jni_tested_under_android_host": true,
+      "arm64_compiled": true,
+      "arm64_executed_on_device": false,
+      "stable_release_proofs_current": false
+    },
+    "final_host_review": {
+      "status": "host-side review passed; hardware acceptance blocked",
+      "checks_passed": 52,
+      "responsive_layouts": "432dp dark,320dp light at180% text,800dp tablet,800x360 landscape with large-text dialogs",
+      "accessibility": "8 semantics/keyboard/touch-target/large-text checks; physical TalkBack not tested",
+      "security_fixes": [
+        "recover multipart aggregate after interruption between durable writes",
+        "ignore conflicting duplicate part results",
+        "reject oversized legacy and routed envelopes before owner lookup"
+      ],
+      "responsive_fix": "debug preview permission review scrolls below a fixed header; install control remains reachable",
+      "performance_change": "route digest encodes16 bytes directly into32 hex characters instead of32 Formatter calls and a sliced64-character intermediate",
+      "route_known_vector_verified": true,
+      "memory_checks": "background cache eviction preserves displayed bitmaps; image dimension bounds verified",
+      "logical_two_peer_flow": "actual core audio ingest/delivery/dedup/receipt; reconnection after one2.05-second production throttle wait; app removal",
+      "device_access": {
+        "adb_available": false,
+        "emulator_available": false,
+        "hardware_device_tool_available": false,
+        "physical_bus_or_kvm_available": false
+      },
+      "physical_two_phone_tested": false,
+      "physical_audio_camera_notifications_keystore_tested": false,
+      "device_frame_timing_or_heap_profile_tested": false,
+      "independent_security_audit_complete": false
+    }
+  }
+}

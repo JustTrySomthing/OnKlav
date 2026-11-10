@@ -1,0 +1,39 @@
+
+running 4 tests
+test sdk::tests::external_file_mutations_can_refresh_without_automatically_authorizing_new_writes ... FAILED
+test sdk::tests::files_android_exports_require_the_separate_live_export_permission ... FAILED
+test sdk::tests::voice_component_permissions_binding_trim_commit_and_playback_are_host_only ... FAILED
+test sdk::tests::walkie_signed_controller_persists_preferences_and_never_fakes_connection ... FAILED
+
+failures:
+
+---- sdk::tests::external_file_mutations_can_refresh_without_automatically_authorizing_new_writes stdout ----
+
+thread 'sdk::tests::external_file_mutations_can_refresh_without_automatically_authorizing_new_writes' panicked at src/sdk.rs:552:898:
+called `Result::unwrap()` on an `Err` value: "Finish or cancel the pending app action"
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+---- sdk::tests::files_android_exports_require_the_separate_live_export_permission stdout ----
+
+thread 'sdk::tests::files_android_exports_require_the_separate_live_export_permission' panicked at src/sdk.rs:551:659:
+called `Result::unwrap()` on an `Err` value: "Finish or cancel the pending app action"
+
+---- sdk::tests::voice_component_permissions_binding_trim_commit_and_playback_are_host_only stdout ----
+
+thread 'sdk::tests::voice_component_permissions_binding_trim_commit_and_playback_are_host_only' panicked at src/sdk.rs:399:93:
+called `Result::unwrap()` on an `Err` value: "Voice component is closed"
+
+---- sdk::tests::walkie_signed_controller_persists_preferences_and_never_fakes_connection stdout ----
+
+thread 'sdk::tests::walkie_signed_controller_persists_preferences_and_never_fakes_connection' panicked at src/sdk.rs:451:40:
+called `Result::unwrap()` on an `Err` value: "This UI action is no longer available"
+
+
+failures:
+    sdk::tests::external_file_mutations_can_refresh_without_automatically_authorizing_new_writes
+    sdk::tests::files_android_exports_require_the_separate_live_export_permission
+    sdk::tests::voice_component_permissions_binding_trim_commit_and_playback_are_host_only
+    sdk::tests::walkie_signed_controller_persists_preferences_and_never_fakes_connection
+
+test result: FAILED. 0 passed; 4 failed; 0 ignored; 0 measured; 164 filtered out; finished in 3.36s
+

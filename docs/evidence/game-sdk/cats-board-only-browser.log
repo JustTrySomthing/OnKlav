@@ -1,0 +1,176 @@
+geometry 360 [ 179.999984741211, 277.392883300781 ] [ 179.999984741211, 362.785736083984 ] [ 179.999984741211, 504.500030517578 ] [
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0
+]
+after center {
+  above: [ 179.999984741211, 362.785736083984 ],
+  board: [
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0
+  ],
+  busy: false,
+  buttons: [ { disabled: false, point: [Array], text: 'Rival · Sharp' } ],
+  can_play: true,
+  center_text: [ 179.999984741211, 277.392883300781 ],
+  columns: [
+    [ 40.285717010498, 504.500030517578 ],
+    [ 86.8571472167969, 504.500030517578 ],
+    [ 133.428573608398, 504.500030517578 ],
+    [ 179.999984741211, 504.500030517578 ],
+    [ 226.571426391602, 504.500030517578 ],
+    [ 273.142852783203, 504.500030517578 ],
+    [ 319.714324951172, 504.500030517578 ]
+  ],
+  depth: 0,
+  dialog: false,
+  finger: -1,
+  finished: false,
+  game: 'four',
+  hover: -1,
+  match_win: false,
+  nodes: 0,
+  paused: false,
+  pressed: false,
+  recent: -1,
+  result: '',
+  sharp: true,
+  status: 'Your turn · Cats',
+  turn: 0,
+  winner: -1,
+  wins: [ 0, 0 ]
+}
+after edge {
+  above: [ 179.999984741211, 362.785736083984 ],
+  board: [
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0
+  ],
+  busy: false,
+  buttons: [ { disabled: false, point: [Array], text: 'Rival · Sharp' } ],
+  can_play: true,
+  center_text: [ 179.999984741211, 277.392883300781 ],
+  columns: [
+    [ 40.285717010498, 504.500030517578 ],
+    [ 86.8571472167969, 504.500030517578 ],
+    [ 133.428573608398, 504.500030517578 ],
+    [ 179.999984741211, 504.500030517578 ],
+    [ 226.571426391602, 504.500030517578 ],
+    [ 273.142852783203, 504.500030517578 ],
+    [ 319.714324951172, 504.500030517578 ]
+  ],
+  depth: 0,
+  dialog: false,
+  finger: -1,
+  finished: false,
+  game: 'four',
+  hover: -1,
+  match_win: false,
+  nodes: 0,
+  paused: false,
+  pressed: false,
+  recent: -1,
+  result: '',
+  sharp: true,
+  status: 'Your turn · Cats',
+  turn: 0,
+  winner: -1,
+  wins: [ 0, 0 ]
+}
+PASS 360 780 no challenge button, center-text and off-grid taps ignored, outside release cancelled, valid drop
+geometry 320 [ 160.000015258789, 235.964309692383 ] [ 160.000015258789, 299.928588867188 ] [ 160.000015258789, 424.500030517578 ] [
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+  0, 0
+]
+after center {
+  above: [ 160.000015258789, 299.928588867188 ],
+  board: [
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0
+  ],
+  busy: false,
+  buttons: [ { disabled: false, point: [Array], text: 'Rival · Sharp' } ],
+  can_play: true,
+  center_text: [ 160.000015258789, 235.964309692383 ],
+  columns: [
+    [ 37.4285736083984, 424.500030517578 ],
+    [ 78.2857131958008, 424.500030517578 ],
+    [ 119.142868041992, 424.500030517578 ],
+    [ 160.000015258789, 424.500030517578 ],
+    [ 200.857162475586, 424.500030517578 ],
+    [ 241.714279174805, 424.500030517578 ],
+    [ 282.571441650391, 424.500030517578 ]
+  ],
+  depth: 0,
+  dialog: false,
+  finger: -1,
+  finished: false,
+  game: 'four',
+  hover: -1,
+  match_win: false,
+  nodes: 0,
+  paused: false,
+  pressed: false,
+  recent: -1,
+  result: '',
+  sharp: true,
+  status: 'Your turn · Cats',
+  turn: 0,
+  winner: -1,
+  wins: [ 0, 0 ]
+}
+after edge {
+  above: [ 160.000015258789, 299.928588867188 ],
+  board: [
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0, 0, 0, 0, 0, 0, 0, 0, 0,
+    0, 0
+  ],
+  busy: false,
+  buttons: [ { disabled: false, point: [Array], text: 'Rival · Sharp' } ],
+  can_play: true,
+  center_text: [ 160.000015258789, 235.964309692383 ],
+  columns: [
+    [ 37.4285736083984, 424.500030517578 ],
+    [ 78.2857131958008, 424.500030517578 ],
+    [ 119.142868041992, 424.500030517578 ],
+    [ 160.000015258789, 424.500030517578 ],
+    [ 200.857162475586, 424.500030517578 ],
+    [ 241.714279174805, 424.500030517578 ],
+    [ 282.571441650391, 424.500030517578 ]
+  ],
+  depth: 0,
+  dialog: false,
+  finger: -1,
+  finished: false,
+  game: 'four',
+  hover: -1,
+  match_win: false,
+  nodes: 0,
+  paused: false,
+  pressed: false,
+  recent: -1,
+  result: '',
+  sharp: true,
+  status: 'Your turn · Cats',
+  turn: 0,
+  winner: -1,
+  wins: [ 0, 0 ]
+}
+PASS 320 640 no challenge button, center-text and off-grid taps ignored, outside release cancelled, valid drop

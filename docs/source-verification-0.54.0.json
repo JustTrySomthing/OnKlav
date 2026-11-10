@@ -1,0 +1,90 @@
+{
+  "date": "2026-10-23",
+  "source_version": "0.54.0-dev",
+  "source_version_code": 62,
+  "scope": "Requested reaction, speech-arrow/media, image-preview, Contacts, Setup, Walkie and Trash corrections",
+  "apk_built": true,
+  "apk_variant": "debug",
+  "apk_bytes": 71445664,
+  "apk_sha256": "498a8e314df9f8bf74f7038a2423c79315aa3b005f977cf35f72486bf441769d",
+  "production_inputs_match_assembly": true,
+  "apk_verified_independently": true,
+  "tests": {
+    "passed": 179,
+    "failed": 4,
+    "unexpected_failures": 0,
+    "rust_broad": {
+      "passed": 165,
+      "failed": 4,
+      "evidence": "docs/evidence/v0.54.0/rust-tests.log"
+    },
+    "rust_focused": {
+      "messaging": 13,
+      "group_wire": 4,
+      "overlap_with_broad": true
+    },
+    "selected_host": [
+      {
+        "class": "app.onklav.home.MessageCorrectionsTest",
+        "passed": 3,
+        "evidence": "docs/evidence/v0.54.0/functional-passed/TEST-app.onklav.home.MessageCorrectionsTest.xml"
+      },
+      {
+        "class": "app.onklav.home.PagingAndReactionsTest",
+        "passed": 6,
+        "evidence": "docs/evidence/v0.54.0/functional-passed/TEST-app.onklav.home.PagingAndReactionsTest.xml"
+      },
+      {
+        "class": "app.onklav.home.SdkSpeechTest",
+        "passed": 2,
+        "evidence": "docs/evidence/v0.54.0/functional-passed/TEST-app.onklav.home.SdkSpeechTest.xml"
+      },
+      {
+        "class": "app.onklav.home.WalkiePresentationTest",
+        "passed": 1,
+        "evidence": "docs/evidence/v0.54.0/functional-passed/TEST-app.onklav.home.WalkiePresentationTest.xml"
+      },
+      {
+        "class": "app.onklav.home.MessageVisualCorrectionsHostTest",
+        "passed": 2,
+        "evidence": "docs/evidence/v0.54.0/visual-passed/TEST-app.onklav.home.MessageVisualCorrectionsHostTest.xml"
+      }
+    ],
+    "host_test_scope_note": "The 14 focused host checks passed before the final Setup completion callback was wired to the Messages tab. That small navigation-only follow-up was compiled and package-verified; no broad rerun was added.",
+    "known_failures": [
+      {
+        "name": "sdk::tests::external_file_mutations_can_refresh_without_automatically_authorizing_new_writes",
+        "evidence": "docs/evidence/v0.54.0/rust-tests.log",
+        "previously_documented": [
+          "docs/evidence/v0.54.0/unchanged-0.53.1-sdk-baseline.log"
+        ]
+      },
+      {
+        "name": "sdk::tests::files_android_exports_require_the_separate_live_export_permission",
+        "evidence": "docs/evidence/v0.54.0/rust-tests.log",
+        "previously_documented": [
+          "docs/evidence/v0.54.0/unchanged-0.53.1-sdk-baseline.log"
+        ]
+      },
+      {
+        "name": "sdk::tests::voice_component_permissions_binding_trim_commit_and_playback_are_host_only",
+        "evidence": "docs/evidence/v0.54.0/rust-tests.log",
+        "previously_documented": [
+          "docs/evidence/v0.54.0/unchanged-0.53.1-sdk-baseline.log"
+        ]
+      },
+      {
+        "name": "sdk::tests::walkie_signed_controller_persists_preferences_and_never_fakes_connection",
+        "evidence": "docs/evidence/v0.54.0/rust-tests.log",
+        "previously_documented": [
+          "docs/evidence/v0.54.0/unchanged-0.53.1-sdk-baseline.log"
+        ]
+      }
+    ]
+  },
+  "baseline_source_sha256": "041d96604f577afcb216b978199b8a4b2a2832fc1d53dcb21224424c59715fea",
+  "build_command_note": "Final assembly passed. The isolated visual checks (including eight arrow angles) and functional host tests passed before the last navigation-only callback wiring. Earlier test-fixture syntax and mixed-graphics classloader issues are retained in the evidence; they were corrected before final verification. The visual follow-up tightened the arrowhead to avoid clipping across eight rotation samples. Production input hashes match the final APK.",
+  "full_rewrite_complete": false,
+  "handset_acceptance": false,
+  "carrier_acceptance": false
+}

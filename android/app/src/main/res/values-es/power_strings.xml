@@ -1,0 +1,4 @@
+<resources>
+    <string name="power_accessibility_label">OnKlav Power</string>
+    <string name="power_accessibility_description">Abre el menú de apagado del teléfono sin mantener pulsado un botón físico. OnKlav Power solo abre este menú cuando tocas Power. No lee tu pantalla ni realiza gestos.</string>
+</resources>

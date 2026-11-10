@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.VideoOfflineTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-10-28T02:34:10" hostname="666c98ec4593" time="11.988">
+  <properties/>
+  <testcase name="portableArchiveRestoresActualMediaWithNewIdentity" classname="app.onklav.home.VideoOfflineTest" time="4.964"/>
+  <testcase name="titleAnimationTimingSurvivesSplit" classname="app.onklav.home.VideoOfflineTest" time="0.121"/>
+  <testcase name="animatedTitleRendersAndSettlesToCachedTexture" classname="app.onklav.home.VideoOfflineTest" time="6.382"/>
+  <testcase name="badOrCancelledArchiveNeverPublishesPartialMedia" classname="app.onklav.home.VideoOfflineTest" time="0.205"/>
+  <testcase name="easingCutsKeepTheSameTrajectoryAcrossBothHalves" classname="app.onklav.home.VideoOfflineTest" time="0.083"/>
+  <testcase name="audioActuallyBalancesDucksAndPreservesChunkState" classname="app.onklav.home.VideoOfflineTest" time="0.083"/>
+  <testcase name="duckingAttackAndReleaseAreSmoothAndOverlapDoesNotStack" classname="app.onklav.home.VideoOfflineTest" time="0.043"/>
+  <testcase name="oldJsonDefaultsAndOfflineSettingsRoundTrip" classname="app.onklav.home.VideoOfflineTest" time="0.104"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

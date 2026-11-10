@@ -1,0 +1,11 @@
+{
+  "count": 6,
+  "passed": [
+    "WriteHostTest.numberedListsContinueAndRemovingOneParagraphKeepsItsNeighbors",
+    "WriteHostTest.richDocumentsRoundTripDocxAndPdfPagination",
+    "WriteHostTest.partialAndCursorFormattingPreserveSurroundingText",
+    "WriteHostTest.documentsAreAtomicPrivateAndRespectRevocation",
+    "WriteHostTest.proofreadingPreservesOffsetsAndDoesNotRewriteText",
+    "WriteHostTest.embeddedImagesSurviveWriteRoundTripAndSafeExports"
+  ]
+}

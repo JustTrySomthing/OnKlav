@@ -1,0 +1,75 @@
+{
+  "status": "source complete; five unique focused checks passed; phone audio/orientation acceptance pending",
+  "latest_delivered_apk": "0.100.8-rc1/code117 (does not yet include this source update)",
+  "implementation": [
+    "Small labeled-for-accessibility equalizer icon in radio transport",
+    "Original Wave/Spectrum/Orbit Canvas views; 3 remembered palettes",
+    "Full sensor auto-rotation while open; full display landscape; controls hide/reveal; Back/Close orientation restore",
+    "One positive authorized radio-session capture for mini waveform and full visualizer; 32 logarithmic FFT bands; <=30 captures/sec",
+    "Permission enable/retry states; release/clear on pause/background/disable/dispose/session replacement; no mic/global mix/cloud"
+  ],
+  "tests": {
+    "unique_passed": 5,
+    "passed_cases": {
+      "app.onklav.home.RadioVisualizerTest.packedFftIgnoresDcAndNyquistAndMapsComplexToneToLogFrequency": "second-RadioVisualizerTest.xml",
+      "app.onklav.home.RadioVisualizerTest.captureRejectsGlobalSessionAndCloseClearsWaveform": "final-RadioVisualizerTest.xml",
+      "app.onklav.home.RadioVisualizerTest.visualizerModesLandscapeBackAndOrientationRestore": "second-RadioVisualizerTest.xml",
+      "app.onklav.home.SdkRadioUiTest.separateRadioScreensUseRealSignedAppAndKeepPlayerDocked": "second-SdkRadioUiTest.xml",
+      "app.onklav.home.RadioVisualizerTest.actualLandscapeFillsWindowControlsHideRevealAndBackRestores": "final-RadioVisualizerTest.xml"
+    },
+    "stages": {
+      "second-RadioVisualizerTest.xml": {
+        "tests": 4,
+        "failures": 1
+      },
+      "second-SdkRadioUiTest.xml": {
+        "tests": 1,
+        "failures": 0
+      },
+      "final-RadioVisualizerTest.xml": {
+        "tests": 2,
+        "failures": 0
+      }
+    },
+    "runtime_classes_matching_compilation": 2981,
+    "notes": [
+      "Initial signed-screen test waited for obsolete Find your sound heading; updated to current Stations/Recent/Favorites and passed",
+      "First wide-layout fixture failed before executing because landscape qualifier followed density; corrected Android qualifier ordering and final wide-layout test passed",
+      "Final narrow stage follows direct permission recheck hardening; unchanged signed UI/FFT/portrait cases were not redundantly rerun"
+    ]
+  },
+  "lint": {
+    "Fatal": 0,
+    "Error": 0,
+    "Warning": 263,
+    "Information": 1
+  },
+  "input_checks": {
+    "native_current": true,
+    "sdk_current": true,
+    "games_current": true,
+    "new_dependencies": false,
+    "new_permissions_or_capabilities": false
+  },
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/SdkRadioPlayer.kt": "6a2ac69378d2d6e82d487600e605c3d5dfe1fed4285dee32c5f191d19b7114f2",
+    "android/app/src/main/kotlin/app/onklav/home/RadioVisualizer.kt": "cf09141ef1c1666eb04acd460f2747f0b4439619289eb5d4dc1312c03cf2eed2",
+    "android/app/src/test/kotlin/app/onklav/home/SdkRadioUiTest.kt": "3b5b1e00b83c95a261843534b3a269d856500783f8ba92e7da791415c22e9e91",
+    "android/app/src/test/kotlin/app/onklav/home/RadioVisualizerTest.kt": "51a874df69994a71666495182f4e82236ad6c070dc7e542846808ed5f94aff80"
+  },
+  "screenshots": {
+    "portrait": "Synthetic captured-audio fixture; rendered native host UI",
+    "landscape": "Synthetic spectrum fixture at 936x432dp; rendered native host UI",
+    "radio-button": "Actual signed radio app, no station playing"
+  },
+  "device_gates": [
+    "Actual streaming/audioFX output and FFT response",
+    "Bluetooth/wired speaker route changes and OEM audioFX support",
+    "Permission decline/regrant/background/resume",
+    "Sensor rotation, system bars/cutouts and Back on phone",
+    "Battery/performance/large-font/accessibility acceptance"
+  ],
+  "no_new_dependencies": true,
+  "native_core_sdk_shell_changes": false,
+  "no_apk_built": true
+}

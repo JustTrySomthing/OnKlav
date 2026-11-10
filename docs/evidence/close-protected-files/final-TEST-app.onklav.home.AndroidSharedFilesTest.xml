@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.AndroidSharedFilesTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-11-03T03:35:36" hostname="3bfb1ef11171" time="1.834">
+  <properties/>
+  <testcase name="protectedAndroidMetadataCanBeReadButCannotBeWrittenOrDeletedThroughTheProvider" classname="app.onklav.home.AndroidSharedFilesTest" time="1.834"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

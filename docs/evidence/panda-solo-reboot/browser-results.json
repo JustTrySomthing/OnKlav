@@ -1,0 +1,41 @@
+[
+  {
+    "viewport": [
+      360,
+      780
+    ],
+    "real_touch_full_pull": true,
+    "direct_start_and_resume": true,
+    "player_rival_player_alternation": true,
+    "center_shot_scores": true,
+    "sound_pause_preserves_flight": true,
+    "saved_towers_and_scores_preserved": true,
+    "round_continues_without_building": true
+  },
+  {
+    "viewport": [
+      320,
+      640
+    ],
+    "real_touch_full_pull": true,
+    "direct_start_and_resume": true,
+    "player_rival_player_alternation": true,
+    "center_shot_scores": true,
+    "sound_pause_preserves_flight": true,
+    "saved_towers_and_scores_preserved": true,
+    "round_continues_without_building": true
+  },
+  {
+    "viewport": [
+      640,
+      360
+    ],
+    "real_touch_full_pull": true,
+    "direct_start_and_resume": true,
+    "player_rival_player_alternation": true,
+    "center_shot_scores": true,
+    "sound_pause_preserves_flight": true,
+    "saved_towers_and_scores_preserved": true,
+    "round_continues_without_building": true
+  }
+]

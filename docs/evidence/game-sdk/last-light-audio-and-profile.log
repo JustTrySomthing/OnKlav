@@ -1,0 +1,6 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+ONKLAV_SESSION_READY
+LAST_LIGHT_RESULT checks=348 failures=0
+Exported game starts, accepts touch Play, saves its state, survives rotation, and retains seven unlocks after a failed profile read and retry.
+PASS audio lifecycle: inactive startup, page restoration, context interruption, and visibility.

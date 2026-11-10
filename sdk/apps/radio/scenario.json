@@ -1,0 +1,1 @@
+{"grants":["storage.private","radio.stations","audio.playback"],"steps":[{"action":"radio.explore","expect":{"tab":"explore"}},{"action":"radio.query","value":"Jazz"},{"action":"radio.search","pending":"radio.search"},{"reopen":true,"expect":{"tab":"explore"}},{"action":"radio.library","expect":{"tab":"favorites","favorites":[]}}]}

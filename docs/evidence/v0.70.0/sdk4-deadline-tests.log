@@ -1,0 +1,7 @@
+test_compile_timeout_stops_the_process_tree_on_posix (__main__.Deadline.test_compile_timeout_stops_the_process_tree_on_posix) ... ok
+test_stalled_runtime_is_killed_and_streams_are_closed (__main__.Deadline.test_stalled_runtime_is_killed_and_streams_are_closed) ... ok
+
+----------------------------------------------------------------------
+Ran 2 tests in 0.711s
+
+OK

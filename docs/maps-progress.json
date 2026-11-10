@@ -1,0 +1,8 @@
+{
+  "chunk": 31,
+  "status": "private raster renderer/provider/attribution source implemented; full-host/device qualification pending",
+  "verification": "docs/maps-verification.json",
+  "native_rebuilt": true,
+  "next_feature": 32,
+  "apk_created": false
+}

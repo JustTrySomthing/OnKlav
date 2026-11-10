@@ -1,0 +1,113 @@
+{
+  "refinement": "Yahoo/Google app-password enrollment, pCloud/Koofr setup and message cloud-link sharing",
+  "android_host_checks": 47,
+  "android_suites": [
+    {
+      "name": "app.onklav.home.CloudFilesTest",
+      "tests": "9",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "app.onklav.home.CloudFilesUiTest",
+      "tests": "5",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "app.onklav.home.CloudSharingTest",
+      "tests": "8",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "app.onklav.home.MailGmxTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "app.onklav.home.MailSetupUiTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "app.onklav.home.MailUiTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "app.onklav.shared.LauncherLayoutTest",
+      "tests": "8",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "app.onklav.shared.Mp3CodecTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "app.onklav.shared.NativeBridgeTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "app.onklav.shared.ThemePackageTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    }
+  ],
+  "app_checks_executed": 30,
+  "unchanged_shared_checks_reused_by_Gradle": 17,
+  "new_host_regressions": 12,
+  "production_and_all_test_compilation": "passed",
+  "runtime_bundle_matches_compiled_Kotlin": true,
+  "visual_inspection": [
+    "Cloud welcome: plain pCloud/Koofr wording and clear signup/sign-in",
+    "Koofr setup: free-plan link, app password field and sign-in help; no protocol jargon"
+  ],
+  "initial_issues_resolved": [
+    "New CloudSharingTest fixtures omitted the required CloudEntry.folder argument; fixture corrected. Production compilation passed in the initial run.",
+    "Generated Gradle transform snapshot failure interrupted next attempt before tests. A proposed quarantine was safely aborted because metadata was present; no files were moved. Subsequent bounded focused run passed in 217.8s."
+  ],
+  "physical_phone_testing": false,
+  "live_provider_testing": false,
+  "apk_built": false,
+  "native_sdk_game_signing_changes": false,
+  "remaining": "Live Yahoo/Google mail login, pCloud/Koofr sharing/account policy and Samsung device acceptance remain separate. Google app-password eligibility and provider storage/sharing restrictions still apply.",
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/CloudData.kt": "8581b4b61c8c956cb7185f4282a6a26b285207e09cd28953a9ac86db2e08ef20",
+    "android/app/src/main/kotlin/app/onklav/home/CloudDav.kt": "e93ca902157e8f915d56296a953661d7a6389804a9f7b296443bd534fb733f6e",
+    "android/app/src/main/kotlin/app/onklav/home/CloudModel.kt": "0c2cb57b031b6951bec7df7af9280eb620ddafb101ac830331a98940ea8bf57b",
+    "android/app/src/main/kotlin/app/onklav/home/CloudScreen.kt": "ac8bf300821ac59f3c9f45fa5f532a31db0c8348648978708651451a30d81186",
+    "android/app/src/main/kotlin/app/onklav/home/CloudSharing.kt": "39bea86237f2bae785c45a58f2d9345b7810fed7aff9d110f6bd64d4ffc73fac",
+    "android/app/src/main/kotlin/app/onklav/home/EmailScreen.kt": "227b4bd640a154d3a49120ae12234ea9eb0ff871567623fbf4aa1f9bb3ad0560",
+    "android/app/src/main/kotlin/app/onklav/home/MailDialogs.kt": "88c424da98613a08f81bf2c6177e0cc8c722c00f5b5646e3139a2fa9b423e5e5",
+    "android/app/src/main/kotlin/app/onklav/home/MailSetup.kt": "be7dfa9a57ba052845338c8f95995d35f851f756d85f805ed49050a28ed64d92",
+    "android/app/src/main/kotlin/app/onklav/home/MessageAttachments.kt": "af10b07d3771ade30e2d3313178dfaa4a6d5e5eefdb1d11fa38216974fca2d1b",
+    "android/app/src/main/kotlin/app/onklav/home/MessageMedia.kt": "e1ca736fdd3d7df72304669f8d022d3bd300e4101f085de92ee6a4bd888b1e59",
+    "android/app/src/main/kotlin/app/onklav/home/MessengerPane.kt": "a28f9c766420c1463f8b6fd7fe17a92dbc9087f9615e1de66580529f427f54ce",
+    "android/app/src/main/kotlin/app/onklav/home/SdkAppsCenter.kt": "29b40c5a7e1d2011e595bbd79f9777796e6857854255d273e1ebff66824ac474",
+    "android/app/src/test/kotlin/app/onklav/home/CloudFilesTest.kt": "e18b56ab88460def36448b7fd36645c1d865cea04db07fb35a3ab1f0e0cee966",
+    "android/app/src/test/kotlin/app/onklav/home/CloudSharingTest.kt": "16cc4e8886e225204f34117f06defd3061fc83037695ca80a2a0baafbf4b5fc2",
+    "android/app/src/test/kotlin/app/onklav/home/MailGmxTest.kt": "bd5c1c47eb48ece358433a853fa03c7138fd6e2ff4935ad9ef9ab4d53d5d5081",
+    "android/app/src/test/kotlin/app/onklav/home/MailSetupUiTest.kt": "904475ba14181b18961cc2ea2384923cfe4f1f572df9be1a582df166691ce680",
+    "android/app/src/test/kotlin/app/onklav/home/MailUiTest.kt": "efde79b64b6ea3373a112e2d94a059901c859e9221d5c5c2a23cd3c1bd7d70be"
+  }
+}

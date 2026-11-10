@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.BackupFilesTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-11-03T02:37:47" hostname="3bfb1ef11171" time="2.183">
+  <properties/>
+  <testcase name="partialCopyFailureRetainsTheSourceAndNeverDeletesProviderDocuments" classname="app.onklav.home.BackupFilesTest" time="2.101"/>
+  <testcase name="sameDocumentAliasesRejectBeforeOpeningOrDeletingAnyFile" classname="app.onklav.home.BackupFilesTest" time="0.044"/>
+  <testcase name="unreadableSourceDoesNotDeleteOrTruncateTheChosenDestination" classname="app.onklav.home.BackupFilesTest" time="0.037"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

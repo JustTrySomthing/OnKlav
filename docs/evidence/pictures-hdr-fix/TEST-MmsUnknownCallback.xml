@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.MmsDownloadRecoveryTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-28T22:10:55" hostname="1b65f1fab707" time="1.909">
+  <properties/>
+  <testcase name="unrecognizedCallbackCannotCreateAnIncomingMessageOrError" classname="app.onklav.home.MmsDownloadRecoveryTest" time="1.909"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

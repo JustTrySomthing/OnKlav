@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.shared.LauncherLayoutTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-22T21:11:15" hostname="2383b52a5fc7" time="0.029">
+  <properties/>
+  <testcase name="hitTestingIncludesLastRowAndScrollOffset" classname="app.onklav.shared.LauncherLayoutTest" time="0.016"/>
+  <testcase name="sparseBottomRowAndNewPageSurviveReload" classname="app.onklav.shared.LauncherLayoutTest" time="0.011"/>
+  <testcase name="occupiedDropReordersWithoutLosingHolesOrIds" classname="app.onklav.shared.LauncherLayoutTest" time="0.001"/>
+  <testcase name="catalogReconciliationRejectsUnknownAndDuplicateIds" classname="app.onklav.shared.LauncherLayoutTest" time="0.001"/>
+  <testcase name="cancelSnapshotAndEmptyTrailingPageAreSafe" classname="app.onklav.shared.LauncherLayoutTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

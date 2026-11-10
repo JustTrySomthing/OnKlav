@@ -1,0 +1,65 @@
+{
+  "scope": "Email everyday workflow and UI polish",
+  "apk_built": false,
+  "native_or_sdk_changes": false,
+  "verification": "PASS: final source production/test compilation and focused host, Compose UI and loopback mail protocol tests",
+  "remaining": [
+    "Real provider OAuth registration and account acceptance",
+    "Physical phone, background/battery and independent security qualification"
+  ],
+  "evidence_directory": "docs/evidence/email-polish",
+  "suites": [
+    {
+      "suite": "MailWorkflowTest",
+      "tests": 6,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "suite": "MailWorkflowUiTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "suite": "MailHostTest",
+      "tests": 6,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "suite": "MailProtocolTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "suite": "MailUiTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0
+    }
+  ],
+  "unique_tests": 18,
+  "lint": "Not run in this focused pass",
+  "screens": [
+    "inbox.png",
+    "reader.png",
+    "compose.png",
+    "recipients.png",
+    "small-compose.png"
+  ],
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/MailModel.kt": "52d72d54bb1dbfc277bc9ee06f5e102c44c22ffc56cf47871b263ba0e2aa1b4a",
+    "android/app/src/main/kotlin/app/onklav/home/MailOAuth.kt": "2c860c7af19b55eb04970f317db078eb8832962cd7db6ec443c4e68fc848e08e",
+    "android/app/src/main/kotlin/app/onklav/home/MailSync.kt": "e353d03f722fbd4a723174cbaac7779b6f5b0dce5f556ea7eb5f3e9b49ce76ce",
+    "android/app/src/main/kotlin/app/onklav/home/MailDialogs.kt": "cc49e1cf9cd1b3d5a05a748de066319641e2b73b8a694da38b32673365898f8d",
+    "android/app/src/main/kotlin/app/onklav/home/MailIcons.kt": "85d69165eb363a0d186a93e353bbd02a6e9cd0642b6e80c57fc6e8b0745ac66f",
+    "android/app/src/main/kotlin/app/onklav/home/MailWorkflow.kt": "64ee5f27064dbf1067d367c948314c876dd0ac0c47ace99afe13426d2d985272",
+    "android/app/src/main/kotlin/app/onklav/home/MailWorkflowUi.kt": "48bef5ddeb5032a686b5577f8e711c92f44073a82a87cf3d537e426a5371be40",
+    "android/app/src/main/kotlin/app/onklav/home/MailCompose.kt": "ecc5dd38c46da585ac46fb649f6fd2f17cb501c7edb598bfcd9c4823db05d29c",
+    "android/app/src/main/kotlin/app/onklav/home/MailData.kt": "c46728cb5c8d0615bb004b1b5cc09bc9069881d48f23ab2e294772570c235f3f",
+    "android/app/src/main/kotlin/app/onklav/home/MailProtocol.kt": "118236c1c48c1d386d0aeb53217e934cd243213b0454862477f2a7f9388fe109",
+    "android/app/src/main/kotlin/app/onklav/home/EmailScreen.kt": "a6097d5cca38aaf4b43773bf4d2a4f9d8f4572cef6eeae003a44ca062efa398b"
+  }
+}

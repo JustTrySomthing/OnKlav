@@ -1,0 +1,3 @@
+2026-10-30T19:51:34.030953455Z main ERROR Log4j API could not find a logging provider.
+Unsupported desktop numeric format safely displays stored number: [<=100][Red]0.00;[Blue]0.00
+DOC text and XLS values passed with java.awt, unsupported java.beans and javax.imageio blocked (Android SDK beans allowlist).

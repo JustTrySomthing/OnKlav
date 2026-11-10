@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.PhotoEffectsTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-28T00:08:01" hostname="666c98ec4593" time="5.571">
+  <properties/>
+  <testcase name="fourLooksHaveDistinctGradingAndZeroStrengthIsNeutral" classname="app.onklav.home.PhotoEffectsTest" time="4.689"/>
+  <testcase name="hdrAddsStructureWithoutLiftingBlacksOrWashingTonalRange" classname="app.onklav.home.PhotoEffectsTest" time="0.182"/>
+  <testcase name="renderedLookContactSheet" classname="app.onklav.home.PhotoEffectsTest" time="0.573"/>
+  <testcase name="hdrDoesNotDrawHalosAroundHardEdges" classname="app.onklav.home.PhotoEffectsTest" time="0.06"/>
+  <testcase name="sharpeningHasVisibleStrengthWithoutChangingFlatAreasOrAlpha" classname="app.onklav.home.PhotoEffectsTest" time="0.065"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

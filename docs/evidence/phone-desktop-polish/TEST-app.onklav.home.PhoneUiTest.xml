@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.PhoneUiTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-11-01T20:36:00" hostname="3d2dab7afedf" time="7.015">
+  <properties/>
+  <testcase name="keypadFormatsNumbersAndOffersVoicemailAndSpeedDial" classname="app.onklav.home.PhoneUiTest" time="5.889"/>
+  <testcase name="activeCallHasStableEndActionAndAnInCallKeypad" classname="app.onklav.home.PhoneUiTest" time="0.306"/>
+  <testcase name="narrowPhoneKeepsTheKeypadAndCallActionReachable" classname="app.onklav.home.PhoneUiTest" time="0.221"/>
+  <testcase name="incomingScreenHasExplicitAnswerAndDecline" classname="app.onklav.home.PhoneUiTest" time="0.11"/>
+  <testcase name="openingAddCallKeypadDoesNotReopenExistingCall" classname="app.onklav.home.PhoneUiTest" time="0.15"/>
+  <testcase name="keypadUpdatesDigitsAndTabsRemainAvailable" classname="app.onklav.home.PhoneUiTest" time="0.339"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

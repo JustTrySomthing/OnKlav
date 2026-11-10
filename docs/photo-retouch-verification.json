@@ -1,0 +1,50 @@
+{
+  "status": "implemented",
+  "production_compilation": "passed",
+  "unique_focused_checks_passed": 23,
+  "checks": {
+    "app.onklav.home.PhotoLayersTest.portableProjectRetainsOriginalEditsMarksAndBothHistoryDirections": "ui-first",
+    "app.onklav.home.PhotoLayersTest.cancellationStopsArchiveWithoutChangingOriginal": "ui-first",
+    "app.onklav.home.PhotoLayersTest.invalidVersionTraversalAndOversizedHistoryAreRejectedBeforeSourceIsWritten": "ui-first",
+    "app.onklav.home.PhotoMarkupTest.marksStayOnFixedCanvasAfterImageGeometryAndNeverChangeSourcePixels": "ui-first",
+    "app.onklav.home.PhotoMarkupTest.temporaryCollapsedViewportDuringKeyboardResizeRemainsFinite": "ui-first",
+    "app.onklav.home.PhotoMarkupTest.croppedContextIncludesMarksWithExactSelectedExportPixels": "ui-first",
+    "app.onklav.home.PhotoMarkupTest.fixedCanvasProjectionAndSegmentHitIgnoreImageGeometry": "ui-first",
+    "app.onklav.home.PhotoMarkupTest.legacyDraftsAndMarksRoundTripWithValidatedFiniteBounds": "ui-first",
+    "app.onklav.home.PhotoMarkupTest.highlightIsTranslucentAndSourceNormalizedMarksScaleWithExport": "ui-first",
+    "app.onklav.home.PhotoRetouchTest.correctionsRoundTripWithLayersAndLegacyEditsStillLoad": "ui-first",
+    "app.onklav.home.PhotoRetouchTest.retouchCoordinatesFollowRotationCropZoomAndPan": "ui-first",
+    "app.onklav.home.PhotoRetouchTest.healingReplacesDarkSpotWithNearbyTextureWithoutChangingOutsideOrAlpha": "ui-first",
+    "app.onklav.home.PhotoRetouchTest.smallAndTransparentImagesAndEdgesAreSafe": "ui-first",
+    "app.onklav.home.PhotoRetouchTest.invalidAndOversizedBrushWorkIsRejected": "ui-first",
+    "app.onklav.home.PhotoRetouchTest.previewAndExportUseSameNormalizedCorrectionAndNeverChangeSource": "ui-first",
+    "app.onklav.home.PhotoRetouchTest.redEyeRemovesRedButPreservesCatchlightSkinAndOutsideBrush": "ui-first",
+    "app.onklav.home.PhotoRetouchUiTest.pinchDoesNotApplyCorrectionAndCompareDisablesPainting": "ui-first",
+    "app.onklav.home.PhotoMarkupUiTest.penHighlightMoveEraseTextUndoDraftAndExportWorkInOneEditor": "ui-first",
+    "app.onklav.home.PhotoMarkupUiTest.switchingToolsAndTabsCommitsTextAndLayersReopensEditableHistory": "ui-first",
+    "app.onklav.home.PhotoMarkupUiTest.saveMenuHasStackedActionsAndDiscardClosesWithoutChangingOriginal": "ui-first",
+    "app.onklav.home.PhotoMarkupUiTest.landscapeTextToolsStayInlineAndLeaveAVisibleCanvas": "ui-first",
+    "app.onklav.home.PhotoMarkupUiTest.cancelledStrokeDoesNotCommitAndEraseNeverChangesThePhoto": "ui-first",
+    "app.onklav.home.PhotoRetouchUiTest.retouchTapUndoRedoAndDrawingRouteWork": "final"
+  },
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/PhotoEditor.kt": "d3cbbed51866103b120dbab02bc821466a6d6de598fa219d0330cb2c8ff1364a",
+    "android/app/src/main/kotlin/app/onklav/home/PhotoRetouch.kt": "7e07cf43db8caf6e0652e677d90809c56cfaf8a4f23821c8c5e6214ffe3b79ae",
+    "android/app/src/main/kotlin/app/onklav/home/PhotoRetouchCanvas.kt": "7903332120bdbfddbe8a6da3c11e50eccee652252ca210aed9c86b2f9e57536e",
+    "android/app/src/main/kotlin/app/onklav/home/PhotoMarkupControls.kt": "2eaf19fae3bcd18f5bd4d77b01b8b9a411f68adc1d129f42feffbad8c30de4d6",
+    "android/shared/src/main/res/drawable/photo_tool_retouch.xml": "e3f686cf0c9f72d4b1bad2603fe428fc9f19c7f88e2a8bd8aec8278e440f3eee"
+  },
+  "production_unchanged_during_checks": true,
+  "new_dependencies_models_permissions": false,
+  "apk_built": false,
+  "verification_notes": [
+    "16 algorithm/markup/Layers checks passed in initial run.",
+    "Initial UI fixture needed explicit virtual-clock pumping; final route assertion needed to wait for asynchronous drawing-canvas rendering.",
+    "Generated Gradle transform metadata failed before testing; fresh isolated cache resolved it.",
+    "Six UI checks passed in staged UI run; corrected final route check passed separately."
+  ],
+  "limits": [
+    "Generated image fixtures, not real portrait qualification",
+    "Physical-phone touch, portrait variety and large-image performance qualification pending"
+  ]
+}

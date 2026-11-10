@@ -1,0 +1,20 @@
+[
+  {
+    "template": "touch2d",
+    "build_sign_verify": true,
+    "publisher": "8d7ce2a95e7844cf3785664bac3d9845af4ef4456a67660aec5429bbaff7d642",
+    "package_bytes": 47376
+  },
+  {
+    "template": "scene3d",
+    "build_sign_verify": true,
+    "publisher": "8d7ce2a95e7844cf3785664bac3d9845af4ef4456a67660aec5429bbaff7d642",
+    "package_bytes": 47125
+  },
+  {
+    "template": "turn",
+    "build_sign_verify": true,
+    "publisher": "8d7ce2a95e7844cf3785664bac3d9845af4ef4456a67660aec5429bbaff7d642",
+    "package_bytes": 47482
+  }
+]

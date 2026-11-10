@@ -1,0 +1,10 @@
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/ed752e8a1957/current/OnKlav/developer/components)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.36s
+     Running unittests src/lib.rs (developer/components/target/debug/deps/onklav_ui-c94c9f1e1c388478)
+
+running 2 tests
+test playlists::tests::m3u_and_pls_metadata_are_bounded_and_ordered ... ok
+test playlists::tests::hostile_and_unsupported_sources_fail_closed ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 32 filtered out; finished in 0.00s
+

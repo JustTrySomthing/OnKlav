@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.SdkScheduledNotificationsTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-25T20:02:40" hostname="1122594d9286" time="0.63">
+  <properties/>
+  <testcase name="snoozeActionsAreOneUseAndRecheckTheSignedOwner" classname="app.onklav.home.SdkScheduledNotificationsTest" time="0.63"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

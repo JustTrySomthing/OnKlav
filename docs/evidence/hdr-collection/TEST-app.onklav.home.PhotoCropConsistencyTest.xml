@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.PhotoCropConsistencyTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-29T13:54:57" hostname="3d3a46c2e56a" time="9.674">
+  <properties/>
+  <testcase name="extremePerspectiveDoesNotCollapseOrInvertTheVisibleSelection" classname="app.onklav.home.PhotoCropConsistencyTest" time="8.401"/>
+  <testcase name="cropContextIncludesAllEditsAndSelectedPixelsMatchExport" classname="app.onklav.home.PhotoCropConsistencyTest" time="1.148"/>
+  <testcase name="transformedHandlesUseInverseMappingAndPreserveEveryOtherEdit" classname="app.onklav.home.PhotoCropConsistencyTest" time="0.125"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

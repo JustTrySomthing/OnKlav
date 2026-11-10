@@ -1,0 +1,171 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.11.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :android:app
+WARNING: The option setting 'android.aapt2FromMavenOverride=/workspace/scratch/0c4f42874eaa/android-env/sdk/build-tools/35.0.0/aapt2' is experimental.
+WARNING: platform-tools package is not installed.
+
+> Task :android:app:preBuild UP-TO-DATE
+> Task :android:app:preOptimizedBuild UP-TO-DATE
+> Task :android:app:mergeOptimizedJniLibFolders UP-TO-DATE
+> Task :android:games:preBuild UP-TO-DATE
+> Task :android:games:preReleaseBuild UP-TO-DATE
+> Task :android:games:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :android:games:mergeReleaseNativeLibs NO-SOURCE
+> Task :android:games:copyReleaseJniLibsProjectOnly UP-TO-DATE
+> Task :android:shared:preBuild UP-TO-DATE
+> Task :android:shared:preReleaseBuild UP-TO-DATE
+> Task :android:shared:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :android:shared:mergeReleaseNativeLibs UP-TO-DATE
+> Task :android:shared:copyReleaseJniLibsProjectOnly UP-TO-DATE
+> Task :android:tools:preBuild UP-TO-DATE
+> Task :android:tools:preReleaseBuild UP-TO-DATE
+> Task :android:tools:mergeReleaseJniLibFolders UP-TO-DATE
+> Task :android:tools:mergeReleaseNativeLibs NO-SOURCE
+> Task :android:tools:copyReleaseJniLibsProjectOnly UP-TO-DATE
+> Task :android:app:mergeOptimizedNativeLibs UP-TO-DATE
+> Task :android:app:stripOptimizedDebugSymbols UP-TO-DATE
+> Task :android:app:extractOptimizedNativeSymbolTables UP-TO-DATE
+> Task :android:app:mergeOptimizedNativeDebugMetadata NO-SOURCE
+> Task :android:shared:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:shared:generateReleaseResValues UP-TO-DATE
+> Task :android:shared:generateReleaseResources UP-TO-DATE
+> Task :android:shared:packageReleaseResources UP-TO-DATE
+> Task :android:shared:parseReleaseLocalResources UP-TO-DATE
+> Task :android:shared:generateReleaseRFile UP-TO-DATE
+> Task :android:shared:compileReleaseKotlin UP-TO-DATE
+> Task :android:shared:javaPreCompileRelease UP-TO-DATE
+> Task :android:shared:compileReleaseJavaWithJavac NO-SOURCE
+> Task :android:shared:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :android:tools:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:tools:generateReleaseResValues UP-TO-DATE
+> Task :android:tools:generateReleaseResources UP-TO-DATE
+> Task :android:tools:packageReleaseResources UP-TO-DATE
+> Task :android:tools:parseReleaseLocalResources UP-TO-DATE
+> Task :android:tools:generateReleaseRFile UP-TO-DATE
+> Task :android:tools:compileReleaseKotlin UP-TO-DATE
+> Task :android:tools:javaPreCompileRelease UP-TO-DATE
+> Task :android:tools:compileReleaseJavaWithJavac NO-SOURCE
+> Task :android:tools:mergeReleaseGeneratedProguardFiles
+> Task :android:shared:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :android:shared:exportReleaseConsumerProguardFiles UP-TO-DATE
+> Task :android:tools:exportReleaseConsumerProguardFiles
+> Task :android:games:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:games:generateReleaseResValues UP-TO-DATE
+> Task :android:games:generateReleaseResources UP-TO-DATE
+> Task :android:games:packageReleaseResources UP-TO-DATE
+> Task :android:games:parseReleaseLocalResources UP-TO-DATE
+> Task :android:games:generateReleaseRFile UP-TO-DATE
+> Task :android:games:compileReleaseKotlin UP-TO-DATE
+> Task :android:games:javaPreCompileRelease UP-TO-DATE
+> Task :android:games:compileReleaseJavaWithJavac NO-SOURCE
+> Task :android:games:mergeReleaseGeneratedProguardFiles UP-TO-DATE
+> Task :android:games:exportReleaseConsumerProguardFiles UP-TO-DATE
+> Task :android:app:buildKotlinToolingMetadata UP-TO-DATE
+> Task :android:app:checkOptimizedDuplicateClasses UP-TO-DATE
+> Task :android:app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:games:writeReleaseAarMetadata UP-TO-DATE
+> Task :android:shared:writeReleaseAarMetadata UP-TO-DATE
+> Task :android:tools:writeReleaseAarMetadata UP-TO-DATE
+> Task :android:app:checkOptimizedAarMetadata UP-TO-DATE
+> Task :android:app:generateOptimizedResValues UP-TO-DATE
+> Task :android:app:mapOptimizedSourceSetPaths UP-TO-DATE
+> Task :android:app:generateOptimizedResources UP-TO-DATE
+> Task :android:app:mergeOptimizedResources UP-TO-DATE
+> Task :android:app:packageOptimizedResources UP-TO-DATE
+> Task :android:app:parseOptimizedLocalResources UP-TO-DATE
+> Task :android:app:createOptimizedCompatibleScreenManifests UP-TO-DATE
+> Task :android:app:extractDeepLinksOptimized UP-TO-DATE
+> Task :android:games:extractDeepLinksRelease UP-TO-DATE
+> Task :android:games:processReleaseManifest UP-TO-DATE
+> Task :android:shared:extractDeepLinksRelease UP-TO-DATE
+> Task :android:shared:processReleaseManifest UP-TO-DATE
+> Task :android:tools:extractDeepLinksRelease UP-TO-DATE
+> Task :android:tools:processReleaseManifest UP-TO-DATE
+> Task :android:app:processOptimizedMainManifest UP-TO-DATE
+> Task :android:app:processOptimizedManifest UP-TO-DATE
+> Task :android:app:processOptimizedManifestForPackage UP-TO-DATE
+> Task :android:app:processOptimizedResources UP-TO-DATE
+> Task :android:games:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :android:app:javaPreCompileOptimized UP-TO-DATE
+> Task :android:games:prepareReleaseArtProfile UP-TO-DATE
+> Task :android:shared:prepareReleaseArtProfile UP-TO-DATE
+> Task :android:tools:prepareReleaseArtProfile UP-TO-DATE
+> Task :android:app:mergeOptimizedArtProfile UP-TO-DATE
+> Task :android:tools:bundleLibCompileToJarRelease
+> Task :android:games:bundleLibRuntimeToJarRelease UP-TO-DATE
+> Task :android:shared:bundleLibRuntimeToJarRelease UP-TO-DATE
+> Task :android:tools:bundleLibRuntimeToJarRelease
+> Task :android:app:extractProguardFiles UP-TO-DATE
+> Task :android:games:processReleaseJavaRes UP-TO-DATE
+> Task :android:shared:processReleaseJavaRes UP-TO-DATE
+> Task :android:tools:processReleaseJavaRes
+> Task :android:app:mergeOptimizedStartupProfile UP-TO-DATE
+> Task :android:app:mergeOptimizedShaders UP-TO-DATE
+> Task :android:app:compileOptimizedShaders NO-SOURCE
+> Task :android:app:generateOptimizedAssets UP-TO-DATE
+> Task :android:games:mergeReleaseShaders UP-TO-DATE
+> Task :android:games:compileReleaseShaders NO-SOURCE
+> Task :android:games:generateReleaseAssets UP-TO-DATE
+> Task :android:games:mergeReleaseAssets UP-TO-DATE
+> Task :android:shared:mergeReleaseShaders UP-TO-DATE
+> Task :android:shared:compileReleaseShaders NO-SOURCE
+> Task :android:shared:generateReleaseAssets UP-TO-DATE
+> Task :android:shared:mergeReleaseAssets UP-TO-DATE
+> Task :android:tools:mergeReleaseShaders UP-TO-DATE
+> Task :android:tools:compileReleaseShaders NO-SOURCE
+> Task :android:tools:generateReleaseAssets UP-TO-DATE
+> Task :android:tools:mergeReleaseAssets UP-TO-DATE
+> Task :android:app:mergeOptimizedAssets UP-TO-DATE
+> Task :android:app:compressOptimizedAssets UP-TO-DATE
+> Task :android:app:extractOptimizedVersionControlInfo UP-TO-DATE
+> Task :android:games:createFullJarRelease UP-TO-DATE
+> Task :android:games:extractProguardFiles UP-TO-DATE
+> Task :android:games:generateReleaseLintModel UP-TO-DATE
+> Task :android:games:prepareLintJarForPublish UP-TO-DATE
+> Task :android:shared:createFullJarRelease UP-TO-DATE
+> Task :android:shared:extractProguardFiles UP-TO-DATE
+> Task :android:shared:generateReleaseLintModel UP-TO-DATE
+> Task :android:shared:prepareLintJarForPublish UP-TO-DATE
+> Task :android:tools:createFullJarRelease
+> Task :android:tools:extractProguardFiles UP-TO-DATE
+> Task :android:tools:generateReleaseLintModel
+> Task :android:tools:prepareLintJarForPublish UP-TO-DATE
+> Task :android:tools:stripReleaseDebugSymbols NO-SOURCE
+> Task :android:tools:copyReleaseJniLibsProjectAndLocalJars UP-TO-DATE
+> Task :android:tools:extractDeepLinksForAarRelease UP-TO-DATE
+> Task :android:tools:extractReleaseAnnotations SKIPPED
+> Task :android:tools:mergeReleaseConsumerProguardFiles
+> Task :android:tools:mergeReleaseJavaResource
+> Task :android:tools:syncReleaseLibJars FAILED
+> Task :android:app:compileOptimizedKotlin
+w: file:///workspace/scratch/0c4f42874eaa/source/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt:192:29 'fun get(p0: String!): Any?' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/0c4f42874eaa/source/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt:350:17 Condition is always 'false'.
+w: file:///workspace/scratch/0c4f42874eaa/source/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt:395:17 Condition is always 'true'.
+w: file:///workspace/scratch/0c4f42874eaa/source/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessengerPane.kt:99:21 'val LocalClipboardManager: ProvidableCompositionLocal<ClipboardManager>' is deprecated. Use LocalClipboard instead which supports suspend functions.
+w: file:///workspace/scratch/0c4f42874eaa/source/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkWebComponent.kt:125:29 Wrapping the left-hand side of assignments in parentheses, labels or annotations is not allowed. This will become an error in Kotlin 2.2.
+w: file:///workspace/scratch/0c4f42874eaa/source/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkWebComponent.kt:126:29 Wrapping the left-hand side of assignments in parentheses, labels or annotations is not allowed. This will become an error in Kotlin 2.2.
+[Incubating] Problems report is available at: file:///workspace/scratch/0c4f42874eaa/source/OnKlav/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+A problem was found with the configuration of task ':android:tools:syncReleaseLibJars' (type 'LibraryAarJarsTask').
+  - In plugin 'com.android.internal.version-check' type 'com.android.build.gradle.internal.tasks.LibraryAarJarsTask' property 'typedefRecipe' specifies file '/workspace/scratch/0c4f42874eaa/source/OnKlav/android/tools/build/intermediates/annotations_typedef_file/release/extractReleaseAnnotations/typedefs.txt' which doesn't exist.
+    
+    Reason: An input file was expected to be present but it doesn't exist.
+    
+    Possible solutions:
+      1. Make sure the file exists before the task is called.
+      2. Make sure that the task which produces the file is declared as an input.
+    
+    For more information, please refer to https://docs.gradle.org/8.11.1/userguide/validation_problems.html#input_file_does_not_exist in the Gradle documentation.
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 1m 11s
+106 actionable tasks: 11 executed, 95 up-to-date

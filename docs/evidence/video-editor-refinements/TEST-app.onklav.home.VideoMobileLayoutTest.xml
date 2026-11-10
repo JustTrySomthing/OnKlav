@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.VideoMobileLayoutTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-10-30T12:43:59" hostname="e89dc6ba27f3" time="7.957">
+  <properties/>
+  <testcase name="frameControlsAndExactTimeRemainUsable" classname="app.onklav.home.VideoMobileLayoutTest" time="5.558"/>
+  <testcase name="landscapeKeepsPreviewTimelineAndToolsSeparate" classname="app.onklav.home.VideoMobileLayoutTest" time="0.377"/>
+  <testcase name="timelineAudioTapSelectsTheTouchedTrack" classname="app.onklav.home.VideoMobileLayoutTest" time="0.392"/>
+  <testcase name="portraitToolsAndSlidersRemainReachable" classname="app.onklav.home.VideoMobileLayoutTest" time="0.537"/>
+  <testcase name="fullscreenSourceAndLongStatusHaveClearExitAndDetails" classname="app.onklav.home.VideoMobileLayoutTest" time="0.266"/>
+  <testcase name="selectedAudioSurvivesInspectorCloseAndReopen" classname="app.onklav.home.VideoMobileLayoutTest" time="0.255"/>
+  <testcase name="shortPhoneShowsSettingsInsteadOfCrushingThem" classname="app.onklav.home.VideoMobileLayoutTest" time="0.214"/>
+  <testcase name="largeTextAudioUsesOneSelectedTrack" classname="app.onklav.home.VideoMobileLayoutTest" time="0.25"/>
+  <testcase name="verticalTimelineDragRevealsHiddenAudioLanes" classname="app.onklav.home.VideoMobileLayoutTest" time="0.106"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

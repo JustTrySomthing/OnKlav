@@ -1,0 +1,4 @@
+<resources>
+    <string name="power_accessibility_label">OnKlav Power</string>
+    <string name="power_accessibility_description">افتح قائمة إيقاف تشغيل الهاتف دون الضغط مطولًا على زر فعلي. يفتح OnKlav Power هذه القائمة فقط عند النقر على Power. ولا يقرأ الشاشة أو ينفذ إيماءات.</string>
+</resources>

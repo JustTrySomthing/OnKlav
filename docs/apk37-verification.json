@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "version": "0.100.37-rc1",
+  "version_code": 146,
+  "package": "app.onklav.home.prototype.rewrite",
+  "bytes": 186514911,
+  "sha256": "96677c7453e4685ca732443a728338277be50b4c14d965b097ca88a9f55584ab",
+  "signer_sha256": "6ed975c5fc27d19f6291f751a8bb00fa8a2c2e7d268bffc7b6ddf7e1b1a7a69d",
+  "variant": "debug",
+  "shrinking": false,
+  "checks": "docs/phone37-verification.json",
+  "build": "docs/evidence/v0.100.37/build-debug.json",
+  "package_verification": "docs/apk-verification-debug.json",
+  "scope": "Owner-requested fast ARM64 build. Physical device/carrier acceptance separate."
+}

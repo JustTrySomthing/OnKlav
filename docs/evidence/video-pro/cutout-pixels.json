@@ -1,0 +1,43 @@
+{
+  "shader_compile_link": "passed",
+  "renderer": "llvmpipe (LLVM 20.1.2, 256 bits)",
+  "pixel_cases": {
+    "green_key": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "red_retained": [
+      255,
+      0,
+      0,
+      255
+    ],
+    "circle_center": [
+      255,
+      0,
+      0,
+      255
+    ],
+    "circle_corner": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "feather_edge": [
+      137,
+      0,
+      0,
+      137
+    ],
+    "letterbox_outside": [
+      0,
+      0,
+      0,
+      0
+    ]
+  },
+  "phone_qualified": false
+}

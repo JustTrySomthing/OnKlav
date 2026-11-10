@@ -1,0 +1,128 @@
+{
+  "status": "source complete; final full production Kotlin compile and 23 focused checks passed",
+  "apk_created": false,
+  "latest_delivered_apk": "0.100.26-rc1/code135",
+  "production_backend_checks": 14,
+  "isolated_production_ui_checks": 9,
+  "final_full_app_kotlin_compile": true,
+  "production_runtime_classes_byte_matched": 3516,
+  "isolated_ui_runtime_classes_byte_matched": 273,
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt": "bdcd0d2499b2dcafb3085e3fe3ebef5581515f4189ddc1cc0d48668969313a6f",
+    "android/app/src/main/kotlin/app/onklav/home/VideoProWorkspace.kt": "643b256bc5a1e45bc6ea4f770579c633889213cd11a7843c34b553aad4559393",
+    "android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt": "15a58dd4ed32009cb19a7fc1c145ae27270dcc3b88c49d2fe3ff2d16540c3cea",
+    "android/app/src/main/kotlin/app/onklav/home/VideoTimelinePrecision.kt": "508a353a6c4ecbbaf8744db8d3e75933df252d4755b44fde560d364dcf4b7825",
+    "android/app/src/main/kotlin/app/onklav/home/VideoEditData.kt": "598fddb95fd8529b01ff7a909605980f5182d6193f87361da0b2cab94c794ff6",
+    "android/app/src/main/kotlin/app/onklav/home/VideoAudioProbe.kt": "30c239ec2f932fb68de51f3e9f58be53396d835ea0aae1b80c51098c5b572f2f"
+  },
+  "tests": [
+    {
+      "class": "app.onklav.home.VideoEditorHostTest",
+      "test": "compositionCarriesClipsTextSpeedAndMixedSound"
+    },
+    {
+      "class": "app.onklav.home.VideoMobileLayoutTest",
+      "test": "frameControlsAndExactTimeRemainUsable"
+    },
+    {
+      "class": "app.onklav.home.VideoMobileLayoutTest",
+      "test": "landscapeKeepsPreviewTimelineAndToolsSeparate"
+    },
+    {
+      "class": "app.onklav.home.VideoMobileLayoutTest",
+      "test": "timelineAudioTapSelectsTheTouchedTrack"
+    },
+    {
+      "class": "app.onklav.home.VideoMobileLayoutTest",
+      "test": "portraitToolsAndSlidersRemainReachable"
+    },
+    {
+      "class": "app.onklav.home.VideoMobileLayoutTest",
+      "test": "fullscreenSourceAndLongStatusHaveClearExitAndDetails"
+    },
+    {
+      "class": "app.onklav.home.VideoMobileLayoutTest",
+      "test": "selectedAudioSurvivesInspectorCloseAndReopen"
+    },
+    {
+      "class": "app.onklav.home.VideoMobileLayoutTest",
+      "test": "shortPhoneShowsSettingsInsteadOfCrushingThem"
+    },
+    {
+      "class": "app.onklav.home.VideoMobileLayoutTest",
+      "test": "largeTextAudioUsesOneSelectedTrack"
+    },
+    {
+      "class": "app.onklav.home.VideoMobileLayoutTest",
+      "test": "verticalTimelineDragRevealsHiddenAudioLanes"
+    },
+    {
+      "class": "app.onklav.home.VideoOfflineTest",
+      "test": "portableArchiveRestoresActualMediaWithNewIdentity"
+    },
+    {
+      "class": "app.onklav.home.VideoRcTest",
+      "test": "previewProxyIsNeverUsedForExportOrPortableBackup"
+    },
+    {
+      "class": "app.onklav.home.VideoRefinementsTest",
+      "test": "realMp3ImportsNormalizeToProbeablePcmWithoutChangingTheSource"
+    },
+    {
+      "class": "app.onklav.home.VideoRefinementsTest",
+      "test": "corruptedProjectReopensThePreviousDurableRevision"
+    },
+    {
+      "class": "app.onklav.home.VideoRefinementsTest",
+      "test": "frameSteppingDoesNotAccumulateRoundingError"
+    },
+    {
+      "class": "app.onklav.home.VideoRefinementsTest",
+      "test": "m4aProbeFallsBackWhenExtractorDurationIsZero"
+    },
+    {
+      "class": "app.onklav.home.VideoRefinementsTest",
+      "test": "missingMediaKeepsTheProjectVisibleAndItsEditsIntact"
+    },
+    {
+      "class": "app.onklav.home.VideoRefinementsTest",
+      "test": "snappingFindsOverlapsTitlesLayersAudioAndBeatsWithinTolerance"
+    },
+    {
+      "class": "app.onklav.home.VideoRefinementsTest",
+      "test": "exactPositionsRejectInvalidAndOutOfRangeInput"
+    },
+    {
+      "class": "app.onklav.home.VideoRefinementsTest",
+      "test": "mixedAudioUsesOriginalSourceTrimSpeedAndTimelineOffset"
+    },
+    {
+      "class": "app.onklav.home.VideoRefinementsTest",
+      "test": "wavProbeUsesPcmSamplesAndRejectsTruncation"
+    },
+    {
+      "class": "app.onklav.home.VideoRefinementsTest",
+      "test": "failedSaveNeverRedirectsTheCurrentProjectPointer"
+    },
+    {
+      "class": "app.onklav.home.VideoRefinementsTest",
+      "test": "proxyCacheInvalidatesWhenOriginalChangesAndNeverReplacesExport"
+    }
+  ],
+  "visual_review": [
+    "portrait timeline",
+    "selected audio controls",
+    "160% text audio controls",
+    "landscape edit",
+    "short phone",
+    "fullscreen status"
+  ],
+  "limits": [
+    "Isolated UI uses explicit test-only model, permission, player and composition fixtures. Production backend checks are separate.",
+    "MP3 uses real software decoding fixtures; M4A extractor/retriever fallback uses controlled framework metadata. No real phone codec/encoder or end-to-end sound-quality/A-V sync claim.",
+    "Actual Samsung playback/export, keyboard/rotation, accessibility, encoder speed and sound-quality acceptance remain open.",
+    "No new APK assembly or physical handset/carrier testing in this increment."
+  ],
+  "evidence": "docs/evidence/video-editor-refinements",
+  "build_environment": "Base saved cache restored; missing current dependencies fetched from official repositories. Use the proxy/trust-store setup in scripts/build.py for online restoration; stale restored Gradle transforms were regenerated."
+}

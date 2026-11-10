@@ -1,0 +1,10 @@
+{
+  "status": "passed_after_timeout_resume",
+  "initial_attempt": "initial-timeout-build-optimized.json",
+  "resume_log": "assemble-optimized.log",
+  "resume_seconds": 392,
+  "production_inputs_unchanged": true,
+  "native_sdk_speech_games_match": true,
+  "apk_verification": "verify-optimized.log",
+  "note": "Initial 600-second optimized assembly limit expired during R8. Cached compile outputs reused for a bounded 900-second resume. Future optimized build limit is now 900 seconds; debug remains 600."
+}

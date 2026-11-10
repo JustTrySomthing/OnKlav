@@ -1,0 +1,35 @@
+{
+  "schema": "onklav.game.entry.v1",
+  "min_host": 166,
+  "row": [
+    "close",
+    "return",
+    "pause",
+    "help",
+    "audio",
+    "settings"
+  ],
+  "resume_policy": "explicit",
+  "checkpoint_on_return": true,
+  "pause_policy": "toggle_without_dialog",
+  "temporary_options": "silent_pause_then_resume_on_done",
+  "quit_text": "Are you sure you want to quit? You will lose your progress.",
+  "quit_actions": [
+    "Resume",
+    "Quit"
+  ],
+  "entry_actions": [
+    "New Game",
+    "Resume",
+    "Cancel"
+  ],
+  "new_game_policy": "retain_previous_until_successful_start",
+  "pause_label": "Game paused",
+  "pause_play_blink_seconds": 2.4,
+  "splash": "OnKlav Games; publisher may replace studio branding",
+  "turn_sms": "onklav.turn_sms.v1; optional signed play_modes; explicit peer invitation and acceptance; no real-time play",
+  "catalog_policy": "list_only_until_explicit_play",
+  "launch_policy": "native_choice_then_one_loader",
+  "quit_policy": "acknowledged_session_tombstone_then_close",
+  "foreground_policy": "stay_paused_without_entry_dialog"
+}

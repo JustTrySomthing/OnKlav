@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.HistoryRestoreTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2026-10-24T14:02:17" hostname="41b9fb140d3c" time="2.921">
+  <properties/>
+  <testcase name="cancellationDuringChildrenRollsBackButCleanupFailureBlocksContinuation" classname="app.onklav.home.HistoryRestoreTest" time="2.226"/>
+  <testcase name="lostInsertAcknowledgementNeverRetriesOrGuessesWhichRowToDelete" classname="app.onklav.home.HistoryRestoreTest" time="0.051"/>
+  <testcase name="explicitAbsentReviewRetainsEvidenceAndDoesNotRetryOrDelete" classname="app.onklav.home.HistoryRestoreTest" time="0.06"/>
+  <testcase name="unsafeInputsAndClosedProductionGateHaveNoInsertEffects" classname="app.onklav.home.HistoryRestoreTest" time="0.045"/>
+  <testcase name="permissionLossRetainsReceiptUntilExplicitCleanup" classname="app.onklav.home.HistoryRestoreTest" time="0.058"/>
+  <testcase name="changedOwnershipOrFailedReadbackCannotCommit" classname="app.onklav.home.HistoryRestoreTest" time="0.047"/>
+  <testcase name="processInterruptionAfterParentReceiptCanBeCleanedAfterRestart" classname="app.onklav.home.HistoryRestoreTest" time="0.044"/>
+  <testcase name="childrenReappearanceCancellationAndAccessLossRetainPendingEvidence" classname="app.onklav.home.HistoryRestoreTest" time="0.099"/>
+  <testcase name="successfulMessagesRetainActualIdsAcrossRecoveryAndBlockReplay" classname="app.onklav.home.HistoryRestoreTest" time="0.055"/>
+  <testcase name="incompleteMmsDeletesOnlyNewParentAndChildren" classname="app.onklav.home.HistoryRestoreTest" time="0.051"/>
+  <testcase name="presentOwnedOrChangedMessageCannotBeAcknowledgedAbsent" classname="app.onklav.home.HistoryRestoreTest" time="0.054"/>
+  <testcase name="unknownAndCommittedOutcomesNeverQueryOrResolveGuessedIds" classname="app.onklav.home.HistoryRestoreTest" time="0.044"/>
+  <testcase name="explicitAbsentReviewProductionEntryStaysGateClosed" classname="app.onklav.home.HistoryRestoreTest" time="0.046"/>
+  <testcase name="processInterruptionBeforeReceiptStaysUncertain" classname="app.onklav.home.HistoryRestoreTest" time="0.035"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

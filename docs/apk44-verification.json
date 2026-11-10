@@ -1,0 +1,100 @@
+{
+  "scope": "Development builds; not full Inner Circle 2.2.85 parity",
+  "source_counts": {
+    ".java": 0,
+    ".kt": 626,
+    ".rs": 172,
+    ".gd": 20
+  },
+  "application_modules": [
+    "android/app/build.gradle.kts"
+  ],
+  "apks": [
+    {
+      "name": "host",
+      "variant": "optimized",
+      "package": "app.onklav.home.prototype.rewrite",
+      "version_name": "0.100.44-rc1",
+      "version_code": 153,
+      "target_sdk": 36,
+      "bytes": 108722812,
+      "sha256": "c4867d7982f6807139faf28dcae956b418494aa75947e5e9b4d8ccd22e73d934",
+      "signer_sha256": "6ed975c5fc27d19f6291f751a8bb00fa8a2c2e7d268bffc7b6ddf7e1b1a7a69d",
+      "signature_v2_verified": true,
+      "public_http_radio_transport": true,
+      "zip_integrity": "pass",
+      "zipalign_16kb": "pass",
+      "abis": [
+        "arm64-v8a"
+      ],
+      "elf_minimum_load_alignment": {
+        "lib/arm64-v8a/libandroidx.graphics.path.so": 16384,
+        "lib/arm64-v8a/libimage_processing_util_jni.so": 16384,
+        "lib/arm64-v8a/libonklav_core.so": 16384,
+        "lib/arm64-v8a/libonklav_speech.so": 16384,
+        "lib/arm64-v8a/libonnxruntime.so": 16384,
+        "lib/arm64-v8a/libsherpa-onnx-c-api.so": 16384,
+        "lib/arm64-v8a/libsurface_util_jni.so": 16384
+      },
+      "native_library_sha256": {
+        "lib/arm64-v8a/libandroidx.graphics.path.so": "41e9a793c43a0f4fddb19e33f346bace464f30f888ba7b9eaf96294ea115bfb6",
+        "lib/arm64-v8a/libimage_processing_util_jni.so": "f0e4611db0d6b68942d8ba6977519f3dd1cdbffa87b7fc16d8006696ba954af4",
+        "lib/arm64-v8a/libonklav_core.so": "c885437da10aa41660b4f5d542dd5a57195fbabd9c493186dc3098cabc732be2",
+        "lib/arm64-v8a/libonklav_speech.so": "381ba7eb88fd5eaf23448b5e818429d8943abb24852627921b3b18b13580247a",
+        "lib/arm64-v8a/libonnxruntime.so": "33847ad43bffe204699fd4a27f7f3603452a8cdaf2f9a44983a0bc31ffcf2da1",
+        "lib/arm64-v8a/libsherpa-onnx-c-api.so": "c85e2382e2ca12b0513826be926eaccfea896b4cbf568182e287671ba526f80d",
+        "lib/arm64-v8a/libsurface_util_jni.so": "6cb2eac3c68e6a82ce2a5ea5aba86749eb8c609914392e125f6cdfbc208992f8"
+      },
+      "legacy_defined_classes": 0,
+      "defined_class_count": 11662,
+      "permissions": [
+        "android.permission.CALL_PHONE",
+        "android.permission.READ_CALL_LOG",
+        "android.permission.WRITE_CALL_LOG",
+        "android.permission.WRITE_CONTACTS",
+        "android.permission.INTERNET",
+        "android.permission.MANAGE_EXTERNAL_STORAGE",
+        "android.permission.READ_EXTERNAL_STORAGE",
+        "android.permission.WRITE_EXTERNAL_STORAGE",
+        "android.permission.ACCESS_NETWORK_STATE",
+        "android.permission.VIBRATE",
+        "android.permission.READ_SMS",
+        "android.permission.READ_CONTACTS",
+        "android.permission.SEND_SMS",
+        "android.permission.RECEIVE_SMS",
+        "android.permission.RECEIVE_MMS",
+        "android.permission.RECEIVE_WAP_PUSH",
+        "android.permission.READ_PHONE_STATE",
+        "android.permission.READ_PHONE_NUMBERS",
+        "android.permission.POST_NOTIFICATIONS",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.MODIFY_AUDIO_SETTINGS",
+        "android.permission.RECEIVE_BOOT_COMPLETED",
+        "android.permission.WAKE_LOCK",
+        "android.permission.FOREGROUND_SERVICE",
+        "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+        "android.permission.FOREGROUND_SERVICE_MICROPHONE",
+        "android.permission.FOREGROUND_SERVICE_MEDIA_PROJECTION",
+        "android.permission.ACCESS_WIFI_STATE",
+        "android.permission.CHANGE_WIFI_STATE",
+        "android.permission.CHANGE_NETWORK_STATE",
+        "android.permission.ACCESS_COARSE_LOCATION",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.CAMERA",
+        "android.permission.BLUETOOTH",
+        "android.permission.BLUETOOTH_ADMIN",
+        "android.permission.BLUETOOTH_SCAN",
+        "android.permission.BLUETOOTH_CONNECT",
+        "android.permission.NEARBY_WIFI_DEVICES",
+        "android.permission.FOREGROUND_SERVICE_DATA_SYNC",
+        "android.permission.SCHEDULE_EXACT_ALARM",
+        "android.permission.USE_FULL_SCREEN_INTENT",
+        "android.permission.FOREGROUND_SERVICE_CAMERA",
+        "app.onklav.home.prototype.rewrite.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+      ],
+      "rust_libraries": {
+        "arm64-v8a": "c885437da10aa41660b4f5d542dd5a57195fbabd9c493186dc3098cabc732be2"
+      }
+    }
+  ]
+}

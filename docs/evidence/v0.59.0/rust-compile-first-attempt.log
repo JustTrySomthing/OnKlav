@@ -1,0 +1,23 @@
+   Compiling onklav-core v0.8.0 (/workspace/scratch/ed752e8a1957/current/OnKlav/core)
+error[E0308]: mismatched types
+   --> src/content.rs:141:76
+    |
+141 |  let bytes=crate::sdk::read_bounded(&root.join("notes-backup-import.json"),LIMIT)?;
+    |            ------------------------                                        ^^^^^ expected `u64`, found `usize`
+    |            |
+    |            arguments to this function are incorrect
+    |
+note: function defined here
+   --> src/sdk.rs:31:15
+    |
+ 31 | pub(crate) fn read_bounded(p:&Path,max:u64)->Result<Vec<u8>>{let meta=fs::symlink_metadata(p).map_err(|e|e.to_string())?;if !meta.is_file...
+    |               ^^^^^^^^^^^^         -------
+help: you can convert a `usize` to a `u64` and panic if the converted value doesn't fit
+    |
+141 |  let bytes=crate::sdk::read_bounded(&root.join("notes-backup-import.json"),LIMIT.try_into().unwrap())?;
+    |                                                                                 ++++++++++++++++++++
+
+For more information about this error, try `rustc --explain E0308`.
+error: could not compile `onklav-core` (lib) due to 1 previous error
+warning: build failed, waiting for other jobs to finish...
+error: could not compile `onklav-core` (lib test) due to 1 previous error

@@ -1,0 +1,1 @@
+{"grants":["storage.private","network.http","audio.playback"],"steps":[{"action":"demo.podcast","expect":{"status":"Podcast fixture parsed","podcast.episodes.0.size":123}},{"action":"demo.radio","expect":{"status":"Radio fixture parsed","radio.title":"Demo song"}},{"action":"demo.play","pending":"media.play"}]}

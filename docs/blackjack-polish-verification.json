@@ -1,0 +1,56 @@
+{
+  "scope": "Blackjack solo/friend polish; shared SDK helpers unchanged",
+  "model_checks": 179,
+  "solo_phone_sizes": [
+    [
+      320,
+      560
+    ],
+    [
+      432,
+      740
+    ]
+  ],
+  "friend_hands_tested": 10,
+  "evidence": [
+    "docs/evidence/blackjack-polish/solo-browser.json",
+    "docs/evidence/blackjack-polish/friend-browser.json",
+    "docs/games-provenance.json"
+  ],
+  "source_sha256": {
+    "games/engine-checks/blackjack/main.gd.uid": "22666a551ec56e517846d8f67bb096017a4ce5031d8f960088daffe77154e53d",
+    "games/engine-checks/blackjack/table.gd": "3e257f5eb2c2c1b0c8f3451eb1f9d1c407683d43ce8fb15c1f2fa2e52d5a6c9f",
+    "games/engine-checks/blackjack/tests.gd.uid": "ae2c12522874493e8eea01babf85dcabee288f1474d89766b991376f78c573d1",
+    "games/engine-checks/blackjack/scoreboard.gd": "b1d96c0e34a001345f682103f0b8d5b7d0d9e6d9793b3df39708ac3b32de1560",
+    "games/engine-checks/blackjack/card_art.gd": "246654666ac27ba0f2eecd51dfc5448c8bebccfcf8e6b2ed199a417936c094fd",
+    "games/engine-checks/blackjack/card_art.gd.uid": "0791e07ec84a796ccb66e10752dba7058ce46515f7a9780ca343f63a99f66fa2",
+    "games/engine-checks/blackjack/main.gd": "4ec694a42cb34e54f3d87fcca3cf9fd9de150e19446364dd9b8cba9f0a39d300",
+    "games/engine-checks/blackjack/tests.gd": "56ea0bfa0476df988680db0986a047568389ee7ce0f983d8d335bbcb5667f1e1",
+    "games/engine-checks/blackjack/solo.gd.uid": "4ba763805982b2e8166ec95b0a913604c2c018a82eee6f5465ac7537e2269a84",
+    "games/engine-checks/blackjack/table.gd.uid": "06036ce87ced285bf5d0c3cff58e5b48fc43cee3ff762524e4795c7db06630ad",
+    "games/engine-checks/blackjack/scoreboard.gd.uid": "8114a01761a6d7ca348f60913f570256b318722533d1d7819682b32ae717544d",
+    "games/engine-checks/blackjack/solo.gd": "a0003a9a54b3aa825f6befcd7038ac5399aa8d6b94983d2d955b7634bf6d5270",
+    "games/engine-checks/blackjack/audio.gd": "e3a20b7a4a2b9d6c5190c86b8c838f156cd392be97e60a040dd860306a5e1e46",
+    "games/engine-checks/blackjack/audio.gd.uid": "96dce37baad87ee9a0b90c4f70820be8865a1fbe304c62715fbe87c81754b0de",
+    "games/engine-checks/blackjack/audio/stand.wav": "bbd9824772c221fa2ab4ac3940e88079b2dfcbd484b906364922de4344b7e210",
+    "games/engine-checks/blackjack/audio/deal.wav.import": "3a1b47ce97542704d8a0399df399ef3c3c7d28524c17e7060aa72980a3f31915",
+    "games/engine-checks/blackjack/audio/win.wav": "be07891a3316c684e7c349b47e2a35c3944c2afa94d4d878cc45132a9e6eed35",
+    "games/engine-checks/blackjack/audio/lose.wav.import": "f1a63651e01fd071878b7b49a71ff81f19aa96d6291960b9f8ce165c167fb0e5",
+    "games/engine-checks/blackjack/audio/draw.wav.import": "344d211054c22bdc66efc6b3ce5694ced2d10280eb823be72216e7ed0008ceaf",
+    "games/engine-checks/blackjack/audio/stand.wav.import": "437c63e9d89cd8a3658994dfcb15fa816ddd093c5c621dc63df1f3ec8274a03a",
+    "games/engine-checks/blackjack/audio/land.wav": "90558527b5b1d25f407c5bc007e75c681391170be12f37df25af4556b2fbdd72",
+    "games/engine-checks/blackjack/audio/round.wav": "712c1342173eee188527d002424f5ce45fc2e380fa599c561dd177ba68d1eac5",
+    "games/engine-checks/blackjack/audio/draw.wav": "c551e3984b821c1211eb4de8c620e4feb938290b0afd91089c9a1e1ecf9f715b",
+    "games/engine-checks/blackjack/audio/round.wav.import": "6b4092f545681b0d8c18fb4ac4e3dff264b91c45c9dc0853925601bb85f8f889",
+    "games/engine-checks/blackjack/audio/deal.wav": "786aaf1c34ddd99c6e31a0c320e42c418d13bf07087f740d3f7f059150874c7f",
+    "games/engine-checks/blackjack/audio/win.wav.import": "51933034dc7f56fd7eef9a92caf5a764df2a9a6fc2642e2b1f094493101ca0f1",
+    "games/engine-checks/blackjack/audio/land.wav.import": "1f8c5c3201f764c0b7d613991e71983f8bb1bcffab4f70af853b42eaaff8688e",
+    "games/engine-checks/blackjack/audio/lose.wav": "17fd1c7fd905665ea991cd72e5f7a7ace1a3ff0bf8884c27f6b0f6bfbff9c773"
+  },
+  "post_browser_change": "Only spacing in help and natural-21 report strings; final shared build parses/exports these strings. No behavior changed.",
+  "apk_built": true,
+  "latest_apk": "0.100.50-rc1/code159",
+  "physical_phone_and_carrier_tested": false,
+  "latest_delivered_apk": "0.100.51-rc1/code160",
+  "apk_evidence": "docs/apk51-verification.json"
+}

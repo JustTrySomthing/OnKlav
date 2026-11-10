@@ -1,0 +1,13 @@
+<resources><style name="Base.OnKlavTheme" parent="android:style/Theme.Material.NoActionBar">
+<item name="android:windowBackground">@drawable/onklav_startup</item><item name="android:statusBarColor">@color/onklav_chrome</item><item name="android:navigationBarColor">@color/onklav_chrome</item><item name="android:windowLightStatusBar">false</item><item name="android:windowLightNavigationBar">false</item><item name="android:windowActionModeOverlay">true</item></style><style name="OnKlavTheme" parent="Base.OnKlavTheme"/><style name="OnKlavWritePaperTheme" parent="android:style/Theme.Material.Light.NoActionBar">
+<item name="android:colorAccent">#512B77</item>
+<item name="android:colorControlActivated">#512B77</item>
+<item name="android:textColorPrimary">#1B1B1F</item>
+<item name="android:textColorSecondary">#45454F</item>
+<item name="android:colorBackgroundFloating">#F6F6F9</item>
+<item name="android:colorBackground">#FFFFFF</item>
+</style><style name="OnKlavGameEntryTheme" parent="OnKlavTheme">
+<item name="android:windowIsTranslucent">true</item>
+<item name="android:windowBackground">@android:color/transparent</item>
+<item name="android:windowDisablePreview">true</item>
+</style></resources>

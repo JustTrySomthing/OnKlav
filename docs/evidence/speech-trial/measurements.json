@@ -1,0 +1,288 @@
+{
+  "environment": "Linux x86_64 build host; NOT Android phone performance",
+  "engine": "sherpa-onnx Rust 2.0.1; CPU; 2 threads",
+  "model": "kitten-nano-en-v0_8-int8",
+  "ready": {
+    "load_ms": 460.265681,
+    "ready": true,
+    "speakers": 8
+  },
+  "message": "Hi Charles! Your order is ready. Would you like me to leave it at the workshop, or bring it over tomorrow?",
+  "passage": "The morning light moved slowly across the mountains. Down in the valley, a narrow river caught the first warm colors of the day. Clara stopped beside the old wooden bridge and listened. For a moment, there was only birdsong and the quiet rush of water. Then someone called her name. She turned, smiled, and began walking home.",
+  "voices": [
+    {
+      "id": 0,
+      "label": "Male 1",
+      "gender": "Male",
+      "upstream": "expr-voice-2-m"
+    },
+    {
+      "id": 1,
+      "label": "Female 1",
+      "gender": "Female",
+      "upstream": "expr-voice-2-f"
+    },
+    {
+      "id": 2,
+      "label": "Male 2",
+      "gender": "Male",
+      "upstream": "expr-voice-3-m"
+    },
+    {
+      "id": 3,
+      "label": "Female 2",
+      "gender": "Female",
+      "upstream": "expr-voice-3-f"
+    },
+    {
+      "id": 4,
+      "label": "Male 3",
+      "gender": "Male",
+      "upstream": "expr-voice-4-m"
+    },
+    {
+      "id": 5,
+      "label": "Female 3",
+      "gender": "Female",
+      "upstream": "expr-voice-4-f"
+    },
+    {
+      "id": 6,
+      "label": "Male 4",
+      "gender": "Male",
+      "upstream": "expr-voice-5-m"
+    },
+    {
+      "id": 7,
+      "label": "Female 4",
+      "gender": "Female",
+      "upstream": "expr-voice-5-f"
+    }
+  ],
+  "runs": [
+    {
+      "voice": 0,
+      "kind": "message",
+      "file": "0-message.wav",
+      "callback_samples": 0,
+      "callbacks": 0,
+      "first_callback_ms": null,
+      "rtf": 0.25300252776699034,
+      "sample_rate": 24000,
+      "seconds": 7.725,
+      "synthesis_ms": 1954.444527,
+      "total_ms": 1957.551894000062,
+      "chunks": 3
+    },
+    {
+      "voice": 0,
+      "kind": "reading",
+      "file": "0-reading.wav",
+      "callback_samples": 0,
+      "callbacks": 0,
+      "first_callback_ms": null,
+      "rtf": 0.2540223854736842,
+      "sample_rate": 24000,
+      "seconds": 23.75,
+      "synthesis_ms": 6033.031655000001,
+      "total_ms": 6043.463379000059,
+      "chunks": 6
+    },
+    {
+      "voice": 1,
+      "kind": "message",
+      "file": "1-message.wav",
+      "callback_samples": 0,
+      "callbacks": 0,
+      "first_callback_ms": null,
+      "rtf": 0.24514757607920792,
+      "sample_rate": 24000,
+      "seconds": 12.625,
+      "synthesis_ms": 3094.988148,
+      "total_ms": 3099.848028999986,
+      "chunks": 3
+    },
+    {
+      "voice": 1,
+      "kind": "reading",
+      "file": "1-reading.wav",
+      "callback_samples": 0,
+      "callbacks": 0,
+      "first_callback_ms": null,
+      "rtf": 0.243732257274758,
+      "sample_rate": 24000,
+      "seconds": 33.575,
+      "synthesis_ms": 8183.310538000001,
+      "total_ms": 8196.696058999805,
+      "chunks": 6
+    },
+    {
+      "voice": 2,
+      "kind": "message",
+      "file": "2-message.wav",
+      "callback_samples": 0,
+      "callbacks": 0,
+      "first_callback_ms": null,
+      "rtf": 0.24011362811501596,
+      "sample_rate": 24000,
+      "seconds": 7.825,
+      "synthesis_ms": 1878.88914,
+      "total_ms": 1881.934070999705,
+      "chunks": 3
+    },
+    {
+      "voice": 2,
+      "kind": "reading",
+      "file": "2-reading.wav",
+      "callback_samples": 0,
+      "callbacks": 0,
+      "first_callback_ms": null,
+      "rtf": 0.23762857194706996,
+      "sample_rate": 24000,
+      "seconds": 26.45,
+      "synthesis_ms": 6285.2757280000005,
+      "total_ms": 6294.701316999635,
+      "chunks": 6
+    },
+    {
+      "voice": 3,
+      "kind": "message",
+      "file": "3-message.wav",
+      "callback_samples": 0,
+      "callbacks": 0,
+      "first_callback_ms": null,
+      "rtf": 0.25961643345844504,
+      "sample_rate": 24000,
+      "seconds": 9.325,
+      "synthesis_ms": 2420.923242,
+      "total_ms": 2425.104207000004,
+      "chunks": 3
+    },
+    {
+      "voice": 3,
+      "kind": "reading",
+      "file": "3-reading.wav",
+      "callback_samples": 0,
+      "callbacks": 0,
+      "first_callback_ms": null,
+      "rtf": 0.24057981461669503,
+      "sample_rate": 24000,
+      "seconds": 29.35,
+      "synthesis_ms": 7061.017559,
+      "total_ms": 7069.900903000416,
+      "chunks": 6
+    },
+    {
+      "voice": 4,
+      "kind": "message",
+      "file": "4-message.wav",
+      "callback_samples": 0,
+      "callbacks": 0,
+      "first_callback_ms": null,
+      "rtf": 0.2383829293950178,
+      "sample_rate": 24000,
+      "seconds": 7.025,
+      "synthesis_ms": 1674.640079,
+      "total_ms": 1677.0106439998926,
+      "chunks": 3
+    },
+    {
+      "voice": 4,
+      "kind": "reading",
+      "file": "4-reading.wav",
+      "callback_samples": 0,
+      "callbacks": 0,
+      "first_callback_ms": null,
+      "rtf": 0.24598410080536912,
+      "sample_rate": 24000,
+      "seconds": 22.35,
+      "synthesis_ms": 5497.744653,
+      "total_ms": 5507.824690000234,
+      "chunks": 6
+    },
+    {
+      "voice": 5,
+      "kind": "message",
+      "file": "5-message.wav",
+      "callback_samples": 0,
+      "callbacks": 0,
+      "first_callback_ms": null,
+      "rtf": 0.24287242552971572,
+      "sample_rate": 24000,
+      "seconds": 9.675,
+      "synthesis_ms": 2349.790717,
+      "total_ms": 2354.0539759997046,
+      "chunks": 3
+    },
+    {
+      "voice": 5,
+      "kind": "reading",
+      "file": "5-reading.wav",
+      "callback_samples": 0,
+      "callbacks": 0,
+      "first_callback_ms": null,
+      "rtf": 0.2579306048269743,
+      "sample_rate": 24000,
+      "seconds": 28.175,
+      "synthesis_ms": 7267.194791,
+      "total_ms": 7275.367582999934,
+      "chunks": 6
+    },
+    {
+      "voice": 6,
+      "kind": "message",
+      "file": "6-message.wav",
+      "callback_samples": 0,
+      "callbacks": 0,
+      "first_callback_ms": null,
+      "rtf": 0.23860875419483102,
+      "sample_rate": 24000,
+      "seconds": 12.575,
+      "synthesis_ms": 3000.505084,
+      "total_ms": 3004.0969900001073,
+      "chunks": 3
+    },
+    {
+      "voice": 6,
+      "kind": "reading",
+      "file": "6-reading.wav",
+      "callback_samples": 0,
+      "callbacks": 0,
+      "first_callback_ms": null,
+      "rtf": 0.2365223462591362,
+      "sample_rate": 24000,
+      "seconds": 37.625,
+      "synthesis_ms": 8899.153278,
+      "total_ms": 8913.653085000078,
+      "chunks": 6
+    },
+    {
+      "voice": 7,
+      "kind": "message",
+      "file": "7-message.wav",
+      "callback_samples": 0,
+      "callbacks": 0,
+      "first_callback_ms": null,
+      "rtf": 0.2223286331391586,
+      "sample_rate": 24000,
+      "seconds": 7.725,
+      "synthesis_ms": 1717.488691,
+      "total_ms": 1719.9669589999758,
+      "chunks": 3
+    },
+    {
+      "voice": 7,
+      "kind": "reading",
+      "file": "7-reading.wav",
+      "callback_samples": 0,
+      "callbacks": 0,
+      "first_callback_ms": null,
+      "rtf": 0.24925220406712734,
+      "sample_rate": 24000,
+      "seconds": 25.325,
+      "synthesis_ms": 6312.312068,
+      "total_ms": 6324.046004999218,
+      "chunks": 6
+    }
+  ]
+}

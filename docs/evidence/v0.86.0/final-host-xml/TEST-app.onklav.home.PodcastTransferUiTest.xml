@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.PodcastTransferUiTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-26T22:19:22" hostname="844ebfe47829" time="5.369">
+  <properties/>
+  <testcase name="episodeShowsMeasuredProgressCompletionAndFailure" classname="app.onklav.home.PodcastTransferUiTest" time="5.369"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

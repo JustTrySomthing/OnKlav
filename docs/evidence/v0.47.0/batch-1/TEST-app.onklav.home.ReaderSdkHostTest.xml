@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.ReaderSdkHostTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-23T14:31:42" hostname="41aed82b0335" time="2.924">
+  <properties/>
+  <testcase name="readerSdkDraftControlsSettingsClearAndReopen" classname="app.onklav.home.ReaderSdkHostTest" time="2.924"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.CameraDownloadRecoveryTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-28T12:15:38" hostname="1b65f1fab707" time="4.111">
+  <properties/>
+  <testcase name="cameraRejectsRedirectedCaptureFolderButKeepsExternalData" classname="app.onklav.home.CameraDownloadRecoveryTest" time="3.412"/>
+  <testcase name="cameraProviderInitializationFailureBecomesRetryFeedback" classname="app.onklav.home.CameraDownloadRecoveryTest" time="0.557"/>
+  <testcase name="cameraAcceptsTrustedAndroidDataDirectoryAlias" classname="app.onklav.home.CameraDownloadRecoveryTest" time="0.142"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

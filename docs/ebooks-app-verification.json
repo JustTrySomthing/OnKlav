@@ -1,0 +1,64 @@
+{
+  "status": "eBooks implemented and bundled in verified OnKlav0.74.0 ARM64 test APK; full lint passed",
+  "host": "0.74.0-ebooks1/code82",
+  "source": "Project Gutenberg OPDS, user-paced with contact User-Agent; live catalog and acquisition metadata GET succeeded",
+  "reader": "Reuses scoped Rust EPUB2/3 text reader; chapters, search, page positions; shared Read Aloud speaker/voices",
+  "remaining": [
+    "actual Samsung/Android reading, voice output and lifecycle acceptance",
+    "default Android HTTPS provider route; host JVM proxy network was unreachable"
+  ],
+  "physical_phone_tested": false,
+  "checks": {
+    "rust_core_passed": 271,
+    "controller_passed": 4,
+    "public_contract_passed": 5,
+    "ebook_backend_passed": 5,
+    "signed_ebook_ui_passed": 1,
+    "shared_speech_passed": 6,
+    "AudioBooks_regression_passed": 8,
+    "shared_host_passed": 12,
+    "full_lint_errors": 0,
+    "full_lint_warnings": 168
+  },
+  "live_provider": {
+    "public_catalog_metadata": "HTTPS GET verified",
+    "android_client": "blocked: build environment proxy routing; Network is unreachable; native DNS policy kept intact",
+    "source_file_compatibility": "passed: actual Gutenberg Alice EPUB,15 chapters, signed private acquire/blob/Rust/reader path; see gutenberg-transfer/compatibility.json"
+  },
+  "limits": [
+    "Reflowable text-first EPUB2/3; images represented by alternative descriptions",
+    "No PDF/MOBI/KFX or DRM unlocking",
+    "20MiB EPUB,200 spine chapters,120KiB chapter text; existing safe-profile resource limits",
+    "Library pages40; bookmarks pages20; saved page/chapter positions rather than exact spoken-word offsets",
+    "Read Aloud uses installed offline voices and stops when backgrounded",
+    "Provider availability and OPDS interface maintenance apply"
+  ],
+  "apk": {
+    "package": "app.onklav.home.prototype.rewrite",
+    "version_name": "0.74.0-ebooks1",
+    "version_code": 82,
+    "bytes": 71117847,
+    "sha256": "c52ed3da79b4851e5ee7aca8392e09502625767f045a0294964e53eabcd295fa",
+    "signer_sha256": "6ed975c5fc27d19f6291f751a8bb00fa8a2c2e7d268bffc7b6ddf7e1b1a7a69d",
+    "signature_v2_verified": true,
+    "zipalign_16kb": "pass",
+    "bundled_apps": 13
+  },
+  "actual_gutenberg_book": {
+    "status": "passed",
+    "scope": "Actual Gutenberg EPUB bytes through signed acquire/blob/Rust EPUB/reader path; HTTP transport supplied from actual downloaded file",
+    "title": "Alice's Adventures in Wonderland",
+    "chapters": 15,
+    "bytes": 189249,
+    "sha256": "4f81245d31380ac1d6eafb9a321e3691369bc70985736ae4bccf849a4f784036",
+    "default_android_network_qualified": false
+  },
+  "resolved": [
+    "Restored build environment after temporary disconnection; saved source checkpoints before long phases",
+    "Moved generated Gradle caches to /tmp, reusing immutable dependencies; avoided broken restored Godot transform metadata",
+    "Fixed duplicate library control identity caught by signed screen tests",
+    "Split completed import/download from Read now to preserve the six-effect broker budget",
+    "Explicit completion route is owner/session-bound, revocable and non-gesture",
+    "Cleaned generated DEX/resource outputs with normal build driver after resource change; no test/lint weakening"
+  ]
+}

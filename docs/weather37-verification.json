@@ -1,0 +1,55 @@
+{
+  "chunk": 37,
+  "status": "current model weather/units/attribution/stale-cache profile source implemented; actual provider/Android/device qualification pending",
+  "production_path": "Explicit configured Place -> clock.read -> signed HTTP current-conditions request -> unit/finite/timestamp validation -> optimistic private collection cache -> native weather rows/units/refresh/age controls",
+  "helper_cases_passed": 5,
+  "contract_cases_passed": 5,
+  "signed_scenario_steps_passed": 4,
+  "signed_denial_steps_passed": 1,
+  "display_only_final_change": "Mapped WMO condition codes to plain labels after functional selections; final SDK compile passed. Normalization/cache/flow unchanged.",
+  "scenario": "Synthetic labelled weather fixture through real private collections; units and reopen; last step reaches real pending clock.read. No native clock/weather reply faked, no provider request sent.",
+  "bounds": {
+    "response_bytes": 131072,
+    "freshness_seconds": 1800,
+    "future_tolerance_seconds": 300,
+    "cached_places": 1
+  },
+  "behavior": [
+    "Selected manual location; no GPS/discovery",
+    "Canonical Celsius/kmh cache; explicit imperial conversion",
+    "Attribution and URL remain visible even without data",
+    "Failed refresh/commit retains prior snapshot and marks stale/unverified",
+    "Provider/place binding checked before displaying cache",
+    "No network on open; manual clock-only age check; freshness as of last explicit time check, not a live clock claim"
+  ],
+  "unsupported": [
+    "Forecasts and alerts",
+    "Background polling or push",
+    "Automatic geocoding/location/provider switching",
+    "Persistent cross-session unit preference (current-screen state only)"
+  ],
+  "remaining": [
+    "Actual chosen-provider model/HTTP/usage-plan qualification",
+    "Full Android HTTP/JNI and phone layout/TalkBack/lifecycle/process acceptance",
+    "Sustained performance and reference-app workflows"
+  ],
+  "core_or_kotlin_changed": false,
+  "native_rebuilt": false,
+  "native_source_and_artifact_hashes_verified": true,
+  "apk_created": false,
+  "sdk_release_created": false,
+  "shipping_package_created": false,
+  "next_feature": 38,
+  "logs": [
+    "docs/evidence/v0.70.0/weather37-tests-final.log",
+    "docs/evidence/v0.70.0/weather37-contract.log",
+    "docs/evidence/v0.70.0/weather37-broker.log",
+    "docs/evidence/v0.70.0/weather37-denied.log",
+    "docs/evidence/v0.70.0/weather37-final-label-compile.log"
+  ],
+  "source_sha256": {
+    "developer/components/src/weather.rs": "e46323f3c15d8d613b5e1773fc86021b8b51e23265ef64d9b2ef884cb4f12f85",
+    "developer/components/src/lib.rs": "088091ded56418db24e83efe33c6bc69ef3530f02cce0f983653997c1789d4e8",
+    "developer/examples/weather/src/lib.rs": "c1f68b00665425a12e050ef987672bfc737fcb78b896c9ed64b7344bd946128b"
+  }
+}

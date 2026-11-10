@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.WriteUiTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-29T16:03:22" hostname="3d3a46c2e56a" time="26.563">
+  <properties/>
+  <testcase name="reviewAppliesOnlyTheChosenSpellingSuggestion" classname="app.onklav.home.WriteUiTest" time="25.862"/>
+  <testcase name="saveChoicesWrapAtLargeTypeAndExportUsesTheChosenFormat" classname="app.onklav.home.WriteUiTest" time="0.701"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

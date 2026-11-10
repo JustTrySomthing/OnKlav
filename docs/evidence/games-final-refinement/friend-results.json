@@ -1,0 +1,8 @@
+{
+  "rules": 2,
+  "eight_blocks": true,
+  "real_channel_intents": true,
+  "paused_arrival_queued": true,
+  "exact_model_after_physics": true,
+  "errors": []
+}

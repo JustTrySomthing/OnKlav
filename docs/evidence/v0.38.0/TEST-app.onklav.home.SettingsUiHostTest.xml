@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.SettingsUiHostTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-10-23T00:03:18" hostname="276516236850" time="2.203">
+  <properties/>
+  <testcase name="nestedSettingsSaveAndCancelAreRealAndReturnToParent" classname="app.onklav.home.SettingsUiHostTest" time="0.35"/>
+  <testcase name="appearanceDraftCancelAndApplyAndNestedBackgroundCancel" classname="app.onklav.home.SettingsUiHostTest" time="0.44"/>
+  <testcase name="walkieSettingsChangeTheSignedAppsPrivateStoreWithoutAddingPermissions" classname="app.onklav.home.SettingsUiHostTest" time="0.779"/>
+  <testcase name="settingsRemainReachableWithLargeText" classname="app.onklav.home.SettingsUiHostTest" time="0.074"/>
+  <testcase name="checkedHistoryReviewShowsCountsAndKeepsProviderRestoreDisabled" classname="app.onklav.home.SettingsUiHostTest" time="0.099"/>
+  <testcase name="quietHoursUsesStagedRepeatChoicesAndPersistsOnlyOnSave" classname="app.onklav.home.SettingsUiHostTest" time="0.224"/>
+  <testcase name="historyExportAndImportCheckAreReachable" classname="app.onklav.home.SettingsUiHostTest" time="0.131"/>
+  <testcase name="comparisonShowsReadOnlyCandidatesAndKeepsRestoreDisabled" classname="app.onklav.home.SettingsUiHostTest" time="0.104"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

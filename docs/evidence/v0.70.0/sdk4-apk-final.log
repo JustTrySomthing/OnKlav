@@ -1,0 +1,16 @@
+{
+  "sdk_apps": "reuse",
+  "mobile_rust": "reuse",
+  "games": "reuse",
+  "android_tests": "not requested",
+  "variant": "optimized",
+  "abis": [
+    "arm64-v8a"
+  ]
+}
+Resource inputs changed: refreshing generated resource/package/DEX caches
+assemble-optimized: starting (maximum 600s)
+assemble-optimized: finished in 18.51s
+verify-optimized: starting (maximum 120s)
+verify-optimized: finished in 2.02s
+APK assembled and verified. Phone/carrier/performance acceptance remains separate.

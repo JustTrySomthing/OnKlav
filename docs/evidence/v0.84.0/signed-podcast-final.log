@@ -1,0 +1,8 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.04s
+     Running unittests src/lib.rs (core/target/debug/deps/onklav_core-8a579202944a8eae)
+
+running 1 test
+test sdk::tests::signed_podcast_download_buttons_have_scoped_services_and_live_storage_permission ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 280 filtered out; finished in 0.71s
+

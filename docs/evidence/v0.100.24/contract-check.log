@@ -1,0 +1,14 @@
+F....
+======================================================================
+FAIL: test_build_icon_and_catalog_inventory_match_the_runtime (test_contract.PublishedContract.test_build_icon_and_catalog_inventory_match_the_runtime)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/f56bb877cb5d/onklav/OnKlav/developer/tests/test_contract.py", line 39, in test_build_icon_and_catalog_inventory_match_the_runtime
+    build=int(re.search(r'HOST_BUILD:u32=(\d+)',source).group(1));self.assertEqual(build,contract['reference_host_build'])
+                                                                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 96 != 95
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.016s
+
+FAILED (failures=1)

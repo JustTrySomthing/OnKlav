@@ -1,0 +1,12 @@
+project/OnKlav/android/app/src/main/kotlin/app/onklav/home/ChatStore.kt:51:25: error: cannot infer type for this parameter. Specify it explicitly.
+project/OnKlav/android/app/src/main/kotlin/app/onklav/home/ChatStore.kt:51:37: error: unresolved reference 'MessageRepository'.
+project/OnKlav/android/app/src/main/kotlin/app/onklav/home/ChatStore.kt:51:103: error: cannot infer type for this parameter. Specify it explicitly.
+project/OnKlav/android/app/src/main/kotlin/app/onklav/home/ChatStore.kt:51:103: error: unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+project/OnKlav/android/app/src/main/kotlin/app/onklav/home/ChatStore.kt:51:106: error: cannot infer type for this parameter. Specify it explicitly.
+project/OnKlav/android/app/src/main/kotlin/app/onklav/home/ChatStore.kt:51:127: error: unresolved reference 'registerIncomingGroup'.
+project/OnKlav/android/app/src/main/kotlin/app/onklav/home/ChatStore.kt:74:13: error: cannot infer type for this parameter. Specify it explicitly.
+project/OnKlav/android/app/src/main/kotlin/app/onklav/home/ChatStore.kt:74:25: error: unresolved reference 'MessageRepository'.
+project/OnKlav/android/app/src/main/kotlin/app/onklav/home/ChatStore.kt:74:91: error: cannot infer type for this parameter. Specify it explicitly.
+project/OnKlav/android/app/src/main/kotlin/app/onklav/home/ChatStore.kt:74:91: error: unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+project/OnKlav/android/app/src/main/kotlin/app/onklav/home/ChatStore.kt:74:94: error: cannot infer type for this parameter. Specify it explicitly.
+project/OnKlav/android/app/src/main/kotlin/app/onklav/home/ChatStore.kt:74:101: error: unresolved reference 'registerIncomingGroup'.

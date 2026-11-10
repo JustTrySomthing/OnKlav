@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.SocialSdkHostTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-23T01:36:49" hostname="276516236850" time="0.795">
+  <properties/>
+  <testcase name="socialIsOnlyHelloWorldInsideSdkHost" classname="app.onklav.home.SocialSdkHostTest" time="0.795"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.SdkFeedServiceTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-23T03:57:58" hostname="5347b9ab5bea" time="0.05">
+  <properties/>
+  <testcase name="hostileXmlAndNonPublicSourcesAreRejected" classname="app.onklav.home.SdkFeedServiceTest" time="0.019"/>
+  <testcase name="rssAndAtomKeepPlainTextAndResolveArticleLinks" classname="app.onklav.home.SdkFeedServiceTest" time="0.031"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

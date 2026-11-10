@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.MapsAppUiTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-27T10:40:05" hostname="b1839471ed1a" time="9.373">
+  <properties/>
+  <testcase name="zipBookmarksRenamingAndSavedDirectionsAreReachable" classname="app.onklav.home.MapsAppUiTest" time="9.373"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

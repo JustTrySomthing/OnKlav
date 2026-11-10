@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.CalendarRemindersTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-11-02T16:49:43" hostname="13575fdd974e" time="4.208">
+  <properties/>
+  <testcase name="oneScheduledAlarmRecoversAndEmptyCalendarCancelsIt" classname="app.onklav.home.CalendarRemindersTest" time="3.643"/>
+  <testcase name="replayAfterTheSnoozedReminderFiredCannotResurrectItButFreshSnoozeWorks" classname="app.onklav.home.CalendarRemindersTest" time="0.286"/>
+  <testcase name="duplicateSnoozeActionDoesNotCreateOrPostponeAnotherReminder" classname="app.onklav.home.CalendarRemindersTest" time="0.093"/>
+  <testcase name="deliveredReminderDoesNotRepeatAndChannelsKeepSilentSeparateFromAlarmSound" classname="app.onklav.home.CalendarRemindersTest" time="0.071"/>
+  <testcase name="snoozePersistsAndDeletingEventCancelsItsNotificationsAndAlarm" classname="app.onklav.home.CalendarRemindersTest" time="0.061"/>
+  <testcase name="legacyTimestampSnoozeIsRecognizedBeforeAddingAStableSuccessor" classname="app.onklav.home.CalendarRemindersTest" time="0.052"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,34 @@
+{
+  "plan": {
+    "sdk_apps": "reuse",
+    "mobile_rust": "reuse",
+    "games": "reuse",
+    "android_tests": "not requested",
+    "variant": "optimized",
+    "abis": [
+      "arm64-v8a"
+    ]
+  },
+  "phases": [
+    {
+      "phase": "assemble-optimized",
+      "seconds": 164.04,
+      "returncode": 0,
+      "log": "docs/evidence/v0.67.0/assemble-optimized.log"
+    },
+    {
+      "phase": "verify-optimized",
+      "seconds": 1.52,
+      "returncode": 1,
+      "log": "docs/evidence/v0.67.0/verify-optimized-initial-path-error.log"
+    },
+    {
+      "phase": "verify-optimized-shortened-resource-path",
+      "seconds": 2.93,
+      "returncode": 0,
+      "log": "docs/evidence/v0.67.0/verify-optimized.log"
+    }
+  ],
+  "status": "passed",
+  "note": "APK assembled once. Final verification resolves optimized resource paths from the resource table; no APK rebuild was needed."
+}

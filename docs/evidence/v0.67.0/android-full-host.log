@@ -1,0 +1,1172 @@
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.11.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :android:app
+WARNING: The option setting 'android.aapt2FromMavenOverride=/workspace/scratch/ed752e8a1957/build-env/sdk/build-tools/35.0.0/aapt2' is experimental.
+WARNING: platform-tools package is not installed.
+
+> Task :android:app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:app:preBuild UP-TO-DATE
+> Task :android:app:preDebugBuild UP-TO-DATE
+> Task :android:games:preBuild UP-TO-DATE
+> Task :android:games:preDebugBuild UP-TO-DATE
+> Task :android:games:writeDebugAarMetadata UP-TO-DATE
+> Task :android:shared:preBuild UP-TO-DATE
+> Task :android:shared:preDebugBuild UP-TO-DATE
+> Task :android:shared:writeDebugAarMetadata UP-TO-DATE
+> Task :android:tools:preBuild UP-TO-DATE
+> Task :android:tools:preDebugBuild UP-TO-DATE
+> Task :android:tools:writeDebugAarMetadata UP-TO-DATE
+> Task :android:app:checkDebugAarMetadata UP-TO-DATE
+> Task :android:app:generateDebugResValues UP-TO-DATE
+> Task :android:games:generateDebugResValues UP-TO-DATE
+> Task :android:games:generateDebugResources UP-TO-DATE
+> Task :android:games:packageDebugResources UP-TO-DATE
+> Task :android:shared:generateDebugResValues UP-TO-DATE
+> Task :android:shared:generateDebugResources UP-TO-DATE
+> Task :android:shared:packageDebugResources UP-TO-DATE
+> Task :android:tools:generateDebugResValues UP-TO-DATE
+> Task :android:tools:generateDebugResources UP-TO-DATE
+> Task :android:tools:packageDebugResources UP-TO-DATE
+> Task :android:app:mapDebugSourceSetPaths UP-TO-DATE
+> Task :android:app:generateDebugResources UP-TO-DATE
+> Task :android:app:mergeDebugResources UP-TO-DATE
+> Task :android:app:packageDebugResources UP-TO-DATE
+> Task :android:app:parseDebugLocalResources UP-TO-DATE
+> Task :android:app:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :android:app:extractDeepLinksDebug UP-TO-DATE
+> Task :android:games:extractDeepLinksDebug UP-TO-DATE
+> Task :android:games:processDebugManifest UP-TO-DATE
+> Task :android:shared:extractDeepLinksDebug UP-TO-DATE
+> Task :android:shared:processDebugManifest UP-TO-DATE
+> Task :android:tools:extractDeepLinksDebug UP-TO-DATE
+> Task :android:tools:processDebugManifest UP-TO-DATE
+> Task :android:app:processDebugMainManifest UP-TO-DATE
+> Task :android:app:processDebugManifest UP-TO-DATE
+> Task :android:app:processDebugManifestForPackage UP-TO-DATE
+> Task :android:games:compileDebugLibraryResources UP-TO-DATE
+> Task :android:games:parseDebugLocalResources UP-TO-DATE
+> Task :android:games:generateDebugRFile UP-TO-DATE
+> Task :android:shared:compileDebugLibraryResources UP-TO-DATE
+> Task :android:shared:parseDebugLocalResources UP-TO-DATE
+> Task :android:shared:generateDebugRFile UP-TO-DATE
+> Task :android:tools:compileDebugLibraryResources UP-TO-DATE
+> Task :android:tools:parseDebugLocalResources UP-TO-DATE
+> Task :android:tools:generateDebugRFile UP-TO-DATE
+> Task :android:app:processDebugResources UP-TO-DATE
+> Task :android:games:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:games:compileDebugKotlin UP-TO-DATE
+> Task :android:games:javaPreCompileDebug UP-TO-DATE
+> Task :android:games:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:games:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :android:shared:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:shared:compileDebugKotlin UP-TO-DATE
+> Task :android:shared:javaPreCompileDebug UP-TO-DATE
+> Task :android:shared:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:shared:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :android:tools:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:tools:compileDebugKotlin UP-TO-DATE
+> Task :android:tools:javaPreCompileDebug UP-TO-DATE
+> Task :android:tools:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:tools:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :android:app:javaPreCompileDebug UP-TO-DATE
+> Task :android:app:preDebugUnitTestBuild UP-TO-DATE
+> Task :android:app:javaPreCompileDebugUnitTest
+> Task :android:app:mergeDebugShaders
+> Task :android:app:compileDebugShaders NO-SOURCE
+> Task :android:app:generateDebugAssets UP-TO-DATE
+> Task :android:games:mergeDebugShaders
+> Task :android:games:compileDebugShaders NO-SOURCE
+> Task :android:games:generateDebugAssets UP-TO-DATE
+> Task :android:games:mergeDebugAssets
+> Task :android:shared:mergeDebugShaders
+> Task :android:shared:compileDebugShaders NO-SOURCE
+> Task :android:shared:generateDebugAssets UP-TO-DATE
+> Task :android:shared:mergeDebugAssets
+> Task :android:tools:mergeDebugShaders
+> Task :android:tools:compileDebugShaders NO-SOURCE
+> Task :android:tools:generateDebugAssets UP-TO-DATE
+> Task :android:tools:mergeDebugAssets
+> Task :android:app:mergeDebugAssets
+> Task :android:app:packageDebugUnitTestForUnitTest
+> Task :android:app:generateDebugUnitTestConfig
+> Task :android:games:bundleLibRuntimeToJarDebug
+> Task :android:games:processDebugJavaRes
+> Task :android:shared:bundleLibRuntimeToJarDebug
+> Task :android:shared:processDebugJavaRes
+> Task :android:tools:bundleLibRuntimeToJarDebug
+> Task :android:tools:processDebugJavaRes
+> Task :android:shared:preDebugUnitTestBuild UP-TO-DATE
+> Task :android:shared:generateDebugUnitTestStubRFile
+> Task :android:shared:compileDebugUnitTestKotlin
+> Task :android:shared:javaPreCompileDebugUnitTest
+> Task :android:shared:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :android:shared:processDebugUnitTestJavaRes
+
+> Task :android:shared:testDebugUnitTest
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+> Task :android:app:compileDebugKotlin
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/MainActivity.kt:48:55 'static field TRIM_MEMORY_RUNNING_LOW: Int' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessageAttachments.kt:69:9 'constructor(): MediaRecorder' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt:196:29 'fun get(p0: String!): Any?' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt:354:17 Condition is always 'false'.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt:399:17 Condition is always 'true'.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessengerPane.kt:136:21 'val LocalClipboardManager: ProvidableCompositionLocal<ClipboardManager>' is deprecated. Use LocalClipboard instead which supports suspend functions.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkWebComponent.kt:196:29 Wrapping the left-hand side of assignments in parentheses, labels or annotations is not allowed. This will become an error in Kotlin 2.2.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkWebComponent.kt:197:29 Wrapping the left-hand side of assignments in parentheses, labels or annotations is not allowed. This will become an error in Kotlin 2.2.
+
+> Task :android:app:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:app:bundleDebugClassesToCompileJar
+> Task :android:app:bundleDebugClassesToRuntimeJar
+> Task :android:app:processDebugJavaRes
+> Task :android:app:compileDebugUnitTestKotlin
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/FilesBrokerHostTest.kt:30:144 Type argument for reified type parameter 'T' was inferred to the intersection of ['Comparable<*>' & 'Serializable']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/FilesBrokerHostTest.kt:30:288 Type argument for reified type parameter 'T' was inferred to the intersection of ['Comparable<*>' & 'Serializable']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/FilesBrokerHostTest.kt:31:181 Type argument for reified type parameter 'T' was inferred to the intersection of ['Comparable<*>' & 'Serializable']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/MessageControlsTest.kt:64:179 Type argument for reified type parameter 'T' was inferred to the intersection of ['Comparable<*>' & 'Serializable']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/MessageLoadingTest.kt:27:107 Type argument for reified type parameter 'T' was inferred to the intersection of ['Comparable<*>' & 'Serializable']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/PagingAndReactionsTest.kt:52:126 Type argument for reified type parameter 'T' was inferred to the intersection of ['Comparable<*>?' & 'Serializable?']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/UiPolishHostTest.kt:80:43 Type argument for reified type parameter 'T' was inferred to the intersection of ['Comparable<*>' & 'Serializable']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/UiPolishHostTest.kt:113:24 Type argument for reified type parameter 'T' was inferred to the intersection of ['Comparable<*>' & 'Serializable']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/UiPolishHostTest.kt:113:56 Type argument for reified type parameter 'T' was inferred to the intersection of ['Comparable<*>' & 'Serializable']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/UiPolishHostTest.kt:113:88 Type argument for reified type parameter 'T' was inferred to the intersection of ['Comparable<*>' & 'Serializable']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/UiPolishHostTest.kt:115:24 Type argument for reified type parameter 'T' was inferred to the intersection of ['Comparable<*>?' & 'Serializable?']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/UiPolishHostTest.kt:115:58 Type argument for reified type parameter 'T' was inferred to the intersection of ['Comparable<*>?' & 'Serializable?']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/UiPolishHostTest.kt:115:96 Type argument for reified type parameter 'T' was inferred to the intersection of ['Comparable<*>?' & 'Serializable?']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+
+> Task :android:app:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :android:app:processDebugUnitTestJavaRes
+
+> Task :android:app:testDebugUnitTest
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+AnnotationSdkHostTest > annotationPackageLibraryToolsRenameAndTextController STARTED
+
+AnnotationSdkHostTest > annotationPackageLibraryToolsRenameAndTextController PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+AppearancePolishTest > exportedFilesAndMessageFilesRejectLinkedTargets STARTED
+
+AppearancePolishTest > exportedFilesAndMessageFilesRejectLinkedTargets PASSED
+
+AppearancePolishTest > nativePickersUseCurrentPaletteAndFontOnAndroid15 STARTED
+
+AppearancePolishTest > nativePickersUseCurrentPaletteAndFontOnAndroid15 PASSED
+
+AppearancePolishTest > memoryPressureDropsBackgroundCacheWithoutRecyclingDisplayedImages STARTED
+
+AppearancePolishTest > memoryPressureDropsBackgroundCacheWithoutRecyclingDisplayedImages PASSED
+
+AppearancePolishTest > everyPaletteHasReadableControlsAndNoDefaultSecondaryAccent STARTED
+
+AppearancePolishTest > everyPaletteHasReadableControlsAndNoDefaultSecondaryAccent PASSED
+
+AppearancePolishTest > annotationChecksHeaderDimensionsBeforeFullDecode STARTED
+
+AppearancePolishTest > annotationChecksHeaderDimensionsBeforeFullDecode PASSED
+
+AppearancePolishTest > grayscaleNeutralSurfacesStayNeutral STARTED
+
+AppearancePolishTest > grayscaleNeutralSurfacesStayNeutral PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+BrowserSdkHostTest > browserPackageBookmarksTabsSettingsAndReopen STARTED
+
+BrowserSdkHostTest > browserPackageBookmarksTabsSettingsAndReopen PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+CarrierMediaPlanTest > invalidRangesAndUnavailableBudgetsCannotProduceAClip STARTED
+
+CarrierMediaPlanTest > invalidRangesAndUnavailableBudgetsCannotProduceAClip PASSED
+
+CarrierMediaPlanTest > trimRecommendationsHonorAudioVideoAndActualCarrierBudgets STARTED
+
+CarrierMediaPlanTest > trimRecommendationsHonorAudioVideoAndActualCarrierBudgets PASSED
+
+CarrierMediaPlanTest > floatingReactionMotionFadesInAndOutWithoutChangingItsMessage STARTED
+
+CarrierMediaPlanTest > floatingReactionMotionFadesInAndOutWithoutChangingItsMessage PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+ChromeLayoutHostTest > headersAndBottomBarReachBothEdgesAcrossEveryHomeTab STARTED
+
+ChromeLayoutHostTest > headersAndBottomBarReachBothEdgesAcrossEveryHomeTab PASSED
+
+ChromeLayoutHostTest > sharedPopupMovesIntoPlaceInsteadOfAppearingAtItsFinalPosition STARTED
+
+ChromeLayoutHostTest > sharedPopupMovesIntoPlaceInsteadOfAppearingAtItsFinalPosition PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+DriveDocumentsTest > sameDocumentAliasesRejectBeforeOpeningOrDeletingAnyFile STARTED
+
+DriveDocumentsTest > sameDocumentAliasesRejectBeforeOpeningOrDeletingAnyFile PASSED
+
+DriveDocumentsTest > partialCopyFailureCleansOnlyTheOpenedDestination STARTED
+
+DriveDocumentsTest > partialCopyFailureCleansOnlyTheOpenedDestination PASSED
+
+DriveDocumentsTest > unreadableSourceDoesNotDeleteOrTruncateTheChosenDestination STARTED
+
+DriveDocumentsTest > unreadableSourceDoesNotDeleteOrTruncateTheChosenDestination PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+DriveSharingTest > overlappingUploadsCannotOverwriteTheUnfinishedFileRecord STARTED
+
+DriveSharingTest > overlappingUploadsCannotOverwriteTheUnfinishedFileRecord PASSED
+
+DriveSharingTest > rejectsForeignCredentialDestinationsAndUnsafeIdentities STARTED
+
+DriveSharingTest > rejectsForeignCredentialDestinationsAndUnsafeIdentities PASSED
+
+DriveSharingTest > confirmedUploadStreamsBytesAndPublishesOnlyAfterUpload STARTED
+
+DriveSharingTest > confirmedUploadStreamsBytesAndPublishesOnlyAfterUpload PASSED
+
+DriveSharingTest > cancellingUploadKeepsRecoveryRecordAndNeverPublishesPermission STARTED
+
+DriveSharingTest > cancellingUploadKeepsRecoveryRecordAndNeverPublishesPermission PASSED
+
+DriveSharingTest > nonJsonErrorResponsesPreserveHttpStatusButSuccessfulGarbageFails STARTED
+
+DriveSharingTest > nonJsonErrorResponsesPreserveHttpStatusButSuccessfulGarbageFails PASSED
+
+DriveSharingTest > failedUploadRetainsIdentityAndCleanupRequiresOriginalAccount STARTED
+
+DriveSharingTest > failedUploadRetainsIdentityAndCleanupRequiresOriginalAccount PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+FilesBrokerHostTest > fileExportsAreReadOnlyAndCannotExposeArbitraryPrivatePaths STARTED
+
+FilesBrokerHostTest > fileExportsAreReadOnlyAndCannotExposeArbitraryPrivatePaths PASSED
+
+FilesBrokerHostTest > deletingPrivateDataClearsOnlyThatAppsFolderConnections STARTED
+
+FilesBrokerHostTest > deletingPrivateDataClearsOnlyThatAppsFolderConnections PASSED
+
+FilesBrokerHostTest > revokedSdkAuthorizationAndUnknownTokensCannotQueryAndroidFiles STARTED
+
+FilesBrokerHostTest > revokedSdkAuthorizationAndUnknownTokensCannotQueryAndroidFiles PASSED
+
+FilesBrokerHostTest > androidFoldersExposeOpaqueTokensAndSupportRenameAndExplicitDelete STARTED
+
+FilesBrokerHostTest > androidFoldersExposeOpaqueTokensAndSupportRenameAndExplicitDelete PASSED
+
+FilesBrokerHostTest > selectedImportsStreamAndStopWhenAuthorizationIsRevoked STARTED
+
+FilesBrokerHostTest > selectedImportsStreamAndStopWhenAuthorizationIsRevoked PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+FilesFlowHostTest > fileIconFoldersRenameMoveTrashAndRestoreUseTheRealNotesStore STARTED
+
+FilesFlowHostTest > fileIconFoldersRenameMoveTrashAndRestoreUseTheRealNotesStore PASSED
+
+FilesFlowHostTest > openingANoteUsesNotesAndBackReturnsToFiles STARTED
+
+FilesFlowHostTest > openingANoteUsesNotesAndBackReturnsToFiles PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+FilesRoutingTest > tappingNoteResolvesNotesAndClosedFilesModelReopensWithoutBusyOverlay STARTED
+
+FilesRoutingTest > tappingNoteResolvesNotesAndClosedFilesModelReopensWithoutBusyOverlay PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+GroupProtocolHostTest > activityPickerOffersOneOtherPeerForCanonicalDuplicatesAndExcludesSelf STARTED
+
+GroupProtocolHostTest > activityPickerOffersOneOtherPeerForCanonicalDuplicatesAndExcludesSelf PASSED
+
+GroupProtocolHostTest > productionJniProjectsPostAndReaction STARTED
+
+GroupProtocolHostTest > productionJniProjectsPostAndReaction PASSED
+
+GroupProtocolHostTest > initialsMatchReference STARTED
+
+GroupProtocolHostTest > initialsMatchReference PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+GroupsFlowHostTest > failedContactLoadOffersRetryWithoutPretendingTheAddressBookIsEmpty STARTED
+
+GroupsFlowHostTest > failedContactLoadOffersRetryWithoutPretendingTheAddressBookIsEmpty PASSED
+
+GroupsFlowHostTest > createEditMembersFoldersSearchAndDelete STARTED
+
+Exception in thread "DefaultDispatcher-worker-1 @coroutine#484" Exception in thread "DefaultDispatcher-worker-3 @coroutine#483" ---- read threw an exception
+---- read threw an exception
+Exception in thread "DefaultDispatcher-worker-1 @coroutine#521" Exception in thread "DefaultDispatcher-worker-3 @coroutine#520" ---- read threw an exception
+---- read threw an exception
+
+> Task :android:app:testDebugUnitTest
+
+GroupsFlowHostTest > createEditMembersFoldersSearchAndDelete PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+HistoryApplyTest > stoppingContinuationRetainsNewCommitAndNextReviewDoesNotInsertAgain STARTED
+
+HistoryApplyTest > stoppingContinuationRetainsNewCommitAndNextReviewDoesNotInsertAgain PASSED
+
+HistoryApplyTest > confirmationNeedsComparisonMmsIdentitiesAndExplicitUncancelledReview STARTED
+
+HistoryApplyTest > confirmationNeedsComparisonMmsIdentitiesAndExplicitUncancelledReview PASSED
+
+HistoryApplyTest > pendingMessageAppearingOrChangedCompletedTargetRequiresReviewBeforeInsertion STARTED
+
+HistoryApplyTest > pendingMessageAppearingOrChangedCompletedTargetRequiresReviewBeforeInsertion PASSED
+
+HistoryApplyTest > partialBatchFinishesOnlyMissingMessageUnderOriginalRecord STARTED
+
+HistoryApplyTest > partialBatchFinishesOnlyMissingMessageUnderOriginalRecord PASSED
+
+HistoryApplyTest > providerChangeDuringPostCaptureStopsMetadataMerge STARTED
+
+HistoryApplyTest > providerChangeDuringPostCaptureStopsMetadataMerge PASSED
+
+HistoryApplyTest > reviewedApplyUsesFreshPlanAndCannotReuseConfirmation STARTED
+
+HistoryApplyTest > reviewedApplyUsesFreshPlanAndCannotReuseConfirmation PASSED
+
+HistoryApplyTest > changedSavedRecordOrWrongOriginalArchiveCannotContinue STARTED
+
+HistoryApplyTest > changedSavedRecordOrWrongOriginalArchiveCannotContinue PASSED
+
+HistoryApplyTest > secondMessageFailureKeepsFirstAndCleansOnlyIncompleteInsert STARTED
+
+HistoryApplyTest > secondMessageFailureKeepsFirstAndCleansOnlyIncompleteInsert PASSED
+
+HistoryApplyTest > stopAfterCommitPreservesPartialOutcomeMapAndReceipt STARTED
+
+HistoryApplyTest > stopAfterCommitPreservesPartialOutcomeMapAndReceipt PASSED
+
+HistoryApplyTest > pendingBatchesHaveExplicitSourcesAndProductionGatePrecedesSnapshot STARTED
+
+HistoryApplyTest > pendingBatchesHaveExplicitSourcesAndProductionGatePrecedesSnapshot PASSED
+
+HistoryApplyTest > wrongRecordedPhoneIdsAndProviderChangesLeaveResumeMetadataUntouched STARTED
+
+HistoryApplyTest > wrongRecordedPhoneIdsAndProviderChangesLeaveResumeMetadataUntouched PASSED
+
+HistoryApplyTest > lostInsertAcknowledgementBlocksContinuationWithoutDiscardingPartialMap STARTED
+
+HistoryApplyTest > lostInsertAcknowledgementBlocksContinuationWithoutDiscardingPartialMap PASSED
+
+HistoryApplyTest > freshPhoneComparisonSkipsExistingRowsAndAbsentCommittedRowsBlockReplay STARTED
+
+HistoryApplyTest > freshPhoneComparisonSkipsExistingRowsAndAbsentCommittedRowsBlockReplay PASSED
+
+HistoryApplyTest > changedContentOrWrongPostIdsLeaveMetadataUntouchedAndReceiptsIntact STARTED
+
+HistoryApplyTest > changedContentOrWrongPostIdsLeaveMetadataUntouchedAndReceiptsIntact PASSED
+
+HistoryApplyTest > productionGateBlocksBeforeSafAndProviderSnapshot STARTED
+
+HistoryApplyTest > productionGateBlocksBeforeSafAndProviderSnapshot PASSED
+
+HistoryApplyTest > postSnapshotRemapsFlagsAndFoldersAndDisarmsOldReminders STARTED
+
+HistoryApplyTest > postSnapshotRemapsFlagsAndFoldersAndDisarmsOldReminders PASSED
+
+HistoryApplyTest > changedIdentityConfigurationRejectsReviewBeforeSafOrProviderReads STARTED
+
+HistoryApplyTest > changedIdentityConfigurationRejectsReviewBeforeSafOrProviderReads PASSED
+
+HistoryApplyTest > changedArchiveAndMissingMmsIdentitiesFailBeforeFirstInsert STARTED
+
+HistoryApplyTest > changedArchiveAndMissingMmsIdentitiesFailBeforeFirstInsert PASSED
+
+HistoryApplyTest > identityChangeAtProviderBoundaryPausesWithKnownReceiptAndNoAutomaticRetry STARTED
+
+HistoryApplyTest > identityChangeAtProviderBoundaryPausesWithKnownReceiptAndNoAutomaticRetry PASSED
+
+HistoryApplyTest > recoveredCommitBeforeMapAcknowledgementRequiresNoNewInsert STARTED
+
+HistoryApplyTest > recoveredCommitBeforeMapAcknowledgementRequiresNoNewInsert PASSED
+
+HistoryApplyTest > checkedArchiveFeedsTypedExecutorAndPersistsActualIdsWithoutOldIds STARTED
+
+HistoryApplyTest > checkedArchiveFeedsTypedExecutorAndPersistsActualIdsWithoutOldIds PASSED
+
+HistoryApplyTest > metadataEditedDuringInsertsWinsOverArchiveEntries STARTED
+
+HistoryApplyTest > metadataEditedDuringInsertsWinsOverArchiveEntries PASSED
+
+HistoryApplyTest > changedPhonePlanRequiresAnotherReviewBeforeAnyInsertion STARTED
+
+HistoryApplyTest > changedPhonePlanRequiresAnotherReviewBeforeAnyInsertion PASSED
+
+HistoryApplyTest > resumeTicketCannotStartAnotherInsertBatchAndChangedIdentitiesNeedReview STARTED
+
+HistoryApplyTest > resumeTicketCannotStartAnotherInsertBatchAndChangedIdentitiesNeedReview PASSED
+
+HistoryApplyTest > savedRecordMetadataResumesOriginalJobWithoutInsertingOrReplayingMessages STARTED
+
+HistoryApplyTest > savedRecordMetadataResumesOriginalJobWithoutInsertingOrReplayingMessages PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+HistoryBackupTest > providerFailureAndChangesNeverPublishSuccessOrLeavePrivateHistory STARTED
+
+HistoryBackupTest > providerFailureAndChangesNeverPublishSuccessOrLeavePrivateHistory PASSED
+
+HistoryBackupTest > comparisonIsBoundToThePreviouslyCheckedArchiveAndRejectsChangedFiles STARTED
+
+HistoryBackupTest > comparisonIsBoundToThePreviouslyCheckedArchiveAndRejectsChangedFiles PASSED
+
+HistoryBackupTest > historyReviewUsesExportedZipWithoutSmsAccessOrProviderMutationAndRemovesCopies STARTED
+
+HistoryBackupTest > historyReviewUsesExportedZipWithoutSmsAccessOrProviderMutationAndRemovesCopies PASSED
+
+HistoryBackupTest > realProviderToJniToZipPreservesTextAddressesMediaAndUnits STARTED
+
+HistoryBackupTest > realProviderToJniToZipPreservesTextAddressesMediaAndUnits PASSED
+
+HistoryBackupTest > failedAndCancelledImportClearCopiesKeepOriginalAndCannotEnableRestore STARTED
+
+HistoryBackupTest > failedAndCancelledImportClearCopiesKeepOriginalAndCannotEnableRestore PASSED
+
+HistoryBackupTest > comparisonPermissionChangeAndCancellationInvalidateResultsAndRemoveSnapshots STARTED
+
+HistoryBackupTest > comparisonPermissionChangeAndCancellationInvalidateResultsAndRemoveSnapshots PASSED
+
+HistoryBackupTest > cancellationAndRevocationAreCheckedAgainBeforeDocumentWrite STARTED
+
+HistoryBackupTest > cancellationAndRevocationAreCheckedAgainBeforeDocumentWrite PASSED
+
+HistoryBackupTest > comparisonMatchesSmsAndMmsAcrossChangedIdsWithoutMutatingProviderOrAppMetadata STARTED
+
+HistoryBackupTest > comparisonMatchesSmsAndMmsAcrossChangedIdsWithoutMutatingProviderOrAppMetadata PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+HistoryRecoveryUiTest > partialSavedRecordOffersExplicitReopenAndShowsRemainingCount STARTED
+
+HistoryRecoveryUiTest > partialSavedRecordOffersExplicitReopenAndShowsRemainingCount PASSED
+
+HistoryRecoveryUiTest > completedRestoreCompactionCancelsThenRetainsReviewAndMetadata STARTED
+
+HistoryRecoveryUiTest > completedRestoreCompactionCancelsThenRetainsReviewAndMetadata PASSED
+
+HistoryRecoveryUiTest > changedInsertionReviewExplainsAbsenceCheckWithoutEnablingPhoneAccess STARTED
+
+HistoryRecoveryUiTest > changedInsertionReviewExplainsAbsenceCheckWithoutEnablingPhoneAccess PASSED
+
+HistoryRecoveryUiTest > knownIncompleteCleanupRemainsGateClosed STARTED
+
+HistoryRecoveryUiTest > knownIncompleteCleanupRemainsGateClosed PASSED
+
+HistoryRecoveryUiTest > savedRecordReopenRouteDoesNotWriteOrRequestAnAutomaticRetry STARTED
+
+HistoryRecoveryUiTest > savedRecordReopenRouteDoesNotWriteOrRequestAnAutomaticRetry PASSED
+
+HistoryRecoveryUiTest > unknownInsertReviewStaysPausedWithoutClearOrRetry STARTED
+
+HistoryRecoveryUiTest > unknownInsertReviewStaysPausedWithoutClearOrRetry PASSED
+
+HistoryRecoveryUiTest > compactConfirmationRetainsReplayProtectionAndPendingRecords STARTED
+
+HistoryRecoveryUiTest > compactConfirmationRetainsReplayProtectionAndPendingRecords PASSED
+
+HistoryRecoveryUiTest > finishSavedRecordOnlyAcknowledgesExistingMetadata STARTED
+
+HistoryRecoveryUiTest > finishSavedRecordOnlyAcknowledgesExistingMetadata PASSED
+
+HistoryRecoveryUiTest > recoveryRouteAndStagedIdentitySaveCancelAndValidation STARTED
+
+HistoryRecoveryUiTest > recoveryRouteAndStagedIdentitySaveCancelAndValidation PASSED
+
+HistoryRecoveryUiTest > finalConfirmationShowsReviewedIdentitiesAndRemainsGateClosed STARTED
+
+HistoryRecoveryUiTest > finalConfirmationShowsReviewedIdentitiesAndRemainsGateClosed PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+HistoryRestoreTest > cancellationDuringChildrenRollsBackButCleanupFailureBlocksContinuation STARTED
+
+HistoryRestoreTest > cancellationDuringChildrenRollsBackButCleanupFailureBlocksContinuation PASSED
+
+HistoryRestoreTest > lostInsertAcknowledgementNeverRetriesOrGuessesWhichRowToDelete STARTED
+
+HistoryRestoreTest > lostInsertAcknowledgementNeverRetriesOrGuessesWhichRowToDelete PASSED
+
+HistoryRestoreTest > explicitAbsentReviewRetainsEvidenceAndDoesNotRetryOrDelete STARTED
+
+HistoryRestoreTest > explicitAbsentReviewRetainsEvidenceAndDoesNotRetryOrDelete PASSED
+
+HistoryRestoreTest > unsafeInputsAndClosedProductionGateHaveNoInsertEffects STARTED
+
+HistoryRestoreTest > unsafeInputsAndClosedProductionGateHaveNoInsertEffects PASSED
+
+HistoryRestoreTest > permissionLossRetainsReceiptUntilExplicitCleanup STARTED
+
+HistoryRestoreTest > permissionLossRetainsReceiptUntilExplicitCleanup PASSED
+
+HistoryRestoreTest > changedOwnershipOrFailedReadbackCannotCommit STARTED
+
+HistoryRestoreTest > changedOwnershipOrFailedReadbackCannotCommit PASSED
+
+HistoryRestoreTest > processInterruptionAfterParentReceiptCanBeCleanedAfterRestart STARTED
+
+HistoryRestoreTest > processInterruptionAfterParentReceiptCanBeCleanedAfterRestart PASSED
+
+HistoryRestoreTest > childrenReappearanceCancellationAndAccessLossRetainPendingEvidence STARTED
+
+HistoryRestoreTest > childrenReappearanceCancellationAndAccessLossRetainPendingEvidence PASSED
+
+HistoryRestoreTest > successfulMessagesRetainActualIdsAcrossRecoveryAndBlockReplay STARTED
+
+HistoryRestoreTest > successfulMessagesRetainActualIdsAcrossRecoveryAndBlockReplay PASSED
+
+HistoryRestoreTest > incompleteMmsDeletesOnlyNewParentAndChildren STARTED
+
+HistoryRestoreTest > incompleteMmsDeletesOnlyNewParentAndChildren PASSED
+
+HistoryRestoreTest > presentOwnedOrChangedMessageCannotBeAcknowledgedAbsent STARTED
+
+HistoryRestoreTest > presentOwnedOrChangedMessageCannotBeAcknowledgedAbsent PASSED
+
+HistoryRestoreTest > unknownAndCommittedOutcomesNeverQueryOrResolveGuessedIds STARTED
+
+HistoryRestoreTest > unknownAndCommittedOutcomesNeverQueryOrResolveGuessedIds PASSED
+
+HistoryRestoreTest > explicitAbsentReviewProductionEntryStaysGateClosed STARTED
+
+HistoryRestoreTest > explicitAbsentReviewProductionEntryStaysGateClosed PASSED
+
+HistoryRestoreTest > processInterruptionBeforeReceiptStaysUncertain STARTED
+
+HistoryRestoreTest > processInterruptionBeforeReceiptStaysUncertain PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+LibraryBackupTest > annotatedImageUsesRealSdkImportAndLiveSessionsBlockRestoration STARTED
+
+LibraryBackupTest > annotatedImageUsesRealSdkImportAndLiveSessionsBlockRestoration PASSED
+
+LibraryBackupTest > oneAppDocumentsBackupRestoresAcrossStoresAndRepeatsSafely STARTED
+
+LibraryBackupTest > oneAppDocumentsBackupRestoresAcrossStoresAndRepeatsSafely PASSED
+
+LibraryBackupTest > cancellationAndProviderFailureCleanStagingAndIncompleteOutput STARTED
+
+LibraryBackupTest > cancellationAndProviderFailureCleanStagingAndIncompleteOutput PASSED
+
+LibraryBackupTest > youtubeBackupReopensBookmarksAndHistoryWithALocalViewerIdentity STARTED
+
+LibraryBackupTest > youtubeBackupReopensBookmarksAndHistoryWithALocalViewerIdentity PASSED
+
+LibraryBackupTest > rssProviderBackupReopensOfflineArticlesAndBookmarksInTheSignedApp STARTED
+
+LibraryBackupTest > rssProviderBackupReopensOfflineArticlesAndBookmarksInTheSignedApp PASSED
+
+LibraryBackupTest > filesProviderToJniRoundTripKeepsBytesAndRejectsChangedReview STARTED
+
+LibraryBackupTest > filesProviderToJniRoundTripKeepsBytesAndRejectsChangedReview PASSED
+
+LibraryBackupTest > readerBackupRestoresAnAccessibleDraftAndKeepsAnExistingClearedDraft STARTED
+
+LibraryBackupTest > readerBackupRestoresAnAccessibleDraftAndKeepsAnExistingClearedDraft PASSED
+
+LibraryBackupTest > browserBackupReopensTabsAndBookmarksAndPreservesLocalChanges STARTED
+
+LibraryBackupTest > browserBackupReopensTabsAndBookmarksAndPreservesLocalChanges PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+MediaAndCarrierTest > animatedImagesDefaultOnAndPreferencePersists STARTED
+
+MediaAndCarrierTest > animatedImagesDefaultOnAndPreferencePersists PASSED
+
+MediaAndCarrierTest > galleryIncludesAllMediaKindsAndPreservesIdentityWithoutDuplicates STARTED
+
+MediaAndCarrierTest > galleryIncludesAllMediaKindsAndPreservesIdentityWithoutDuplicates PASSED
+
+MediaAndCarrierTest > driveProviderCopyStreamsSelectedFileAndRejectsSameDestination STARTED
+
+MediaAndCarrierTest > driveProviderCopyStreamsSelectedFileAndRejectsSameDestination PASSED
+
+MediaAndCarrierTest > carrierTrialRequiresExplicitChoiceAndDoesNotClaimReleaseAcceptance STARTED
+
+MediaAndCarrierTest > carrierTrialRequiresExplicitChoiceAndDoesNotClaimReleaseAcceptance PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+MessageControlsTest > historySearchIsThreadScopedAndOpeningAResultLoadsTheRequestedDateWindow STARTED
+
+MessageControlsTest > historySearchIsThreadScopedAndOpeningAResultLoadsTheRequestedDateWindow PASSED
+
+MessageControlsTest > firstTapWaitsForVoiceAndEachMessageStartsAtTheBeginningUsingReaderPreferences STARTED
+
+MessageControlsTest > firstTapWaitsForVoiceAndEachMessageStartsAtTheBeginningUsingReaderPreferences PASSED
+
+MessageControlsTest > pendingMessageSpeechCannotStartAfterStop STARTED
+
+MessageControlsTest > pendingMessageSpeechCannotStartAfterStop PASSED
+
+MessageControlsTest > inboxTimestampsMatchTodayMonthDayAndOlderYear STARTED
+
+MessageControlsTest > inboxTimestampsMatchTodayMonthDayAndOlderYear PASSED
+
+MessageControlsTest > pinAndMutePersistAndTransferWhenANewGroupGetsItsPhoneThread STARTED
+
+MessageControlsTest > pinAndMutePersistAndTransferWhenANewGroupGetsItsPhoneThread PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+MessageCorrectionsTest > selectedThemeFillAlwaysGetsReadableButtonText STARTED
+
+MessageCorrectionsTest > selectedThemeFillAlwaysGetsReadableButtonText PASSED
+
+MessageCorrectionsTest > completePickerIsAcceptedByWireAndRepresentativeChoicesSurviveNativeReload STARTED
+
+MessageCorrectionsTest > completePickerIsAcceptedByWireAndRepresentativeChoicesSurviveNativeReload PASSED
+
+MessageCorrectionsTest > mediaOnlyMessagesHaveNoSpeechButCaptionsAndTextDo STARTED
+
+MessageCorrectionsTest > mediaOnlyMessagesHaveNoSpeechButCaptionsAndTextDo PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+MessageFocusTest > exactMessageAndDateAreRequired STARTED
+
+MessageFocusTest > exactMessageAndDateAreRequired PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+MessageIdentityTest > differentInternationalRecipientsKeepSeparateDrafts STARTED
+
+MessageIdentityTest > differentInternationalRecipientsKeepSeparateDrafts PASSED
+
+MessageIdentityTest > contactFormattingAndUsPrefixShareDraft STARTED
+
+MessageIdentityTest > contactFormattingAndUsPrefixShareDraft PASSED
+
+MessageIdentityTest > groupOrderingAndDuplicateRecipientsDoNotForkDraft STARTED
+
+MessageIdentityTest > groupOrderingAndDuplicateRecipientsDoNotForkDraft PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+MessageLoadingTest > localMetadataChangesReuseProviderRowsAndApplyFreshUnreadState STARTED
+
+MessageLoadingTest > localMetadataChangesReuseProviderRowsAndApplyFreshUnreadState PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+MessageVideoPreviewsTest > invalidImagesAreNotCachedAndCannotStopThePlayControl STARTED
+
+MessageVideoPreviewsTest > invalidImagesAreNotCachedAndCannotStopThePlayControl PASSED
+
+MessageVideoPreviewsTest > linksAreCanonicalDeduplicatedBoundedAndKeepStartTimes STARTED
+
+MessageVideoPreviewsTest > linksAreCanonicalDeduplicatedBoundedAndKeepStartTimes PASSED
+
+MessageVideoPreviewsTest > offMeansNoFetchOrCacheUseAndRevokeDropsStaleResults STARTED
+
+MessageVideoPreviewsTest > offMeansNoFetchOrCacheUseAndRevokeDropsStaleResults PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+MessageVideoUiHostTest > privacySwitchDrivesMessageCardsAndPlayStaysExplicit STARTED
+
+MessageVideoUiHostTest > privacySwitchDrivesMessageCardsAndPlayStaysExplicit PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+MessageVisualCorrectionsHostTest > setupNextActionAndEmptyTrashLabelsRemainVisibleAndContactsHasOnlyBackNavigation STARTED
+
+MessageVisualCorrectionsHostTest > setupNextActionAndEmptyTrashLabelsRemainVisibleAndContactsHasOnlyBackNavigation PASSED
+
+MessageVisualCorrectionsHostTest > arrowStaysVisibleAtPhoneDensityWhilePortraitPreviewPreservesItsFullHeight STARTED
+
+MessageVisualCorrectionsHostTest > arrowStaysVisibleAtPhoneDensityWhilePortraitPreviewPreservesItsFullHeight PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+NotesBackupTest > invalidOrChangedReviewCannotWriteAndActiveAppMustCloseBeforeRestore STARTED
+
+NotesBackupTest > invalidOrChangedReviewCannotWriteAndActiveAppMustCloseBeforeRestore PASSED
+
+NotesBackupTest > providerWriteFailureRemovesIncompleteDocumentAndPrivateStaging STARTED
+
+NotesBackupTest > providerWriteFailureRemovesIncompleteDocumentAndPrivateStaging PASSED
+
+NotesBackupTest > realProviderJniRoundTripKeepsCurrentNotesAndNeverExportsGrants STARTED
+
+NotesBackupTest > realProviderJniRoundTripKeepsCurrentNotesAndNeverExportsGrants PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+PagingAndReactionsTest > galleryReadsOneBoundedPageAndUsesIdToAdvanceThroughEqualTimestamps STARTED
+
+PagingAndReactionsTest > galleryReadsOneBoundedPageAndUsesIdToAdvanceThroughEqualTimestamps PASSED
+
+PagingAndReactionsTest > knownAndArbitraryEmojiReactionsAndRemovalParseWithoutEatingOrdinaryMessages STARTED
+
+PagingAndReactionsTest > knownAndArbitraryEmojiReactionsAndRemovalParseWithoutEatingOrdinaryMessages PASSED
+
+PagingAndReactionsTest > viewerKeepsItsSnapshotWhenGalleryRefreshesOrShrinks STARTED
+
+PagingAndReactionsTest > viewerKeepsItsSnapshotWhenGalleryRefreshesOrShrinks PASSED
+
+PagingAndReactionsTest > newestRefreshPreservesOlderRowsAndUpdatesChangedStatusWithoutDuplicates STARTED
+
+PagingAndReactionsTest > newestRefreshPreservesOlderRowsAndUpdatesChangedStatusWithoutDuplicates PASSED
+
+PagingAndReactionsTest > tabViewModelRetainsLoadedRowsAndWindows STARTED
+
+PagingAndReactionsTest > tabViewModelRetainsLoadedRowsAndWindows PASSED
+
+PagingAndReactionsTest > reactionsOnBothSidesBecomeCornerBadgesAndTransportRowsAreHidden STARTED
+
+PagingAndReactionsTest > reactionsOnBothSidesBecomeCornerBadgesAndTransportRowsAreHidden PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+PhoneNumbersTest > formatsNationalCountryCodeShortCodesAndInternationalWithoutLosingDigits STARTED
+
+PhoneNumbersTest > formatsNationalCountryCodeShortCodesAndInternationalWithoutLosingDigits PASSED
+
+PhoneNumbersTest > contactRowsHaveAlphabetInitialsAndNoInventedNumbers STARTED
+
+PhoneNumbersTest > contactRowsHaveAlphabetInitialsAndNoInventedNumbers PASSED
+
+PhoneNumbersTest > partialInputFormatsWhilePreservingDialableNumbers STARTED
+
+PhoneNumbersTest > partialInputFormatsWhilePreservingDialableNumbers PASSED
+
+PhoneNumbersTest > cursorMapsAcrossEveryPartialInputAndFormattedPaste STARTED
+
+PhoneNumbersTest > cursorMapsAcrossEveryPartialInputAndFormattedPaste PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+ReaderSdkHostTest > readerSdkDraftControlsSettingsClearAndReopen STARTED
+
+ReaderSdkHostTest > readerSdkDraftControlsSettingsClearAndReopen PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+RecoveryNotificationTest > collidingThreadsKeepIndependentNotificationsAndAllActionTargets STARTED
+
+RecoveryNotificationTest > collidingThreadsKeepIndependentNotificationsAndAllActionTargets PASSED
+
+RecoveryNotificationTest > queuedReplyIsNotReportedAsFailedWhenReadAccessDisappears STARTED
+
+RecoveryNotificationTest > queuedReplyIsNotReportedAsFailedWhenReadAccessDisappears PASSED
+
+RecoveryNotificationTest > markReadRechecksRoleAndPermissionBeforeProviderWritesAndLocalState STARTED
+
+RecoveryNotificationTest > markReadRechecksRoleAndPermissionBeforeProviderWritesAndLocalState PASSED
+
+RecoveryNotificationTest > remindersAttentionAndThreadsCannotOverwriteOrCancelEachOther STARTED
+
+RecoveryNotificationTest > remindersAttentionAndThreadsCannotOverwriteOrCancelEachOther PASSED
+
+RecoveryNotificationTest > removalRecoveryKeepsWorkEnqueuedDuringProfileDeletionAndRetriesFailures STARTED
+
+RecoveryNotificationTest > removalRecoveryKeepsWorkEnqueuedDuringProfileDeletionAndRetriesFailures PASSED
+
+RecoveryNotificationTest > conversationReadDoesNotCommitLocalSuccessAfterPermissionLoss STARTED
+
+RecoveryNotificationTest > conversationReadDoesNotCommitLocalSuccessAfterPermissionLoss PASSED
+
+RecoveryNotificationTest > profileCleanupAcceptsAlreadyMissingProfilesButRetainsRejectedExistingOnes STARTED
+
+RecoveryNotificationTest > profileCleanupAcceptsAlreadyMissingProfilesButRetainsRejectedExistingOnes PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+ReminderFlowHostTest > choosePersistRescheduleAndRemove STARTED
+
+ReminderFlowHostTest > choosePersistRescheduleAndRemove PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+ReminderTimesTest > calendarMorningSurvivesSpringClockChange STARTED
+
+ReminderTimesTest > calendarMorningSurvivesSpringClockChange PASSED
+
+ReminderTimesTest > lateEveningCapsTonightWithoutSchedulingPastTime STARTED
+
+ReminderTimesTest > lateEveningCapsTonightWithoutSchedulingPastTime PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+ResponsiveAppearanceHostTest > tabletContentStaysBounded STARTED
+
+ResponsiveAppearanceHostTest > tabletContentStaysBounded PASSED
+
+ResponsiveAppearanceHostTest > normalPhoneDark STARTED
+
+ResponsiveAppearanceHostTest > normalPhoneDark PASSED
+
+ResponsiveAppearanceHostTest > landscapeSettingsAndAlertActionsStayReachable STARTED
+
+ResponsiveAppearanceHostTest > landscapeSettingsAndAlertActionsStayReachable PASSED
+
+ResponsiveAppearanceHostTest > narrowPhoneLargeTextLight STARTED
+
+ResponsiveAppearanceHostTest > narrowPhoneLargeTextLight PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+RssAppsHostTest > rssPackageRunsOfflineArticlesBookmarksDrawersAndSettings STARTED
+
+RssAppsHostTest > rssPackageRunsOfflineArticlesBookmarksDrawersAndSettings PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+RssContinuationTest > anExistingSdkListWinsOverPreviousPreferences STARTED
+
+RssContinuationTest > anExistingSdkListWinsOverPreviousPreferences PASSED
+
+RssContinuationTest > scrollPositionsAreSeparateBoundedAndRefreshRecentlyUsedSlots STARTED
+
+RssContinuationTest > scrollPositionsAreSeparateBoundedAndRefreshRecentlyUsedSlots PASSED
+
+RssContinuationTest > ownSourcesAreAdoptedOnceWithoutChangingPreviousPreferences STARTED
+
+RssContinuationTest > ownSourcesAreAdoptedOnceWithoutChangingPreviousPreferences PASSED
+
+RssContinuationTest > malformedPreferencesRemainIntactAndEmptyListCanBeRetried STARTED
+
+RssContinuationTest > malformedPreferencesRemainIntactAndEmptyListCanBeRetried PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+SdkAppsHostTest > sdkNotesSaveReopenClipboardRemoveReinstallAndDeveloperApp STARTED
+
+SdkAppsHostTest > sdkNotesSaveReopenClipboardRemoveReinstallAndDeveloperApp PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+SdkBootstrapTest > warmSetupPreservesRemovalAndLivePermissionRevocation STARTED
+
+SdkBootstrapTest > warmSetupPreservesRemovalAndLivePermissionRevocation PASSED
+
+SdkBootstrapTest > setupRecoversWhenRegistryIsMissingWithinSameProcess STARTED
+
+SdkBootstrapTest > setupRecoversWhenRegistryIsMissingWithinSameProcess PASSED
+
+SdkBootstrapTest > apkUpgradeUpdatesExistingBundledPackageAndKeepsPermissionsAndData STARTED
+
+SdkBootstrapTest > apkUpgradeUpdatesExistingBundledPackageAndKeepsPermissionsAndData PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+SdkContactsTest > missingInvalidAndOversizedSelectionsFailWithoutLeakingContacts STARTED
+
+SdkContactsTest > missingInvalidAndOversizedSelectionsFailWithoutLeakingContacts PASSED
+
+SdkContactsTest > selectedRowOnlyAndPermissionChecksSurroundProviderRead STARTED
+
+SdkContactsTest > selectedRowOnlyAndPermissionChecksSurroundProviderRead PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+SdkDrawingTest > exportRendersImageCoordinatesAndTextBounds STARTED
+
+SdkDrawingTest > exportRendersImageCoordinatesAndTextBounds PASSED
+
+SdkDrawingTest > importsAreBoundedAndPreserveOrientedDimensions STARTED
+
+SdkDrawingTest > importsAreBoundedAndPreserveOrientedDimensions PASSED
+
+SdkDrawingTest > drawingGestureUsesImageSpaceAndCancellationDoesNotCommit STARTED
+
+--- Failed to create image decoder with message 'unimplemented'
+
+> Task :android:app:testDebugUnitTest
+
+SdkDrawingTest > drawingGestureUsesImageSpaceAndCancellationDoesNotCommit PASSED
+
+SdkDrawingTest > switchingDocumentsRestoresTheNewViewportAndDiscardsTheOldGesture STARTED
+
+SdkDrawingTest > switchingDocumentsRestoresTheNewViewportAndDiscardsTheOldGesture PASSED
+
+SdkDrawingTest > interruptedGesturesRequireANewDownAndOldCompletionsCannotCancelNewStrokes STARTED
+
+SdkDrawingTest > interruptedGesturesRequireANewDownAndOldCompletionsCannotCancelNewStrokes PASSED
+
+SdkDrawingTest > viewportSurvivesResizeAndARecreatedCanvasWithoutSavingAnUnfinishedGesture STARTED
+
+SdkDrawingTest > viewportSurvivesResizeAndARecreatedCanvasWithoutSavingAnUnfinishedGesture PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+SdkFeedServiceTest > hostileXmlAndNonPublicSourcesAreRejected STARTED
+
+SdkFeedServiceTest > hostileXmlAndNonPublicSourcesAreRejected PASSED
+
+SdkFeedServiceTest > rssAndAtomKeepPlainTextAndResolveArticleLinks STARTED
+
+SdkFeedServiceTest > rssAndAtomKeepPlainTextAndResolveArticleLinks PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+SdkLifecycleTest > messagesAndReaderShareVoicePreferencesAndOneCurrentReader STARTED
+
+SdkLifecycleTest > messagesAndReaderShareVoicePreferencesAndOneCurrentReader PASSED
+
+SdkLifecycleTest > audioOwnerInterruptsOnlyThePreviousOwnerAndOldReleaseCannotStopNewAudio STARTED
+
+SdkLifecycleTest > audioOwnerInterruptsOnlyThePreviousOwnerAndOldReleaseCannotStopNewAudio PASSED
+
+SdkLifecycleTest > partialNativeCleanupKeepsItsJournalAndRetriesWithoutRotatingAgain STARTED
+
+SdkLifecycleTest > partialNativeCleanupKeepsItsJournalAndRetriesWithoutRotatingAgain PASSED
+
+SdkLifecycleTest > deletedNativeProfileIsImmediatelyIsolatedAndOnlyItsOldProfileIsPurged STARTED
+
+SdkLifecycleTest > deletedNativeProfileIsImmediatelyIsolatedAndOnlyItsOldProfileIsPurged PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+SdkSpeechTest > chunkedPlaybackPauseSeekRevocationAndLateCallbacks STARTED
+
+SdkSpeechTest > chunkedPlaybackPauseSeekRevocationAndLateCallbacks PASSED
+
+SdkSpeechTest > defaultRateAndInvalidStoredRateStayUsable STARTED
+
+SdkSpeechTest > defaultRateAndInvalidStoredRateStayUsable PASSED
+
+SdkSpeechTest > queuedSpeechCannotInterruptNewerReaderOrSurviveRevocation STARTED
+
+SdkSpeechTest > queuedSpeechCannotInterruptNewerReaderOrSurviveRevocation PASSED
+
+SdkSpeechTest > utf16BoundariesAndPreviewRestoresPosition STARTED
+
+SdkSpeechTest > utf16BoundariesAndPreviewRestoresPosition PASSED
+
+SdkSpeechTest > retryIgnoresOldInitializationAndCloseCancelsQueue STARTED
+
+SdkSpeechTest > retryIgnoresOldInitializationAndCloseCancelsQueue PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+SdkVideoPolicyTest > historySectionsUseLocalCalendarDays STARTED
+
+SdkVideoPolicyTest > historySectionsUseLocalCalendarDays PASSED
+
+SdkVideoPolicyTest > providerNavigationAndAdDomains STARTED
+
+SdkVideoPolicyTest > providerNavigationAndAdDomains PASSED
+
+SdkVideoPolicyTest > thumbnailInputIsBoundedAndChecksPermissionWhileReading STARTED
+
+SdkVideoPolicyTest > thumbnailInputIsBoundedAndChecksPermissionWhileReading PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+SdkVoiceTest > controllerUsesRealSignedSdkAndRustArchiveWithFixtureDeviceOnly STARTED
+
+SdkVoiceTest > controllerUsesRealSignedSdkAndRustArchiveWithFixtureDeviceOnly PASSED
+
+SdkVoiceTest > focusDenialBackendErrorAndOtherOwnerLeaveNoDraft STARTED
+
+SdkVoiceTest > focusDenialBackendErrorAndOtherOwnerLeaveNoDraft PASSED
+
+SdkVoiceTest > twelveSecondLimitReviewQueueAndDiscard STARTED
+
+SdkVoiceTest > twelveSecondLimitReviewQueueAndDiscard PASSED
+
+SdkVoiceTest > playbackMarksHeardOnlyOnAuthorizedCompletion STARTED
+
+SdkVoiceTest > playbackMarksHeardOnlyOnAuthorizedCompletion PASSED
+
+SdkVoiceTest > liveRecordingWaitsForOwnershipAndWarmupAndCancelsBeforeStart STARTED
+
+SdkVoiceTest > liveRecordingWaitsForOwnershipAndWarmupAndCancelsBeforeStart PASSED
+
+SdkVoiceTest > revocationBackgroundAndStaleCallbacksDiscardWithoutQueueing STARTED
+
+SdkVoiceTest > revocationBackgroundAndStaleCallbacksDiscardWithoutQueueing PASSED
+
+SdkVoiceTest > unverifiedCarrierCannotStartOrConsumeTrafficOrChangeRole STARTED
+
+SdkVoiceTest > unverifiedCarrierCannotStartOrConsumeTrafficOrChangeRole PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+SdkWebPolicyTest > rendererReplacementRejectsLateErrorsProgressAndClearCallbacks STARTED
+
+SdkWebPolicyTest > rendererReplacementRejectsLateErrorsProgressAndClearCallbacks PASSED
+
+SdkWebPolicyTest > systemBackUsesCurrentWebHistoryAndLiveGrant STARTED
+
+SdkWebPolicyTest > systemBackUsesCurrentWebHistoryAndLiveGrant PASSED
+
+SdkWebPolicyTest > historyMemoryIsBounded STARTED
+
+SdkWebPolicyTest > historyMemoryIsBounded PASSED
+
+SdkWebPolicyTest > nativeClipboardEntryPointsCheckLiveGrants STARTED
+
+SdkWebPolicyTest > nativeClipboardEntryPointsCheckLiveGrants PASSED
+
+SdkWebPolicyTest > clearCompletionIsBoundToCurrentCommandGrantAndNewPageFinish STARTED
+
+SdkWebPolicyTest > clearCompletionIsBoundToCurrentCommandGrantAndNewPageFinish PASSED
+
+SdkWebPolicyTest > addressesAndProfilesStayWithinTheirBoundary STARTED
+
+SdkWebPolicyTest > addressesAndProfilesStayWithinTheirBoundary PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+SettingsServicesTest > metadataBackupRoundTripIsValidatedAndNeverRestoresCapabilitiesOrSends STARTED
+
+SettingsServicesTest > metadataBackupRoundTripIsValidatedAndNeverRestoresCapabilitiesOrSends PASSED
+
+SettingsServicesTest > spamWarningNeedsALinkAndRiskWordingAndHonorsDisabledPreference STARTED
+
+SettingsServicesTest > spamWarningNeedsALinkAndRiskWordingAndHonorsDisabledPreference PASSED
+
+SettingsServicesTest > temporaryCleanupWorksThroughAnAndroidStyleCacheDirectoryAlias STARTED
+
+SettingsServicesTest > temporaryCleanupWorksThroughAnAndroidStyleCacheDirectoryAlias PASSED
+
+SettingsServicesTest > temporaryCleanupKeepsRecentExportsSymlinksAndAllOtherPrivateData STARTED
+
+SettingsServicesTest > temporaryCleanupKeepsRecentExportsSymlinksAndAllOtherPrivateData PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+SettingsUiHostTest > nestedSettingsSaveAndCancelAreRealAndReturnToParent STARTED
+
+SettingsUiHostTest > nestedSettingsSaveAndCancelAreRealAndReturnToParent PASSED
+
+SettingsUiHostTest > appearanceDraftCancelAndApplyAndNestedBackgroundCancel STARTED
+
+SettingsUiHostTest > appearanceDraftCancelAndApplyAndNestedBackgroundCancel PASSED
+
+SettingsUiHostTest > walkieSettingsChangeTheSignedAppsPrivateStoreWithoutAddingPermissions STARTED
+
+SettingsUiHostTest > walkieSettingsChangeTheSignedAppsPrivateStoreWithoutAddingPermissions PASSED
+
+SettingsUiHostTest > settingsRemainReachableWithLargeText STARTED
+
+SettingsUiHostTest > settingsRemainReachableWithLargeText PASSED
+
+SettingsUiHostTest > checkedHistoryReviewShowsCountsAndKeepsProviderRestoreDisabled STARTED
+
+SettingsUiHostTest > checkedHistoryReviewShowsCountsAndKeepsProviderRestoreDisabled PASSED
+
+SettingsUiHostTest > quietHoursUsesStagedRepeatChoicesAndPersistsOnlyOnSave STARTED
+
+SettingsUiHostTest > quietHoursUsesStagedRepeatChoicesAndPersistsOnlyOnSave PASSED
+
+SettingsUiHostTest > historyExportAndImportCheckAreReachable STARTED
+
+SettingsUiHostTest > historyExportAndImportCheckAreReachable PASSED
+
+SettingsUiHostTest > notesBackupIsReachableAndReturnsToTheMetadataDialog STARTED
+
+SettingsUiHostTest > notesBackupIsReachableAndReturnsToTheMetadataDialog PASSED
+
+SettingsUiHostTest > comparisonShowsReadOnlyCandidatesAndKeepsRestoreDisabled STARTED
+
+SettingsUiHostTest > comparisonShowsReadOnlyCandidatesAndKeepsRestoreDisabled PASSED
+
+SettingsUiHostTest > sdkDocumentBackupsAreReachableAndReturnToSettings STARTED
+
+SettingsUiHostTest > sdkDocumentBackupsAreReachableAndReturnToSettings PASSED
+
+SettingsUiHostTest > combinedAppDocumentsBackupIsReachable STARTED
+
+SettingsUiHostTest > combinedAppDocumentsBackupIsReachable PASSED
+
+SettingsUiHostTest > walkiePreferencesCanRecoverAfterPrivateStoragePermissionIsRestored STARTED
+
+SettingsUiHostTest > walkiePreferencesCanRecoverAfterPrivateStoragePermissionIsRestored PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+SocialSdkHostTest > socialIsOnlyHelloWorldInsideSdkHost STARTED
+
+SocialSdkHostTest > socialIsOnlyHelloWorldInsideSdkHost PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+SwipeConversationTest > smallMovementClosesAndLargeMovementRevealsOnEitherSide STARTED
+
+SwipeConversationTest > smallMovementClosesAndLargeMovementRevealsOnEitherSide PASSED
+
+SwipeConversationTest > swipingEitherWayRevealsActionsWithoutArchivingDeletingOrBlocking STARTED
+
+SwipeConversationTest > swipingEitherWayRevealsActionsWithoutArchivingDeletingOrBlocking PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+TransportRecoveryTest > walkieCallbackIsRetainedWhenPermissionGatePreventsReconciliation STARTED
+
+TransportRecoveryTest > walkieCallbackIsRetainedWhenPermissionGatePreventsReconciliation PASSED
+
+TransportRecoveryTest > callbacksRequireMatchingActionUriKindAndPart STARTED
+
+TransportRecoveryTest > callbacksRequireMatchingActionUriKindAndPart PASSED
+
+TransportRecoveryTest > receiptsSurviveRestartUntilCoreAcceptsTheOutcomeWithoutResending STARTED
+
+TransportRecoveryTest > receiptsSurviveRestartUntilCoreAcceptsTheOutcomeWithoutResending PASSED
+
+TransportRecoveryTest > internalBrowserHandoffUsesTheSignedGuestNavigationAndRejectsUnsafeSchemes STARTED
+
+TransportRecoveryTest > internalBrowserHandoffUsesTheSignedGuestNavigationAndRejectsUnsafeSchemes PASSED
+
+TransportRecoveryTest > failedMmsAddressInsertRollsBackOnlyTheNewParent STARTED
+
+TransportRecoveryTest > failedMmsAddressInsertRollsBackOnlyTheNewParent PASSED
+
+TransportRecoveryTest > committedCoreRemovalWithBlockedPrivateCleanupResumesBeforeAnotherLaunch STARTED
+
+TransportRecoveryTest > committedCoreRemovalWithBlockedPrivateCleanupResumesBeforeAnotherLaunch PASSED
+
+TransportRecoveryTest > recoverySchedulingCoalescesAndDoesNotEnableTransport STARTED
+
+TransportRecoveryTest > recoverySchedulingCoalescesAndDoesNotEnableTransport PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+UiPolishHostTest > contactsGroupLettersShowNoNumberAndChooseMessageOrWalkieRecipient STARTED
+
+UiPolishHostTest > contactsGroupLettersShowNoNumberAndChooseMessageOrWalkieRecipient FAILED
+    java.lang.AssertionError: Failed: assertExists.
+    Reason: Expected exactly '1' node but found '2' nodes that satisfy: (Text + InputText + EditableText contains 'A' (ignoreCase: false))
+    Nodes found:
+    1) Node #93 at (l=16.0, t=144.0, r=26.0, b=168.0)px
+    Text = '[A]'
+    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    Has 17 siblings
+    2) Node #99 at (l=34.0, t=200.0, r=48.0, b=225.0)px
+    Text = '[A]'
+    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+        at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+        at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+        at androidx.compose.ui.test.SemanticsNodeInteraction.assertExists(SemanticsNodeInteraction.kt:125)
+        at androidx.compose.ui.test.SemanticsNodeInteraction.assertExists$default(SemanticsNodeInteraction.kt:124)
+        at app.onklav.home.UiPolishHostTest.contactsGroupLettersShowNoNumberAndChooseMessageOrWalkieRecipient(UiPolishHostTest.kt:130)
+
+UiPolishHostTest > contactsUnavailableCanRetryAndSearchHasAnExplicitEmptyResult STARTED
+
+UiPolishHostTest > contactsUnavailableCanRetryAndSearchHasAnExplicitEmptyResult PASSED
+
+UiPolishHostTest > keypadAddsDigitsFormatsAndBackspacesWithoutChangingDialableTarget STARTED
+
+UiPolishHostTest > keypadAddsDigitsFormatsAndBackspacesWithoutChangingDialableTarget PASSED
+
+UiPolishHostTest > pageSlidesFromRightAndRetainsContentUntilExitCompletes STARTED
+
+UiPolishHostTest > pageSlidesFromRightAndRetainsContentUntilExitCompletes PASSED
+
+UiPolishHostTest > mailboxTabsSelectAndExposeBothTrashActions STARTED
+
+UiPolishHostTest > mailboxTabsSelectAndExposeBothTrashActions PASSED
+
+UiPolishHostTest > contactsRefreshAfterEditorReturnAndHideRevokedContacts STARTED
+
+UiPolishHostTest > contactsRefreshAfterEditorReturnAndHideRevokedContacts PASSED
+
+UiPolishHostTest > messageFoldersFilterProviderRowsAndRestoreAllUpdatesRustState STARTED
+
+UiPolishHostTest > messageFoldersFilterProviderRowsAndRestoreAllUpdatesRustState PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+WalkiePresentationTest > selectedRecipientShowsCompactDialAndOfflineRecordingIsStillAvailable STARTED
+
+WalkiePresentationTest > selectedRecipientShowsCompactDialAndOfflineRecordingIsStillAvailable PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+WalkieSdkHostTest > walkieSettingsOfflineDialAndRecipientStorageUseSignedSdk STARTED
+
+WalkieSdkHostTest > walkieSettingsOfflineDialAndRecipientStorageUseSignedSdk FAILED
+    java.lang.AssertionError: Failed to assert the following: (is not enabled)
+    Reason: Expected exactly '1' node but could not find any node that satisfies: (TestTag = 'sdk-connect')
+        at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+        at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+        at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+        at androidx.compose.ui.test.AssertionsKt.assert(Assertions.kt:258)
+        at androidx.compose.ui.test.AssertionsKt.assert$default(Assertions.kt:250)
+        at androidx.compose.ui.test.AssertionsKt.assertIsNotEnabled(Assertions.kt:63)
+        at app.onklav.home.WalkieSdkHostTest.walkieSettingsOfflineDialAndRecipientStorageUseSignedSdk(WalkieSdkHostTest.kt:87)
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43531 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43531 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+YouTubeSdkHostTest > youtubePackageOpensOwnViewerLibraryAndResetDialog STARTED
+
+YouTubeSdkHostTest > youtubePackageOpensOwnViewerLibraryAndResetDialog PASSED
+
+231 tests completed, 2 failed
+
+> Task :android:app:testDebugUnitTest FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':android:app:testDebugUnitTest'.
+> There were failing tests. See the report at: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/build/reports/tests/testDebugUnitTest/index.html
+
+* Try:
+> Run with --scan to get full insights.
+
+BUILD FAILED in 9m 25s
+79 actionable tasks: 29 executed, 50 up-to-date

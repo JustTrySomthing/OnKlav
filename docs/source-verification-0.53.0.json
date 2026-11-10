@@ -1,0 +1,70 @@
+{
+  "date": "2026-10-23",
+  "source_version": "0.53.0-dev",
+  "source_version_code": 60,
+  "scope": "Bundled SDK upgrades, Files Notes overlay, smooth swipes, floating reactions and centered speech arrow, original Walkie/splash, uniform tabs, carrier-budgeted attachments and audio/video trim/recording",
+  "apk_built": true,
+  "apk_variant": "debug",
+  "apk_bytes": 67372628,
+  "apk_sha256": "16506f47e0e74a8de6556f27a81ab2891bbcf802b8a1613e133fc275263fc6b0",
+  "production_inputs_match_assembly": true,
+  "apk_verified_independently": true,
+  "build_command_note": "Combined assembly and selected tests produced the APK and ten passing XML checks; Gradle shutdown stalled and its session was interrupted. APK was independently verified against unchanged recorded production inputs. The separate bounded Files screen Gradle run completed successfully.",
+  "tests": {
+    "passed": 11,
+    "failed": 0,
+    "selected": [
+      {
+        "class": "app.onklav.home.SdkBootstrapTest",
+        "passed": 3,
+        "failures": 0,
+        "evidence": "docs/evidence/v0.53.0/selected-passed/TEST-app.onklav.home.SdkBootstrapTest.xml"
+      },
+      {
+        "class": "app.onklav.home.SwipeConversationTest",
+        "passed": 2,
+        "failures": 0,
+        "evidence": "docs/evidence/v0.53.0/selected-passed/TEST-app.onklav.home.SwipeConversationTest.xml"
+      },
+      {
+        "class": "app.onklav.home.FilesRoutingTest",
+        "passed": 1,
+        "failures": 0,
+        "evidence": "docs/evidence/v0.53.0/selected-passed/TEST-app.onklav.home.FilesRoutingTest.xml"
+      },
+      {
+        "class": "app.onklav.home.CarrierMediaPlanTest",
+        "passed": 3,
+        "failures": 0,
+        "evidence": "docs/evidence/v0.53.0/selected-passed/TEST-app.onklav.home.CarrierMediaPlanTest.xml"
+      },
+      {
+        "class": "app.onklav.home.WalkiePresentationTest",
+        "passed": 1,
+        "failures": 0,
+        "evidence": "docs/evidence/v0.53.0/selected-passed/TEST-app.onklav.home.WalkiePresentationTest.xml"
+      },
+      {
+        "class": "app.onklav.home.FilesFlowHostTest.openingANoteUsesNotesAndBackReturnsToFiles",
+        "passed": 1,
+        "failures": 0,
+        "evidence": "docs/evidence/v0.53.0/TEST-app.onklav.home.FilesFlowHostTest.xml"
+      }
+    ],
+    "initial_attempt": "Three bootstrap checks hit the JVM native-library classloader mismatch. Test configurations were aligned; fresh selected XML reports all pass.",
+    "initial_evidence": "docs/evidence/v0.53.0/initial-selected"
+  },
+  "sdk_apps_rebuilt": [
+    "WalkieTalkie v10"
+  ],
+  "native_libraries_reused": true,
+  "games_changed": false,
+  "full_rewrite_complete": false,
+  "full_sdk_complete": false,
+  "installed_on_handset": false,
+  "phone_performance_measured": false,
+  "real_carrier_verified": false,
+  "two_phone_walkie_verified": false,
+  "hardware_codec_verified": false,
+  "reference": "Inner-Circle-Source.zip Library v235, read-only reference outside shipped source"
+}

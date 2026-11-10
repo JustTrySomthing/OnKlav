@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.SpeechServiceTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-29T21:28:19" hostname="b623e8e1265a" time="2.56">
+  <properties/>
+  <testcase name="lockingDuringColdVoicePreparationKeepsTheUserStartedSession" classname="app.onklav.home.SpeechServiceTest" time="2.334"/>
+  <testcase name="notificationPauseResumeNoisyRouteAndDestroyReleaseReading" classname="app.onklav.home.SpeechServiceTest" time="0.225"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Intent = Intent { act=android.media.AUDIO_BECOMING_NOISY }; Matching wrappers: [Wrapper[receiver=[app.onklav.home.SpeechPlaybackService$noisy$1@1bd04d25], context=[android.app.ContextImpl@6c30d925], intentFilter=[android.content.IntentFilter@4a7887f9]]]
+]]></system-err>
+</testsuite>

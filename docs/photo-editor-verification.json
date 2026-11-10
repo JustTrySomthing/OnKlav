@@ -1,0 +1,53 @@
+{
+  "version": "0.92.0-photo1",
+  "android_code": 100,
+  "status": "source complete",
+  "validation": {
+    "android_unique_passed": 3,
+    "final_tests": [
+      {
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    ],
+    "lint": {
+      "Warning": 186
+    },
+    "lint_errors": 0,
+    "signed_included_apps": 17,
+    "native": "Core/JNI unchanged and reused",
+    "phone_acceptance": "Not performed",
+    "apk": "Not requested or built"
+  },
+  "features": [
+    "Crop ratios and per-edge crop",
+    "Flips, quarter-turns, straighten",
+    "Linked/independent scale and horizontal/vertical perspective",
+    "Exposure, brightness, contrast, saturation, hue, warmth, tint, black/white points, gamma",
+    "Vignette, sharpen and presets",
+    "Undo/redo, comparison, pinch/pan, Fit and grid",
+    "Private draft, original preserved, JPEG/PNG Save Copy",
+    "Live storage grant checks and delete-data cleanup"
+  ],
+  "limits": {
+    "input_bytes": 150000000,
+    "preview_max_side": 1200,
+    "export_decode_max_side": 4000,
+    "output_max_pixels": 16000000,
+    "layered_raw_cmyk_editing": false
+  },
+  "evidence": "docs/evidence/v0.92.0",
+  "notes": [
+    "Initial UI test targeted inner chip text; corrected test and final full selection passed",
+    "Final permission-aware themed workspace passed; no handset/provider acceptance implied",
+    "First-party signed SDK shell with host bitmap workspace; not a public image-processing SDK component"
+  ]
+}

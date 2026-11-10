@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.TransportRecoveryTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-10-23T11:13:13" hostname="41aed82b0335" time="4.184">
+  <properties/>
+  <testcase name="walkieCallbackIsRetainedWhenPermissionGatePreventsReconciliation" classname="app.onklav.home.TransportRecoveryTest" time="0.098"/>
+  <testcase name="callbacksRequireMatchingActionUriKindAndPart" classname="app.onklav.home.TransportRecoveryTest" time="0.042"/>
+  <testcase name="receiptsSurviveRestartUntilCoreAcceptsTheOutcomeWithoutResending" classname="app.onklav.home.TransportRecoveryTest" time="0.064"/>
+  <testcase name="internalBrowserHandoffUsesTheSignedGuestNavigationAndRejectsUnsafeSchemes" classname="app.onklav.home.TransportRecoveryTest" time="2.856"/>
+  <testcase name="failedMmsAddressInsertRollsBackOnlyTheNewParent" classname="app.onklav.home.TransportRecoveryTest" time="0.16"/>
+  <testcase name="committedCoreRemovalWithBlockedPrivateCleanupResumesBeforeAnotherLaunch" classname="app.onklav.home.TransportRecoveryTest" time="0.937"/>
+  <testcase name="recoverySchedulingCoalescesAndDoesNotEnableTransport" classname="app.onklav.home.TransportRecoveryTest" time="0.025"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

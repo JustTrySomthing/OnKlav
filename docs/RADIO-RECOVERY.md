@@ -1,0 +1,11 @@
+# Radio recovery and visual depth
+
+0.100.13-rc1/code122. Directory and live-stream pools are both reset on route changes, new station and explicit resume. Initial ready-without-audio, buffering and a stalled playback clock receive bounded recovery. Offline waits keep intent and observe network return without spending station retries; a five-second fallback handles a missed callback. Explicit pause/Stop/sleep/permission revocation remain authoritative. Long radio pauses retain the session rather than discarding it after five minutes. Delayed focus-loss events from an old request cannot pause a new station.
+
+Orbit, Mandala and Prism Bloom intensity changes expand the entire artwork, including deliberate off-screen edges. Beat response has more range. Spectrum and Wave each have three bass/mid/treble layers with different hues/saturation; Wave uses measured low-pass/residual components and matched frequency accents.
+
+Incoming picture failures remain listed in Messages and in individual private notifications. Raw carrier failure codes receive actionable wording. Only transient incoming failures schedule up to three retry jobs; no outgoing resends or SIM reassignment. Retry rechecks default role and carrier authorization, suppresses duplicate in-flight writes and retains original request metadata. Acknowledgement and notification failures after filing cannot relabel an already received picture as a download failure. The exact carrier/device failure cause cannot be identified from the report alone and device/carrier acceptance remains open.
+
+48 focused framework host/native UI checks passed. Portrait/landscape screenshots reviewed; radial off-screen extent, layered frequency response and still paused frames verified. Full lint passed with zero errors/287 warnings/1 information; all3158 runtime classes match compiled Kotlin. Original-signature ARM64 APK with16KiB alignment and current native/SDK/game artifacts built and verified. See radio-recovery-verification.json and evidence/v0.100.13.
+
+Reference contracts checked: https://developer.android.com/reference/androidx/media3/common/Player and https://developer.android.com/reference/android/telephony/SmsManager. Implementation remains on the pinned Media3 dependency; no cloud or neural services added.

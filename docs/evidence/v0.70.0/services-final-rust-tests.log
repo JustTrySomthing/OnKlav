@@ -1,0 +1,23 @@
+   Compiling onklav-core v0.8.0 (/workspace/scratch/ed752e8a1957/current/OnKlav/core)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 17.63s
+     Running unittests src/lib.rs (core/target/debug/deps/onklav_core-8a579202944a8eae)
+
+running 9 tests
+test sdk_storage::tests::storage_lower_saved_quota_and_unknown_admin_effect_never_delete_data ... ok
+test sdk_storage::tests::storage_symlinked_directory_never_touches_external_files ... ok
+test sdk_storage::tests::storage_reopen_resumes_staging_without_replaying_appends ... ok
+test sdk_storage::job_recovery_tests::storage_job_staging_is_idempotent_across_missing_host_receipts ... ok
+test sdk_storage::tests::storage_staging_retry_checksum_and_immutable_commit ... ok
+test sdk_storage::tests::storage_foreign_handles_corruption_and_symlinks_are_rejected ... ok
+test sdk_storage::job_recovery_tests::storage_job_staging_recovers_an_untracked_empty_file_without_touching_other_files ... ok
+test sdk_storage::tests::storage_cache_eviction_and_lower_limits_preserve_saved_files ... ok
+test sdk_storage::tests::storage_streams_a_file_larger_than_the_guest_memory_budget ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 214 filtered out; finished in 4.88s
+
+     Running unittests src/bin/onklav-pack.rs (core/target/debug/deps/onklav_pack-ee23dc4255ec4a6b)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

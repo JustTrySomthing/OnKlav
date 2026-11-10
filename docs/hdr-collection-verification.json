@@ -1,0 +1,51 @@
+{
+  "status": "source_complete",
+  "passing_checks": [
+    "PhotoHdrTest.allLooksPreserveOpacityAndZeroStrengthIsExactWhileBwIsAchromatic",
+    "PhotoHdrTest.naturalKeepsEndpointsAndAvoidsHardEdgeRingingAndFlatNoiseInflation",
+    "PhotoHdrTest.portraitAndLandscapeLooksAreDistinctAndProduceReviewSheets",
+    "PhotoHdrTest.singleStyleStrengthAndSerializationKeepOldDraftsCompatible",
+    "PhotoHdrUiTest.allSixHdrLooksShareIntensityAndUndoRestoresStyleAndSlider",
+    "PhotoEffectsTest.threeLooksHaveDistinctGradingAndRemovedLooksAreNeutral",
+    "PhotoEffectsTest.hdrAddsStructureWithoutLiftingBlacksOrWashingTonalRange",
+    "PhotoEffectsTest.hdrStrengthHasClearlyVisibleRangeWithoutGlobalBrightnessLift",
+    "PhotoEffectsTest.powerfulHdrDoesNotTurnFineGrainIntoTexture",
+    "PhotoEffectsTest.portraitAndScenicHdrStrengthContactSheet",
+    "PhotoEffectsTest.renderedLookContactSheet",
+    "PhotoEffectsTest.hdrDoesNotDrawHalosAroundHardEdges",
+    "PhotoEffectsTest.sharpeningHasVisibleStrengthWithoutChangingFlatAreasOrAlpha",
+    "PhotoCropConsistencyTest.extremePerspectiveDoesNotCollapseOrInvertTheVisibleSelection",
+    "PhotoCropConsistencyTest.cropContextIncludesAllEditsAndSelectedPixelsMatchExport",
+    "PhotoCropConsistencyTest.transformedHandlesUseInverseMappingAndPreserveEveryOtherEdit",
+    "PhotoLayersTest.portableProjectRetainsOriginalEditsMarksAndBothHistoryDirections",
+    "PhotoLayersTest.cancellationStopsArchiveWithoutChangingOriginal",
+    "PhotoLayersTest.invalidVersionTraversalAndOversizedHistoryAreRejectedBeforeSourceIsWritten"
+  ],
+  "check_count": 19,
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/PhotoHdr.kt": "0bcdf2c58a84aae82ddc664f8d8336bfb4ff3a21df9428a26ac3e9303304f8a7",
+    "android/app/src/main/kotlin/app/onklav/home/PhotoEditor.kt": "1c8ad77b0c24a019bdb99e284a6787bb2bb22d3e215d89d76490383ba13e908d",
+    "android/app/src/main/kotlin/app/onklav/home/PhotoOptionsWheel.kt": "6f061dcc400204a5fd8fbca1a63073e0ea8672230dceeef336b88ef27c18bec2",
+    "android/app/src/test/kotlin/app/onklav/home/PhotoHdrTest.kt": "1711f891ed32a80a6dee3c732a45fccba86aee95088a60f5dcc1132152813c87",
+    "android/app/src/test/kotlin/app/onklav/home/PhotoHdrUiTest.kt": "b21918ac55b9303d10e32db341d15dcf2af3afb0686f3c5dd52497a123922f1d",
+    "android/app/src/test/kotlin/app/onklav/home/PhotoEditorUiTest.kt": "c0c018bac818616e75635ec70391365f56fc4126360ac342ad25f1594fd09232",
+    "android/app/src/test/kotlin/app/onklav/home/PhotoArtEffectsTest.kt": "c3a48236410d829b4af831a6f084ee2807e10c61b436e0cdcfca411b5ab34df9"
+  },
+  "runtime_bundle_matches_compiled_classes": true,
+  "reviewed_images": [
+    "portrait-collection.png",
+    "landscape-collection.png"
+  ],
+  "presets": [
+    "HDR Natural",
+    "HDR Surreal",
+    "HDR Shiny",
+    "HDR Gritty Grunge",
+    "HDR Painterly Glow",
+    "HDR B & W"
+  ],
+  "initial_diagnostic": "UI matcher found the same Natural label in wheel and covered toolbar; matcher scoped to wheel. All18 initial render/legacy/crop/layer cases passed; final UI case passed. No effect code change or broad rerun needed.",
+  "phone_performance_verified": false,
+  "output": "single-image SDR looks",
+  "apk_status": "0.100.20-rc1/code129 built, original signer and packaged labels/class verified"
+}

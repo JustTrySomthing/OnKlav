@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-24",
+  "source_version": "0.60.0-dev",
+  "source_version_code": 68,
+  "scope": "Settings streaming Files and editable Annotation ZIP backup, checked review and missing-content restore",
+  "apk_built": true,
+  "tests": {
+    "passed": 182,
+    "failed": 0,
+    "unexpected_failures": 0,
+    "known_failures": [],
+    "rust_broad": {
+      "passed": 178,
+      "failed": 0,
+      "fresh_run": true,
+      "evidence": "docs/evidence/v0.60.0/rust-tests.log"
+    },
+    "fresh_framework_host": [
+      {
+        "class": "app.onklav.home.LibraryBackupTest",
+        "passed": 3,
+        "failed": 0,
+        "skipped": 0,
+        "evidence": "docs/evidence/v0.60.0/TEST-app.onklav.home.LibraryBackupTest.xml"
+      },
+      {
+        "class": "app.onklav.home.SettingsUiHostTest.filesAndAnnotatedImageBackupsAreReachableAndReturnToSettings",
+        "passed": 1,
+        "failed": 0,
+        "skipped": 0,
+        "evidence": "docs/evidence/v0.60.0/TEST-app.onklav.home.SettingsUiHostTest.xml"
+      }
+    ]
+  },
+  "build_evidence": "docs/evidence/v0.60.0/build-debug.json",
+  "apk_evidence": "docs/apk-verification-debug.json",
+  "native_proof": "docs/native-provenance.json",
+  "sdk_proof": "docs/app-sdk-provenance.json",
+  "full_rewrite_complete": false,
+  "handset_acceptance": false,
+  "carrier_acceptance": false,
+  "next_work": "docs/FINISH-NON-GAME.md",
+  "note": "Fresh full Rust pass and source-matched Linux/ARM64 JNI rebuild. Existing SDK packages/Godot reused. Five new Rust scenarios are included in the 178 total, not double-counted. Three real Android provider/JNI tests and one two-dialog navigation check pass. Initial compile needed an explicit Result type and is retained. Streaming/Stop and retry preserve existing and unindexed conflicting content. Full SDK-data backup, remote-provider/process-death and phone/carrier/account acceptance remain open. Final resolved-name guard rejects maximum-length duplicate names before any index/payload publication; native outputs rebuilt after this correction. Final APK assembled after the resolved-name correction in 40.42s and verified in 2.83s. Earlier pre-correction assembly was intentionally stopped; no obsolete APK was published."
+}

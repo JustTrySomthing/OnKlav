@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.GameSessionStatusTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-11-03T19:52:22" hostname="d514432facff" time="1.815">
+  <properties/>
+  <testcase name="catalogReaderObservesEveryWriterChangeWithoutPreferenceReload" classname="app.onklav.home.GameSessionStatusTest" time="1.736"/>
+  <testcase name="quitOrNewCannotResurrectTheOldPreferenceMarker" classname="app.onklav.home.GameSessionStatusTest" time="0.035"/>
+  <testcase name="oldOrOversizedHintsCannotBeUsedAsAGameIdentity" classname="app.onklav.home.GameSessionStatusTest" time="0.041"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

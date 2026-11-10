@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.PhotoEditorUiTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-28T21:09:38" hostname="1b65f1fab707" time="10.381">
+  <properties/>
+  <testcase name="editingToolsAndExportAreReachable" classname="app.onklav.home.PhotoEditorUiTest" time="10.381"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

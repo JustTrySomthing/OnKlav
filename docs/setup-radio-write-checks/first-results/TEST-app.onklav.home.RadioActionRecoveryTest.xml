@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.RadioActionRecoveryTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-31T01:33:24" hostname="fa7478106f85" time="18.776">
+  <properties/>
+  <testcase name="switchingAndReopeningWaitForTheOldConnectionBeforeTheFirstProbe" classname="app.onklav.home.RadioActionRecoveryTest" time="6.676"/>
+  <testcase name="rejectedSuccessReplyIsAcknowledgedAsFailureInsteadOfOrphaningTheSdkToken" classname="app.onklav.home.RadioActionRecoveryTest" time="2.962"/>
+  <testcase name="cancellingACompletionStillCommitsItsFailureAndBusyActionsCannotCrossPendingBarrier" classname="app.onklav.home.RadioActionRecoveryTest" time="2.474"/>
+  <testcase name="repeatedStationStartsPassStrictSdkValidationAndEverySubsequentClickWorks" classname="app.onklav.home.RadioActionRecoveryTest" time="3.792"/>
+  <testcase name="radioPreparationReleasesOldStreamBeforeProbeAndRepairsOnlyTheSelectedAddress" classname="app.onklav.home.RadioActionRecoveryTest" time="2.871"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

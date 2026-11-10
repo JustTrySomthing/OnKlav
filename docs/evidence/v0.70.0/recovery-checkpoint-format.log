@@ -1,0 +1,10 @@
+test_complete_handoff_base_is_verified_and_updated_without_losing_members (test_checkpoint_working.CheckpointTests.test_complete_handoff_base_is_verified_and_updated_without_losing_members) ... ok
+test_corrupt_base_is_rejected (test_checkpoint_working.CheckpointTests.test_corrupt_base_is_rejected) ... ok
+test_overlay_preserves_baseline_and_records_new_source (test_checkpoint_working.CheckpointTests.test_overlay_preserves_baseline_and_records_new_source) ... ok
+test_stale_native_is_saved_as_requiring_rebuild_without_forging_proof (test_checkpoint_working.CheckpointTests.test_stale_native_is_saved_as_requiring_rebuild_without_forging_proof) ... ok
+test_unsafe_paths_and_missing_files_preserve_previous_output (test_checkpoint_working.CheckpointTests.test_unsafe_paths_and_missing_files_preserve_previous_output) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.023s
+
+OK

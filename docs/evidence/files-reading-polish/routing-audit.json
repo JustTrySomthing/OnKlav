@@ -1,0 +1,119 @@
+{
+  "default": "OnKlav Files",
+  "contract_calls": 50,
+  "call_sites": [
+    {
+      "file": "android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt",
+      "calls": 9
+    },
+    {
+      "file": "android/app/src/main/kotlin/app/onklav/home/SettingsBackup.kt",
+      "calls": 4
+    },
+    {
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkAppScreen.kt",
+      "calls": 1
+    },
+    {
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkFilesEffects.kt",
+      "calls": 1
+    },
+    {
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkPrivateFilesEffects.kt",
+      "calls": 1
+    },
+    {
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkAudioBooksComponent.kt",
+      "calls": 2
+    },
+    {
+      "file": "android/app/src/main/kotlin/app/onklav/home/LibraryBackup.kt",
+      "calls": 2
+    },
+    {
+      "file": "android/app/src/main/kotlin/app/onklav/home/DriveSharing.kt",
+      "calls": 1
+    },
+    {
+      "file": "android/app/src/main/kotlin/app/onklav/home/WriteEditor.kt",
+      "calls": 6
+    },
+    {
+      "file": "android/app/src/main/kotlin/app/onklav/home/HistoryResumeScreen.kt",
+      "calls": 1
+    },
+    {
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessageAttachments.kt",
+      "calls": 1
+    },
+    {
+      "file": "android/app/src/main/kotlin/app/onklav/home/SettingsScreens.kt",
+      "calls": 1
+    },
+    {
+      "file": "android/app/src/main/kotlin/app/onklav/home/NotesBackup.kt",
+      "calls": 2
+    },
+    {
+      "file": "android/app/src/main/kotlin/app/onklav/home/EmailScreen.kt",
+      "calls": 2
+    },
+    {
+      "file": "android/app/src/main/kotlin/app/onklav/home/AudioEditor.kt",
+      "calls": 3
+    },
+    {
+      "file": "android/app/src/main/kotlin/app/onklav/home/DriveBackup.kt",
+      "calls": 1
+    },
+    {
+      "file": "android/app/src/main/kotlin/app/onklav/home/FilesBroker.kt",
+      "calls": 1
+    },
+    {
+      "file": "android/app/src/main/kotlin/app/onklav/home/PhotoEditor.kt",
+      "calls": 3
+    },
+    {
+      "file": "android/app/src/main/kotlin/app/onklav/home/PackageCenter.kt",
+      "calls": 1
+    },
+    {
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkAppsCenter.kt",
+      "calls": 2
+    },
+    {
+      "file": "android/shared/src/main/kotlin/app/onklav/shared/AppearanceDialog.kt",
+      "calls": 3
+    },
+    {
+      "file": "android/shared/src/main/kotlin/app/onklav/shared/BackgroundDialog.kt",
+      "calls": 1
+    },
+    {
+      "file": "android/tools/src/main/kotlin/app/onklav/tools/NotesScreen.kt",
+      "calls": 1
+    }
+  ],
+  "android_tree_permission_exceptions": [
+    {
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkFilesEffects.kt",
+      "line": 48,
+      "purpose": "Explicit connection of a new Android folder only"
+    },
+    {
+      "file": "android/app/src/main/kotlin/app/onklav/home/FileBrowserActivity.kt",
+      "line": 61,
+      "purpose": "Explicit connection of a new Android folder only"
+    }
+  ],
+  "sdk_effects": [
+    "blobs.import",
+    "blobs.export",
+    "library.import",
+    "library.export",
+    "library.external.browse",
+    "images.import"
+  ],
+  "blocked_web_uploads_unchanged": "Read-only publisher/web surfaces still decline uploads; they never launch Android Files. This change routes supported user file actions, not previously unsupported web upload capability."
+}

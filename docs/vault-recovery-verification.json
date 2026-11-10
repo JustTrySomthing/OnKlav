@@ -1,0 +1,30 @@
+{
+  "status": "source implemented; production and test Kotlin compilation and15 focused host checks passed",
+  "date": "2026-10-31",
+  "tests": {
+    "VaultRecoveryTest": 5,
+    "VaultTest": 5,
+    "VaultUiTest": 5
+  },
+  "new_apk_built": false,
+  "latest_apk": "0.100.28-rc1/code137 predates Vault question recovery",
+  "native_sources_changed": false,
+  "backup_payload_unchanged": true,
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/Vault.kt": "64fad6d27b3906c836305ddd95df66f59e64080bf4519655997806dd9c154512",
+    "android/app/src/main/kotlin/app/onklav/home/VaultStore.kt": "ac47d53e8ff6391abb0750526237663558fed94884a16790bdbfbf2256f87965",
+    "android/app/src/main/kotlin/app/onklav/home/VaultRecovery.kt": "a31f65139a498f85fd28313f70ebde59aae09daf49c2bbaff89bcb99b0ed4b74",
+    "android/app/src/test/kotlin/app/onklav/home/VaultUiTest.kt": "c403c97b38d1272d66763c950236575b4955beac2070be41030bab812909bec1",
+    "android/app/src/test/kotlin/app/onklav/home/VaultRecoveryTest.kt": "a3231b408829b4178fd1358e8c6d13dadc7bd44a1a00f51180706e51b6bc060c"
+  },
+  "notes": [
+    "Initial restored-cache snapshot failure resolved on one diagnostic rerun; final selected test task passed in9m18s including restored dependency/transform and whole-app compilation.",
+    "No production or native inputs changed after the successful compile.",
+    "Actual native App Documents Backup/restore executed with recovery-enabled ciphertext.",
+    "New setup interrupted before Complete restarts without a persisted password or document. Existing vault requires current password before enrollment.",
+    "All three answers are an alternative cryptographic access route; guessable answers weaken protection. Local cooldown is not offline-guess prevention.",
+    "Phone/keyboard/recents acceptance and independent security qualification remain pending."
+  ],
+  "evidence": "docs/vault-recovery-checks",
+  "layout_preview": "docs/evidence/vault-recovery"
+}

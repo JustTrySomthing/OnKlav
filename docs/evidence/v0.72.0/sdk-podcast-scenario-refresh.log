@@ -1,0 +1,14 @@
+{
+  "build": [
+    "Podcasts"
+  ],
+  "restore_bundles": [],
+  "reuse": [],
+  "unselected_stale": []
+}
+   Compiling onklav-core v0.8.0 (/workspace/scratch/75acf774e3b8/recovered/source/OnKlav/core)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.55s
+Podcasts: compiling changed app
+    Finished `release` profile [optimized] target(s) in 0.01s
+Created /workspace/scratch/75acf774e3b8/recovered/source/OnKlav/sdk/packages/.sdk-build-iklsudpn/Podcasts.onklav-a
+{"built": ["Podcasts"], "bundles_restored": [], "all_packages_current": true}

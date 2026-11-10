@@ -1,0 +1,14 @@
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/developer/components)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.30s
+     Running unittests src/lib.rs (recovered/OnKlav/developer/components/target/debug/deps/onklav_ui-1771de5ff2e26eff)
+
+running 6 tests
+test reference_apps::ebooks_app::saved_screen_tests::finishing_import_yields_before_opening_reader ... ok
+test reference_apps::ebooks_app::polish_tests::browse_recent_library_tabs_and_previews_are_clear ... ok
+test reference_apps::ebooks_app::polish_tests::recent_load_and_open_preserve_source_and_use_persistent_collection ... ok
+test reference_apps::ebooks_app::tests::starts_offline_and_only_acquires_displayed_catalog_ids ... ok
+test reference_apps::ebooks_app::reading_tests::read_aloud_uses_current_page_and_auto_advances_without_network ... ok
+test reference_apps::ebooks_app::reading_tests::bookmarks_are_paged_and_mutations_require_latest_revision ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 112 filtered out; finished in 0.00s
+

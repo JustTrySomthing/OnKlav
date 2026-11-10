@@ -1,0 +1,191 @@
+{
+  "date": "2026-10-22",
+  "source_version": "0.15.0-dev",
+  "source_version_code": 22,
+  "app": "Annotation",
+  "full_rewrite_complete": false,
+  "full_sdk_complete": false,
+  "apk_built": false,
+  "mobile_native_rebuilt": false,
+  "installed_on_handset": false,
+  "last_verified_apk_version": "0.14.0-dev",
+  "last_verified_apk_sha256": "bae905c8285fcd700c7327bb0a355f1b2b6e8691c0492d26a989fe3c33eb68f5",
+  "tests": {
+    "rust_passed": 50,
+    "kotlin_passed": 40,
+    "total_passed": 90,
+    "failed": 0,
+    "kotlin_suites": [
+      {
+        "suite": "app.onklav.home.AnnotationSdkHostTest",
+        "tests": 1,
+        "failed": 0,
+        "skipped": 0,
+        "seconds": 23.263
+      },
+      {
+        "suite": "app.onklav.home.BrowserSdkHostTest",
+        "tests": 1,
+        "failed": 0,
+        "skipped": 0,
+        "seconds": 4.375
+      },
+      {
+        "suite": "app.onklav.home.GroupProtocolHostTest",
+        "tests": 2,
+        "failed": 0,
+        "skipped": 0,
+        "seconds": 0.113
+      },
+      {
+        "suite": "app.onklav.home.GroupsFlowHostTest",
+        "tests": 1,
+        "failed": 0,
+        "skipped": 0,
+        "seconds": 3.473
+      },
+      {
+        "suite": "app.onklav.home.MessageFocusTest",
+        "tests": 1,
+        "failed": 0,
+        "skipped": 0,
+        "seconds": 0.001
+      },
+      {
+        "suite": "app.onklav.home.MessageIdentityTest",
+        "tests": 3,
+        "failed": 0,
+        "skipped": 0,
+        "seconds": 0.004
+      },
+      {
+        "suite": "app.onklav.home.ReaderSdkHostTest",
+        "tests": 1,
+        "failed": 0,
+        "skipped": 0,
+        "seconds": 3.718
+      },
+      {
+        "suite": "app.onklav.home.ReminderFlowHostTest",
+        "tests": 1,
+        "failed": 0,
+        "skipped": 0,
+        "seconds": 8.179
+      },
+      {
+        "suite": "app.onklav.home.ReminderTimesTest",
+        "tests": 2,
+        "failed": 0,
+        "skipped": 0,
+        "seconds": 0.012
+      },
+      {
+        "suite": "app.onklav.home.RssAppsHostTest",
+        "tests": 1,
+        "failed": 0,
+        "skipped": 0,
+        "seconds": 6.513
+      },
+      {
+        "suite": "app.onklav.home.SdkAppsHostTest",
+        "tests": 1,
+        "failed": 0,
+        "skipped": 0,
+        "seconds": 3.134
+      },
+      {
+        "suite": "app.onklav.home.SdkDrawingTest",
+        "tests": 3,
+        "failed": 0,
+        "skipped": 0,
+        "seconds": 0.272
+      },
+      {
+        "suite": "app.onklav.home.SdkFeedServiceTest",
+        "tests": 2,
+        "failed": 0,
+        "skipped": 0,
+        "seconds": 0.116
+      },
+      {
+        "suite": "app.onklav.home.SdkSpeechTest",
+        "tests": 2,
+        "failed": 0,
+        "skipped": 0,
+        "seconds": 2.009
+      },
+      {
+        "suite": "app.onklav.home.SdkVideoPolicyTest",
+        "tests": 3,
+        "failed": 0,
+        "skipped": 0,
+        "seconds": 0.232
+      },
+      {
+        "suite": "app.onklav.home.SdkWebPolicyTest",
+        "tests": 3,
+        "failed": 0,
+        "skipped": 0,
+        "seconds": 0.513
+      },
+      {
+        "suite": "app.onklav.home.YouTubeSdkHostTest",
+        "tests": 1,
+        "failed": 0,
+        "skipped": 0,
+        "seconds": 2.045
+      },
+      {
+        "suite": "app.onklav.shared.LauncherLayoutTest",
+        "tests": 5,
+        "failed": 0,
+        "skipped": 0,
+        "seconds": 0.044
+      },
+      {
+        "suite": "app.onklav.shared.NativeBridgeTest",
+        "tests": 2,
+        "failed": 0,
+        "skipped": 0,
+        "seconds": 0.122
+      },
+      {
+        "suite": "app.onklav.shared.ThemePackageTest",
+        "tests": 4,
+        "failed": 0,
+        "skipped": 0,
+        "seconds": 0.194
+      }
+    ]
+  },
+  "source_counts": {
+    ".java": 0,
+    ".kt": 85,
+    ".rs": 18,
+    ".gd": 4
+  },
+  "native_provenance": "host-native-provenance.json; current Linux JNI only",
+  "sdk_provenance": "app-sdk-provenance.json; signed Annotation.onklav-a and existing packages",
+  "production_path": "AppsDesktop -> signed Rust/Wasm Annotation controller -> Rust scoped drawing store/revision validator -> generic Kotlin canvas/image services; no trusted AnnotationScreen",
+  "checks": [
+    "Package import/real Wasm controller, image-space edits, undo/redo, text notes, rename, scope/revision boundaries, export snapshots, reopening and revocation",
+    "Kotlin image limits, native rendering pixels/dimensions, cancelled gestures, scoped image clipboard export and desktop/library/tool/search/rename/delete-confirm/reopen flow",
+    "All existing Kotlin regression suites; no APK or emulator"
+  ],
+  "remaining": "Physical gesture, accessibility, exact reference artwork/spacing, rotation/process/OS file/share-provider recovery acceptance. Social and Walkie-Talkie remain unconverted. Earlier carrier/game/voice/web gaps remain; MMS_READY=false.",
+  "phase_seconds": {
+    "library_compile": 24.5,
+    "app_and_tests_compile": 100.0,
+    "android_host_tests": 86.7,
+    "native_host_tests": 39.0,
+    "host_jni_build": 2.5
+  },
+  "phase_limits_seconds": {
+    "library_compile": 180,
+    "app_compile": 180,
+    "android_tests": 180,
+    "native_tests": 240
+  },
+  "default_sms_role_changed": false,
+  "MMS_READY": false
+}

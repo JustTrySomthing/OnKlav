@@ -1,0 +1,14 @@
+{
+  "two_isolated_players": true,
+  "ten_complete_hands": true,
+  "alternating_starting_player": true,
+  "hidden_opponent_card_and_reveal": true,
+  "paused_arrival_silent_until_resume": true,
+  "only_host_deals_next_hand": true,
+  "wins_and_history_match": true,
+  "duplicate_delivery_no_replayed_cues": true,
+  "reduced_motion_rounds": true,
+  "legacy_friend_journal_and_saved_return": true,
+  "real_carrier": false,
+  "errors": []
+}

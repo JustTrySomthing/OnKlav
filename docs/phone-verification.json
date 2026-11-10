@@ -1,0 +1,30 @@
+{
+  "scope": "Phone everyday-use refinement",
+  "status": "focused_host_ui_checks_and_lint_passed",
+  "apk_built": false,
+  "focused_tests": 17,
+  "failures": 0,
+  "lint": {
+    "Fatal": 0,
+    "Error": 0,
+    "Warning": 782,
+    "Information": 1
+  },
+  "production_compile": "Passed for current refinements",
+  "limits": [
+    "Host tests do not certify real-device/carrier behavior",
+    "Physical incoming/outgoing, dual SIM, voicemail provisioning, Bluetooth, lock-screen, proximity and contact-provider testing remains",
+    "No visual-voicemail download, spam-identification service, Google assistant features or call recording",
+    "No new APK built"
+  ],
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/PhoneScreen.kt": "20de15396d4f9596873c380b424c06a5477ef79de95ac7f8b4567368429c3445",
+    "android/app/src/main/kotlin/app/onklav/home/PhoneSpeedDialUi.kt": "fa16a63eb18a4b8886f63b78e0d94cbd3983bd75fe1226e7437175eff0aa8e41",
+    "android/app/src/main/kotlin/app/onklav/home/PhoneTelecom.kt": "7be659b12e2426095f3714e0af93eb8846bda3dba16a262f026b09f91510ff08",
+    "android/app/src/main/kotlin/app/onklav/home/PhoneData.kt": "8d6da26aafb50f002779acd44303b8c62fd4d4983b75d62993fe9864a9cd377d",
+    "android/app/src/main/kotlin/app/onklav/home/PhoneCallUi.kt": "02454d862b256b93e17ac2d6cc67b6f093a0aba9f97564197d3352adb04887d3",
+    "android/app/src/main/kotlin/app/onklav/home/PhoneIcons.kt": "94158046f48c151a716277364ad901954d05e49722628acaa0dab6bd6df0b580",
+    "android/app/src/test/kotlin/app/onklav/home/PhoneTest.kt": "03b7303c20dcd055441e1dd69123cc92a734e54a6eb23092a95dd8fc1fa2dcc4",
+    "android/app/src/test/kotlin/app/onklav/home/PhoneUiTest.kt": "ebe1e3265e7deeaa76dd9d230d88dc7750a8c9d21759c273601e5f15c40d6e3b"
+  }
+}

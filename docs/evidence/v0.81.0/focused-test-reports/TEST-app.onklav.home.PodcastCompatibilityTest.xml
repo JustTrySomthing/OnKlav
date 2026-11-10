@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.PodcastCompatibilityTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-26T18:02:06" hostname="844ebfe47829" time="2.406">
+  <properties/>
+  <testcase name="realPublisherFeedsListPlayableEpisodes" classname="app.onklav.home.PodcastCompatibilityTest" time="2.406"/>
+  <system-out><![CDATA[Parsed 0.xml: The Daily / 67 episodes
+Parsed 3.xml: The Builders / 8 episodes
+Parsed 2.xml: Up First from NPR / 500 episodes
+Parsed 1.xml: Crime Junkie / 534 episodes
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

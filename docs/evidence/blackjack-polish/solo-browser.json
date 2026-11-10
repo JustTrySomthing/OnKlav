@@ -1,0 +1,40 @@
+[
+  {
+    "viewport": [
+      320,
+      560
+    ],
+    "four_card_animated_deal": true,
+    "drop_audio_rms": 0.01681570004824465,
+    "pause_freezes_deal_and_audio": true,
+    "hidden_hole_card": true,
+    "hit_then_stand_then_dealer": true,
+    "animated_reveal_and_totals": true,
+    "stable_table_allocation": true,
+    "natural_and_bust_reports": true,
+    "master_mute_silence": true,
+    "saved_result_no_replayed_sounds": true,
+    "legacy_solo_save_adopted": true,
+    "shared_help_audio_settings_quit_new_resume": true,
+    "errors": []
+  },
+  {
+    "viewport": [
+      432,
+      740
+    ],
+    "four_card_animated_deal": true,
+    "drop_audio_rms": 0.030420249708347107,
+    "pause_freezes_deal_and_audio": true,
+    "hidden_hole_card": true,
+    "hit_then_stand_then_dealer": true,
+    "animated_reveal_and_totals": true,
+    "stable_table_allocation": true,
+    "natural_and_bust_reports": true,
+    "master_mute_silence": true,
+    "saved_result_no_replayed_sounds": true,
+    "legacy_solo_save_adopted": true,
+    "shared_help_audio_settings_quit_new_resume": true,
+    "errors": []
+  }
+]

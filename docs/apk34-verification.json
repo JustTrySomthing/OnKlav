@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "version": "0.100.34-rc1",
+  "version_code": 143,
+  "package": "app.onklav.home.prototype.rewrite",
+  "variant": "debug",
+  "shrinking": false,
+  "debuggable": true,
+  "bytes": 186451718,
+  "sha256": "9c6e2a4e4b06063edc324be8aaafaedab7a92ca07f47545190e81a61f0b30d93",
+  "signer_sha256": "6ed975c5fc27d19f6291f751a8bb00fa8a2c2e7d268bffc7b6ddf7e1b1a7a69d",
+  "verification": "docs/apk-verification-debug.json",
+  "build": "docs/evidence/v0.100.34/build-debug.json",
+  "prebuild_checks": "23 focused checks passed; full production/test lint zero errors. See desktop-default-layout-verification.json. Checks were not repeated during assembly.",
+  "scope": "Fast incremental owner-requested APK; source-matched native/SDK/speech/games reused. Device gesture acceptance remains separate."
+}

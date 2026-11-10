@@ -1,0 +1,5 @@
+{
+  "status": "superseded by workflow-wrap-verification.json; bounded source workflow wrap complete",
+  "native_proof_status": "source-matched Linux/ARM64 verified",
+  "apk_created": false
+}

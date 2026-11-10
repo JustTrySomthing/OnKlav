@@ -1,0 +1,63 @@
+{
+  "status": "source implemented; focused checks passed; no APK built",
+  "implementation": "docs/VAULT.md",
+  "native_proof": "docs/working-native-verification.json",
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/Vault.kt": "480efcb89af16c0323c09bfa27643bcd5e304d0952a4902998fe487a92c4694f",
+    "android/app/src/main/kotlin/app/onklav/home/VaultStore.kt": "9a39f69ef466b7d7b58b4cf307399b16fa7dcb8565bf9fcd457105796a5a9993",
+    "android/app/src/main/kotlin/app/onklav/home/WriteEditor.kt": "96f1b69bf921d5740c2b815603faa96cc72f000c718539f867fd01c1d5c7be9e",
+    "android/app/src/main/kotlin/app/onklav/home/Catalog.kt": "6261143f5d5b749a772602930efb94bae973f18325b2d11f75284b2e4cdb28f8",
+    "android/app/src/main/kotlin/app/onklav/home/MainActivity.kt": "bbcccb6544769bd9728c84f9bcdf7c08d8a9d389cd6afbe98c32ecbe53911149",
+    "android/app/src/main/kotlin/app/onklav/home/SdkAppsCenter.kt": "9667c11475679ede5516f9e7484a1504f6a2395c33686a93a4b8d3a44cc11077",
+    "android/app/src/main/kotlin/app/onklav/home/SdkAppScreen.kt": "9abc24209a2408816f41834952c5801f33903d94df1cea135805cc39e002f01a",
+    "android/app/src/main/kotlin/app/onklav/home/FolderVaultDialog.kt": "54db8c8343700626d14c776c0685166ab0772652e638bdc159e919825c0ad870",
+    "android/app/src/main/kotlin/app/onklav/home/LibraryBackup.kt": "8f01c54f966331cd2f660819393e6c99413cf3c413b6ef81bb668e351eeb53d3",
+    "android/shared/src/main/res/drawable/ref_app_vault.xml": "51c151e6a4f978a847e8a4310356d0220933b4b166ca23db757f6b86cc94573a",
+    "core/src/document_backup.rs": "d8581e476a3671ddd35ff6fa6fdd5c7c8dd810131eec2d761ff8ed826448042f",
+    "core/src/library_backup.rs": "bc5bf1e097a71f7441aa34b82e4aee2834882e1517604c801c8331b782e7325d",
+    "android/app/src/test/kotlin/app/onklav/home/VaultTest.kt": "86c5c722abb4cb298b8289a21550ca67ccdfe0b8bfce5882c9ff4fcfd7d33395",
+    "android/app/src/test/kotlin/app/onklav/home/VaultUiTest.kt": "6d887b23bb7afd55826439a83b9e9f52eb1f0f190bf3b5d21f1be0e5b6202238",
+    "android/app/src/test/kotlin/app/onklav/home/FolderVaultUiTest.kt": "fc53e74e2e0aff3a6e59feaf7e154acb6f31344930470574bce6dbfccc8ea346"
+  },
+  "checks": {
+    "production_kotlin_compile": "passed after final informational-copy refinement",
+    "rust_document_backup": 4,
+    "rust_library_backup_regressions": 10,
+    "host_crypto_portability_and_real_jni_backup": 5,
+    "host_ui_setup_editor_paste_autosave_exit_and_background": 4,
+    "retired_folder_protection_ui": 1,
+    "unique_host_checks": 10,
+    "final_native_editor_clipboard_preservation_recheck": "passed: bold selection, unsafe HTML paste becomes plain text, existing text preserved, Save confirmation and final exit flush"
+  },
+  "evidence": [
+    "docs/vault-checks",
+    "docs/evidence/vault"
+  ],
+  "coverage": [
+    "wrong password and password change",
+    "authenticated tamper/truncation rejection",
+    "failed/oversized save preserves prior encrypted document",
+    "rich text, link and image marks",
+    "device-independent ciphertext restore via actual native App Documents backup",
+    "new/old backups and preservation of an existing Vault",
+    "matching setup passwords and visibility controls",
+    "native editor formatting and safe plain-text paste",
+    "autosave and last-edit exit/background flush",
+    "password required after locking",
+    "FLAG_SECURE while Vault is visible",
+    "landscape and large-text setup reachability",
+    "new folder-protection request retired while old folders remain recoverable"
+  ],
+  "not_run": [
+    "physical phone/IME/file-picker/recents acceptance",
+    "independent security qualification",
+    "new APK packaging/signing"
+  ],
+  "limits": [
+    "Clipboard copies and selected original images are outside Vault protection.",
+    "No password recovery or master key.",
+    "Existing Vault is retained during backup merge; restore prior Vault onto an installation without a Vault.",
+    "No guarantee against a compromised OS/keyboard/accessibility service or immediate physical erasure of JVM strings.",
+    "Unsaved changes can be lost on abrupt process/power loss; save failures retain a locked in-memory draft only."
+  ]
+}

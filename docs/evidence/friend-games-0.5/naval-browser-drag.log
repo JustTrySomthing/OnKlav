@@ -1,0 +1,3 @@
+SETUP 320 {'buttons': [], 'dock': [40, 482], 'feedback': 'Place your fleet', 'grid': [55, 202, 222, 222], 'hits': 0, 'own': True, 'paused': False, 'pending': -1, 'phase': 'setup', 'primary': [250.5, 532], 'ready': False, 'rx': 0, 'ships': [[], [], [], [], []], 'shots': {}, 'target': -1, 'turn': True, 'tx': 0}
+SETUP 432 {'buttons': [], 'dock': [50.9999963378906, 660.999990234375], 'feedback': 'Place your fleet', 'grid': [29.9999981689453, 210.500002441406, 383.999985351562, 383.999985351562], 'hits': 0, 'own': True, 'paused': False, 'pending': -1, 'phase': 'setup', 'primary': [306.499987792969, 711], 'ready': False, 'rx': 0, 'ships': [[], [], [], [], []], 'shots': {}, 'target': -1, 'turn': True, 'tx': 0}
+Naval phone flows passed

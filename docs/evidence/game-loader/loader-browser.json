@@ -1,0 +1,42 @@
+{
+  "visual_cases": [
+    {
+      "viewport": [
+        320,
+        640
+      ],
+      "real_progress_percent": true,
+      "forward_overshoot_settle": true,
+      "legible_final_logo_word_bar": true,
+      "actual_sound_signal": true,
+      "slow_load_waits_for_engine": true
+    },
+    {
+      "viewport": [
+        432,
+        800
+      ],
+      "real_progress_percent": true,
+      "forward_overshoot_settle": true,
+      "legible_final_logo_word_bar": true,
+      "actual_sound_signal": true,
+      "slow_load_waits_for_engine": true
+    },
+    {
+      "viewport": [
+        740,
+        360
+      ],
+      "real_progress_percent": true,
+      "forward_overshoot_settle": true,
+      "legible_final_logo_word_bar": true,
+      "actual_sound_signal": true,
+      "slow_load_waits_for_engine": true
+    }
+  ],
+  "muted_and_zero_volume_silent": true,
+  "system_and_cached_reduced_motion": true,
+  "no_fake_completion_on_error": true,
+  "studio_brand_opt_out": true,
+  "browser_autoplay_cue_measured": true
+}

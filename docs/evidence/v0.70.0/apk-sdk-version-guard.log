@@ -1,0 +1,39 @@
+{
+  "build": [
+    "Files",
+    "Notes",
+    "RSS",
+    "ReadAloud",
+    "Browser",
+    "YouTube",
+    "Annotation",
+    "Social",
+    "WalkieTalkie"
+  ],
+  "restore_bundles": [],
+  "reuse": [
+    "Counter"
+  ],
+  "unselected_stale": []
+}
+   Compiling onklav-core v0.8.0 (/workspace/scratch/75acf774e3b8/work/OnKlav/core)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 1.26s
+Files: compiling changed app
+   Compiling zmij v1.0.23
+   Compiling serde_core v1.0.229
+   Compiling serde_json v1.0.154
+   Compiling memchr v2.8.3
+   Compiling itoa v1.0.18
+   Compiling onklav-app v0.1.0 (/workspace/scratch/75acf774e3b8/work/OnKlav/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/work/OnKlav/developer/components)
+   Compiling onklav-files v0.1.0 (/workspace/scratch/75acf774e3b8/work/OnKlav/sdk/apps/files)
+    Finished `release` profile [optimized] target(s) in 8.41s
+Traceback (most recent call last):
+  File "/workspace/scratch/75acf774e3b8/work/OnKlav/scripts/build_sdk_apps.py", line 95, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/scratch/75acf774e3b8/work/OnKlav/scripts/build_sdk_apps.py", line 65, in main
+    validate_update(report['packages'][name],dict(manifest,publisher=report['packages'][name]['manifest']['publisher']),wasm_sha)
+  File "/workspace/scratch/75acf774e3b8/work/OnKlav/scripts/sdk_build_plan.py", line 72, in validate_update
+    raise ValueError('Changed app code requires a newer manifest version for installed-app updates')
+ValueError: Changed app code requires a newer manifest version for installed-app updates

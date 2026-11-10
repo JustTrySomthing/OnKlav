@@ -1,0 +1,10 @@
+SdkHttpPayloadTest: 3 passed; 2026-10-25T21:58:58
+SdkMapTest: 4 passed; 2026-10-25T21:59:01
+SdkHttpPayloadTest > textRetainsStrictUtf8AndExistingByteBounds PASSED
+SdkHttpPayloadTest > binaryPreservesNonUtf8BytesAndHasNoTextAlias PASSED
+SdkHttpPayloadTest > binaryRejectsOversizeBeforeHexExpansion PASSED
+SdkMapTest > ownRasterDecodesButForeignPathsAndInvalidDimensionsFail PASSED
+SdkMapTest > osmAttributionCannotBeReplacedByProviderText PASSED
+SdkMapTest > revokedOrDamagedRasterNeverReturnsABitmap PASSED
+SdkMapTest > mercatorProjectionWrapsDatelineClampsPolesAndRejectsNonFinite PASSED
+BUILD SUCCESSFUL in 1m 8s

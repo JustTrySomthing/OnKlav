@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.GameWebPolicyTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-11-03T13:14:41" hostname="d82446dcc971" time="2.057">
+  <properties/>
+  <testcase name="onlyCurrentOriginGetResourcesAreServed" classname="app.onklav.home.GameWebPolicyTest" time="1.934"/>
+  <testcase name="onlyExactExitMarkerClosesTheCurrentGame" classname="app.onklav.home.GameWebPolicyTest" time="0.035"/>
+  <testcase name="samePublisherGameOriginSurvivesUpdatesAndOtherGamesAreSeparate" classname="app.onklav.home.GameWebPolicyTest" time="0.052"/>
+  <testcase name="encodedTraversalAndNonGamePathsNeverReachHostStorage" classname="app.onklav.home.GameWebPolicyTest" time="0.036"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

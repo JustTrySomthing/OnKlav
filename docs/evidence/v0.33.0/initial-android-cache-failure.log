@@ -1,0 +1,85 @@
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=42721 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=42721 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.11.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+Checking the license for package Android SDK Platform-Tools in /workspace/scratch/39f240a7e5bd/restored-env/sdk/licenses
+Warning: License for package Android SDK Platform-Tools not accepted.
+WARNING: platform-tools package is not installed. Please accept the installation licence to continue
+> Task :android:app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:app:preBuild UP-TO-DATE
+> Task :android:app:preDebugBuild UP-TO-DATE
+> Task :android:games:preBuild UP-TO-DATE
+> Task :android:games:preDebugBuild UP-TO-DATE
+> Task :android:shared:preBuild UP-TO-DATE
+> Task :android:shared:preDebugBuild UP-TO-DATE
+> Task :android:shared:writeDebugAarMetadata
+> Task :android:games:writeDebugAarMetadata
+> Task :android:tools:preBuild UP-TO-DATE
+> Task :android:tools:preDebugBuild UP-TO-DATE
+> Task :android:tools:writeDebugAarMetadata
+> Task :android:app:generateDebugResValues
+> Task :android:games:generateDebugResValues
+> Task :android:app:checkDebugAarMetadata
+> Task :android:games:generateDebugResources
+> Task :android:games:packageDebugResources
+> Task :android:shared:generateDebugResValues UP-TO-DATE
+> Task :android:shared:generateDebugResources UP-TO-DATE
+> Task :android:shared:packageDebugResources UP-TO-DATE
+> Task :android:tools:generateDebugResValues UP-TO-DATE
+> Task :android:tools:generateDebugResources UP-TO-DATE
+> Task :android:tools:packageDebugResources UP-TO-DATE
+> Task :android:app:mapDebugSourceSetPaths
+> Task :android:app:generateDebugResources
+> Task :android:app:packageDebugResources
+> Task :android:app:mergeDebugResources
+> Task :android:app:createDebugCompatibleScreenManifests
+> Task :android:app:parseDebugLocalResources
+> Task :android:app:extractDeepLinksDebug
+> Task :android:games:extractDeepLinksDebug
+> Task :android:shared:extractDeepLinksDebug
+> Task :android:shared:processDebugManifest
+> Task :android:games:processDebugManifest
+> Task :android:tools:extractDeepLinksDebug
+> Task :android:tools:processDebugManifest
+> Task :android:games:compileDebugLibraryResources
+> Task :android:app:processDebugMainManifest
+> Task :android:app:processDebugManifest
+> Task :android:app:processDebugManifestForPackage
+> Task :android:games:parseDebugLocalResources
+> Task :android:shared:compileDebugLibraryResources
+> Task :android:shared:parseDebugLocalResources UP-TO-DATE
+> Task :android:shared:generateDebugRFile UP-TO-DATE
+> Task :android:tools:compileDebugLibraryResources
+> Task :android:tools:parseDebugLocalResources UP-TO-DATE
+> Task :android:tools:generateDebugRFile UP-TO-DATE
+> Task :android:games:generateDebugRFile
+> Task :android:games:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:app:processDebugResources
+> Task :android:games:javaPreCompileDebug
+> Task :android:shared:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:shared:compileDebugKotlin FAILED
+> Task :android:games:compileDebugKotlin
+[Incubating] Problems report is available at: file:///workspace/scratch/39f240a7e5bd/project/OnKlav/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':android:shared:compileDebugKotlin'.
+> Error while evaluating property 'friendPathsSet$kotlin_gradle_plugin_common' of task ':android:shared:compileDebugKotlin'.
+   > A build operation failed.
+         Could not read workspace metadata from /workspace/scratch/39f240a7e5bd/restored-env/gradle/caches/8.11.1/transforms/9f09a114c8daa26a947466cb33e66cba/metadata.bin
+      > Could not read workspace metadata from /workspace/scratch/39f240a7e5bd/restored-env/gradle/caches/8.11.1/transforms/9f09a114c8daa26a947466cb33e66cba/metadata.bin
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.11.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 28s
+43 actionable tasks: 33 executed, 10 up-to-date

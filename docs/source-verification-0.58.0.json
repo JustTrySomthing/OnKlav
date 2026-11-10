@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-23",
+  "source_version": "0.58.0-dev",
+  "source_version_code": 66,
+  "scope": "Annotation interrupted gesture, stale edit completion and document viewport recovery",
+  "apk_built": true,
+  "tests": {
+    "passed": 177,
+    "failed": 0,
+    "unexpected_failures": 0,
+    "known_failures": [],
+    "rust_broad": {
+      "passed": 171,
+      "failed": 0,
+      "fresh_run": false,
+      "evidence": "docs/evidence/v0.57.0/rust-tests.log",
+      "note": "Reused 0.57.0 results; Rust and SDK sources and native proofs unchanged."
+    },
+    "fresh_framework_host": [
+      {
+        "class": "app.onklav.home.SdkDrawingTest",
+        "passed": 6,
+        "failed": 0,
+        "skipped": 0,
+        "evidence": "docs/evidence/v0.58.0/TEST-app.onklav.home.SdkDrawingTest.xml"
+      }
+    ]
+  },
+  "build_evidence": "docs/evidence/v0.58.0/build-debug.json",
+  "apk_evidence": "docs/apk-verification-debug.json",
+  "native_proof": "docs/native-provenance.json",
+  "sdk_proof": "docs/app-sdk-provenance.json",
+  "full_rewrite_complete": false,
+  "handset_acceptance": false,
+  "carrier_acceptance": false,
+  "next_work": "docs/FINISH-NON-GAME.md",
+  "note": "Six fresh focused canvas host checks pass. Prior 171 Rust checks reused with source-matched unchanged native/SDK artifacts. Android provider/process-death/handset/carrier acceptance remains open. No icon/layout or signing identity change. Initial assembly hit a transient disappearing generated .rsync-tmp file; one unchanged retry assembled in 24.7s and verification passed in 2.92s."
+}

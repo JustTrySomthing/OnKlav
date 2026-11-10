@@ -1,0 +1,53 @@
+{
+  "status": "signed provider metadata and review complete; sign-in and token services remain unfinished",
+  "rust_policy_tests_passed": 5,
+  "developer_preflight_tests_passed": 4,
+  "contract_tests_passed": 5,
+  "android_tests_passed": 8,
+  "android_cases": [
+    {
+      "class": "app.onklav.home.SdkHttpBridgeTest",
+      "name": "declaringHttpAccessDoesNotGrantIt",
+      "failed": false
+    },
+    {
+      "class": "app.onklav.home.SdkHttpBridgeTest",
+      "name": "signedOriginsReachJniAuthorizationAndHostPacketTamperingCannotWidenThem",
+      "failed": false
+    },
+    {
+      "class": "app.onklav.home.SdkAccountReviewTest",
+      "name": "providerReviewShowsScopesAndDoesNotOfferPrematureSignIn",
+      "failed": false
+    },
+    {
+      "class": "app.onklav.home.SdkHttpServiceTest",
+      "name": "oversizedResponsesAndAuthorizationChangesNeverReturnPayloads",
+      "failed": false
+    },
+    {
+      "class": "app.onklav.home.SdkHttpServiceTest",
+      "name": "perAppConcurrentRequestsAreBounded",
+      "failed": false
+    },
+    {
+      "class": "app.onklav.home.SdkHttpServiceTest",
+      "name": "requestPolicyRejectsOtherOriginsCredentialsAndUnsafeUrls",
+      "failed": false
+    },
+    {
+      "class": "app.onklav.home.SdkHttpServiceTest",
+      "name": "transportFailuresDoNotExposeRequestUrlsOrProviderMessages",
+      "failed": false
+    },
+    {
+      "class": "app.onklav.home.SdkHttpServiceTest",
+      "name": "boundedResponsesKeepHttpErrorsButStripCookiesAndCrossOriginRedirects",
+      "failed": false
+    }
+  ],
+  "host_and_arm64_rebuilt": true,
+  "apk_built": false,
+  "physical_device_tested": false,
+  "next": "System-browser PKCE and callback validation, protected account storage, refresh/sign-out, authenticated requests"
+}

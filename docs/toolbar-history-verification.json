@@ -1,0 +1,45 @@
+{
+  "version": "0.91.0-toolbar-history1",
+  "android_code": 99,
+  "sdk_host": 95,
+  "status": "APK assembled and verified",
+  "changes": [
+    "Files hides pencils for protected/system/uneditable/read-only entries",
+    "Android file rows use persisted write access and provider mutation flags; connected roots keep a settings control for disconnect",
+    "Files host overflow and visible Refresh removed, internal refresh retained as a registered action",
+    "Browser replaces host overflow with a History clock and paged saved visits",
+    "Clear History confirms, keeps bookmarks and cookies, and clears app-owned tab navigation snapshots",
+    "Read Aloud overflow remains removed from0.90"
+  ],
+  "validation": {
+    "controllers_passed": 134,
+    "android_unique_passed": 6,
+    "android_initial_passed": 6,
+    "android_final_files": {
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "lint": {
+      "Warning": 183
+    },
+    "signed_included_apps": 16,
+    "native": "Core/JNI unchanged and reused",
+    "phone_acceptance": "Not performed",
+    "apk": "ARM64 debug APK assembled; original signer, source-matched native/packages and16KiB alignment verified"
+  },
+  "history_limits": {
+    "maximum_unique_pages": 100,
+    "snapshot_bytes": 15000,
+    "page_size": 20,
+    "scope": "Browser app-private collection; new visits only"
+  },
+  "preserved": [
+    "Original signing/publisher identity",
+    "All prior0.90 and earlier work",
+    "Read Aloud gear/transport/clipboard controls",
+    "Files Home/Parent/retry/import and mutable file action menus",
+    "Browser bookmarks/settings/sign-ins"
+  ]
+}

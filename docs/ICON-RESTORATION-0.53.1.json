@@ -1,0 +1,20 @@
+{
+  "version": "0.53.1-dev",
+  "scope": "Icon restoration only; no layout, transport, splash, reaction motion, SDK guest or native changes.",
+  "reference": "Inner-Circle-Source.zip v235, read-only AttachmentIcon / ComposeIcon / ReadAloudButton / BrowserIcon artwork.",
+  "restored": [
+    "Attachment camera/image/video/audio/microphone/cloud geometry and 1.7dp outline",
+    "Original composer emoji smile arc and eyes",
+    "Original 1.4dp message speaker geometry",
+    "Browser Tabs artwork instead of generic More fallback"
+  ],
+  "validation": {
+    "xml_parse": "9 passed",
+    "tabs_mapping": "passed",
+    "apk": "See apk-verification-debug.json after assembly"
+  },
+  "limitations": [
+    "Phone visual acceptance remains untested.",
+    "Other incomplete migration work remains open."
+  ]
+}

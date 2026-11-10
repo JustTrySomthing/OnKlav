@@ -1,0 +1,51 @@
+{
+  "status": "passed",
+  "date": "2026-11-03",
+  "latest_delivered_apk": {
+    "version": "0.100.50-rc1",
+    "code": 159,
+    "predates_this_source": false
+  },
+  "new_apk_built": true,
+  "model_turn_checks": 247,
+  "shared_rules_checks": 12,
+  "hockey_checks": 80,
+  "phone_browser_viewports": [
+    [
+      320,
+      560
+    ],
+    [
+      432,
+      740
+    ]
+  ],
+  "friend_simulated_turns": 9,
+  "rendered_screens_reviewed": true,
+  "original_inner_circle_audio": {
+    "fire": {
+      "sha256": "6d65f7bc081d639a1821f0e0d310b71707ad3be6609fee4cef5548a889d2cd99",
+      "seconds": 0.3,
+      "sample_rate": 22050
+    },
+    "hit": {
+      "sha256": "adeef405c13ed6dd20a7a80bcfcbe57e4cd1fc7652a13fbc41a021eae53de773",
+      "seconds": 0.48,
+      "sample_rate": 22050
+    },
+    "miss": {
+      "sha256": "455e7ab8072698bd94df4de28b50c2fab96cafc51bf43c9313c0ed7ffefd34db",
+      "seconds": 0.4,
+      "sample_rate": 22050
+    },
+    "sink": {
+      "sha256": "753f1fa76e51c9d688a133aad0a2a95d81a9a0ff83d210261fe811bae8b4f69d",
+      "seconds": 1.15,
+      "sample_rate": 22050
+    }
+  },
+  "shared_engine_unchanged": true,
+  "carrier_and_physical_device_acceptance": false,
+  "evidence": "docs/evidence/naval-polish",
+  "apk_evidence": "docs/apk50-verification.json"
+}

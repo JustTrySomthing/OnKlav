@@ -1,0 +1,6 @@
+Publisher key created. Keep it private and backed up.
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/work/OnKlav/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/workspace/scratch/75acf774e3b8/work/OnKlav/developer/examples/text-reader)
+    Finished `release` profile [optimized] target(s) in 3.58s
+Created /tmp/onklav-verify-woitt_s8/check.onklav-a
+OnKlav SDK: Linked desktop runtime does not match current host sources. Rebuild the local host cache.

@@ -1,0 +1,13 @@
+# Write final toolbar refinement
+
+Supersedes the wrapping toolbar and in-flow font/paragraph/find controls in WRITE-POLISH.md; retains its save/discard/export, dictionary, rich document and security behavior.
+
+Two fixed tool rows: left-aligned bold, true serif italic I, underline, strike, text-color and highlighter with live color strips; second row Font, Paragraph, Image and Link at left, Spelling & grammar, Undo and Redo at right. Search is in the header immediately before Documents, Save and Settings. All icon controls have accessibility labels; color indicators expose their hex value. Narrow-screen button widths adapt and popover choices wrap for large text.
+
+Font has three practical style presets, three families, precise one-point size controls (8–96) and Clear formatting. Paragraph offers bullets/numbering/no list, alignment and indent/outdent. Links retain removal and safe URL validation. Standard color swatches apply immediately; custom hex remains available. No formatting options expand within the page. Compact scrollable bottom popovers dismiss on outside tap or Back and account for system navigation insets.
+
+Formatting popovers preserve the opening selection and hide the keyboard. Extra internal editor scroll space allows the final selected line to move above the controls without changing page bounds. Custom color and link dialogs restore the stored range when applying. Tap the page to resume typing. Search/replace is a separate bounded dialog instead of an expanding panel. Existing Undo/Redo, autosave/checkpoints, export formats, images, document browser, offline spelling/common grammar, permission revocation and native/storage identities remain.
+
+All eight unique focused checks passed: six retained rich document/export/image/proofreading/storage regressions, plus the full interactive editor workflow and a narrow 320dp/160% text toolbar check. The UI fixture verifies keyboard hiding, exact range retention, unchanged page bounds, selected color state, fonts, lists, Undo/Redo, document management, save/export, settings/review and revocation. Final selection passed in146.6 seconds; compiled runtime matches source. Seven captured layouts reviewed. Initial native-view lookup and generated-cache diagnostics retained; fixed test harness/cache without weakening checks. New APK verifier requires WriteToolsKt; verifier script syntax checked.
+
+No new APK requested or built; delivered0.100.22/code131 predates this source. Actual handset/IME/OEM keyboard animation and accessibility navigation remain separate acceptance; no production qualification claim. Preserve original signer and all previous platform/HDR/storage behavior.

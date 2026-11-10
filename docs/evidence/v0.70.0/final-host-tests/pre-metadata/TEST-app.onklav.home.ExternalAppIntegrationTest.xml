@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.ExternalAppIntegrationTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-24T18:45:35" hostname="57745e8cfbd5" time="9.838">
+  <properties/>
+  <testcase name="unknownReservedIdentityIsRejected" classname="app.onklav.home.ExternalAppIntegrationTest" time="5.844"/>
+  <testcase name="longFormsScrollAtLargeFontAndSaveThroughSharedController" classname="app.onklav.home.ExternalAppIntegrationTest" time="1.837"/>
+  <testcase name="hostChromeOverflowModalDrawerAndCloseRemainUsable" classname="app.onklav.home.ExternalAppIntegrationTest" time="2.157"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

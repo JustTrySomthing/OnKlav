@@ -1,0 +1,30 @@
+{
+  "plan": {
+    "sdk_apps": "reuse",
+    "mobile_rust": "reuse",
+    "neural_speech": "reuse",
+    "games": "reuse",
+    "android_tests": [
+      "app.onklav.home.WritePopupContrastTest"
+    ],
+    "variant": "debug",
+    "abis": [
+      "arm64-v8a"
+    ]
+  },
+  "phases": [
+    {
+      "phase": "assemble-debug",
+      "seconds": 244.39,
+      "returncode": 0,
+      "log": "docs/evidence/v0.100.32/assemble-debug.log"
+    },
+    {
+      "phase": "verify-debug",
+      "seconds": 4.18,
+      "returncode": 0,
+      "log": "docs/evidence/v0.100.32/verify-debug.log"
+    }
+  ],
+  "status": "passed"
+}

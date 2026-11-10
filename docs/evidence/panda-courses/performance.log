@@ -1,0 +1,3 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+PANDA_PERFORMANCE_RESULT {"failures":0,"results":[{"cpu_ms":30098.364,"solver_steps":5492,"span":1},{"cpu_ms":14811.868,"solver_steps":3132,"span":2}],"unattended_courses":12}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.FriendGamesTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-11-03T19:52:19" hostname="d514432facff" time="2.475">
+  <properties/>
+  <testcase name="retryExpiredAttemptCreatesFreshWindowAndCancelCannotEndAcceptedGame" classname="app.onklav.home.FriendGamesTest" time="2.05"/>
+  <testcase name="replayJournalPreservesBothDirectionsAndAcknowledgesDrainedFrames" classname="app.onklav.home.FriendGamesTest" time="0.094"/>
+  <testcase name="outOfOrderTurnsDrainContiguouslyAndWrongGameCannotSend" classname="app.onklav.home.FriendGamesTest" time="0.066"/>
+  <testcase name="wireRejectsMalformedOversizedAndRealtimePayloads" classname="app.onklav.home.FriendGamesTest" time="0.053"/>
+  <testcase name="originalReadableCheckInvitationAcceptanceTurnsAndAcknowledgement" classname="app.onklav.home.FriendGamesTest" time="0.071"/>
+  <testcase name="standaloneReverificationNeverCreatesAnInvitationAndHonorsClose" classname="app.onklav.home.FriendGamesTest" time="0.049"/>
+  <testcase name="cancelledInvitationDoesNotBlockSoloOrReviveOnLateAppReply" classname="app.onklav.home.FriendGamesTest" time="0.047"/>
+  <testcase name="incomingCancelDeclinesAndReleasesThePendingSlot" classname="app.onklav.home.FriendGamesTest" time="0.044"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

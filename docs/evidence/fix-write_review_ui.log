@@ -1,0 +1,263 @@
+Picked up JAVA_TOOL_OPTIONS: -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=35995 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=35995 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.11.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :android:app
+WARNING: The option setting 'android.aapt2FromMavenOverride=/workspace/scratch/c739b0c1372b/build-env/sdk/build-tools/35.0.0/aapt2' is experimental.
+Checking the license for package Android SDK Platform-Tools in /workspace/scratch/c739b0c1372b/build-env/sdk/licenses
+Warning: License for package Android SDK Platform-Tools not accepted.
+WARNING: platform-tools package is not installed. Please accept the installation licence to continue
+
+> Task :android:app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:app:preBuild UP-TO-DATE
+> Task :android:app:preDebugBuild UP-TO-DATE
+> Task :android:games:preBuild UP-TO-DATE
+> Task :android:games:preDebugBuild UP-TO-DATE
+> Task :android:games:writeDebugAarMetadata UP-TO-DATE
+> Task :android:shared:preBuild UP-TO-DATE
+> Task :android:shared:preDebugBuild UP-TO-DATE
+> Task :android:shared:writeDebugAarMetadata UP-TO-DATE
+> Task :android:tools:preBuild UP-TO-DATE
+> Task :android:tools:preDebugBuild UP-TO-DATE
+> Task :android:tools:writeDebugAarMetadata UP-TO-DATE
+> Task :android:app:checkDebugAarMetadata UP-TO-DATE
+> Task :android:app:generateDebugResValues UP-TO-DATE
+> Task :android:games:generateDebugResValues UP-TO-DATE
+> Task :android:games:generateDebugResources UP-TO-DATE
+> Task :android:games:packageDebugResources UP-TO-DATE
+> Task :android:shared:generateDebugResValues UP-TO-DATE
+> Task :android:shared:generateDebugResources UP-TO-DATE
+> Task :android:shared:packageDebugResources UP-TO-DATE
+> Task :android:tools:generateDebugResValues UP-TO-DATE
+> Task :android:tools:generateDebugResources UP-TO-DATE
+> Task :android:tools:packageDebugResources UP-TO-DATE
+> Task :android:app:mapDebugSourceSetPaths UP-TO-DATE
+> Task :android:app:generateDebugResources UP-TO-DATE
+> Task :android:app:mergeDebugResources UP-TO-DATE
+> Task :android:app:packageDebugResources UP-TO-DATE
+> Task :android:app:parseDebugLocalResources UP-TO-DATE
+> Task :android:app:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :android:app:extractDeepLinksDebug UP-TO-DATE
+> Task :android:games:extractDeepLinksDebug UP-TO-DATE
+> Task :android:games:processDebugManifest UP-TO-DATE
+> Task :android:shared:extractDeepLinksDebug UP-TO-DATE
+> Task :android:shared:processDebugManifest UP-TO-DATE
+> Task :android:tools:extractDeepLinksDebug UP-TO-DATE
+> Task :android:tools:processDebugManifest UP-TO-DATE
+> Task :android:app:processDebugMainManifest UP-TO-DATE
+> Task :android:app:processDebugManifest UP-TO-DATE
+> Task :android:app:processDebugManifestForPackage UP-TO-DATE
+> Task :android:games:compileDebugLibraryResources UP-TO-DATE
+> Task :android:games:parseDebugLocalResources UP-TO-DATE
+> Task :android:games:generateDebugRFile UP-TO-DATE
+> Task :android:shared:compileDebugLibraryResources UP-TO-DATE
+> Task :android:shared:parseDebugLocalResources UP-TO-DATE
+> Task :android:shared:generateDebugRFile UP-TO-DATE
+> Task :android:tools:compileDebugLibraryResources UP-TO-DATE
+> Task :android:tools:parseDebugLocalResources UP-TO-DATE
+> Task :android:tools:generateDebugRFile UP-TO-DATE
+> Task :android:app:processDebugResources UP-TO-DATE
+> Task :android:games:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:games:compileDebugKotlin UP-TO-DATE
+> Task :android:games:javaPreCompileDebug UP-TO-DATE
+> Task :android:games:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:games:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :android:shared:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:shared:compileDebugKotlin UP-TO-DATE
+> Task :android:shared:javaPreCompileDebug UP-TO-DATE
+> Task :android:shared:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:shared:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :android:tools:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:tools:compileDebugKotlin UP-TO-DATE
+> Task :android:tools:javaPreCompileDebug UP-TO-DATE
+> Task :android:tools:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:tools:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :android:app:javaPreCompileDebug UP-TO-DATE
+> Task :android:app:preDebugUnitTestBuild UP-TO-DATE
+> Task :android:app:javaPreCompileDebugUnitTest UP-TO-DATE
+> Task :android:app:mergeDebugShaders UP-TO-DATE
+> Task :android:app:compileDebugShaders NO-SOURCE
+> Task :android:app:generateDebugAssets UP-TO-DATE
+> Task :android:games:mergeDebugShaders UP-TO-DATE
+> Task :android:games:compileDebugShaders NO-SOURCE
+> Task :android:games:generateDebugAssets UP-TO-DATE
+> Task :android:games:mergeDebugAssets UP-TO-DATE
+> Task :android:shared:mergeDebugShaders UP-TO-DATE
+> Task :android:shared:compileDebugShaders NO-SOURCE
+> Task :android:shared:generateDebugAssets UP-TO-DATE
+> Task :android:shared:mergeDebugAssets UP-TO-DATE
+> Task :android:tools:mergeDebugShaders UP-TO-DATE
+> Task :android:tools:compileDebugShaders NO-SOURCE
+> Task :android:tools:generateDebugAssets UP-TO-DATE
+> Task :android:tools:mergeDebugAssets UP-TO-DATE
+> Task :android:app:mergeDebugAssets UP-TO-DATE
+> Task :android:app:packageDebugUnitTestForUnitTest UP-TO-DATE
+> Task :android:app:generateDebugUnitTestConfig UP-TO-DATE
+> Task :android:games:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :android:games:processDebugJavaRes UP-TO-DATE
+> Task :android:shared:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :android:shared:processDebugJavaRes UP-TO-DATE
+> Task :android:tools:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :android:tools:processDebugJavaRes UP-TO-DATE
+> Task :android:app:compileDebugKotlin
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/CameraScreen.kt:106:84 'val Icons.Outlined.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Outlined.ArrowBack.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/CameraScreen.kt:132:67 'val Icons.Outlined.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Outlined.ArrowBack.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/ClockEngine.kt:109:84 'fun vibrate(p0: VibrationEffect!, p1: AudioAttributes!): Unit' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/ClockScreen.kt:137:68 The corresponding parameter in the supertype 'ComponentActivity' is named 'savedInstanceState'. This may cause problems when calling this function with named arguments.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/EmailScreen.kt:67:191 'val Icons.Outlined.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Outlined.ArrowBack.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/FolderVaultCrypto.kt:35:32 'static fun parseKeyset(serializedKeyset: ByteArray!, access: SecretKeyAccess!): KeysetHandle!' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/FolderVaultCrypto.kt:39:33 'static fun serializeKeyset(keysetHandle: KeysetHandle!, access: SecretKeyAccess!): ByteArray!' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/FolderVaultCrypto.kt:39:62 'static fun generateNew(parameters: Parameters!): KeysetHandle!' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/MailCompose.kt:20:147 'val Icons.Outlined.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Outlined.ArrowBack.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/MailCompose.kt:20:516 'val Icons.Outlined.Send: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Outlined.Send.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/MainActivity.kt:52:55 'static field TRIM_MEMORY_RUNNING_LOW: Int' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessageAttachments.kt:71:9 'constructor(): MediaRecorder' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt:212:29 'fun get(p0: String!): Any?' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessengerPane.kt:141:21 'val LocalClipboardManager: ProvidableCompositionLocal<ClipboardManager>' is deprecated. Use LocalClipboard instead which supports suspend functions.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/NeuralSpeech.kt:72:41 'static field TRIM_MEMORY_RUNNING_LOW: Int' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/NeuralSpeech.kt:73:41 'static field TRIM_MEMORY_RUNNING_CRITICAL: Int' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/NeuralSpeech.kt:75:41 'static field TRIM_MEMORY_MODERATE: Int' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/NeuralSpeech.kt:76:41 'static field TRIM_MEMORY_COMPLETE: Int' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkAppScreen.kt:591:179 'val Icons.Outlined.ArrowForward: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Outlined.ArrowForward.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkMedia.kt:243:260 'constructor(p0: Int, p1: CharSequence!, p2: PendingIntent?): Notification.Action.Builder' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkPdfViewer.kt:83:319 'fun <T : Parcelable!> getParcelableArrayList(p0: String?): ArrayList<T!>?' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkPdfViewer.kt:88:190 'fun <T : Parcelable!> getParcelableArrayList(p0: String?): ArrayList<T!>?' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditEngine.kt:20:18 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditEngine.kt:33:83 'static fun createExperimentalSpeedChangingEffect(p0: SpeedProvider): Pair<AudioProcessor, Effect>' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditEngine.kt:61:120 'static fun createExperimentalSpeedChangingEffect(p0: SpeedProvider): Pair<AudioProcessor, Effect>' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:125:905 'constructor(p0: (Mutable)List<EditedMediaItem>): EditedMediaItemSequence.Builder' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:163:224 'constructor(): MediaRecorder' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoNoise.kt:14:18 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoOfflineAudio.kt:23:18 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/YoutubeDownloads.kt:71:1112 'constructor(vararg p0: EditedMediaItem): EditedMediaItemSequence.Builder' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/YoutubeDownloads.kt:71:1192 'constructor(vararg p0: EditedMediaItem): EditedMediaItemSequence.Builder' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/YoutubeResolver.kt:48:107 'field resolution: String!' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/YoutubeResolver.kt:48:223 'field resolution: String!' is deprecated. Deprecated in Java.
+
+> Task :android:app:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:app:bundleDebugClassesToRuntimeJar
+> Task :android:app:bundleDebugClassesToCompileJar
+> Task :android:app:processDebugJavaRes UP-TO-DATE
+> Task :android:app:compileDebugUnitTestKotlin
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/AudioEditorHostTest.kt:26:9 'fun createTempDir(prefix: String = ..., suffix: String? = ..., directory: File? = ...): File' is deprecated. Avoid creating temporary directories in the default temp location with this function due to too wide permissions on the newly created directory. Use kotlin.io.path.createTempDirectory instead.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/AudioEditorHostTest.kt:33:70 'fun createTempDir(prefix: String = ..., suffix: String? = ..., directory: File? = ...): File' is deprecated. Avoid creating temporary directories in the default temp location with this function due to too wide permissions on the newly created directory. Use kotlin.io.path.createTempDirectory instead.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/AudioEditorHostTest.kt:39:72 'fun createTempDir(prefix: String = ..., suffix: String? = ..., directory: File? = ...): File' is deprecated. Avoid creating temporary directories in the default temp location with this function due to too wide permissions on the newly created directory. Use kotlin.io.path.createTempDirectory instead.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/AudioEditorHostTest.kt:48:74 'fun createTempDir(prefix: String = ..., suffix: String? = ..., directory: File? = ...): File' is deprecated. Avoid creating temporary directories in the default temp location with this function due to too wide permissions on the newly created directory. Use kotlin.io.path.createTempDirectory instead.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/AudioEditorHostTest.kt:61:9 'fun createTempDir(prefix: String = ..., suffix: String? = ..., directory: File? = ...): File' is deprecated. Avoid creating temporary directories in the default temp location with this function due to too wide permissions on the newly created directory. Use kotlin.io.path.createTempDirectory instead.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/AudioHandoffTest.kt:38:154 Java type mismatch: inferred type is 'Any?', but 'Any' was expected.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/AudioHandoffTest.kt:61:185 Unchecked cast of 'Any!' to 'Function0<Unit>'.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/AudioPreviewTest.kt:26:69 'fun createTempDir(prefix: String = ..., suffix: String? = ..., directory: File? = ...): File' is deprecated. Avoid creating temporary directories in the default temp location with this function due to too wide permissions on the newly created directory. Use kotlin.io.path.createTempDirectory instead.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/AudioPreviewTest.kt:30:71 'fun createTempDir(prefix: String = ..., suffix: String? = ..., directory: File? = ...): File' is deprecated. Avoid creating temporary directories in the default temp location with this function due to too wide permissions on the newly created directory. Use kotlin.io.path.createTempDirectory instead.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/AudioPreviewTest.kt:34:83 'fun createTempDir(prefix: String = ..., suffix: String? = ..., directory: File? = ...): File' is deprecated. Avoid creating temporary directories in the default temp location with this function due to too wide permissions on the newly created directory. Use kotlin.io.path.createTempDirectory instead.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/AudioPreviewTest.kt:37:103 'fun createTempDir(prefix: String = ..., suffix: String? = ..., directory: File? = ...): File' is deprecated. Avoid creating temporary directories in the default temp location with this function due to too wide permissions on the newly created directory. Use kotlin.io.path.createTempDirectory instead.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/AudioPreviewTest.kt:42:119 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'File?'.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/AudioPreviewTest.kt:44:68 'fun createTempDir(prefix: String = ..., suffix: String? = ..., directory: File? = ...): File' is deprecated. Avoid creating temporary directories in the default temp location with this function due to too wide permissions on the newly created directory. Use kotlin.io.path.createTempDirectory instead.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/AuditFixesTest.kt:28:122 'field triggerAtTime: Long' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/AuditFixesTest.kt:30:112 'field triggerAtTime: Long' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/AuditFixesTest.kt:31:141 'field triggerAtTime: Long' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/AuditFixesTest.kt:37:146 'field triggerAtTime: Long' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/FilesBrokerHostTest.kt:30:144 Type argument for reified type parameter 'T' was inferred to the intersection of ['Comparable<*>' & 'Serializable']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/FilesBrokerHostTest.kt:30:288 Type argument for reified type parameter 'T' was inferred to the intersection of ['Comparable<*>' & 'Serializable']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/FilesBrokerHostTest.kt:31:181 Type argument for reified type parameter 'T' was inferred to the intersection of ['Comparable<*>' & 'Serializable']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/MessageControlsTest.kt:64:179 Type argument for reified type parameter 'T' was inferred to the intersection of ['Comparable<*>' & 'Serializable']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/MessageLoadingTest.kt:27:107 Type argument for reified type parameter 'T' was inferred to the intersection of ['Comparable<*>' & 'Serializable']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/MmsDownloadRecoveryTest.kt:86:35 'static fun getSmsManagerForSubscriptionId(p0: Int): SmsManager!' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/Mp3IntegrationTest.kt:28:30 Java type mismatch: inferred type is 'String?', but 'String' was expected.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/Mp3IntegrationTest.kt:31:14 'fun createTempDir(prefix: String = ..., suffix: String? = ..., directory: File? = ...): File' is deprecated. Avoid creating temporary directories in the default temp location with this function due to too wide permissions on the newly created directory. Use kotlin.io.path.createTempDirectory instead.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/Mp3IntegrationTest.kt:40:14 'fun createTempDir(prefix: String = ..., suffix: String? = ..., directory: File? = ...): File' is deprecated. Avoid creating temporary directories in the default temp location with this function due to too wide permissions on the newly created directory. Use kotlin.io.path.createTempDirectory instead.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/NeuralSpeechTest.kt:33:74 'static field TRIM_MEMORY_RUNNING_MODERATE: Int' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/OfflineHandoffTest.kt:33:157 'class NetworkInfo : Any, Parcelable' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/OfflineHandoffTest.kt:33:169 'enum class DetailedState : Enum<NetworkInfo.DetailedState!>' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/OfflineHandoffTest.kt:33:213 'static field TYPE_MOBILE: Int' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/OfflineHandoffTest.kt:33:232 'class NetworkInfo : Any, Parcelable' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/OfflineHandoffTest.kt:33:244 'enum class State : Enum<NetworkInfo.State!>' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/PagingAndReactionsTest.kt:52:126 Type argument for reified type parameter 'T' was inferred to the intersection of ['Comparable<*>?' & 'Serializable?']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/PhotoArtEffectsTest.kt:41:17 Java type mismatch: inferred type is 'String?', but 'String' was expected.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/PhotoArtEffectsTest.kt:50:17 Java type mismatch: inferred type is 'String?', but 'String' was expected.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/RadioVisualizerTest.kt:107:40 'fun onBackPressed(): Unit' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/SdkDrawingTest.kt:78:61 'static fun obtain(): AccessibilityNodeInfo!' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/SdkDrawingTest.kt:84:224 'fun recycle(): Unit' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/SdkEbooksTest.kt:36:165 The corresponding parameter in the supertype 'Call' is named 'responseCallback'. This may cause problems when calling this function with named arguments.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/SdkEbooksTest.kt:49:17 Java type mismatch: inferred type is 'String?', but 'String' was expected.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/SdkHandoffTest.kt:32:30 'fun addResolveInfoForIntent(p0: Intent!, p1: ResolveInfo!): Unit' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/SdkJobsTest.kt:58:220 'val networkType: Int' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/SdkNativeBridgeTest.kt:22:17 Java type mismatch: inferred type is 'String?', but 'String' was expected.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/SdkServiceTransport.kt:12:23 The corresponding parameter in the supertype 'Call' is named 'responseCallback'. This may cause problems when calling this function with named arguments.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/TransportRecoveryTest.kt:91:290 Type argument for reified type parameter 'T' was inferred to the intersection of ['Comparable<Nothing>' & 'Serializable']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/UiPolishHostTest.kt:80:43 Type argument for reified type parameter 'T' was inferred to the intersection of ['Comparable<*>' & 'Serializable']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/UiPolishHostTest.kt:134:24 Type argument for reified type parameter 'T' was inferred to the intersection of ['Comparable<*>' & 'Serializable']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/UiPolishHostTest.kt:134:56 Type argument for reified type parameter 'T' was inferred to the intersection of ['Comparable<*>' & 'Serializable']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/UiPolishHostTest.kt:134:88 Type argument for reified type parameter 'T' was inferred to the intersection of ['Comparable<*>' & 'Serializable']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/UiPolishHostTest.kt:136:24 Type argument for reified type parameter 'T' was inferred to the intersection of ['Comparable<*>?' & 'Serializable?']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/UiPolishHostTest.kt:136:58 Type argument for reified type parameter 'T' was inferred to the intersection of ['Comparable<*>?' & 'Serializable?']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/UiPolishHostTest.kt:136:96 Type argument for reified type parameter 'T' was inferred to the intersection of ['Comparable<*>?' & 'Serializable?']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/VideoEditorHostTest.kt:23:163 'fun flush(): Unit' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/VideoOfflineTest.kt:42:152 'fun flush(): Unit' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/VideoOfflineTest.kt:43:128 'fun flush(): Unit' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/VideoOfflineTest.kt:44:336 'fun flush(): Unit' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/VideoRcTest.kt:33:201 'fun flush(): Unit' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/VideoRcTest.kt:58:147 'fun flush(): Unit' is deprecated. Deprecated in Java.
+
+> Task :android:app:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :android:app:processDebugUnitTestJavaRes UP-TO-DATE
+
+> Task :android:app:testDebugUnitTest
+Picked up JAVA_TOOL_OPTIONS: -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=35995 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=35995 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+WriteReviewTest > closingTheModelPersistsItsFinalDebouncedDraft STARTED
+
+WriteReviewTest > closingTheModelPersistsItsFinalDebouncedDraft PASSED
+
+WriteReviewTest > damagedCurrentDocumentIsReportedAndCanBeRetriedWithoutSavingABlankReplacement STARTED
+
+WriteReviewTest > damagedCurrentDocumentIsReportedAndCanBeRetriedWithoutSavingABlankReplacement PASSED
+
+WriteReviewTest > docxIndentRoundTripsAndUnsupportedContentIsReported STARTED
+
+WriteReviewTest > docxIndentRoundTripsAndUnsupportedContentIsReported PASSED
+
+WriteReviewTest > invalidFormattingDoesNotStripSpansOrLeaveTheEditorGuarded STARTED
+
+WriteReviewTest > invalidFormattingDoesNotStripSpansOrLeaveTheEditorGuarded PASSED
+
+WriteReviewTest > formattingDismissesTheNativeMenuWithoutLosingRangeOrViewport STARTED
+
+WriteReviewTest > formattingDismissesTheNativeMenuWithoutLosingRangeOrViewport PASSED
+
+WriteReviewTest > typingAfterAFormatHasItsOwnUndoStep STARTED
+
+WriteReviewTest > typingAfterAFormatHasItsOwnUndoStep PASSED
+
+WriteReviewTest > backwardsSelectionFormatsTheEntireRangeAndParagraph STARTED
+
+WriteReviewTest > backwardsSelectionFormatsTheEntireRangeAndParagraph PASSED
+Picked up JAVA_TOOL_OPTIONS: -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=35995 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=35995 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+WriteUiTest > signedWriterFormatsManagesAndExportsWithoutLosingSelection STARTED
+
+WriteUiTest > signedWriterFormatsManagesAndExportsWithoutLosingSelection PASSED
+
+WriteUiTest > colorAndHighlightKeepSelectionKeyboardAndDocumentViewportStable STARTED
+
+WriteUiTest > colorAndHighlightKeepSelectionKeyboardAndDocumentViewportStable FAILED
+    androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 15000 ms
+        at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:504)
+        at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:339)
+        at app.onklav.home.WriteUiTest.waitFor(WriteUiTest.kt:60)
+        at app.onklav.home.WriteUiTest.colorAndHighlightKeepSelectionKeyboardAndDocumentViewportStable(WriteUiTest.kt:146)
+
+9 tests completed, 1 failed
+
+> Task :android:app:testDebugUnitTest FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':android:app:testDebugUnitTest'.
+> There were failing tests. See the report at: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/app/build/reports/tests/testDebugUnitTest/index.html
+
+* Try:
+> Run with --scan to get full insights.
+
+BUILD FAILED in 3m 12s
+74 actionable tasks: 5 executed, 69 up-to-date

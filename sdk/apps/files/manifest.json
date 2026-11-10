@@ -1,0 +1,13 @@
+{
+  "schema": "onklav.app.v1",
+  "runtime": "rust-wasm-ui.v1",
+  "id": "app.onklav.files",
+  "name": "Files",
+  "version": 47,
+  "capabilities": [
+    "files.manage",
+    "files.external",
+    "files.export"
+  ],
+  "min_host": 91
+}

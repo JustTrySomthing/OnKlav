@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.CloudSharingTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-11-02T17:08:10" hostname="13575fdd974e" time="5.57">
+  <properties/>
+  <testcase name="enrollmentOffersOnlyPcloudAndKoofrButPreservesLegacyEditing" classname="app.onklav.home.CloudSharingTest" time="4.322"/>
+  <testcase name="pcloudUsesRegionalApiAndPostBodyCredentialsWithDecodedFilePath" classname="app.onklav.home.CloudSharingTest" time="0.522"/>
+  <testcase name="cancellationDoesNotReturnALink" classname="app.onklav.home.CloudSharingTest" time="0.208"/>
+  <testcase name="koofrUsesPrimaryStorageAndPreservesLinkPassword" classname="app.onklav.home.CloudSharingTest" time="0.125"/>
+  <testcase name="rejectsCredentialBearingInsecureAndForeignSharingLinks" classname="app.onklav.home.CloudSharingTest" time="0.078"/>
+  <testcase name="foreignAccountFolderAndEscapedEntryNeverSendCredentials" classname="app.onklav.home.CloudSharingTest" time="0.093"/>
+  <testcase name="failedAndRedirectedCreationDoesNotRetryOrRevealResponse" classname="app.onklav.home.CloudSharingTest" time="0.121"/>
+  <testcase name="koofrRefusesAmbiguousMountAndMissingSharingPassword" classname="app.onklav.home.CloudSharingTest" time="0.093"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

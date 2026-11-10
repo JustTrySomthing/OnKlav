@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.MessageVideoPreviewsTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-24T14:02:50" hostname="41b9fb140d3c" time="4.41">
+  <properties/>
+  <testcase name="invalidImagesAreNotCachedAndCannotStopThePlayControl" classname="app.onklav.home.MessageVideoPreviewsTest" time="4.289"/>
+  <testcase name="linksAreCanonicalDeduplicatedBoundedAndKeepStartTimes" classname="app.onklav.home.MessageVideoPreviewsTest" time="0.067"/>
+  <testcase name="offMeansNoFetchOrCacheUseAndRevokeDropsStaleResults" classname="app.onklav.home.MessageVideoPreviewsTest" time="0.054"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

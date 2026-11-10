@@ -1,0 +1,16 @@
+{
+  "schema": "onklav.app.v1",
+  "runtime": "rust-wasm-ui.v1",
+  "id": "app.onklav.audiobooks",
+  "name": "AudioBooks",
+  "version": 35,
+  "min_host": 81,
+  "capabilities": [
+    "storage.private",
+    "audiobooks.library",
+    "audio.playback"
+  ],
+  "icon": {
+    "symbol": "audiobooks"
+  }
+}

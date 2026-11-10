@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.AudioAppRenameTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-28T11:32:43" hostname="1b65f1fab707" time="4.841">
+  <properties/>
+  <testcase name="signedAppNameAndFrameChangeWithoutChangingIdentityOrDefaultGrants" classname="app.onklav.home.AudioAppRenameTest" time="4.841"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

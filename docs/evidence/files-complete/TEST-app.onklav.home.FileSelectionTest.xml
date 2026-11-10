@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.FileSelectionTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-11-03T02:38:14" hostname="3bfb1ef11171" time="25.323">
+  <properties/>
+  <testcase name="revokedAccessKeepsUnfiledSaveAndFolderSelectionUsesTheSharedBrowser" classname="app.onklav.home.FileSelectionTest" time="7.053"/>
+  <testcase name="oldAndroidLocationsAndFolderSelectionsRemainUsableAndTrashCannotBeAttached" classname="app.onklav.home.FileSelectionTest" time="6.807"/>
+  <testcase name="actualSignedFilesControllerSelectsOneReadableFileWithoutCopyingOrExposingPaths" classname="app.onklav.home.FileSelectionTest" time="3.926"/>
+  <testcase name="defaultContractsLaunchOnlyOurNonExportedHostPickerAndPreserveResults" classname="app.onklav.home.FileSelectionTest" time="0.039"/>
+  <testcase name="directAndroidDownloadsUseTheSharedBrowserAndRespectRemovedAndroidAccess" classname="app.onklav.home.FileSelectionTest" time="3.581"/>
+  <testcase name="saveCommitUsesRustImportAndUpdatesRealListingSizeWhileKeepingNamesUnique" classname="app.onklav.home.FileSelectionTest" time="3.882"/>
+  <testcase name="filtersAndNamesRejectUnsupportedTypesWithoutHidingFolders" classname="app.onklav.home.FileSelectionTest" time="0.035"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

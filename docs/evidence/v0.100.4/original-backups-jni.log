@@ -1,0 +1,4 @@
+Original app backup with all saved reactions: validation PASS
+Original app backup: validation and metadata restore PASS
+Metadata counts: {"blocked":1,"groups":1,"messages":13,"threads":11}
+Original Notes backup: inspected and restored 2 notes with exact titles, text, IDs and timestamps PASS

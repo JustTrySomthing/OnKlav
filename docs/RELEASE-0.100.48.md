@@ -1,0 +1,7 @@
+# OnKlav0.100.48-rc1 / code157
+
+Air Hockey now offers a wide Start button with Single Player Only below. Naval Battle is rebuilt with touch fleet placement/rotation, solo computer, target confirmation, private-fleet SMS turns and saved-session recovery. Naval Battle, Cats vs Dogs and Blackjack offer Single Player and Play a Friend through the same catalog/Messages magic-wand app-check and invitation flow. The readable question asks whether the recipient has OnKlav. SDK0.5 supplies signed single/turn_sms mode declarations, the constrained native turn broker, shared controls and developer documentation.
+
+This APK packages the completed source from NAVAL-AND-FRIEND-GAMES.md. Optimized ARM64 assembly, release vital lint and APK signature/version/content/ZIP/16KB checks pass. Original package and signer are retained. Prior focused checks passed:222 Naval/friend model checks,80 hockey checks,12 shared rules,11 SDK tooling methods,7 native broker/session methods and13 package/web/window methods. Four SDK template configurations exported, signed and verified. Browser tests covered phone-sized touch/dock placement, solo play, pause/saved return and two isolated friend peers with simulated turn delivery. Physical Samsung/two-phone carrier/audio/performance acceptance remains separate.
+
+See apk48-verification.json, evidence/v0.100.48 and friend-games-0.5-verification.json. Earlier source-increment notes saying no157 APK are historical; this release now supplies it.

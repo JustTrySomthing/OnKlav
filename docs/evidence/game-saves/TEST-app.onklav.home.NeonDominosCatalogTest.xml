@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.NeonDominosCatalogTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-11-04T15:55:59" hostname="1bb679a568a0" time="7.183">
+  <properties/>
+  <testcase name="includedGameUsesSoloEntryArtworkAndTheSharedHost" classname="app.onklav.home.NeonDominosCatalogTest" time="7.064"/>
+  <testcase name="savedPandaDoesNotRedirectOrBlockDominos" classname="app.onklav.home.NeonDominosCatalogTest" time="0.119"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

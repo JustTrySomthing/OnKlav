@@ -1,0 +1,62 @@
+/* Canonical OnKlav Games entrance. Transform/opacity-only motion; true byte progress. */
+body { background: #603D77; }
+#status {
+  position:fixed; inset:0; z-index:10; overflow:hidden; visibility:visible;
+  color:#fff; background:#603D77;
+  background-image:radial-gradient(ellipse at 50% 44%,#80549455 0,transparent 62%);
+  font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
+  transition:opacity .22s ease; isolation:isolate;
+}
+#status::before { content:""; position:absolute; width:min(85vw,620px); height:38%; left:50%; top:42%; transform:translateX(-50%); background:radial-gradient(ellipse at 50% 0,#f1cbff10,transparent 66%); pointer-events:none; }
+#status-splash { display:none; }
+#onklav-brand { position:absolute; width:min(52vw,224px); left:50%; top:43%; transform:translate(-50%,-50%); text-align:center; perspective:800px; }
+.onklav-logo { width:min(44vw,188px); margin:auto; position:relative; filter:drop-shadow(0 16px 24px #29133645); animation:onklav-arrive 1.35s both,onklav-idle 3.2s ease-in-out 1.65s infinite; will-change:transform,opacity; }
+.onklav-logo svg { display:block; width:100%; height:auto; overflow:visible; }
+.onklav-horizon { position:absolute; width:180%; height:26%; left:-40%; top:73%; border-radius:50%; background:radial-gradient(ellipse,#f1d0ff40,transparent 68%); transform:scale(.15); opacity:0; animation:onklav-horizon 1.5s both; }
+.onklav-word { margin-top:26px; font-weight:500; font-size:clamp(26px,7vw,34px); line-height:1.3; white-space:nowrap; letter-spacing:.18em; padding-left:.18em; }
+.onklav-word span { display:inline-block; opacity:0; animation:onklav-letter .44s cubic-bezier(.2,.8,.25,1) both; animation-delay:calc(.92s + var(--letter)*.065s); }
+#onklav-loading { position:absolute; z-index:2; bottom:max(10%,32px); bottom:max(10%,calc(24px + env(safe-area-inset-bottom))); width:min(72vw,288px); left:50%; transform:translateX(-50%); }
+.onklav-loading-copy { display:flex; justify-content:space-between; align-items:baseline; gap:12px; margin-bottom:12px; color:#f7ebff; font-size:13px; font-weight:500; letter-spacing:.025em; line-height:1.5; font-variant-numeric:tabular-nums; }
+#onklav-loading-percent { color:#fff; font-weight:700; }
+.onklav-track { height:8px; background:#2e163f88; box-shadow:inset 0 0 0 1px #ffffff12; border-radius:20px; overflow:hidden; position:relative; }
+#onklav-fill { position:absolute; inset:0; transform:scaleX(0); transform-origin:left; border-radius:20px; background:linear-gradient(90deg,#e2c3ff,#fff); box-shadow:0 0 12px #edceff80; transition:transform .24s cubic-bezier(.2,.7,.2,1); }
+.onklav-comet { position:absolute; inset:0; background:linear-gradient(90deg,transparent,#ffffff90,transparent); transform:translateX(-100%); animation:onklav-comet 1.4s ease-in-out infinite; }
+#status[data-determinate="true"] .onklav-comet { animation-duration:2.3s; opacity:.3; }
+#status-progress { opacity:0; pointer-events:none; width:min(72vw,288px); height:8px; bottom:10%; margin:0 auto; }
+#status-notice { position:relative; max-height:65vh; overflow:auto; width:min(78vw,360px); box-sizing:border-box; margin:auto; padding:22px; border:1px solid #ffffff40; background:#321b46f5; color:#fff; border-radius:18px; line-height:1.5; font-family:inherit; z-index:2; }
+#status.loader-error #onklav-loading { display:none; }
+#status.loader-error #onklav-brand { opacity:.12; }
+#status.loader-error * { animation:none!important; }
+#status.loader-leaving { opacity:0; pointer-events:none; }
+#status.loader-hidden * { animation-play-state:paused!important; }
+#status.onklav-custom { background:$GODOT_SPLASH_COLOR; }
+#status.onklav-custom #onklav-brand { display:none; }
+#status.onklav-custom #status-splash { display:block; }
+#status.onklav-custom #status-splash.show-image--false { display:none; }
+@keyframes onklav-arrive {
+  0% { transform:translateY(76px) scale(.035); opacity:0; }
+  12% { opacity:.7; }
+  56% { transform:translateY(-4px) scale(1.15); opacity:1; }
+  76% { transform:translateY(2px) scale(.945); }
+  91% { transform:translateY(-1px) scale(1.018); }
+  100% { transform:translateY(0) scale(1); opacity:1; }
+}
+@keyframes onklav-idle { 0%,100% { transform:translateY(0) scale(1); } 50% { transform:translateY(-2px) scale(1.008); } }
+@keyframes onklav-letter { from { transform:translateY(16px) scale(.94); opacity:0; } to { transform:translateY(0) scale(1); opacity:1; } }
+@keyframes onklav-horizon { 0%,8% { opacity:0; transform:scale(.15); } 45% { opacity:.6; transform:scale(.8); } 100% { opacity:0; transform:scale(1.2); } }
+@keyframes onklav-comet { to { transform:translateX(100%); } }
+#status.loader-reduced .onklav-logo { animation:none; transform:none; opacity:1; will-change:auto; }
+#status.loader-reduced .onklav-word span { animation:none; opacity:1; transform:none; }
+#status.loader-reduced .onklav-horizon,#status.loader-reduced .onklav-comet { animation:none; opacity:0; }
+#status.loader-reduced,#status.loader-reduced #onklav-fill { transition:none; }
+@media (prefers-reduced-motion:reduce) {
+  .onklav-logo,.onklav-word span { animation:none; opacity:1; transform:none; }
+  .onklav-horizon,.onklav-comet { animation:none; opacity:0; }
+  #status,#onklav-fill { transition:none; }
+}
+@media (max-height:420px) {
+  #onklav-brand { top:40%; width:160px; }
+  .onklav-logo { width:min(23vh,104px); }
+  .onklav-word { margin-top:12px; font-size:24px; }
+  #onklav-loading { bottom:22px; }
+}

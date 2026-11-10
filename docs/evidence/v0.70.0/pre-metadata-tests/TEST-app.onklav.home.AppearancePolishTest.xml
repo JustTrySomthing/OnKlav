@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.AppearancePolishTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-24T18:45:15" hostname="57745e8cfbd5" time="11.09">
+  <properties/>
+  <testcase name="exportedFilesAndMessageFilesRejectLinkedTargets" classname="app.onklav.home.AppearancePolishTest" time="2.789"/>
+  <testcase name="nativePickersUseCurrentPaletteAndFontOnAndroid15" classname="app.onklav.home.AppearancePolishTest" time="5.61"/>
+  <testcase name="memoryPressureDropsBackgroundCacheWithoutRecyclingDisplayedImages" classname="app.onklav.home.AppearancePolishTest" time="2.477"/>
+  <testcase name="everyPaletteHasReadableControlsAndNoDefaultSecondaryAccent" classname="app.onklav.home.AppearancePolishTest" time="0.063"/>
+  <testcase name="annotationChecksHeaderDimensionsBeforeFullDecode" classname="app.onklav.home.AppearancePolishTest" time="0.097"/>
+  <testcase name="grayscaleNeutralSurfacesStayNeutral" classname="app.onklav.home.AppearancePolishTest" time="0.053"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

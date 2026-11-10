@@ -1,0 +1,18 @@
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/work/OnKlav/developer/components)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.69s
+     Running unittests src/lib.rs (developer/components/target/debug/deps/onklav_ui-b9729a29e05b7074)
+
+running 10 tests
+test email::tests::email_transport_uses_opaque_account_and_only_header_methods ... ok
+test email_compose::receipt_tests::qualification_mail_ack_rejects_malformed_duplicate_or_wrong_account ... ok
+test email::tests::email_bad_account_missing_and_duplicate_results_fail ... ok
+test email::tests::email_headers_are_correlated_and_strip_body_fields ... ok
+test email::tests::email_pagination_rejects_binding_state_and_gap_without_mutating_snapshot ... ok
+test email_content::tests::email_content_never_renders_html_and_rejects_truncated_text ... ok
+test email_compose::tests::email_compose_rejects_header_injection_and_changed_review ... ok
+test email_content::tests::email_content_rejects_attachment_paths_and_size ... ok
+test email_compose::tests::email_compose_unknown_outcome_and_reopen_never_retry ... ok
+test email_compose::tests::email_compose_requires_review_and_durable_lock_before_network ... ok
+
+test result: ok. 10 passed; 0 failed; 0 ignored; 0 measured; 81 filtered out; finished in 0.00s
+

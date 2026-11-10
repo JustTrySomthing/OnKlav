@@ -1,0 +1,22 @@
+[
+  {
+    "viewport": [
+      320,
+      640
+    ],
+    "failed_save_retains_previous": true,
+    "resume_blocked_until_saved": true,
+    "successful_retry_resumes_scene_and_rink": true,
+    "sound_done_after_retry_resumes": true
+  },
+  {
+    "viewport": [
+      432,
+      800
+    ],
+    "failed_save_retains_previous": true,
+    "resume_blocked_until_saved": true,
+    "successful_retry_resumes_scene_and_rink": true,
+    "sound_done_after_retry_resumes": true
+  }
+]

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.GroupProtocolHostTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-23T03:57:19" hostname="5347b9ab5bea" time="0.095">
+  <properties/>
+  <testcase name="activityPickerOffersOneOtherPeerForCanonicalDuplicatesAndExcludesSelf" classname="app.onklav.home.GroupProtocolHostTest" time="0.024"/>
+  <testcase name="productionJniProjectsPostAndReaction" classname="app.onklav.home.GroupProtocolHostTest" time="0.041"/>
+  <testcase name="initialsMatchReference" classname="app.onklav.home.GroupProtocolHostTest" time="0.03"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

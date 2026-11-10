@@ -1,0 +1,4 @@
+PASS visible skip, disabled control, ad seek, playback restoration, cleanup
+PASS explicit autoplay, no restart after pause, wrong-video/expired intent, landscape/portrait viewport restoration
+PASS current video owner, stale player rejection, scoped owner link, channel page
+PASS download metadata, muxed audio, portrait quality labels, no undeciphered URL use, stale response rejection

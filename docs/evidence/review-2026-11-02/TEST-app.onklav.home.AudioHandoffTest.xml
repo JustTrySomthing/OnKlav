@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.AudioHandoffTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-11-02T16:07:47" hostname="13575fdd974e" time="67.365">
+  <properties/>
+  <testcase name="lateInterruptionCannotPauseReplacementAndHandoffInterruptsBeforeFocusIsRequested" classname="app.onklav.home.AudioHandoffTest" time="12.746"/>
+  <testcase name="earlyOrOutOfRangeSystemSeekDoesNotTurnAPodcastIntoAPlaybackFailure" classname="app.onklav.home.AudioHandoffTest" time="4.382"/>
+  <testcase name="radioPodcastAndOtherAudioReleaseOldPlayersAndKeepTheNewOwnerPlaying" classname="app.onklav.home.AudioHandoffTest" time="29.965"/>
+  <testcase name="staleServiceStartsAndDuplicateDeliveryCannotStopOrReprepareTheNewSession" classname="app.onklav.home.AudioHandoffTest" time="11.054"/>
+  <testcase name="previousOwnerCleanupDoesNotHoldTheOwnershipMonitorOrBlockNewAudioOnFailure" classname="app.onklav.home.AudioHandoffTest" time="9.215"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

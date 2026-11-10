@@ -1,0 +1,3 @@
+/home/runner/work/sherpa-onnx/sherpa-onnx/sherpa-onnx/csrc/offline-tts-kokoro-model-config.cc:Validate:97 WARNING: --kokoro-lang is deprecated and ignored in sherpa-onnx >= v2.0.0. espeak-ng is no longer used. Language is determined by the lexicon files you provide.
+Model ready in 867 ms; 11 speakers; 24000 Hz
+PASS: local HTTP custom synthesis, valid PCM, invalid voice/rate/size, cross-origin denial

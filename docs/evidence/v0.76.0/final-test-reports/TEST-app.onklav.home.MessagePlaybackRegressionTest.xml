@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.MessagePlaybackRegressionTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-26T14:59:35" hostname="844ebfe47829" time="4.771">
+  <properties/>
+  <testcase name="audioPreparesPlaysAndResumesWithoutInvalidPause" classname="app.onklav.home.MessagePlaybackRegressionTest" time="4.408"/>
+  <testcase name="videoPreparesPlaysAndResumesWithoutInvalidPause" classname="app.onklav.home.MessagePlaybackRegressionTest" time="0.363"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

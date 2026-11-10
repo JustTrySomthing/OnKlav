@@ -1,0 +1,269 @@
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=42119 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=42119 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.11.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :android:app
+WARNING: The option setting 'android.aapt2FromMavenOverride=/workspace/scratch/ed752e8a1957/build-env/sdk/build-tools/35.0.0/aapt2' is experimental.
+WARNING: platform-tools package is not installed.
+
+> Task :android:app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:app:preBuild UP-TO-DATE
+> Task :android:app:preDebugBuild UP-TO-DATE
+> Task :android:games:preBuild UP-TO-DATE
+> Task :android:games:preDebugBuild UP-TO-DATE
+> Task :android:games:writeDebugAarMetadata UP-TO-DATE
+> Task :android:shared:preBuild UP-TO-DATE
+> Task :android:shared:preDebugBuild UP-TO-DATE
+> Task :android:shared:writeDebugAarMetadata UP-TO-DATE
+> Task :android:tools:preBuild UP-TO-DATE
+> Task :android:tools:preDebugBuild UP-TO-DATE
+> Task :android:tools:writeDebugAarMetadata UP-TO-DATE
+> Task :android:app:checkDebugAarMetadata UP-TO-DATE
+> Task :android:app:generateDebugResValues UP-TO-DATE
+> Task :android:games:generateDebugResValues UP-TO-DATE
+> Task :android:games:generateDebugResources UP-TO-DATE
+> Task :android:games:packageDebugResources UP-TO-DATE
+> Task :android:shared:generateDebugResValues UP-TO-DATE
+> Task :android:shared:generateDebugResources UP-TO-DATE
+> Task :android:shared:packageDebugResources UP-TO-DATE
+> Task :android:tools:generateDebugResValues UP-TO-DATE
+> Task :android:tools:generateDebugResources UP-TO-DATE
+> Task :android:tools:packageDebugResources UP-TO-DATE
+> Task :android:app:mapDebugSourceSetPaths
+> Task :android:app:generateDebugResources
+> Task :android:app:packageDebugResources
+> Task :android:app:mergeDebugResources
+> Task :android:app:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :android:app:extractDeepLinksDebug UP-TO-DATE
+> Task :android:games:extractDeepLinksDebug UP-TO-DATE
+> Task :android:app:parseDebugLocalResources
+> Task :android:games:processDebugManifest UP-TO-DATE
+> Task :android:shared:extractDeepLinksDebug UP-TO-DATE
+> Task :android:shared:processDebugManifest UP-TO-DATE
+> Task :android:tools:extractDeepLinksDebug UP-TO-DATE
+> Task :android:tools:processDebugManifest UP-TO-DATE
+> Task :android:app:processDebugMainManifest
+> Task :android:app:processDebugManifest
+> Task :android:games:compileDebugLibraryResources UP-TO-DATE
+> Task :android:games:parseDebugLocalResources UP-TO-DATE
+> Task :android:games:generateDebugRFile UP-TO-DATE
+> Task :android:app:processDebugManifestForPackage
+> Task :android:shared:compileDebugLibraryResources UP-TO-DATE
+> Task :android:shared:parseDebugLocalResources UP-TO-DATE
+> Task :android:shared:generateDebugRFile UP-TO-DATE
+> Task :android:tools:compileDebugLibraryResources UP-TO-DATE
+> Task :android:tools:parseDebugLocalResources UP-TO-DATE
+> Task :android:tools:generateDebugRFile UP-TO-DATE
+> Task :android:games:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:games:compileDebugKotlin UP-TO-DATE
+> Task :android:games:javaPreCompileDebug UP-TO-DATE
+> Task :android:games:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:games:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :android:shared:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:shared:compileDebugKotlin UP-TO-DATE
+> Task :android:shared:javaPreCompileDebug UP-TO-DATE
+> Task :android:shared:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:shared:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :android:tools:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:app:processDebugResources
+> Task :android:tools:javaPreCompileDebug UP-TO-DATE
+> Task :android:app:javaPreCompileDebug UP-TO-DATE
+> Task :android:app:preDebugUnitTestBuild UP-TO-DATE
+> Task :android:app:javaPreCompileDebugUnitTest UP-TO-DATE
+> Task :android:app:mergeDebugShaders UP-TO-DATE
+> Task :android:app:compileDebugShaders NO-SOURCE
+> Task :android:app:generateDebugAssets UP-TO-DATE
+> Task :android:games:mergeDebugShaders UP-TO-DATE
+> Task :android:games:compileDebugShaders NO-SOURCE
+> Task :android:games:generateDebugAssets UP-TO-DATE
+> Task :android:games:mergeDebugAssets UP-TO-DATE
+> Task :android:shared:mergeDebugShaders UP-TO-DATE
+> Task :android:shared:compileDebugShaders NO-SOURCE
+> Task :android:shared:generateDebugAssets UP-TO-DATE
+> Task :android:shared:mergeDebugAssets UP-TO-DATE
+> Task :android:tools:mergeDebugShaders UP-TO-DATE
+> Task :android:tools:compileDebugShaders NO-SOURCE
+> Task :android:tools:generateDebugAssets UP-TO-DATE
+> Task :android:tools:mergeDebugAssets UP-TO-DATE
+> Task :android:app:mergeDebugAssets UP-TO-DATE
+> Task :android:app:packageDebugUnitTestForUnitTest
+> Task :android:app:generateDebugUnitTestConfig
+> Task :android:games:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :android:games:processDebugJavaRes UP-TO-DATE
+> Task :android:shared:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :android:shared:processDebugJavaRes UP-TO-DATE
+> Task :android:shared:preDebugUnitTestBuild UP-TO-DATE
+> Task :android:shared:generateDebugUnitTestStubRFile UP-TO-DATE
+> Task :android:shared:compileDebugUnitTestKotlin UP-TO-DATE
+> Task :android:shared:javaPreCompileDebugUnitTest UP-TO-DATE
+> Task :android:shared:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :android:shared:processDebugUnitTestJavaRes UP-TO-DATE
+> Task :android:shared:testDebugUnitTest UP-TO-DATE
+> Task :android:tools:compileDebugKotlin
+> Task :android:tools:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:tools:bundleLibRuntimeToJarDebug
+> Task :android:tools:bundleLibCompileToJarDebug
+> Task :android:tools:processDebugJavaRes
+> Task :android:app:compileDebugKotlin
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/MainActivity.kt:48:55 'static field TRIM_MEMORY_RUNNING_LOW: Int' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessageAttachments.kt:69:9 'constructor(): MediaRecorder' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt:196:29 'fun get(p0: String!): Any?' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt:354:17 Condition is always 'false'.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt:399:17 Condition is always 'true'.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessengerPane.kt:136:21 'val LocalClipboardManager: ProvidableCompositionLocal<ClipboardManager>' is deprecated. Use LocalClipboard instead which supports suspend functions.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkWebComponent.kt:196:29 Wrapping the left-hand side of assignments in parentheses, labels or annotations is not allowed. This will become an error in Kotlin 2.2.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkWebComponent.kt:197:29 Wrapping the left-hand side of assignments in parentheses, labels or annotations is not allowed. This will become an error in Kotlin 2.2.
+
+> Task :android:app:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:app:bundleDebugClassesToCompileJar
+> Task :android:app:bundleDebugClassesToRuntimeJar
+> Task :android:app:processDebugJavaRes UP-TO-DATE
+> Task :android:app:compileDebugUnitTestKotlin
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/FilesBrokerHostTest.kt:30:144 Type argument for reified type parameter 'T' was inferred to the intersection of ['Comparable<*>' & 'Serializable']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/FilesBrokerHostTest.kt:30:288 Type argument for reified type parameter 'T' was inferred to the intersection of ['Comparable<*>' & 'Serializable']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/FilesBrokerHostTest.kt:31:181 Type argument for reified type parameter 'T' was inferred to the intersection of ['Comparable<*>' & 'Serializable']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/MessageControlsTest.kt:64:179 Type argument for reified type parameter 'T' was inferred to the intersection of ['Comparable<*>' & 'Serializable']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/MessageLoadingTest.kt:27:107 Type argument for reified type parameter 'T' was inferred to the intersection of ['Comparable<*>' & 'Serializable']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/PagingAndReactionsTest.kt:52:126 Type argument for reified type parameter 'T' was inferred to the intersection of ['Comparable<*>?' & 'Serializable?']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/UiPolishHostTest.kt:80:43 Type argument for reified type parameter 'T' was inferred to the intersection of ['Comparable<*>' & 'Serializable']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/UiPolishHostTest.kt:113:24 Type argument for reified type parameter 'T' was inferred to the intersection of ['Comparable<*>' & 'Serializable']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/UiPolishHostTest.kt:113:56 Type argument for reified type parameter 'T' was inferred to the intersection of ['Comparable<*>' & 'Serializable']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/UiPolishHostTest.kt:113:88 Type argument for reified type parameter 'T' was inferred to the intersection of ['Comparable<*>' & 'Serializable']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/UiPolishHostTest.kt:115:24 Type argument for reified type parameter 'T' was inferred to the intersection of ['Comparable<*>?' & 'Serializable?']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/UiPolishHostTest.kt:115:58 Type argument for reified type parameter 'T' was inferred to the intersection of ['Comparable<*>?' & 'Serializable?']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/UiPolishHostTest.kt:115:96 Type argument for reified type parameter 'T' was inferred to the intersection of ['Comparable<*>?' & 'Serializable?']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+
+> Task :android:app:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :android:app:processDebugUnitTestJavaRes UP-TO-DATE
+
+> Task :android:app:testDebugUnitTest
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=42119 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=42119 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+AnnotationSdkHostTest > annotationPackageLibraryToolsRenameAndTextController STARTED
+
+AnnotationSdkHostTest > annotationPackageLibraryToolsRenameAndTextController FAILED
+    android.view.ViewRootImpl$CalledFromWrongThreadException: Only the original thread that created a view hierarchy can touch its views.
+        at android.view.ViewRootImpl.checkThread(ViewRootImpl.java:8191)
+        at android.view.ViewRootImpl.clearChildFocus(ViewRootImpl.java:4098)
+        at android.view.ViewGroup.clearChildFocus(ViewGroup.java:1152)
+        at android.view.ViewGroup.clearChildFocus(ViewGroup.java:1152)
+        at android.view.ViewGroup.clearChildFocus(ViewGroup.java:1152)
+        at android.view.ViewGroup.clearChildFocus(ViewGroup.java:1152)
+        at android.view.View.clearFocusInternal(View.java:7642)
+        at android.view.View.clearFocus(View.java:7624)
+        at android.view.ViewGroup.clearFocus(ViewGroup.java:1162)
+        at androidx.compose.ui.platform.AndroidComposeView.onClearFocusForOwner(AndroidComposeView.android.kt:1135)
+        at androidx.compose.ui.platform.AndroidComposeView.access$onClearFocusForOwner(AndroidComposeView.android.kt:234)
+        at androidx.compose.ui.platform.AndroidComposeView$focusOwner$4.invoke(AndroidComposeView.android.kt:288)
+        at androidx.compose.ui.platform.AndroidComposeView$focusOwner$4.invoke(AndroidComposeView.android.kt:288)
+        at androidx.compose.ui.focus.FocusOwnerImpl.invalidateOwnerFocusState(FocusOwnerImpl.kt:430)
+        at androidx.compose.ui.focus.FocusOwnerImpl.access$invalidateOwnerFocusState(FocusOwnerImpl.kt:67)
+        at androidx.compose.ui.focus.FocusOwnerImpl$focusInvalidationManager$1.invoke(FocusOwnerImpl.kt:83)
+        at androidx.compose.ui.focus.FocusOwnerImpl$focusInvalidationManager$1.invoke(FocusOwnerImpl.kt:83)
+        at androidx.compose.ui.focus.FocusInvalidationManager.invalidateNodesOptimized(FocusInvalidationManager.kt:164)
+        at androidx.compose.ui.focus.FocusInvalidationManager.invalidateNodes(FocusInvalidationManager.kt:114)
+        at androidx.compose.ui.focus.FocusInvalidationManager.access$invalidateNodes(FocusInvalidationManager.kt:36)
+        at androidx.compose.ui.focus.FocusInvalidationManager$setUpOnRequestApplyChangesListener$1.invoke(FocusInvalidationManager.kt:93)
+        at androidx.compose.ui.focus.FocusInvalidationManager$setUpOnRequestApplyChangesListener$1.invoke(FocusInvalidationManager.kt:93)
+        at androidx.compose.ui.platform.AndroidComposeView.onEndApplyChanges(AndroidComposeView.android.kt:1282)
+        at androidx.compose.ui.node.UiApplier.onEndChanges(UiApplier.android.kt:46)
+        at androidx.compose.runtime.CompositionImpl.applyChangesInLocked(Composition.kt:1038)
+        at androidx.compose.runtime.CompositionImpl.applyChanges(Composition.kt:1067)
+        at androidx.compose.runtime.Recomposer$runRecomposeAndApplyChanges$2$1.invoke(Recomposer.kt:684)
+        at androidx.compose.runtime.Recomposer$runRecomposeAndApplyChanges$2$1.invoke(Recomposer.kt:591)
+        at androidx.compose.ui.test.TestMonotonicFrameClock$withFrameNanos$2$1$1.invoke(TestMonotonicFrameClock.jvm.kt:108)
+        at androidx.compose.ui.test.TestMonotonicFrameClock$withFrameNanos$2$1$1.invoke(TestMonotonicFrameClock.jvm.kt:108)
+        at androidx.compose.ui.test.TestMonotonicFrameClock$performFrame$1.invoke(TestMonotonicFrameClock.jvm.kt:153)
+        at androidx.compose.ui.test.TestMonotonicFrameClock$performFrame$1.invoke(TestMonotonicFrameClock.jvm.kt:135)
+        at androidx.compose.ui.test.FrameDeferringContinuationInterceptor.runWithoutResumingCoroutines(FrameDeferringContinuationInterceptor.jvm.kt:59)
+        at androidx.compose.ui.test.TestMonotonicFrameClock.performFrame(TestMonotonicFrameClock.jvm.kt:135)
+        at androidx.compose.ui.test.TestMonotonicFrameClock.access$performFrame(TestMonotonicFrameClock.jvm.kt:55)
+        at androidx.compose.ui.test.TestMonotonicFrameClock$withFrameNanos$2$1$2.invokeSuspend(TestMonotonicFrameClock.jvm.kt:113)
+        at app//kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+        at kotlinx.coroutines.internal.DispatchedContinuationKt.resumeCancellableWith(DispatchedContinuation.kt:375)
+        at kotlinx.coroutines.intrinsics.CancellableKt.startCoroutineCancellable(Cancellable.kt:26)
+        at kotlinx.coroutines.CoroutineStart.invoke(CoroutineStart.kt:358)
+        at kotlinx.coroutines.AbstractCoroutine.start(AbstractCoroutine.kt:134)
+        at kotlinx.coroutines.BuildersKt__Builders_commonKt.launch(Builders.common.kt:53)
+        at kotlinx.coroutines.BuildersKt.launch(Unknown Source)
+        at kotlinx.coroutines.BuildersKt__Builders_commonKt.launch$default(Builders.common.kt:44)
+        at kotlinx.coroutines.BuildersKt.launch$default(Unknown Source)
+        at androidx.compose.ui.test.TestMonotonicFrameClock.withFrameNanos(TestMonotonicFrameClock.jvm.kt:111)
+        at androidx.compose.runtime.Recomposer$runRecomposeAndApplyChanges$2.invokeSuspend(Recomposer.kt:591)
+        at app//kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+        at androidx.compose.ui.test.ApplyingContinuationInterceptor$SendApplyContinuation.resumeWith(ApplyingContinuationInterceptor.kt:52)
+        at androidx.compose.ui.test.FrameDeferringContinuationInterceptor$FrameDeferredContinuation.resumeWith(FrameDeferringContinuationInterceptor.jvm.kt:187)
+        at kotlinx.coroutines.DispatchedTaskKt.resume(DispatchedTask.kt:163)
+        at kotlinx.coroutines.DispatchedTaskKt.dispatch(DispatchedTask.kt:152)
+        at kotlinx.coroutines.CancellableContinuationImpl.dispatchResume(CancellableContinuationImpl.kt:470)
+        at kotlinx.coroutines.CancellableContinuationImpl.resumeImpl$kotlinx_coroutines_core(CancellableContinuationImpl.kt:504)
+        at kotlinx.coroutines.CancellableContinuationImpl.resumeImpl$kotlinx_coroutines_core$default(CancellableContinuationImpl.kt:493)
+        at kotlinx.coroutines.CancellableContinuationImpl.resumeWith(CancellableContinuationImpl.kt:359)
+        at androidx.compose.runtime.Recomposer$recompositionRunner$2$unregisterApplyObserver$1.invoke(Recomposer.kt:1062)
+        at androidx.compose.runtime.Recomposer$recompositionRunner$2$unregisterApplyObserver$1.invoke(Recomposer.kt:1044)
+        at androidx.compose.runtime.snapshots.SnapshotKt.advanceGlobalSnapshot(Snapshot.kt:1982)
+        at androidx.compose.runtime.snapshots.SnapshotKt.advanceGlobalSnapshot(Snapshot.kt:1996)
+        at androidx.compose.runtime.snapshots.SnapshotKt.access$advanceGlobalSnapshot(Snapshot.kt:1)
+        at androidx.compose.runtime.snapshots.Snapshot$Companion.sendApplyNotifications(Snapshot.kt:679)
+        at androidx.compose.ui.test.ApplyingContinuationInterceptor$SendApplyContinuation.resumeWith(ApplyingContinuationInterceptor.kt:53)
+        at androidx.compose.ui.test.FrameDeferringContinuationInterceptor$FrameDeferredContinuation.resumeWith(FrameDeferringContinuationInterceptor.jvm.kt:187)
+        at kotlinx.coroutines.internal.DispatchedContinuationKt.resumeCancellableWith(DispatchedContinuation.kt:279)
+        at kotlinx.coroutines.DispatchedCoroutine.afterResume(Builders.common.kt:256)
+        at kotlinx.coroutines.AbstractCoroutine.resumeWith(AbstractCoroutine.kt:101)
+        at app//kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:46)
+        at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+        at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:124)
+        at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:89)
+        at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+        at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:820)
+        at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+        at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=42119 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=42119 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+SdkAppsHostTest > sdkNotesSaveReopenClipboardRemoveReinstallAndDeveloperApp STARTED
+
+SdkAppsHostTest > sdkNotesSaveReopenClipboardRemoveReinstallAndDeveloperApp PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=42119 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=42119 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+SdkDrawingTest > exportRendersImageCoordinatesAndTextBounds STARTED
+
+SdkDrawingTest > exportRendersImageCoordinatesAndTextBounds PASSED
+
+SdkDrawingTest > importsAreBoundedAndPreserveOrientedDimensions STARTED
+
+--- Failed to create image decoder with message 'unimplemented'
+
+> Task :android:app:testDebugUnitTest FAILED
+
+SdkDrawingTest > importsAreBoundedAndPreserveOrientedDimensions PASSED
+
+SdkDrawingTest > drawingGestureUsesImageSpaceAndCancellationDoesNotCommit STARTED
+
+SdkDrawingTest > drawingGestureUsesImageSpaceAndCancellationDoesNotCommit PASSED
+
+SdkDrawingTest > switchingDocumentsRestoresTheNewViewportAndDiscardsTheOldGesture STARTED
+
+SdkDrawingTest > switchingDocumentsRestoresTheNewViewportAndDiscardsTheOldGesture PASSED
+
+SdkDrawingTest > interruptedGesturesRequireANewDownAndOldCompletionsCannotCancelNewStrokes STARTED
+
+SdkDrawingTest > interruptedGesturesRequireANewDownAndOldCompletionsCannotCancelNewStrokes PASSED
+
+SdkDrawingTest > viewportSurvivesResizeAndARecreatedCanvasWithoutSavingAnUnfinishedGesture STARTED
+
+SdkDrawingTest > viewportSurvivesResizeAndARecreatedCanvasWithoutSavingAnUnfinishedGesture PASSED
+
+8 tests completed, 1 failed
+w: Detected multiple Kotlin daemon sessions at 
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':android:app:testDebugUnitTest'.
+> There were failing tests. See the report at: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/build/reports/tests/testDebugUnitTest/index.html
+
+* Try:
+> Run with --scan to get full insights.
+
+BUILD FAILED in 3m 13s
+79 actionable tasks: 20 executed, 59 up-to-date

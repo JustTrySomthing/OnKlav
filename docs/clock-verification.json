@@ -1,0 +1,29 @@
+{
+  "status": "Chunk14 source complete; no physical-device acceptance claimed",
+  "chunk": 14,
+  "android_host_checks_passed": 3,
+  "android_cases": [
+    "permissionFreeSignedGuestReadsClockAndRemovalInvalidatesPendingRequest",
+    "snapshotKeepsDstAndLocalDateBoundariesConsistent",
+    "snapshotFollowsLocaleWeekStartAndUserHourCycle"
+  ],
+  "rust_contract_checks_passed": 1,
+  "developer_contract_checks_passed": 5,
+  "native_proof": "docs/evidence/v0.70.0/clock-native-proof.json",
+  "android_log": "docs/evidence/v0.70.0/clock-android-final.log",
+  "initial_failure": "Test helper wrongly cast app-removal Boolean to JSONObject; corrected helper. Production clock code unchanged after initial run.",
+  "initial_log": "docs/evidence/v0.70.0/clock-initial-check.log",
+  "source_sha256": {
+    "core/src/sdk.rs": "0e878891c1e66a0cc89a32e9b6e1064a63b7082d1d5c98a07a4c3437d2eda9b8",
+    "android/app/src/main/kotlin/app/onklav/home/SdkClock.kt": "940ba823356fe99ef98e77f25c92d182518571d98cd14534582b97889eb18328",
+    "android/app/src/main/kotlin/app/onklav/home/SdkAppScreen.kt": "fe9b8fd31d2c1260b821ad76cde1868179130357c3bb3badce562e6d5cc9a1a0",
+    "android/app/src/test/kotlin/app/onklav/home/SdkClockTest.kt": "f3f8726248ba423b32609a5b48d1b7c9637bb5d7309e58cc65ee057569627e9f",
+    "developer/components/src/clock.rs": "983418567733b70a7b0227c80d477a8aaeb979df38d159e8f4a5fbce750854ae",
+    "developer/tests/make_clock_fixture.py": "1e82b7b82bc88b12d57904e7f7096361abe1c99ef1ce76d08977a80dfe0745ed",
+    "docs/fixtures/clock-wip.onklav-a": "ba03bac415289c24d754e89b14038a4496181e7c0dbd358bbf5369400437fbe7"
+  },
+  "physical_device_tested": false,
+  "apk_built": false,
+  "sdk_release_built": false,
+  "next": "Chunk15: bounded all-day ICS import/export; remaining calendar/reminder group incomplete"
+}

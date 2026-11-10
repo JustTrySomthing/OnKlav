@@ -1,0 +1,132 @@
+{
+  "status": "Source complete; 16 unique focused checks and full lint passed; phone acceptance pending",
+  "latest_delivered_apk": "0.100.9-rc1/code118 predates current and earlier pending Audio/crop/Video/Clock/Camera/keyboard changes; no APK built for this request",
+  "features": {
+    "layout": "Dedicated control-free stage; 144 portrait versus512 landscape wave window; baseline86% stage; smaller-dimension Orbit geometry and quiet-level response",
+    "controls": "Persisted snapping vertical effect wheel and one swatch button opening six accessible color circles; pause stays available during connection",
+    "scenes": [
+      "Wave",
+      "Spectrum",
+      "Orbit",
+      "Mandala",
+      "Slipstream",
+      "Aurora",
+      "Prism Bloom \u2014 original iridescent crystalline petals"
+    ],
+    "audio": "Live EOF/transient IO/timeout/server failure reconnects at live edge;3rapid attempts250/1000/2500ms;15s stable playback resets budget; manual pause/stop/sleep/replacement/revocation cancel; finite media end behavior retained"
+  },
+  "implementation": "Original Compose Canvas using existing authorized positive session capture; no Velo code/assets, neural/cloud/new runtime dependencies/capabilities",
+  "tests": {
+    "unique_passed": 16,
+    "case_results": {
+      "app.onklav.home.OfflineHandoffTest.remoteHandoffPreservesPositionAndDoesNotResumePausedPlayback": true,
+      "app.onklav.home.RadioContinuityTest.sleepDeadlineAndRevocationCannotBeBypassedByReconnect": true,
+      "app.onklav.home.RadioContinuityTest.rapidEofAndIoErrorsAreBoundedAndManualPlayCanRetry": true,
+      "app.onklav.home.RadioContinuityTest.pauseStopAndReplacementCancelQueuedReconnection": true,
+      "app.onklav.home.RadioContinuityTest.trackBoundaryReconnectsLiveEdgeAndKeepsChangingAudioSession": true,
+      "app.onklav.home.RadioVisualizerTest.packedFftIgnoresDcAndNyquistAndMapsComplexToneToLogFrequency": true,
+      "app.onklav.home.RadioVisualizerTest.actualLandscapeFillsWindowControlsHideRevealAndBackRestores": true,
+      "app.onklav.home.RadioVisualizerTest.portraitWindowAndUnitBasedOrbitRemainReadableAtEitherAspect": true,
+      "app.onklav.home.RadioVisualizerTest.captureRejectsGlobalSessionAndCloseClearsWaveform": true,
+      "app.onklav.home.RadioVisualizerTest.visualizerModesLandscapeBackAndOrientationRestore": true,
+      "app.onklav.home.SdkMediaLifecycleTest.sleepStopsOnlyItsCurrentPlayerAndReplacementCancelsDeadline": true,
+      "app.onklav.home.SdkMediaLifecycleTest.signedPlayerOwnsSessionControlsAndStopsOnRevocation": true,
+      "app.onklav.home.SdkMediaLifecycleTest.deletingAppDataClearsPositionsWithoutALateStopRecreatingThem": true,
+      "app.onklav.home.SdkMediaLifecycleTest.pauseDuringPreparationAndReplacementNeverRestartOldPlayback": true,
+      "app.onklav.home.SdkRadioUiTest.separateRadioScreensUseRealSignedAppAndKeepPlayerDocked": true,
+      "app.onklav.home.RadioSceneRenderTest.allSevenScenesReactToAudioAndPausedFramesRemainStill": true
+    },
+    "stages": [
+      {
+        "evidence": "TEST-app.onklav.home.OfflineHandoffTest.xml",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0
+      },
+      {
+        "evidence": "TEST-app.onklav.home.RadioContinuityTest.xml",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0
+      },
+      {
+        "evidence": "TEST-app.onklav.home.RadioVisualizerTest.xml",
+        "tests": 5,
+        "failures": 1,
+        "errors": 0
+      },
+      {
+        "evidence": "TEST-app.onklav.home.SdkMediaLifecycleTest.xml",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0
+      },
+      {
+        "evidence": "TEST-app.onklav.home.SdkRadioUiTest.xml",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0
+      },
+      {
+        "evidence": "second-RadioSceneRenderTest.xml",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0
+      },
+      {
+        "evidence": "second-RadioVisualizerTest.xml",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0
+      },
+      {
+        "evidence": "final-RadioSceneRenderTest.xml",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0
+      },
+      {
+        "evidence": "final-RadioVisualizerTest.xml",
+        "tests": 2,
+        "failures": 0,
+        "errors": 0
+      }
+    ],
+    "runtime_classes_match": 3004,
+    "notes": [
+      "Initial test-only coroutine-call compile error corrected",
+      "First functional run14passed and1landscape harness ambiguity matching underlying label plus effect row; test matcher scoped to wheel",
+      "Nested effect dialogs initially caused screenshots to target a dismissed window; retained active visualization dialog and asserted native pixel color coverage",
+      "Second six UI/math/render checks passed; final three affected render/UI checks passed after clipping/color refinements and real waveform landscape fixture; final timing-only motion refinement rechecked with audio-response/paused-frame rendering",
+      "Actual listeners/services and signed radio policy tested with simulated decoder/network bytes; real station/phone audio not claimed",
+      "Native pixel checks show all7different scenes react to audio and remain still when paused; portrait/landscape7scene screenshots reviewed"
+    ]
+  },
+  "lint": {
+    "Fatal": 0,
+    "Error": 0,
+    "Warning": 272,
+    "Information": 1
+  },
+  "input_checks": {
+    "native_current": true,
+    "sdk_current": true,
+    "games_current": true,
+    "new_runtime_dependencies": false,
+    "new_permissions_or_capabilities": false
+  },
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/RadioVisualizer.kt": "9b0bb596c8ef4374cc7a14b2712dc4e6d749d7706575d4595fb224c8c0816f16",
+    "android/app/src/main/kotlin/app/onklav/home/RadioVisualScene.kt": "de9a5f7599fbc29b52b53f3083353ef7e1eeee5e509f1f416cff4cf00eaed56e",
+    "android/app/src/main/kotlin/app/onklav/home/SdkMedia.kt": "e34b1cf6e0fbb47f2e8d8f457765833b99c98352df103bc08f801be7142b8253",
+    "android/app/src/main/kotlin/app/onklav/home/SdkRadioPlayer.kt": "538231660977ec24a4e35e6c4d662cac9184ff25c8df1dc4995774567bca0cd2"
+  },
+  "evidence": "docs/evidence/radio-refinement/",
+  "remaining_phone_checks": [
+    "Exact station track-boundary/server reconnection with real decoder",
+    "AudioFX/FFT amplitude, speaker/Bluetooth/wired routes and permissions",
+    "Rotation/cutouts/large-font/screen reader/control access",
+    "Sustained CPU/battery/frame pacing and real music visual acceptance"
+  ],
+  "motion_timing": "Double-precision unbounded motion with per-effect angle/travel reduction prevents global wrap jumps; final reactive/paused native rendering check passed"
+}

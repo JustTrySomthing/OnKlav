@@ -1,0 +1,7 @@
+{
+  "status": "bounded RSS2/Icecast adapter source implemented; full-host/provider/device qualification pending",
+  "verification": "docs/media34-verification.json",
+  "native_rebuilt": true,
+  "next_feature": 35,
+  "apk_created": false
+}

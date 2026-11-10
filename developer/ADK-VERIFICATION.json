@@ -1,0 +1,59 @@
+{
+  "sdk_tools": "0.4.1",
+  "status": "verified developer preview for the documented app surface",
+  "reference_apk": {
+    "version": "0.100.42-quick",
+    "version_code": 151,
+    "package": "app.onklav.home.prototype.rewrite",
+    "sha256": "699e01383805935ebe65193056bc72fcf225ac6ddf739a8b7ca22a6cbbd1af0b"
+  },
+  "host_protocol_build": 96,
+  "unit_test_methods_passed": 50,
+  "suite_counts": {
+    "adk-contract-check.log": 5,
+    "adk-discovery-check.log": 6,
+    "adk-templates.log": 1,
+    "adk-authoring.log": 8,
+    "adk-workflow.log": 9,
+    "adk-tools.log": 7,
+    "adk-distribution.log": 3,
+    "adk-deadline.log": 2,
+    "adk-http-policy.log": 4,
+    "adk-cache.log": 3,
+    "adk-portable-cli.log": 2
+  },
+  "template_builds_and_declared_scenarios": 14,
+  "template_count_note": "The 14-template matrix is one of the unittest methods, not 14 additional case counts.",
+  "clean_extraction_smoke": {
+    "doctor": "passed",
+    "portable_generation": "passed",
+    "locked_wasm_build_sign_install": "passed",
+    "scenario_assertions": 4,
+    "temporary_key_discarded": true,
+    "shipping_package_created": false,
+    "final_tooling_bytes_match_tested_starter": true
+  },
+  "environments": {
+    "linux": "fresh real compiler and production-broker runs passed",
+    "windows": "documented setup and portable smoke runner; timeout branch unit-tested with a fixture; no native acceptance run",
+    "macos": "documented setup and portable smoke runner; no native acceptance run"
+  },
+  "capability_inventory_count": 37,
+  "changes": [
+    "Correctly separated APK151 from guest protocol96",
+    "Updated active compatibility/current-host/storage/header/account guides",
+    "Current capability channel with explicit preview qualification",
+    "Filled four missing capability details that crashed discovery",
+    "Standalone source packaging with transitive documentation closure and SHA256/CRC verification",
+    "UTF-8 subprocess/CLI output and Windows process-tree timeout handling",
+    "Packer status goes to stderr so JSON stdout stays parseable",
+    "Portable workstation/CI smoke command"
+  ],
+  "not_claimed": [
+    "Physical phone/provider/carrier acceptance",
+    "Native Windows/macOS test execution",
+    "Arbitrary native Android guest APIs",
+    "Owner SDK redistribution license or independent security certification"
+  ],
+  "apk_built": false
+}

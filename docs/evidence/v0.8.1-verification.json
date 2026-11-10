@@ -1,0 +1,79 @@
+{
+  "date": "2026-10-21",
+  "scope": "Single-host architecture correction; not a finished platform or SDK",
+  "full_rewrite_complete": false,
+  "sdk_complete": false,
+  "authored_java_source_files": 0,
+  "legacy_app_module_included": false,
+  "application_delivery": "Only OnKlav is an APK; tools and Godot are included as host libraries",
+  "notes_production_call_path": "OnKlav internal navigation -> Kotlin NotesScreen/NotesModel -> Core JNI -> Rust document store",
+  "package_runtime": "External executable packages remain disabled; archive inspection does not authorize execution",
+  "component_tests_reused_without_component_changes": {
+    "rust_unit_tests": {
+      "passed": 7,
+      "failed": 0
+    },
+    "kotlin_real_rust_host_jni_tests": {
+      "passed": 2,
+      "failed": 0,
+      "includes": [
+        "Unicode save/load/delete",
+        "invalid ID and oversize rejection",
+        "clearing a stored document"
+      ]
+    },
+    "godot_rule_checks": {
+      "passed": 12,
+      "failed": 0
+    },
+    "godot_headless_startup": [
+      "four",
+      "naval",
+      "blackjack",
+      "hockey"
+    ],
+    "godot_exported_pack_headless_startup": "four"
+  },
+  "current_host_build": "pass; :android:app:assembleDebug and assembleDebugAndroidTest",
+  "current_host_android_runtime": {
+    "device": "Software-only Android 10 x86_64 emulator; no concurrent Gradle build",
+    "host_instrumentation": "pass",
+    "godot_android_startup": "not_run",
+    "handset_performance_acceptance": false,
+    "host_build_apk_sha256": "5f8429c32ce44252c82130a56c4b2590c9d6e3501aedcdda474da4d31fc62f61",
+    "emulator_resources": "2048 MiB, four virtual CPUs, software rendering/no KVM",
+    "scope": "One bounded consolidated host attempt; no unlock command or concurrent build",
+    "host_installed_apk_sha256": "5f8429c32ce44252c82130a56c4b2590c9d6e3501aedcdda474da4d31fc62f61",
+    "exact_host_apk_tested": true,
+    "checked": [
+      "Apps grid -> RSS -> Android Back -> Apps grid -> Notes",
+      "Embedded engine Activity is private and belongs to host UID",
+      "Notes settings options",
+      "Saved Notes drawer begins at left edge",
+      "Kotlin editor -> actual Android Rust JNI save/load",
+      "Activity recreation and clearing persisted note"
+    ],
+    "app_crash_buffer": "empty",
+    "visual_acceptance": "pending: post-test home screenshot shows System UI ANR; no clean visual/handset/performance acceptance"
+  },
+  "historical_standalone_notes_evidence": "evidence/retired-standalone-verification.json; not verification of this host APK",
+  "not_verified": [
+    "SDK package installation and restricted execution",
+    "Capability broker and revocation",
+    "Original full UI/feature parity",
+    "Physical handset and carrier/account behavior",
+    "Original game ports/Panda/multiplayer",
+    "Measured speed or stability improvement"
+  ],
+  "signing": "Retained existing OnKlav debug key; no key included in public artifacts",
+  "migration": "No existing user data copied or deleted",
+  "current_host_apk_sha256": "5f8429c32ce44252c82130a56c4b2590c9d6e3501aedcdda474da4d31fc62f61",
+  "current_host_apk_checks": "pass; retained signature v2, ZIP CRC/alignment, 16KB native alignment, both ABIs, one application module and launcher, no nested APK/legacy classes; see apk-verification.json",
+  "build_repair": "Host modules consolidated; missing test Back helper replaced with target activity dispatcher; no new helper dependency added",
+  "prior_host_attempt": {
+    "result": "failed before Notes storage checks",
+    "diagnosis": "Returned grid target was not displayed; harness now scrolls to targets and waits for destination before Back",
+    "evidence": "evidence/consolidated-host-first-navigation.txt"
+  },
+  "sdk_assessment": "Keep Kotlin/Compose app UI and Godot/GDScript games; shared services and separate authoring paths. Execution runtime and permission boundary remain unimplemented; see SDK-OPTIONS.md"
+}

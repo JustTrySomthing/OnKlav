@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.HistoryApplyTest" tests="6" skipped="0" failures="4" errors="0" timestamp="2026-10-22T21:24:26" hostname="2383b52a5fc7" time="0.341">
+  <properties/>
+  <testcase name="secondMessageFailureKeepsFirstAndCleansOnlyIncompleteInsert" classname="app.onklav.home.HistoryApplyTest" time="0.098">
+    <failure message="java.lang.AssertionError: expected:&lt;[sms:101]&gt; but was:&lt;[]&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;[sms:101]&gt; but was:&lt;[]&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:120)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at app.onklav.home.HistoryApplyTest.secondMessageFailureKeepsFirstAndCleansOnlyIncompleteInsert(HistoryApplyTest.kt:72)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.robolectric.RobolectricTestRunner$HelperTestRunner$1.evaluate(RobolectricTestRunner.java:502)
+	at org.robolectric.internal.SandboxTestRunner$2.lambda$evaluate$2(SandboxTestRunner.java:285)
+	at org.robolectric.internal.bytecode.Sandbox.lambda$runOnMainThread$0(Sandbox.java:104)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+</failure>
+  </testcase>
+  <testcase name="stopAfterCommitPreservesPartialOutcomeMapAndReceipt" classname="app.onklav.home.HistoryApplyTest" time="0.058">
+    <failure message="java.lang.AssertionError: expected:&lt;1&gt; but was:&lt;0&gt;" type="java.lang.AssertionError">java.lang.AssertionError: expected:&lt;1&gt; but was:&lt;0&gt;
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.failNotEquals(Assert.java:835)
+	at org.junit.Assert.assertEquals(Assert.java:120)
+	at org.junit.Assert.assertEquals(Assert.java:146)
+	at app.onklav.home.HistoryApplyTest.stopAfterCommitPreservesPartialOutcomeMapAndReceipt(HistoryApplyTest.kt:66)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.robolectric.RobolectricTestRunner$HelperTestRunner$1.evaluate(RobolectricTestRunner.java:502)
+	at org.robolectric.internal.SandboxTestRunner$2.lambda$evaluate$2(SandboxTestRunner.java:285)
+	at org.robolectric.internal.bytecode.Sandbox.lambda$runOnMainThread$0(Sandbox.java:104)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+</failure>
+  </testcase>
+  <testcase name="freshPhoneComparisonSkipsExistingRowsAndAbsentCommittedRowsBlockReplay" classname="app.onklav.home.HistoryApplyTest" time="0.05">
+    <failure message="java.lang.IllegalArgumentException: column 'type' does not exist. Available columns: [_id]" type="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException: column 'type' does not exist. Available columns: [_id]
+	at android.database.AbstractCursor.getColumnIndexOrThrow(AbstractCursor.java:352)
+	at app.onklav.home.HistoryBackup.capture$lambda$32$lambda$22(HistoryBackup.kt:95)
+	at app.onklav.home.HistoryBackup.capture$query(HistoryBackup.kt:85)
+	at app.onklav.home.HistoryBackup.capture$app_debug(HistoryBackup.kt:94)
+	at app.onklav.home.HistoryImport.runJob$lambda$10(HistoryImport.kt:79)
+	at app.onklav.home.HistoryBackup.reading$app_debug(HistoryBackup.kt:79)
+	at app.onklav.home.HistoryImport.runJob(HistoryImport.kt:76)
+	at app.onklav.home.HistoryImport.withPrepared$app_debug(HistoryImport.kt:41)
+	at app.onklav.home.HistoryApply.run$lambda$34(HistoryApply.kt:56)
+	at app.onklav.home.HistoryRestore.exclusive$app_debug(HistoryRestore.kt:16)
+	at app.onklav.home.HistoryApply.run$app_debug(HistoryApply.kt:49)
+	at app.onklav.home.HistoryApply.run$app_debug$default(HistoryApply.kt:49)
+	at app.onklav.home.HistoryApplyTest.freshPhoneComparisonSkipsExistingRowsAndAbsentCommittedRowsBlockReplay(HistoryApplyTest.kt:76)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.robolectric.RobolectricTestRunner$HelperTestRunner$1.evaluate(RobolectricTestRunner.java:502)
+	at org.robolectric.internal.SandboxTestRunner$2.lambda$evaluate$2(SandboxTestRunner.java:285)
+	at org.robolectric.internal.bytecode.Sandbox.lambda$runOnMainThread$0(Sandbox.java:104)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+</failure>
+  </testcase>
+  <testcase name="productionGateBlocksBeforeSafAndProviderSnapshot" classname="app.onklav.home.HistoryApplyTest" time="0.041"/>
+  <testcase name="changedArchiveAndMissingMmsIdentitiesFailBeforeFirstInsert" classname="app.onklav.home.HistoryApplyTest" time="0.054"/>
+  <testcase name="checkedArchiveFeedsTypedExecutorAndPersistsActualIdsWithoutOldIds" classname="app.onklav.home.HistoryApplyTest" time="0.04">
+    <failure message="java.lang.IllegalArgumentException: column 'type' does not exist. Available columns: [_id]" type="java.lang.IllegalArgumentException">java.lang.IllegalArgumentException: column 'type' does not exist. Available columns: [_id]
+	at android.database.AbstractCursor.getColumnIndexOrThrow(AbstractCursor.java:352)
+	at app.onklav.home.HistoryBackup.capture$lambda$32$lambda$22(HistoryBackup.kt:95)
+	at app.onklav.home.HistoryBackup.capture$query(HistoryBackup.kt:85)
+	at app.onklav.home.HistoryBackup.capture$app_debug(HistoryBackup.kt:94)
+	at app.onklav.home.HistoryImport.runJob$lambda$10(HistoryImport.kt:79)
+	at app.onklav.home.HistoryBackup.reading$app_debug(HistoryBackup.kt:79)
+	at app.onklav.home.HistoryImport.runJob(HistoryImport.kt:76)
+	at app.onklav.home.HistoryImport.withPrepared$app_debug(HistoryImport.kt:41)
+	at app.onklav.home.HistoryApply.run$lambda$34(HistoryApply.kt:56)
+	at app.onklav.home.HistoryRestore.exclusive$app_debug(HistoryRestore.kt:16)
+	at app.onklav.home.HistoryApply.run$app_debug(HistoryApply.kt:49)
+	at app.onklav.home.HistoryApply.run$app_debug$default(HistoryApply.kt:49)
+	at app.onklav.home.HistoryApplyTest.checkedArchiveFeedsTypedExecutorAndPersistsActualIdsWithoutOldIds(HistoryApplyTest.kt:50)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.robolectric.RobolectricTestRunner$HelperTestRunner$1.evaluate(RobolectricTestRunner.java:502)
+	at org.robolectric.internal.SandboxTestRunner$2.lambda$evaluate$2(SandboxTestRunner.java:285)
+	at org.robolectric.internal.bytecode.Sandbox.lambda$runOnMainThread$0(Sandbox.java:104)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,12 @@
+{
+  "radio_browser_compatible_raw": 37137,
+  "icecast_compatible_raw": 610,
+  "icecast_export_entries": 30774,
+  "radio_browser_export_entries": 40879,
+  "bundled_gzip_bytes": 3456615,
+  "sources": [
+    "https://dir.xiph.org/yp.xml",
+    "https://de1.api.radio-browser.info/json/stations/search?hidebroken=true&is_https=true&limit=100000&order=clickcount&reverse=true"
+  ],
+  "raw_exports_not_bundled": true
+}

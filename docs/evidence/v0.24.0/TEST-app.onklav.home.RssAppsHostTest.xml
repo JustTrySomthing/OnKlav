@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.RssAppsHostTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-22T19:26:53" hostname="2383b52a5fc7" time="6.092">
+  <properties/>
+  <testcase name="rssPackageRunsOfflineArticlesBookmarksDrawersAndSettings" classname="app.onklav.home.RssAppsHostTest" time="6.092"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

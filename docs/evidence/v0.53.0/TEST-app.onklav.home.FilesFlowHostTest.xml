@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.FilesFlowHostTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-23T20:06:05" hostname="41aed82b0335" time="14.156">
+  <properties/>
+  <testcase name="openingANoteUsesNotesAndBackReturnsToFiles" classname="app.onklav.home.FilesFlowHostTest" time="14.156"/>
+  <system-out><![CDATA[Files UI waiting: tab-Apps
+Files UI waiting: app-icon-files
+Files UI waiting: sdk-entry:documents
+Files UI waiting: sdk-entry:documents
+Files UI waiting: sdk-entry:notes
+Files UI waiting: sdk-entry:374d9e381a834f9f8572ec18f072a20e
+Files UI waiting: sdk-note.text
+Files UI waiting: sdk-query
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

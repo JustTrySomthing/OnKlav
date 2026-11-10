@@ -1,0 +1,58 @@
+{
+  "version": "0.83.0-utilities1",
+  "version_code": 91,
+  "sdk_host": 90,
+  "status": "Completed; signed ARM64 APK assembled and verified",
+  "apps": {
+    "Calc": [
+      "Themed calculator vector icon and responsive four-column keypad",
+      "Arithmetic precedence, parentheses, contextual percentages, signs, decimal and backspace",
+      "Private history of50 calculations with previous/next and selection; clear confirmation",
+      "Long-press output to copy through clipboard broker; queued fast keypad actions"
+    ],
+    "Weather": [
+      "Offline34,188-city GeoNames search, readable region/country labels, coordinate fallback and8 saved places",
+      "MET Norway forecast over the exact signed HTTPS origin; no account or GPS permission",
+      "Themed current forecast, hourly cards and7-day outlook; city IANA timezone/DST",
+      "Fahrenheit/Celsius toolbar control and visible settings gear; attribution links",
+      "Cached forecast and timestamp, refresh/retry paths; previous data retained on failed refresh"
+    ],
+    "Convert": [
+      "Bidirectional length, weight, volume, temperature, fractions, area, speed and time",
+      "Feet+inches, negatives, mixed fractions and adjustable fraction precision",
+      "Explicit US/UK liquid measures and Celsius/Fahrenheit/Kelvin; unit swap and saved preferences",
+      "Invalid input clears the result; below-absolute-zero temperatures rejected",
+      "Themed result highlight and long-press copy"
+    ]
+  },
+  "checks": {
+    "rust_core_passed": 277,
+    "reference_controller_passed": 31,
+    "utility_controller_cases_included": 5,
+    "signed_utility_scenarios_passed": 2,
+    "android_unique_selected_passed": 15,
+    "android_scope": "12 transport/session/timezone cases and3 utility UI workflows across focused runs; final calculator workflow checks rapid entry, clipboard, history selection, previous/next",
+    "rendered": "Actual Compose host renders inspected for all3 apps; screenshots remain internal",
+    "native": "Linux/main/diagnostic ARM64 rebuilt from actual current core source,16KiB linking retained",
+    "packages": "All16 included signed app packages rebuilt with existing publisher; Counter reused",
+    "public_weather_source": "MET Norway returnedHTTP200 and40,967bytes; real data used in deterministic fixture parsing/rendering",
+    "lint": {
+      "status": "passed",
+      "errors": 0,
+      "warnings": 172
+    },
+    "final_ui_notes": "Calc long-click clipboard, history selection, new calculation, previous and next passed. Weather settings/unit controls and city search passed. Bidirectional Convert fields passed. Actual phone touch remains unverified."
+  },
+  "limits": [
+    "Actual Samsung installation, touch ergonomics and direct phone network acceptance remain unverified.",
+    "Weather city directory covers major cities/capitals; smaller places can use a nearby city or explicit coordinates.",
+    "Forecasts are model estimates; outlook lows/highs summarize available samples.",
+    "Provider outages remain possible; timestamps, cache and retry are present."
+  ],
+  "apk": {
+    "name": "OnKlav-0.83.0-ARM64.apk",
+    "bytes": 72923857,
+    "sha256": "0f7734b1d30b3d168a0fe5509882d8565ce2b0092c3c818e4f2c4db4047efad7",
+    "signer_sha256": "6ed975c5fc27d19f6291f751a8bb00fa8a2c2e7d268bffc7b6ddf7e1b1a7a69d"
+  }
+}

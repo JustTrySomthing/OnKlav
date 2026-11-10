@@ -1,0 +1,37 @@
+{
+  "date": "2026-11-01",
+  "scope": "Phone keypad sizing/spacing, themed call controls, compact contact/recent detail dialogs",
+  "tests": {
+    "app.onklav.home.BottomPhoneCameraUiTest": 2,
+    "app.onklav.home.PhoneDetailsUiTest": 4,
+    "app.onklav.home.PhoneUiTest": 6
+  },
+  "passed": 12,
+  "lint_errors": 0,
+  "lint_warnings": 809,
+  "lint_includes_production_and_tests": true,
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/PhoneScreen.kt": "5bdb2aff63e1f177ed888240c6d24a09e008a6128a1e516f19926f93fd943a3c",
+    "android/app/src/main/kotlin/app/onklav/home/PhoneDetailsUi.kt": "3df477f18b207f1958bf7e0e18650e7016815b242f5b279836b46c6710179c3a"
+  },
+  "visual_review": [
+    "recent.png",
+    "contact-multiple.png",
+    "pad.png",
+    "root-phone.png"
+  ],
+  "notes": [
+    "Restored the canonical source version 289 after workspace maintenance; preserved 0.100.35 root Phone/Camera navigation, role setup and audit fixes.",
+    "Restored saved toolchain; downloaded missing current dependencies. Fixed a test-only DpRect height access before running the passing checks.",
+    "Call/private presentation, explicit per-number actions and existing delete confirmations are retained."
+  ],
+  "apk_built": false,
+  "latest_apk": "0.100.35-rc1/code144, predates this change",
+  "build_plan": {
+    "sdk_apps": "reuse",
+    "mobile_rust": "reuse",
+    "neural_speech": "reuse",
+    "games": "reuse"
+  },
+  "qualification_pending": "Physical-device theme/font/touch acceptance; real carrier calling remains separate."
+}

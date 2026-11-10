@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.HistoryApplyTest" tests="25" skipped="0" failures="0" errors="0" timestamp="2026-10-24T14:01:48" hostname="41b9fb140d3c" time="5.698">
+  <properties/>
+  <testcase name="stoppingContinuationRetainsNewCommitAndNextReviewDoesNotInsertAgain" classname="app.onklav.home.HistoryApplyTest" time="2.614"/>
+  <testcase name="confirmationNeedsComparisonMmsIdentitiesAndExplicitUncancelledReview" classname="app.onklav.home.HistoryApplyTest" time="0.077"/>
+  <testcase name="pendingMessageAppearingOrChangedCompletedTargetRequiresReviewBeforeInsertion" classname="app.onklav.home.HistoryApplyTest" time="0.222"/>
+  <testcase name="partialBatchFinishesOnlyMissingMessageUnderOriginalRecord" classname="app.onklav.home.HistoryApplyTest" time="0.211"/>
+  <testcase name="providerChangeDuringPostCaptureStopsMetadataMerge" classname="app.onklav.home.HistoryApplyTest" time="0.111"/>
+  <testcase name="reviewedApplyUsesFreshPlanAndCannotReuseConfirmation" classname="app.onklav.home.HistoryApplyTest" time="0.15"/>
+  <testcase name="changedSavedRecordOrWrongOriginalArchiveCannotContinue" classname="app.onklav.home.HistoryApplyTest" time="0.219"/>
+  <testcase name="secondMessageFailureKeepsFirstAndCleansOnlyIncompleteInsert" classname="app.onklav.home.HistoryApplyTest" time="0.112"/>
+  <testcase name="stopAfterCommitPreservesPartialOutcomeMapAndReceipt" classname="app.onklav.home.HistoryApplyTest" time="0.088"/>
+  <testcase name="pendingBatchesHaveExplicitSourcesAndProductionGatePrecedesSnapshot" classname="app.onklav.home.HistoryApplyTest" time="0.193"/>
+  <testcase name="wrongRecordedPhoneIdsAndProviderChangesLeaveResumeMetadataUntouched" classname="app.onklav.home.HistoryApplyTest" time="0.174"/>
+  <testcase name="lostInsertAcknowledgementBlocksContinuationWithoutDiscardingPartialMap" classname="app.onklav.home.HistoryApplyTest" time="0.173"/>
+  <testcase name="freshPhoneComparisonSkipsExistingRowsAndAbsentCommittedRowsBlockReplay" classname="app.onklav.home.HistoryApplyTest" time="0.149"/>
+  <testcase name="changedContentOrWrongPostIdsLeaveMetadataUntouchedAndReceiptsIntact" classname="app.onklav.home.HistoryApplyTest" time="0.156"/>
+  <testcase name="productionGateBlocksBeforeSafAndProviderSnapshot" classname="app.onklav.home.HistoryApplyTest" time="0.055"/>
+  <testcase name="postSnapshotRemapsFlagsAndFoldersAndDisarmsOldReminders" classname="app.onklav.home.HistoryApplyTest" time="0.115"/>
+  <testcase name="changedIdentityConfigurationRejectsReviewBeforeSafOrProviderReads" classname="app.onklav.home.HistoryApplyTest" time="0.062"/>
+  <testcase name="changedArchiveAndMissingMmsIdentitiesFailBeforeFirstInsert" classname="app.onklav.home.HistoryApplyTest" time="0.068"/>
+  <testcase name="identityChangeAtProviderBoundaryPausesWithKnownReceiptAndNoAutomaticRetry" classname="app.onklav.home.HistoryApplyTest" time="0.085"/>
+  <testcase name="recoveredCommitBeforeMapAcknowledgementRequiresNoNewInsert" classname="app.onklav.home.HistoryApplyTest" time="0.192"/>
+  <testcase name="checkedArchiveFeedsTypedExecutorAndPersistsActualIdsWithoutOldIds" classname="app.onklav.home.HistoryApplyTest" time="0.089"/>
+  <testcase name="metadataEditedDuringInsertsWinsOverArchiveEntries" classname="app.onklav.home.HistoryApplyTest" time="0.096"/>
+  <testcase name="changedPhonePlanRequiresAnotherReviewBeforeAnyInsertion" classname="app.onklav.home.HistoryApplyTest" time="0.06"/>
+  <testcase name="resumeTicketCannotStartAnotherInsertBatchAndChangedIdentitiesNeedReview" classname="app.onklav.home.HistoryApplyTest" time="0.105"/>
+  <testcase name="savedRecordMetadataResumesOriginalJobWithoutInsertingOrReplayingMessages" classname="app.onklav.home.HistoryApplyTest" time="0.116"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

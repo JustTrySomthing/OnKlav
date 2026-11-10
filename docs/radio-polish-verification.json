@@ -1,0 +1,34 @@
+{
+  "release": "OnKlav 0.75.0-radio-polish1 / code83",
+  "status": "Completed: full lint, targeted final checks and signed APK verification passed",
+  "changes": [
+    "Single pinned Stations / Recent / Favorites tab row matching Messages styling and theme",
+    "Recent station list, independent bookmark actions and subtle confirmed clear",
+    "Country and language dropdowns share one row with current selections inside buttons",
+    "Favorites heading and station list without onboarding or first-page reload clutter",
+    "Filled / outline bookmark state; row tap plays and bookmark tap toggles saved state",
+    "Gear opens centered Radio settings with waveform control, filter reset and directory information",
+    "Docked single-row accessible icon controls for play/pause, stop, retry, favorite and sleep",
+    "Real waveform from the authorized radio MediaPlayer audio session, never microphone capture or simulated samples",
+    "Waveform capture released on pause/background/disposal; permission denial preserves playback",
+    "Play reconnects after Stop; last station restored without autoplay",
+    "Earlier ebook, audiobook and podcast outline icon updates included"
+  ],
+  "source_preservation": "Current source restored from saved checkpoint45; original Android and SDK publisher signing material restored separately; no identity replacements",
+  "core": "No Rust broker change; source-matched Linux/main/diagnostic ARM64 JNI reused",
+  "tests": {
+    "controller": "7 passed",
+    "android_initial": "7 passed: Radio backend3, signed Radio Compose UI1, Podcasts3",
+    "signed_scenarios": "5 granted and1 denied passed",
+    "full_lint": {
+      "Error": 0,
+      "Warning": 172
+    },
+    "final_android": "5 passed: signed Radio layout/bookmark/theme check and4 media lifecycle checks"
+  },
+  "remaining_qualification": [
+    "Actual S21+ audible playback, visualizer support, background/headset and provider availability"
+  ],
+  "permission": "Waveform requires Android RECORD_AUDIO permission. Requested once on first playback when needed; settings can retry or disable it. It attaches only to this radio audio session and does not record the microphone. MODIFY_AUDIO_SETTINGS is a normal manifest permission.",
+  "apk": "OnKlav-0.75.0-ARM64.apk"
+}

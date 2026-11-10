@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.RssContinuationTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-23T23:02:08" hostname="41aed82b0335" time="7.256">
+  <properties/>
+  <testcase name="anExistingSdkListWinsOverPreviousPreferences" classname="app.onklav.home.RssContinuationTest" time="4.56"/>
+  <testcase name="scrollPositionsAreSeparateBoundedAndRefreshRecentlyUsedSlots" classname="app.onklav.home.RssContinuationTest" time="0.058"/>
+  <testcase name="ownSourcesAreAdoptedOnceWithoutChangingPreviousPreferences" classname="app.onklav.home.RssContinuationTest" time="1.401"/>
+  <testcase name="malformedPreferencesRemainIntactAndEmptyListCanBeRetried" classname="app.onklav.home.RssContinuationTest" time="1.237"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

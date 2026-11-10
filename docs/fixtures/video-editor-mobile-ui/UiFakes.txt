@@ -1,0 +1,31 @@
+package app.onklav.home
+import android.app.Application
+import android.content.Context
+import android.net.Uri
+import android.graphics.Bitmap
+import androidx.compose.runtime.*
+import androidx.lifecycle.ViewModel
+import kotlinx.coroutines.flow.MutableStateFlow
+internal object AppSdk{val epoch=MutableStateFlow(0L)}
+internal fun videoEditorAccess(c:Context)=true
+internal object VideoProjectArchive{fun files(p:VideoProject)=emptyList<String>()}
+internal object VideoComposition{fun dimensions(p:VideoProject)=Pair(1920,p.height)}
+internal class VideoEditorModel:ViewModel(){
+ var project by mutableStateOf(VideoProject(name="Weekend story",clips=listOf(VideoClip(file="a.media",name="Sunset.jpg",sourceMs=8000,image=true))))
+ val projects get()=listOf(project)
+ var selected by mutableIntStateOf(0);var cursor by mutableLongStateOf(0);var busy by mutableStateOf(false);var progress by mutableFloatStateOf(0f);var status by mutableStateOf("");var error by mutableStateOf(false);var player:Any?=null;var playing by mutableStateOf(false);var thumbnails=mapOf<String,Bitmap>();var revision by mutableIntStateOf(0);var transforming=false;var recording by mutableStateOf(false);var recordingMs=0L;var recordingLevel=0f
+ var selectedAudioId by mutableStateOf("main");var snapping by mutableStateOf(true)
+ fun selectAudio(id:String){selectedAudioId=id};fun updateSnapping(value:Boolean){snapping=value};fun stepFrame(direction:Int){seek(videoStepFrame(cursor,direction,project.fps,project.duration))};fun scrub(at:Long,tolerance:Long){seek(if(snapping)videoTimelineSnap(project,at,tolerance)else at)}
+ val canUndo=true;val canRedo=true;val clip get()=project.clips.getOrNull(selected);val clipOffset get()=project.clipStart(selected)
+ fun commit(){};fun cancel(){};fun dismiss(){status=""};fun history(back:Boolean){};fun seek(at:Long){cursor=at.coerceIn(0,project.duration)};fun preview(play:Boolean=true){if(play)playing=!playing};fun choose(index:Int){selected=index.coerceIn(project.clips.indices);seek(clipOffset)}
+ fun apply(p:VideoProject){project=p};fun edit(c:VideoClip){project=project.copy(clips=project.clips.mapIndexed{i,old->if(i==selected)c else old})}
+ fun rename(name:String){project=project.copy(name=name)};fun newProject(){project=VideoProject()};fun openProject(id:String){};fun deleteProject(id:String){}
+ fun import(uris:List<Uri>,audio:Boolean=false,overlay:Boolean=false){};fun export(uri:Uri){};fun restoreProject(uri:Uri){};fun backupProject(uri:Uri){};fun importCaptions(uri:Uri){};fun exportCaptions(uri:Uri){};fun importLut(uri:Uri){}
+ fun startVoiceover(){recording=true};fun stopVoiceover(discard:Boolean=false){recording=false};fun addKeyframe(layerId:String?=null){};fun updateKey(p:VideoKeyframe){};fun updateLayerKey(id:String,p:VideoKeyframe){};fun layerOperation(id:String,op:String){};fun freeze(){};fun extractAudio(){};fun detectBeats(id:String){};fun makeProxy(){};fun clearProxies(){}
+ fun music(t:VideoMusic){project=project.copy(music=project.music.map{if(it.id==t.id)t else it})};fun overlay(l:VideoLayer){project=project.copy(layers=project.layers.map{if(it.id==l.id)l else it})}
+ fun operation(op:String){if(op=="Duplicate")clip?.let{project=project.copy(clips=project.clips+it.copy(id=videoId()))}}
+ fun beginTransform(){transforming=true};fun endTransform(){transforming=false};fun transform(p:VideoKeyframe){}
+}
+
+internal val videoAudioTones=listOf("Original","Speech clarity","Warm","Telephone")
+internal val videoTitleAnimations=listOf("None","Fade","Slide","Pop")

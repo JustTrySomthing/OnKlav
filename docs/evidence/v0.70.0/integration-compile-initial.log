@@ -1,0 +1,182 @@
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=37329 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=37329 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.11.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :android:app
+WARNING: The option setting 'android.aapt2FromMavenOverride=/workspace/scratch/ed752e8a1957/group12-env/sdk/build-tools/35.0.0/aapt2' is experimental.
+Checking the license for package Android SDK Platform-Tools in /workspace/scratch/ed752e8a1957/group12-env/sdk/licenses
+Warning: License for package Android SDK Platform-Tools not accepted.
+WARNING: platform-tools package is not installed. Please accept the installation licence to continue
+
+> Task :android:app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:app:preBuild UP-TO-DATE
+> Task :android:app:preDebugBuild UP-TO-DATE
+> Task :android:games:preBuild UP-TO-DATE
+> Task :android:games:preDebugBuild UP-TO-DATE
+> Task :android:games:writeDebugAarMetadata UP-TO-DATE
+> Task :android:shared:preBuild UP-TO-DATE
+> Task :android:shared:preDebugBuild UP-TO-DATE
+> Task :android:shared:writeDebugAarMetadata UP-TO-DATE
+> Task :android:tools:preBuild UP-TO-DATE
+> Task :android:tools:preDebugBuild UP-TO-DATE
+> Task :android:tools:writeDebugAarMetadata UP-TO-DATE
+> Task :android:app:generateDebugResValues UP-TO-DATE
+> Task :android:games:generateDebugResValues
+> Task :android:app:checkDebugAarMetadata
+> Task :android:games:generateDebugResources
+> Task :android:games:packageDebugResources
+> Task :android:shared:generateDebugResValues
+> Task :android:shared:generateDebugResources
+> Task :android:shared:packageDebugResources
+> Task :android:tools:generateDebugResValues
+> Task :android:tools:generateDebugResources
+> Task :android:tools:packageDebugResources
+> Task :android:app:mapDebugSourceSetPaths
+> Task :android:app:generateDebugResources
+> Task :android:app:packageDebugResources
+> Task :android:app:parseDebugLocalResources
+> Task :android:app:mergeDebugResources
+> Task :android:app:createDebugCompatibleScreenManifests
+> Task :android:app:extractDeepLinksDebug
+> Task :android:games:extractDeepLinksDebug
+> Task :android:shared:extractDeepLinksDebug
+> Task :android:games:processDebugManifest
+> Task :android:shared:processDebugManifest
+> Task :android:tools:extractDeepLinksDebug
+> Task :android:tools:processDebugManifest
+> Task :android:games:compileDebugLibraryResources
+
+> Task :android:app:processDebugMainManifest
+/workspace/scratch/75acf774e3b8/work/OnKlav/android/app/src/main/AndroidManifest.xml:21:3-77 Warning:
+	Element uses-permission#android.permission.ACCESS_NETWORK_STATE at AndroidManifest.xml:21:3-77 duplicated with element declared at AndroidManifest.xml:3:3-77
+
+> Task :android:app:processDebugManifest
+> Task :android:games:parseDebugLocalResources
+> Task :android:app:processDebugManifestForPackage
+> Task :android:games:generateDebugRFile
+> Task :android:shared:compileDebugLibraryResources
+> Task :android:tools:compileDebugLibraryResources
+> Task :android:tools:parseDebugLocalResources
+> Task :android:shared:parseDebugLocalResources
+> Task :android:tools:generateDebugRFile
+> Task :android:games:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:shared:generateDebugRFile
+> Task :android:app:processDebugResources
+> Task :android:games:javaPreCompileDebug
+> Task :android:shared:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:games:compileDebugKotlin
+> Task :android:games:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:games:bundleLibCompileToJarDebug
+> Task :android:shared:javaPreCompileDebug
+> Task :android:tools:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:tools:javaPreCompileDebug
+> Task :android:app:javaPreCompileDebug
+> Task :android:app:preDebugUnitTestBuild UP-TO-DATE
+> Task :android:app:javaPreCompileDebugUnitTest
+> Task :android:app:mergeDebugShaders
+> Task :android:app:compileDebugShaders NO-SOURCE
+> Task :android:app:generateDebugAssets UP-TO-DATE
+> Task :android:games:mergeDebugShaders
+> Task :android:games:compileDebugShaders NO-SOURCE
+> Task :android:games:generateDebugAssets UP-TO-DATE
+> Task :android:games:mergeDebugAssets
+> Task :android:shared:mergeDebugShaders
+> Task :android:shared:compileDebugShaders NO-SOURCE
+> Task :android:shared:generateDebugAssets UP-TO-DATE
+> Task :android:shared:mergeDebugAssets
+> Task :android:tools:mergeDebugShaders
+> Task :android:tools:compileDebugShaders NO-SOURCE
+> Task :android:tools:generateDebugAssets UP-TO-DATE
+> Task :android:tools:mergeDebugAssets
+> Task :android:app:mergeDebugAssets
+> Task :android:app:packageDebugUnitTestForUnitTest
+> Task :android:app:generateDebugUnitTestConfig
+> Task :android:games:bundleLibRuntimeToJarDebug
+> Task :android:games:processDebugJavaRes
+> Task :android:shared:preDebugUnitTestBuild UP-TO-DATE
+> Task :android:shared:generateDebugUnitTestStubRFile
+> Task :android:shared:javaPreCompileDebugUnitTest
+
+> Task :android:shared:compileDebugKotlin
+w: file:///workspace/scratch/75acf774e3b8/work/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/Chrome.kt:266:24 'var statusBarColor: Int' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/75acf774e3b8/work/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/Chrome.kt:267:24 'var navigationBarColor: Int' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/75acf774e3b8/work/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/Chrome.kt:268:65 'var isStatusBarContrastEnforced: Boolean' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/75acf774e3b8/work/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/LauncherLayout.kt:4:27 Non-public primary constructor is exposed via the generated 'copy()' method of the 'data' class.
+
+The generated 'copy()' will change its visibility in future releases.
+
+To suppress the warning do one of the following:
+- Annotate the data class with the '@ConsistentCopyVisibility' annotation.
+- Use the '-Xconsistent-data-class-copy-visibility' compiler flag.
+- Annotate the data class with the '@ExposedCopyVisibility' annotation 
+  (Discouraged, but can be used to keep binary compatibility).
+
+To learn more, see the documentation of the '@ConsistentCopyVisibility' and '@ExposedCopyVisibility' annotations.
+
+This will become an error in Kotlin 2.2.
+
+> Task :android:shared:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:shared:bundleLibRuntimeToJarDebug
+> Task :android:shared:bundleLibCompileToJarDebug
+> Task :android:shared:processDebugJavaRes
+> Task :android:shared:compileDebugUnitTestKotlin
+> Task :android:shared:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :android:shared:processDebugUnitTestJavaRes
+
+> Task :android:shared:testDebugUnitTest
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=37329 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=37329 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+> Task :android:tools:compileDebugKotlin
+> Task :android:tools:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:tools:bundleLibCompileToJarDebug
+> Task :android:tools:bundleLibRuntimeToJarDebug
+> Task :android:tools:processDebugJavaRes
+> Task :android:app:compileDebugKotlin
+e: file:///workspace/scratch/75acf774e3b8/work/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkPdfClient.kt:33:62 'handleMessage' overrides nothing. Potential signatures for overriding:
+fun handleMessage(p0: Message): Unit
+e: file:///workspace/scratch/75acf774e3b8/work/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkPdfClient.kt:33:124 Unresolved reference 'data'.
+e: file:///workspace/scratch/75acf774e3b8/work/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkPdfClient.kt:49:49 Argument type mismatch: actual type is 'T (of fun <T> T.apply)', but 'Message!' was expected.
+e: file:///workspace/scratch/75acf774e3b8/work/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkPdfClient.kt:49:57 Unresolved reference 'obtain'.
+e: file:///workspace/scratch/75acf774e3b8/work/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkPdfClient.kt:49:72 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///workspace/scratch/75acf774e3b8/work/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkPdfClient.kt:49:77 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///workspace/scratch/75acf774e3b8/work/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkPdfClient.kt:49:78 Unresolved reference 'data'.
+e: file:///workspace/scratch/75acf774e3b8/work/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkPdfClient.kt:49:91 Unresolved reference 'replyTo'.
+e: file:///workspace/scratch/75acf774e3b8/work/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkPdfService.kt:13:143 'handleMessage' overrides nothing. Potential signatures for overriding:
+fun handleMessage(p0: Message): Unit
+e: file:///workspace/scratch/75acf774e3b8/work/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkPdfService.kt:19:23 Unresolved reference 'data'.
+e: file:///workspace/scratch/75acf774e3b8/work/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkPdfService.kt:22:33 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///workspace/scratch/75acf774e3b8/work/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkPdfService.kt:22:33 Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun <T : Closeable?, R> T.use(block: (T) -> R): R
+    [R|Contract description]
+     <
+        CallsInPlace(block, EXACTLY_ONCE)
+    >
+e: file:///workspace/scratch/75acf774e3b8/work/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkPdfService.kt:23:63 Argument type mismatch: actual type is 'Any', but 'ParcelFileDescriptor!' was expected.
+e: file:///workspace/scratch/75acf774e3b8/work/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkPdfService.kt:23:370 Argument type mismatch: actual type is 'Any', but 'ParcelFileDescriptor' was expected.
+e: file:///workspace/scratch/75acf774e3b8/work/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkPdfService.kt:24:49 Argument type mismatch: actual type is 'Any', but 'ParcelFileDescriptor' was expected.
+e: file:///workspace/scratch/75acf774e3b8/work/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkPdfService.kt:27:11 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///workspace/scratch/75acf774e3b8/work/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkPdfService.kt:27:40 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///workspace/scratch/75acf774e3b8/work/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkPdfService.kt:28:3 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///workspace/scratch/75acf774e3b8/work/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkPdfService.kt:28:23 Unresolved reference 'replyTo'.
+e: file:///workspace/scratch/75acf774e3b8/work/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkPdfService.kt:28:45 Unresolved reference 'obtain'.
+e: file:///workspace/scratch/75acf774e3b8/work/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkPdfService.kt:28:60 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///workspace/scratch/75acf774e3b8/work/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkPdfService.kt:28:65 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///workspace/scratch/75acf774e3b8/work/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkPdfService.kt:28:66 Unresolved reference 'data'.
+
+> Task :android:app:compileDebugKotlin FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':android:app:compileDebugKotlin'.
+> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+   > Compilation error. See log for more details
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 2m 6s
+73 actionable tasks: 69 executed, 4 up-to-date

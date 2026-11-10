@@ -1,0 +1,60 @@
+   Compiling onklav-speech v0.1.0 (/workspace/scratch/d853f89e99b7/onklav/OnKlav/core/speech)
+    Finished `release` profile [optimized] target(s) in 0.79s
+   Compiling onklav-speech v0.1.0 (/workspace/scratch/d853f89e99b7/onklav/OnKlav/core/speech)
+warning: fields `output` and `last_audio` are never read
+ --> src/ring.rs:3:85
+  |
+3 | pub struct Ring {data:Box<[UnsafeCell<f32>]>,read:AtomicUsize,write:AtomicUsize,pub output:AtomicUsize,pub last_audio:AtomicUsize,pub can...
+  |            ---- fields in this struct                                               ^^^^^^                 ^^^^^^^^^^
+  |
+  = note: `#[warn(dead_code)]` on by default
+
+warning: associated items `new` and `pop` are never used
+  --> src/ring.rs:7:9
+   |
+ 6 | impl Ring {
+   | --------- associated items in this implementation
+ 7 |  pub fn new(capacity:usize)->Self{assert!(capacity>0);Self{data:(0..capacity).map(|_|UnsafeCell::new(0.)).collect(),read:AtomicUsize::new...
+   |         ^^^
+...
+11 |  pub fn pop(&self,out:&mut[f32]){let base=self.output.fetch_add(out.len(),Ordering::Relaxed);if self.cancelled.load(Ordering::Acquire){ou...
+   |         ^^^
+
+warning: `onklav-speech` (lib) generated 2 warnings
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.47s
+     Running unittests src/lib.rs (core/speech/target/debug/deps/onklav_speech-75150f6948734d83)
+
+running 3 tests
+test ring::tests::timeline_includes_device_silence_but_not_fake_speech_progress ... ok
+test ring::tests::wraps_and_cancellation_silences ... ok
+test ring::tests::concurrent_order_is_preserved ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+   Doc-tests onklav_speech
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+warning: fields `output` and `last_audio` are never read
+ --> src/ring.rs:3:85
+  |
+3 | pub struct Ring {data:Box<[UnsafeCell<f32>]>,read:AtomicUsize,write:AtomicUsize,pub output:AtomicUsize,pub last_audio:AtomicUsize,pub can...
+  |            ---- fields in this struct                                               ^^^^^^                 ^^^^^^^^^^
+  |
+  = note: `#[warn(dead_code)]` on by default
+
+warning: associated items `new` and `pop` are never used
+  --> src/ring.rs:7:9
+   |
+ 6 | impl Ring {
+   | --------- associated items in this implementation
+ 7 |  pub fn new(capacity:usize)->Self{assert!(capacity>0);Self{data:(0..capacity).map(|_|UnsafeCell::new(0.)).collect(),read:AtomicUsize::new...
+   |         ^^^
+...
+11 |  pub fn pop(&self,out:&mut[f32]){let base=self.output.fetch_add(out.len(),Ordering::Relaxed);if self.cancelled.load(Ordering::Acquire){ou...
+   |         ^^^
+
+warning: `onklav-speech` (lib) generated 2 warnings
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.07s

@@ -1,0 +1,34 @@
+{
+  "date": "2026-10-29",
+  "status": "passed",
+  "unique_app_checks": 23,
+  "shared_mp3_checks": 2,
+  "unique_total": 25,
+  "retained_app_checks": 19,
+  "final_functional_seconds": 186.0,
+  "final_calculator_capture_seconds": 74.2,
+  "compiled_runtime_matches": true,
+  "reviewed_layouts": 5,
+  "apk_built": false,
+  "native_or_sdk_source_changed": false,
+  "shared_mp3_codec_changed": true,
+  "exact_user_clip_or_phone_playback_reproduced": false,
+  "limitations": [
+    "Actual handset AAC/mixing/merged video playback and complex GPU/export acceptance remain open.",
+    "M4A track inspection and network/progress cases are controlled host fixtures.",
+    "No phone speedup ratio or universal codec claim."
+  ],
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/CalcWorkspace.kt": "b859e271913e785f4860e0f997edbe0d755ce5f43766abd0630d2efef98a9801",
+    "android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt": "88d2cf99aa329b866ead79419243114bc2b94864d2c451b74e508c03b5e3ea3c",
+    "android/app/src/main/kotlin/app/onklav/home/VideoEditEngine.kt": "46ec539e0230aa672f1c450e5973beafd481fa6b73c57722a2b34490f7287c2d",
+    "android/app/src/main/kotlin/app/onklav/home/VideoAudioProbe.kt": "f7b8ac87f9dcca03d79a83ef864f339e8039e3fc8dead6bed579d40d2a8a3780",
+    "android/app/src/main/kotlin/app/onklav/home/YoutubeDownloads.kt": "7f921aad6d0ddb31ddf96e48b57c08a74026ccce62a33869460357f7a3c88fc7",
+    "android/app/src/main/kotlin/app/onklav/home/YoutubeAudioControls.kt": "c4f13ef818e9db85a5b91954febd8d61495f51a1213bc9fbc5e15b39a2caed4d",
+    "android/app/src/main/kotlin/app/onklav/home/YoutubeAudioOutput.kt": "40cccfe2d00ab58f99f83f2d5e2ab742b9f7e84f57cbe3fa120b9f113b43f92d",
+    "android/shared/src/main/kotlin/app/onklav/shared/Mp3Codec.kt": "3d9199a0c4acacf6d84551a58aeb6bb88291d56dc630ae401c927580684b14e1",
+    "android/app/src/test/kotlin/app/onklav/home/MediaEditingRepairTest.kt": "06e070d8c07a06b5807edb5a91761ae3543d6f62993cb671a80b612f7e8a266e",
+    "android/app/src/test/kotlin/app/onklav/home/YoutubeDownloadUiTest.kt": "3e068e0687df055416f627b206f78cb52aa79d6369fe01b046f988a0fede5517",
+    "scripts/verify_apks.py": "1e80a5f109d2040a9b98f60d669ab6099fbb0efc81709aa0ef4e09ea4a7b4e1b"
+  }
+}

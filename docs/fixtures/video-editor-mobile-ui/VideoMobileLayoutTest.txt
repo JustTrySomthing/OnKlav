@@ -1,0 +1,67 @@
+package app.onklav.home
+
+import androidx.activity.compose.setContent
+import androidx.compose.foundation.layout.*
+import androidx.compose.material3.*
+import androidx.compose.runtime.*
+import androidx.compose.runtime.snapshots.Snapshot
+import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalDensity
+import androidx.compose.ui.unit.*
+import androidx.compose.ui.test.*
+import androidx.compose.ui.test.junit4.createAndroidComposeRule
+import androidx.compose.ui.semantics.*
+import org.junit.*
+import org.junit.Assert.*
+import org.junit.runner.RunWith
+import org.robolectric.*
+import org.robolectric.annotation.*
+
+@RunWith(RobolectricTestRunner::class)
+@Config(sdk=[29],qualifiers="w960dp-h960dp-mdpi")
+@GraphicsMode(GraphicsMode.Mode.NATIVE)
+@LooperMode(LooperMode.Mode.PAUSED)
+class VideoMobileLayoutTest {
+ @get:Rule val compose=createAndroidComposeRule<androidx.activity.ComponentActivity>()
+ private var width=360;private var height=740
+ private lateinit var model:VideoEditorModel
+ private fun roots():List<Any>{val e=compose.javaClass.getDeclaredField("environment").apply{isAccessible=true}.get(compose);val r=e.javaClass.superclass!!.getDeclaredField("composeRootRegistry").apply{isAccessible=true}.get(e);return (r.javaClass.getMethod("getRegisteredComposeRoots").invoke(r) as Set<*>).filterNotNull()}
+ private fun pump(){repeat(4){Snapshot.sendApplyNotifications();compose.mainClock.advanceTimeBy(100);Shadows.shadowOf(android.os.Looper.getMainLooper()).idleFor(java.time.Duration.ofMillis(16));compose.runOnUiThread{roots().forEach{root->val v=root.javaClass.getMethod("getView").invoke(root)as android.view.View;val d=v.rootView;d.forceLayout();d.measure(android.view.View.MeasureSpec.makeMeasureSpec(width,android.view.View.MeasureSpec.EXACTLY),android.view.View.MeasureSpec.makeMeasureSpec(height,android.view.View.MeasureSpec.AT_MOST));d.layout(0,0,d.measuredWidth,d.measuredHeight);root.javaClass.getMethod("measureAndLayoutForTest").invoke(root)}}}}
+ private fun nodes():List<SemanticsNode>{val all=mutableListOf<SemanticsNode>();compose.runOnUiThread{fun walk(n:SemanticsNode){all.add(n);n.children.forEach(::walk)};roots().forEach{val o=it.javaClass.getMethod("getSemanticsOwner").invoke(it)as SemanticsOwner;walk(o.unmergedRootSemanticsNode)}};return all}
+ private fun matches(n:SemanticsNode,label:String,desc:Boolean)=if(desc)n.config.getOrNull(SemanticsProperties.ContentDescription)?.contains(label)==true else n.config.getOrNull(SemanticsProperties.Text)?.any{it.text==label}==true
+ private fun node(label:String,desc:Boolean=true):SemanticsNode=nodes().lastOrNull{matches(it,label,desc)}?:error("Missing $label")
+ private fun button(n:SemanticsNode):SemanticsNode{var p=n;while(!p.config.contains(SemanticsActions.OnClick)&&p.parent!=null)p=p.parent!!;return p}
+ private fun shown(label:String,desc:Boolean=true){val b=node(label,desc).boundsInRoot;assertTrue("$label has no visible height $b",b.height>0);assertTrue("$label outside screen $b",b.top>=0&&b.bottom<=height&&b.left>=0&&b.right<=width)}
+ private fun click(label:String,desc:Boolean=false){pump();shown(label,desc);compose.runOnUiThread{val n=button(node(label,desc));assertFalse(n.config.contains(SemanticsProperties.Disabled));assertTrue(n.config[SemanticsActions.OnClick].action!!.invoke())};pump()}
+ private fun scroll(label:String,desc:Boolean=true):SemanticsNode{repeat(8){val n=node(label,desc);val b=n.boundsInRoot;if(b.height>=16&&b.top>=56&&b.bottom<=height-64)return n;compose.runOnUiThread{var p=n.parent;while(p!=null&&!p.config.contains(SemanticsActions.ScrollBy))p=p.parent;p?.config?.getOrNull(SemanticsActions.ScrollBy)?.action?.invoke(0f,140f)};pump()};shown(label,desc);return node(label,desc)}
+ private fun set(label:String,value:Float){val n=scroll(label);compose.runOnUiThread{assertTrue(n.config[SemanticsActions.SetProgress].action!!.invoke(value))};pump()}
+ private fun stage(s:String){java.io.File("/tmp/video-ui-progress.txt").appendText(s+"\n")}
+ private fun fixture(w:Int,h:Int,font:Float=1f){stage("fixture $w $h font $font");width=w;height=h;model=VideoEditorModel();model.project=model.project.copy(clips=model.project.clips+model.project.clips.first().copy(id=videoId(),name="Ending.jpg"),music=listOf(VideoMusic(file="a.media",name="Music.mp3",sourceMs=8000),VideoMusic(file="b.media",name="Narration.m4a",sourceMs=8000)))
+  val image=android.graphics.Bitmap.createBitmap(320,180,android.graphics.Bitmap.Config.ARGB_8888);image.eraseColor(android.graphics.Color.rgb(24,88,110));model.thumbnails=mapOf("a.media" to image)
+  org.robolectric.shadows.ShadowChoreographer.setPaused(true);compose.mainClock.autoAdvance=false
+  compose.runOnUiThread{compose.activity.setContent{MaterialTheme(colorScheme=darkColorScheme(primary=androidx.compose.ui.graphics.Color(0xffc9a9f8),secondaryContainer=androidx.compose.ui.graphics.Color(0xff493364))){CompositionLocalProvider(LocalDensity provides Density(1f,font)){Surface{Column(Modifier.fillMaxSize()){Box(Modifier.fillMaxWidth().height(56.dp)){Text("Video Editor",Modifier.padding(12.dp),style=MaterialTheme.typography.titleMedium)};Box(Modifier.weight(1f)){VideoEditorContent(model,false,remember{VideoToolbarState()})};Spacer(Modifier.height(64.dp))}}}}}}
+  pump()
+ }
+ private fun checkControls(){listOf("Edit tools","Audio tools","Layers tools","Finish tools","Play preview","More video options").forEach{shown(it);assertTrue("$it target too small",button(node(it)).boundsInRoot.height>=48)};val b=node("Video preview").boundsInRoot;assertTrue(b.height>=64);assertTrue(b.left>=0&&b.right<=width)}
+ private fun capture(name:String){compose.runOnUiThread{val v=compose.activity.window.decorView;val b=android.graphics.Bitmap.createBitmap(v.width,v.height,android.graphics.Bitmap.Config.ARGB_8888);v.draw(android.graphics.Canvas(b));val f=java.io.File(System.getProperty("video.evidence"),"$name.png");f.parentFile!!.mkdirs();f.outputStream().use{b.compress(android.graphics.Bitmap.CompressFormat.PNG,100,it)};b.recycle()}}
+
+ @Test(timeout=60000) fun portraitToolsAndSlidersRemainReachable(){fixture(360,740);stage("portrait ready");checkControls();capture("portrait-timeline");click("Edit tools",true);click("Choose editing tool",true);click("Transform");set("Zoom",1.6f);assertEquals(1.6f,model.clip!!.zoom);scroll("Reset Zoom");click("Reset Zoom",true);assertEquals(1f,model.clip!!.zoom);checkControls();capture("portrait-transform");click("Done editing",true);shown("Timeline");click("Layers tools",true);click("Choose editing tool",true);click("Captions");shown("Import SRT / WebVTT",false);click("Done editing",true);click("More video options",true);click("Preview & proxies");shown("Editing preview",false);click("Done editing",true);stage("portrait passed") }
+ @Test(timeout=60000) fun shortPhoneShowsSettingsInsteadOfCrushingThem(){fixture(320,480);click("Edit tools",true);checkControls();assertFalse(nodes().any{matches(it,"Timeline",true)});scroll("Reset clip effects",false);capture("short-phone-tools");click("Done editing",true);shown("Timeline");stage("short passed") }
+ @Test(timeout=60000) fun largeTextAudioUsesOneSelectedTrack(){fixture(320,640,1.6f);click("Audio tools",true);checkControls();click("Choose audio track",true);click("Narration.m4a");scroll("Remove Narration.m4a");assertFalse(nodes().any{matches(it,"Remove Music.mp3",true)});set("Pitch",3f);assertEquals(3f,model.project.music[1].pitch);assertEquals(0f,model.project.music[0].pitch);capture("large-text-audio");stage("large passed") }
+ @Test(timeout=60000) fun landscapeKeepsPreviewTimelineAndToolsSeparate(){fixture(740,360);stage("landscape ready");click("Edit tools",true);checkControls();shown("Timeline");val preview=node("Video preview").boundsInRoot;val tools=node("Choose editing tool").boundsInRoot;assertTrue(tools.left>=preview.right);capture("landscape-edit");click("Done editing",true);shown("Editing tools",false);stage("landscape passed") }
+ @Test(timeout=60000) fun fullscreenSourceAndLongStatusHaveClearExitAndDetails(){fixture(360,740);click("Fullscreen preview",true);shown("Fullscreen source frame");shown("Close fullscreen");click("Close fullscreen",true);model.status="Could not prepare preview. "+"A detailed error with recovery information. ".repeat(12);model.error=true;pump();click("Show video status details",true);shown("Video status",false);click("Close");model.dismiss();pump();checkControls();stage("fullscreen and details passed") }
+
+ @Test(timeout=60000) fun frameControlsAndExactTimeRemainUsable(){fixture(360,740);click("Edit tools",true);click("Next frame");assertEquals(33L,model.cursor);click("Previous frame");assertEquals(0L,model.cursor);click("Done editing",true);click("More video options",true);click("Go to exact time");shown("Seconds",false)
+  compose.runOnUiThread{val n=nodes().last{it.config.contains(SemanticsActions.SetText)};assertTrue(n.config[SemanticsActions.SetText].action!!.invoke(androidx.compose.ui.text.AnnotatedString("1.234")))};pump();click("Apply");assertEquals(1234L,model.cursor);stage("precision passed") }
+ @Test(timeout=60000) fun selectedAudioSurvivesInspectorCloseAndReopen(){fixture(360,740);click("Audio tools",true);click("Choose audio track",true);click("Narration.m4a");val id=model.project.music[1].id;assertEquals(id,model.selectedAudioId);click("Done editing",true);click("Audio tools",true);scroll("Remove Narration.m4a");assertFalse(nodes().any{matches(it,"Remove Music.mp3",true)});assertEquals(id,model.selectedAudioId);stage("retained audio passed") }
+ @Test(timeout=60000) fun timelineAudioTapSelectsTheTouchedTrack(){fixture(360,740);val b=node("Timeline").boundsInRoot;val x=b.center.x;val y=b.top+94+12;val t=android.os.SystemClock.uptimeMillis()
+  fun event(action:Int){compose.runOnUiThread{val e=android.view.MotionEvent.obtain(t,android.os.SystemClock.uptimeMillis(),action,x,y,0);compose.activity.window.decorView.dispatchTouchEvent(e);e.recycle()};pump()}
+  event(android.view.MotionEvent.ACTION_DOWN);event(android.view.MotionEvent.ACTION_UP);assertEquals(model.project.music[0].id,model.selectedAudioId);scroll("Remove Music.mp3");capture("selected-audio-lane");stage("audio lane passed") }
+
+ @Test(timeout=60000) fun verticalTimelineDragRevealsHiddenAudioLanes(){fixture(320,480);val timeline=node("Timeline");var parent=timeline.parent
+  while(parent!=null&&!parent.config.contains(SemanticsProperties.VerticalScrollAxisRange))parent=parent.parent
+  val range=requireNotNull(parent).config[SemanticsProperties.VerticalScrollAxisRange];val before=range.value();val b=timeline.boundsInRoot;val x=b.center.x;val y=b.top+50;val t=android.os.SystemClock.uptimeMillis()
+  fun event(action:Int,py:Float){compose.runOnUiThread{val e=android.view.MotionEvent.obtain(t,android.os.SystemClock.uptimeMillis(),action,x,py,0);compose.activity.window.decorView.dispatchTouchEvent(e);e.recycle()};pump()}
+  event(android.view.MotionEvent.ACTION_DOWN,y);event(android.view.MotionEvent.ACTION_MOVE,y-55);event(android.view.MotionEvent.ACTION_UP,y-55);pump();assertTrue("Vertical timeline swipe must scroll the tracks",range.value()>before);assertEquals(0L,model.cursor);stage("vertical lanes passed") }
+
+}

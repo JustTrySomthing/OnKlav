@@ -1,0 +1,14 @@
+{
+  "grants": [],
+  "steps": [
+    {
+      "action": "check",
+      "expect": {
+        "streams": 1,
+        "page": "Hello",
+        "resumed": 5,
+        "calendar": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,74 @@
+{
+  "chunk": 30,
+  "status": "source implemented; actual Android renderer/IPC/device qualification pending",
+  "production_path": "Public pdf helper -> signed visible body widget + storage.private broker -> owner immutable private blob -> canonical readonly descriptor -> non-exported isolated PdfRenderer service -> bounded PNG pipe/native text metadata -> shared Compose viewer",
+  "isolated_android_protocol_backend_cases_passed": 7,
+  "rust_owner_widget_cases_passed": 2,
+  "public_helper_cases_passed": 1,
+  "developer_contract_cases_passed": 5,
+  "signed_guest_scenario_steps_passed": 5,
+  "android_evidence_limits": "Actual production service/client/viewer sources compiled against real shared UI, compile-only controller/JNI adapters. Tests exercise a fake PdfEngine backend, canonical-file checks and bookmarks. They do not run AndroidPdfEngine/PDFium, service IPC, process watchdog or phone rendering.",
+  "final_ui_compile_passed": true,
+  "copy_control": "Native explicit Copy checks the current clipboard.write grant and PDF owner; implicit text-selection copy toolbar removed.",
+  "fixture": {
+    "path": "docs/fixtures/pdf-sample.pdf",
+    "pages": 2,
+    "page_points": [
+      420,
+      600
+    ],
+    "poppler_render_visual_review": "Both pages inspected: legible Unicode text, selection target, page numbers; no layout defects",
+    "poppler_text_extracted": true,
+    "android_rendering_tested": false
+  },
+  "bounds": {
+    "file_bytes": 52428800,
+    "pages": 2000,
+    "render_pixels": 2000000,
+    "png_bytes": 8388608,
+    "search_pages_per_batch": 8,
+    "matches_per_batch": 40,
+    "selection_utf16": 20000,
+    "worker_watchdog_ms": 12000,
+    "client_timeout_ms": 15000
+  },
+  "supported_profile": "Unencrypted PDF raster pages; advanced native search/text/selection on API35+. Older platforms raster-only. Page/zoom/navigation, highlighted matches and owner/publisher/file-pinned positions.",
+  "unsupported": [
+    "OCR",
+    "Password/encrypted document workflows",
+    "Editing/forms/annotations",
+    "Full PDF conformance claim"
+  ],
+  "native": {
+    "linux_jni_sha256": "f279ce6e0059a2f6d1249cd974f27f3fffcc3600b12213c8bde1631c42d974a7",
+    "arm64_jni_sha256": "43b80acb7cb66f1ca56726cf56d1d94b9767c9732ed869b049f766b356f518ce",
+    "arm64_load_alignment": 16384
+  },
+  "native_source_hashes_verified": true,
+  "released_main_jni_unchanged": true,
+  "remaining_qualification": [
+    "Full Android host integration: existing unavailable dependency bytes remain a blocker",
+    "Actual Android PDFium + readonly descriptor IPC/watchdog/lifecycle/revocation checks",
+    "Phone layout, TalkBack, selection gestures, process recovery and sustained heap/performance"
+  ],
+  "apk_created": false,
+  "sdk_release_created": false,
+  "shipping_package_created": false,
+  "next_feature": 31,
+  "logs": [
+    "docs/evidence/v0.70.0/pdf-core-tests.log",
+    "docs/evidence/v0.70.0/pdf-component-tests.log",
+    "docs/evidence/v0.70.0/pdf-contract.log",
+    "docs/evidence/v0.70.0/pdf-android-final.log",
+    "docs/evidence/v0.70.0/pdf-ui-final-compile.log",
+    "docs/evidence/v0.70.0/pdf-broker.log",
+    "docs/evidence/v0.70.0/pdf-native.log"
+  ],
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/SdkPdfViewer.kt": "8d534b3aeaea1ea6ca3b1f6c998642d8562f938781aa756730d826404cb3e8d7",
+    "android/app/src/main/kotlin/app/onklav/home/SdkPdfEngine.kt": "ae6b1167ff173360549880098c6b82c4be82d8e806bec49594e49abc420325d8",
+    "android/app/src/main/kotlin/app/onklav/home/SdkPdfPositions.kt": "53b84cefd52b1ffb3bf3612dfe66e1a64e70f6b421782ee1c619790bc78f0de6",
+    "android/app/src/main/kotlin/app/onklav/home/SdkPdfService.kt": "8c384644c16314418912de044573cbafd859d76af542ff4f84ceb4e340c7fd13",
+    "android/app/src/main/kotlin/app/onklav/home/SdkPdfClient.kt": "9707359a0b5d1bc6b13d244ec43e5b873c6c50cad8db6733643e803b7901c291"
+  }
+}

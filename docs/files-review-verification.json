@@ -1,0 +1,23 @@
+{
+  "scope": "Latest Files storage tab changes and Android file operations",
+  "production_compile": "passed",
+  "focused_host_tests": {
+    "AndroidSharedFilesTest": 3,
+    "FilesPresentationUiTest": 3
+  },
+  "fixes": [
+    "Trash search original filenames and folder MIME",
+    "Hide backing Trash folder",
+    "Failed-copy cleanup preserves unowned files",
+    "Bounded deletion preflight rejects symbolic links",
+    "Move chooser reset and invalid destination/paste controls"
+  ],
+  "device_verification": false,
+  "apk_built": false,
+  "final_source_compile": "passed after refreshing generated class output",
+  "verification_scope": {
+    "automated": "Three Android shared-file regressions and three Files layout/navigation host checks",
+    "source_review": "Move chooser Home/tab/Back guards and invalid destination/paste controls",
+    "handset": "Not tested"
+  }
+}

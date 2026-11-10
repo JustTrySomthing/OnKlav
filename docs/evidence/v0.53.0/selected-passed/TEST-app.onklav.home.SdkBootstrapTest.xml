@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.SdkBootstrapTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-23T20:01:01" hostname="41aed82b0335" time="10.68">
+  <properties/>
+  <testcase name="warmSetupPreservesRemovalAndLivePermissionRevocation" classname="app.onklav.home.SdkBootstrapTest" time="7.602"/>
+  <testcase name="setupRecoversWhenRegistryIsMissingWithinSameProcess" classname="app.onklav.home.SdkBootstrapTest" time="1.888"/>
+  <testcase name="apkUpgradeUpdatesExistingBundledPackageAndKeepsPermissionsAndData" classname="app.onklav.home.SdkBootstrapTest" time="1.19"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

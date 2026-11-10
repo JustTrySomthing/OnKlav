@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.RadioConnectionHandoffTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-31T01:57:13" hostname="fa7478106f85" time="4.136">
+  <properties/>
+  <testcase name="oldProbeThenReopenReproducesTheFailureButTransferredStreamPlaysOnTheFirstRequest" classname="app.onklav.home.RadioConnectionHandoffTest" time="3.705"/>
+  <testcase name="switchAndReopenCyclesEachUseOneRequestAndAlwaysStartAtTheFirstAudioByte" classname="app.onklav.home.RadioConnectionHandoffTest" time="0.167"/>
+  <testcase name="releasingTheTransportOwnerUnblocksAnActiveSocketReadBeforeOpeningAnotherStation" classname="app.onklav.home.RadioConnectionHandoffTest" time="0.163"/>
+  <testcase name="revokedReadNeverConsumesThePreparedAudio" classname="app.onklav.home.RadioConnectionHandoffTest" time="0.038"/>
+  <testcase name="preparedStreamIsOneShotAndClosingAnUnusedDataSourceCancelsIt" classname="app.onklav.home.RadioConnectionHandoffTest" time="0.034"/>
+  <testcase name="liveHandoffHasNoWholeCallDeadline" classname="app.onklav.home.RadioConnectionHandoffTest" time="0.029"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

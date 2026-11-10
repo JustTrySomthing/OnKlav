@@ -1,0 +1,24 @@
+{
+  "build": [],
+  "restore_bundles": [],
+  "reuse": [
+    "Calc",
+    "Convert",
+    "Weather",
+    "eBooks",
+    "AudioBooks",
+    "Podcasts",
+    "Radio",
+    "Files",
+    "Notes",
+    "Counter",
+    "RSS",
+    "ReadAloud",
+    "Browser",
+    "YouTube",
+    "Annotation",
+    "Social",
+    "WalkieTalkie"
+  ],
+  "unselected_stale": []
+}

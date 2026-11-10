@@ -1,0 +1,95 @@
+{
+  "application_findings_fixed": [
+    "C01",
+    "C02",
+    "C03",
+    "C04",
+    "C05"
+  ],
+  "tooling_findings_fixed": [
+    "C06"
+  ],
+  "android_host_checks": 57,
+  "android_suites": [
+    {
+      "name": "app.onklav.shared.NativeBridgeTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0"
+    },
+    {
+      "name": "app.onklav.home.PhoneCallLifecycleTest",
+      "tests": "14",
+      "failures": "0",
+      "errors": "0"
+    },
+    {
+      "name": "app.onklav.home.SmsSettlementTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0"
+    },
+    {
+      "name": "app.onklav.shared.LauncherLayoutTest",
+      "tests": "8",
+      "failures": "0",
+      "errors": "0"
+    },
+    {
+      "name": "app.onklav.home.AudioHandoffTest",
+      "tests": "5",
+      "failures": "0",
+      "errors": "0"
+    },
+    {
+      "name": "app.onklav.home.RadioContinuityTest",
+      "tests": "5",
+      "failures": "0",
+      "errors": "0"
+    },
+    {
+      "name": "app.onklav.shared.Mp3CodecTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0"
+    },
+    {
+      "name": "app.onklav.home.MmsDownloadRecoveryTest",
+      "tests": "12",
+      "failures": "0",
+      "errors": "0"
+    },
+    {
+      "name": "app.onklav.shared.ThemePackageTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0"
+    }
+  ],
+  "python_tooling_checks": 38,
+  "new_android_regressions": 7,
+  "new_cache_regressions": 8,
+  "production_and_all_test_compilation": "passed",
+  "runtime_bundle_matches_compiled_Kotlin": true,
+  "staged_checks": "Other 43 host checks retained from the functional run; final PhoneCallLifecycleTest rerun passed all 14 after fixing its unknown-direction test fixture. No unchanged app suite was rerun unnecessarily. Shared checks counted once.",
+  "initial_issues_resolved": [
+    "Nullable test assertion compilation error",
+    "Unknown-direction fixture initialized to incoming value 0, corrected to DIRECTION_UNKNOWN=-1",
+    "Generated dependency metadata-read interruption, narrowly bounded recovery helper added"
+  ],
+  "physical_phone_testing": false,
+  "apk_built": false,
+  "remaining": "Physical SMS17 modem/network cause unconfirmed; Samsung/carrier/provider/headset/codec qualification remains separate.",
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/SdkMedia.kt": "c1c19f8838614a0d2ce7555aee56f23674ecd6698cf3d89395e3549604f79c73",
+    "android/app/src/main/kotlin/app/onklav/home/PhoneTelecom.kt": "fbd74da0c41d2a92945bd6d2aab29d3624fd22ff11938617aef2257eadef6fa3",
+    "android/app/src/main/kotlin/app/onklav/home/MmsDownloadRecovery.kt": "b4e9c8f6a55f39aa6d2abdf0f8877a3178e4668b4281fa2982f4f772f3017ee5",
+    "android/app/src/test/kotlin/app/onklav/home/AudioHandoffTest.kt": "81d68495425136e5f83c2eeb72b59b557c023eec09568e6a97fed3e538fcbb0d",
+    "android/app/src/test/kotlin/app/onklav/home/RadioContinuityTest.kt": "829ab6d11e37658daa570a5846c0bad031cc1ba7a87421eaec7e996cf903d76d",
+    "android/app/src/test/kotlin/app/onklav/home/PhoneCallLifecycleTest.kt": "39d9307294e2025d512c5f83c05a476af9c35e6a03e26566a75da8b401e632a6",
+    "android/app/src/test/kotlin/app/onklav/home/MmsDownloadRecoveryTest.kt": "039d278728b8223ca47c40e4c25dae5da6c787d73203a4f776bf4ad477037bde",
+    "scripts/check_android.py": "1680bf0a365d04d04fc0e56d7c8c95422f108a1f644947832692dce54a767731",
+    "scripts/gradle_cache_repair.py": "20d3774311c172c3722620197e8edc029ea4d4491fe63622e96250fdbe3f1c32",
+    "scripts/test_gradle_cache_repair.py": "d5aff04390cdfcdd9e6e1f448a97e5fa32e18030325a8f5a228e966857aefa4b"
+  }
+}

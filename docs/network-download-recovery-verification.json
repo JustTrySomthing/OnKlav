@@ -1,0 +1,55 @@
+{
+  "version": "0.100.0",
+  "scope": "source changes; not a phone or APK acceptance claim",
+  "local_checks": {
+    "passed": 11,
+    "classes": [
+      "NetworkDownloadRecoveryTest",
+      "YoutubeDownloadUiTest",
+      "YoutubeMediaRepairsTest"
+    ]
+  },
+  "live_provider": {
+    "extraction": "observed successful on official Blender video aqz-KE-bpKQ",
+    "track_count": 20,
+    "available_heights": [
+      144,
+      240,
+      360,
+      480,
+      720,
+      1080,
+      1440,
+      2160
+    ],
+    "media_transfer": "blocked by test environment; HTTP206 text/html body titled Site Unavailable, Unable to access this site.",
+    "test_result": "failed media-content assertion; not counted as a pass",
+    "full_download_and_phone_conversion": "not verified"
+  },
+  "initial_live_fixture": "BaW_jenozKc unavailable; YouTube oEmbed HTTP404 confirmed. Replaced with official Blender Big Buck Bunny video with successful oEmbed metadata.",
+  "core_changed": false,
+  "signed_apps_changed": false,
+  "apk_built": false,
+  "native": "retained unchanged",
+  "remaining": [
+    "Samsung Wi-Fi to cellular playback and browser recovery",
+    "complete live media transfer, native conversion, and actual saved playback",
+    "complete full lint; bounded run timed out"
+  ],
+  "changed_production_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/DefaultNetworkRecovery.kt": "d4519d337d5dbbabd7e62e14a3bb862cfe7088e4dba526a5ca862c5ff5095bad",
+    "android/app/src/main/kotlin/app/onklav/home/SdkFeedService.kt": "b26012e05ea4b61d761e3f22532b8397dd3d721ea00001b974d1432e6238cc90",
+    "android/app/src/main/kotlin/app/onklav/home/SdkMedia.kt": "9d93948cabdba658392b96c1e692228413b13355c621410a31adc439acbfb69b",
+    "android/app/src/main/kotlin/app/onklav/home/SdkWebComponent.kt": "1a8333d59eb028be134801773f3d0c0377f5f2e9d0c2e19ef45a90175fdec6f5",
+    "android/app/src/main/kotlin/app/onklav/home/YoutubeDownloads.kt": "e4d5fa7cd15ca551c71848d2d7c68c1aea6cb5bab9c3b68357a87c63bb6dadf9",
+    "android/app/src/main/kotlin/app/onklav/home/YoutubeResolver.kt": "3c63b4465c7d1ff57dfa9ada30f20a1f1f5563a7ff1bedcda6d0f2b0c3cf752e",
+    "android/app/src/main/kotlin/app/onklav/home/SettingsDialogs.kt": "26cfa8a36fa409a2f877bd4fcf9a9fabce83eac23cbbfafc254fe848c0515685"
+  },
+  "lint": {
+    "result": "not completed",
+    "reason": "stopped at the bounded120-second limit during lintAnalyzeDebug; not retried"
+  },
+  "checkpoint_and_build_input_checks": {
+    "passed": 12
+  }
+}

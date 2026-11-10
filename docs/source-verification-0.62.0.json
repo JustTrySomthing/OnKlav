@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-23",
+  "source_version": "0.62.0-dev",
+  "source_version_code": 70,
+  "scope": "Two source-only steps: Browser and YouTube checked backup/restore",
+  "apk_built": false,
+  "tests": {
+    "passed": 191,
+    "failed": 0,
+    "unexpected_failures": 0,
+    "known_failures": [],
+    "rust_broad": {
+      "passed": 183,
+      "failed": 0,
+      "fresh_run": true,
+      "evidence": "docs/evidence/v0.62.0/rust-tests.log"
+    },
+    "fresh_framework_host": [
+      {
+        "class": "app.onklav.home.LibraryBackupTest",
+        "passed": 7,
+        "failed": 0,
+        "skipped": 0,
+        "evidence": "docs/evidence/v0.62.0/TEST-app.onklav.home.LibraryBackupTest.xml"
+      },
+      {
+        "class": "app.onklav.home.SettingsUiHostTest.sdkDocumentBackupsAreReachableAndReturnToSettings",
+        "passed": 1,
+        "failed": 0,
+        "skipped": 0,
+        "evidence": "docs/evidence/v0.62.0/TEST-app.onklav.home.SettingsUiHostTest.xml"
+      }
+    ]
+  },
+  "build_evidence": null,
+  "apk_evidence": null,
+  "native_proof": "docs/native-provenance.json",
+  "sdk_proof": "docs/app-sdk-provenance.json",
+  "full_rewrite_complete": false,
+  "handset_acceptance": false,
+  "carrier_acceptance": false,
+  "next_work": "docs/FINISH-NON-GAME.md",
+  "note": "User explicitly skipped APK assembly. One full Rust pass and source-matched Linux/ARM64 native rebuild; seven provider/JNI checks reopen restored signed apps and retain current entries. One six-dialog Settings navigation check passes. Two new Rust scenarios included in 183, not double-counted with the focused run. No WebView/profile/account data or network activity is restored. Native outputs are reusable for a later requested APK. Full SDK integration, Walkie portability and real provider/phone/account/carrier acceptance remain open.",
+  "timezone": "America/Chicago",
+  "apk_skipped_by_user": true,
+  "last_delivered_apk": "0.61.0-dev/code69"
+}

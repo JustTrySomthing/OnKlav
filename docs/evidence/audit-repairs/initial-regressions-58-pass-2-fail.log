@@ -1,0 +1,406 @@
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=34193 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=34193 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.11.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :android:app
+WARNING: The option setting 'android.aapt2FromMavenOverride=/workspace/scratch/21249b7ec6ea/build-env/sdk/build-tools/35.0.0/aapt2' is experimental.
+WARNING: platform-tools package is not installed.
+
+> Task :android:app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:app:preBuild UP-TO-DATE
+> Task :android:app:preDebugBuild UP-TO-DATE
+> Task :android:games:preBuild UP-TO-DATE
+> Task :android:games:preDebugBuild UP-TO-DATE
+> Task :android:games:writeDebugAarMetadata UP-TO-DATE
+> Task :android:shared:preBuild UP-TO-DATE
+> Task :android:shared:preDebugBuild UP-TO-DATE
+> Task :android:shared:writeDebugAarMetadata UP-TO-DATE
+> Task :android:tools:preBuild UP-TO-DATE
+> Task :android:tools:preDebugBuild UP-TO-DATE
+> Task :android:tools:writeDebugAarMetadata UP-TO-DATE
+> Task :android:app:checkDebugAarMetadata UP-TO-DATE
+> Task :android:app:generateDebugResValues UP-TO-DATE
+> Task :android:games:generateDebugResValues UP-TO-DATE
+> Task :android:games:generateDebugResources UP-TO-DATE
+> Task :android:games:packageDebugResources UP-TO-DATE
+> Task :android:shared:generateDebugResValues UP-TO-DATE
+> Task :android:shared:generateDebugResources UP-TO-DATE
+> Task :android:shared:packageDebugResources UP-TO-DATE
+> Task :android:tools:generateDebugResValues UP-TO-DATE
+> Task :android:tools:generateDebugResources UP-TO-DATE
+> Task :android:tools:packageDebugResources UP-TO-DATE
+> Task :android:app:mapDebugSourceSetPaths UP-TO-DATE
+> Task :android:app:generateDebugResources UP-TO-DATE
+> Task :android:app:mergeDebugResources UP-TO-DATE
+> Task :android:app:packageDebugResources UP-TO-DATE
+> Task :android:app:parseDebugLocalResources UP-TO-DATE
+> Task :android:app:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :android:app:extractDeepLinksDebug UP-TO-DATE
+> Task :android:games:extractDeepLinksDebug UP-TO-DATE
+> Task :android:games:processDebugManifest UP-TO-DATE
+> Task :android:shared:extractDeepLinksDebug UP-TO-DATE
+> Task :android:shared:processDebugManifest UP-TO-DATE
+> Task :android:tools:extractDeepLinksDebug UP-TO-DATE
+> Task :android:tools:processDebugManifest UP-TO-DATE
+> Task :android:app:processDebugMainManifest UP-TO-DATE
+> Task :android:app:processDebugManifest UP-TO-DATE
+> Task :android:app:processDebugManifestForPackage UP-TO-DATE
+> Task :android:games:compileDebugLibraryResources UP-TO-DATE
+> Task :android:games:parseDebugLocalResources UP-TO-DATE
+> Task :android:games:generateDebugRFile UP-TO-DATE
+> Task :android:shared:compileDebugLibraryResources UP-TO-DATE
+> Task :android:shared:parseDebugLocalResources UP-TO-DATE
+> Task :android:shared:generateDebugRFile UP-TO-DATE
+> Task :android:tools:compileDebugLibraryResources UP-TO-DATE
+> Task :android:tools:parseDebugLocalResources UP-TO-DATE
+> Task :android:tools:generateDebugRFile UP-TO-DATE
+> Task :android:app:processDebugResources UP-TO-DATE
+> Task :android:games:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:games:compileDebugKotlin UP-TO-DATE
+> Task :android:games:javaPreCompileDebug UP-TO-DATE
+> Task :android:games:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:games:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :android:shared:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:shared:compileDebugKotlin UP-TO-DATE
+> Task :android:shared:javaPreCompileDebug UP-TO-DATE
+> Task :android:shared:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:shared:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :android:tools:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:tools:compileDebugKotlin UP-TO-DATE
+> Task :android:tools:javaPreCompileDebug UP-TO-DATE
+> Task :android:tools:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:tools:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :android:app:compileDebugKotlin UP-TO-DATE
+> Task :android:app:javaPreCompileDebug UP-TO-DATE
+> Task :android:app:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:app:bundleDebugClassesToCompileJar UP-TO-DATE
+> Task :android:app:compileDebugUnitTestKotlin UP-TO-DATE
+> Task :android:app:preDebugUnitTestBuild UP-TO-DATE
+> Task :android:app:javaPreCompileDebugUnitTest UP-TO-DATE
+> Task :android:app:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :android:app:mergeDebugShaders UP-TO-DATE
+> Task :android:app:compileDebugShaders NO-SOURCE
+> Task :android:app:generateDebugAssets UP-TO-DATE
+> Task :android:games:mergeDebugShaders UP-TO-DATE
+> Task :android:games:compileDebugShaders NO-SOURCE
+> Task :android:games:generateDebugAssets UP-TO-DATE
+> Task :android:games:mergeDebugAssets UP-TO-DATE
+> Task :android:shared:mergeDebugShaders UP-TO-DATE
+> Task :android:shared:compileDebugShaders NO-SOURCE
+> Task :android:shared:generateDebugAssets UP-TO-DATE
+> Task :android:app:bundleDebugClassesToRuntimeJar
+> Task :android:shared:mergeDebugAssets UP-TO-DATE
+> Task :android:tools:mergeDebugShaders UP-TO-DATE
+> Task :android:tools:compileDebugShaders NO-SOURCE
+> Task :android:tools:generateDebugAssets UP-TO-DATE
+> Task :android:tools:mergeDebugAssets UP-TO-DATE
+> Task :android:app:mergeDebugAssets UP-TO-DATE
+> Task :android:app:packageDebugUnitTestForUnitTest UP-TO-DATE
+> Task :android:app:generateDebugUnitTestConfig UP-TO-DATE
+> Task :android:app:processDebugJavaRes UP-TO-DATE
+> Task :android:app:processDebugUnitTestJavaRes UP-TO-DATE
+> Task :android:games:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :android:games:processDebugJavaRes UP-TO-DATE
+> Task :android:shared:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :android:shared:processDebugJavaRes UP-TO-DATE
+> Task :android:tools:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :android:tools:processDebugJavaRes UP-TO-DATE
+
+> Task :android:app:testDebugUnitTest
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=34193 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=34193 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+AuditRepairTest > byteLimitsMatchFilesAndFailBeforeWritingTheOverflowChunk STARTED
+
+AuditRepairTest > byteLimitsMatchFilesAndFailBeforeWritingTheOverflowChunk PASSED
+
+AuditRepairTest > twentyEscapedPasswordAccountsRoundTripAndCanBeRemoved STARTED
+
+AuditRepairTest > twentyEscapedPasswordAccountsRoundTripAndCanBeRemoved PASSED
+
+AuditRepairTest > clockRollbackRestoresInboxAndUnreadWhileJournalReplayPreservesArchive STARTED
+
+AuditRepairTest > clockRollbackRestoresInboxAndUnreadWhileJournalReplayPreservesArchive PASSED
+
+AuditRepairTest > timestampCutoffNeverAdmitsAnOccurrenceAfterItsInstant STARTED
+
+AuditRepairTest > timestampCutoffNeverAdmitsAnOccurrenceAfterItsInstant PASSED
+
+AuditRepairTest > equalWallTimesGetDistinctDurableOrdersAndReadUsesTheSameClock STARTED
+
+AuditRepairTest > equalWallTimesGetDistinctDurableOrdersAndReadUsesTheSameClock PASSED
+
+AuditRepairTest > theSameMmsReceiptReusesItsPersistedOrder STARTED
+
+AuditRepairTest > theSameMmsReceiptReusesItsPersistedOrder PASSED
+
+AuditRepairTest > exactTimestampAndDateCutoffsRemainInclusiveAcrossZones STARTED
+
+AuditRepairTest > exactTimestampAndDateCutoffsRemainInclusiveAcrossZones PASSED
+
+AuditRepairTest > invalidEnvelopeIsKeptAndNeverOverwritten STARTED
+
+AuditRepairTest > invalidEnvelopeIsKeptAndNeverOverwritten PASSED
+
+AuditRepairTest > oldNativeReadAndReceiveStateSeedsTheReceiptSequence STARTED
+
+AuditRepairTest > oldNativeReadAndReceiveStateSeedsTheReceiptSequence PASSED
+
+AuditRepairTest > exportHelperWritesTheWholeFileAndPropagatesCopyOrCancellationFailures STARTED
+
+AuditRepairTest > exportHelperWritesTheWholeFileAndPropagatesCopyOrCancellationFailures PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=34193 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=34193 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+CalendarModelTest > undoRestoresTheFreshTransactionWithoutLosingAnotherWindowsEvent STARTED
+
+CalendarModelTest > undoRestoresTheFreshTransactionWithoutLosingAnotherWindowsEvent PASSED
+
+CalendarModelTest > occurrenceRevisionStaysMonotonicWhenPhoneClockMovesBack STARTED
+
+CalendarModelTest > occurrenceRevisionStaysMonotonicWhenPhoneClockMovesBack PASSED
+
+CalendarModelTest > staleEditorCannotResurrectAnEventDeletedInAnotherWindow STARTED
+
+CalendarModelTest > staleEditorCannotResurrectAnEventDeletedInAnotherWindow PASSED
+
+CalendarModelTest > notificationOpensTheRequestedRecurringDate STARTED
+
+CalendarModelTest > notificationOpensTheRequestedRecurringDate PASSED
+
+CalendarModelTest > importsChooseACalendarKeepExistingUidsAndCanBeUndone STARTED
+
+CalendarModelTest > importsChooseACalendarKeepExistingUidsAndCanBeUndone PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=34193 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=34193 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+CalendarScheduleRepairTest > schedulingFailurePreservesEventAndPreviousScheduleAndRetryClearsTheWarning STARTED
+
+CalendarScheduleRepairTest > schedulingFailurePreservesEventAndPreviousScheduleAndRetryClearsTheWarning PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=34193 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=34193 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+CalendarTest > allDayCalendarExportPreservesDateRange STARTED
+
+CalendarTest > allDayCalendarExportPreservesDateRange PASSED
+
+CalendarTest > icsRejectsUnsupportedRecurrenceInsteadOfChangingItSilently STARTED
+
+CalendarTest > icsRejectsUnsupportedRecurrenceInsteadOfChangingItSilently PASSED
+
+CalendarTest > oldRecurrencesJumpToRequestedWindowAndLimitsAreApplied STARTED
+
+CalendarTest > oldRecurrencesJumpToRequestedWindowAndLimitsAreApplied PASSED
+
+CalendarTest > recurringLocalTimesSurviveDstAndMidnightRanges STARTED
+
+CalendarTest > recurringLocalTimesSurviveDstAndMidnightRanges PASSED
+
+CalendarTest > springGapNeverCreatesAZeroLengthOccurrence STARTED
+
+CalendarTest > springGapNeverCreatesAZeroLengthOccurrence PASSED
+
+CalendarTest > weeklyIntervalExclusionsAndInclusiveRepeatEnd STARTED
+
+CalendarTest > weeklyIntervalExclusionsAndInclusiveRepeatEnd PASSED
+
+CalendarTest > reminderPlanSeparatesSoundAndSkipsDeliveredAndStaleTimes STARTED
+
+CalendarTest > reminderPlanSeparatesSoundAndSkipsDeliveredAndStaleTimes PASSED
+
+CalendarTest > icsRoundTripKeepsZonesRecurrenceEscapesAndReminders STARTED
+
+CalendarTest > icsRoundTripKeepsZonesRecurrenceEscapesAndReminders PASSED
+
+CalendarTest > monthlySkipsMissingDatesAndYearlySkipsNonLeapYears STARTED
+
+CalendarTest > monthlySkipsMissingDatesAndYearlySkipsNonLeapYears PASSED
+
+CalendarTest > countedImportsPreserveExactOccurrenceCount STARTED
+
+CalendarTest > countedImportsPreserveExactOccurrenceCount PASSED
+
+CalendarTest > fiveReminderLimitAndValidationAreStrict STARTED
+
+CalendarTest > fiveReminderLimitAndValidationAreStrict PASSED
+
+CalendarTest > calendarStateRoundTripsAndCorruptionDoesNotBecomeEmpty STARTED
+
+CalendarTest > calendarStateRoundTripsAndCorruptionDoesNotBecomeEmpty PASSED
+
+CalendarTest > overlapColumnsResetAfterEachConflictGroup STARTED
+
+CalendarTest > overlapColumnsResetAfterEachConflictGroup PASSED
+
+CalendarTest > fullSupportedEventSetCanBeExportedAndReimported STARTED
+
+CalendarTest > fullSupportedEventSetCanBeExportedAndReimported PASSED
+
+CalendarTest > allDayIsFloatingAndEndIsExclusive STARTED
+
+CalendarTest > allDayIsFloatingAndEndIsExclusive PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=34193 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=34193 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+CloudExportRepairTest > failedSaveRetainsFullDownloadAndRetrySavesItWithoutDownloadingAgain STARTED
+
+CloudExportRepairTest > failedSaveRetainsFullDownloadAndRetrySavesItWithoutDownloadingAgain PASSED
+
+CloudExportRepairTest > choosingDownloadDoesNotStartTheTransferBeforeDestinationSelection STARTED
+
+CloudExportRepairTest > choosingDownloadDoesNotStartTheTransferBeforeDestinationSelection PASSED
+
+CloudExportRepairTest > streamLimitsRejectKnownAndUnknownLengthBodiesWithoutLeavingPartialFiles STARTED
+
+CloudExportRepairTest > streamLimitsRejectKnownAndUnknownLengthBodiesWithoutLeavingPartialFiles PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=34193 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=34193 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+CloudFilesTest > unsafeOrOversizedXmlIsRejected STARTED
+
+CloudFilesTest > unsafeOrOversizedXmlIsRejected PASSED
+
+CloudFilesTest > uploadsStreamWithCreateOnlyPreconditionAndNeverRetryConflict STARTED
+
+CloudFilesTest > uploadsStreamWithCreateOnlyPreconditionAndNeverRetryConflict PASSED
+
+CloudFilesTest > providerPresetsHaveRegionsAndAppPasswordHelp STARTED
+
+CloudFilesTest > providerPresetsHaveRegionsAndAppPasswordHelp PASSED
+
+CloudFilesTest > credentialsAndPathsStayOnHttpsAccountRoot STARTED
+
+CloudFilesTest > credentialsAndPathsStayOnHttpsAccountRoot PASSED
+
+CloudFilesTest > downloadChecksRevisionAndDeletesFailedTemporaryCopies STARTED
+
+CloudFilesTest > downloadChecksRevisionAndDeletesFailedTemporaryCopies PASSED
+
+CloudFilesTest > cloudAndBackupsAreRegisteredWithoutGoogleDriveUi STARTED
+
+CloudFilesTest > cloudAndBackupsAreRegisteredWithoutGoogleDriveUi PASSED
+
+CloudFilesTest > listingsHonorPropstatStatusDirectChildrenNamespacesAndFolders STARTED
+
+CloudFilesTest > listingsHonorPropstatStatusDirectChildrenNamespacesAndFolders PASSED
+
+CloudFilesTest > redirectDoesNotTriggerAnotherRequestOrExposePassword STARTED
+
+CloudFilesTest > redirectDoesNotTriggerAnotherRequestOrExposePassword PASSED
+
+CloudFilesTest > credentialsAreEncryptedAndCorruptionCannotOverwriteExistingAccounts STARTED
+
+CloudFilesTest > credentialsAreEncryptedAndCorruptionCannotOverwriteExistingAccounts PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=34193 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=34193 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+DriveDocumentsTest > partialCopyFailureRetainsTheSourceAndNeverDeletesProviderDocuments STARTED
+
+DriveDocumentsTest > partialCopyFailureRetainsTheSourceAndNeverDeletesProviderDocuments PASSED
+
+DriveDocumentsTest > sameDocumentAliasesRejectBeforeOpeningOrDeletingAnyFile STARTED
+
+DriveDocumentsTest > sameDocumentAliasesRejectBeforeOpeningOrDeletingAnyFile PASSED
+
+DriveDocumentsTest > unreadableSourceDoesNotDeleteOrTruncateTheChosenDestination STARTED
+
+DriveDocumentsTest > unreadableSourceDoesNotDeleteOrTruncateTheChosenDestination PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=34193 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=34193 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+FileExportRepairTest > backupAndCloudSizeChecksRejectBeforeOpeningAnInternalDestination STARTED
+
+FileExportRepairTest > backupAndCloudSizeChecksRejectBeforeOpeningAnInternalDestination PASSED
+
+FileExportRepairTest > backupFilingRunsAfterTheSharedStagingMutexIsReleased STARTED
+
+FileExportRepairTest > backupFilingRunsAfterTheSharedStagingMutexIsReleased PASSED
+
+FileExportRepairTest > actualFilesSaveWaitsForFilingAndKeepsFailedCopiesInRecovery STARTED
+
+FileExportRepairTest > actualFilesSaveWaitsForFilingAndKeepsFailedCopiesInRecovery FAILED
+    org.junit.ComparisonFailure: expected:<[recovery]> but was:<[saved]>
+        at org.junit.Assert.assertEquals(Assert.java:117)
+        at org.junit.Assert.assertEquals(Assert.java:146)
+        at app.onklav.home.FileExportRepairTest$actualFilesSaveWaitsForFilingAndKeepsFailedCopiesInRecovery$1.invokeSuspend(FileExportRepairTest.kt:30)
+        at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+        at kotlinx.coroutines.DispatchedTaskKt.resume(DispatchedTask.kt:233)
+        at kotlinx.coroutines.DispatchedTaskKt.dispatch(DispatchedTask.kt:152)
+        at kotlinx.coroutines.CancellableContinuationImpl.dispatchResume(CancellableContinuationImpl.kt:470)
+        at kotlinx.coroutines.CancellableContinuationImpl.resumeImpl$kotlinx_coroutines_core(CancellableContinuationImpl.kt:504)
+        at kotlinx.coroutines.CancellableContinuationImpl.resumeImpl$kotlinx_coroutines_core$default(CancellableContinuationImpl.kt:493)
+        at kotlinx.coroutines.CancellableContinuationImpl.resumeUndispatched(CancellableContinuationImpl.kt:596)
+        at kotlinx.coroutines.EventLoopImplBase$DelayedResumeTask.run(EventLoop.common.kt:497)
+        at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+        at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+        at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+        at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source)
+        at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+        at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source)
+        at app.onklav.home.FileExportRepairTest.actualFilesSaveWaitsForFilingAndKeepsFailedCopiesInRecovery(FileExportRepairTest.kt:22)
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=34193 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=34193 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+LibraryBackupTest > annotatedImageUsesRealSdkImportAndLiveSessionsBlockRestoration STARTED
+
+LibraryBackupTest > annotatedImageUsesRealSdkImportAndLiveSessionsBlockRestoration PASSED
+
+LibraryBackupTest > oneAppDocumentsBackupRestoresAcrossStoresAndRepeatsSafely STARTED
+
+LibraryBackupTest > oneAppDocumentsBackupRestoresAcrossStoresAndRepeatsSafely PASSED
+
+LibraryBackupTest > cancellationAndProviderFailureCleanStagingAndIncompleteOutput STARTED
+
+LibraryBackupTest > cancellationAndProviderFailureCleanStagingAndIncompleteOutput PASSED
+
+LibraryBackupTest > youtubeBackupReopensBookmarksAndHistoryWithALocalViewerIdentity STARTED
+
+LibraryBackupTest > youtubeBackupReopensBookmarksAndHistoryWithALocalViewerIdentity PASSED
+
+LibraryBackupTest > rssProviderBackupReopensOfflineArticlesAndBookmarksInTheSignedApp STARTED
+
+LibraryBackupTest > rssProviderBackupReopensOfflineArticlesAndBookmarksInTheSignedApp PASSED
+
+LibraryBackupTest > filesProviderToJniRoundTripKeepsBytesAndRejectsChangedReview STARTED
+
+LibraryBackupTest > filesProviderToJniRoundTripKeepsBytesAndRejectsChangedReview PASSED
+
+LibraryBackupTest > readerBackupRestoresAnAccessibleDraftAndKeepsAnExistingClearedDraft STARTED
+
+LibraryBackupTest > readerBackupRestoresAnAccessibleDraftAndKeepsAnExistingClearedDraft PASSED
+
+LibraryBackupTest > browserBackupReopensTabsAndBookmarksAndPreservesLocalChanges STARTED
+
+LibraryBackupTest > browserBackupReopensTabsAndBookmarksAndPreservesLocalChanges PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=34193 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=34193 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+NotesBackupTest > invalidOrChangedReviewCannotWriteAndActiveAppMustCloseBeforeRestore STARTED
+
+NotesBackupTest > invalidOrChangedReviewCannotWriteAndActiveAppMustCloseBeforeRestore FAILED
+    java.lang.IllegalStateException: This app is not installed
+        at app.onklav.home.AppSdk.sync(AppSdk.kt:82)
+        at app.onklav.home.NotesBackupTest$invalidOrChangedReviewCannotWriteAndActiveAppMustCloseBeforeRestore$1.invokeSuspend(NotesBackupTest.kt:62)
+        at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+        at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+        at kotlinx.coroutines.EventLoopImplBase.processNextEvent(EventLoop.common.kt:263)
+        at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:94)
+        at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+        at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source)
+        at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+        at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source)
+        at app.onklav.home.NotesBackupTest.invalidOrChangedReviewCannotWriteAndActiveAppMustCloseBeforeRestore(NotesBackupTest.kt:57)
+
+NotesBackupTest > providerWriteFailureKeepsProviderDataAndRemovesPrivateStaging STARTED
+
+NotesBackupTest > providerWriteFailureKeepsProviderDataAndRemovesPrivateStaging PASSED
+
+NotesBackupTest > realProviderJniRoundTripKeepsCurrentNotesAndNeverExportsGrants STARTED
+
+NotesBackupTest > realProviderJniRoundTripKeepsCurrentNotesAndNeverExportsGrants PASSED
+
+60 tests completed, 2 failed
+
+> Task :android:app:testDebugUnitTest FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':android:app:testDebugUnitTest'.
+> There were failing tests. See the report at: file:///workspace/scratch/21249b7ec6ea/project/OnKlav/android/app/build/reports/tests/testDebugUnitTest/index.html
+
+* Try:
+> Run with --scan to get full insights.
+
+BUILD FAILED in 1m 21s
+74 actionable tasks: 2 executed, 72 up-to-date

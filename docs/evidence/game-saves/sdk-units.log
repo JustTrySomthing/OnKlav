@@ -1,0 +1,18 @@
+test_developer_can_sign_share_and_verify_without_owner_approval (test_gamekit.GameKitTests.test_developer_can_sign_share_and_verify_without_owner_approval) ... ok
+test_duplicate_archive_entries_fail (test_gamekit.GameKitTests.test_duplicate_archive_entries_fail) ... /opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/zipfile/__init__.py:1625: UserWarning: Duplicate name: 'web/index.pck'
+  return self._open_to_write(zinfo, force_zip64=force_zip64)
+ok
+test_engine_contract_is_required_and_no_native_permissions_allowed (test_gamekit.GameKitTests.test_engine_contract_is_required_and_no_native_permissions_allowed) ... ok
+test_invalid_manifest_fails_before_project_creation (test_gamekit.GameKitTests.test_invalid_manifest_fails_before_project_creation) ... ok
+test_never_overwrites_key_project_or_package (test_gamekit.GameKitTests.test_never_overwrites_key_project_or_package) ... ok
+test_publisher_pinning_rejects_changed_identity (test_gamekit.GameKitTests.test_publisher_pinning_rejects_changed_identity) ... ok
+test_sms_modes_are_signed_and_require_turn_profile (test_gamekit.GameKitTests.test_sms_modes_are_signed_and_require_turn_profile) ... ok
+test_tampered_content_and_unsigned_member_are_rejected (test_gamekit.GameKitTests.test_tampered_content_and_unsigned_member_are_rejected) ... ok
+test_three_templates_have_executable_projects_and_lifecycle_tests (test_gamekit.GameKitTests.test_three_templates_have_executable_projects_and_lifecycle_tests) ... ok
+test_traversal_and_shared_engine_replacement_fail (test_gamekit.GameKitTests.test_traversal_and_shared_engine_replacement_fail) ... ok
+test_upgrade_preserves_author_files_and_recovers_after_failed_write (test_gamekit.GameKitTests.test_upgrade_preserves_author_files_and_recovers_after_failed_write) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.667s
+
+OK

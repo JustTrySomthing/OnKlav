@@ -1,0 +1,42 @@
+{
+  "games": [
+    {
+      "game": "dominos",
+      "actual_shared_export_started": true,
+      "loader_released_canvas": true,
+      "preferences_cache_written": true
+    },
+    {
+      "game": "hockey",
+      "actual_shared_export_started": true,
+      "loader_released_canvas": true,
+      "preferences_cache_written": true
+    },
+    {
+      "game": "panda",
+      "actual_shared_export_started": true,
+      "loader_released_canvas": true,
+      "preferences_cache_written": true
+    },
+    {
+      "game": "naval",
+      "actual_shared_export_started": true,
+      "loader_released_canvas": true,
+      "preferences_cache_written": true
+    },
+    {
+      "game": "four",
+      "actual_shared_export_started": true,
+      "loader_released_canvas": true,
+      "preferences_cache_written": true
+    },
+    {
+      "game": "blackjack",
+      "actual_shared_export_started": true,
+      "loader_released_canvas": true,
+      "preferences_cache_written": true
+    }
+  ],
+  "cached_mute_suppresses_early_cue": true,
+  "errors": []
+}

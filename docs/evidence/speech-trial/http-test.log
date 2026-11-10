@@ -1,0 +1,2 @@
+Model ready in 486 ms; 8 speakers; 24000 Hz
+PASS: local HTTP custom synthesis, valid PCM, invalid voice/rate/size, cross-origin denial

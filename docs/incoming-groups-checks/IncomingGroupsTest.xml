@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.IncomingGroupsTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-30T17:29:19" hostname="e89dc6ba27f3" time="3.469">
+  <properties/>
+  <testcase name="bindingAnUnsentGroupKeepsItsNameMuteAndPinDuringTheFirstArrival" classname="app.onklav.home.IncomingGroupsTest" time="2.732"/>
+  <testcase name="newUnreadArrivalRestoresArchiveAndTrashAndReplayCannotUndoLaterReadOrArchive" classname="app.onklav.home.IncomingGroupsTest" time="0.14"/>
+  <testcase name="blockedGroupArrivalsStayOutOfInboxAndKeepOtherControls" classname="app.onklav.home.IncomingGroupsTest" time="0.065"/>
+  <testcase name="discoveryPreservesArchiveNamesPinAndMuteButNewCreationReturnsToInbox" classname="app.onklav.home.IncomingGroupsTest" time="0.055"/>
+  <testcase name="otherPeoplesGroupTextsAreDiscoveredButDirectTextsAndOwnNumberAreExcluded" classname="app.onklav.home.IncomingGroupsTest" time="0.317"/>
+  <testcase name="manualUnreadUsesTheSameStateForGroupAndMessageRows" classname="app.onklav.home.IncomingGroupsTest" time="0.158"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

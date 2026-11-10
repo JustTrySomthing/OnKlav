@@ -1,0 +1,11 @@
+   Compiling onklav-core v0.8.0 (/workspace/scratch/75acf774e3b8/work/OnKlav/core)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 7.88s
+     Running unittests src/lib.rs (core/target/debug/deps/onklav_core-8a579202944a8eae)
+
+running 3 tests
+test sdk_radio::tests::radio_requests_never_accept_urls_credentials_or_unbounded_pages ... ok
+test sdk_radio::tests::radio_replies_reject_foreign_shaped_station_rows ... ok
+test sdk::tests::radio_broker_is_owner_bound_revocable_and_does_not_widen_generic_networking ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 262 filtered out; finished in 0.28s
+

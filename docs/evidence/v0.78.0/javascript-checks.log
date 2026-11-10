@@ -1,0 +1,2 @@
+Exact production scripts passed: visible Skip; disabled Skip ignored; ad seek; mute/rate restoration; cleanup; current-video owner; stale player rejection; scoped owner link; channel page.
+Command: python3 scripts/test_youtube_scripts.py

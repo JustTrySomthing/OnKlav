@@ -1,0 +1,26 @@
+[
+  {
+    "template": "touch2d",
+    "path": "/workspace/scratch/b5e698131b7f/finished-sdk-touch2d.onklav-g",
+    "bytes": 47658,
+    "signature_verified": true,
+    "shared_engine": "4.7.2",
+    "owner_approval_required": false
+  },
+  {
+    "template": "scene3d",
+    "path": "/workspace/scratch/b5e698131b7f/finished-sdk-scene3d.onklav-g",
+    "bytes": 47406,
+    "signature_verified": true,
+    "shared_engine": "4.7.2",
+    "owner_approval_required": false
+  },
+  {
+    "template": "turn",
+    "path": "/workspace/scratch/b5e698131b7f/finished-sdk-turn.onklav-g",
+    "bytes": 47754,
+    "signature_verified": true,
+    "shared_engine": "4.7.2",
+    "owner_approval_required": false
+  }
+]

@@ -1,0 +1,1 @@
+{"grants":["storage.private","network.http","accounts.connect","files.export"],"steps":[{"action":"fixture.parse","expect":{"status":"MIME fixture parsed by private broker","mime.subject":"Synthetic MIME fixture","mime.text":"Plain fixture","mime.attachments.0.name":"demo.bin","mime.attachments.0.size":3}},{"action":"fixture.upload","pending":"http.request"}]}

@@ -1,0 +1,7 @@
+{
+  "former_manual_frontend_smoothed_correlation": 0.5424350238390117,
+  "pass_threshold": 0.99,
+  "same_model_same_speaker_same_text": true,
+  "test_still_rejects_former_output": true,
+  "smoothing": "9 RMS features; up to20ms offset, no time warping"
+}

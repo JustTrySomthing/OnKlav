@@ -1,0 +1,22 @@
+{
+  "schema": "onklav.app.v1",
+  "runtime": "rust-wasm-ui.v1",
+  "id": "org.example.referencelistening",
+  "name": "Reference listening",
+  "version": 1,
+  "capabilities": [
+    "storage.private",
+    "network.http",
+    "audio.playback"
+  ],
+  "network": {
+    "origins": [
+      "https://audio.example.org"
+    ],
+    "accounts": []
+  },
+  "min_host": 78,
+  "icon": {
+    "symbol": "reader"
+  }
+}

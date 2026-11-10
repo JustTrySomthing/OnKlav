@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/d65c45a36bab/source/OnKlav/scripts/verify_apks.py", line 162, in <module>
+    assert archive.read(f"lib/{abi}/{library}") == (ROOT/f"android/shared/src/main/jniLibs/{abi}/{library}").read_bytes(), "Speech native library is stale"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Speech native library is stale

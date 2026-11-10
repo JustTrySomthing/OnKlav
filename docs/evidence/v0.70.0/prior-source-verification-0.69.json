@@ -1,0 +1,98 @@
+{
+  "date": "2026-10-24",
+  "timezone": "America/Chicago",
+  "source_version": "0.69.0-rc1",
+  "source_version_code": 77,
+  "target_sdk": 36,
+  "scope": "Recovered SDK0.3 shared GUI/controllers and external host containment; bounded developer-runtime requests",
+  "apk_built": true,
+  "tests": {
+    "passed": 78,
+    "failed": 0,
+    "counting": "39 SDK runtime cases;9 independent author;4 contract;2 GUI;1 deadline;11 app and12 shared Android cases.12 template compile/startup subchecks recorded separately; no duplicate run counts.",
+    "template_smoke_checks": 12,
+    "evidence": "docs/evidence/v0.69.0"
+  },
+  "review": "docs/RESUME-0.69.0.md",
+  "native_proof": "docs/native-provenance.json",
+  "sdk_proof": "docs/app-sdk-provenance.json",
+  "internal_packages": [],
+  "full_rewrite_complete": false,
+  "handset_acceptance": false,
+  "carrier_acceptance": false,
+  "store_certified": false,
+  "games_deferred": true,
+  "independent_security_audit": false,
+  "lint": {
+    "fresh_full_run": false,
+    "baseline": "docs/evidence/v0.67.0/lint-results-optimized.xml",
+    "baseline_errors": 0,
+    "baseline_warnings": 143,
+    "note": "Optimized assembly runs vital lint. No claim of a fresh full-lint audit.",
+    "vital_lint": "passed in optimized assembly"
+  },
+  "sdk": {
+    "tools": "0.3.0",
+    "ui_components": "0.3.0",
+    "templates": 12,
+    "manifest_schema_unchanged": true,
+    "carrier_external_available": false,
+    "desktop_custom_icons_available": false,
+    "min_host_available": false,
+    "clean_extraction": "passed: doctor/new/keygen/build/check/test on Linux;4 persistence assertions"
+  },
+  "note": "Recovered from saved0.68 source. Production core/mobile JNI, included signed app packages and game pack retained byte-for-byte. Interrupted unsaved runtime icon/min_host/blob-cleanup work is not shipped.",
+  "apk": {
+    "name": "host",
+    "variant": "optimized",
+    "package": "app.onklav.home.prototype.rewrite",
+    "version_name": "0.69.0-rc1",
+    "version_code": 77,
+    "target_sdk": 36,
+    "bytes": 39451312,
+    "sha256": "1faaa191adbb551ad0b959c0fdb14728194949cbb17be77239029f2e1892e46d",
+    "signer_sha256": "6ed975c5fc27d19f6291f751a8bb00fa8a2c2e7d268bffc7b6ddf7e1b1a7a69d",
+    "signature_v2_verified": true,
+    "zip_integrity": "pass",
+    "zipalign_16kb": "pass",
+    "abis": [
+      "arm64-v8a"
+    ],
+    "elf_minimum_load_alignment": {
+      "lib/arm64-v8a/libandroidx.graphics.path.so": 16384,
+      "lib/arm64-v8a/libc++_shared.so": 16384,
+      "lib/arm64-v8a/libgodot_android.so": 16384,
+      "lib/arm64-v8a/libonklav_core.so": 16384
+    },
+    "native_library_sha256": {
+      "lib/arm64-v8a/libandroidx.graphics.path.so": "41e9a793c43a0f4fddb19e33f346bace464f30f888ba7b9eaf96294ea115bfb6",
+      "lib/arm64-v8a/libc++_shared.so": "ad74bf43eb1fd576518168f664ad16a74e00eeda9595875c33dd87f6dd197869",
+      "lib/arm64-v8a/libgodot_android.so": "9e10c5ebda9bb629c671929441cdde3b4a8ab0e5542fc7e88de8d71f2b9840db",
+      "lib/arm64-v8a/libonklav_core.so": "5b758569fd5b02f6563c58289155ab026ba596892ec2786a321e968d9a8f54fe"
+    },
+    "legacy_defined_classes": 0,
+    "defined_class_count": 4719,
+    "permissions": [
+      "android.permission.INTERNET",
+      "android.permission.ACCESS_NETWORK_STATE",
+      "android.permission.VIBRATE",
+      "android.permission.READ_SMS",
+      "android.permission.READ_CONTACTS",
+      "android.permission.SEND_SMS",
+      "android.permission.RECEIVE_SMS",
+      "android.permission.RECEIVE_MMS",
+      "android.permission.RECEIVE_WAP_PUSH",
+      "android.permission.READ_PHONE_STATE",
+      "android.permission.READ_PHONE_NUMBERS",
+      "android.permission.POST_NOTIFICATIONS",
+      "android.permission.RECORD_AUDIO",
+      "android.permission.RECEIVE_BOOT_COMPLETED",
+      "app.onklav.home.prototype.rewrite.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+    ],
+    "rust_libraries": {
+      "arm64-v8a": "5b758569fd5b02f6563c58289155ab026ba596892ec2786a321e968d9a8f54fe"
+    },
+    "delivery_filename": "OnKlav-0.69.0.apk"
+  },
+  "build_evidence": "docs/evidence/v0.69.0/build-optimized.json"
+}

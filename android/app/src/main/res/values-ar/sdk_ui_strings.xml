@@ -1,0 +1,8 @@
+<resources>
+    <string name="sdk_back">رجوع</string>
+    <string name="sdk_app_controls">عناصر تحكم التطبيق</string>
+    <string name="sdk_close_app">إغلاق التطبيق</string>
+    <string name="sdk_loading">جار التحميل</string>
+    <string name="sdk_restarted">أُعيد تشغيل التطبيق. يمكن استعادة البيانات المحفوظة فقط؛ لم تتكرر الإجراءات غير المكتملة.</string>
+    <string name="sdk_dismiss">إخفاء</string>
+</resources>

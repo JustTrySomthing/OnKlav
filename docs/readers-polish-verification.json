@@ -1,0 +1,35 @@
+{
+  "version": "0.77.0-readers-polish1 / code85",
+  "status": "Complete: ARM64 APK assembled and verified with original identities",
+  "changes": [
+    "Browse / Recent / My Library pinned tabs in both readers",
+    "Visible LibriVox / Project Gutenberg browsing and searches; promotional copy removed",
+    "AudioBooks previews stay separate from My Library until added or downloaded",
+    "One-time user-authorized repair of built-in reader capabilities; later revocations honored",
+    "AudioBooks tail-first decoder probing and validated Last-Modified range seeking",
+    "AudioBooks fixed player dock, concise controls, imports/bookmarks/chapter/sleep features retained",
+    "Persistent ebook recents, catalog details before download, existing shared Read Aloud retained",
+    "Back navigation and recoverable source failures"
+  ],
+  "limits": [
+    "Actual-phone audible playback, keyboard, background/headset and direct phone networking remain unverified."
+  ],
+  "source_checks": {
+    "controller": 6,
+    "focused_android": {
+      "passed": 29,
+      "failures": 0,
+      "skipped": 0
+    },
+    "final_layout": {
+      "passed": 2,
+      "failures": 0
+    },
+    "lint": {
+      "Warning": 172
+    },
+    "apk": "Original signer, bundled package/source provenance and16KiB native alignment verified",
+    "provider": "LibriVox catalog200, chapter200 and seek206; Gutenberg catalog200 and EPUB200 via build-environment HTTPS. Actual source data passed signed reader/AudioBooks compatibility checks."
+  },
+  "apk": "OnKlav-0.77.0-ARM64.apk"
+}

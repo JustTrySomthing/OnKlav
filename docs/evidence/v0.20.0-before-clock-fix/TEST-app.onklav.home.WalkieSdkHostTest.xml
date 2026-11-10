@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.WalkieSdkHostTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2026-10-22T17:08:26" hostname="2383b52a5fc7" time="17.129">
+  <properties/>
+  <testcase name="walkieSettingsOfflineDialAndRecipientStorageUseSignedSdk" classname="app.onklav.home.WalkieSdkHostTest" time="17.129">
+    <failure message="androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 15000 ms" type="androidx.compose.ui.test.ComposeTimeoutException">androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 15000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:504)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:339)
+	at app.onklav.home.WalkieSdkHostTest.waitFor(WalkieSdkHostTest.kt:57)
+	at app.onklav.home.WalkieSdkHostTest.walkieSettingsOfflineDialAndRecipientStorageUseSignedSdk(WalkieSdkHostTest.kt:108)
+	at java.base@17.0.20.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base@17.0.20.1/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base@17.0.20.1/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base@17.0.20.1/java.lang.reflect.Method.invoke(Method.java:569)
+	at app//org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at app//org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at app//org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at app//org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at app//org.robolectric.internal.TimeLimitedStatement.evaluate(TimeLimitedStatement.java:38)
+	at app//org.junit.rules.ExternalResource$1.evaluate(ExternalResource.java:54)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1$evaluate$1.invoke(AndroidComposeTestRule.android.kt:295)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1$evaluate$1.invoke(AndroidComposeTestRule.android.kt:295)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.withDisposableContent(ComposeUiTest.android.kt:565)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1$1$1$1.invoke(ComposeUiTest.android.kt:370)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.withComposeIdlingResource(ComposeUiTest.android.kt:439)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.access$withComposeIdlingResource(ComposeUiTest.android.kt:235)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1$1$1.invoke(ComposeUiTest.android.kt:369)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.withWindowRecomposer(ComposeUiTest.android.kt:413)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.access$withWindowRecomposer(ComposeUiTest.android.kt:235)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1$1.invoke(ComposeUiTest.android.kt:368)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.withTestCoroutines(ComposeUiTest.android.kt:426)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.access$withTestCoroutines(ComposeUiTest.android.kt:235)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1.invoke(ComposeUiTest.android.kt:367)
+	at androidx.compose.ui.test.IdlingStrategy.withStrategy(IdlingStrategy.android.kt:55)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1.invoke(ComposeUiTest.android.kt:366)
+	at androidx.compose.ui.test.IdlingResourceRegistry.withRegistry(IdlingResourceRegistry.jvm.kt:148)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1.invoke(ComposeUiTest.android.kt:365)
+	at androidx.compose.ui.test.ComposeRootRegistry.withRegistry(ComposeRootRegistry.android.kt:139)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.runTest(ComposeUiTest.android.kt:364)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1.evaluate(AndroidComposeTestRule.android.kt:295)
+	at app//org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at app//org.robolectric.RobolectricTestRunner$HelperTestRunner$1.evaluate(RobolectricTestRunner.java:502)
+	at app//org.robolectric.internal.SandboxTestRunner$2.lambda$evaluate$2(SandboxTestRunner.java:285)
+	at app//org.robolectric.internal.bytecode.Sandbox.lambda$runOnMainThread$0(Sandbox.java:104)
+	at java.base@17.0.20.1/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base@17.0.20.1/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base@17.0.20.1/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base@17.0.20.1/java.lang.Thread.run(Thread.java:840)
+</failure>
+  </testcase>
+  <system-out><![CDATA[Printing with useUnmergedTree = 'false'
+Node #4380 at (l=0.0, t=0.0, r=432.0, b=936.0)px
+ |-Node #4589 at (l=0.0, t=0.0, r=432.0, b=936.0)px
+   IsContainer = 'true'
+    |-Node #4590 at (l=0.0, t=0.0, r=432.0, b=936.0)px, Tag: 'sdk-app-screen'
+       |-Node #4592 at (l=8.0, t=4.0, r=56.0, b=52.0)px
+       | ContentDescription = '[Back]'
+       | Focused = 'false'
+       | Role = 'Button'
+       | Actions = [OnClick, RequestFocus]
+       | MergeDescendants = 'true'
+       |-Node #4594 at (l=56.0, t=14.0, r=280.0, b=42.0)px
+       | Text = '[Walkie-Talkie]'
+       | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+       |-Node #4598 at (l=280.0, t=4.0, r=328.0, b=52.0)px
+       | ContentDescription = '[Recent Recipients]'
+       | Focused = 'false'
+       | Role = 'Button'
+       | Actions = [OnClick, RequestFocus]
+       | MergeDescendants = 'true'
+       |-Node #4600 at (l=328.0, t=4.0, r=376.0, b=52.0)px
+       | ContentDescription = '[Voice Clips]'
+       | Focused = 'false'
+       | Role = 'Button'
+       | Actions = [OnClick, RequestFocus]
+       | MergeDescendants = 'true'
+       |-Node #4602 at (l=376.0, t=4.0, r=424.0, b=52.0)px
+       | ContentDescription = '[Walkie Talkie Settings]'
+       | Focused = 'false'
+       | Role = 'Button'
+       | Actions = [OnClick, RequestFocus]
+       | MergeDescendants = 'true'
+       |-Node #4596 at (l=12.0, t=64.0, r=420.0, b=928.0)px
+         IsTraversalGroup = 'true'
+         VerticalScrollAxisRange = 'ScrollAxisRange(value=0.0, maxValue=0.0, reverseScrolling=false)'
+         Actions = [ScrollBy, ScrollByOffset]
+          |-Node #4604 at (l=12.0, t=64.0, r=420.0, b=116.0)px, Tag: 'sdk-contacts'
+          | Focused = 'false'
+          | Text = '[Choose Contact]'
+          | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+          | MergeDescendants = 'true'
+          |-Node #4607 at (l=12.0, t=128.0, r=420.0, b=152.0)px, Tag: 'sdk-peer'
+          | ContentDataType = 'AndroidContentDataType(androidAutofillType=1)'
+          | EditableText = ''
+          | Focused = 'false'
+          | ImeAction = 'Default'
+          | InputText = ''
+          | IsEditable = 'true'
+          | Text = '[Recipient phone number]'
+          | TextSelectionRange = 'TextRange(0, 0)'
+          | Actions = [ClearTextSubstitution, GetTextLayoutResult, InsertTextAtCursor, OnAutofillText, OnClick, OnLongClick, PasteText, PerformImeAction, RequestFocus, SetSelection, SetText, SetTextSubstitution, ShowTextSubstitution]
+          | MergeDescendants = 'true'
+          |-Node #4613 at (l=12.0, t=164.0, r=420.0, b=216.0)px, Tag: 'sdk-prepare'
+          | Focused = 'false'
+          | Text = '[Save recipient]'
+          | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+          | MergeDescendants = 'true'
+          |-Node #4616 at (l=12.0, t=216.0, r=420.0, b=442.0)px, Tag: 'sdk-dial'
+          |  |-Node #4617 at (l=121.0, t=236.0, r=311.0, b=426.0)px
+          |    ContentDescription = '[Walkie Talkie Offline]'
+          |    [Disabled]
+          |     |-Node #4622 at (l=188.0, t=352.0, r=244.0, b=376.0)px
+          |       Text = '[OFFLINE]'
+          |       Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |-Node #4623 at (l=12.0, t=446.0, r=420.0, b=470.0)px, Tag: 'sdk-status'
+          | Text = '[Settings saved]'
+          | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |-Node #4624 at (l=12.0, t=478.0, r=420.0, b=526.0)px, Tag: 'sdk-availability'
+          | Text = '[Record a voice message for a saved recipient, or play saved clips. Live connection and carrier sending are not available yet.]'
+          | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |-Node #4625 at (l=12.0, t=530.0, r=420.0, b=582.0)px, Tag: 'sdk-connect'
+          | Text = '[Connect]'
+          | [Disabled]
+          | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, SetTextSubstitution, ShowTextSubstitution]
+          | MergeDescendants = 'true'
+          |-Node #4629 at (l=12.0, t=582.0, r=212.0, b=630.0)px, Tag: 'sdk-quick.auto_play'
+          | Focused = 'false'
+          | Text = '[Auto Play]'
+          | Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+          | MergeDescendants = 'true'
+          |  |-Node #4630 at (l=24.0, t=594.0, r=48.0, b=618.0)px
+          |    Focused = 'false'
+          |    Role = 'Checkbox'
+          |    ToggleableState = 'On'
+          |    Actions = [OnClick, RequestFocus]
+          |    MergeDescendants = 'true'
+          |-Node #4632 at (l=220.0, t=582.0, r=420.0, b=630.0)px, Tag: 'sdk-quick.auto_send'
+            Focused = 'false'
+            Text = '[Auto Send]'
+            Actions = [ClearTextSubstitution, GetTextLayoutResult, OnClick, RequestFocus, SetTextSubstitution, ShowTextSubstitution]
+            MergeDescendants = 'true'
+             |-Node #4633 at (l=232.0, t=594.0, r=256.0, b=618.0)px
+               Focused = 'false'
+               Role = 'Checkbox'
+               ToggleableState = 'Off'
+               Actions = [OnClick, RequestFocus]
+               MergeDescendants = 'true'
+Picker diagnostics: pending={"args":{},"service":"contacts.pick","token":"efd0b9f724a14b9e980750bc9c77338a"}, error=null, busy=false, frame={"actions":[{"icon":"history","id":"history","kind":"button","text":"Recent Recipients"},{"id":"clips","kind":"button","text":"Voice Clips"},{"icon":"settings","id":"settings","kind":"button","text":"Walkie Talkie Settings"}],"body":[{"id":"contacts","kind":"button","text":"Choose Contact"},{"hint":"Recipient phone number","id":"peer","kind":"field","limit":64,"value":""},{"id":"prepare","kind":"button","text":"Save recipient"},{"enabled":false,"id":"dial","kind":"voice_dial","phase":"offline"},{"center":true,"font":18,"id":"status","kind":"label","text":"Settings saved"},{"id":"availability","kind":"label","text":"Record a voice message for a saved recipient, or play saved clips. Live connection and carrier sending are not available yet."},{"enabled":false,"id":"connect","kind":"button","text":"Connect"},{"checked":true,"id":"quick.auto_play","kind":"toggle","row":"quick","text":"Auto Play"},{"checked":false,"id":"quick.auto_send","kind":"toggle","row":"quick","text":"Auto Send"}],"drawer":[],"drawer_close":"history.close","drawer_open":false,"drawer_title":"Recent Recipients","effect":{"args":{},"service":"contacts.pick","then":"contact.picked"},"menu":[],"menu_close":"settings.close","menu_open":false,"menu_title":"Walkie Talkie","state":{"archive":false,"clip_clear":false,"clip_offset":0,"clips":[],"delete_clip":null,"draft":{"auto_play":true,"auto_send":false,"beeps":true},"history":false,"label":"","meta":{"clips":[],"connection":"offline","preferences":{"auto_play":true,"auto_send":false,"beeps":true},"recent":[],"selected":null,"transport_ready":false},"peer":"","settings":false,"status":"Settings saved"},"title":"Walkie-Talkie"}
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

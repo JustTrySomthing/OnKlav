@@ -1,0 +1,28 @@
+{
+  "version": "0.100.24-rc1",
+  "version_code": 133,
+  "voices": {
+    "Male": {
+      "speaker": 2,
+      "default": true
+    },
+    "Female": {
+      "speaker": 0,
+      "default": false
+    }
+  },
+  "label_note": "Both upstream selected voices are male; labels and selection explicitly confirmed by owner.",
+  "shared_backend": "SdkSpeechController / NeuralSpeechBackend / process-wide NeuralSpeechRuntime / core/speech",
+  "native_tests": 3,
+  "focused_android_host_tests": 13,
+  "developer_contract_tests": 5,
+  "sdk_tests_rerun_after_dead_planner_removal": 7,
+  "apk_verification": "passed",
+  "apk_bytes": 182552506,
+  "apk_sha256": "812c0d9873fccb0517802d842fad2de7fe0736380828462659ec77b3b0088702",
+  "signer_sha256": "6ed975c5fc27d19f6291f751a8bb00fa8a2c2e7d268bffc7b6ddf7e1b1a7a69d",
+  "kokoro_assets": 0,
+  "speech_voicepack_copies": 1,
+  "former_apk_bytes": 182552962,
+  "remaining": "Physical phone/carrier/Bluetooth/latency/battery/endurance qualification; no full-lint rerun claimed."
+}

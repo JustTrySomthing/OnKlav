@@ -1,0 +1,20 @@
+{
+  "status": "passed",
+  "version": "0.100.32-rc1",
+  "version_code": 141,
+  "package": "app.onklav.home.prototype.rewrite",
+  "variant": "debug",
+  "shrinking": false,
+  "debuggable": true,
+  "bytes": 186389966,
+  "sha256": "13f1fd84263d84f9ec83dc13f31d95acccd4d42fd3cdf696f48f8a7ab2fcdcea",
+  "signer_sha256": "6ed975c5fc27d19f6291f751a8bb00fa8a2c2e7d268bffc7b6ddf7e1b1a7a69d",
+  "verification": "docs/apk-verification-debug.json",
+  "build": "docs/evidence/v0.100.32/build-debug.json",
+  "focused_checks": {
+    "WritePopupContrastTest": 1,
+    "passed": true
+  },
+  "scope": "Fast unshrunk owner-requested build; no broad regression or size-optimization work",
+  "phone_acceptance": "Real-device Samsung popup appearance, calls/carrier and live cloud accounts remain separate"
+}

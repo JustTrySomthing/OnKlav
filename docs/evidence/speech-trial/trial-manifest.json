@@ -1,0 +1,140 @@
+{
+  "description": "Isolated Rust Kitten listening trial; not an APK or production TTS migration",
+  "model_source": "https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/kitten-nano-en-v0_8-int8.tar.bz2",
+  "model_archive_sha256": "6fa5be852612ce761094ba74ee6123b4fc4acfefa79bf64dc63acae4a83af2fd",
+  "engine": "sherpa-onnx 2.0.1 official Rust bindings",
+  "runtime_library_source": "https://github.com/k2-fsa/sherpa-onnx/releases/download/v2.0.1/sherpa-onnx-v2.0.1-linux-x64-shared-lib.tar.bz2",
+  "runtime_archive_sha256": "532c45bbd41036d83cd70606797529aa8086c2053395a58967736c727625b120",
+  "sha256": {
+    "Cargo.toml": "cf5b49737d6fa601ef7ef69dea5ab377fc3872f6bcd4b9bdcb7e69b5dfbe765c",
+    "Cargo.lock": "49622e8eb6651b58c3fa53402f932bf6d2a47d06ffe4041ba6141fa585e7afac",
+    "src/main.rs": "b71401511f85a10be541506a2201df633575100dc59c72f6d5176318fd1f7be0",
+    "trial.py": "95e30ebe5db592020475f8540898da00bdab82fd7ba6c9c71d5be7e79cad6638",
+    "build_listening_page.py": "96ecdc17a370853a9657a780bd11c8bd0054896f00b0df6cd2da1b7aa7905b66",
+    "requirements.txt": "56ddb2d5b97b791e974c861de23d32c0141c85c30434ff0957bf05bd040e73b8",
+    "page.txt": "adabbe24314220155eb3f27c4edfeb61a079f94f49690aa4f654deef11b78b63",
+    "README.md": "0efbd357377fda97c8ed5b3e9cc61fe3944fad960d32c2de5d8932a29d56c21f",
+    "Voice-Trial.html": "a7d2a3d9dd4b0aa6fb8596b234f8b7ab08544068a61a5ec765b0bce6481f6d3d",
+    "model/model.int8.onnx": "0ba1e21eda9c8bcc4a70ada7e0d27fefc9ba775aaa037547248ec71f9a3d9b7d",
+    "model/voices.bin": "d520519c4a3519d44fcfcd943ed0b1e3c5da5cee0eea501d922fac1a93cd24dc",
+    "model/tokens.txt": "934a4188addc7665dd3410256bb622169242357fbb99d840d9351209b486dabb",
+    "model/LICENSE": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+    "samples/2-message.wav": "b43859544c94af3f8014fc200d8932f5eca386d3838e836f1558684282be9afb",
+    "samples/6-reading.wav": "062b66b816a2be91d32f3955db20fbe41fb1f809275824b6dfd1eede3c3b95f6",
+    "samples/3-message.wav": "4a5bcbc114e20ecb2e63c0e3429e53c4451dd13a682fa2c69fbb5a7878bd85e0",
+    "samples/5-reading.wav": "fe24b655eb410ba20f432c5db05a5404892a017d5429825d0372916f20443335",
+    "samples/0-reading.wav": "f391bc7c32b16f414f4e32571c77742813d3c9407c62ab8487e95fc28e992841",
+    "samples/3-reading.wav": "d6cc4a9da9f334a06f1d5fe857435eeaf464fa91824c4a7b492fcb4aa2db39f8",
+    "samples/1-reading.wav": "5ae4f285d44c70893d98b7dbb82dee9301a20e9aa44bbfde394e3d1ef71935e6",
+    "samples/7-message.wav": "d457916b7a97f897c6958bcd2e75aba95f6e52906d43c5ff1c03a01a19c0fa2b",
+    "samples/7-reading.wav": "2ded80432e9c78794d8f96a1a5885e1b3d53bb3c08f417d97becaef0bbeb5633",
+    "samples/0-message.wav": "eba1230a4678ebbd699481c22d46b60e221ea8b77d2dea51f7c310ec484a25d7",
+    "samples/5-message.wav": "338eee0d5ed3ed95ab266bd79127bfc614fc1991335efc7b11ee0c6e23710f1a",
+    "samples/measurements.json": "945ab978c204763cd69bbb5bf12e463cf61e650778856877c8fd14e13645a41a",
+    "samples/4-message.wav": "43a2275c825925657f46489f4ea89ef448f844fd4e93c2f93c0071880da45cab",
+    "samples/4-reading.wav": "4ce39fa95b5838c99c21c29614232882f4431aeb50cdf38190256e5bb5f06fb3",
+    "samples/2-reading.wav": "0fd89ce919c4a6567064ee8a876be5b0fcb68b7c63fd243208a65f0525ea8cbb",
+    "samples/1-message.wav": "62cc3182ccebc95ee9e8f821279986dcae00c21928d80250f4d4165df0cc280d",
+    "samples/6-message.wav": "5228db117567cc5a56a1e67b9d0be0907411e5cf06a7ce654d1c754bd48efe45"
+  },
+  "pcm_checks": [
+    {
+      "file": "0-message.wav",
+      "frames": 185400,
+      "peak": 26884,
+      "clipped_samples": 0
+    },
+    {
+      "file": "0-reading.wav",
+      "frames": 570000,
+      "peak": 27649,
+      "clipped_samples": 0
+    },
+    {
+      "file": "1-message.wav",
+      "frames": 303000,
+      "peak": 25746,
+      "clipped_samples": 0
+    },
+    {
+      "file": "1-reading.wav",
+      "frames": 805800,
+      "peak": 26391,
+      "clipped_samples": 0
+    },
+    {
+      "file": "2-message.wav",
+      "frames": 187800,
+      "peak": 29769,
+      "clipped_samples": 0
+    },
+    {
+      "file": "2-reading.wav",
+      "frames": 634800,
+      "peak": 26776,
+      "clipped_samples": 0
+    },
+    {
+      "file": "3-message.wav",
+      "frames": 223800,
+      "peak": 26914,
+      "clipped_samples": 0
+    },
+    {
+      "file": "3-reading.wav",
+      "frames": 704400,
+      "peak": 29502,
+      "clipped_samples": 0
+    },
+    {
+      "file": "4-message.wav",
+      "frames": 168600,
+      "peak": 27326,
+      "clipped_samples": 0
+    },
+    {
+      "file": "4-reading.wav",
+      "frames": 536400,
+      "peak": 28179,
+      "clipped_samples": 0
+    },
+    {
+      "file": "5-message.wav",
+      "frames": 232200,
+      "peak": 20146,
+      "clipped_samples": 0
+    },
+    {
+      "file": "5-reading.wav",
+      "frames": 676200,
+      "peak": 22972,
+      "clipped_samples": 0
+    },
+    {
+      "file": "6-message.wav",
+      "frames": 301800,
+      "peak": 23133,
+      "clipped_samples": 0
+    },
+    {
+      "file": "6-reading.wav",
+      "frames": 903000,
+      "peak": 23668,
+      "clipped_samples": 0
+    },
+    {
+      "file": "7-message.wav",
+      "frames": 185400,
+      "peak": 18621,
+      "clipped_samples": 0
+    },
+    {
+      "file": "7-reading.wav",
+      "frames": 607800,
+      "peak": 21381,
+      "clipped_samples": 0
+    }
+  ],
+  "android_tested": false,
+  "real_browser_tested": false
+}

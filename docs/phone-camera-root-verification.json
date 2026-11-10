@@ -1,0 +1,115 @@
+{
+  "date": "2026-11-02",
+  "status": "source changes complete; focused host checks passed",
+  "changes": [
+    "Phone and Camera are direct root bottom-menu destinations, without slide routes or root arrows",
+    "Phone top tabs, adaptive keypad, 68dp centered Call action and 16dp clearance from main menu",
+    "Direct Default Phone consent action; existing protected InCallService and private own-call UI retained and verified"
+  ],
+  "android_host_tests": [
+    {
+      "class": "BottomPhoneCameraUiTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "smallRootDialerKeepsCallAndTabsAboveTheMainMenu",
+        "phoneIsARootDestinationWithNoBackArrowAndClearCallButtonSpacing",
+        "cameraKeepsTheBottomMenuAndRootHeaderHasNoExitArrow",
+        "defaultPhoneActionRequestsTheAndroidDialerRole"
+      ]
+    },
+    {
+      "class": "PhoneTest",
+      "tests": 14,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "externalLinksOnlyPrefillAndNeverTreatCallIntentsAsPermissionToDial",
+        "completeNumbersUseFullFormattingAndServiceCodesStayUnchanged",
+        "speedDialPersistsOnlyExplicitValidAssignmentsAndRemovesCleanly",
+        "dialInputsNormalizeVanityNumbersAndPreservePostDialControls",
+        "restrictedHistoryNeverExposesANameOrOffersRedial",
+        "partialTypingFormatsWithoutChangingDialedDigits",
+        "defaultRoleAndCallAccessArePartOfVersionedSetup",
+        "modernAudioUsesFrameworkSuppliedEndpoints",
+        "inCallServicePublishesLegacyAudioAndClearsItWhenDestroyed",
+        "manifestProvidesDialerEligibilityAndProtectsCallActions",
+        "historyIsKeysetPagedAndSearchArgumentsAreBound",
+        "returningToACallTargetsOnlyThePrivateOnKlavCallActivity",
+        "contactDeletionUsesStableLookupAndChecksRevokedWriteAccess",
+        "voicemailSettingsArePerAccountAndRejectInvalidNumbers"
+      ]
+    },
+    {
+      "class": "PhoneUiTest",
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0,
+      "cases": [
+        "keypadFormatsNumbersAndOffersVoicemailAndSpeedDial",
+        "activeCallHasStableEndActionAndAnInCallKeypad",
+        "narrowPhoneKeepsTheKeypadAndCallActionReachable",
+        "incomingScreenHasExplicitAnswerAndDecline",
+        "openingAddCallKeypadDoesNotReopenExistingCall",
+        "keypadUpdatesDigitsAndTabsRemainAvailable"
+      ]
+    }
+  ],
+  "unique_tests_passed": 24,
+  "production_and_test_compilation": "passed",
+  "runtime_bundle_matches_compiled_kotlin": true,
+  "visual_review": [
+    "root-phone.png",
+    "root-phone-large-text.png",
+    "root-camera.png"
+  ],
+  "test_environment": "Robolectric Android29/native graphics; existing audio route checks also cover API35. Synthetic data and camera permission denied; no carrier or camera hardware exercised.",
+  "attempt_notes": [
+    "Initial test compilation used hidden RoleManager constants; corrected test to literal framework values.",
+    "Initial 24-case run:23 passed,1 failed due wrong role-extra name in new assertion. Confirmed actual Android framework implementation uses android.intent.extra.ROLE_NAME and corrected fixture.",
+    "Final 24-case run:all passed; production/test compilation and runtime class matching passed."
+  ],
+  "apk_built": false,
+  "latest_delivered_apk": "0.100.34-rc1/code143; predates these changes and prior six audit repairs",
+  "device_qualification_pending": [
+    "Default Phone approval and actual incoming/outgoing carrier calls",
+    "Lock-screen and background call notifications",
+    "OEM/emergency/dual-SIM and Bluetooth behavior",
+    "Real Camera capture"
+  ],
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/MainActivity.kt": "b3cdd90b00b7366e355ba81812f8ca6cb2b509fc28768639bd6e84d8c42497c3",
+    "android/app/src/main/kotlin/app/onklav/home/PhoneScreen.kt": "e9bdd5c2261ae47f8b544314503eb099f9ac538aac20bf3844430cb627baa271",
+    "android/app/src/main/kotlin/app/onklav/home/SdkAppScreen.kt": "da0706977ff2a00d2cc04d0d859be0df6468ffd3ac97881f6987472515a32f3e",
+    "android/app/src/main/kotlin/app/onklav/home/SdkFrameChrome.kt": "3ee4d84157fbc82b0f6dea1ac66c37640f19616b1ed786cf7cec2305e9b412ad",
+    "android/app/src/main/kotlin/app/onklav/home/PhoneData.kt": "8d6da26aafb50f002779acd44303b8c62fd4d4983b75d62993fe9864a9cd377d",
+    "android/app/src/main/kotlin/app/onklav/home/PhoneTelecom.kt": "7be659b12e2426095f3714e0af93eb8846bda3dba16a262f026b09f91510ff08",
+    "android/app/src/main/kotlin/app/onklav/home/PhoneCallUi.kt": "9f053ad0ef4faf862984c8983756490a3df247d76dad2dcdfcdd4a29ef8ba1c5",
+    "android/app/src/main/AndroidManifest.xml": "890b37e5a3820dfc7a95082ded940bf1637d68b7eb1b09c561c76c327a43177b",
+    "android/app/src/test/kotlin/app/onklav/home/BottomPhoneCameraUiTest.kt": "cbfcb465ea4fc434dbeee11a434cff38d5d6b55ff5d78fe6173a4fc006507f91",
+    "android/app/src/test/kotlin/app/onklav/home/PhoneTest.kt": "f8bea7a18647d8256fdada39580aa0e63e2915c6b2f111376705c4ccb5fbe958",
+    "android/app/src/test/kotlin/app/onklav/home/PhoneUiTest.kt": "3a84074b58c0d1b5ce4e6e9892a0ad14f08c65b224c3555cfd28ad74f0232c13"
+  },
+  "evidence_sha256": {
+    "docs/evidence/phone-root-navigation/TEST-app.onklav.home.BottomPhoneCameraUiTest.xml": "c85cbebe2620265f427c21681f9b98ae55d990ac8bbc2074f977cd9a5dd95545",
+    "docs/evidence/phone-root-navigation/TEST-app.onklav.home.PhoneTest.xml": "5a537940fa74c3e1f8ae3d2b4a4a511360221dcd6dd0cd525deea014702eaaa0",
+    "docs/evidence/phone-root-navigation/TEST-app.onklav.home.PhoneUiTest.xml": "21764481371eaa549820574670d4525eda6b7ef0cc80d540fa8565ffb830efa9",
+    "docs/evidence/phone-root-navigation/active-keypad.png": "d241971630afd7c47ce129f5cf8467b024d399d6a93b4d93817f21ff449866df",
+    "docs/evidence/phone-root-navigation/android-host-check.log": "fc23074e0a7a3affd135f26bad6f7bd72e5f09b3d98c3bc0c4d7370e7be459ad",
+    "docs/evidence/phone-root-navigation/incoming.png": "49a07a46d73b5859283a5be8f6234aae1bbb9a8f227da66c5d0a568c9be93bec",
+    "docs/evidence/phone-root-navigation/initial-focused-check.log": "4549e6cc894125358744f0d2e3e2cae8db776fcc04f475cd4d78db33e4a3a0ab",
+    "docs/evidence/phone-root-navigation/keypad-large-text.png": "36954d258e79a1a0e2467e31962a1f0d8f686a5dd8caf680654aaa97019e7682",
+    "docs/evidence/phone-root-navigation/keypad-shortcuts.png": "e89ecfefdce318330dd0b92a1c2958b5f48cf5898aef66538e74ea63dc843f67",
+    "docs/evidence/phone-root-navigation/keypad.png": "a800ea6eca37c484fa4a81533e1c9462e84c5ea595fdab962ddad0c14d63ee68",
+    "docs/evidence/phone-root-navigation/root-camera.png": "a40ac5905e5379bba915552f61d06874d211bd2a91f7fff1ebc83fdd2cb4089d",
+    "docs/evidence/phone-root-navigation/root-phone-large-text.png": "6b97b4db4a605f618c88b52c59570aa6c0bef92ab06281d41d9d1cc799b075d3",
+    "docs/evidence/phone-root-navigation/root-phone.png": "8442500fbd8f38bed26e811c40ff12c8d5003dd2b391195f12fe8ef762241bdc",
+    "docs/evidence/phone-root-navigation/test-fixture-compile.log": "43f9527639cb72fbb51d63eb6c026b66b23b2eeb68d998c9c3c81740837af672"
+  },
+  "native_inputs_changed": false,
+  "previous_six_audit_repairs": "preserved"
+}

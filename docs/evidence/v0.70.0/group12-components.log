@@ -1,0 +1,24 @@
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/work/OnKlav/developer/components)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.93s
+     Running unittests src/lib.rs (developer/components/target/debug/deps/onklav_ui-b9729a29e05b7074)
+
+running 1 test
+test calendar_zoned_ui::tests::named_zone_editor_resolves_explicitly_and_preserves_saved_utc_until_parent_commit ... FAILED
+
+failures:
+
+---- calendar_zoned_ui::tests::named_zone_editor_resolves_explicitly_and_preserves_saved_utc_until_parent_commit stdout ----
+
+thread 'calendar_zoned_ui::tests::named_zone_editor_resolves_explicitly_and_preserves_saved_utc_until_parent_commit' panicked at src/calendar_zoned_ui.rs:46:221:
+assertion `left == right` failed
+  left: Object {"description": String(""), "end": String("20261101T083000Z"), "start": String("20261101T063000Z"), "summary": String("Meeting"), "uid": String("one")}
+ right: Object {"end": String("20261101T083000Z"), "start": String("20261101T063000Z"), "summary": String("Meeting"), "uid": String("one")}
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    calendar_zoned_ui::tests::named_zone_editor_resolves_explicitly_and_preserves_saved_utc_until_parent_commit
+
+test result: FAILED. 0 passed; 1 failed; 0 ignored; 0 measured; 51 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `--lib`

@@ -1,0 +1,51 @@
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43989 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43989 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.11.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+Checking the license for package Android SDK Platform-Tools in /workspace/scratch/39f240a7e5bd/restored-env/sdk/licenses
+Warning: License for package Android SDK Platform-Tools not accepted.
+WARNING: platform-tools package is not installed. Please accept the installation licence to continue
+> Task :android:shared:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:shared:preBuild UP-TO-DATE
+> Task :android:shared:preDebugBuild UP-TO-DATE
+> Task :android:shared:generateDebugResValues UP-TO-DATE
+> Task :android:shared:generateDebugResources UP-TO-DATE
+> Task :android:shared:packageDebugResources UP-TO-DATE
+> Task :android:shared:parseDebugLocalResources UP-TO-DATE
+> Task :android:shared:generateDebugRFile UP-TO-DATE
+> Task :android:shared:javaPreCompileDebug UP-TO-DATE
+> Task :android:tools:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:tools:preBuild UP-TO-DATE
+> Task :android:tools:preDebugBuild UP-TO-DATE
+> Task :android:tools:generateDebugResValues UP-TO-DATE
+> Task :android:tools:generateDebugResources UP-TO-DATE
+> Task :android:tools:packageDebugResources UP-TO-DATE
+> Task :android:tools:parseDebugLocalResources UP-TO-DATE
+> Task :android:tools:generateDebugRFile UP-TO-DATE
+> Task :android:shared:preDebugUnitTestBuild UP-TO-DATE
+> Task :android:shared:generateDebugUnitTestStubRFile UP-TO-DATE
+
+> Task :android:shared:compileDebugKotlin
+w: file:///workspace/scratch/39f240a7e5bd/project/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/Chrome.kt:240:24 'var statusBarColor: Int' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/39f240a7e5bd/project/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/Chrome.kt:241:24 'var navigationBarColor: Int' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/39f240a7e5bd/project/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/Chrome.kt:242:65 'var isStatusBarContrastEnforced: Boolean' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/39f240a7e5bd/project/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/LauncherLayout.kt:4:27 Non-public primary constructor is exposed via the generated 'copy()' method of the 'data' class.
+
+The generated 'copy()' will change its visibility in future releases.
+
+To suppress the warning do one of the following:
+- Annotate the data class with the '@ConsistentCopyVisibility' annotation.
+- Use the '-Xconsistent-data-class-copy-visibility' compiler flag.
+- Annotate the data class with the '@ExposedCopyVisibility' annotation 
+  (Discouraged, but can be used to keep binary compatibility).
+
+To learn more, see the documentation of the '@ConsistentCopyVisibility' and '@ExposedCopyVisibility' annotations.
+
+This will become an error in Kotlin 2.2.
+
+> Task :android:shared:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:shared:bundleLibCompileToJarDebug
+> Task :android:tools:compileDebugKotlin UP-TO-DATE
+> Task :android:shared:compileDebugUnitTestKotlin UP-TO-DATE
+
+BUILD SUCCESSFUL in 25s
+16 actionable tasks: 2 executed, 14 up-to-date

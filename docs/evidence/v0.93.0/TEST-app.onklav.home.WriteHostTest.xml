@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.WriteHostTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-27T04:36:04" hostname="7cb3e9a9baab" time="20.567">
+  <properties/>
+  <testcase name="numberedListsContinueAndRemovingOneParagraphKeepsItsNeighbors" classname="app.onklav.home.WriteHostTest" time="13.992"/>
+  <testcase name="richDocumentsRoundTripDocxAndPdfPagination" classname="app.onklav.home.WriteHostTest" time="0.493"/>
+  <testcase name="partialAndCursorFormattingPreserveSurroundingText" classname="app.onklav.home.WriteHostTest" time="0.084"/>
+  <testcase name="documentsAreAtomicPrivateAndRespectRevocation" classname="app.onklav.home.WriteHostTest" time="5.997"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

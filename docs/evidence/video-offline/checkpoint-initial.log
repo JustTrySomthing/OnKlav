@@ -1,0 +1,12 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/d853f89e99b7/onklav/OnKlav/scripts/checkpoint_working.py", line 134, in <module>
+    print(json.dumps(create(args.root, args.base, args.output, args.include), indent=2))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/d853f89e99b7/onklav/OnKlav/scripts/checkpoint_working.py", line 118, in create
+    with zipfile.ZipFile(temp) as archive:
+         ^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/zipfile/__init__.py", line 1371, in __init__
+    self._RealGetContents()
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/zipfile/__init__.py", line 1438, in _RealGetContents
+    raise BadZipFile("File is not a zip file")
+zipfile.BadZipFile: File is not a zip file

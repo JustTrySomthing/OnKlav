@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.WriteRuleTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-31T01:34:16" hostname="fa7478106f85" time="2.559">
+  <properties/>
+  <testcase name="ruleIsPersistedAndExportedAsARealWordBorderAndPdfSpan" classname="app.onklav.home.WriteRuleTest" time="2.051"/>
+  <testcase name="malformedRuleMarkersAreRejectedAndInsertionAtAnEmptyLineKeepsOnlyOnePrefix" classname="app.onklav.home.WriteRuleTest" time="0.456"/>
+  <testcase name="ruleInsertsAtCursorWithoutReplacingTextAndKeepsSurroundingBold" classname="app.onklav.home.WriteRuleTest" time="0.051"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

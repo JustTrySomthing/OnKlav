@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.ReminderFlowHostTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-24T14:03:37" hostname="41b9fb140d3c" time="10.228">
+  <properties/>
+  <testcase name="choosePersistRescheduleAndRemove" classname="app.onklav.home.ReminderFlowHostTest" time="10.228"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Invalid ID 0x00000000.
+Invalid ID 0x00000000.
+Invalid ID 0x00000000.
+Intent = Intent { act=remind cmp=app.onklav.home.prototype.rewrite/app.onklav.home.ReplyReminderReceiver (has extras) }; Matching wrappers: [Wrapper[receiver=[app.onklav.home.ReplyReminderReceiver@35849fd], context=[android.app.ContextImpl@5f76192f], intentFilter=[android.content.IntentFilter@a1c946c]]]
+]]></system-err>
+</testsuite>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.AudioEditorHostTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-30T02:17:06" hostname="b623e8e1265a" time="5.355">
+  <properties/>
+  <testcase name="pitchAndTempoAreIndependentAndStereoRemainsLinked" classname="app.onklav.home.AudioEditorHostTest" time="2.19"/>
+  <testcase name="learnedSpectralNoiseReductionReducesNoiseAndKeepsTone" classname="app.onklav.home.AudioEditorHostTest" time="0.143"/>
+  <testcase name="signedAppLaunchAndRevocableStorageAreEnforced" classname="app.onklav.home.AudioEditorHostTest" time="2.798"/>
+  <testcase name="dcRemovalKeepsLowBassAtDifferentHighSampleRates" classname="app.onklav.home.AudioEditorHostTest" time="0.111"/>
+  <testcase name="editsKeepSourceAndRoundTripWithStereoSilence" classname="app.onklav.home.AudioEditorHostTest" time="0.037"/>
+  <testcase name="gainToneFadesNormalizationAndOverloadProtectionWork" classname="app.onklav.home.AudioEditorHostTest" time="0.074"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

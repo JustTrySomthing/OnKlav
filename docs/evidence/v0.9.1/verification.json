@@ -1,0 +1,89 @@
+{
+  "date": "2026-10-22",
+  "version": "0.9.1-dev",
+  "version_code": 14,
+  "scope": "Bounded recovery and original reply-reminder UI/manager port",
+  "full_rewrite_complete": false,
+  "full_messenger_complete": false,
+  "sdk_complete": false,
+  "current_host_build": "pass; host APK and internal instrumentation harness compiled; retained signing key",
+  "apk_sha256": "ae7a70e012ac8cd64f227cd12e77f6df46ebb120b4ebb8c767d683f5c4add116",
+  "source_counts": {
+    ".java": 0,
+    ".kt": 54,
+    ".rs": 3,
+    ".gd": 4
+  },
+  "application_delivery": "Only OnKlav is an installable product APK. No separate built-in app/game APKs; external executable packages remain disabled.",
+  "authored_java_source_files": 0,
+  "legacy_app_module_included": false,
+  "production_call_paths": {
+    "reminder": "Compose chooser/manager -> ReplyReminders + ChatStore -> NativeCore JNI -> Rust atomic message flags -> AlarmManager -> receiver/notification",
+    "native_scope": "Unchanged Rust Android libraries and Godot pack retain exact previous APK bytes. Host Rust rebuilt/tested with 1.90.0."
+  },
+  "unit_tests": {
+    "rust": {
+      "passed": 15,
+      "failed": 0
+    },
+    "kotlin_suites": [
+      {
+        "suite": "app.onklav.home.MessageIdentityTest",
+        "tests": 3,
+        "failed": 0
+      },
+      {
+        "suite": "app.onklav.home.ReminderTimesTest",
+        "tests": 2,
+        "failed": 0
+      },
+      {
+        "suite": "app.onklav.shared.LauncherLayoutTest",
+        "tests": 5,
+        "failed": 0
+      },
+      {
+        "suite": "app.onklav.shared.NativeBridgeTest",
+        "tests": 2,
+        "failed": 0
+      },
+      {
+        "suite": "app.onklav.shared.ThemePackageTest",
+        "tests": 4,
+        "failed": 0
+      }
+    ],
+    "total_passed": 31
+  },
+  "current_host_android_runtime": {
+    "status": "incomplete",
+    "boot": "API 29 and API 33 ATD each exceeded 300-second software-boot limit; checked runs terminated",
+    "install": "not attempted; Android boot did not complete",
+    "ReminderDeviceTest": "compiled, not executed",
+    "apk_sha256": "ae7a70e012ac8cd64f227cd12e77f6df46ebb120b4ebb8c767d683f5c4add116",
+    "phone_carrier_acceptance": false,
+    "default_role_changed": false,
+    "pixel_capture": "not performed",
+    "exact_apk_installation_verified": false
+  },
+  "build_recovery": {
+    "temporary_environment_lost": true,
+    "proxy_and_JDK_restored": true,
+    "cold_dependency_build": "600-second timeout during R8 after compiling Kotlin; cached follow-up completed",
+    "test_harness": "Missing direct Espresso compile dependency corrected; final build and unit tests pass",
+    "build_script": "Fail fast for runtime-only Java, forward Gradle proxy/trust settings, bounded network waits, app/shared unit tests",
+    "emulator": "Restored missing support library, removed owned stale PID lock, disabled Vulkan and added process-group cleanup. Android software startup remains unresolved; no further restart loop."
+  },
+  "historical_not_current_checks": {
+    "0.9.0": "evidence/v0.9.0/verification.json; MessengerDeviceTest pass on b256996d..., desktop pass on 580c0c7e...; not rerun for this chunk",
+    "Godot": "Pack/native libraries unchanged; no engine test rerun or original game acceptance",
+    "other": "Older Notes/Appearance results retain their recorded boundaries"
+  },
+  "carrier_phone_acceptance": false,
+  "default_sms_role_gate": "MMS_READY=false; no default-role takeover request",
+  "real_external_messages_sent_by_tests": false,
+  "private_inner_circle_data_migrated": false,
+  "remaining_messenger_work": "Carrier SMS/MMS, dual SIM, recovery/delivery/default-role acceptance; remaining original controls and visual/accessibility parity; capture/media viewer, spam/blocked/reaction handling, full history search and precise reminder message focus. See MESSAGING-PORT.md.",
+  "performance_acceptance": false,
+  "verification_boundary": "APK signature/v2, CRC, manifest/package/ABI/native bytes/16KB alignment and 31 host/JNI/unit tests pass. No installation or current-APK UI runtime pass is claimed."
+}

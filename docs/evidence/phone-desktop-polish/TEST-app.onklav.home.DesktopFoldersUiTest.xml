@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.DesktopFoldersUiTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-11-01T20:35:25" hostname="3d2dab7afedf" time="23.105">
+  <properties/>
+  <testcase name="shellOpensPhoneSettingsAndGamesAndReturnsToApps" classname="app.onklav.home.DesktopFoldersUiTest" time="8.939"/>
+  <testcase name="navigationOrderIsPhoneCameraAppsMessagesGroups" classname="app.onklav.home.DesktopFoldersUiTest" time="2.461"/>
+  <testcase name="appsAlwaysResetToFirstPageAndDefaultsOpen" classname="app.onklav.home.DesktopFoldersUiTest" time="3.072"/>
+  <testcase name="folderCreateRenameDeleteAndSecondPageAreUsable" classname="app.onklav.home.DesktopFoldersUiTest" time="3.372"/>
+  <testcase name="draggingAppIntoFolderThenOutsideMovesItWithoutLosingApp" classname="app.onklav.home.DesktopFoldersUiTest" time="2.822"/>
+  <testcase name="smallLargeTextFolderKeepsItsLastRowReachable" classname="app.onklav.home.DesktopFoldersUiTest" time="2.439"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,16 @@
+{
+  "build": [],
+  "restore_bundles": [],
+  "reuse": [
+    "Notes",
+    "Counter",
+    "RSS",
+    "ReadAloud",
+    "Browser",
+    "YouTube",
+    "Annotation",
+    "Social",
+    "WalkieTalkie"
+  ],
+  "unselected_stale": []
+}

@@ -1,0 +1,129 @@
+{
+  "date": "2026-10-24",
+  "timezone": "America/Chicago",
+  "source_version": "0.67.0-rc1",
+  "source_version_code": 75,
+  "target_sdk": 36,
+  "scope": "Non-game theme, adaptive settings, memory, provider security and unused legacy-route polish",
+  "apk_built": true,
+  "apk_skipped_by_user": false,
+  "tests": {
+    "passed": 451,
+    "failed": 0,
+    "skipped": 0,
+    "unexpected_failures": 0,
+    "known_failures": [],
+    "counting": "187 fresh Rust + 231 unique app Android + 12 shared Android + 21 Python checks. One broad Android pass and only affected Contacts/Walkie/voice/drawing/model cases after fixes. An Annotation host test now uses an explicit test dispatcher to prevent IO-thread recomposition of native focus; its focused rerun passes. No lost-workspace or historical cases counted.",
+    "rust_broad": {
+      "passed": 187,
+      "failed": 0,
+      "fresh_run": true,
+      "evidence": "docs/evidence/v0.67.0/rust-tests.log"
+    },
+    "framework_host": {
+      "app_passed": 231,
+      "shared_passed": 12,
+      "case_evidence": "docs/evidence/v0.67.0/android-final-cases.json",
+      "broad_log": "docs/evidence/v0.67.0/android-full-host.log",
+      "affected_log": "docs/evidence/v0.67.0/android-focused-final.log",
+      "initial_failures": 2,
+      "latest_failures": 0,
+      "additional_logs": [
+        "docs/evidence/v0.67.0/android-lint-regressions.log",
+        "docs/evidence/v0.67.0/android-annotation-dispatcher.log"
+      ]
+    },
+    "build_scripts": {
+      "passed": 21,
+      "evidence": "docs/evidence/v0.67.0/build-script-tests.log"
+    }
+  },
+  "review": "docs/RELEASE-CHECKLIST-0.67.0.md",
+  "native_proof": "docs/native-provenance.json",
+  "sdk_proof": "docs/app-sdk-provenance.json",
+  "internal_packages": [
+    "WalkieTalkie"
+  ],
+  "full_rewrite_complete": false,
+  "handset_acceptance": false,
+  "carrier_acceptance": false,
+  "google_account_acceptance": false,
+  "store_certified": false,
+  "games_deferred": true,
+  "mobile_native_rebuild_deferred": false,
+  "builtin_document_backup_implementation_complete": true,
+  "lint": {
+    "errors": 0,
+    "warnings": 143,
+    "information": 2,
+    "warnings_by_id": {
+      "ApplySharedPref": 4,
+      "ExifInterface": 2,
+      "InlinedApi": 1,
+      "RequiresFeature": 9,
+      "GradleDependency": 9,
+      "ConfigurationScreenWidthHeight": 2,
+      "ChromeOsAbiSupport": 1,
+      "ObsoleteSdkInt": 2,
+      "UnusedResources": 1,
+      "UsableSpace": 2,
+      "ViewConstructor": 1,
+      "UseKtx": 109
+    },
+    "evidence": "docs/evidence/v0.67.0/lint-results-optimized.xml"
+  },
+  "note": "Current ARM64/Linux JNI rebuilt and Walkie package12 signed with retained publisher; games unchanged. Existing Android development signer retained for upgrades. Physical performance/carrier/account and release signing/store qualifications remain open.",
+  "apk": {
+    "name": "host",
+    "variant": "optimized",
+    "package": "app.onklav.home.prototype.rewrite",
+    "version_name": "0.67.0-rc1",
+    "version_code": 75,
+    "target_sdk": 36,
+    "bytes": 39254028,
+    "sha256": "d61696947740e61f33cbe785afdc4a9ba7d5e967f41d09f7e9723a0d30f5d52b",
+    "signer_sha256": "6ed975c5fc27d19f6291f751a8bb00fa8a2c2e7d268bffc7b6ddf7e1b1a7a69d",
+    "signature_v2_verified": true,
+    "zip_integrity": "pass",
+    "zipalign_16kb": "pass",
+    "abis": [
+      "arm64-v8a"
+    ],
+    "elf_minimum_load_alignment": {
+      "lib/arm64-v8a/libandroidx.graphics.path.so": 16384,
+      "lib/arm64-v8a/libc++_shared.so": 16384,
+      "lib/arm64-v8a/libgodot_android.so": 16384,
+      "lib/arm64-v8a/libonklav_core.so": 16384
+    },
+    "native_library_sha256": {
+      "lib/arm64-v8a/libandroidx.graphics.path.so": "41e9a793c43a0f4fddb19e33f346bace464f30f888ba7b9eaf96294ea115bfb6",
+      "lib/arm64-v8a/libc++_shared.so": "ad74bf43eb1fd576518168f664ad16a74e00eeda9595875c33dd87f6dd197869",
+      "lib/arm64-v8a/libgodot_android.so": "9e10c5ebda9bb629c671929441cdde3b4a8ab0e5542fc7e88de8d71f2b9840db",
+      "lib/arm64-v8a/libonklav_core.so": "5b758569fd5b02f6563c58289155ab026ba596892ec2786a321e968d9a8f54fe"
+    },
+    "legacy_defined_classes": 0,
+    "defined_class_count": 4535,
+    "permissions": [
+      "android.permission.INTERNET",
+      "android.permission.ACCESS_NETWORK_STATE",
+      "android.permission.VIBRATE",
+      "android.permission.READ_SMS",
+      "android.permission.READ_CONTACTS",
+      "android.permission.SEND_SMS",
+      "android.permission.RECEIVE_SMS",
+      "android.permission.RECEIVE_MMS",
+      "android.permission.RECEIVE_WAP_PUSH",
+      "android.permission.READ_PHONE_STATE",
+      "android.permission.READ_PHONE_NUMBERS",
+      "android.permission.POST_NOTIFICATIONS",
+      "android.permission.RECORD_AUDIO",
+      "android.permission.RECEIVE_BOOT_COMPLETED",
+      "app.onklav.home.prototype.rewrite.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+    ],
+    "rust_libraries": {
+      "arm64-v8a": "5b758569fd5b02f6563c58289155ab026ba596892ec2786a321e968d9a8f54fe"
+    },
+    "delivery_filename": "OnKlav-0.67.0.apk"
+  },
+  "build_evidence": "docs/evidence/v0.67.0/build-optimized.json"
+}

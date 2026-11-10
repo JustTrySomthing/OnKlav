@@ -1,0 +1,21 @@
+{
+  "schema": "onklav.app.v1",
+  "runtime": "rust-wasm-ui.v1",
+  "id": "app.onklav.weather",
+  "name": "Weather",
+  "version": 18,
+  "min_host": 95,
+  "icon": {
+    "symbol": "weather"
+  },
+  "capabilities": [
+    "storage.private",
+    "network.http",
+    "links.external"
+  ],
+  "network": {
+    "origins": [
+      "https://api.met.no"
+    ]
+  }
+}

@@ -1,0 +1,107 @@
+{
+  "build": [
+    "Calc",
+    "Convert",
+    "Weather",
+    "eBooks",
+    "AudioBooks",
+    "Podcasts",
+    "Radio",
+    "Files",
+    "Notes",
+    "RSS",
+    "ReadAloud",
+    "Browser",
+    "YouTube",
+    "Annotation",
+    "Social",
+    "WalkieTalkie"
+  ],
+  "restore_bundles": [],
+  "reuse": [
+    "Counter"
+  ],
+  "unselected_stale": []
+}
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.07s
+Calc: compiling changed app
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/developer/components)
+   Compiling onklav-calc v0.1.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/apps/calc)
+    Finished `release` profile [optimized] target(s) in 5.13s
+Created /workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/packages/.sdk-build-v2d8ypdi/Calc.onklav-a
+Convert: compiling changed app
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/developer/components)
+   Compiling onklav-convert v0.1.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/apps/convert)
+    Finished `release` profile [optimized] target(s) in 4.78s
+Created /workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/packages/.sdk-build-lxk0xt85/Convert.onklav-a
+Weather: compiling changed app
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/developer/components)
+   Compiling onklav-weather v0.1.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/apps/weather)
+    Finished `release` profile [optimized] target(s) in 4.56s
+Created /workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/packages/.sdk-build-r4tjxrb5/Weather.onklav-a
+eBooks: compiling changed app
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/developer/components)
+   Compiling onklav-ebooks v0.1.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/apps/ebooks)
+    Finished `release` profile [optimized] target(s) in 4.84s
+Created /workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/packages/.sdk-build-n6vvqwqb/eBooks.onklav-a
+AudioBooks: compiling changed app
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/developer/components)
+   Compiling onklav-audiobooks v0.1.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/apps/audiobooks)
+    Finished `release` profile [optimized] target(s) in 3.80s
+Created /workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/packages/.sdk-build-xgr81v1w/AudioBooks.onklav-a
+Podcasts: compiling changed app
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/developer/components)
+   Compiling onklav-podcasts v0.1.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/apps/podcasts)
+    Finished `release` profile [optimized] target(s) in 4.02s
+Created /workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/packages/.sdk-build-_k5l1xqh/Podcasts.onklav-a
+Radio: compiling changed app
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/developer/components)
+   Compiling onklav-radio v0.1.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/apps/radio)
+    Finished `release` profile [optimized] target(s) in 4.00s
+Created /workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/packages/.sdk-build-1c20da1h/Radio.onklav-a
+Files: compiling changed app
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/developer/components)
+   Compiling onklav-files v0.1.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/apps/files)
+    Finished `release` profile [optimized] target(s) in 4.03s
+Created /workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/packages/.sdk-build-xbuvz37c/Files.onklav-a
+Notes: compiling changed app
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/developer/components)
+   Compiling onklav-notes v0.1.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/apps/notes)
+    Finished `release` profile [optimized] target(s) in 4.03s
+Created /workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/packages/.sdk-build-_c7t9fzt/Notes.onklav-a
+RSS: compiling changed app
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/developer/components)
+   Compiling onklav-rss v0.1.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/apps/rss)
+    Finished `release` profile [optimized] target(s) in 3.86s
+Created /workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/packages/.sdk-build-vihmqm63/RSS.onklav-a
+ReadAloud: compiling changed app
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/developer/components)
+   Compiling onklav-reader v0.1.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/apps/reader)
+    Finished `release` profile [optimized] target(s) in 4.41s
+Created /workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/packages/.sdk-build-mwucyin5/ReadAloud.onklav-a
+Browser: compiling changed app
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/developer/components)
+   Compiling onklav-browser v0.1.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/apps/browser)
+    Finished `release` profile [optimized] target(s) in 3.93s
+Created /workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/packages/.sdk-build-918z58vz/Browser.onklav-a
+YouTube: compiling changed app
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/developer/components)
+   Compiling onklav-youtube v0.1.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/apps/youtube)
+    Finished `release` profile [optimized] target(s) in 3.92s
+Created /workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/packages/.sdk-build-22maiww_/YouTube.onklav-a
+Annotation: compiling changed app
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/developer/components)
+   Compiling onklav-annotation v0.1.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/apps/annotation)
+    Finished `release` profile [optimized] target(s) in 3.87s
+Created /workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/packages/.sdk-build-ohq19pen/Annotation.onklav-a
+Social: compiling changed app
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/developer/components)
+   Compiling onklav-social v0.1.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/apps/social)
+    Finished `release` profile [optimized] target(s) in 3.98s
+Created /workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/packages/.sdk-build-vorsdbrs/Social.onklav-a
+WalkieTalkie: compiling changed app
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/developer/components)
+   Compiling onklav-walkie v0.1.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/apps/walkie)
+    Finished `release` profile [optimized] target(s) in 4.36s
+Created /workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/packages/.sdk-build-tauh5m6i/WalkieTalkie.onklav-a
+{"built": ["Calc", "Convert", "Weather", "eBooks", "AudioBooks", "Podcasts", "Radio", "Files", "Notes", "RSS", "ReadAloud", "Browser", "YouTube", "Annotation", "Social", "WalkieTalkie"], "bundles_restored": [], "all_packages_current": true}

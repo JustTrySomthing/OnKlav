@@ -1,0 +1,47 @@
+Publisher key created. Keep it private and backed up.
+Publisher key created. Keep it private and backed up.
+   Compiling zmij v1.0.23
+   Compiling serde_core v1.0.229
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/workspace/scratch/ed752e8a1957/current/OnKlav/sdk/rust)
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-author-9c_bulka/project)
+    Finished `release` profile [optimized] target(s) in 2.97s
+Created /tmp/onklav-author-9c_bulka/project/dist/org.example.notebook.onklav-a
+/workspace/scratch/ed752e8a1957/current/OnKlav/developer/onklav.py:111: ResourceWarning: unclosed file <_io.TextIOWrapper name=5 encoding='utf-8'>
+  try:review=inspect_package(output)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+Created /tmp/onklav-author-9c_bulka/v2.onklav-a
+Created /tmp/onklav-author-9c_bulka/other-publisher.onklav-a
+Created /tmp/onklav-author-9c_bulka/other-app.onklav-a
+test_01_generated_project_builds_signed_package_and_runs_its_scenario (__main__.DeveloperWorkflow.test_01_generated_project_builds_signed_package_and_runs_its_scenario) ... /workspace/scratch/ed752e8a1957/current/OnKlav/developer/tests/test_workflow.py:47: ResourceWarning: unclosed file <_io.TextIOWrapper name=7 encoding='utf-8'>
+  result=sdk.test_project(self.project,self.package)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/suite.py:107: ResourceWarning: unclosed file <_io.TextIOWrapper name=5 encoding='utf-8'>
+  for index, test in enumerate(self):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+test_02_denial_and_grant_revocation_are_live (__main__.DeveloperWorkflow.test_02_denial_and_grant_revocation_are_live) ... ok
+test_03_signed_update_preserves_data_invalidates_session_and_rejects_downgrade (__main__.DeveloperWorkflow.test_03_signed_update_preserves_data_invalidates_session_and_rejects_downgrade) ... ok
+test_04_different_publisher_cannot_take_over_identity (__main__.DeveloperWorkflow.test_04_different_publisher_cannot_take_over_identity) ... ok
+test_05_same_author_other_id_cannot_read_private_documents (__main__.DeveloperWorkflow.test_05_same_author_other_id_cannot_read_private_documents) ... ok
+test_06_remove_reinstall_retains_or_deletes_only_as_requested (__main__.DeveloperWorkflow.test_06_remove_reinstall_retains_or_deletes_only_as_requested) ... ok
+test_07_tampered_wasm_and_stale_review_do_not_install (__main__.DeveloperWorkflow.test_07_tampered_wasm_and_stale_review_do_not_install) ... ok
+test_08_tools_preserve_projects_outputs_and_private_keys (__main__.DeveloperWorkflow.test_08_tools_preserve_projects_outputs_and_private_keys) ...     Finished `release` profile [optimized] target(s) in 0.00s
+ok
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/suite.py:107: ResourceWarning: unclosed file <_io.TextIOWrapper name=5 encoding='utf-8'>
+  for index, test in enumerate(self):
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+test_09_saved_data_survives_a_fresh_runtime_process (__main__.DeveloperWorkflow.test_09_saved_data_survives_a_fresh_runtime_process) ... /workspace/scratch/ed752e8a1957/current/OnKlav/developer/tests/test_workflow.py:98: ResourceWarning: unclosed file <_io.TextIOWrapper name=5 encoding='utf-8'>
+  self.runtime=sdk.Runtime(self.data.name,self.binary)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+ok
+/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/unittest/suite.py:84: ResourceWarning: unclosed file <_io.TextIOWrapper name=6 encoding='utf-8'>
+  return self.run(*args, **kwds)
+ResourceWarning: Enable tracemalloc to get the object allocation traceback
+
+----------------------------------------------------------------------
+Ran 9 tests in 6.666s
+
+OK

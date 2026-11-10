@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.shared.NativeBridgeTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-23T03:59:28" hostname="5347b9ab5bea" time="0.055">
+  <properties/>
+  <testcase name="oversizedDocumentReturnsFailureAcrossJni" classname="app.onklav.shared.NativeBridgeTest" time="0.038"/>
+  <testcase name="kotlinCallsRealRustAndReloadsUnicodeDocument" classname="app.onklav.shared.NativeBridgeTest" time="0.008"/>
+  <testcase name="walkieRulesCrossJniWithoutAnyTransport" classname="app.onklav.shared.NativeBridgeTest" time="0.009"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

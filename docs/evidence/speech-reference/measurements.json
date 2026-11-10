@@ -1,0 +1,149 @@
+{
+  "environment": "Linux x86_64 build host; NOT Android phone performance",
+  "engine": "sherpa-onnx Rust1.13.8; native Piper/eSpeak frontend; CPU;2threads",
+  "models": {
+    "kitten-nano-en-v0_8-fp32": {
+      "family": "kitten",
+      "precision": "FP32",
+      "page": "https://k2-fsa.github.io/sherpa/onnx/tts/all/English/kitten-nano-en-v0_8-fp32.html"
+    }
+  },
+  "message": "Hi Charles! Your order is ready. Would you like me to leave it at the workshop, or bring it over tomorrow?",
+  "passage": "The morning light moved slowly across the mountains. Down in the valley, a narrow river caught the first warm colors of the day. Clara stopped beside the old wooden bridge and listened. For a moment, there was only birdsong and the quiet rush of water. Then someone called her name. She turned, smiled, and began walking home.",
+  "reference": "Friends fell out often because life was changing so fast. The easiest thing in the world was to lose touch with someone.",
+  "voices": [
+    {
+      "id": 0,
+      "model": "kitten-nano-en-v0_8-fp32",
+      "sid": 2,
+      "label": "expr-voice-3-m",
+      "gender": "Male",
+      "lang": "en-us",
+      "upstream": "expr-voice-3-m",
+      "family": "kitten",
+      "precision": "FP32",
+      "page": "https://k2-fsa.github.io/sherpa/onnx/tts/all/English/kitten-nano-en-v0_8-fp32.html",
+      "reference_audio": "https://k2-fsa.github.io/sherpa/onnx/tts/all/kitten/nano-v0_8-fp32/mp3/2-expr-voice-3-m.mp3",
+      "variant": "Kitten Nano v0.8 FP32"
+    },
+    {
+      "id": 1,
+      "model": "kitten-nano-en-v0_8-fp32",
+      "sid": 5,
+      "label": "expr-voice-4-f",
+      "gender": "Female",
+      "lang": "en-us",
+      "upstream": "expr-voice-4-f",
+      "family": "kitten",
+      "precision": "FP32",
+      "page": "https://k2-fsa.github.io/sherpa/onnx/tts/all/English/kitten-nano-en-v0_8-fp32.html",
+      "reference_audio": "https://k2-fsa.github.io/sherpa/onnx/tts/all/kitten/nano-v0_8-fp32/mp3/5-expr-voice-4-f.mp3",
+      "variant": "Kitten Nano v0.8 FP32"
+    }
+  ],
+  "runs": [
+    {
+      "voice": 0,
+      "model": "kitten-nano-en-v0_8-fp32",
+      "sid": 2,
+      "kind": "reference",
+      "file": "0-reference.wav",
+      "callback_samples": 210803,
+      "callbacks": 2,
+      "first_callback_ms": 721.12442,
+      "rtf": 0.13548221336508492,
+      "sample_rate": 24000,
+      "seconds": 8.783458333333334,
+      "synthesis_ms": 1190.0023760000001,
+      "total_ms": 1194.1529940013424,
+      "frontend": "Sherpa1.13.8 native text frontend; no manual phoneme/chunk conversion"
+    },
+    {
+      "voice": 0,
+      "model": "kitten-nano-en-v0_8-fp32",
+      "sid": 2,
+      "kind": "message",
+      "file": "0-message.wav",
+      "callback_samples": 156024,
+      "callbacks": 3,
+      "first_callback_ms": 227.796268,
+      "rtf": 0.13766911536686663,
+      "sample_rate": 24000,
+      "seconds": 6.501,
+      "synthesis_ms": 894.9869190000001,
+      "total_ms": 897.578173000511,
+      "frontend": "Sherpa1.13.8 native text frontend; no manual phoneme/chunk conversion"
+    },
+    {
+      "voice": 0,
+      "model": "kitten-nano-en-v0_8-fp32",
+      "sid": 2,
+      "kind": "reading",
+      "file": "0-reading.wav",
+      "callback_samples": 564301,
+      "callbacks": 6,
+      "first_callback_ms": 418.818857,
+      "rtf": 0.11819675037258486,
+      "sample_rate": 24000,
+      "seconds": 23.512541666666667,
+      "synthesis_ms": 2779.1060180000004,
+      "total_ms": 2786.765029999515,
+      "frontend": "Sherpa1.13.8 native text frontend; no manual phoneme/chunk conversion"
+    },
+    {
+      "voice": 1,
+      "model": "kitten-nano-en-v0_8-fp32",
+      "sid": 5,
+      "kind": "reference",
+      "file": "1-reference.wav",
+      "callback_samples": 198131,
+      "callbacks": 2,
+      "first_callback_ms": 614.214707,
+      "rtf": 0.15024790252913478,
+      "sample_rate": 24000,
+      "seconds": 8.255458333333333,
+      "synthesis_ms": 1240.365299,
+      "total_ms": 1243.506722001257,
+      "frontend": "Sherpa1.13.8 native text frontend; no manual phoneme/chunk conversion"
+    },
+    {
+      "voice": 1,
+      "model": "kitten-nano-en-v0_8-fp32",
+      "sid": 5,
+      "kind": "message",
+      "file": "1-message.wav",
+      "callback_samples": 160519,
+      "callbacks": 3,
+      "first_callback_ms": 226.99754,
+      "rtf": 0.16997964034164179,
+      "sample_rate": 24000,
+      "seconds": 6.688291666666666,
+      "synthesis_ms": 1136.873412,
+      "total_ms": 1140.217162999761,
+      "frontend": "Sherpa1.13.8 native text frontend; no manual phoneme/chunk conversion"
+    },
+    {
+      "voice": 1,
+      "model": "kitten-nano-en-v0_8-fp32",
+      "sid": 5,
+      "kind": "reading",
+      "file": "1-reading.wav",
+      "callback_samples": 565846,
+      "callbacks": 6,
+      "first_callback_ms": 596.106963,
+      "rtf": 0.15576259690445812,
+      "sample_rate": 24000,
+      "seconds": 23.576916666666666,
+      "synthesis_ms": 3672.4017670000003,
+      "total_ms": 3679.3055180005467,
+      "frontend": "Sherpa1.13.8 native text frontend; no manual phoneme/chunk conversion"
+    }
+  ],
+  "initialization": {
+    "kitten-nano-en-v0_8-fp32": {
+      "load_ms": 427.09898699999997,
+      "ready": true,
+      "speakers": 8
+    }
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "isolated_players": true,
+  "paired_round_and_reversed_builders": true,
+  "same_fixed_step_final_blocks_and_scores": true,
+  "paused_arrival_silent": true,
+  "future_next_queued_behind_flight": true,
+  "powers_and_timeout_turns": true,
+  "duplicate_delivery_no_cues": true,
+  "native_sequence_saved_return": true,
+  "real_carrier_tested": false,
+  "errors": []
+}

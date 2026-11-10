@@ -1,0 +1,64 @@
+{
+  "scope": "Development builds; not full Inner Circle 2.2.85 parity",
+  "source_counts": {
+    ".java": 0,
+    ".kt": 144,
+    ".rs": 35,
+    ".gd": 9
+  },
+  "application_modules": [
+    "android/app/build.gradle.kts"
+  ],
+  "apks": [
+    {
+      "name": "host",
+      "variant": "debug",
+      "package": "app.onklav.home.prototype.rewrite",
+      "version_name": "0.48.0-dev",
+      "version_code": 55,
+      "bytes": 70466992,
+      "sha256": "f3b7383d8757ee2d2fb59181a7837392d0178262960352f2a7de43b3e5e52272",
+      "signer_sha256": "6ed975c5fc27d19f6291f751a8bb00fa8a2c2e7d268bffc7b6ddf7e1b1a7a69d",
+      "signature_v2_verified": true,
+      "zip_integrity": "pass",
+      "zipalign_16kb": "pass",
+      "abis": [
+        "arm64-v8a"
+      ],
+      "elf_minimum_load_alignment": {
+        "lib/arm64-v8a/libandroidx.graphics.path.so": 16384,
+        "lib/arm64-v8a/libc++_shared.so": 16384,
+        "lib/arm64-v8a/libgodot_android.so": 16384,
+        "lib/arm64-v8a/libonklav_core.so": 16384
+      },
+      "native_library_sha256": {
+        "lib/arm64-v8a/libandroidx.graphics.path.so": "41e9a793c43a0f4fddb19e33f346bace464f30f888ba7b9eaf96294ea115bfb6",
+        "lib/arm64-v8a/libc++_shared.so": "ad74bf43eb1fd576518168f664ad16a74e00eeda9595875c33dd87f6dd197869",
+        "lib/arm64-v8a/libgodot_android.so": "9e10c5ebda9bb629c671929441cdde3b4a8ab0e5542fc7e88de8d71f2b9840db",
+        "lib/arm64-v8a/libonklav_core.so": "e52315a49945c6ace3a94a9b734432a7ac8315e8a33268087f14af5f55150352"
+      },
+      "legacy_defined_classes": 0,
+      "defined_class_count": 16047,
+      "permissions": [
+        "android.permission.INTERNET",
+        "android.permission.ACCESS_NETWORK_STATE",
+        "android.permission.VIBRATE",
+        "android.permission.READ_SMS",
+        "android.permission.READ_CONTACTS",
+        "android.permission.SEND_SMS",
+        "android.permission.RECEIVE_SMS",
+        "android.permission.RECEIVE_MMS",
+        "android.permission.RECEIVE_WAP_PUSH",
+        "android.permission.READ_PHONE_STATE",
+        "android.permission.READ_PHONE_NUMBERS",
+        "android.permission.POST_NOTIFICATIONS",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.RECEIVE_BOOT_COMPLETED",
+        "app.onklav.home.prototype.rewrite.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+      ],
+      "rust_libraries": {
+        "arm64-v8a": "e52315a49945c6ace3a94a9b734432a7ac8315e8a33268087f14af5f55150352"
+      }
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.FolderVaultUiTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-29T11:10:11" hostname="3d3a46c2e56a" time="11.493">
+  <properties/>
+  <testcase name="protectionRequiresMatchingPasswordsAndOffersVisibility" classname="app.onklav.home.FolderVaultUiTest" time="11.493"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

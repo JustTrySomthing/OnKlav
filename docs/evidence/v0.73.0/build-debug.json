@@ -1,0 +1,13 @@
+{
+  "status": "passed",
+  "scope": "full debug lint and OnKlav ARM64 APK assembly in one bounded Gradle phase; separate bounded tests already passed",
+  "source_inputs": "docs/evidence/v0.73.0/inputs-debug.json",
+  "apk": "/workspace/scratch/75acf774e3b8/OnKlav-0.73.0-ARM64.apk",
+  "bytes": 70996422,
+  "sha256": "f1c42a4f274d4d2453d8d8400ff61c6a0f8cd8eb1b5a58020d8af4d5fd070749",
+  "verification": "docs/apk-verification-debug.json",
+  "logs": [
+    "docs/evidence/v0.73.0/full-lint-and-apk.log",
+    "docs/evidence/v0.73.0/verify-debug.log"
+  ]
+}

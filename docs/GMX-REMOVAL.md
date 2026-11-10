@@ -1,0 +1,13 @@
+> Superseded by FILES-SIMPLIFICATION.md: the owner confirmed no GMX accounts exist and requested removal of the migration/cleanup implementation as well. The text below is historical evidence only.
+
+# Complete GMX removal
+
+2 November 2026. The owner explicitly corrected the earlier enrollment-only interpretation and requested removal of GMX accounts completely.
+
+Email now offers Yahoo, Google and Private domain. The account-menu Add action starts with Yahoo. GMX account presets, regional defaults, provider mapping, help links, setup dialog and form branches are removed. Validation rejects removed provider/address/server configurations, including attempts through Private domain. GMX recipients remain valid: retirement concerns the account used to send/check mail, not recipients, sender names or message content.
+
+MailDisk reads old records before provider parsing. It recognizes legacy GMX provider records and supported GMX address/server domains, validates other accounts, and journals the retired account/attachment IDs in the existing device-encrypted storage. After removing account references it removes local saved credentials, headers, folders, bodies, drafts, unreferenced draft attachments, account-specific rules, sync status and account notifications. The encrypted cleanup inventory survives interruptions, including after the account/draft references were already committed, and is removed only after cleanup succeeds. Other accounts and their shared attachments are retained. Corrupt/unreadable account envelopes fail without deletion. The process uses the normal permitted MailModel opening or background-sync path before any account is used for network access.
+
+There is no server login or remote deletion in cleanup. These are source changes; an updated APK must be built/installed before they affect a phone. Native/SDK/game/signing identities and prior Yahoo/Google/cloud-sharing changes are preserved. No new APK requested or built.
+
+All 34 selected/shared checks passed (17 app checks executed, 17 unchanged shared checks reused by Gradle). Production and all test-source compilation passed; runtime classes match compiled Kotlin. Five new retirement checks cover complete scoped cleanup, interruption recovery, unreadable-envelope preservation, re-enrollment refusal/recipient support, and legacy custom-server recognition without deleting lookalike domains. The remaining checks cover encrypted storage/MIME, the three-choice UI, help links and Yahoo/Google/private-domain forms. Final results and source hashes are recorded in gmx-removal-verification.json. Physical phone qualification is separate.

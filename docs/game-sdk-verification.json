@@ -1,0 +1,78 @@
+{
+  "sdk": "0.5.0",
+  "source_host": "0.100.48-rc1/code157",
+  "latest_built_apk": "0.100.47-rc1/code156 predates this work",
+  "apk_built_this_increment": false,
+  "checks": {
+    "naval_friend_models": 222,
+    "hockey": 80,
+    "shared_rules": 12,
+    "sdk_unit_methods": 11,
+    "template_export_sign_verify": [
+      {
+        "template": "touch2d",
+        "bytes": 117923,
+        "signature_verified": true,
+        "minimum_host": 157
+      },
+      {
+        "template": "scene3d",
+        "bytes": 118410,
+        "signature_verified": true,
+        "minimum_host": 157
+      },
+      {
+        "template": "turn",
+        "bytes": 120837,
+        "signature_verified": true,
+        "minimum_host": 157
+      },
+      {
+        "template": "sms",
+        "bytes": 120854,
+        "signature_verified": true,
+        "minimum_host": 157
+      }
+    ],
+    "phone_sized_browser_flows": [
+      {
+        "viewport": [
+          320,
+          560
+        ],
+        "solo_fleet_target_fire_ai_pause_saved_return": true,
+        "engine_errors": [],
+        "js_errors": []
+      },
+      {
+        "viewport": [
+          432,
+          740
+        ],
+        "solo_fleet_target_fire_ai_pause_saved_return": true,
+        "engine_errors": [],
+        "js_errors": []
+      }
+    ],
+    "friend_browser_relay": {
+      "two_isolated_browser_peers": true,
+      "private_fleets_and_readiness": true,
+      "four_alternating_sms_turns": true,
+      "duplicate_history_ignored": true,
+      "saved_return_prompt": true,
+      "physical_carrier": false,
+      "errors": []
+    },
+    "android_broker_session_tests": "FriendGamesTest 4 methods + GameSessionStatusTest 3 methods passed; production optimized Kotlin compiled",
+    "android_package_web_window_tests": "GamePackagesTest, GameWebPolicyTest and GameWindowHostTest passed"
+  },
+  "physical_device_tested": false,
+  "limits": [
+    "No157 APK built this increment;156 lacks these changes.",
+    "Native SMS tests use two isolated Robolectric contexts; browser tests use a simulated relay, not physical carrier SMS.",
+    "Two-phone/SIM, real speaker audio, Samsung gestures, process-loss and performance acceptance remain open.",
+    "Web storage synchronization is asynchronous.",
+    "SMS is not end-to-end encrypted or cryptographically authenticated.",
+    "Headless bounded boot may report ObjectDB shutdown instances; live browser flows report no engine errors."
+  ]
+}

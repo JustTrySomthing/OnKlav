@@ -1,0 +1,13 @@
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/work/OnKlav/developer/components)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.31s
+     Running unittests src/lib.rs (developer/components/target/debug/deps/onklav_ui-b9729a29e05b7074)
+
+running 5 tests
+test weather::tests::weather_cache_age_rollback_and_missing_clock_fail_stale ... ok
+test weather::tests::weather_explicit_location_and_units_do_not_require_gps ... ok
+test weather::tests::weather_bad_units_missing_values_and_http_errors_do_not_make_data ... ok
+test weather::tests::weather_storage_conflict_preserves_old_snapshot ... ok
+test weather::tests::weather_failed_refresh_keeps_saved_data_and_attribution ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 81 filtered out; finished in 0.00s
+

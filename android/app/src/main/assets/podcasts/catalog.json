@@ -1,0 +1,602 @@
+[
+  {
+    "title": "The Daily",
+    "author": "The New York Times",
+    "feed": "https://feeds.simplecast.com/Sl5CSM3S",
+    "language": ""
+  },
+  {
+    "title": "Crime Junkie",
+    "author": "Audiochuck",
+    "feed": "https://feeds.simplecast.com/qm_9xx0g",
+    "language": ""
+  },
+  {
+    "title": "Up First from NPR",
+    "author": "NPR",
+    "feed": "https://feeds.npr.org/510318/podcast.xml",
+    "language": ""
+  },
+  {
+    "title": "The Builders",
+    "author": "iHeartPodcasts and Kaleidoscope",
+    "feed": "https://www.omnycontent.com/d/playlist/e73c998e-6e60-432f-8610-ae210140c5b1/8adeeef5-b6c0-4cfa-b6cc-b4c0011490b1/51d9281c-e886-4139-b940-b4c0011494bc/podcast.rss",
+    "language": ""
+  },
+  {
+    "title": "Mick Unplugged",
+    "author": "Mick Hunt",
+    "feed": "https://feeds.megaphone.fm/YAP1844984381",
+    "language": ""
+  },
+  {
+    "title": "REAL AF with Andy Frisella",
+    "author": "Andy Frisella",
+    "feed": "https://rss.libsyn.com/shows/67940/destinations/278377.xml",
+    "language": ""
+  },
+  {
+    "title": "The Dylan Gemelli Podcast",
+    "author": "Dylan Gemelli",
+    "feed": "https://feed.podbean.com/dylangemelli/feed.xml",
+    "language": ""
+  },
+  {
+    "title": "The Joe Rogan Experience",
+    "author": "Joe Rogan",
+    "feed": "https://feeds.megaphone.fm/GLT1412515089",
+    "language": ""
+  },
+  {
+    "title": "Love Trapped",
+    "author": "iHeartPodcasts and Glass Podcasts",
+    "feed": "https://www.omnycontent.com/d/playlist/e73c998e-6e60-432f-8610-ae210140c5b1/20968bfe-1a62-450f-a762-b3de0110281c/1c0ae3b2-ec1e-4a0c-a144-b3de01102fb1/podcast.rss",
+    "language": ""
+  },
+  {
+    "title": "The Learning Leader Show With Ryan Hawk",
+    "author": "Ryan Hawk",
+    "feed": "https://rss.libsyn.com/shows/65162/destinations/259291.xml",
+    "language": ""
+  },
+  {
+    "title": "Pardon My Take",
+    "author": "Barstool Sports",
+    "feed": "https://mcsorleys.barstoolsports.com/feed/pardon-my-take",
+    "language": ""
+  },
+  {
+    "title": "METRO with Sarah Koenig",
+    "author": "Serial Productions & The New York Times",
+    "feed": "https://feeds.simplecast.com/R9ZBMPFj",
+    "language": ""
+  },
+  {
+    "title": "Pod Save America",
+    "author": "Pod Save America",
+    "feed": "https://audioboom.com/channels/5166624.rss",
+    "language": ""
+  },
+  {
+    "title": "Dateline NBC",
+    "author": "NBC News",
+    "feed": "https://podcastfeeds.nbcnews.com/HL4TzgYC",
+    "language": ""
+  },
+  {
+    "title": "Unblinded with Sean Callagy",
+    "author": "Sean Callagy",
+    "feed": "https://anchor.fm/s/10a340624/podcast/rss",
+    "language": ""
+  },
+  {
+    "title": "Coffeez with Joe Shalaby",
+    "author": "Joseph Shalaby",
+    "feed": "https://feeds.captivate.fm/coffeez-with-joe-shalaby/",
+    "language": ""
+  },
+  {
+    "title": "Young and Profiting (YAP) with Hala Taha: Entrepreneurship and Self-Improvement Podcast",
+    "author": "Hala Taha | Entrepreneurship, Sales, Marketing | YAP Media Network",
+    "feed": "https://feeds.megaphone.fm/yap",
+    "language": ""
+  },
+  {
+    "title": "Habits and Hustle",
+    "author": "Jen Cohen",
+    "feed": "https://rss.libsyn.com/shows/624375/destinations/5495160.xml",
+    "language": ""
+  },
+  {
+    "title": "This American Life",
+    "author": "This American Life",
+    "feed": "https://www.thisamericanlife.org/podcast/rss.xml",
+    "language": ""
+  },
+  {
+    "title": "Notes from the Edge",
+    "author": "Gamut Podcast Network",
+    "feed": "https://rss.art19.com/notes-from-the-edge",
+    "language": ""
+  },
+  {
+    "title": "The Level Up Podcast w/ Paul Alex",
+    "author": "Paul Alex Espinoza",
+    "feed": "https://rss.pdrl.fm/0c37ea/feeds.megaphone.fm/ARML5552075612",
+    "language": ""
+  },
+  {
+    "title": "The Code To Winning",
+    "author": "Kagiso Dikane",
+    "feed": "https://feed.podsense.media/zjb/feed/download/be/9c/d7/be9cd7a1-c295-4f94-a973-abf6ace58ad4.xml",
+    "language": ""
+  },
+  {
+    "title": "We!",
+    "author": "Joe Mittiga",
+    "feed": "https://rss.buzzsprout.com/2547586.rss",
+    "language": ""
+  },
+  {
+    "title": "Finding Peak with Ryan Hanley",
+    "author": "Ryan Hanley",
+    "feed": "https://feeds.simplecast.com/FRhlISgU",
+    "language": ""
+  },
+  {
+    "title": "We Fixed It, You're Welcome",
+    "author": "We Fixed It, You're Welcome",
+    "feed": "https://feeds.megaphone.fm/RHAPSODYVOICES4270090158",
+    "language": ""
+  },
+  {
+    "title": "Bred To Lead",
+    "author": "Dr. Jake Tayler Jacobs",
+    "feed": "https://api.riverside.com/hosting/TmCW6gll.rss",
+    "language": ""
+  },
+  {
+    "title": "Proven Podcast",
+    "author": "Charles Schwartz",
+    "feed": "https://rss.libsyn.com/shows/526583/destinations/4528548.xml",
+    "language": ""
+  },
+  {
+    "title": "Tomorrow, Today",
+    "author": "Shekhar Natarajan",
+    "feed": "https://feeds.simplecast.com/tj_igLD4",
+    "language": ""
+  },
+  {
+    "title": "The Bill Simmons Podcast",
+    "author": "The Ringer",
+    "feed": "https://feeds.megaphone.fm/the-bill-simmons-podcast",
+    "language": ""
+  },
+  {
+    "title": "Morbid",
+    "author": "Ash Kelley & Alaina Urquhart",
+    "feed": "https://feeds.simplecast.com/ohmVlJZQ",
+    "language": ""
+  },
+  {
+    "title": "Passion Struck with John R. Miles",
+    "author": "Passion Struck with John R. Miles",
+    "feed": "https://feeds.simplecast.com/XYHE1JPs",
+    "language": ""
+  },
+  {
+    "title": "The Team House",
+    "author": "dee takos",
+    "feed": "https://www.spreaker.com/show/5960890/episodes/feed",
+    "language": ""
+  },
+  {
+    "title": "Good Hang with Amy Poehler",
+    "author": "The Ringer",
+    "feed": "https://feeds.megaphone.fm/good-hang-with-amy-poehler",
+    "language": ""
+  },
+  {
+    "title": "The Mel Robbins Podcast",
+    "author": "Mel Robbins",
+    "feed": "https://feeds.simplecast.com/UCwaTX1J",
+    "language": ""
+  },
+  {
+    "title": "The Rest Is History",
+    "author": "Goalhanger",
+    "feed": "https://feeds.megaphone.fm/GLT4787413333",
+    "language": ""
+  },
+  {
+    "title": "20/20",
+    "author": "ABC News",
+    "feed": "https://feeds.megaphone.fm/ESP3456903052",
+    "language": ""
+  },
+  {
+    "title": "Machine Gods",
+    "author": "NPR",
+    "feed": "https://feeds.npr.org/g-s1-143588/podcast.xml",
+    "language": ""
+  },
+  {
+    "title": "the bossbabe podcast",
+    "author": "Natalie Ellis",
+    "feed": "https://feeds.megaphone.fm/GRWD2947998660",
+    "language": ""
+  },
+  {
+    "title": "Build or Break",
+    "author": "Daniel Lubetzky",
+    "feed": "https://rss2.flightcast.com/jcal6hh51ojy5f2u6fc7w28x.xml",
+    "language": ""
+  },
+  {
+    "title": "The Diary Of A CEO with Steven Bartlett",
+    "author": "DOAC",
+    "feed": "https://rss2.flightcast.com/xmsftuzjjykcmqwolaqn6mdn",
+    "language": ""
+  },
+  {
+    "title": "Betrayal Season 6",
+    "author": "iHeartPodcasts | Glass Podcasts",
+    "feed": "https://www.omnycontent.com/d/playlist/e73c998e-6e60-432f-8610-ae210140c5b1/7b1f0895-f595-4c38-afb6-ae6001531610/f1aae979-82f6-402c-8906-ae6001537b33/podcast.rss",
+    "language": ""
+  },
+  {
+    "title": "48 Hours",
+    "author": "48 Hours",
+    "feed": "https://rss.amperwave.net/v2/feed/audacynetwork/496099a4061493caac75b71a6c26b8fb",
+    "language": ""
+  },
+  {
+    "title": "The Drop the Needle Podcast",
+    "author": "Jim Alstott",
+    "feed": "https://audioboom.com/channels/5164448.rss",
+    "language": ""
+  },
+  {
+    "title": "We're Out of Time",
+    "author": "Richard Taite",
+    "feed": "https://anchor.fm/s/f5dbfa60/podcast/rss",
+    "language": ""
+  },
+  {
+    "title": "True Crime All The Time",
+    "author": "Emash Digital",
+    "feed": "https://rss.art19.com/true-crime-all-the-time",
+    "language": ""
+  },
+  {
+    "title": "The Shawn Ryan Show",
+    "author": "Shawn Ryan",
+    "feed": "https://rss.pdrl.fm/ac69ac/feeds.megaphone.fm/WWO7410387571",
+    "language": ""
+  },
+  {
+    "title": "Makes Sense - with Dr. JC Doornick",
+    "author": "Dr. JC Doornick \"The Dragon\"",
+    "feed": "https://rss.pdrl.fm/10b86f/feeds.simplecast.com/NQa_M9Ny",
+    "language": ""
+  },
+  {
+    "title": "The Jamie Kern Lima Show",
+    "author": "Jamie Kern Lima",
+    "feed": "https://feeds.megaphone.fm/LIFEISLOVELLC4342849321",
+    "language": ""
+  },
+  {
+    "title": "The Ezra Klein Show",
+    "author": "New York Times Opinion",
+    "feed": "https://feeds.simplecast.com/kEKXbjuJ",
+    "language": ""
+  },
+  {
+    "title": "SmartLess",
+    "author": "Jason Bateman, Sean Hayes, Will Arnett",
+    "feed": "https://feeds.simplecast.com/hNaFxXpO",
+    "language": ""
+  },
+  {
+    "title": "Stuff You Should Know",
+    "author": "iHeartPodcasts",
+    "feed": "https://www.omnycontent.com/d/playlist/e73c998e-6e60-432f-8610-ae210140c5b1/a91018a4-ea4f-4130-bf55-ae270180c327/44710ecc-10bb-48d1-93c7-ae270180c33e/podcast.rss",
+    "language": ""
+  },
+  {
+    "title": "Live Free with Josh Howerton",
+    "author": "Lakepointe Church",
+    "feed": "https://feeds.megaphone.fm/HAEEH8788670682",
+    "language": ""
+  },
+  {
+    "title": "The Bible in a Year (with Fr. Mike Schmitz)",
+    "author": "Ascension",
+    "feed": "https://feeds.fireside.fm/bibleinayear/rss",
+    "language": ""
+  },
+  {
+    "title": "Heart",
+    "author": "Apple TV / Plan B / Blanchard House",
+    "feed": "https://rss.art19.com/heart",
+    "language": ""
+  },
+  {
+    "title": "Inside AsembleAI: DeepTech, AI & Science",
+    "author": "Mac & Sam",
+    "feed": "https://media.rss.com/asemble-mac-and-sam/feed.xml",
+    "language": ""
+  },
+  {
+    "title": "Founder's Story",
+    "author": "IBH Media",
+    "feed": "https://feeds.simplecast.com/NVPdHs07",
+    "language": ""
+  },
+  {
+    "title": "Armchair Expert with Dax Shepard",
+    "author": "Armchair Umbrella",
+    "feed": "https://rss.art19.com/armchair-expert",
+    "language": ""
+  },
+  {
+    "title": "The Home Service Expert Podcast",
+    "author": "Tommy Mello: $200 Million Founder|Forbes, Inc., Entrepreneur Columnist",
+    "feed": "https://rss.libsyn.com/shows/105472/destinations/567121.xml",
+    "language": ""
+  },
+  {
+    "title": "The Megyn Kelly Show",
+    "author": "SiriusXM",
+    "feed": "https://feeds.simplecast.com/RV1USAfC",
+    "language": ""
+  },
+  {
+    "title": "3 Takeaways\u2122",
+    "author": "Lynn Thoman",
+    "feed": "https://rss.buzzsprout.com/1236866.rss",
+    "language": ""
+  },
+  {
+    "title": "The Money Mondays",
+    "author": "Dan Fleyshman",
+    "feed": "https://anchor.fm/s/d9265370/podcast/rss",
+    "language": ""
+  },
+  {
+    "title": "Sold a Story",
+    "author": "APM Reports",
+    "feed": "https://feeds.publicradio.org/public_feeds/sold-a-story",
+    "language": ""
+  },
+  {
+    "title": "Business MVP",
+    "author": "Sammy Peterson",
+    "feed": "https://feeds.megaphone.fm/YAP2427560641",
+    "language": ""
+  },
+  {
+    "title": "MrBallen Podcast: Strange, Dark & Mysterious Stories",
+    "author": "Ballen Studios",
+    "feed": "https://feeds.simplecast.com/dloY8UYJ",
+    "language": ""
+  },
+  {
+    "title": "Miss Understood with Rachel Uchitel",
+    "author": "Rachel Uchitel",
+    "feed": "https://feeds.simplecast.com/RvDGWRIs",
+    "language": ""
+  },
+  {
+    "title": "Giggly Squad",
+    "author": "Hannah Berner & Paige DeSorbo",
+    "feed": "https://feeds.simplecast.com/6J0Ivoq9",
+    "language": ""
+  },
+  {
+    "title": "The Dropout",
+    "author": "ABC News",
+    "feed": "https://rss.libsyn.com/shows/516868/destinations/4434923.xml",
+    "language": ""
+  },
+  {
+    "title": "In The Dark",
+    "author": "The New Yorker",
+    "feed": "https://feeds.megaphone.fm/CNE3915766304",
+    "language": ""
+  },
+  {
+    "title": "How Much Can I Make? \u2014 Real Jobs. Real Stories. Career Insights",
+    "author": "Mirav Ozeri - Career Insights Journalist",
+    "feed": "https://rss.buzzsprout.com/2426515.rss",
+    "language": ""
+  },
+  {
+    "title": "NPR News Now",
+    "author": "NPR",
+    "feed": "https://feeds.npr.org/500005/podcast.xml",
+    "language": ""
+  },
+  {
+    "title": "My Favorite Murder with Karen Kilgariff and Georgia Hardstark",
+    "author": "Exactly Right and iHeartPodcasts",
+    "feed": "https://www.omnycontent.com/d/playlist/e73c998e-6e60-432f-8610-ae210140c5b1/bdde8bb3-169d-43b1-91d3-b24c0047969c/f450d41f-16bc-4ecd-8f6c-b24c004796e2/podcast.rss",
+    "language": ""
+  },
+  {
+    "title": "Bear Brook",
+    "author": "NHPR",
+    "feed": "https://feeds.megaphone.fm/TPG7540613670",
+    "language": ""
+  },
+  {
+    "title": "Something You Should Know",
+    "author": "Mike Carruthers | OmniCast Media",
+    "feed": "https://rss.pdrl.fm/60a606/feeds.megaphone.fm/WWO9761275037",
+    "language": ""
+  },
+  {
+    "title": "Huberman Lab",
+    "author": "Scicomm Media",
+    "feed": "https://feeds.megaphone.fm/hubermanlab",
+    "language": ""
+  },
+  {
+    "title": "All-In with Chamath, Jason, Sacks & Friedberg",
+    "author": "All-In Podcast, LLC",
+    "feed": "https://rss.libsyn.com/shows/254861/destinations/1928300.xml",
+    "language": ""
+  },
+  {
+    "title": "Wait Wait... Don't Tell Me!",
+    "author": "NPR",
+    "feed": "https://feeds.npr.org/344098539/podcast.xml",
+    "language": ""
+  },
+  {
+    "title": "Not Just A Terrible Story",
+    "author": "Terrible Story Productions",
+    "feed": "https://feeds.captivate.fm/terrible-story/",
+    "language": ""
+  },
+  {
+    "title": "Acquired",
+    "author": "Ben Gilbert and David Rosenthal",
+    "feed": "https://feeds.transistor.fm/acquired",
+    "language": ""
+  },
+  {
+    "title": "Conan O\u2019Brien Needs A Friend",
+    "author": "Team Coco & Earwolf",
+    "feed": "https://feeds.simplecast.com/dHoohVNH",
+    "language": ""
+  },
+  {
+    "title": "The Ramsey Show",
+    "author": "Ramsey Network",
+    "feed": "https://feeds.megaphone.fm/RM4031649020",
+    "language": ""
+  },
+  {
+    "title": "On with Kara Swisher",
+    "author": "Vox Media",
+    "feed": "https://feeds.megaphone.fm/VMP1684715893",
+    "language": ""
+  },
+  {
+    "title": "Pivot",
+    "author": "New York Magazine",
+    "feed": "https://feeds.megaphone.fm/pivot",
+    "language": ""
+  },
+  {
+    "title": "Snapped: Women Who Murder",
+    "author": "Oxygen",
+    "feed": "https://rss.art19.com/snapped-women-who-murder",
+    "language": ""
+  },
+  {
+    "title": "My Mom\u2019s Murder",
+    "author": "AYR Media",
+    "feed": "https://rss.art19.com/my-moms-murderer",
+    "language": ""
+  },
+  {
+    "title": "Serial",
+    "author": "Serial Productions & The New York Times",
+    "feed": "https://feeds.simplecast.com/PpzWFGhg",
+    "language": ""
+  },
+  {
+    "title": "The MeidasTouch Podcast",
+    "author": "MeidasTouch Network",
+    "feed": "https://rss.amperwave.net/v2/feed/audacynetwork/16aa3c6bf526fae9db63070c73cad09f",
+    "language": ""
+  },
+  {
+    "title": "Table Read",
+    "author": "iHeartPodcasts",
+    "feed": "https://rss.pdrl.fm/a7a12f/www.omnycontent.com/d/playlist/e73c998e-6e60-432f-8610-ae210140c5b1/d8b1cc95-e70d-4788-a035-b46401326b84/0ca9c2ee-158a-40ea-aa81-b46401326b8f/podcast.rss",
+    "language": ""
+  },
+  {
+    "title": "Serialously with Annie Elise",
+    "author": "Annie Elise",
+    "feed": "https://feeds.simplecast.com/M8YChsRP",
+    "language": ""
+  },
+  {
+    "title": "The Chad Durfee Show",
+    "author": "Chad Durfee",
+    "feed": "https://rss.buzzsprout.com/2632423.rss",
+    "language": ""
+  },
+  {
+    "title": "The Tucker Carlson Show",
+    "author": "Tucker Carlson Network",
+    "feed": "https://feeds.megaphone.fm/RSV1597324942",
+    "language": ""
+  },
+  {
+    "title": "This Past Weekend w/ Theo Von",
+    "author": "Theo Von",
+    "feed": "https://feeds.megaphone.fm/thispastweekend",
+    "language": ""
+  },
+  {
+    "title": "Ante Up Poker Magazine",
+    "author": "Joe Scales",
+    "feed": "https://anteupmagazine.com/feed/podcast/",
+    "language": ""
+  },
+  {
+    "title": "The Room Podcast",
+    "author": "Claudia Laurie and Madison McIlwain",
+    "feed": "https://feeds.simplecast.com/aPz9Qkq6",
+    "language": ""
+  },
+  {
+    "title": "The Tim Dillon Show",
+    "author": "The Tim Dillon Show",
+    "feed": "https://audioboom.com/channels/5093219.rss",
+    "language": ""
+  },
+  {
+    "title": "DOUBLE COVERAGE PODCAST",
+    "author": "Mystic Zach",
+    "feed": "https://feeds.megaphone.fm/YMH1796246858",
+    "language": ""
+  },
+  {
+    "title": "The MOOD Podcast",
+    "author": "Matt Jacob",
+    "feed": "https://rss.buzzsprout.com/2148781.rss",
+    "language": ""
+  },
+  {
+    "title": "The Bible Recap",
+    "author": "Tara-Leigh Cobble",
+    "feed": "https://feed.podbean.com/thebiblerecap/feed.xml",
+    "language": ""
+  },
+  {
+    "title": "The Toast",
+    "author": "Dear Media",
+    "feed": "https://feeds.megaphone.fm/DEARMEDIALLC7892434789",
+    "language": ""
+  },
+  {
+    "title": "Happy Hour with Ina Garten",
+    "author": "Vox Media",
+    "feed": "https://feeds.megaphone.fm/VMP2612107147",
+    "language": ""
+  },
+  {
+    "title": "Morning Wire",
+    "author": "The Daily Wire",
+    "feed": "https://rss.pdrl.fm/3f8a3d/feeds.megaphone.fm/BVDWV8747925072",
+    "language": ""
+  }
+]

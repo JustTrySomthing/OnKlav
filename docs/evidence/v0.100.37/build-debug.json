@@ -1,0 +1,30 @@
+{
+  "plan": {
+    "sdk_apps": "reuse",
+    "mobile_rust": "reuse",
+    "neural_speech": "reuse",
+    "games": "reuse",
+    "android_tests": [
+      "app.onklav.home.BottomPhoneCameraUiTest.smallRootDialerKeepsCallAndTabsAboveTheMainMenu"
+    ],
+    "variant": "debug",
+    "abis": [
+      "arm64-v8a"
+    ]
+  },
+  "phases": [
+    {
+      "phase": "assemble-debug",
+      "seconds": 211.57,
+      "returncode": 0,
+      "log": "docs/evidence/v0.100.37/assemble-debug.log"
+    },
+    {
+      "phase": "verify-debug",
+      "seconds": 4.22,
+      "returncode": 0,
+      "log": "docs/evidence/v0.100.37/verify-debug.log"
+    }
+  ],
+  "status": "passed"
+}

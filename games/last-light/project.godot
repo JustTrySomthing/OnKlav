@@ -1,0 +1,27 @@
+config_version=5
+
+[application]
+config/name="Last Light Express"
+run/main_scene="res://main.tscn"
+boot_splash/show_image=false
+boot_splash/bg_color=Color(0.027,0.055,0.09,1)
+config/use_custom_user_dir=true
+config/custom_user_dir_name="OnKlav/app.onklav.lastlight"
+config/auto_accept_quit=false
+config/quit_on_go_back=false
+
+[autoload]
+OnKlavGame="*res://onklav_game.gd"
+
+[display]
+window/dpi/allow_hidpi=true
+window/size/viewport_width=800
+window/size/viewport_height=432
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[rendering]
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"
+textures/vram_compression/import_etc2_astc=true
+environment/defaults/default_clear_color=Color(0.027,0.055,0.09,1)

@@ -1,0 +1,4 @@
+android-host-check: starting (maximum 240s)
+android-host-check: passed in 26.2s
+Android runtime bundle matches compiled Kotlin classes.
+Source/host tests complete. APK assembly is a separate build phase.

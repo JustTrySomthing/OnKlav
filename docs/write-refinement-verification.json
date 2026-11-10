@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-29",
+  "status": "passed",
+  "unique_focused_checks": 8,
+  "retained_host_checks": 6,
+  "final_ui_checks": 2,
+  "ui_check_seconds": 146.6,
+  "compiled_runtime_matches": true,
+  "screens_reviewed": 7,
+  "checks": [
+    "Rich style/cursor boundaries and numbering",
+    "Document format, DOCX/PDF and embedded-image preservation",
+    "Offline proofreading offsets and storage revocation",
+    "Bold/italic/underline/strike/highlight/font/color preserve exact selected range",
+    "Opening font options hides shown IME in host fixture without changing native editor bounds",
+    "Color indicator exposes selected hex value",
+    "Lists, Undo/Redo, save/export/rename/documents/settings/review/revocation workflow",
+    "Two rows fit 320dp width at 160% text scale; no overlap"
+  ],
+  "diagnostics": [
+    "Initial UI fixture incorrectly used Compose tree to locate native editor; changed test to native view bounds. Six backend regressions passed.",
+    "Subsequent run stopped before tests on corrupt generated Gradle transform metadata; cleared generated cache; final selection passed."
+  ],
+  "limitations": [
+    "Actual handset/IME/OEM keyboard animation and accessibility navigation remain device acceptance.",
+    "Common-rule grammar is retained; no exhaustive semantic grammar claim.",
+    "No new APK requested or built. Delivered 0.100.22/code131 predates these changes."
+  ],
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/WriteEditor.kt": "fa18b0dbb99074a6f2ab5661e1643f0e82fe26144fbe6c8f2e2704a477a6eb4e",
+    "android/app/src/main/kotlin/app/onklav/home/WriteTools.kt": "3c194bd25ce1c162235194e1f4ac414d665f3eb6f97151187dc75d071044647a",
+    "android/shared/src/main/res/drawable/write_link.xml": "79a4bac1a0d4e4bfc9e22d3cc8e6b802d7d947a832b43f0ec4b996ee02dcf27b",
+    "android/app/src/test/kotlin/app/onklav/home/WriteUiTest.kt": "c89f96cecdeb188a7fd457e8b86d46016f80575fcb944293b1d73f884c3ae100",
+    "scripts/verify_apks.py": "a6a69c44eb04b7e5b3b8c9acdda8c012a744ff6c9ca3808975d63be8e8308d15"
+  }
+}

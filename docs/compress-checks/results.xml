@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.CompressTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-10-30T16:23:21" hostname="e89dc6ba27f3" time="13.517">
+  <properties/>
+  <testcase name="mediaEstimatesFollowQualityAndResolutionWithoutUpscaling" classname="app.onklav.home.CompressTest" time="4.384"/>
+  <testcase name="largeTextKeepsCategoriesAndControlsReachable" classname="app.onklav.home.CompressTest" time="1.108"/>
+  <testcase name="cancelledCompressionAndOpenFailureKeepThePreviousSourceUsable" classname="app.onklav.home.CompressTest" time="0.228"/>
+  <testcase name="imageReencodingProducesSmallerPlayableCopiesAndKeepsOriginal" classname="app.onklav.home.CompressTest" time="0.154"/>
+  <testcase name="landscapeCanReachFilesAndFolderChoice" classname="app.onklav.home.CompressTest" time="0.34"/>
+  <testcase name="completeImageFlowShowsMeasuredSizeSavesOriginalUnchangedAndHasDone" classname="app.onklav.home.CompressTest" time="0.693"/>
+  <testcase name="zipPreservesBytesPathsEmptyFoldersAndDetectsUnsafeOrDuplicatePaths" classname="app.onklav.home.CompressTest" time="0.068"/>
+  <testcase name="selectedFolderUsesSignedFilesTraversalPreservesHierarchyAndHonorsRevocation" classname="app.onklav.home.CompressTest" time="6.541"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

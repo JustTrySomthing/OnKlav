@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.SdkVoiceTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-10-23T01:29:24" hostname="276516236850" time="1.554">
+  <properties/>
+  <testcase name="controllerUsesRealSignedSdkAndRustArchiveWithFixtureDeviceOnly" classname="app.onklav.home.SdkVoiceTest" time="1.426"/>
+  <testcase name="focusDenialBackendErrorAndOtherOwnerLeaveNoDraft" classname="app.onklav.home.SdkVoiceTest" time="0.016"/>
+  <testcase name="twelveSecondLimitReviewQueueAndDiscard" classname="app.onklav.home.SdkVoiceTest" time="0.027"/>
+  <testcase name="playbackMarksHeardOnlyOnAuthorizedCompletion" classname="app.onklav.home.SdkVoiceTest" time="0.022"/>
+  <testcase name="liveRecordingWaitsForOwnershipAndWarmupAndCancelsBeforeStart" classname="app.onklav.home.SdkVoiceTest" time="0.018"/>
+  <testcase name="revocationBackgroundAndStaleCallbacksDiscardWithoutQueueing" classname="app.onklav.home.SdkVoiceTest" time="0.02"/>
+  <testcase name="unverifiedCarrierCannotStartOrConsumeTrafficOrChangeRole" classname="app.onklav.home.SdkVoiceTest" time="0.022"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "version": "0.100.33-rc1",
+  "version_code": 142,
+  "package": "app.onklav.home.prototype.rewrite",
+  "variant": "debug",
+  "shrinking": false,
+  "debuggable": true,
+  "bytes": 186440346,
+  "sha256": "2d8f02748911120c66ea1d8acd541062dd4f8495227b089617a2f2828d7434dc",
+  "signer_sha256": "6ed975c5fc27d19f6291f751a8bb00fa8a2c2e7d268bffc7b6ddf7e1b1a7a69d",
+  "verification": "docs/apk-verification-debug.json",
+  "build": "docs/evidence/v0.100.33/build-debug.json",
+  "prebuild_checks": "32 checks passed; full production/test lint zero errors. See phone-desktop-polish-verification.json. Not repeated during APK assembly.",
+  "scope": "Fast incremental owner-requested APK; native/SDK/speech/games reused with matching proofs. Real-device/carrier acceptance remains separate."
+}

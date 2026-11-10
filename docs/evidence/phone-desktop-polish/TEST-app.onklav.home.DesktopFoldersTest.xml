@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.DesktopFoldersTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-11-01T20:35:22" hostname="3d2dab7afedf" time="2.138">
+  <properties/>
+  <testcase name="namesValidateAndFirstLetterTracksRename" classname="app.onklav.home.DesktopFoldersTest" time="1.993"/>
+  <testcase name="deletingFolderReturnsAppsAndPreservesOtherDesktopPositions" classname="app.onklav.home.DesktopFoldersTest" time="0.036"/>
+  <testcase name="membershipHasNoNineAppLimitAndMovesWithoutDuplicates" classname="app.onklav.home.DesktopFoldersTest" time="0.038"/>
+  <testcase name="defaultsGroupOnlyRequestedAppsAndKeepSettingsAndGamesReachable" classname="app.onklav.home.DesktopFoldersTest" time="0.032"/>
+  <testcase name="savedEmptyLayoutDoesNotReseedAndMissingPackagesKeepMembership" classname="app.onklav.home.DesktopFoldersTest" time="0.037"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-04",
+  "apk_built": false,
+  "physical_device_tested": false,
+  "focused_checks": 7991,
+  "first_four_opening_patterns": 103,
+  "opening_failures": 0,
+  "maximum_AI_nodes": 4096,
+  "browser": [
+    {
+      "viewport": [
+        360,
+        780
+      ],
+      "single_release_commits_once": true,
+      "repeated_single_taps": true,
+      "no_idle_floating_preview": true,
+      "pause_cancels_held_preview": true,
+      "reported_fork_prevented": true,
+      "AI_completed_depth": 6,
+      "AI_nodes": 4096
+    },
+    {
+      "viewport": [
+        320,
+        640
+      ],
+      "single_release_commits_once": true,
+      "repeated_single_taps": true,
+      "no_idle_floating_preview": true,
+      "pause_cancels_held_preview": true,
+      "reported_fork_prevented": true,
+      "AI_completed_depth": 6,
+      "AI_nodes": 4096
+    }
+  ],
+  "source_sha256": {
+    "games/engine-checks/cat_dog/series.gd": "cfacb0fa743fc85703151715c6a4ff5d6f62a7b2c08792f26cd9db2170350d53",
+    "games/engine-checks/cat_dog/ai.gd": "16c6c57a79c4ee5f27106df08d729ba860c42752861a1ec07a2350f741c6f27e",
+    "games/engine-checks/cat_dog/main.gd": "c2bd9d1db0f2450eeee330a730a0ff132a8191584d995443542fe21f053b92f5",
+    "games/engine-checks/cat_dog/board.gd": "12a36b9bdad39b234fad51ecdb905b1cca881ba16977091dae03ed02b09c3f14",
+    "games/engine-checks/cat_dog/art.gd": "b301aac013a8cbd4e02851405bede95e3866f8acf02325f62fd26b332778c6e1",
+    "games/engine-checks/cat_dog/input_ai_tests.gd": "65392fa8d41d4311db582b3c034758e6771fc9b2dea2ef49e2a6447da60ca4bf",
+    "games/engine-checks/cat_dog/audio.gd": "03e2a328712053ccfb3894e227e21cb2a58ad5c62af732f4c92d9944da26c4c8",
+    "games/engine-checks/cat_dog/scoreboard.gd": "2a031efe9244d03dd77e57318c5a16b3bbd40b536026472b653c567800c47ac6",
+    "games/engine-checks/cat_dog/tests.gd": "605b2a8ae0d30a2239c048338abf085e20dd0b83b7951a27caa0dee52526d2c5",
+    "games/engine-checks/cat_dog/model.gd": "d27315f326232931414de11996a662b84db0a3cb0816bd1b78e9bf3e02bce49b"
+  },
+  "limits": [
+    "No physical-phone input/performance acceptance.",
+    "APK0.100.62 predates these source fixes."
+  ]
+}

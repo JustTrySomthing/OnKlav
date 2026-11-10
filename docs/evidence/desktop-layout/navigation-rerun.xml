@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.DesktopFoldersUiTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-11-01T21:18:30" hostname="3d2dab7afedf" time="9.46">
+  <properties/>
+  <testcase name="shellOpensPhoneSettingsAndGamesAndReturnsToApps" classname="app.onklav.home.DesktopFoldersUiTest" time="9.46"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

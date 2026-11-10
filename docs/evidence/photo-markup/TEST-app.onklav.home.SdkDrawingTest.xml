@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.SdkDrawingTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-10-28T23:01:09" hostname="1b65f1fab707" time="3.67">
+  <properties/>
+  <testcase name="exportRendersImageCoordinatesAndTextBounds" classname="app.onklav.home.SdkDrawingTest" time="3.274"/>
+  <testcase name="importsAreBoundedAndPreserveOrientedDimensions" classname="app.onklav.home.SdkDrawingTest" time="0.078"/>
+  <testcase name="keyboardAndAccessibilityViewportActionsNeverCommitDrawingEdits" classname="app.onklav.home.SdkDrawingTest" time="0.15"/>
+  <testcase name="drawingGestureUsesImageSpaceAndCancellationDoesNotCommit" classname="app.onklav.home.SdkDrawingTest" time="0.07"/>
+  <testcase name="switchingDocumentsRestoresTheNewViewportAndDiscardsTheOldGesture" classname="app.onklav.home.SdkDrawingTest" time="0.03"/>
+  <testcase name="interruptedGesturesRequireANewDownAndOldCompletionsCannotCancelNewStrokes" classname="app.onklav.home.SdkDrawingTest" time="0.039"/>
+  <testcase name="viewportSurvivesResizeAndARecreatedCanvasWithoutSavingAnUnfinishedGesture" classname="app.onklav.home.SdkDrawingTest" time="0.029"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

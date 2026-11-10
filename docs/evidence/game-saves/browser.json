@@ -1,0 +1,140 @@
+{
+  "cases": [
+    {
+      "viewport": [
+        320,
+        640
+      ],
+      "game": "panda",
+      "host_ack_before_return": true,
+      "exact_resume": true,
+      "new_cancel_preserves_save": true,
+      "other_games_unchanged": true
+    },
+    {
+      "viewport": [
+        320,
+        640
+      ],
+      "game": "dominos",
+      "host_ack_before_return": true,
+      "exact_resume": true,
+      "new_cancel_preserves_save": true,
+      "other_games_unchanged": true
+    },
+    {
+      "viewport": [
+        320,
+        640
+      ],
+      "game": "hockey",
+      "host_ack_before_return": true,
+      "exact_resume": true,
+      "new_cancel_preserves_save": true,
+      "other_games_unchanged": true
+    },
+    {
+      "viewport": [
+        320,
+        640
+      ],
+      "game": "naval",
+      "host_ack_before_return": true,
+      "exact_resume": true,
+      "new_cancel_preserves_save": true,
+      "other_games_unchanged": true
+    },
+    {
+      "viewport": [
+        320,
+        640
+      ],
+      "game": "four",
+      "host_ack_before_return": true,
+      "exact_resume": true,
+      "new_cancel_preserves_save": true,
+      "other_games_unchanged": true
+    },
+    {
+      "viewport": [
+        320,
+        640
+      ],
+      "game": "blackjack",
+      "host_ack_before_return": true,
+      "exact_resume": true,
+      "new_cancel_preserves_save": true,
+      "other_games_unchanged": true
+    },
+    {
+      "viewport": [
+        432,
+        800
+      ],
+      "game": "panda",
+      "host_ack_before_return": true,
+      "exact_resume": true,
+      "new_cancel_preserves_save": true,
+      "other_games_unchanged": true
+    },
+    {
+      "viewport": [
+        432,
+        800
+      ],
+      "game": "dominos",
+      "host_ack_before_return": true,
+      "exact_resume": true,
+      "new_cancel_preserves_save": true,
+      "other_games_unchanged": true
+    },
+    {
+      "viewport": [
+        432,
+        800
+      ],
+      "game": "hockey",
+      "host_ack_before_return": true,
+      "exact_resume": true,
+      "new_cancel_preserves_save": true,
+      "other_games_unchanged": true
+    },
+    {
+      "viewport": [
+        432,
+        800
+      ],
+      "game": "naval",
+      "host_ack_before_return": true,
+      "exact_resume": true,
+      "new_cancel_preserves_save": true,
+      "other_games_unchanged": true
+    },
+    {
+      "viewport": [
+        432,
+        800
+      ],
+      "game": "four",
+      "host_ack_before_return": true,
+      "exact_resume": true,
+      "new_cancel_preserves_save": true,
+      "other_games_unchanged": true
+    },
+    {
+      "viewport": [
+        432,
+        800
+      ],
+      "game": "blackjack",
+      "host_ack_before_return": true,
+      "exact_resume": true,
+      "new_cancel_preserves_save": true,
+      "other_games_unchanged": true
+    }
+  ],
+  "permanent_rpg_data_roundtrip": true,
+  "failed_new_preserves_committed_save": true,
+  "failed_save_pauses_and_retry_succeeds": true,
+  "console_errors": []
+}

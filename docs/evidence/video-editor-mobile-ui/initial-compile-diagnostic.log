@@ -1,0 +1,59 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.11.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :ui
+WARNING: The option setting 'android.aapt2FromMavenOverride=/tmp/onklav-video-env/sdk/build-tools/35.0.0/aapt2' is experimental.
+WARNING: platform-tools package is not installed.
+
+> Task :ui:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :ui:preBuild UP-TO-DATE
+> Task :ui:preDebugBuild UP-TO-DATE
+> Task :ui:checkDebugAarMetadata UP-TO-DATE
+> Task :ui:generateDebugResValues UP-TO-DATE
+> Task :ui:mapDebugSourceSetPaths UP-TO-DATE
+> Task :ui:generateDebugResources UP-TO-DATE
+> Task :ui:mergeDebugResources UP-TO-DATE
+> Task :ui:packageDebugResources UP-TO-DATE
+> Task :ui:parseDebugLocalResources UP-TO-DATE
+> Task :ui:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :ui:extractDeepLinksDebug UP-TO-DATE
+> Task :ui:processDebugMainManifest
+> Task :ui:processDebugManifest
+> Task :ui:processDebugManifestForPackage
+> Task :ui:processDebugResources
+
+> Task :ui:compileDebugKotlin
+e: file:///tmp/video-ui-harness/ui/src/main/kotlin/app/onklav/home/VideoEditData.kt:20:1224 Unresolved reference 'videoTitleAnimations'.
+e: file:///tmp/video-ui-harness/ui/src/main/kotlin/app/onklav/home/VideoEditData.kt:20:1257 Unresolved reference 'videoTitleAnimations'.
+e: file:///tmp/video-ui-harness/ui/src/main/kotlin/app/onklav/home/VideoEditData.kt:26:762 Unresolved reference 'videoAudioTones'.
+e: file:///tmp/video-ui-harness/ui/src/main/kotlin/app/onklav/home/VideoEditor.kt:222:120 Unresolved reference 'videoTitleAnimations'.
+e: file:///tmp/video-ui-harness/ui/src/main/kotlin/app/onklav/home/VideoEditor.kt:222:149 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///tmp/video-ui-harness/ui/src/main/kotlin/app/onklav/home/VideoEditor.kt:222:155 @Composable invocations can only happen from the context of a @Composable function
+e: file:///tmp/video-ui-harness/ui/src/main/kotlin/app/onklav/home/VideoEditor.kt:224:120 Unresolved reference 'videoTitleAnimations'.
+e: file:///tmp/video-ui-harness/ui/src/main/kotlin/app/onklav/home/VideoEditor.kt:224:149 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///tmp/video-ui-harness/ui/src/main/kotlin/app/onklav/home/VideoEditor.kt:224:155 @Composable invocations can only happen from the context of a @Composable function
+e: file:///tmp/video-ui-harness/ui/src/main/kotlin/app/onklav/home/VideoEditorLayout.kt:76:62 'val maxHeight: Dp' cannot be called in this context with an implicit receiver. Use an explicit receiver if necessary.
+e: file:///tmp/video-ui-harness/ui/src/main/kotlin/app/onklav/home/VideoEditorLayout.kt:97:111 'val maxHeight: Dp' cannot be called in this context with an implicit receiver. Use an explicit receiver if necessary.
+e: file:///tmp/video-ui-harness/ui/src/main/kotlin/app/onklav/home/VideoEditorLayout.kt:99:88 'val maxHeight: Dp' cannot be called in this context with an implicit receiver. Use an explicit receiver if necessary.
+e: file:///tmp/video-ui-harness/ui/src/main/kotlin/app/onklav/home/VideoProWorkspace.kt:160:53 Unresolved reference 'videoAudioTones'.
+e: file:///tmp/video-ui-harness/ui/src/main/kotlin/app/onklav/home/VideoProWorkspace.kt:160:73 Unresolved reference 'it'.
+e: file:///tmp/video-ui-harness/ui/src/main/kotlin/app/onklav/home/VideoProWorkspace.kt:160:76 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///tmp/video-ui-harness/ui/src/main/kotlin/app/onklav/home/VideoProWorkspace.kt:160:79 Unresolved reference 'it'.
+
+> Task :ui:compileDebugKotlin FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':ui:compileDebugKotlin'.
+> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+   > Compilation error. See log for more details
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 20s
+14 actionable tasks: 5 executed, 9 up-to-date

@@ -1,0 +1,82 @@
+{
+  "sdk_apps": "reuse",
+  "mobile_rust": "reuse",
+  "games": "reuse",
+  "android_tests": "not requested",
+  "variant": "debug",
+  "abis": [
+    "arm64-v8a"
+  ]
+}
+Resource inputs changed: refreshing generated resource/package/DEX caches
+assemble-debug: starting (maximum 600s)
+assemble-debug: 20s elapsed
+assemble-debug: 40s elapsed
+assemble-debug: finished in 42.73s
+tionGraph.java:314)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:459)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:376)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
+Cause 1: org.gradle.internal.resolve.ModuleVersionResolveException: Could not resolve androidx.camera:camera-camera2:1.5.3.
+Required by:
+    project :android:app
+Cause 1: org.gradle.internal.resolve.ModuleVersionResolveException: No cached version of androidx.camera:camera-camera2:1.5.3 available for offline mode.
+Cause 2: org.gradle.internal.resolve.ModuleVersionResolveException: No cached version of androidx.camera:camera-camera2:1.5.3 available for offline mode.
+Cause 2: org.gradle.internal.resolve.ModuleVersionResolveException: Could not resolve androidx.camera:camera-lifecycle:1.5.3.
+Required by:
+    project :android:app
+Cause 1: org.gradle.internal.resolve.ModuleVersionResolveException: No cached version of androidx.camera:camera-lifecycle:1.5.3 available for offline mode.
+Cause 2: org.gradle.internal.resolve.ModuleVersionResolveException: No cached version of androidx.camera:camera-lifecycle:1.5.3 available for offline mode.
+Cause 3: org.gradle.internal.resolve.ModuleVersionResolveException: Could not resolve androidx.camera:camera-view:1.5.3.
+Required by:
+    project :android:app
+Cause 1: org.gradle.internal.resolve.ModuleVersionResolveException: No cached version of androidx.camera:camera-view:1.5.3 available for offline mode.
+Cause 2: org.gradle.internal.resolve.ModuleVersionResolveException: No cached version of androidx.camera:camera-view:1.5.3 available for offline mode.
+Cause 4: org.gradle.internal.resolve.ModuleVersionResolveException: Could not resolve androidx.camera:camera-video:1.5.3.
+Required by:
+    project :android:app
+Cause 1: org.gradle.internal.resolve.ModuleVersionResolveException: No cached version of androidx.camera:camera-video:1.5.3 available for offline mode.
+Cause 2: org.gradle.internal.resolve.ModuleVersionResolveException: No cached version of androidx.camera:camera-video:1.5.3 available for offline mode.
+Cause 5: org.gradle.internal.resolve.ModuleVersionResolveException: Could not resolve com.sun.mail:android-mail:1.6.7.
+Required by:
+    project :android:app
+Caused by: org.gradle.internal.resolve.ModuleVersionResolveException: No cached version of com.sun.mail:android-mail:1.6.7 available for offline mode.
+Cause 6: org.gradle.internal.resolve.ModuleVersionResolveException: Could not resolve com.sun.mail:android-activation:1.6.7.
+Required by:
+    project :android:app
+Caused by: org.gradle.internal.resolve.ModuleVersionResolveException: No cached version of com.sun.mail:android-activation:1.6.7 available for offline mode.
+Cause 7: org.gradle.internal.resolve.ModuleVersionResolveException: Could not resolve androidx.media3:media3-transformer:1.9.3.
+Required by:
+    project :android:app
+Cause 1: org.gradle.internal.resolve.ModuleVersionResolveException: No cached version of androidx.media3:media3-transformer:1.9.3 available for offline mode.
+Cause 2: org.gradle.internal.resolve.ModuleVersionResolveException: No cached version of androidx.media3:media3-transformer:1.9.3 available for offline mode.
+Cause 8: org.gradle.internal.resolve.ModuleVersionResolveException: Could not resolve androidx.media3:media3-effect:1.9.3.
+Required by:
+    project :android:app
+Cause 1: org.gradle.internal.resolve.ModuleVersionResolveException: No cached version of androidx.media3:media3-effect:1.9.3 available for offline mode.
+Cause 2: org.gradle.internal.resolve.ModuleVersionResolveException: No cached version of androidx.media3:media3-effect:1.9.3 available for offline mode.
+Cause 9: org.gradle.internal.resolve.ModuleVersionResolveException: Could not resolve androidx.media3:media3-exoplayer:1.9.3.
+Required by:
+    project :android:app
+Cause 1: org.gradle.internal.resolve.ModuleVersionResolveException: No cached version of androidx.media3:media3-exoplayer:1.9.3 available for offline mode.
+Cause 2: org.gradle.internal.resolve.ModuleVersionResolveException: No cached version of androidx.media3:media3-exoplayer:1.9.3 available for offline mode.
+Cause 10: org.gradle.internal.resolve.ModuleVersionResolveException: Could not resolve androidx.media3:media3-ui:1.9.3.
+Required by:
+    project :android:app
+Cause 1: org.gradle.internal.resolve.ModuleVersionResolveException: No cached version of androidx.media3:media3-ui:1.9.3 available for offline mode.
+Cause 2: org.gradle.internal.resolve.ModuleVersionResolveException: No cached version of androidx.media3:media3-ui:1.9.3 available for offline mode.
+
+
+BUILD FAILED in 42s
+5 actionable tasks: 5 executed
+
+Traceback (most recent call last):
+  File "/workspace/scratch/d853f89e99b7/onklav/OnKlav/scripts/build.py", line 164, in <module>
+    main()
+  File "/workspace/scratch/d853f89e99b7/onklav/OnKlav/scripts/build.py", line 150, in main
+    run('assemble-' + args.variant, gradle + [':android:app:assemble' + args.variant.capitalize(),*selected], 600)
+  File "/workspace/scratch/d853f89e99b7/onklav/OnKlav/scripts/build.py", line 82, in run
+    raise RuntimeError(f'{label} failed; see {path}')
+RuntimeError: assemble-debug failed; see /workspace/scratch/d853f89e99b7/onklav/OnKlav/docs/evidence/v0.100.9/assemble-debug.log

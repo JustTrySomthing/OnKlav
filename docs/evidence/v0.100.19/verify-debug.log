@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/d853f89e99b7/onklav/OnKlav/scripts/verify_apks.py", line 126, in <module>
+    assert "Lapp/onklav/home/"+photo_class+";" in classes, "Integrated image tools missing: "+photo_class
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Integrated image tools missing: AudioPreviewKt

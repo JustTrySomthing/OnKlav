@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.VideoMobileLayoutTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-30T10:23:51" hostname="e0d5701930ee" time="6.631">
+  <properties/>
+  <testcase name="landscapeKeepsPreviewTimelineAndToolsSeparate" classname="app.onklav.home.VideoMobileLayoutTest" time="5.154"/>
+  <testcase name="portraitToolsAndSlidersRemainReachable" classname="app.onklav.home.VideoMobileLayoutTest" time="0.643"/>
+  <testcase name="fullscreenSourceAndLongStatusHaveClearExitAndDetails" classname="app.onklav.home.VideoMobileLayoutTest" time="0.337"/>
+  <testcase name="shortPhoneShowsSettingsInsteadOfCrushingThem" classname="app.onklav.home.VideoMobileLayoutTest" time="0.208"/>
+  <testcase name="largeTextAudioUsesOneSelectedTrack" classname="app.onklav.home.VideoMobileLayoutTest" time="0.289"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

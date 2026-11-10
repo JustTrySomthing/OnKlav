@@ -1,0 +1,94 @@
+{
+  "status": "Chunk29 source complete for bounded offline EPUB2/3 text profile; full Android/device qualification pending",
+  "chunk": 29,
+  "production_path": "Public epub/epub_ui helpers -> storage.private broker -> owned immutable private blob -> Rust bounded ZIP/XML package/spine/navigation -> text/anchors/search results -> shared reading_ui native-widget schema and app-private chapter/page bookmarks",
+  "core_cases_passed": 7,
+  "epub_screen_recovery_cases_passed": 3,
+  "shared_reader_cases_passed": 6,
+  "shared_reader_note": "Five prior reader regression cases plus one new validated parent jump case; counted once, not again per rerun",
+  "signed_guest_broker_scenario_steps_passed": 15,
+  "scenario": [
+    "Create a private synthetic EPUB from SDK blob services",
+    "Open/TOC/back/fragment navigation",
+    "Cross-chapter literal search and Unicode exact match jump",
+    "Page and chapter bookmarks survive session close/reopen"
+  ],
+  "developer_contract_cases_passed": 5,
+  "logs": [
+    "docs/evidence/v0.70.0/epub-core-profile-tests.log",
+    "docs/evidence/v0.70.0/epub-ui-errors-final.log",
+    "docs/evidence/v0.70.0/epub-reading-regression.log",
+    "docs/evidence/v0.70.0/epub-broker-final.log",
+    "docs/evidence/v0.70.0/epub-contract.log"
+  ],
+  "diagnosed_issue": "The added unsaved-chapter exit test caught a propagated child close flag bypassing the parent confirmation. Cleared that flag before showing confirmation; recovery checks passed. A later focused test verifies that unsupported-chapter failure keeps old content and displays the error.",
+  "bounds": {
+    "input_zip_bytes": 20971520,
+    "archive_entries": 1024,
+    "total_declared_expansion_bytes": 33554432,
+    "entry_expansion_bytes": 8388608,
+    "xml_resource_bytes": 1048576,
+    "xml_depth": 64,
+    "xml_events": 100000,
+    "spine_chapters": 200,
+    "toc_entries": 200,
+    "returned_metadata_json_bytes": 64000,
+    "chapter_plaintext_utf8_bytes": 120000,
+    "anchor_json_bytes": 16384,
+    "search_matches_per_batch": 40,
+    "search_text_bytes_per_batch": 8000000
+  },
+  "format_scope": [
+    "EPUB2/3 UTF-8 XML; first container rootfile; ordered XHTML spine",
+    "EPUB3 navigation links and EPUB2 nested NCX in source order; local fragment targets",
+    "Native themed text wrap/reflow; no WebView or execution/network",
+    "Literal case-sensitive book search with bounded Unicode continuation"
+  ],
+  "unsupported": [
+    "Full visual EPUB reading-system conformance",
+    "Author CSS/fonts and rendered images (explicit image alt placeholders instead)",
+    "DRM/encryption and obfuscated-font packages",
+    "Fixed layout, JavaScript, iframe/object/embed and unknown XML entities",
+    "Visual SVG/math fidelity; only labelled text projection"
+  ],
+  "native": {
+    "proof": "docs/working-native-verification.json",
+    "linux_jni_sha256": "3f739ceef0502920e38ff22761f9f14541cc790d04b06b93c6b72935af62bee9",
+    "arm64_jni_sha256": "dd05fbcddb0593ce8aeeb967c4aa39612e710e8c537c93d072a1d08cde3fe100",
+    "arm64_load_alignment": 16384,
+    "core_source_and_artifact_hashes_verified": true,
+    "released_main_jni_unchanged": true
+  },
+  "android_ui_tested": false,
+  "kotlin_change": "Mapped the new reader search action to the existing ref_action_search icon; full-host Android compile remains blocked by prior missing dependency artifacts",
+  "remaining_qualification": [
+    "Full Android/JNI renderer integration and physical phone access/layout/TalkBack checks",
+    "Large-book sustained memory/performance and OEM/process recovery",
+    "No claim of image-rich or fixed-layout EPUB acceptance"
+  ],
+  "apk_created": false,
+  "bundled_signed_app_updated": false,
+  "sdk_or_documentation_release_created": false,
+  "test_packages": "Disposable SDK guest/key discarded by verify; no handset installation",
+  "next_feature": 30,
+  "references": [
+    "https://www.w3.org/TR/epub-33/",
+    "https://www.w3.org/TR/epub-rs-33/"
+  ],
+  "source_sha256": {
+    "core/src/epub_xml.rs": "d14d9730f659dcebba566fb3be3d7037384d5eb0d943a257e53c27d9116bba3b",
+    "core/src/sdk_epub.rs": "90bcfe5cebebcb76baa3d0c8c3aa0a48d0a013f8c5f164e62490b2d2841ebe0c",
+    "core/src/sdk.rs": "cfecffce4bab7c1c036263c6ed56904d6e327c73cc714ea61092bf15432f895b",
+    "core/src/lib.rs": "e9325720a53e457ffda2c20543b27a293efee63e6bd04a588249ad790f652b7b",
+    "developer/components/src/epub.rs": "bf8233eaafabab64b7f0db9a4b9723b7e2e5cbd254d8be16a082b9e984848376",
+    "developer/components/src/epub_ui.rs": "d3d5ab7f497864749cb8ce218d45e111c853750ea81ca31ab8ca455ce4e78937",
+    "developer/components/src/reading_ui.rs": "6c713d0125e10b823965742eb54998c3b738f18b844b707e3816a0b849413e2c",
+    "developer/components/src/lib.rs": "fc9bb4c4f427cfbc896ee717925b2f207a41e7aa24d002075108b142ceedc0c0",
+    "developer/contract.json": "c1806fa8522421ef2c2d51d24ec20b8fef88283b2d023860ac018dc911fdf816",
+    "android/app/src/main/kotlin/app/onklav/home/SdkAppScreen.kt": "92bc803be9135b6c39a9ed47f3fb441fb6db4f53ad1d92ddb21360ea887dfb25",
+    "docs/fixtures/text-profile.epub": "ac24238368bb86d6e1afe6e128f1b931eb5c664a696797761ca7581734b7b79f",
+    "scripts/make_epub_fixture.py": "f30c5fde5844db2dda17c49085026cedb6d92d47352c314fd0cb80b082240088",
+    "developer/examples/epub-reader/src/lib.rs": "94d77a6e2928f3bdcd9b52f22533fdf1e1476067807b5afb331940f994c671d7",
+    "developer/examples/epub-reader/scenario.json": "12cf841dd812c07478ca3b64dcc4ecc46a8e25a196a08c5bbe299b01de49a431"
+  }
+}

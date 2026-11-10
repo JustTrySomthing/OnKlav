@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.SettingsUiHostTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2026-10-24T14:05:19" hostname="41b9fb140d3c" time="13.525">
+  <properties/>
+  <testcase name="nestedSettingsSaveAndCancelAreRealAndReturnToParent" classname="app.onklav.home.SettingsUiHostTest" time="8.367"/>
+  <testcase name="appearanceDraftCancelAndApplyAndNestedBackgroundCancel" classname="app.onklav.home.SettingsUiHostTest" time="0.684"/>
+  <testcase name="walkieSettingsChangeTheSignedAppsPrivateStoreWithoutAddingPermissions" classname="app.onklav.home.SettingsUiHostTest" time="1.272"/>
+  <testcase name="settingsRemainReachableWithLargeText" classname="app.onklav.home.SettingsUiHostTest" time="0.187"/>
+  <testcase name="checkedHistoryReviewShowsCountsAndKeepsProviderRestoreDisabled" classname="app.onklav.home.SettingsUiHostTest" time="0.193"/>
+  <testcase name="quietHoursUsesStagedRepeatChoicesAndPersistsOnlyOnSave" classname="app.onklav.home.SettingsUiHostTest" time="0.487"/>
+  <testcase name="historyExportAndImportCheckAreReachable" classname="app.onklav.home.SettingsUiHostTest" time="0.267"/>
+  <testcase name="notesBackupIsReachableAndReturnsToTheMetadataDialog" classname="app.onklav.home.SettingsUiHostTest" time="0.193"/>
+  <testcase name="comparisonShowsReadOnlyCandidatesAndKeepsRestoreDisabled" classname="app.onklav.home.SettingsUiHostTest" time="0.16"/>
+  <testcase name="sdkDocumentBackupsAreReachableAndReturnToSettings" classname="app.onklav.home.SettingsUiHostTest" time="0.54"/>
+  <testcase name="combinedAppDocumentsBackupIsReachable" classname="app.onklav.home.SettingsUiHostTest" time="0.171"/>
+  <testcase name="walkiePreferencesCanRecoverAfterPrivateStoragePermissionIsRestored" classname="app.onklav.home.SettingsUiHostTest" time="1.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.PhotoEditorHostTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-28T00:07:53" hostname="666c98ec4593" time="7.149">
+  <properties/>
+  <testcase name="geometryHandlesAndColorEffectsHaveRealOutput" classname="app.onklav.home.PhotoEditorHostTest" time="6.935"/>
+  <testcase name="tonesTransparencyAndParameterRoundTrip" classname="app.onklav.home.PhotoEditorHostTest" time="0.09"/>
+  <testcase name="cropHandlesClampMoveAndKeepOtherEdits" classname="app.onklav.home.PhotoEditorHostTest" time="0.066"/>
+  <testcase name="geometryPreservesOriginalAndFlipsActualPixels" classname="app.onklav.home.PhotoEditorHostTest" time="0.058"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

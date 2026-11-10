@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.YoutubeMediaRepairsTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-27T16:46:28" hostname="b1839471ed1a" time="2.628">
+  <properties/>
+  <testcase name="downloadArrowReplacesOnlyHomeAndLeavesOriginalFrameUntouched" classname="app.onklav.home.YoutubeMediaRepairsTest" time="2.108"/>
+  <testcase name="segmentedMediaDownloadTracksActualBytesAndFollowsCheckedRedirect" classname="app.onklav.home.YoutubeMediaRepairsTest" time="0.315"/>
+  <testcase name="changedEditsUseCompositionAndUneditedClipUsesStandardDecoder" classname="app.onklav.home.YoutubeMediaRepairsTest" time="0.074"/>
+  <testcase name="brokenRangeResponseCannotBePublishedAsComplete" classname="app.onklav.home.YoutubeMediaRepairsTest" time="0.053"/>
+  <testcase name="currentVideoStreamsRejectAdsStalePagesAndUnsupportedQuality" classname="app.onklav.home.YoutubeMediaRepairsTest" time="0.04"/>
+  <testcase name="portraitAndLandscapeDownloadsKeepRequestedShortEdgeAndNeverUpscale" classname="app.onklav.home.YoutubeMediaRepairsTest" time="0.038"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

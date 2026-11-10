@@ -1,0 +1,24 @@
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/ed752e8a1957/current/OnKlav/developer/components)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.30s
+     Running unittests src/lib.rs (developer/components/target/debug/deps/onklav_ui-c94c9f1e1c388478)
+
+running 16 tests
+test calendar::tests::exports_escaped_text_and_folds_unicode_without_injecting_properties ... ok
+test calendar::tests::imports_folded_unicode_export_without_changing_event_data ... ok
+test calendar::tests::all_day_import_rejects_duplicate_mixed_date_types_and_invalid_days_atomically ... ok
+test calendar::tests::rejects_invalid_dates_intervals_and_unsupported_recurrence ... ok
+test calendar::tests::mixed_utc_and_all_day_roundtrip_preserves_exclusive_end_and_unicode ... ok
+test calendar::tests::imports_reject_unsupported_or_partial_calendars_without_partial_results ... ok
+test calendar_ui::tests::agenda_sorts_and_preserves_original_indices_and_all_day_display ... ok
+test calendar::tests::calendar_bounds_and_duplicate_uids_fail_without_partial_results ... ok
+test calendar_ui::tests::editor_all_day_toggle_preserves_hidden_times_and_validates_converted_dates ... ok
+test calendar_ui::tests::agenda_bounds_pagination_and_duplicate_detection ... ok
+test calendar_ui::tests::editor_invalid_unicode_dates_and_invalid_times_fail_without_panics ... ok
+test calendar_ui::tests::ui_uses_standard_theme_owned_widgets_without_fixed_dimensions_or_colors ... ok
+test calendar_ui::tests::editor_preserves_exact_seconds_and_utc_api_compatibility ... ok
+test calendar_ui::tests::editor_invalid_input_retains_draft_and_never_emits_save ... ok
+test calendar_ui::tests::editor_preserves_uid_and_rejects_foreign_unsupported_event_data ... ok
+test calendar_ui::tests::editor_discard_requires_confirmation_and_cancel_keeps_values ... ok
+
+test result: ok. 16 passed; 0 failed; 0 ignored; 0 measured; 33 filtered out; finished in 0.01s
+

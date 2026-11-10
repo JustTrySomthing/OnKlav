@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.NeuralSpeechTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-29T21:13:35" hostname="b623e8e1265a" time="4.156">
+  <properties/>
+  <testcase name="bundledNativeJniPreservesApprovedVoiceAndRejectsInvalidRequests" classname="app.onklav.home.NeuralSpeechTest" time="4.156"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

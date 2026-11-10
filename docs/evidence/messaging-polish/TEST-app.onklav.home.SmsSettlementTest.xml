@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.SmsSettlementTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-29T13:08:56" hostname="3d3a46c2e56a" time="4.219">
+  <properties/>
+  <testcase name="transientNegativeThenSuccessNeverFlashesAFailureAndNeverResends" classname="app.onklav.home.SmsSettlementTest" time="4.092"/>
+  <testcase name="actionableSimRadioPermissionErrorsAndClockChangesDoNotWait" classname="app.onklav.home.SmsSettlementTest" time="0.047"/>
+  <testcase name="genuineFailuresStillAppearAfterTheBoundedDurableWindow" classname="app.onklav.home.SmsSettlementTest" time="0.08"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,13 @@
+{
+  "rust": 111,
+  "kotlin": 91,
+  "failed": 0,
+  "runtime_classes_current": true,
+  "apk_created": false,
+  "history_journal": true,
+  "injected_provider_executor": true,
+  "archive_coordinator": true,
+  "durable_partial_outcome_maps": true,
+  "history_restore": false,
+  "real_phone_provider": false
+}

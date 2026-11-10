@@ -1,0 +1,5 @@
+Directory metadata: Podcastindex-org/database
+https://github.com/Podcastindex-org/database
+The repository README declares its contents under the MIT license.
+This is a filtered starter snapshot, not the complete Podcast Index.
+Podcast audio remains hosted and owned by its publishers.

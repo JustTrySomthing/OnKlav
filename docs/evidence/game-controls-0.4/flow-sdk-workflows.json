@@ -1,0 +1,20 @@
+[
+  {
+    "template": "touch2d",
+    "bytes": 115126,
+    "signature_verified": true,
+    "minimum_host": 155
+  },
+  {
+    "template": "scene3d",
+    "bytes": 115604,
+    "signature_verified": true,
+    "minimum_host": 155
+  },
+  {
+    "template": "turn",
+    "bytes": 116782,
+    "signature_verified": true,
+    "minimum_host": 155
+  }
+]

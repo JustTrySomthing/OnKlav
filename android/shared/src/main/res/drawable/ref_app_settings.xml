@@ -1,0 +1,21 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Screwdriver segments stop at the wrench so the crossing stays clear. -->
+    <path
+        android:pathData="M10.2,11.1 L6.4,7.3 L4.7,7.3 L2.5,4 L4,2.5 L7.3,4.7 L7.3,6.4 L11.1,10.2 M14.6,12.9 L20.7,19 C21.4,19.7 21.4,20.7 20.7,21.4 C20,22.1 19,22.1 18.3,21.4 L12.2,15.3"
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="1.65"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+    <path
+        android:pathData="M13.1,9.5 C12.5,7.7 13,5.6 14.4,4.2 C15.9,2.7 18,2.3 19.8,3 L16.7,6.1 L18.1,7.5 L21.2,4.4 C21.9,6.2 21.5,8.3 20,9.8 C18.6,11.2 16.5,11.7 14.7,11.1 L5,20.8 C4.3,21.5 3.3,21.5 2.6,20.8 C1.9,20.1 1.9,19.1 2.6,18.4 Z"
+        android:fillColor="#00000000"
+        android:strokeColor="#FFFFFFFF"
+        android:strokeWidth="1.65"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round" />
+</vector>

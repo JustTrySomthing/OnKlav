@@ -1,0 +1,58 @@
+{
+  "scope": "Game interaction controls v2 and Game SDK0.3.1",
+  "required_host": "0.100.45/code154",
+  "latest_built_apk": "0.100.44/code153 predates these changes",
+  "apk_built_this_increment": false,
+  "passed": {
+    "hockey_assertions": 80,
+    "session_dialog_audio_assertions": 30,
+    "shared_rules_assertions": 12,
+    "sdk_unit_methods": 10,
+    "actual_template_export_sign_verify": 3,
+    "actual_browser_flows": [
+      {
+        "viewport": [
+          320,
+          560
+        ],
+        "all_requested_flows": true,
+        "persistent_nonzero_score_restored": true,
+        "javascript_errors": [],
+        "engine_errors": []
+      },
+      {
+        "viewport": [
+          432,
+          740
+        ],
+        "all_requested_flows": true,
+        "persistent_nonzero_score_restored": true,
+        "javascript_errors": [],
+        "engine_errors": []
+      },
+      {
+        "viewport": [
+          320,
+          560
+        ],
+        "unused_start_menu_routes_requested_game": true,
+        "javascript_errors": [],
+        "engine_errors": []
+      }
+    ]
+  },
+  "native_verification": "Selected production WebGameActivity/GamePackages/GameWebPolicy Kotlin files typechecked against Android36, AndroidX Core1.15/WebKit1.13 using Kotlin2.1.20; compile-only MainActivity and BuildConfig references were supplied. This is not a full Android Gradle build or Android runtime acceptance.",
+  "unused_start_menu_routing_verified": true,
+  "native_sources_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/WebGameActivity.kt": "db09d5e6d9abacafd6eaebc5b8d948ebf9b5a11353a173a448fddf319858a6fe",
+    "android/app/src/main/kotlin/app/onklav/home/GamePackages.kt": "dcfd9a047103fcd8fd590b85d550a005749935d0b6e4622aa43fdfa9eedc64b5",
+    "android/app/src/main/kotlin/app/onklav/home/GameWebPolicy.kt": "61e3a2dc5f646598d130642220cbf068bf8a3e19185e2ad728dd1eadda81ffc7"
+  },
+  "physical_device_tested": false,
+  "limitations": [
+    "No new APK or full Android runtime test this increment.",
+    "Friend/network transport is not implemented; only real registered modes are offered.",
+    "Web filesystem sync is asynchronous and subject to quotas/process loss.",
+    "Physical Samsung gestures, audio and saved-session/process recreation acceptance remain open."
+  ]
+}

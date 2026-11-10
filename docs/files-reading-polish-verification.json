@@ -1,0 +1,186 @@
+{
+  "status": "Source complete; 15 unique focused app checks and full lint passed; phone acceptance pending",
+  "default_file_ui": {
+    "contract_calls": 50,
+    "shared_contract": "app.onklav.shared.OnKlavFileContracts",
+    "activity": "FileBrowserActivity (non-exported)",
+    "provider": "FileSelectionProvider (non-exported, unguessable selected-file tokens)",
+    "implementation": "Adapter over existing signed Files controller and Rust content broker; Kotlin does not read or rewrite the shared content index",
+    "features": [
+      "Open/multiple-open/import/export/save across app/shared/tool modules and SDK effects",
+      "MIME filtering, search/paging, correct folder breadcrumbs and new folder",
+      "Unique-name Save As, durable URI selection, descriptor-close filing through Rust import",
+      "Raw writes retained on filing failures; Files Home Recovered saves with explicit retry; active writes excluded",
+      "Only explicit Connect phone folder uses Android system tree grant; subsequent browsing stays in OnKlav"
+    ],
+    "sdk": "Existing opaque-ID services/capabilities/gesture tokens unchanged; SDK README documents the host-wide default",
+    "known_scope": "Unsupported read-only web upload surfaces remain disabled and never launch Android Files; contacts/calendar/camera/permission intents are separate"
+  },
+  "convert": "Modern category and unit selectors, editable From/To cards, swap/copy actions, no duplicate output display; signed Rust arithmetic and preferences unchanged",
+  "ebooks": "Clear grouped next-page/next-chapter/end-of-book footer, previous action, Contents/bookmarks, readable text leading; icon/text and play/pause/stop occupy one row; signed pagination/position/speech continuation unchanged",
+  "tests": {
+    "unique_app_passed": 15,
+    "case_results": {
+      "app.onklav.home.FileSelectionTest.revokedAccessKeepsUnfiledSaveAndFolderSelectionUsesTheSharedBrowser": true,
+      "app.onklav.home.FileSelectionTest.actualSignedFilesControllerSelectsOneReadableFileWithoutCopyingOrExposingPaths": true,
+      "app.onklav.home.FileSelectionTest.defaultContractsLaunchOnlyOurNonExportedHostPickerAndPreserveResults": true,
+      "app.onklav.home.FileSelectionTest.saveCommitUsesRustImportAndUpdatesRealListingSizeWhileKeepingNamesUnique": true,
+      "app.onklav.home.FileSelectionTest.filtersAndNamesRejectUnsupportedTypesWithoutHidingFolders": true,
+      "app.onklav.home.FileSelectionUiTest.chooseAndSaveStayInsideOurBrowserWithClearControls": true,
+      "app.onklav.home.FilesBrokerHostTest.fileExportsAreReadOnlyAndCannotExposeArbitraryPrivatePaths": true,
+      "app.onklav.home.FilesBrokerHostTest.deletingPrivateDataClearsOnlyThatAppsFolderConnections": true,
+      "app.onklav.home.FilesBrokerHostTest.sharingAnAndroidFolderCreatesAReadableZipAndPreservesOriginals": true,
+      "app.onklav.home.FilesBrokerHostTest.revokedSdkAuthorizationAndUnknownTokensCannotQueryAndroidFiles": true,
+      "app.onklav.home.FilesBrokerHostTest.androidFoldersExposeOpaqueTokensAndSupportRenameAndExplicitDelete": true,
+      "app.onklav.home.FilesBrokerHostTest.selectedImportsStreamAndStopWhenAuthorizationIsRevoked": true,
+      "app.onklav.home.SdkEbooksUiTest.signedEbooksLibraryAndReaderShowOurSpeakerAndVoiceSettings": true,
+      "app.onklav.home.UtilityAppsHostTest.converterEditsEitherSideAndUsesTheme": true,
+      "app.onklav.home.FileSelectionTest.connectedFoldersUseTheSameFilesLocationsAndRespectRemovedAndroidGrants": true
+    },
+    "stages": [
+      {
+        "evidence": "TEST-app.onklav.home.FileSelectionTest.xml",
+        "tests": 5,
+        "failures": 1,
+        "errors": 0
+      },
+      {
+        "evidence": "TEST-app.onklav.home.FileSelectionUiTest.xml",
+        "tests": 1,
+        "failures": 1,
+        "errors": 0
+      },
+      {
+        "evidence": "TEST-app.onklav.home.FilesBrokerHostTest.xml",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0
+      },
+      {
+        "evidence": "TEST-app.onklav.home.SdkEbooksUiTest.xml",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0
+      },
+      {
+        "evidence": "TEST-app.onklav.home.UtilityAppsHostTest.xml",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0
+      },
+      {
+        "evidence": "final-FileSelectionTest.xml",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0
+      },
+      {
+        "evidence": "final-FileSelectionUiTest.xml",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0
+      },
+      {
+        "evidence": "final-SdkEbooksUiTest.xml",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0
+      },
+      {
+        "evidence": "final-UtilityAppsHostTest.xml",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0
+      }
+    ],
+    "shared_host_results": [
+      {
+        "suite": "app.onklav.shared.NativeBridgeTest",
+        "tests": 3,
+        "failures": 0,
+        "errors": 0
+      },
+      {
+        "suite": "app.onklav.shared.LauncherLayoutTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0
+      },
+      {
+        "suite": "app.onklav.shared.ThemePackageTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0
+      }
+    ],
+    "runtime_classes_match": 3103,
+    "notes": [
+      "First compile fixed private JSON-node helper visibility, one missing brace and an app-name/package-name shadowing import",
+      "First app test run12passed/2fixture failures: attempted undeclared storage.private grant on Files and attempted editing Save field before startup completed",
+      "Final9affected checks passed including6selection/backend cases,1picker native UI,1eBook native UI and1Convert native UI;6unchanged FilesBroker cases retained from first run",
+      "Actual signed Files controller/Rust broker and content descriptors exercised; simulated Android documents provider verifies connected-folder grants/removal",
+      "Read-only/path rejection, exact saved bytes and size, unique names/original retention, cancellation results, filtering, recovery after revoked access, native pick/save, bidirectional Convert and actual EPUB chapter/end navigation covered",
+      "Native screenshots reviewed for picker Open/Save, Convert and eBook; real phone provider/descriptor-close/device usability not claimed"
+    ]
+  },
+  "lint": {
+    "Fatal": 0,
+    "Error": 0,
+    "Warning": 278,
+    "Information": 1
+  },
+  "input_checks": {
+    "native_current": true,
+    "mobile_current": true,
+    "sdk_current": true,
+    "games_current": true,
+    "new_permissions": false,
+    "new_capabilities": false,
+    "new_runtime_dependencies": false
+  },
+  "source_sha256": {
+    "android/app/src/main/AndroidManifest.xml": "d6e078fb20e2ee717f5ab10d8fc988a719e20487863a5233bbbe640615b48a67",
+    "android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt": "5918a3580710f9e18f2200193313f3d78a04bd1fbc54279fdf54a28e36c4bf1c",
+    "android/app/src/main/kotlin/app/onklav/home/SettingsBackup.kt": "37754a685424bee7768f064f80cc438f1a134ea8d6e60ce300bfc1c8749cbebf",
+    "android/app/src/main/kotlin/app/onklav/home/SdkAppScreen.kt": "4bad78f652b6f2f077267d6eb46dd835092b10b6409ac87d15f6678285e18432",
+    "android/app/src/main/kotlin/app/onklav/home/SdkFilesEffects.kt": "79b388491e6cb2ed9af5b55a97825426d043a3332854f4a115d7a79c508363a5",
+    "android/app/src/main/kotlin/app/onklav/home/SdkPrivateFilesEffects.kt": "2b7b35bec3c5512136898ea5c407bf273b0419f3dac02e49a8df3d26e2361943",
+    "android/app/src/main/kotlin/app/onklav/home/SdkSpeech.kt": "b1b88f2def120e4d22b3294e1498034d97a42ce99f188a019e2aaa5804006f71",
+    "android/app/src/main/kotlin/app/onklav/home/SdkAudioBooksComponent.kt": "168fbdbaea2b1985f98a61be7f58f43c60a52120c074a31206e72d6e188f9343",
+    "android/app/src/main/kotlin/app/onklav/home/LibraryBackup.kt": "1c6c13d7cb5d3ad660c3c89f6314914be7eeaf8b0dfe8e6844bd672a2ae2e4ba",
+    "android/app/src/main/kotlin/app/onklav/home/DriveSharing.kt": "85e9a4580c858e318bf9e05a4a59333bc93645c610a7b42bd798aa0890e595b9",
+    "android/app/src/main/kotlin/app/onklav/home/WriteEditor.kt": "de35b59dda4acc2d57955e19942e3af265517371807dc7b70520f0f3c513be3f",
+    "android/app/src/main/kotlin/app/onklav/home/FileBrowserActivity.kt": "2b701e44f656021ffb32a72a622dd713172148c051be6bf11697192e3ec2c9c9",
+    "android/app/src/main/kotlin/app/onklav/home/SdkAudioBooks.kt": "69ea42e8d35715297374bb85d7883066946e8d41f9c884e3561efdd8f6593765",
+    "android/app/src/main/kotlin/app/onklav/home/HistoryResumeScreen.kt": "0812a93af24b7344ab56a7a4859ffc1e1741e2d3bfb0b7ac922bc7febccd2307",
+    "android/app/src/main/kotlin/app/onklav/home/FileRecoveryPanel.kt": "3d6c35862a40fa760e9444dfc7b855577c97c1c11940affedcba561e5921b397",
+    "android/app/src/main/kotlin/app/onklav/home/FileSelectionStore.kt": "8e3f5fd9af860927c826d36d613322af554863460eedad26a3f21bcbc5ba1b19",
+    "android/app/src/main/kotlin/app/onklav/home/EbookReaderWorkspace.kt": "7c80d6ab2d3e739782018845ba50cad1b6cd47426d07646e13b71b3065724894",
+    "android/app/src/main/kotlin/app/onklav/home/MessageAttachments.kt": "8ee9dd0fd89e8b3c2c95608f823c5f93476453f9e73fe9002179f2514864e7ea",
+    "android/app/src/main/kotlin/app/onklav/home/SettingsScreens.kt": "4ea434f1c78553c63e868e33c189abfb30846e9a2f170f9f78ca967fedf96c85",
+    "android/app/src/main/kotlin/app/onklav/home/NotesBackup.kt": "7bfc8eae318f743303bf7c76f20fcf4dc40c5233d85adb7f2f6c5685653fb1f7",
+    "android/app/src/main/kotlin/app/onklav/home/EmailScreen.kt": "1351f38f2d5621de20f5e94a1da2472b188de5a8274a4c6ce6c7c9331a89798f",
+    "android/app/src/main/kotlin/app/onklav/home/AudioEditor.kt": "58d5305b8be1d43cf5036c2cef006cf843aa18879e4166a60ed5b721e401ac61",
+    "android/app/src/main/kotlin/app/onklav/home/DriveBackup.kt": "8fe1570adfe6f18b94515bea4d52a322ff23151fed8d48a4922dd668a4b92203",
+    "android/app/src/main/kotlin/app/onklav/home/FilesBroker.kt": "7d8bf9e4161e3eaf71ca069521fe5fb8c244e566ba5e5fe6a3112e4ad25fd315",
+    "android/app/src/main/kotlin/app/onklav/home/PhotoEditor.kt": "92783f90c57abd3a6882007049dfc1b440a359da767d8bcb631d9fa7dc315df5",
+    "android/app/src/main/kotlin/app/onklav/home/PackageCenter.kt": "a2a4ded7b6f158103cc618f9fcdd580fd97db618a1d1171ab306b8a9229e364f",
+    "android/app/src/main/kotlin/app/onklav/home/SdkAppsCenter.kt": "5300da1988c3bc743d847f29e8d82e7810b3b699f7ed515c74bb6e441a22136e",
+    "android/app/src/main/kotlin/app/onklav/home/ConvertWorkspace.kt": "08569c3f9b6ffe7331300c51b701d0444dbf0be862e173608c03fc7042c4c484",
+    "android/shared/src/main/kotlin/app/onklav/shared/AppearanceDialog.kt": "a74693ea2d7ecf1116be5df46d9b115a6e9f7fa458d944ccbc9f6e069f1bb0ba",
+    "android/shared/src/main/kotlin/app/onklav/shared/BackgroundDialog.kt": "3a1a8b504c3d933a85ce8bb31eb95358270e40f67a34dfd95f3c37e592a2d00e",
+    "android/shared/src/main/kotlin/app/onklav/shared/OnKlavFileContracts.kt": "2d4b9ad532cf621591d18a7dcddceecda25e40665f77d57963202a6a1f694d75",
+    "android/shared/src/main/res/drawable/ebook_contents.xml": "c4542d66f2a329410b6d7ea00fe84a267959c6d947ac389ed5e5faf2725cfdac",
+    "android/shared/src/main/res/drawable/convert_swap.xml": "7b8d9eb5bc3ff68df9288910e221d89d6ec6a7abcde333f725bbfcfc905136e7",
+    "android/shared/src/main/res/drawable/convert_copy.xml": "bc89c3438ac99f745b1353b310ea9192c97e8f315ae4692e1217c43093a39c2b",
+    "android/tools/src/main/kotlin/app/onklav/tools/NotesScreen.kt": "6573d9e3b97a763e7f6c499852439cbd4464ad5702769b5ef13344605482ea84"
+  },
+  "latest_delivered_apk": "0.100.9-rc1/code118 predates current source and previous pending Audio/crop/Video/Clock/Camera/keyboard/radio changes; no new APK built",
+  "remaining_phone_checks": [
+    "Real Android tree grants and cloud/device providers, descriptor-close delivery/filing failures, large video/audio storage",
+    "Actual editor/attachment/backup import-export roundtrips and process-death recovery",
+    "Small/landscape/large-font/screen-reader/touch layout",
+    "Read Aloud voice/output and continuous page/chapter behavior on handset"
+  ],
+  "evidence": "docs/evidence/files-reading-polish/"
+}

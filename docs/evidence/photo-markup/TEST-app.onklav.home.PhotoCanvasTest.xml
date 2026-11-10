@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.PhotoCanvasTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-28T22:39:09" hostname="1b65f1fab707" time="3.25">
+  <properties/>
+  <testcase name="transformedImageIsClippedInsideCanvasWithRealTransparentEdges" classname="app.onklav.home.PhotoCanvasTest" time="3.139"/>
+  <testcase name="fitCentersPerspectiveWithinTheSelectedCanvas" classname="app.onklav.home.PhotoCanvasTest" time="0.033"/>
+  <testcase name="rotationScalePerspectiveNeverResizeOrRotateTheCropCanvas" classname="app.onklav.home.PhotoCanvasTest" time="0.052"/>
+  <testcase name="fitAndResetChangeImageOnlyAndPrecisionCombinesLegacyQuarterTurns" classname="app.onklav.home.PhotoCanvasTest" time="0.026"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

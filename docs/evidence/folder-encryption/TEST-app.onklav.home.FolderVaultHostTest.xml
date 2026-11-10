@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.FolderVaultHostTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-29T11:10:32" hostname="3d3a46c2e56a" time="49.432">
+  <properties/>
+  <testcase name="protectUnlockChangePasswordAndRemoveRetainFilesAndRevokeSelectedLinks" classname="app.onklav.home.FolderVaultHostTest" time="28.085"/>
+  <testcase name="migratedWriteAndLegacyCopiesAreEncryptedAndRestoredTogether" classname="app.onklav.home.FolderVaultHostTest" time="9.793"/>
+  <testcase name="crashRecoverySealsLatestWorkingEditsAndSurvivesMissingRecoveryKey" classname="app.onklav.home.FolderVaultHostTest" time="11.554"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

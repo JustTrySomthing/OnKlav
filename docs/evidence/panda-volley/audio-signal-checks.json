@@ -1,0 +1,38 @@
+[
+  {
+    "cue": "panda_launch",
+    "peak": 0.38690185546875,
+    "max_sample_jump": 0.02239990234375,
+    "edge_samples": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "cue": "panda_hit",
+    "peak": 0.36285400390625,
+    "max_sample_jump": 0.02618408203125,
+    "edge_samples": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "cue": "panda_block",
+    "peak": 0.33203125,
+    "max_sample_jump": 0.028961181640625,
+    "edge_samples": [
+      0.0,
+      0.0
+    ]
+  },
+  {
+    "cue": "duel_power",
+    "peak": 0.413665771484375,
+    "max_sample_jump": 0.015380859375,
+    "edge_samples": [
+      0.0,
+      0.0
+    ]
+  }
+]

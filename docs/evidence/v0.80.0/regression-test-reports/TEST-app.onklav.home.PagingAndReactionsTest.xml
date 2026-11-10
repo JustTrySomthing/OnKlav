@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.PagingAndReactionsTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-26T17:10:01" hostname="844ebfe47829" time="2.471">
+  <properties/>
+  <testcase name="galleryReadsOneBoundedPageAndUsesIdToAdvanceThroughEqualTimestamps" classname="app.onklav.home.PagingAndReactionsTest" time="2.22"/>
+  <testcase name="knownAndArbitraryEmojiReactionsAndRemovalParseWithoutEatingOrdinaryMessages" classname="app.onklav.home.PagingAndReactionsTest" time="0.051"/>
+  <testcase name="viewerKeepsItsSnapshotWhenGalleryRefreshesOrShrinks" classname="app.onklav.home.PagingAndReactionsTest" time="0.048"/>
+  <testcase name="newestRefreshPreservesOlderRowsAndUpdatesChangedStatusWithoutDuplicates" classname="app.onklav.home.PagingAndReactionsTest" time="0.047"/>
+  <testcase name="tabViewModelRetainsLoadedRowsAndWindows" classname="app.onklav.home.PagingAndReactionsTest" time="0.065"/>
+  <testcase name="reactionsOnBothSidesBecomeCornerBadgesAndTransportRowsAreHidden" classname="app.onklav.home.PagingAndReactionsTest" time="0.04"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

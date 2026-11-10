@@ -1,0 +1,19 @@
+{
+  "status": "source_verified",
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/MessageComposer.kt": "d1286b8aa390e8e4d59bee58429d9dea28931da8885b5a35cbcfdc9ddd6f7e2b",
+    "android/app/src/main/kotlin/app/onklav/home/MessageFeedAutoScroll.kt": "905a1b9ca8bad721e4220f61e403d3544cb14679ddafc80506af499818300456",
+    "android/app/src/main/kotlin/app/onklav/home/MessengerPane.kt": "4ee7184f803641bc9780f5dbdcc4860180620090b1ef70444e2601d7f664a9b6",
+    "android/app/src/test/kotlin/app/onklav/home/MessageComposeFlowTest.kt": "132442ee0e1ba0cccdad03dd0308a99897f020b5ad9d0904994ecfd022ef5bd9"
+  },
+  "passing_tests": [
+    "MessageComposeFlowTest.emptyComposerEntireWidthAcceptsAnotherMessageAfterSend",
+    "MessageComposeFlowTest.sentTailStaysAboveComposerAfterResizeAndHistoryBrowsingIsRespected",
+    "MessageFocusTest.exactMessageAndDateAreRequired"
+  ],
+  "runtime_bundle_matches_compiled_classes": true,
+  "initial_diagnostic": "App compiled; test harness required experimental opt-in and supported bounds/touch APIs. Corrected and final selection passed.",
+  "physical_ime_and_carrier_verified": false,
+  "apk_built": false,
+  "native_sdk_identity_changed": false
+}

@@ -1,0 +1,13 @@
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/work/OnKlav/developer/components)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 9.73s
+     Running unittests src/lib.rs (developer/components/target/debug/deps/onklav_ui-b9729a29e05b7074)
+
+running 5 tests
+test email_compose::wrap_tests::wrap_upload_is_selected_file_then_correlated_server_blob ... ok
+test email_compose::wrap_tests::wrap_unknown_recovery_never_unlocks_on_absence_and_conflict_relocks ... ok
+test email_compose::wrap_tests::wrap_dirty_back_saves_before_exit_and_sent_move_is_not_resend ... ok
+test reference_apps::service_tests::wrap_map_batches_hits_and_network_without_skipping_or_erasing ... ok
+test reference_apps::service_tests::wrap_mail_pages_all_saved_headers_and_opens_body ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 94 filtered out; finished in 0.00s
+

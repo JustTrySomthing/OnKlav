@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-23",
+  "source_version": "0.54.0-dev",
+  "source_version_code": 62,
+  "scope": "Non-game batch 1: reconcile four stale SDK flow checks; production behavior unchanged",
+  "apk_built": false,
+  "last_apk_evidence": "docs/source-verification-0.54.0.json",
+  "tests": {
+    "passed": 169,
+    "failed": 0,
+    "unexpected_failures": 0,
+    "rust_broad": {
+      "passed": 169,
+      "failed": 0,
+      "evidence": "docs/evidence/non-game-batch-1/rust-tests.log"
+    },
+    "sdk_focused": {
+      "passed": 38,
+      "failed": 0,
+      "overlap_with_broad": true,
+      "evidence": "docs/evidence/non-game-batch-1/sdk-tests.log"
+    },
+    "known_failures": []
+  },
+  "full_rewrite_complete": false,
+  "handset_acceptance": false,
+  "carrier_acceptance": false,
+  "next_work": "docs/FINISH-NON-GAME.md",
+  "note": "The four old failures were invalid test interactions after Files primary-tap and Walkie recipient/record-panel changes. Permission, export, pending token, trim, storage and settings protections stay enabled. Prior Kotlin/APK evidence remains historical; no new Kotlin/device check is claimed."
+}

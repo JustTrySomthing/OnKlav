@@ -1,0 +1,29 @@
+   Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/workspace/scratch/ed752e8a1957/sdk-clean-extraction/sdk/rust)
+   Compiling onklav-starter-app v0.1.0 (/workspace/scratch/ed752e8a1957/clean-app)
+    Finished `release` profile [optimized] target(s) in 2.94s
+Created /workspace/scratch/ed752e8a1957/clean-app/dist/net.independent.notebook.onklav-a
+{
+  "package": "/workspace/scratch/ed752e8a1957/clean-app/dist/net.independent.notebook.onklav-a",
+  "review": {
+    "hash": "01a2efbb1aeca6ab78df31a7a256ca9b7aa601966e4de5602a3e538d56d485c4",
+    "manifest": {
+      "capabilities": [
+        "storage.private"
+      ],
+      "id": "net.independent.notebook",
+      "name": "Clean Notebook",
+      "publisher": "9635c82074357dd3305954f6a65968e42294c87b305a3896fbe471111d219843",
+      "runtime": "rust-wasm-ui.v1",
+      "schema": "onklav.app.v1",
+      "version": 1
+    },
+    "publisher_fingerprint": "e7d8b073e2ce9789d0ae17db5d784c80d18d77149bb418c1cbb4298b61add1f2",
+    "signature_verified": true,
+    "update": false
+  }
+}

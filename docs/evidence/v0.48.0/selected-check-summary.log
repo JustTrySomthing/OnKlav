@@ -1,0 +1,10 @@
+android-library-compile: starting (maximum 180s)
+android-library-compile: passed in 26.0s
+android-compile-check: starting (maximum 180s)
+android-compile-check: running, 30s elapsed
+android-compile-check: passed in 53.4s
+android-host-check: starting (maximum 240s)
+android-host-check: running, 30s elapsed
+android-host-check: passed in 42.3s
+Android runtime bundle matches compiled Kotlin classes.
+Source/host tests complete. APK and mobile native rebuild deliberately deferred.

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.MessageMediaActionTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-26T18:01:57" hostname="844ebfe47829" time="0.036">
+  <properties/>
+  <testcase name="actionColorsContrastLightDarkAndColoredBubbles" classname="app.onklav.home.MessageMediaActionTest" time="0.036"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

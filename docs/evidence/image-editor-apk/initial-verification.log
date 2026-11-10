@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/d853f89e99b7/onklav/OnKlav/scripts/verify_apks.py", line 87, in <module>
+    assert (version_name,version_code)==(expected_version,expected_code), "APK version does not match current source"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: APK version does not match current source

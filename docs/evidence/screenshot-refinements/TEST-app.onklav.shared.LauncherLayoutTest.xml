@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.shared.LauncherLayoutTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-11-02T11:14:59" hostname="6af3db93959e" time="0.036">
+  <properties/>
+  <testcase name="occupiedSamePageDropNeverShiftsTheNextPageAndEmptyDropLeavesOthersStill" classname="app.onklav.shared.LauncherLayoutTest" time="0.029"/>
+  <testcase name="hitTestingIncludesLastRowAndScrollOffset" classname="app.onklav.shared.LauncherLayoutTest" time="0.001"/>
+  <testcase name="sparseBottomRowAndNewPageSurviveReload" classname="app.onklav.shared.LauncherLayoutTest" time="0.001"/>
+  <testcase name="fullPageSpillsOnlyUntilTheFirstFollowingGap" classname="app.onklav.shared.LauncherLayoutTest" time="0.001"/>
+  <testcase name="occupiedDropReordersWithoutLosingHolesOrIds" classname="app.onklav.shared.LauncherLayoutTest" time="0.0"/>
+  <testcase name="occupiedCrossPageDropUsesGapBeforeTargetBeforeSpilling" classname="app.onklav.shared.LauncherLayoutTest" time="0.001"/>
+  <testcase name="catalogReconciliationRejectsUnknownAndDuplicateIds" classname="app.onklav.shared.LauncherLayoutTest" time="0.0"/>
+  <testcase name="cancelSnapshotAndEmptyTrailingPageAreSafe" classname="app.onklav.shared.LauncherLayoutTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

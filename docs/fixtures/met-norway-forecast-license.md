@@ -1,0 +1,3 @@
+Weather fixture: MET Norway Locationforecast2.0 compact, Chicago41.8781,-87.6298, fetched2026-10-26. Weather data ©MET Norway, CC BY4.0. https://api.met.no/weatherapi/locationforecast/2.0/documentation and https://creativecommons.org/licenses/by/4.0/ . No user location data is present.
+
+Offline city metadata: GeoNames cities15000 dump retrieved2026-10-26 from https://download.geonames.org/export/dump/cities15000.zip . CC BY4.0, https://www.geonames.org/export/ . Source fields reduced to identifier, names, country, administrative code, coordinates and timezone, sorted by population. Search is local; the selected coordinates are sent only to the signed MET Norway origin.

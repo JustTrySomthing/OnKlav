@@ -1,0 +1,31 @@
+{
+  "status": "Source complete; all 14 focused Android tests passed; no APK built",
+  "date": "2026-10-29",
+  "tests": [
+    "AudioHandoffTest > lateInterruptionCannotPauseReplacementAndHandoffInterruptsBeforeFocusIsRequested",
+    "AudioHandoffTest > previousOwnerCleanupDoesNotHoldTheOwnershipMonitorOrBlockNewAudioOnFailure",
+    "AudioHandoffTest > radioPodcastAndOtherAudioReleaseOldPlayersAndKeepTheNewOwnerPlaying",
+    "AudioHandoffTest > staleServiceStartsAndDuplicateDeliveryCannotStopOrReprepareTheNewSession",
+    "RadioContinuityTest > pauseStopAndReplacementCancelQueuedReconnection",
+    "RadioContinuityTest > rapidEofAndIoErrorsAreBoundedAndManualPlayCanRetry",
+    "RadioContinuityTest > sleepDeadlineAndRevocationCannotBeBypassedByReconnect",
+    "RadioContinuityTest > trackBoundaryReconnectsLiveEdgeAndKeepsChangingAudioSession",
+    "SdkLifecycleTest > audioOwnerInterruptsOnlyThePreviousOwnerAndOldReleaseCannotStopNewAudio",
+    "SdkLifecycleTest > messagesAndReaderShareVoicePreferencesAndOneCurrentReader",
+    "SdkMediaLifecycleTest > deletingAppDataClearsPositionsWithoutALateStopRecreatingThem",
+    "SdkMediaLifecycleTest > pauseDuringPreparationAndReplacementNeverRestartOldPlayback",
+    "SdkMediaLifecycleTest > signedPlayerOwnsSessionControlsAndStopsOnRevocation",
+    "SdkMediaLifecycleTest > sleepStopsOnlyItsCurrentPlayerAndReplacementCancelsDeadline"
+  ],
+  "runtime_bundle_matches_compiled_classes": true,
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/SdkMedia.kt": "82532e8d36a239ed8e414e05a396c5bcd03653971da9f0fd609655d40c3b402d",
+    "android/app/src/main/kotlin/app/onklav/home/HostSpeechOwner.kt": "8262765e597732cf1ec22a16607691824a048797f5fce7d83914c03d7eb655c5",
+    "android/app/src/test/kotlin/app/onklav/home/AudioHandoffTest.kt": "47ba27e29c66ff8b06acaf836cd07413689eec1eb919e4592e5b16df48fd718f"
+  },
+  "native_core": "Unchanged; retained source-matched working Linux/ARM64 JNI",
+  "evidence": "docs/evidence/audio-handoff/android-host-check.log",
+  "scope": "Shared SDK Radio/Podcasts/finite-media service, audio ownership used by speech/voice/editor clients",
+  "not_verified": "Actual phone decoder, Bluetooth/wired routes and Wi-Fi/mobile playback acceptance; no claim to resolve all unavailable/unsupported stations",
+  "apk_built": false
+}

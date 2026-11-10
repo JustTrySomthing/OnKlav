@@ -1,0 +1,1 @@
+<layer-list xmlns:android="http://schemas.android.com/apk/res/android"><item android:drawable="@color/onklav_brand"/><item android:gravity="center" android:width="160dp" android:height="160dp" android:drawable="@drawable/ic_onklav_splash"/></layer-list>

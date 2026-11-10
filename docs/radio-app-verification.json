@@ -1,0 +1,115 @@
+{
+  "status": "Test APK built and verified: Radio implemented with full lint and bounded integration checks passed; physical listening/background acceptance remains open",
+  "requirements": [
+    "Separate Radio SDK app and data from Podcasts",
+    "No account/API registration/key/subscription or paid service",
+    "Public Radio Browser directory and direct selected public HTTPS MP3/AAC streams",
+    "Listen/Explore/Favorites,local favorites/12recents,docked player and sleep timer"
+  ],
+  "source_profile": "Only live-compatible HTTPS MP3/AAC rows, no HLS/HTTP-only streams/ICY titles/artwork. Full phone/audio/background acceptance remains to be tested.",
+  "focused_core_cases": 3,
+  "focused_sdk_cases": 3,
+  "contract_cases": 5,
+  "checkpoint_cases": 6,
+  "native_status": "Fresh host and ARM64 built from exact current source; full265 core cases passed",
+  "apk_created_this_pass": true,
+  "android_host_cases": {
+    "passed": 11,
+    "live_opt_in_skipped": 1,
+    "complete_main_and_host_test_sources_compiled": true
+  },
+  "signed_radio_scenario_steps": 6,
+  "live_provider": {
+    "status": "blocked by environment DNS in full host check",
+    "observed": "Unauthenticated directory GET earlier returned200 and three records; no actual host stream-byte or handset listening acceptance claimed",
+    "failure_log": "docs/evidence/v0.71.0/radio-host-tests.log"
+  },
+  "visual_check": "Real signed Radio through Compose on411x891dp; Listen inspected, Explore/Favorites and persistent player visible assertions passed",
+  "lint": {
+    "task": ":android:app:lintDebug",
+    "result": "passed",
+    "errors": 0,
+    "warnings": 160
+  },
+  "sdk_authoring_tools_cases": 7,
+  "apk_file": "OnKlav-0.71.0-Radio-ARM64.apk",
+  "apk_verification": {
+    "name": "host",
+    "variant": "debug",
+    "package": "app.onklav.home.prototype.rewrite",
+    "version_name": "0.71.0-radio1",
+    "version_code": 79,
+    "target_sdk": 36,
+    "bytes": 70422920,
+    "sha256": "f0f8c53cab77c94f83f6756a70fc3c86f97f67c9d606dc5837b8b024ee2a5f62",
+    "signer_sha256": "6ed975c5fc27d19f6291f751a8bb00fa8a2c2e7d268bffc7b6ddf7e1b1a7a69d",
+    "signature_v2_verified": true,
+    "zip_integrity": "pass",
+    "zipalign_16kb": "pass",
+    "abis": [
+      "arm64-v8a"
+    ],
+    "elf_minimum_load_alignment": {
+      "lib/arm64-v8a/libandroidx.graphics.path.so": 16384,
+      "lib/arm64-v8a/libc++_shared.so": 16384,
+      "lib/arm64-v8a/libgodot_android.so": 16384,
+      "lib/arm64-v8a/libonklav_core.so": 16384
+    },
+    "native_library_sha256": {
+      "lib/arm64-v8a/libandroidx.graphics.path.so": "41e9a793c43a0f4fddb19e33f346bace464f30f888ba7b9eaf96294ea115bfb6",
+      "lib/arm64-v8a/libc++_shared.so": "ad74bf43eb1fd576518168f664ad16a74e00eeda9595875c33dd87f6dd197869",
+      "lib/arm64-v8a/libgodot_android.so": "9e10c5ebda9bb629c671929441cdde3b4a8ab0e5542fc7e88de8d71f2b9840db",
+      "lib/arm64-v8a/libonklav_core.so": "8cb4863aa271f05cdf6b58f544c201c590bdc752a7e645c366959ea73ac7e8bc"
+    },
+    "legacy_defined_classes": 0,
+    "defined_class_count": 18589,
+    "permissions": [
+      "android.permission.INTERNET",
+      "android.permission.ACCESS_NETWORK_STATE",
+      "android.permission.VIBRATE",
+      "android.permission.READ_SMS",
+      "android.permission.READ_CONTACTS",
+      "android.permission.SEND_SMS",
+      "android.permission.RECEIVE_SMS",
+      "android.permission.RECEIVE_MMS",
+      "android.permission.RECEIVE_WAP_PUSH",
+      "android.permission.READ_PHONE_STATE",
+      "android.permission.READ_PHONE_NUMBERS",
+      "android.permission.POST_NOTIFICATIONS",
+      "android.permission.RECORD_AUDIO",
+      "android.permission.RECEIVE_BOOT_COMPLETED",
+      "android.permission.WAKE_LOCK",
+      "android.permission.FOREGROUND_SERVICE",
+      "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+      "android.permission.ACCESS_WIFI_STATE",
+      "android.permission.CHANGE_WIFI_STATE",
+      "android.permission.CHANGE_NETWORK_STATE",
+      "android.permission.ACCESS_COARSE_LOCATION",
+      "android.permission.ACCESS_FINE_LOCATION",
+      "android.permission.CAMERA",
+      "android.permission.BLUETOOTH",
+      "android.permission.BLUETOOTH_ADMIN",
+      "android.permission.BLUETOOTH_SCAN",
+      "android.permission.BLUETOOTH_CONNECT",
+      "android.permission.NEARBY_WIFI_DEVICES",
+      "app.onklav.home.prototype.rewrite.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+    ],
+    "rust_libraries": {
+      "arm64-v8a": "8cb4863aa271f05cdf6b58f544c201c590bdc752a7e645c366959ea73ac7e8bc"
+    }
+  },
+  "full_core_tests_passed": 265,
+  "source_checkpoint": "Complete source plus original-signed Radio and refreshed bundled packages retained; prior0.70 APK preserved",
+  "logs": [
+    "docs/evidence/v0.71.0/radio-host-tests-offline.log",
+    "docs/evidence/v0.71.0/radio-signed-scenarios.log",
+    "docs/evidence/v0.71.0/radio-sdk-tools-retry.log",
+    "docs/evidence/v0.71.0/radio-native-build.log",
+    "docs/evidence/v0.71.0/radio-apk-build-run.log"
+  ],
+  "remaining": [
+    "Physical device live MP3/AAC decoding and audible output",
+    "Background/notification/headset and interruption behavior on a phone",
+    "Live directory/stream/revocation test on unrestricted network; sandbox DNS blocked this host check"
+  ]
+}

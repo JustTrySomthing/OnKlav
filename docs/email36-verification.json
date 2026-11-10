@@ -1,0 +1,61 @@
+{
+  "chunk": 36,
+  "status": "bounded JMAP content/compose profile source implemented; raw MIME/upload/reconciliation gaps and provider/Android qualification remain",
+  "production_path": "email_content authenticated JMAP get -> correlated bounded plain-text/attachment projection; email_compose native screen -> exact-draft review/confirm -> optimistic private sending-lock commit -> one authenticated Email/set + EmailSubmission/set -> persisted accepted/unknown locked outcome",
+  "email_helper_cases_passed": 9,
+  "counting_note": "Four previous header checks plus five new content/compose checks, counted once",
+  "contract_cases_passed": 5,
+  "signed_guest_steps_passed": 7,
+  "signed_denial_steps_passed": 1,
+  "tests": "Synthetic nonexistent account/identity, real private collections and pending authenticated HTTP effect; no pending request authorized, no OAuth/HTTP success faked, no mail sent. Denial verifies blocked screen and disabled review control.",
+  "diagnosed_issues": [
+    "Initial fixture used a32-character handle; the broker correctly rejected it. Corrected to a nonexistent UUID and seven steps passed.",
+    "Denied direct tap on disabled review was rejected by broker; revised scenario asserts blocked restart and disabled control.",
+    "Outcome-persistence failures must not say no submission occurred; controller distinguishes post-attempt failures."
+  ],
+  "bounds": {
+    "plain_body_bytes": 8192,
+    "plain_parts": 8,
+    "attachments": 3,
+    "attachment_bytes_max": 10485760,
+    "draft_body_bytes": 8000,
+    "draft_json_bytes": 12000,
+    "review_characters": 480,
+    "recipients_max": 10
+  },
+  "send_safety": [
+    "No submission until confirmed unchanged review and durable sending lock",
+    "Save/conflict failures block before transport",
+    "One submission request; no automatic retry",
+    "Restarted sending/unknown/submitted states stay locked",
+    "Provider accepted is distinct from delivery; result-save failure never claims no send occurred"
+  ],
+  "unsupported_or_followup": [
+    "Raw RFC822/MIME parsing and HTML rendering",
+    "Local attachment upload/picker; descriptors refer to existing server blobs",
+    "Automatic sent-folder/draft cleanup and uncertain-send reconciliation",
+    "Multiple drafts/account management workflows and explicit unsaved-edit exit recovery",
+    "Actual provider identity/submission/attachments and phone UI/process qualification"
+  ],
+  "native_rebuilt": false,
+  "native_source_and_artifact_hashes_verified": true,
+  "reason_native_reused": "No core/Kotlin changes; public SDK/controllers/examples only",
+  "actual_provider_or_android_tested": false,
+  "apk_created": false,
+  "actual_email_sent": false,
+  "sdk_release_created": false,
+  "shipping_package_created": false,
+  "next_feature": 37,
+  "logs": [
+    "docs/evidence/v0.70.0/email36-tests-final.log",
+    "docs/evidence/v0.70.0/email36-contract.log",
+    "docs/evidence/v0.70.0/email36-broker-final.log",
+    "docs/evidence/v0.70.0/email36-denied-final.log"
+  ],
+  "source_sha256": {
+    "developer/components/src/email_content.rs": "24a4254a2dc32aa7c5e6976ea7b25a6f2765ecbb7ea3da882171f6e3c1577921",
+    "developer/components/src/email_compose.rs": "7d17afb7dac413cfcfe253f994bcc63f7884d3b70e1e3b064a1214d2f5ff07ba",
+    "developer/components/src/lib.rs": "495989d63b572d5f532c8ae8f0f9d8a6ff66b98fe20a1426b322ed58acc9f3fd",
+    "developer/examples/email-compose/src/lib.rs": "980ef5b6447f242b32172c701aebf4cfde61b87048065dbd169abec8f3e59c75"
+  }
+}

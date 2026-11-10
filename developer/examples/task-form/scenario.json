@@ -1,0 +1,28 @@
+{
+  "grants": [
+    "storage.private"
+  ],
+  "steps": [
+    {
+      "action": "form.field.task",
+      "value": "Try the SDK"
+    },
+    {
+      "action": "form.field.done",
+      "value": "true"
+    },
+    {
+      "action": "form.save",
+      "expect": {
+        "status": "Saved"
+      }
+    },
+    {
+      "reopen": true,
+      "expect": {
+        "values.task": "Try the SDK",
+        "values.done": true
+      }
+    }
+  ]
+}

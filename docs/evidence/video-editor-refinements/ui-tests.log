@@ -1,0 +1,77 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.11.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :ui
+WARNING: The option setting 'android.aapt2FromMavenOverride=/workspace/scratch/c739b0c1372b/build-env/sdk/build-tools/35.0.0/aapt2' is experimental.
+WARNING: platform-tools package is not installed.
+
+> Task :ui:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :ui:preBuild UP-TO-DATE
+> Task :ui:preDebugBuild UP-TO-DATE
+> Task :ui:checkDebugAarMetadata UP-TO-DATE
+> Task :ui:generateDebugResValues UP-TO-DATE
+> Task :ui:mapDebugSourceSetPaths UP-TO-DATE
+> Task :ui:generateDebugResources UP-TO-DATE
+> Task :ui:mergeDebugResources UP-TO-DATE
+> Task :ui:packageDebugResources UP-TO-DATE
+> Task :ui:parseDebugLocalResources UP-TO-DATE
+> Task :ui:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :ui:extractDeepLinksDebug UP-TO-DATE
+> Task :ui:processDebugMainManifest UP-TO-DATE
+> Task :ui:processDebugManifest UP-TO-DATE
+> Task :ui:processDebugManifestForPackage UP-TO-DATE
+> Task :ui:processDebugResources UP-TO-DATE
+> Task :ui:javaPreCompileDebug UP-TO-DATE
+> Task :ui:preDebugUnitTestBuild UP-TO-DATE
+> Task :ui:javaPreCompileDebugUnitTest UP-TO-DATE
+> Task :ui:mergeDebugShaders UP-TO-DATE
+> Task :ui:compileDebugShaders NO-SOURCE
+> Task :ui:generateDebugAssets UP-TO-DATE
+> Task :ui:mergeDebugAssets UP-TO-DATE
+> Task :ui:packageDebugUnitTestForUnitTest UP-TO-DATE
+> Task :ui:generateDebugUnitTestConfig UP-TO-DATE
+
+> Task :ui:compileDebugKotlin
+w: file:///workspace/scratch/c739b0c1372b/video-ui-check/ui/src/main/kotlin/app/onklav/shared/OnKlavFileContracts.kt:17:29 The corresponding parameter in the supertype 'OpenDocument' is named 'context'. This may cause problems when calling this function with named arguments.
+w: file:///workspace/scratch/c739b0c1372b/video-ui-check/ui/src/main/kotlin/app/onklav/shared/OnKlavFileContracts.kt:18:28 The corresponding parameter in the supertype 'OpenDocument' is named 'resultCode'. This may cause problems when calling this function with named arguments.
+w: file:///workspace/scratch/c739b0c1372b/video-ui-check/ui/src/main/kotlin/app/onklav/shared/OnKlavFileContracts.kt:18:37 The corresponding parameter in the supertype 'OpenDocument' is named 'intent'. This may cause problems when calling this function with named arguments.
+w: file:///workspace/scratch/c739b0c1372b/video-ui-check/ui/src/main/kotlin/app/onklav/shared/OnKlavFileContracts.kt:21:29 The corresponding parameter in the supertype 'OpenMultipleDocuments' is named 'context'. This may cause problems when calling this function with named arguments.
+w: file:///workspace/scratch/c739b0c1372b/video-ui-check/ui/src/main/kotlin/app/onklav/shared/OnKlavFileContracts.kt:22:28 The corresponding parameter in the supertype 'OpenMultipleDocuments' is named 'resultCode'. This may cause problems when calling this function with named arguments.
+w: file:///workspace/scratch/c739b0c1372b/video-ui-check/ui/src/main/kotlin/app/onklav/shared/OnKlavFileContracts.kt:22:37 The corresponding parameter in the supertype 'OpenMultipleDocuments' is named 'intent'. This may cause problems when calling this function with named arguments.
+w: file:///workspace/scratch/c739b0c1372b/video-ui-check/ui/src/main/kotlin/app/onklav/shared/OnKlavFileContracts.kt:25:29 The corresponding parameter in the supertype 'CreateDocument' is named 'context'. This may cause problems when calling this function with named arguments.
+w: file:///workspace/scratch/c739b0c1372b/video-ui-check/ui/src/main/kotlin/app/onklav/shared/OnKlavFileContracts.kt:26:28 The corresponding parameter in the supertype 'CreateDocument' is named 'resultCode'. This may cause problems when calling this function with named arguments.
+w: file:///workspace/scratch/c739b0c1372b/video-ui-check/ui/src/main/kotlin/app/onklav/shared/OnKlavFileContracts.kt:26:37 The corresponding parameter in the supertype 'CreateDocument' is named 'intent'. This may cause problems when calling this function with named arguments.
+w: file:///workspace/scratch/c739b0c1372b/video-ui-check/ui/src/main/kotlin/app/onklav/shared/OnKlavFileContracts.kt:29:29 The corresponding parameter in the supertype 'OpenDocumentTree' is named 'context'. This may cause problems when calling this function with named arguments.
+w: file:///workspace/scratch/c739b0c1372b/video-ui-check/ui/src/main/kotlin/app/onklav/shared/OnKlavFileContracts.kt:30:28 The corresponding parameter in the supertype 'OpenDocumentTree' is named 'resultCode'. This may cause problems when calling this function with named arguments.
+w: file:///workspace/scratch/c739b0c1372b/video-ui-check/ui/src/main/kotlin/app/onklav/shared/OnKlavFileContracts.kt:30:37 The corresponding parameter in the supertype 'OpenDocumentTree' is named 'intent'. This may cause problems when calling this function with named arguments.
+
+> Task :ui:compileDebugJavaWithJavac NO-SOURCE
+> Task :ui:bundleDebugClassesToCompileJar
+> Task :ui:bundleDebugClassesToRuntimeJar
+> Task :ui:processDebugJavaRes
+> Task :ui:compileDebugUnitTestKotlin
+> Task :ui:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :ui:processDebugUnitTestJavaRes
+
+> Task :ui:testDebugUnitTest
+
+VideoMobileLayoutTest > frameControlsAndExactTimeRemainUsable PASSED
+
+VideoMobileLayoutTest > landscapeKeepsPreviewTimelineAndToolsSeparate PASSED
+
+VideoMobileLayoutTest > timelineAudioTapSelectsTheTouchedTrack PASSED
+
+VideoMobileLayoutTest > portraitToolsAndSlidersRemainReachable PASSED
+
+VideoMobileLayoutTest > fullscreenSourceAndLongStatusHaveClearExitAndDetails PASSED
+
+VideoMobileLayoutTest > selectedAudioSurvivesInspectorCloseAndReopen PASSED
+
+VideoMobileLayoutTest > shortPhoneShowsSettingsInsteadOfCrushingThem PASSED
+
+VideoMobileLayoutTest > largeTextAudioUsesOneSelectedTrack PASSED
+
+VideoMobileLayoutTest > verticalTimelineDragRevealsHiddenAudioLanes PASSED
+
+BUILD SUCCESSFUL in 43s
+26 actionable tasks: 7 executed, 19 up-to-date

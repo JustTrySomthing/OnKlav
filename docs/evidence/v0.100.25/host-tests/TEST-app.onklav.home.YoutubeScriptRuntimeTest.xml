@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.YoutubeScriptRuntimeTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-29T23:22:22" hostname="b623e8e1265a" time="1.955">
+  <properties/>
+  <testcase name="extractorRunsPlayerJavascriptWithoutTheUnusedJsr223Adapter" classname="app.onklav.home.YoutubeScriptRuntimeTest" time="1.955"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

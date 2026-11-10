@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.MediaEditingRepairTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-29T18:23:44" hostname="b623e8e1265a" time="5.125">
+  <properties/>
+  <testcase name="bundledMp3ImportKeepsARealAudioTrackWithoutVendorHasAudioTags" classname="app.onklav.home.MediaEditingRepairTest" time="5.125"/>
+  <system-out><![CDATA[MP3_FIXTURE_SHA256=441754576e399ee2bd3770c60ec63cc1199b831f628304b83b6044f4438b1fd9 encode_ms=176
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

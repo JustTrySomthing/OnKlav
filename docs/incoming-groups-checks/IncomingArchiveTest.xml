@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.IncomingArchiveTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-10-30T17:24:03" hostname="e89dc6ba27f3" time="2.711">
+  <properties/>
+  <testcase name="blockedArrivalsLeaveInboxAndNeverPostAnAlert" classname="app.onklav.home.IncomingArchiveTest" time="2.26"/>
+  <testcase name="incomingTextReturnsDeletedConversationToInboxWithoutLosingFlags" classname="app.onklav.home.IncomingArchiveTest" time="0.134"/>
+  <testcase name="incomingPictureUsesTheSameResurfacingPathForGroupThreads" classname="app.onklav.home.IncomingArchiveTest" time="0.057"/>
+  <testcase name="incomingTextReturnsArchivedThreadToInboxAndPreservesFlagsAcrossReload" classname="app.onklav.home.IncomingArchiveTest" time="0.046"/>
+  <testcase name="blockedArrivalWithoutOldMetadataIsRetainedOutsideInbox" classname="app.onklav.home.IncomingArchiveTest" time="0.046"/>
+  <testcase name="unblockingAllowsTheNextMessageToResurfaceTrash" classname="app.onklav.home.IncomingArchiveTest" time="0.038"/>
+  <testcase name="blockedSendersStayInTheirExistingFolders" classname="app.onklav.home.IncomingArchiveTest" time="0.048"/>
+  <testcase name="incomingPictureReturnsDeletedGroupConversationToInbox" classname="app.onklav.home.IncomingArchiveTest" time="0.051"/>
+  <testcase name="inboxAndInvalidThreadsDoNotCreateOrRewriteMetadata" classname="app.onklav.home.IncomingArchiveTest" time="0.029"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

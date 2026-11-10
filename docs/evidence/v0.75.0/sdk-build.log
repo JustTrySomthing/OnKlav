@@ -1,0 +1,322 @@
+{
+  "build": [
+    "eBooks",
+    "AudioBooks",
+    "Podcasts",
+    "Radio",
+    "Files",
+    "Notes",
+    "RSS",
+    "ReadAloud",
+    "Browser",
+    "YouTube",
+    "Annotation",
+    "Social",
+    "WalkieTalkie"
+  ],
+  "restore_bundles": [],
+  "reuse": [
+    "Counter"
+  ],
+  "unselected_stale": []
+}
+    Updating crates.io index
+ Downloading crates ...
+  Downloaded sha2 v0.10.9
+  Downloaded adler2 v2.0.1
+  Downloaded same-file v1.0.6
+  Downloaded jni-sys v0.4.1
+  Downloaded downcast-rs v2.0.2
+  Downloaded rustc_version v0.4.1
+  Downloaded crypto-common v0.1.7
+  Downloaded spki v0.7.3
+  Downloaded smallvec v1.16.3
+  Downloaded jni-sys-macros v0.4.1
+  Downloaded jni-sys v0.3.1
+  Downloaded block-buffer v0.10.4
+  Downloaded foldhash v0.1.5
+  Downloaded digest v0.10.7
+  Downloaded proc-macro2 v1.0.107
+  Downloaded arrayvec v0.7.8
+  Downloaded zopfli v0.8.4
+  Downloaded unicode-ident v1.0.27
+  Downloaded rand_core v0.6.4
+  Downloaded quote v1.0.47
+  Downloaded wasmi_collections v0.46.0
+  Downloaded walkdir v2.5.0
+  Downloaded subtle v2.6.1
+  Downloaded leb128fmt v0.1.0
+  Downloaded pkcs8 v0.10.2
+  Downloaded multi-stash v0.2.0
+  Downloaded jni v0.21.1
+  Downloaded wasmi_ir v0.46.0
+  Downloaded signature v2.2.0
+  Downloaded serde_derive v1.0.229
+  Downloaded equivalent v1.0.3
+  Downloaded cfg-if v1.0.5
+  Downloaded curve25519-dalek-derive v0.1.1
+  Downloaded log v0.4.34
+  Downloaded generic-array v0.14.7
+  Downloaded version_check v0.9.5
+  Downloaded cpufeatures v0.2.17
+  Downloaded zeroize v1.9.1
+  Downloaded wat v1.240.0
+  Downloaded cesu8 v1.1.0
+  Downloaded string-interner v0.19.0
+  Downloaded ed25519 v2.2.3
+  Downloaded base64ct v1.8.3
+  Downloaded const-oid v0.9.6
+  Downloaded thiserror-impl v1.0.69
+  Downloaded thiserror v1.0.69
+  Downloaded spin v0.9.9
+  Downloaded simd-adler32 v0.3.10
+  Downloaded semver v1.0.28
+  Downloaded getrandom v0.2.17
+  Downloaded uuid v1.28.0
+  Downloaded bytes v1.12.1
+  Downloaded hashbrown v0.17.1
+  Downloaded wasmi_core v0.46.0
+  Downloaded getrandom v0.3.4
+  Downloaded getrandom v0.4.3
+  Downloaded bitflags v2.13.2
+  Downloaded crc32fast v1.5.3
+  Downloaded syn v3.0.9
+  Downloaded bumpalo v3.20.3
+  Downloaded curve25519-dalek v4.1.3
+  Downloaded miniz_oxide v0.9.1
+  Downloaded ed25519-dalek v2.2.0
+  Downloaded der v0.7.10
+  Downloaded libc v0.2.191
+  Downloaded wasmi v0.46.0
+  Downloaded wasm-encoder v0.240.0
+  Downloaded typenum v1.20.1
+  Downloaded serde v1.0.229
+  Downloaded unicode-width v0.2.2
+  Downloaded libm v0.2.16
+  Downloaded wasmparser v0.228.0
+  Downloaded indexmap v2.14.2
+  Downloaded hashbrown v0.15.5
+  Downloaded wasmparser v0.240.0
+  Downloaded zip v2.6.1
+  Downloaded flate2 v1.1.10
+  Downloaded wast v240.0.0
+  Downloaded combine v4.6.9
+  Downloaded syn v2.0.119
+   Compiling proc-macro2 v1.0.107
+   Compiling quote v1.0.47
+   Compiling unicode-ident v1.0.27
+   Compiling cfg-if v1.0.5
+   Compiling version_check v0.9.5
+   Compiling typenum v1.20.1
+   Compiling memchr v2.8.3
+   Compiling generic-array v0.14.7
+   Compiling libm v0.2.16
+   Compiling bumpalo v3.20.3
+   Compiling semver v1.0.28
+   Compiling libc v0.2.191
+   Compiling syn v2.0.119
+   Compiling wasm-encoder v0.240.0
+   Compiling crc32fast v1.5.3
+   Compiling rustc_version v0.4.1
+   Compiling crypto-common v0.1.7
+   Compiling block-buffer v0.10.4
+   Compiling leb128fmt v0.1.0
+   Compiling serde_core v1.0.229
+   Compiling simd-adler32 v0.3.10
+   Compiling curve25519-dalek v4.1.3
+   Compiling digest v0.10.7
+   Compiling getrandom v0.4.3
+   Compiling adler2 v2.0.1
+   Compiling cpufeatures v0.2.17
+   Compiling wasmparser v0.228.0
+   Compiling thiserror v1.0.69
+   Compiling jni-sys v0.3.1
+   Compiling log v0.4.34
+   Compiling zmij v1.0.23
+   Compiling downcast-rs v2.0.2
+   Compiling unicode-width v0.2.2
+   Compiling wasmi_core v0.46.0
+   Compiling miniz_oxide v0.9.1
+   Compiling wast v240.0.0
+   Compiling syn v3.0.9
+   Compiling jni-sys-macros v0.4.1
+   Compiling jni-sys v0.4.1
+   Compiling thiserror-impl v1.0.69
+   Compiling curve25519-dalek-derive v0.1.1
+   Compiling bitflags v2.13.2
+   Compiling bytes v1.12.1
+   Compiling getrandom v0.3.4
+   Compiling subtle v2.6.1
+   Compiling serde_json v1.0.154
+   Compiling zeroize v1.9.1
+   Compiling zip v2.6.1
+   Compiling serde v1.0.229
+   Compiling hashbrown v0.17.1
+   Compiling equivalent v1.0.3
+   Compiling signature v2.2.0
+   Compiling ed25519 v2.2.3
+   Compiling combine v4.6.9
+   Compiling indexmap v2.14.2
+   Compiling wat v1.240.0
+   Compiling serde_derive v1.0.229
+   Compiling flate2 v1.1.10
+   Compiling wasmi_ir v0.46.0
+   Compiling zopfli v0.8.4
+   Compiling sha2 v0.10.9
+   Compiling multi-stash v0.2.0
+   Compiling cesu8 v1.1.0
+   Compiling spin v0.9.9
+   Compiling itoa v1.0.18
+   Compiling smallvec v1.16.3
+   Compiling wasmi_collections v0.46.0
+   Compiling arrayvec v0.7.8
+   Compiling jni v0.21.1
+   Compiling ed25519-dalek v2.2.0
+   Compiling uuid v1.28.0
+   Compiling wasmi v0.46.0
+   Compiling onklav-core v0.8.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/core)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 40.19s
+eBooks: compiling changed app
+   Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling serde_json v1.0.154
+   Compiling memchr v2.8.3
+   Compiling itoa v1.0.18
+   Compiling onklav-app v0.1.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/developer/components)
+   Compiling onklav-ebooks v0.1.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/apps/ebooks)
+    Finished `release` profile [optimized] target(s) in 8.22s
+Created /workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/packages/.sdk-build-p76r6knw/eBooks.onklav-a
+AudioBooks: compiling changed app
+   Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/developer/components)
+   Compiling onklav-audiobooks v0.1.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/apps/audiobooks)
+    Finished `release` profile [optimized] target(s) in 7.44s
+Created /workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/packages/.sdk-build-cjg0fc5t/AudioBooks.onklav-a
+Podcasts: compiling changed app
+   Compiling zmij v1.0.23
+   Compiling serde_core v1.0.229
+   Compiling serde_json v1.0.154
+   Compiling memchr v2.8.3
+   Compiling itoa v1.0.18
+   Compiling onklav-app v0.1.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/developer/components)
+   Compiling onklav-podcasts v0.1.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/apps/podcasts)
+    Finished `release` profile [optimized] target(s) in 8.21s
+Created /workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/packages/.sdk-build-tc6quzzy/Podcasts.onklav-a
+Radio: compiling changed app
+   Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/developer/components)
+   Compiling onklav-radio v0.1.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/apps/radio)
+    Finished `release` profile [optimized] target(s) in 7.50s
+Created /workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/packages/.sdk-build-om9wr_12/Radio.onklav-a
+Files: compiling changed app
+   Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/developer/components)
+   Compiling onklav-files v0.1.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/apps/files)
+    Finished `release` profile [optimized] target(s) in 8.26s
+Created /workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/packages/.sdk-build-omn7q07l/Files.onklav-a
+Notes: compiling changed app
+   Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling serde_json v1.0.154
+   Compiling memchr v2.8.3
+   Compiling itoa v1.0.18
+   Compiling onklav-app v0.1.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/developer/components)
+   Compiling onklav-notes v0.1.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/apps/notes)
+    Finished `release` profile [optimized] target(s) in 7.92s
+Created /workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/packages/.sdk-build-9tv8dcmr/Notes.onklav-a
+RSS: compiling changed app
+   Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/developer/components)
+   Compiling onklav-rss v0.1.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/apps/rss)
+    Finished `release` profile [optimized] target(s) in 8.15s
+Created /workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/packages/.sdk-build-iaqfgdnr/RSS.onklav-a
+ReadAloud: compiling changed app
+   Compiling zmij v1.0.23
+   Compiling serde_core v1.0.229
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/developer/components)
+   Compiling onklav-reader v0.1.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/apps/reader)
+    Finished `release` profile [optimized] target(s) in 8.01s
+Created /workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/packages/.sdk-build-edtu2jrw/ReadAloud.onklav-a
+Browser: compiling changed app
+   Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling serde_json v1.0.154
+   Compiling memchr v2.8.3
+   Compiling itoa v1.0.18
+   Compiling onklav-app v0.1.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/developer/components)
+   Compiling onklav-browser v0.1.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/apps/browser)
+    Finished `release` profile [optimized] target(s) in 7.78s
+Created /workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/packages/.sdk-build-69w555oz/Browser.onklav-a
+YouTube: compiling changed app
+   Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/developer/components)
+   Compiling onklav-youtube v0.1.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/apps/youtube)
+    Finished `release` profile [optimized] target(s) in 8.62s
+Created /workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/packages/.sdk-build-g7kbvqu_/YouTube.onklav-a
+Annotation: compiling changed app
+   Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling serde_json v1.0.154
+   Compiling memchr v2.8.3
+   Compiling itoa v1.0.18
+   Compiling onklav-app v0.1.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/developer/components)
+   Compiling onklav-annotation v0.1.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/apps/annotation)
+    Finished `release` profile [optimized] target(s) in 7.33s
+Created /workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/packages/.sdk-build-wb_6fphn/Annotation.onklav-a
+Social: compiling changed app
+   Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/developer/components)
+   Compiling onklav-social v0.1.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/apps/social)
+    Finished `release` profile [optimized] target(s) in 6.64s
+Created /workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/packages/.sdk-build-mleuhs3f/Social.onklav-a
+WalkieTalkie: compiling changed app
+   Compiling zmij v1.0.23
+   Compiling serde_core v1.0.229
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/developer/components)
+   Compiling onklav-walkie v0.1.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/apps/walkie)
+    Finished `release` profile [optimized] target(s) in 7.50s
+Created /workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/packages/.sdk-build-nt02pqgr/WalkieTalkie.onklav-a
+{"built": ["eBooks", "AudioBooks", "Podcasts", "Radio", "Files", "Notes", "RSS", "ReadAloud", "Browser", "YouTube", "Annotation", "Social", "WalkieTalkie"], "bundles_restored": [], "all_packages_current": true}

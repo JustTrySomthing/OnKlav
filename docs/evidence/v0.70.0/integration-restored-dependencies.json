@@ -1,0 +1,50 @@
+[
+  {
+    "coordinate": "com.squareup.okhttp3:okhttp:4.12.0",
+    "file": "okhttp-4.12.0.module",
+    "sha256": "607e220ff8215b929d829bbf54f332894f1459b4d795979aeafcbcc1cea54cf3",
+    "bytes": 4378
+  },
+  {
+    "coordinate": "com.squareup.okhttp3:okhttp:4.12.0",
+    "file": "okhttp-4.12.0.pom",
+    "sha256": "7c737040a9419522e7c50cc027416a70fe7c7629e52b219935ade6b4119c7d38",
+    "bytes": 1816
+  },
+  {
+    "coordinate": "com.squareup.okhttp3:okhttp:4.12.0",
+    "file": "okhttp-4.12.0.jar",
+    "sha256": "b1050081b14bb7a3a7e55a4d3ef01b5dcfabc453b4573a4fc019767191d5f4e0",
+    "bytes": 789531
+  },
+  {
+    "coordinate": "androidx.webkit:webkit:1.13.0",
+    "file": "webkit-1.13.0.pom",
+    "sha256": "da4bf7351a6cde07ec0869959beafdd67d87718f203c498ab733bc2ca07d316e",
+    "bytes": 2534
+  },
+  {
+    "coordinate": "androidx.webkit:webkit:1.13.0",
+    "file": "webkit-1.13.0.aar",
+    "sha256": "001c836ea612e835991288a7a66877f25288e4cf5ec89729ee7ae066e3491a35",
+    "bytes": 212088
+  },
+  {
+    "coordinate": "androidx.webkit:webkit:1.13.0",
+    "file": "webkit-1.13.0.module",
+    "sha256": "6452ac1f273949afdd87d0c6d069c94975065f43bfd8b86fefd4a8d77f4b30e5",
+    "bytes": 4796
+  },
+  {
+    "coordinate": "com.google.android.gms:play-services-auth:22.0.0",
+    "file": "play-services-auth-22.0.0.aar",
+    "sha256": "0897c1ad398cae3f7a743a24d66373cc7440e63d11e7429ed9a17a77a61c96dc",
+    "bytes": 195356
+  },
+  {
+    "coordinate": "com.google.android.gms:play-services-auth:22.0.0",
+    "file": "play-services-auth-22.0.0.pom",
+    "sha256": "c845afe37988b22a89bee1808279503c3eec52a1f044f275d2aa9021e0f2c4ae",
+    "bytes": 3332
+  }
+]

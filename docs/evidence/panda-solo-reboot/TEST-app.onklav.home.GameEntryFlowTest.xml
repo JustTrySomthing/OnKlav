@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.GameEntryFlowTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-11-04T20:07:19" hostname="1bb679a568a0" time="5.365">
+  <properties/>
+  <testcase name="resumeChoiceIsResolvedBeforeLoadingAndOnlyForSelectedGame" classname="app.onklav.home.GameEntryFlowTest" time="4.444"/>
+  <testcase name="explicitResumeBypassesSecondEntryDialog" classname="app.onklav.home.GameEntryFlowTest" time="0.223"/>
+  <testcase name="friendNewRetainsTheHostStorageProtocolWhenSwitchingToSolo" classname="app.onklav.home.GameEntryFlowTest" time="0.172"/>
+  <testcase name="hostRejectsLateSessionSaveAfterAcknowledgedDiscard" classname="app.onklav.home.GameEntryFlowTest" time="0.107"/>
+  <testcase name="noSaveShowsStartBeforeAnyWebViewAndCancelLoadsNothing" classname="app.onklav.home.GameEntryFlowTest" time="0.068"/>
+  <testcase name="backFromEntryClosesToListWithoutAnySaveWarning" classname="app.onklav.home.GameEntryFlowTest" time="0.075"/>
+  <testcase name="completedGameHasNoResumePrompt" classname="app.onklav.home.GameEntryFlowTest" time="0.075"/>
+  <testcase name="newChoiceKeepsPreviousSaveUntilStartAndQuitTombstoneOffersOnlyStart" classname="app.onklav.home.GameEntryFlowTest" time="0.199"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

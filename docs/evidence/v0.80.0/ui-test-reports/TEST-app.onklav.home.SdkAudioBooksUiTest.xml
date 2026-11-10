@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.SdkAudioBooksUiTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-26T17:12:34" hostname="844ebfe47829" time="7.675">
+  <properties/>
+  <testcase name="signedAudioBooksStartsAtLibriVoxWithReadyPermissionsAndCleanTabs" classname="app.onklav.home.SdkAudioBooksUiTest" time="7.675"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

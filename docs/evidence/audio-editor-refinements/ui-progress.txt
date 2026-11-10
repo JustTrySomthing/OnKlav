@@ -1,0 +1,62 @@
+fixture 640 x 360 font 1.0
+bootstrap complete
+fixture ready; composing
+content scheduled; waiting for model
+model ready
+landscape pane ready
+fixture 320 x 640 font 1.6
+bootstrap complete
+fixture ready; composing
+content scheduled; waiting for model
+model ready
+fixture 360 x 640 font 1.0
+bootstrap complete
+fixture ready; composing
+content scheduled; waiting for model
+model ready
+fixture 360 x 640 font 1.0
+bootstrap complete
+fixture ready; composing
+content scheduled; waiting for model
+model ready
+fixture 320 x 480 font 1.6
+bootstrap complete
+fixture ready; composing
+content scheduled; waiting for model
+model ready
+fixture 640 x 360 font 1.0
+bootstrap complete
+fixture ready; composing
+content scheduled; waiting for model
+model ready
+landscape pane ready
+fixture 320 x 640 font 1.6
+bootstrap complete
+fixture ready; composing
+content scheduled; waiting for model
+model ready
+fixture 360 x 640 font 1.0
+bootstrap complete
+fixture ready; composing
+content scheduled; waiting for model
+model ready
+fixture 360 x 640 font 1.0
+bootstrap complete
+fixture ready; composing
+content scheduled; waiting for model
+model ready
+fixture 320 x 480 font 1.6
+bootstrap complete
+fixture ready; composing
+content scheduled; waiting for model
+model ready
+fixture 360 x 640 font 1.0
+bootstrap complete
+fixture ready; composing
+content scheduled; waiting for model
+model ready
+fixture 320 x 480 font 1.6
+bootstrap complete
+fixture ready; composing
+content scheduled; waiting for model
+model ready

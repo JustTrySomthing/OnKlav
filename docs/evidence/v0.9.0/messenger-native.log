@@ -1,0 +1,3 @@
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.04s
+   Compiling onklav-core v0.8.0 (/workspace/scratch/39f240a7e5bd/project/OnKlav-Rewrite/core)
+    Finished `release` profile [optimized] target(s) in 8.44s

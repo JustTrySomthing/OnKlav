@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.FilesFlowHostTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-11-03T02:49:56" hostname="3bfb1ef11171" time="13.585">
+  <properties/>
+  <testcase name="fileIconFoldersRenameMoveTrashAndRestoreKeepDocumentBytes" classname="app.onklav.home.FilesFlowHostTest" time="13.585"/>
+  <system-out><![CDATA[Files UI waiting: sdk-entry:documents
+Files UI waiting: sdk-entry:documents
+Files UI waiting: sdk-name
+Files UI waiting: sdk-name.save
+Files UI waiting: sdk-rename
+Files UI waiting: sdk-name
+Files UI waiting: sdk-name.save
+Files UI waiting: sdk-menu.status
+Files UI waiting: sdk-name.save
+Files UI waiting: sdk-move
+Files UI waiting: sdk-entry:documents
+Files UI waiting: sdk-entry:0e223990fd8843dd9306facc70cc73a3
+Files UI waiting: sdk-destination.accept
+Files UI waiting: sdk-entry:9196dedc57cb463ebbd1a9ce58883cf0
+Files UI waiting: sdk-trash
+Files UI waiting: sdk-entry:trash
+Files UI waiting: sdk-restore
+Files UI waiting: sdk-entry:documents
+Files UI waiting: sdk-entry:0e223990fd8843dd9306facc70cc73a3
+Files UI waiting: sdk-entry:9196dedc57cb463ebbd1a9ce58883cf0
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,54 @@
+{
+  "status": "Saved source recovered; product feature work remains incomplete",
+  "recovered_checkpoint_version": 33,
+  "core_source_hash_mismatches": [],
+  "linux_native_hash_matches": true,
+  "arm64_diagnostic_native_hash_matches": true,
+  "interrupted_changes_missing": [
+    "Account PKCE/vault/refresh/authenticated request runtime",
+    "Public clock",
+    "Public connectivity",
+    "All-day calendar helpers"
+  ],
+  "checkpoint_safeguard_tests_passed": 4,
+  "test_command": "python3 -m unittest discover -s scripts -p test_checkpoint_working.py -v",
+  "safeguards": [
+    "Hash-check base checkpoint before using it",
+    "Atomic archive creation preserves previous checkpoint on failure",
+    "Record stale source/native state as rebuild required without altering proofs",
+    "Reject traversal, unsafe new-file locations and missing tracked members"
+  ],
+  "limitations": [
+    "Cannot prevent infrastructure disconnects",
+    "Durable upload remains required after creating an archive",
+    "No Android compile or device tests performed during recovery; build tools were removed by environment reset"
+  ],
+  "apk_built": false,
+  "sdk_released": false,
+  "follow_up_recovery": {
+    "verified_saved_version": 34,
+    "all_saved_source_members_present_and_hash_matching": true,
+    "available_local_archives_checked": 5,
+    "additional_interrupted_source_found": false,
+    "saved_file_inventory_checked": true,
+    "unrecoverable_chunks": [
+      3,
+      4,
+      5,
+      6,
+      14,
+      15,
+      21
+    ],
+    "todo_updated": [
+      "TODO.md",
+      "docs/REMAINING-WORK.md",
+      "docs/implementation-chunks.json",
+      "docs/sdk-remaining-work.json"
+    ],
+    "implementation_rebuilt_this_pass": false
+  },
+  "historical_report": true,
+  "superseded_by": "docs/recovery-current-verification.json",
+  "current_note": "The earlier missing implementations were recovered/reimplemented. Current source/archive/native hashes verify; do not use historical loss lists as current tasks."
+}

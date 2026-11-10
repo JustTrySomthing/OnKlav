@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.DocuViewUiTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-30T19:37:04" hostname="e89dc6ba27f3" time="12.707">
+  <properties/>
+  <testcase name="chosenCsvOpensThroughSignedFilesAndLosingSourceAccessClearsTheSnapshot" classname="app.onklav.home.DocuViewUiTest" time="9.501"/>
+  <testcase name="tableSearchAndSheetNavigationRemainSimple" classname="app.onklav.home.DocuViewUiTest" time="0.384"/>
+  <testcase name="screenLightOffersContinuousColorFade" classname="app.onklav.home.DocuViewUiTest" time="2.671"/>
+  <testcase name="welcomeIsReadableAndUsesOnKlavFiles" classname="app.onklav.home.DocuViewUiTest" time="0.15"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Invalid ID 0x00000000.
+]]></system-err>
+</testsuite>

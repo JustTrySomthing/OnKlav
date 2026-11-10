@@ -1,0 +1,289 @@
+   Compiling proc-macro2 v1.0.107
+   Compiling unicode-ident v1.0.27
+   Compiling quote v1.0.47
+   Compiling libc v0.2.191
+   Compiling find-msvc-tools v0.1.15
+   Compiling shlex v2.0.1
+   Compiling pkg-config v0.3.34
+   Compiling cfg-if v1.0.5
+   Compiling stable_deref_trait v1.2.1
+   Compiling version_check v0.9.5
+   Compiling typenum v1.20.1
+   Compiling writeable v0.6.4
+   Compiling utf_types v1.0.0
+   Compiling litemap v0.8.3
+   Compiling generic-array v0.14.7
+   Compiling icu_properties_data v2.4.0
+   Compiling utf8_iter v1.1.0
+   Compiling icu_normalizer_data v2.4.0
+   Compiling subtle v2.6.1
+   Compiling crc32fast v1.5.3
+   Compiling simd-adler32 v0.3.10
+   Compiling smallvec v1.16.4
+   Compiling rustix v1.1.6
+   Compiling untrusted v0.9.0
+   Compiling adler2 v2.0.1
+   Compiling log v0.4.34
+   Compiling zstd-safe v7.3.0
+   Compiling miniz_oxide v0.9.1
+   Compiling crc-catalog v2.5.0
+   Compiling cpufeatures v0.2.17
+   Compiling linux-raw-sys v0.12.1
+   Compiling percent-encoding v2.3.2
+   Compiling syn v3.0.9
+   Compiling syn v2.0.119
+   Compiling bitflags v2.13.2
+   Compiling rustls v0.23.46
+   Compiling getrandom v0.3.4
+   Compiling form_urlencoded v1.2.2
+   Compiling crc v3.4.0
+   Compiling flate2 v1.1.10
+   Compiling powerfmt v0.2.1
+   Compiling equivalent v1.0.3
+   Compiling time-core v0.1.9
+   Compiling hashbrown v0.17.1
+   Compiling crypto-common v0.1.7
+   Compiling jobserver v0.1.35
+   Compiling block-buffer v0.10.4
+   Compiling getrandom v0.2.17
+   Compiling digest v0.10.7
+   Compiling inout v0.1.4
+   Compiling byteorder v1.5.0
+   Compiling cipher v0.4.4
+   Compiling cc v1.10.0
+   Compiling hmac v0.12.1
+   Compiling bumpalo v3.20.3
+   Compiling num-conv v0.2.2
+   Compiling once_cell v1.21.4
+   Compiling zip v2.6.1
+   Compiling deranged v0.5.9
+   Compiling zopfli v0.8.4
+   Compiling indexmap v2.14.2
+   Compiling pbkdf2 v0.12.2
+   Compiling lzma-rs v0.3.0
+   Compiling aes v0.8.4
+   Compiling sha1 v0.10.7
+   Compiling filetime v0.2.29
+   Compiling deflate64 v0.1.12
+   Compiling xattr v1.7.0
+   Compiling memchr v2.8.3
+   Compiling serde_core v1.0.229
+   Compiling synstructure v0.14.0
+   Compiling time v0.3.55
+   Compiling constant_time_eq v0.3.1
+   Compiling base64 v0.22.1
+   Compiling tar v0.4.46
+   Compiling zstd-sys v2.1.2+zstd.1.5.7
+   Compiling ring v0.17.14
+   Compiling bzip2-sys v0.1.13+1.0.8
+   Compiling lzma-sys v0.1.20
+   Compiling zmij v1.0.23
+   Compiling zerofrom-derive v0.1.8
+   Compiling yoke-derive v0.8.4
+   Compiling zerovec-derive v0.11.7
+   Compiling displaydoc v0.2.7
+   Compiling bzip2 v0.5.2
+   Compiling zerofrom v0.1.8
+   Compiling yoke v0.8.4
+   Compiling bzip2 v0.4.4
+   Compiling zerotrie v0.2.5
+   Compiling thiserror v1.0.69
+   Compiling zerovec v0.11.9
+   Compiling jni-sys v0.3.1
+   Compiling serde v1.0.229
+   Compiling serde_json v1.0.154
+   Compiling serde_derive v1.0.229
+   Compiling tinystr v0.8.5
+   Compiling potential_utf v0.1.6
+   Compiling icu_locale_core v2.4.0
+   Compiling icu_collections v2.4.0
+   Compiling zeroize_derive v1.5.0
+   Compiling jni-sys-macros v0.4.1
+   Compiling zeroize v1.9.1
+   Compiling rustls-pki-types v1.15.1
+   Compiling webpki-roots v1.0.11
+   Compiling webpki-roots v0.26.11
+   Compiling icu_provider v2.4.0
+   Compiling jni-sys v0.4.1
+   Compiling icu_properties v2.4.0
+   Compiling icu_normalizer v2.4.0
+   Compiling thiserror-impl v1.0.69
+   Compiling rustls-webpki v0.103.16
+   Compiling xz2 v0.1.7
+   Compiling jni v0.21.1
+   Compiling idna_adapter v1.2.2
+   Compiling idna v1.1.0
+   Compiling url v2.5.8
+   Compiling zstd v0.13.3
+   Compiling ureq v2.12.1
+   Compiling sherpa-onnx-sys v1.13.8
+   Compiling sherpa-onnx v1.13.8
+   Compiling onklav-speech v0.1.0 (/workspace/scratch/f56bb877cb5d/onklav/OnKlav/core/speech)
+    Finished `release` profile [optimized] target(s) in 13.74s
+   Compiling unicode-ident v1.0.27
+   Compiling shlex v2.0.1
+   Compiling find-msvc-tools v0.1.15
+   Compiling pkg-config v0.3.34
+   Compiling stable_deref_trait v1.2.1
+   Compiling version_check v0.9.5
+   Compiling libc v0.2.191
+   Compiling typenum v1.20.1
+   Compiling writeable v0.6.4
+   Compiling proc-macro2 v1.0.107
+   Compiling utf_types v1.0.0
+   Compiling litemap v0.8.3
+   Compiling subtle v2.6.1
+   Compiling generic-array v0.14.7
+   Compiling icu_properties_data v2.4.0
+   Compiling utf8_iter v1.1.0
+   Compiling icu_normalizer_data v2.4.0
+   Compiling log v0.4.34
+   Compiling simd-adler32 v0.3.10
+   Compiling smallvec v1.16.4
+   Compiling quote v1.0.47
+   Compiling untrusted v0.9.0
+   Compiling percent-encoding v2.3.2
+   Compiling miniz_oxide v0.9.1
+   Compiling syn v3.0.9
+   Compiling syn v2.0.119
+   Compiling linux-raw-sys v0.12.1
+   Compiling form_urlencoded v1.2.2
+   Compiling time-core v0.1.9
+   Compiling powerfmt v0.2.1
+   Compiling hashbrown v0.17.1
+   Compiling num-conv v0.2.2
+   Compiling once_cell v1.21.4
+   Compiling rustix v1.1.6
+   Compiling flate2 v1.1.10
+   Compiling equivalent v1.0.3
+   Compiling lzma-rs v0.3.0
+   Compiling jobserver v0.1.35
+   Compiling crypto-common v0.1.7
+   Compiling block-buffer v0.10.4
+   Compiling getrandom v0.2.17
+   Compiling digest v0.10.7
+   Compiling cc v1.10.0
+   Compiling inout v0.1.4
+   Compiling hmac v0.12.1
+   Compiling cipher v0.4.4
+   Compiling pbkdf2 v0.12.2
+   Compiling sha1 v0.10.7
+   Compiling indexmap v2.14.2
+   Compiling getrandom v0.3.4
+   Compiling aes v0.8.4
+   Compiling filetime v0.2.29
+   Compiling time v0.3.55
+   Compiling zopfli v0.8.4
+   Compiling memchr v2.8.3
+   Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling xattr v1.7.0
+   Compiling synstructure v0.14.0
+   Compiling tar v0.4.46
+   Compiling itoa v1.0.18
+   Compiling combine v4.6.9
+   Compiling ring v0.17.14
+   Compiling zstd-sys v2.1.2+zstd.1.5.7
+   Compiling bzip2-sys v0.1.13+1.0.8
+   Compiling zerofrom-derive v0.1.8
+   Compiling yoke-derive v0.8.4
+   Compiling zerovec-derive v0.11.7
+   Compiling displaydoc v0.2.7
+   Compiling zerofrom v0.1.8
+   Compiling yoke v0.8.4
+   Compiling zerotrie v0.2.5
+   Compiling zerovec v0.11.9
+   Compiling lzma-sys v0.1.20
+   Compiling serde_derive v1.0.229
+   Compiling bzip2 v0.5.2
+   Compiling bzip2 v0.4.4
+   Compiling tinystr v0.8.5
+   Compiling potential_utf v0.1.6
+   Compiling icu_collections v2.4.0
+   Compiling icu_locale_core v2.4.0
+   Compiling zeroize_derive v1.5.0
+   Compiling rustls v0.23.46
+   Compiling jni-sys-macros v0.4.1
+   Compiling zeroize v1.9.1
+   Compiling icu_provider v2.4.0
+   Compiling rustls-pki-types v1.15.1
+   Compiling icu_normalizer v2.4.0
+   Compiling icu_properties v2.4.0
+   Compiling webpki-roots v1.0.11
+   Compiling webpki-roots v0.26.11
+   Compiling jni-sys v0.4.1
+   Compiling thiserror-impl v1.0.69
+   Compiling jni-sys v0.3.1
+   Compiling serde_json v1.0.154
+   Compiling idna_adapter v1.2.2
+   Compiling idna v1.1.0
+   Compiling rustls-webpki v0.103.16
+   Compiling serde v1.0.229
+   Compiling url v2.5.8
+   Compiling thiserror v1.0.69
+   Compiling jni v0.21.1
+   Compiling xz2 v0.1.7
+   Compiling zstd-safe v7.3.0
+   Compiling zstd v0.13.3
+   Compiling zip v2.6.1
+   Compiling ureq v2.12.1
+   Compiling sherpa-onnx-sys v1.13.8
+   Compiling sherpa-onnx v1.13.8
+   Compiling onklav-speech v0.1.0 (/workspace/scratch/f56bb877cb5d/onklav/OnKlav/core/speech)
+warning: fields `output` and `last_audio` are never read
+ --> src/ring.rs:3:85
+  |
+3 | pub struct Ring {data:Box<[UnsafeCell<f32>]>,read:AtomicUsize,write:AtomicUsize,pub output:AtomicUsize,pub last_audio:AtomicUsize,pub can...
+  |            ---- fields in this struct                                               ^^^^^^                 ^^^^^^^^^^
+  |
+  = note: `#[warn(dead_code)]` on by default
+
+warning: associated items `new` and `pop` are never used
+  --> src/ring.rs:7:9
+   |
+ 6 | impl Ring {
+   | --------- associated items in this implementation
+ 7 |  pub fn new(capacity:usize)->Self{assert!(capacity>0);Self{data:(0..capacity).map(|_|UnsafeCell::new(0.)).collect(),read:AtomicUsize::new...
+   |         ^^^
+...
+11 |  pub fn pop(&self,out:&mut[f32]){let base=self.output.fetch_add(out.len(),Ordering::Relaxed);if self.cancelled.load(Ordering::Acquire){ou...
+   |         ^^^
+
+warning: `onklav-speech` (lib) generated 2 warnings
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 12.22s
+     Running unittests src/lib.rs (core/speech/target/debug/deps/onklav_speech-75150f6948734d83)
+
+running 3 tests
+test ring::tests::wraps_and_cancellation_silences ... ok
+test ring::tests::timeline_includes_device_silence_but_not_fake_speech_progress ... ok
+test ring::tests::concurrent_order_is_preserved ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.01s
+
+   Doc-tests onklav_speech
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+warning: fields `output` and `last_audio` are never read
+ --> src/ring.rs:3:85
+  |
+3 | pub struct Ring {data:Box<[UnsafeCell<f32>]>,read:AtomicUsize,write:AtomicUsize,pub output:AtomicUsize,pub last_audio:AtomicUsize,pub can...
+  |            ---- fields in this struct                                               ^^^^^^                 ^^^^^^^^^^
+  |
+  = note: `#[warn(dead_code)]` on by default
+
+warning: associated items `new` and `pop` are never used
+  --> src/ring.rs:7:9
+   |
+ 6 | impl Ring {
+   | --------- associated items in this implementation
+ 7 |  pub fn new(capacity:usize)->Self{assert!(capacity>0);Self{data:(0..capacity).map(|_|UnsafeCell::new(0.)).collect(),read:AtomicUsize::new...
+   |         ^^^
+...
+11 |  pub fn pop(&self,out:&mut[f32]){let base=self.output.fetch_add(out.len(),Ordering::Relaxed);if self.cancelled.load(Ordering::Acquire){ou...
+   |         ^^^
+
+warning: `onklav-speech` (lib) generated 2 warnings
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.07s

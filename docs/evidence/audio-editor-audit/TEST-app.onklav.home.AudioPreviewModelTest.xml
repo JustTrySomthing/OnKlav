@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.AudioPreviewModelTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-10-30T02:05:51" hostname="b623e8e1265a" time="22.805">
+  <properties/>
+  <testcase name="failedHistorySavePreservesTheCurrentEditAndBothStacks" classname="app.onklav.home.AudioPreviewModelTest" time="4.548"/>
+  <testcase name="ownershipInterruptionDuringDecoderPreparationCancelsWithoutWaitingForTimeout" classname="app.onklav.home.AudioPreviewModelTest" time="2.563"/>
+  <testcase name="seekingIsRelativeToTheAuditionWindowAndOutsideSeekingStopsIt" classname="app.onklav.home.AudioPreviewModelTest" time="2.34"/>
+  <testcase name="unpluggingHeadphonesReleasesPreviewAndLateOldRouteEventsAreIgnored" classname="app.onklav.home.AudioPreviewModelTest" time="2.253"/>
+  <testcase name="reverseTrimTargetsTheVisibleSectionAndTempoUpdatesTimelineTimes" classname="app.onklav.home.AudioPreviewModelTest" time="2.204"/>
+  <testcase name="mp3LengthLimitIsReportedBeforeAFullRender" classname="app.onklav.home.AudioPreviewModelTest" time="2.228"/>
+  <testcase name="reverseRefreshesWaveformAndShortEditsKeepFadeValuesHonest" classname="app.onklav.home.AudioPreviewModelTest" time="2.207"/>
+  <testcase name="cancellingAnImportKeepsThePreviousDraftAndRemovesTemporaryFiles" classname="app.onklav.home.AudioPreviewModelTest" time="2.243"/>
+  <testcase name="failedRenderNeverDeletesOrOpensTheChosenDestination" classname="app.onklav.home.AudioPreviewModelTest" time="2.219"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Intent = Intent { act=android.media.AUDIO_BECOMING_NOISY }; Matching wrappers: [Wrapper[receiver=[app.onklav.home.AudioEditorModel$preview$2$routeReceiver$1@5b6fe1fa], context=[android.app.ContextImpl@408edaa1], intentFilter=[android.content.IntentFilter@11777118]]]
+]]></system-err>
+</testsuite>

@@ -1,0 +1,31 @@
+{
+  "runtime_classes_matched": 142,
+  "first_run": "9 passed; portrait test tapped an off-screen tool; added visible scrolling and corrected scroll-before-tap fixture",
+  "status": "implemented",
+  "production_and_test_compilation": "passed",
+  "focused_checks_passed": 10,
+  "suites": {
+    "VideoPhoneWorkflowTest": {
+      "tests": 9,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "VideoEditorUiTest": {
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt": "f522621f5b855826e1c3b68737854635e85372c8f04352223f0e10424c9f8a12",
+    "android/app/src/main/kotlin/app/onklav/home/VideoEditorLayout.kt": "1be067fa486798087512d8fd2aed4762b27b4dc547071de2546096d67e7183a2",
+    "android/app/src/main/kotlin/app/onklav/home/VideoProWorkspace.kt": "7c3ff35a4a4bf9206b12a4bcc71bf3eabd89e61b129019104db4f69f3ab51e51"
+  },
+  "media_engine_native_or_sdk_changed": false,
+  "apk_built": false,
+  "physical_phone_qualification": "pending",
+  "renders": "Actual Compose host rendering with generated photo fixture; not phone footage",
+  "evidence": "docs/video-surface-checks and docs/evidence/video-phone"
+}

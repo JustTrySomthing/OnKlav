@@ -1,0 +1,146 @@
+4.7.2.stable.official.ed1daf0bf
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Started Project initialization (5 steps)[39m[0m
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Scanning file structure...[39m[0m
+[  16% ] [90m[1mfirst_scan_filesystem[22m | Loading global class names...[39m[0m
+[  33% ] [90m[1mfirst_scan_filesystem[22m | Verifying GDExtensions...[39m[0m
+[  50% ] [90m[1mfirst_scan_filesystem[22m | Creating autoload scripts...[39m[0m
+[  66% ] [90m[1mfirst_scan_filesystem[22m | Initializing plugins...[39m[0m
+[  83% ] [90m[1mfirst_scan_filesystem[22m | Starting file scan...[39m[0m
+[92m[ DONE ][39m [1mfirst_scan_filesystem[22m
+[0m
+[   0% ] [90m[1mupdate_scripts_classes[22m | Started Registering global classes... (2 steps)[39m[0m
+[   0% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  33% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[92m[ DONE ][39m [1mupdate_scripts_classes[22m
+[0m
+[   0% ] [90m[1mloading_editor_layout[22m | Started Loading editor (5 steps)[39m[0m
+[   0% ] [90m[1mloading_editor_layout[22m | Loading editor layout...[39m[0m
+[  16% ] [90m[1mloading_editor_layout[22m | Loading docks...[39m[0m
+[92m[ DONE ][39m [1mloading_editor_layout[22m
+[0m
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+ONKLAV_SESSION_READY
+OnKlav template: 3528 checks
+WARNING: 2 ObjectDB instances were leaked at exit (run with `--verbose` for details).
+   at: cleanup (core/object/object.cpp:2536)
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+ONKLAV_SESSION_READY
+WARNING: 2 ObjectDB instances were leaked at exit (run with `--verbose` for details).
+   at: cleanup (core/object/object.cpp:2536)
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Started Project initialization (5 steps)[39m[0m
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Scanning file structure...[39m[0m
+[  16% ] [90m[1mfirst_scan_filesystem[22m | Loading global class names...[39m[0m
+[  33% ] [90m[1mfirst_scan_filesystem[22m | Verifying GDExtensions...[39m[0m
+[  50% ] [90m[1mfirst_scan_filesystem[22m | Creating autoload scripts...[39m[0m
+[  66% ] [90m[1mfirst_scan_filesystem[22m | Initializing plugins...[39m[0m
+[  83% ] [90m[1mfirst_scan_filesystem[22m | Starting file scan...[39m[0m
+[92m[ DONE ][39m [1mfirst_scan_filesystem[22m
+[0m
+[   0% ] [90m[1msavepack[22m | Started Packing (102 steps)[39m[0m
+[   1% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/below_the_mycelium.ogg-872e5ed06b370efcaf93c092678af080.oggvorbisstr[39m[0m
+[   1% ] [90m[1msavepack[22m | Storing File: res://assets/below_the_mycelium.ogg.import[39m[0m
+[   3% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/break.wav-faf51cb4092e7be74eb6fac245311b7a.sample[39m[0m
+[   3% ] [90m[1msavepack[22m | Storing File: res://assets/break.wav.import[39m[0m
+[   5% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/clear.wav-c60b9f2c9bc9adc9db673a7d4e1852af.sample[39m[0m
+[   5% ] [90m[1msavepack[22m | Storing File: res://assets/clear.wav.import[39m[0m
+[   7% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/dash.wav-cf5b164c8c04c1980c8ed75d377ddaa9.sample[39m[0m
+[   7% ] [90m[1msavepack[22m | Storing File: res://assets/dash.wav.import[39m[0m
+[   9% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/death.wav-c820f672735e25372580de5d3f7021aa.sample[39m[0m
+[   9% ] [90m[1msavepack[22m | Storing File: res://assets/death.wav.import[39m[0m
+[  11% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/foundry-panels.png-384fc0ea1701c5e2cdf09fa076835f0b.ctex[39m[0m
+[  11% ] [90m[1msavepack[22m | Storing File: res://assets/foundry-panels.png.import[39m[0m
+[  13% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/foundry-tread.png-3d8efeadf4916ef1f41f69b91c011215.ctex[39m[0m
+[  13% ] [90m[1msavepack[22m | Storing File: res://assets/foundry-tread.png.import[39m[0m
+[  15% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/foundry.png-f48db2030fb182b6fa84377ff13640c0.ctex[39m[0m
+[  15% ] [90m[1msavepack[22m | Storing File: res://assets/foundry.png.import[39m[0m
+[  18% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/fungal-skin.png-3e38a859320033ded628969f3753b3f8.ctex[39m[0m
+[  18% ] [90m[1msavepack[22m | Storing File: res://assets/fungal-skin.png.import[39m[0m
+[  20% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/heal.wav-81916073f5fd537aa70e5b1d0c98a743.sample[39m[0m
+[  20% ] [90m[1msavepack[22m | Storing File: res://assets/heal.wav.import[39m[0m
+[  22% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/hit.wav-094de5d7e9ff6457899262f6412d21e8.sample[39m[0m
+[  22% ] [90m[1msavepack[22m | Storing File: res://assets/hit.wav.import[39m[0m
+[  24% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/hurt.wav-9fcbd4cde8bca31a54a1a8ca0a10a71c.sample[39m[0m
+[  24% ] [90m[1msavepack[22m | Storing File: res://assets/hurt.wav.import[39m[0m
+[  26% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/nail.wav-de8891bd6ae03c4586c9cc1065eb0aea.sample[39m[0m
+[  26% ] [90m[1msavepack[22m | Storing File: res://assets/nail.wav.import[39m[0m
+[  28% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/pop.wav-6c96098d372cbccab3a694ff4f0bb6a9.sample[39m[0m
+[  28% ] [90m[1msavepack[22m | Storing File: res://assets/pop.wav.import[39m[0m
+[  30% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/portal.wav-c2d1e575ae74637e5a0cdf49f9f409f4.sample[39m[0m
+[  30% ] [90m[1msavepack[22m | Storing File: res://assets/portal.wav.import[39m[0m
+[  32% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/reload.wav-1816abb503d175899b4dd306c0b000ca.sample[39m[0m
+[  32% ] [90m[1msavepack[22m | Storing File: res://assets/reload.wav.import[39m[0m
+[  34% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/shroom.png-f2138637b44129a944edcb30b2a7570e.ctex[39m[0m
+[  34% ] [90m[1msavepack[22m | Storing File: res://assets/shroom.png.import[39m[0m
+[  36% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/shroom_loader.png-bfef32aa04f13203d1ece4634425f386.ctex[39m[0m
+[  36% ] [90m[1msavepack[22m | Storing File: res://assets/shroom_loader.png.import[39m[0m
+[  38% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/spit.wav-667f9444b44bb7ce4c0dfd9b52ef95c4.sample[39m[0m
+[  38% ] [90m[1msavepack[22m | Storing File: res://assets/spit.wav.import[39m[0m
+[  40% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/swap.wav-95d10c2c8ee22cf5d97c67d63b52022d.sample[39m[0m
+[  40% ] [90m[1msavepack[22m | Storing File: res://assets/swap.wav.import[39m[0m
+[  42% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/wave.wav-752045a828c1ef801ac8112a6df31db4.sample[39m[0m
+[  42% ] [90m[1msavepack[22m | Storing File: res://assets/wave.wav.import[39m[0m
+[  44% ] [90m[1msavepack[22m | Storing File: res://atmosphere_art.gdc[39m[0m
+[  46% ] [90m[1msavepack[22m | Storing File: res://card_drag.gdc[39m[0m
+[  48% ] [90m[1msavepack[22m | Storing File: res://classic_rules.gdc[39m[0m
+[  51% ] [90m[1msavepack[22m | Storing File: res://draw_pile.gdc[39m[0m
+[  53% ] [90m[1msavepack[22m | Storing File: res://enemy_steering.gdc[39m[0m
+[  55% ] [90m[1msavepack[22m | Storing File: res://expedition.gdc[39m[0m
+[  57% ] [90m[1msavepack[22m | Storing File: res://gameplay_state.gdc[39m[0m
+[  59% ] [90m[1msavepack[22m | Storing File: res://game_chrome.gdc[39m[0m
+[  61% ] [90m[1msavepack[22m | Storing File: res://genre_rules.gdc[39m[0m
+[  63% ] [90m[1msavepack[22m | Storing File: res://level_pack.gdc[39m[0m
+[  65% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/loading-logo.svg-f2d335bde4adb2c78789f7f96ec045c9.ctex[39m[0m
+[  65% ] [90m[1msavepack[22m | Storing File: res://loading-logo.svg.import[39m[0m
+[  67% ] [90m[1msavepack[22m | Storing File: res://main.gdc[39m[0m
+[  69% ] [90m[1msavepack[22m | Storing File: res://.godot/exported/133200997/export-3070c538c03ee49b7677ff960a3f5195-main.scn[39m[0m
+[  71% ] [90m[1msavepack[22m | Storing File: res://touch_gesture.gdc[39m[0m
+[  73% ] [90m[1msavepack[22m | Storing File: res://mobile_layout.gdc[39m[0m
+[  75% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/onklav-splash.png-109a9f1023c7fc600d5038c0ecb9c881.ctex[39m[0m
+[  75% ] [90m[1msavepack[22m | Storing File: res://onklav-splash.png.import[39m[0m
+[  77% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/onklav-splash.svg-4bc9303c57d900ef099905258d40951b.ctex[39m[0m
+[  77% ] [90m[1msavepack[22m | Storing File: res://onklav-splash.svg.import[39m[0m
+[  79% ] [90m[1msavepack[22m | Storing File: res://onklav_game.gdc[39m[0m
+[  81% ] [90m[1msavepack[22m | Storing File: res://player_progress.gdc[39m[0m
+[  84% ] [90m[1msavepack[22m | Storing File: res://prop_art.gdc[39m[0m
+[  86% ] [90m[1msavepack[22m | Storing File: res://save_migration.gdc[39m[0m
+[  88% ] [90m[1msavepack[22m | Storing File: res://shroom_hud.gdc[39m[0m
+[  90% ] [90m[1msavepack[22m | Storing File: res://starter_hud.gdc[39m[0m
+[  92% ] [90m[1msavepack[22m | Storing File: res://story_state.gdc[39m[0m
+[  94% ] [90m[1msavepack[22m | Storing File: res://turn_channel.gdc[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://touch_controls.gdc[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://atmosphere_art.gd.remap[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://card_drag.gd.remap[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://classic_rules.gd.remap[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://draw_pile.gd.remap[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://enemy_steering.gd.remap[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://expedition.gd.remap[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://gameplay_state.gd.remap[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://game_chrome.gd.remap[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://genre_rules.gd.remap[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://level_pack.gd.remap[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://main.gd.remap[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://main.tscn.remap[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://touch_gesture.gd.remap[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://mobile_layout.gd.remap[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://onklav_game.gd.remap[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://player_progress.gd.remap[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://prop_art.gd.remap[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://save_migration.gd.remap[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://shroom_hud.gd.remap[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://starter_hud.gd.remap[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://story_state.gd.remap[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://turn_channel.gd.remap[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://touch_controls.gd.remap[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://.godot/global_script_class_cache.cfg[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://assets/shroom.png[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://assets/shroom_loader.png[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://.godot/uid_cache.bin[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://project.binary[39m[0m
+[92m[ DONE ][39m [1msavepack[22m
+[0m

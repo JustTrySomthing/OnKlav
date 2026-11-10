@@ -1,0 +1,104 @@
+    Updating crates.io index
+     Locking 34 packages to latest compatible versions
+ Downgrading aes v0.9.3 -> v0.8.4
+      Adding arbitrary v1.5.0
+ Downgrading block-buffer v0.12.1 -> v0.10.4
+      Adding byteorder v1.5.0
+ Downgrading bzip2 v0.6.1 -> v0.5.2
+ Downgrading cipher v0.5.2 -> v0.4.4
+ Downgrading constant_time_eq v0.6.1 -> v0.3.1
+ Downgrading cpufeatures v0.3.1 -> v0.2.17
+      Adding crc v3.4.0
+      Adding crc-catalog v2.5.0
+      Adding crossbeam-utils v0.8.23
+ Downgrading crypto-common v0.2.2 -> v0.1.7
+      Adding derive_arbitrary v1.5.0
+ Downgrading digest v0.11.3 -> v0.10.7
+      Adding generic-array v0.14.7 (available: v0.14.9)
+      Adding getrandom v0.3.4
+ Downgrading hmac v0.13.0 -> v0.12.1
+ Downgrading inout v0.2.5 -> v0.1.4
+      Adding lzma-rs v0.3.0
+      Adding lzma-sys v0.1.20
+ Downgrading pbkdf2 v0.13.0 -> v0.12.2
+      Adding r-efi v5.3.0
+ Downgrading sha1 v0.11.0 -> v0.10.7
+ Downgrading sherpa-onnx v2.0.1 -> v1.13.8 (available: v2.0.1)
+ Downgrading sherpa-onnx-sys v2.0.1 -> v1.13.8
+      Adding syn v2.0.119
+      Adding version_check v0.9.5
+      Adding wasip2 v1.0.4+wasi-0.2.12
+      Adding wit-bindgen v0.57.1
+      Adding xz2 v0.1.7
+      Adding zeroize_derive v1.5.0
+ Downgrading zip v9.1.3 -> v2.6.1
+ Downgrading zstd v0.14.3 -> v0.13.3
+ Downgrading zstd-safe v8.2.0 -> v7.3.0
+ Downloading crates ...
+  Downloaded block-buffer v0.10.4
+  Downloaded aes v0.8.4
+  Downloaded byteorder v1.5.0
+  Downloaded bzip2 v0.5.2
+  Downloaded zip v2.6.1
+  Downloaded sherpa-onnx-sys v1.13.8
+  Downloaded getrandom v0.3.4
+  Downloaded zstd-safe v7.3.0
+  Downloaded version_check v0.9.5
+  Downloaded inout v0.1.4
+  Downloaded digest v0.10.7
+  Downloaded crc v3.4.0
+  Downloaded constant_time_eq v0.3.1
+  Downloaded zstd v0.13.3
+  Downloaded hmac v0.12.1
+  Downloaded crypto-common v0.1.7
+  Downloaded cpufeatures v0.2.17
+  Downloaded cipher v0.4.4
+  Downloaded sherpa-onnx v1.13.8
+  Downloaded crc-catalog v2.5.0
+  Downloaded xz2 v0.1.7
+  Downloaded sha1 v0.10.7
+  Downloaded generic-array v0.14.7
+  Downloaded zeroize_derive v1.5.0
+  Downloaded lzma-rs v0.3.0
+  Downloaded pbkdf2 v0.12.2
+  Downloaded lzma-sys v0.1.20
+  Downloaded syn v2.0.119
+   Compiling version_check v0.9.5
+   Compiling typenum v1.20.1
+   Compiling syn v2.0.119
+   Compiling lzma-sys v0.1.20
+   Compiling zstd-safe v7.3.0
+   Compiling getrandom v0.3.4
+   Compiling cpufeatures v0.2.17
+   Compiling crc-catalog v2.5.0
+   Compiling flate2 v1.1.10
+   Compiling crc v3.4.0
+   Compiling byteorder v1.5.0
+   Compiling zip v2.6.1
+   Compiling generic-array v0.14.7
+   Compiling zstd v0.13.3
+   Compiling bzip2 v0.5.2
+   Compiling constant_time_eq v0.3.1
+   Compiling lzma-rs v0.3.0
+   Compiling xz2 v0.1.7
+   Compiling crypto-common v0.1.7
+   Compiling block-buffer v0.10.4
+   Compiling inout v0.1.4
+   Compiling cipher v0.4.4
+   Compiling digest v0.10.7
+   Compiling aes v0.8.4
+   Compiling hmac v0.12.1
+   Compiling sha1 v0.10.7
+   Compiling pbkdf2 v0.12.2
+   Compiling zeroize_derive v1.5.0
+   Compiling zeroize v1.9.1
+   Compiling rustls-pki-types v1.15.1
+   Compiling webpki-roots v1.0.11
+   Compiling rustls-webpki v0.103.16
+   Compiling webpki-roots v0.26.11
+   Compiling rustls v0.23.46
+   Compiling ureq v2.12.1
+   Compiling sherpa-onnx-sys v1.13.8
+   Compiling sherpa-onnx v1.13.8
+   Compiling onklav-speech-trial v0.1.0 (/workspace/scratch/d853f89e99b7/onklav/OnKlav/developer/speech-trial)
+    Finished `release` profile [optimized] target(s) in 15.20s

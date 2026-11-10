@@ -1,0 +1,131 @@
+INSTRUMENTATION_STATUS: class=app.onklav.home.MessengerDeviceTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stream=
+app.onklav.home.MessengerDeviceTest:
+INSTRUMENTATION_STATUS: test=draftsFoldersFlagsAndSetupUseRust
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=app.onklav.home.MessengerDeviceTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stack=java.lang.AssertionError: Failed to perform text input.
+Reason: Expected exactly '1' node but found '2' nodes that satisfy: (SetText is defined)
+Nodes found:
+1) Node #25 at (l=24.0, t=142.0, r=244.0, b=170.0)px, Tag: 'mailbox-search'
+ContentDataType = 'AndroidContentDataType(androidAutofillType=1)'
+EditableText = ''
+Focused = 'false'
+ImeAction = 'Default'
+InputText = ''
+IsEditable = 'true'
+Text = '[Search names, numbers or messages]'
+TextSelectionRange = 'TextRange(0, 0)'
+Actions = [ClearTextSubstitution, GetTextLayoutResult, InsertTextAtCursor, OnAutofillText, OnClick, OnLongClick, PasteText, PerformImeAction, RequestFocus, SetSelection, SetText, SetTextSubstitution, ShowTextSubstitution]
+MergeDescendants = 'true'
+Has 6 siblings
+2) Node #76 at (l=24.0, t=68.0, r=296.0, b=132.0)px
+ContentDataType = 'AndroidContentDataType(androidAutofillType=1)'
+EditableText = ''
+Focused = 'false'
+ImeAction = 'Default'
+InputText = ''
+IsEditable = 'true'
+Text = '[Phone Number]'
+TextSelectionRange = 'TextRange(0, 0)'
+Actions = [ClearTextSubstitution, GetTextLayoutResult, InsertTextAtCursor, OnAutofillText, OnClick, OnLongClick, PasteText, PerformImeAction, RequestFocus, SetSelection, SetText, SetTextSubstitution, ShowTextSubstitution]
+MergeDescendants = 'true'
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.TextActionsKt.getNodeAndFocus(TextActions.kt:109)
+	at androidx.compose.ui.test.TextActionsKt.getNodeAndFocus$default(TextActions.kt:103)
+	at androidx.compose.ui.test.TextActionsKt.performTextInput(TextActions.kt:41)
+	at app.onklav.home.MessengerDeviceTest.draftsFoldersFlagsAndSetupUseRust(MessengerDeviceTest.kt:101)
+
+INSTRUMENTATION_STATUS: stream=
+Error in draftsFoldersFlagsAndSetupUseRust(app.onklav.home.MessengerDeviceTest):
+java.lang.AssertionError: Failed to perform text input.
+Reason: Expected exactly '1' node but found '2' nodes that satisfy: (SetText is defined)
+Nodes found:
+1) Node #25 at (l=24.0, t=142.0, r=244.0, b=170.0)px, Tag: 'mailbox-search'
+ContentDataType = 'AndroidContentDataType(androidAutofillType=1)'
+EditableText = ''
+Focused = 'false'
+ImeAction = 'Default'
+InputText = ''
+IsEditable = 'true'
+Text = '[Search names, numbers or messages]'
+TextSelectionRange = 'TextRange(0, 0)'
+Actions = [ClearTextSubstitution, GetTextLayoutResult, InsertTextAtCursor, OnAutofillText, OnClick, OnLongClick, PasteText, PerformImeAction, RequestFocus, SetSelection, SetText, SetTextSubstitution, ShowTextSubstitution]
+MergeDescendants = 'true'
+Has 6 siblings
+2) Node #76 at (l=24.0, t=68.0, r=296.0, b=132.0)px
+ContentDataType = 'AndroidContentDataType(androidAutofillType=1)'
+EditableText = ''
+Focused = 'false'
+ImeAction = 'Default'
+InputText = ''
+IsEditable = 'true'
+Text = '[Phone Number]'
+TextSelectionRange = 'TextRange(0, 0)'
+Actions = [ClearTextSubstitution, GetTextLayoutResult, InsertTextAtCursor, OnAutofillText, OnClick, OnLongClick, PasteText, PerformImeAction, RequestFocus, SetSelection, SetText, SetTextSubstitution, ShowTextSubstitution]
+MergeDescendants = 'true'
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.TextActionsKt.getNodeAndFocus(TextActions.kt:109)
+	at androidx.compose.ui.test.TextActionsKt.getNodeAndFocus$default(TextActions.kt:103)
+	at androidx.compose.ui.test.TextActionsKt.performTextInput(TextActions.kt:41)
+	at app.onklav.home.MessengerDeviceTest.draftsFoldersFlagsAndSetupUseRust(MessengerDeviceTest.kt:101)
+
+INSTRUMENTATION_STATUS: test=draftsFoldersFlagsAndSetupUseRust
+INSTRUMENTATION_STATUS_CODE: -2
+INSTRUMENTATION_RESULT: stream=
+
+Time: 29.72
+There was 1 failure:
+1) draftsFoldersFlagsAndSetupUseRust(app.onklav.home.MessengerDeviceTest)
+java.lang.AssertionError: Failed to perform text input.
+Reason: Expected exactly '1' node but found '2' nodes that satisfy: (SetText is defined)
+Nodes found:
+1) Node #25 at (l=24.0, t=142.0, r=244.0, b=170.0)px, Tag: 'mailbox-search'
+ContentDataType = 'AndroidContentDataType(androidAutofillType=1)'
+EditableText = ''
+Focused = 'false'
+ImeAction = 'Default'
+InputText = ''
+IsEditable = 'true'
+Text = '[Search names, numbers or messages]'
+TextSelectionRange = 'TextRange(0, 0)'
+Actions = [ClearTextSubstitution, GetTextLayoutResult, InsertTextAtCursor, OnAutofillText, OnClick, OnLongClick, PasteText, PerformImeAction, RequestFocus, SetSelection, SetText, SetTextSubstitution, ShowTextSubstitution]
+MergeDescendants = 'true'
+Has 6 siblings
+2) Node #76 at (l=24.0, t=68.0, r=296.0, b=132.0)px
+ContentDataType = 'AndroidContentDataType(androidAutofillType=1)'
+EditableText = ''
+Focused = 'false'
+ImeAction = 'Default'
+InputText = ''
+IsEditable = 'true'
+Text = '[Phone Number]'
+TextSelectionRange = 'TextRange(0, 0)'
+Actions = [ClearTextSubstitution, GetTextLayoutResult, InsertTextAtCursor, OnAutofillText, OnClick, OnLongClick, PasteText, PerformImeAction, RequestFocus, SetSelection, SetText, SetTextSubstitution, ShowTextSubstitution]
+MergeDescendants = 'true'
+
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:178)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+	at androidx.compose.ui.test.TextActionsKt.getNodeAndFocus(TextActions.kt:109)
+	at androidx.compose.ui.test.TextActionsKt.getNodeAndFocus$default(TextActions.kt:103)
+	at androidx.compose.ui.test.TextActionsKt.performTextInput(TextActions.kt:41)
+	at app.onklav.home.MessengerDeviceTest.draftsFoldersFlagsAndSetupUseRust(MessengerDeviceTest.kt:101)
+
+FAILURES!!!
+Tests run: 1,  Failures: 1
+
+
+INSTRUMENTATION_CODE: -1

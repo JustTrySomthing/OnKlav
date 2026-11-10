@@ -1,0 +1,36 @@
+{
+  "build": [
+    "eBooks",
+    "AudioBooks",
+    "Podcasts",
+    "Radio",
+    "Files",
+    "Notes",
+    "RSS",
+    "ReadAloud",
+    "Browser",
+    "YouTube",
+    "Annotation",
+    "Social",
+    "WalkieTalkie"
+  ],
+  "restore_bundles": [],
+  "reuse": [
+    "Counter"
+  ],
+  "unselected_stale": []
+}
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.04s
+eBooks: compiling changed app
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/developer/components)
+   Compiling onklav-ebooks v0.1.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/apps/ebooks)
+    Finished `release` profile [optimized] target(s) in 5.70s
+Traceback (most recent call last):
+  File "/workspace/scratch/75acf774e3b8/recovered/OnKlav/scripts/build_sdk_apps.py", line 95, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/scratch/75acf774e3b8/recovered/OnKlav/scripts/build_sdk_apps.py", line 65, in main
+    validate_update(report['packages'][name],dict(manifest,publisher=report['packages'][name]['manifest']['publisher']),wasm_sha)
+  File "/workspace/scratch/75acf774e3b8/recovered/OnKlav/scripts/sdk_build_plan.py", line 76, in validate_update
+    raise ValueError('Changed app code requires a newer manifest version for installed-app updates')
+ValueError: Changed app code requires a newer manifest version for installed-app updates

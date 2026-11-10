@@ -1,0 +1,8 @@
+test_capabilities_and_widgets_match_production_validation (__main__.PublishedContract.test_capabilities_and_widgets_match_production_validation) ... ok
+test_developer_links_and_required_sources_exist (__main__.PublishedContract.test_developer_links_and_required_sources_exist) ... ok
+test_harness_uses_the_same_locked_runtime_dependency_versions (__main__.PublishedContract.test_harness_uses_the_same_locked_runtime_dependency_versions) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.014s
+
+OK

@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "version": "0.101.35-rc1",
+  "version_code": 214,
+  "apk": "OnKlav-0.101.35-Cats-vs-Dogs.apk",
+  "base": "OnKlav-0.101.34-Cats-vs-Dogs.apk",
+  "changed_entries": [
+    "assets/godot-builtin/index.html",
+    "assets/godot-builtin/index.pck",
+    "AndroidManifest.xml"
+  ],
+  "sha256": "2ed6eaddc18d92a78ae57bba66d5ed91f691910ef414d9518a726137d07ba3f5",
+  "physical_android_test": "pending"
+}

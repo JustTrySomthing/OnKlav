@@ -1,0 +1,5 @@
+{
+  "passed": 4,
+  "runtime": "production Rust app broker",
+  "android_ui_tested": false
+}

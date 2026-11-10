@@ -1,0 +1,10 @@
+{
+  "version": "source after 0.100.15-rc1",
+  "command": ":android:app:lintDebug",
+  "status": "passed",
+  "scope": "application, host-test and instrumented-test sources",
+  "errors": 0,
+  "warnings": 291,
+  "information": 1,
+  "evidence": "docs/evidence/photo-markup/full-lint.log"
+}

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.AudioImportWaveTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-30T02:11:33" hostname="b623e8e1265a" time="2.26">
+  <properties/>
+  <testcase name="cancelledDecodeRemovesPartialOutputAndKeepsSource" classname="app.onklav.home.AudioImportWaveTest" time="1.793"/>
+  <testcase name="downloadedAudioBecomesRealMp3AndReopensWithExpectedDuration" classname="app.onklav.home.AudioImportWaveTest" time="0.281"/>
+  <testcase name="incompletePcmFramesAreRejectedRatherThanSilentlyTruncated" classname="app.onklav.home.AudioImportWaveTest" time="0.032"/>
+  <testcase name="riffBoundaryIncludesTheHeaderAndOversizedExportsFailBeforeProcessing" classname="app.onklav.home.AudioImportWaveTest" time="0.031"/>
+  <testcase name="bufferedWaveImportPreservesAllPcmDepthsAndFloatingHeadroom" classname="app.onklav.home.AudioImportWaveTest" time="0.035"/>
+  <testcase name="abortedExportClosesItsDescriptorWithoutDeletingTheDestination" classname="app.onklav.home.AudioImportWaveTest" time="0.086"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

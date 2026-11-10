@@ -1,0 +1,18 @@
+{
+  "status": "source fix complete",
+  "apk_created": false,
+  "focused_store_checks": 4,
+  "focused_store_result": "passed",
+  "verification": "Actual production ChatStore compiled with Kotlin2.1.20 and source-matched Rust JNI, using real Robolectric Context and disk persistence. Focused harness invokes incomingThread directly; the added full-app notification regression class was not run because restored Camera/Mail/Media3 dependencies are missing.",
+  "integration_inspection": "SMS and MMS both call MessageNotifications.incoming; folder update precedes notification/channel handling.",
+  "limitations": [
+    "No live carrier or physical-phone test",
+    "No new APK",
+    "Full Android module build blocked by missing offline dependencies"
+  ],
+  "files_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/ChatStore.kt": "1ece707e96212a385e4a022dd4e0189b644265f054a31458467d4ab3e1cf8ce2",
+    "android/app/src/main/kotlin/app/onklav/home/MessageNotifications.kt": "ae270aa88aa3c9dccfdcb3d9d5dbf5397d4ab9224e7e2db6919c52f041fb2ba2",
+    "android/app/src/test/kotlin/app/onklav/home/IncomingArchiveTest.kt": "d13f2307a1ebca4c00f8409f962df815837dcaf05fef3cdc9c74e4ce6cbc5407"
+  }
+}

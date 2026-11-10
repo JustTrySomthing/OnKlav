@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.VaultUiTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-30T18:18:10" hostname="e89dc6ba27f3" time="8.251">
+  <properties/>
+  <testcase name="setupMatchesPasswordsAndOffersVisibilityThenFlushesAndLocks" classname="app.onklav.home.VaultUiTest" time="8.251"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

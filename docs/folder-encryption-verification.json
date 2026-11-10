@@ -1,0 +1,60 @@
+{
+  "status": "Requested source implementation complete; focused checks passed; no APK or physical-device acceptance",
+  "date": "2026-10-29",
+  "rust_checks": {
+    "content": 39,
+    "old_backup_restore": 1
+  },
+  "android_unique_checks": [
+    "FolderVaultCryptoTest > authenticatedStreamingRoundTripRejectsWrongPasswordTamperingAndTruncation",
+    "FolderVaultCryptoTest > passwordChangeKeepsPayloadAndRejectsOldPassword",
+    "FolderVaultHostTest > crashRecoverySealsLatestWorkingEditsAndSurvivesMissingRecoveryKey",
+    "FolderVaultHostTest > migratedWriteAndLegacyCopiesAreEncryptedAndRestoredTogether",
+    "FolderVaultHostTest > protectUnlockChangePasswordAndRemoveRetainFilesAndRevokeSelectedLinks",
+    "FolderVaultUiTest > protectionRequiresMatchingPasswordsAndOffersVisibility",
+    "WriteHostTest > documentsAreAtomicPrivateAndRespectRevocation",
+    "WriteMigrationHostTest > conflictingWriteDocumentDoesNotRemoveNotesOrOverwriteEitherOriginal",
+    "WriteMigrationHostTest > startupConvertsLegacyNotesRetiresThePackageAndKeepsLinkedSaves",
+    "WriteUiTest > signedWriterFormatsManagesAndExportsWithoutLosingSelection"
+  ],
+  "android_unique_count": 10,
+  "runtime_bundle_matches_compiled_classes": true,
+  "native_proof": "docs/working-native-verification.json",
+  "code_sha256": {
+    "android/app/build.gradle.kts": "576e7155b4960cf15c8b6132539a97d484161bc62da12fbb6922d25d5d91289b",
+    "android/app/src/main/kotlin/app/onklav/home/AppSdk.kt": "18d7c9221f615e638207025a2df09c74d6601344a0995eb661fb4423d2c61e92",
+    "android/app/src/main/kotlin/app/onklav/home/FileBrowserActivity.kt": "6c788ce6b9852b305e3bd582e96b50038bf0d9136a2e2ddc1bacce1e2718f3ea",
+    "android/app/src/main/kotlin/app/onklav/home/FileSelectionStore.kt": "032f1c51344a2706163dbf5fe6337e303cffcac7a4f69556e359b711660c45a6",
+    "android/app/src/main/kotlin/app/onklav/home/FilesBroker.kt": "b61bcc7bb5b52a7a5bebd31011f3f7f4cd1976415098ee8f2bc4b6abf03001d1",
+    "android/app/src/main/kotlin/app/onklav/home/FolderVaultCrypto.kt": "1ef27d9a9e4947155629ec5b3d70020cb5e9a4ae7f10ba3fbbfbd58a388990f6",
+    "android/app/src/main/kotlin/app/onklav/home/FolderVaultDialog.kt": "e5f1e298bf2cee4e5c6b03da4e57191dbbf903bfecc43646c37ac6e84d9ddedf",
+    "android/app/src/main/kotlin/app/onklav/home/FolderVaultEngine.kt": "1abbf779d91eb3d7407b3eca21c084f7b0380b8ad546ae903fce758d0071745e",
+    "android/app/src/main/kotlin/app/onklav/home/FolderVaultFrames.kt": "5394cb314bbf48c2a575e57bb01d632ab67f37355743ee1443c82dc75ac490ae",
+    "android/app/src/main/kotlin/app/onklav/home/FolderVaultLifecycle.kt": "6c0ec161660a5c60fbc8d2f157ee125aaaf98a7b76d76b75766b5b0f04529b3a",
+    "android/app/src/main/kotlin/app/onklav/home/FolderVaultRecovery.kt": "60cef1f79c83c15139583831a7d293c1f1523d0343c372130221fd2b94392ebe",
+    "android/app/src/main/kotlin/app/onklav/home/MainActivity.kt": "7b567a96b8e4385774b035ca3d45f267bfbbdad306d7f6fd330fd0d3747ce8fd",
+    "android/app/src/main/kotlin/app/onklav/home/SdkAppScreen.kt": "1076fe4f133ac632206273063abe58406f99a5c7faaf38451ca3dc610ec713f9",
+    "android/app/src/main/kotlin/app/onklav/home/WriteDocument.kt": "7a11650e2138362d40d33d3d23e02675402b28a1a814f79f48b4c1fcf9aefe41",
+    "android/app/src/main/kotlin/app/onklav/home/WriteDocumentsDrawer.kt": "59179a518eccdf55644103e2056a015b6145a239a2f23f1ae2cedcec485733d2",
+    "android/app/src/main/kotlin/app/onklav/home/WriteEditor.kt": "a2c6ece0f58ef1eee5b82a728322ea512ec6582ca4e5bd03af8f19238118b579",
+    "android/app/src/main/kotlin/app/onklav/home/WritePendingSaves.kt": "732b6cf4c2664ff48ced2b549d94ea44c621d996877a1b8a50c9f70c3170b62c"
+  },
+  "evidence": [
+    "docs/evidence/folder-encryption/initial-passing-android.log",
+    "docs/evidence/folder-encryption/final-android.log",
+    "docs/evidence/folder-encryption/native-content.log",
+    "docs/evidence/folder-encryption/legacy-restore.log"
+  ],
+  "superseded": "A password clearing CharArray compile error was fixed. The first UI/provider follow-up exposed a host rendering harness timeout and invalid-ID exception-type regression; both were corrected, and the final bounded run passed. Earlier cold checks were superseded.",
+  "limits": [
+    "240 MB including known working/recovery copies; 1000 entries; no nested encrypted folders",
+    "Only user-created OnKlav folders; no built-in/system/connected Android folders",
+    "Private plaintext working tree exists while unlocked; interrupted cleanup is completed on startup; no root/forensic protection claim",
+    "Deferred provider outputs save outside protected folders and are moved in after unlock",
+    "Already exported/imported copies or open external descriptors cannot be recalled",
+    "Installed Android spelling and local writing checks; no comprehensive grammar engine",
+    "Actual phone Keystore, lifecycle/process death, low-space timing and DOCX/PDF reader interoperability remain acceptance checks"
+  ],
+  "apk_built": false,
+  "signing_key": "Original key absent; never generate a replacement"
+}

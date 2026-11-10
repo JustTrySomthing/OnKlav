@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "version": "0.100.36-rc1",
+  "version_code": 145,
+  "package": "app.onklav.home.prototype.rewrite",
+  "variant": "debug",
+  "debuggable": true,
+  "shrinking": false,
+  "bytes": 186557627,
+  "sha256": "7bb75497aee361bac6bbcb7c1e0fcda0ce34d90a73622f96abdeae3470a4d435",
+  "signer_sha256": "6ed975c5fc27d19f6291f751a8bb00fa8a2c2e7d268bffc7b6ddf7e1b1a7a69d",
+  "verification": "docs/apk-verification-debug.json",
+  "build": "docs/evidence/v0.100.36/build-debug.json",
+  "prebuild_checks": "2 new arrow checks passed; 14 Phone/keypad checks retained. Both cover 30 light/dark palette combinations. Full production/test lint zero errors. Tests were not repeated in assembly.",
+  "scope": "Fast owner-requested ARM64 APK; native/SDK/speech/games reused with matching proofs. Physical-device/carrier acceptance remains separate."
+}

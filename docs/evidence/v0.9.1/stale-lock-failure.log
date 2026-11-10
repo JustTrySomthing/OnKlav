@@ -1,0 +1,11 @@
+Booting software device; one attempt, 300-second limit
+Waiting for boot 0 seconds
+List of devices attached
+
+
+
+Traceback (most recent call last):
+  File "/workspace/scratch/39f240a7e5bd/check_device_4core.py", line 39, in <module>
+    if emulator.poll() is not None: raise RuntimeError('Emulator exited; inspect emulator.log')
+                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: Emulator exited; inspect emulator.log

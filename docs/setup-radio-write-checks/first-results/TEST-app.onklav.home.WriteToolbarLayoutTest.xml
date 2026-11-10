@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.WriteToolbarLayoutTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-31T01:34:19" hostname="fa7478106f85" time="5.743">
+  <properties/>
+  <testcase name="textComesFirstParagraphMenusAreIndependentAndHistoryIsStackedOnTheRight" classname="app.onklav.home.WriteToolbarLayoutTest" time="5.743"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

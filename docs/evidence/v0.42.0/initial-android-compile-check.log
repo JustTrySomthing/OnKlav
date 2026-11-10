@@ -1,0 +1,1 @@
+Initial compile failed: ChatActivities.kt used DialogAction(action=...) instead of onClick. Fixed before final compile. See root check-042.log.

@@ -1,0 +1,3 @@
+Baseline reproduced app backup rejection: Invalid saved message flag
+Exception in thread "main" java.lang.AssertionError: Metadata changed during restore
+	at CheckBackups.main(CheckBackups.java:26)

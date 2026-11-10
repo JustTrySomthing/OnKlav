@@ -1,0 +1,14 @@
+{
+  "schema": "onklav.app.v1",
+  "runtime": "rust-wasm-ui.v1",
+  "id": "app.onklav.notes",
+  "name": "Notes",
+  "version": 41,
+  "capabilities": [
+    "storage.private",
+    "clipboard.read",
+    "clipboard.write",
+    "files.export",
+    "share.text"
+  ]
+}

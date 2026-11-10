@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/39f240a7e5bd/project/OnKlav/scripts/verify_apks.py", line 113, in <module>
+    assert data == (ROOT / f"android/shared/src/main/jniLibs/{abi}/libonklav_core.so").read_bytes()
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.BottomPhoneCameraUiTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-11-02T02:55:54" hostname="0df0e3b6efb4" time="9.046">
+  <properties/>
+  <testcase name="smallRootDialerKeepsCallAndTabsAboveTheMainMenu" classname="app.onklav.home.BottomPhoneCameraUiTest" time="8.035"/>
+  <testcase name="phoneIsARootDestinationWithNoBackArrowAndClearCallButtonSpacing" classname="app.onklav.home.BottomPhoneCameraUiTest" time="1.011"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

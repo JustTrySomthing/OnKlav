@@ -1,0 +1,39 @@
+{
+  "status": "passed",
+  "date": "2026-11-03",
+  "new_apk_built": false,
+  "latest_delivered_apk": "0.100.51-rc1/code160",
+  "cats_dogs_checks": 361,
+  "naval_checks": 247,
+  "hockey_checks": 80,
+  "shared_rules_checks": 12,
+  "total_game_checks": 700,
+  "browser_viewports": [
+    [
+      320,
+      560
+    ],
+    [
+      432,
+      740
+    ]
+  ],
+  "real_web_audio_output": true,
+  "master_mute_silence_verified": true,
+  "original_save_and_friend_tape_compatibility": true,
+  "sdk_helpers_unchanged": true,
+  "shared_engine_binary_contract_verified": true,
+  "original_art_audio_sha256": {
+    "games/engine-checks/cat_dog/audio/win.wav": "be07891a3316c684e7c349b47e2a35c3944c2afa94d4d878cc45132a9e6eed35",
+    "games/engine-checks/cat_dog/audio/land.wav": "90558527b5b1d25f407c5bc007e75c681391170be12f37df25af4556b2fbdd72",
+    "games/engine-checks/cat_dog/audio/draw.wav": "c551e3984b821c1211eb4de8c620e4feb938290b0afd91089c9a1e1ecf9f715b",
+    "games/engine-checks/cat_dog/audio/pet_swish.wav": "38c3d0db0bb4cd7c945796d91290565525ae33f1793c1fa7d9d77afe536f5f05",
+    "games/engine-checks/cat_dog/audio/lose.wav": "17fd1c7fd905665ea991cd72e5f7a7ace1a3ff0bf8884c27f6b0f6bfbff9c773",
+    "games/engine-checks/cat_dog/art/dog.webp": "6719aedffca3ae731c2cd6e2962d3b3faae7c4fcddaf1650a0cc3e4e4d0b319f",
+    "games/engine-checks/cat_dog/art/cat.webp": "fe72b9e196b9b5f3ad0dd655f4845e0f2ef7b512b0ee33d01e54e933a903d64c"
+  },
+  "physical_device_or_carrier_tested": false,
+  "evidence": "docs/evidence/cats-dogs-polish",
+  "apk_built": true,
+  "apk_evidence": "docs/apk51-verification.json"
+}

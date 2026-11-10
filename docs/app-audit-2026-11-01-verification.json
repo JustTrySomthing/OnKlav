@@ -1,0 +1,31 @@
+{
+  "date": "2026-11-01",
+  "source_version": "0.100.34-rc1",
+  "code": 143,
+  "checkpoint_version_reviewed": 285,
+  "scope": "source audit, focused host/JNI/tool checks; no product fixes",
+  "application_code_changed": false,
+  "apk_built": false,
+  "functional_findings": [
+    "B01",
+    "B02",
+    "B03",
+    "B04",
+    "B05",
+    "B06"
+  ],
+  "engineering_findings": [
+    "Q01",
+    "Q02"
+  ],
+  "functional_host_passed": 31,
+  "native_functional_passed": 9,
+  "python_tooling_passed": 27,
+  "python_tooling_failed": 3,
+  "passing_cases_total": 67,
+  "defect_observations": 4,
+  "observation_tests_are_not_acceptance_passes": true,
+  "full_android_module": "blocked: missing exact offline dependencies after one cache-supplement retry",
+  "device_provider_tests": false,
+  "review": "docs/APP-DEEP-REVIEW-2026-11-01.md"
+}

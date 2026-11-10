@@ -1,0 +1,39 @@
+{
+  "date": "2026-11-01",
+  "scope": "Phone and desktop refinement",
+  "test_suites": {
+    "app.onklav.home.DesktopFoldersTest": 5,
+    "app.onklav.home.DesktopFoldersUiTest": 6,
+    "app.onklav.home.PhoneSettingsUiTest": 1,
+    "app.onklav.home.PhoneTest": 13,
+    "app.onklav.home.PhoneUiTest": 6,
+    "app.onklav.home.WritePopupContrastTest": 1
+  },
+  "tests_passed": 32,
+  "lint_errors": 0,
+  "lint_warnings": 805,
+  "lint_includes_test_sources": true,
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/AppsDesktop.kt": "5d0d56e08bf48425b13a4370fcdb0a0a302f5feeadd5d403a344caca567ac4f0",
+    "android/app/src/main/kotlin/app/onklav/home/PhoneScreen.kt": "cde3828f6743b974e861efbb4af5fd78382c14ce048698287d0f9fe8b2ed7e17",
+    "android/app/src/main/kotlin/app/onklav/home/PhoneCallUi.kt": "9f053ad0ef4faf862984c8983756490a3df247d76dad2dcdfcdd4a29ef8ba1c5",
+    "android/app/src/main/kotlin/app/onklav/home/PhoneSettingsUi.kt": "737b13562e755f7d1e5637c29eb9387e58c8058f9f79e539330cb094d64f1349"
+  },
+  "build_plan": {
+    "sdk_apps": "reuse",
+    "mobile_rust": "reuse",
+    "neural_speech": "reuse",
+    "games": "reuse"
+  },
+  "apk_built": false,
+  "latest_apk": "0.100.32-rc1/code141, predates these changes",
+  "qualification_pending": [
+    "Physical carrier incoming/outgoing calls",
+    "OEM lock-screen and notification behavior",
+    "Real audio routes and proximity"
+  ],
+  "check_notes": [
+    "Initial settings fixture screenshot targeted an unmeasured host window; fixed to capture the measured dialog window and reran successfully.",
+    "Full lint exposed ResourceType false positives in the prior explicit attribute-array contrast fixture; documented local suppression, reran the contrast test and full lint successfully."
+  ]
+}

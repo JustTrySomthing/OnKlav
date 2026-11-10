@@ -1,0 +1,47 @@
+{
+  "status": "source_complete",
+  "passing_check_count": 21,
+  "passing_checks": [
+    "PhotoCropConsistencyTest.cropContextIncludesAllEditsAndSelectedPixelsMatchExport",
+    "PhotoCropConsistencyTest.extremePerspectiveDoesNotCollapseOrInvertTheVisibleSelection",
+    "PhotoCropConsistencyTest.transformedHandlesUseInverseMappingAndPreserveEveryOtherEdit",
+    "PhotoEffectsTest.hdrAddsStructureWithoutLiftingBlacksOrWashingTonalRange",
+    "PhotoEffectsTest.hdrDoesNotDrawHalosAroundHardEdges",
+    "PhotoEffectsTest.hdrStrengthHasClearlyVisibleRangeWithoutGlobalBrightnessLift",
+    "PhotoEffectsTest.portraitAndScenicHdrStrengthContactSheet",
+    "PhotoEffectsTest.powerfulHdrDoesNotTurnFineGrainIntoTexture",
+    "PhotoEffectsTest.renderedLookContactSheet",
+    "PhotoEffectsTest.sharpeningHasVisibleStrengthWithoutChangingFlatAreasOrAlpha",
+    "PhotoEffectsTest.threeLooksHaveDistinctGradingAndRemovedLooksAreNeutral",
+    "PhotoHdrLocalTest.dramaticLooksHaveDistinctSceneResultsAndRecordMetrics",
+    "PhotoHdrLocalTest.naturalShapesLightLocallyAndStrengthRemainsUseful",
+    "PhotoHdrTest.allLooksPreserveOpacityAndZeroStrengthIsExactWhileBwIsAchromatic",
+    "PhotoHdrTest.naturalKeepsEndpointsAndAvoidsHardEdgeRingingAndFlatNoiseInflation",
+    "PhotoHdrTest.portraitAndLandscapeLooksAreDistinctAndProduceReviewSheets",
+    "PhotoHdrTest.singleStyleStrengthAndSerializationKeepOldDraftsCompatible",
+    "PhotoHdrUiTest.allSixHdrLooksShareIntensityAndUndoRestoresStyleAndSlider",
+    "PhotoLayersTest.cancellationStopsArchiveWithoutChangingOriginal",
+    "PhotoLayersTest.invalidVersionTraversalAndOversizedHistoryAreRejectedBeforeSourceIsWritten",
+    "PhotoLayersTest.portableProjectRetainsOriginalEditsMarksAndBothHistoryDirections"
+  ],
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/PhotoHdr.kt": "492100dcda5c91cc1002d72d50ef97c500197d0b4fd7773506525ef8cfbbd11c",
+    "android/app/src/test/kotlin/app/onklav/home/PhotoHdrLocalTest.kt": "e3a571779ec42b8f4d8c58b8d040f0ded00871bae752472b2353590d713e01ff",
+    "android/app/src/test/kotlin/app/onklav/home/PhotoHdrTest.kt": "1711f891ed32a80a6dee3c732a45fccba86aee95088a60f5dcc1132152813c87",
+    "android/app/src/main/kotlin/app/onklav/home/PhotoEditor.kt": "1c8ad77b0c24a019bdb99e284a6787bb2bb22d3e215d89d76490383ba13e908d",
+    "android/app/src/main/kotlin/app/onklav/home/PhotoOptionsWheel.kt": "6f061dcc400204a5fd8fbca1a63073e0ea8672230dceeef336b88ef27c18bec2"
+  },
+  "runtime_bundle_matches_compiled_classes": true,
+  "reviewed_images": [
+    "portrait-collection.png",
+    "landscape-collection.png",
+    "angkor-max.png",
+    "forest-max.png",
+    "coast-max.png"
+  ],
+  "diagnostics": "First run reached480s after compilation and11 passed checks; those unchanged legacy/crop checks retained. First complete HDR run found weak Natural shadow lift; corrected adaptation/contrast. Second run passed Natural/edge/noise/compatibility but exposed Shiny mean change6.5604<7 on Angkor. Shiny strength/finishing increased; visibility threshold retained. A temporary extra Natural structure boost caused bright-side edge ringing; reverted only that boost while keeping the tested stronger shadow adaptation. Final six renderer checks passed; earlier unchanged UI1/layers3 retained. No broad repeat.",
+  "output": "Single-photo SDR tone mapping, not bracket merging or clipped-detail reconstruction",
+  "phone_performance_verified": false,
+  "new_apk_built": true,
+  "latest_apk": "0.100.21-rc1/code130 includes this rework"
+}

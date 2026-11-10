@@ -1,0 +1,84 @@
+{
+  "status": "source complete",
+  "after_release": "0.100.15-rc1/code124",
+  "apk_built": false,
+  "unique_targeted_checks": 23,
+  "tests": [
+    {
+      "class": "app.onklav.home.PhotoCanvasTest",
+      "tests": 4,
+      "passed": true,
+      "evidence": "docs/evidence/radio-geometry-polish/TEST-app.onklav.home.PhotoCanvasTest.xml"
+    },
+    {
+      "class": "app.onklav.home.PhotoCropConsistencyTest",
+      "tests": 3,
+      "passed": true,
+      "evidence": "docs/evidence/radio-geometry-polish/TEST-app.onklav.home.PhotoCropConsistencyTest.xml"
+    },
+    {
+      "class": "app.onklav.home.PhotoCropUiTest",
+      "tests": 1,
+      "passed": true,
+      "evidence": "docs/evidence/radio-geometry-polish/TEST-app.onklav.home.PhotoCropUiTest.xml"
+    },
+    {
+      "class": "app.onklav.home.PhotoEditorUiTest",
+      "tests": 1,
+      "passed": true,
+      "evidence": "docs/evidence/radio-geometry-polish/TEST-app.onklav.home.PhotoEditorUiTest.xml"
+    },
+    {
+      "class": "app.onklav.home.PhotoGestureTest",
+      "tests": 2,
+      "passed": true,
+      "evidence": "docs/evidence/radio-geometry-polish/TEST-app.onklav.home.PhotoGestureTest.xml"
+    },
+    {
+      "class": "app.onklav.home.RadioSceneRenderTest",
+      "tests": 6,
+      "passed": true,
+      "evidence": "docs/evidence/radio-geometry-polish/TEST-app.onklav.home.RadioSceneRenderTest.xml"
+    },
+    {
+      "class": "app.onklav.home.RadioVisualizerTest",
+      "tests": 6,
+      "passed": true,
+      "evidence": "docs/evidence/radio-geometry-polish/TEST-app.onklav.home.RadioVisualizerTest.xml"
+    }
+  ],
+  "lint": {
+    "version": "source after 0.100.15-rc1",
+    "command": ":android:app:lintDebug",
+    "status": "passed",
+    "scope": "application, host-test and instrumented-test sources",
+    "errors": 0,
+    "warnings": 287,
+    "information": 1,
+    "evidence": "docs/evidence/radio-geometry-polish/full-lint.log"
+  },
+  "compiled_runtime_classes_matched": 3176,
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/PhotoCanvasPreview.kt": "c6084606ae111da18dd5df0bf50d3b0ed88488f53ab21842366b66e2407a06e8",
+    "android/app/src/main/kotlin/app/onklav/home/PhotoEditor.kt": "7923249d5c12484093c209a4dec24cf427726691d924af96b66020888dd3380d",
+    "android/app/src/main/kotlin/app/onklav/home/RadioVisualScene.kt": "c584d88cc9b86a990468842175df93f5d1ab90f172c7b6f13ad03721d4cc2756",
+    "android/app/src/main/kotlin/app/onklav/home/RadioVisualizer.kt": "5d429c9a78f6e086a31997d5cbe308b9a71e08a2037624efbcc1b7a7b78198d5",
+    "android/app/src/test/kotlin/app/onklav/home/PhotoGestureTest.kt": "1123f1def2c47496c72fe0c2f870f4d7d6f4ea166e063df96def434884e241a5",
+    "android/app/src/test/kotlin/app/onklav/home/PhotoArtEffectsTest.kt": "7b99f2ce248866422d7abedef8d9e2a102795eb3363ee7d39b9672abffb5b196",
+    "android/app/src/test/kotlin/app/onklav/home/PhotoCropUiTest.kt": "87440fd94f1afd7a5ed267504a92572ba28528ef4999d986dbf33c7e15436f25",
+    "android/app/src/test/kotlin/app/onklav/home/PhotoEditorUiTest.kt": "e1ee5b0d156ae22a68133ef94ab617ebe173753d42b5929b0e18bb32b8f68b54",
+    "android/app/src/test/kotlin/app/onklav/home/RadioSceneRenderTest.kt": "175aee0d89e7cc1086d4f9e352998ef9a26bbb8204b910c9a8d948b9012365f0",
+    "android/app/src/test/kotlin/app/onklav/home/RadioVisualizerTest.kt": "4d6f2de302be8c14fe1e6e8cd7837a072328024a97105ff9c8dc4e12760ba8a1"
+  },
+  "preserved": [
+    "Radio stream/connection/action recovery",
+    "Strict SDK reply schema and capability boundaries",
+    "Fixed photo crop canvas, save/history/color/effects",
+    "Original signing/native/SDK/package identities"
+  ],
+  "limitations": [
+    "Native host tests are not physical-phone acceptance.",
+    "No actual live station, network handoff, carrier, GPU or sustained performance qualification in this source update."
+  ],
+  "evidence_folder": "docs/evidence/radio-geometry-polish"
+}

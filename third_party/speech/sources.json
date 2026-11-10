@@ -1,0 +1,24 @@
+{
+  "release": "sherpa-onnx1.13.8",
+  "archives": {
+    "third_party/speech/sherpa-onnx-1.13.8.tar.gz": {
+      "sha256": "b0374cc56dbc186d442ae73d5de743bb092470b640c4c50ce7b029044c0c4fa8",
+      "bytes": 11642707
+    },
+    "third_party/speech/espeak-ng-ed530aa113046142eb5115cf2fc9157854d0ffe1.zip": {
+      "sha256": "e4e262cbe34f7fe21f91f1ba3397f2728e1f30eafbae7853f2b753a9ed13f0dd",
+      "bytes": 18011501
+    },
+    "third_party/speech/onnxruntime-LICENSE.txt": {
+      "sha256": "2f07c72751aed99790b8a4869cf2311df85a860b22ded05fa22803587a48922c",
+      "bytes": 1073
+    },
+    "third_party/speech/piper-phonemize-f3ff95afc03640bc1399e113e83361192a2fafb4.zip": {
+      "sha256": "d9cca4e2bdc7d6dd8dffb96a4668283dbd3f77a9c194a3e530c1e8eba9406a5d",
+      "bytes": 9805962
+    }
+  },
+  "pinned_gpl_dependencies": "eSpeak and Piper source archives match SHA-256 values in the release cmake/espeak-ng-for-piper.cmake and cmake/piper-phonemize.cmake",
+  "source_build_executed": false,
+  "notes": "Official release prebuilt C API/ORT runtimes used; Rust JNI built locally. Preserve this source kit, the OnKlav sources/build scripts and license notices with distributed builds under the existing GPL combined-distribution policy."
+}

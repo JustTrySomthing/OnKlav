@@ -1,0 +1,16 @@
+{
+  "device": "Software-only Android 10 x86_64 emulator; no concurrent Gradle build",
+  "host_instrumentation": "fail",
+  "godot_android_startup": "not_run",
+  "handset_performance_acceptance": false,
+  "host_build_apk_sha256": "f2be0a49eaefc0524e70e9f1ba4228071ff8f1f7f4517f80dab3dda6838da9cf",
+  "emulator_resources": "2048 MiB, four virtual CPUs, software rendering/no KVM",
+  "scope": "One bounded UI and Notes regression attempt; no unlock command or concurrent build",
+  "host_installed_apk_sha256": "f2be0a49eaefc0524e70e9f1ba4228071ff8f1f7f4517f80dab3dda6838da9cf",
+  "exact_host_apk_tested": true,
+  "rendered_screens": [
+    "settings-dark",
+    "appearance-preview",
+    "settings-light"
+  ]
+}

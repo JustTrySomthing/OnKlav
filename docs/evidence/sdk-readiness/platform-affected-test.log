@@ -1,0 +1,9 @@
+   Compiling onklav-core v0.8.0 (/workspace/scratch/ed752e8a1957/current/OnKlav/core)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 2.30s
+     Running unittests src/lib.rs (current/OnKlav/core/target/debug/deps/onklav_core-8a579202944a8eae)
+
+running 1 test
+test sdk::tests::voice_component_permissions_binding_trim_commit_and_playback_are_host_only ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 186 filtered out; finished in 0.89s
+

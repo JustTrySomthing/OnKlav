@@ -1,0 +1,21 @@
+[
+  "app.onklav.home.YoutubeMediaRepairsTest.downloadArrowReplacesOnlyHomeAndLeavesOriginalFrameUntouched",
+  "app.onklav.home.YoutubeMediaRepairsTest.segmentedMediaDownloadTracksActualBytesAndFollowsCheckedRedirect",
+  "app.onklav.home.YoutubeMediaRepairsTest.changedEditsUseCompositionAndUneditedClipUsesStandardDecoder",
+  "app.onklav.home.YoutubeMediaRepairsTest.brokenRangeResponseCannotBePublishedAsComplete",
+  "app.onklav.home.YoutubeMediaRepairsTest.currentVideoStreamsRejectAdsStalePagesAndUnsupportedQuality",
+  "app.onklav.home.YoutubeMediaRepairsTest.portraitAndLandscapeDownloadsKeepRequestedShortEdgeAndNeverUpscale",
+  "app.onklav.home.MediaEditingRepairTest.originalYoutubeAudioIsByteExactAndMp3IsAnExplicitDifferentOutput",
+  "app.onklav.home.MediaEditingRepairTest.soundtrackMixPreservesOffsetsFadesAndSilenceWithoutAnyVideoWork",
+  "app.onklav.home.MediaEditingRepairTest.m4aUsesActualAudioTrackAndDurationWithoutOptionalRetrieverFlags",
+  "app.onklav.home.MediaEditingRepairTest.wavDurationIsExactAndTruncationCannotBeImported",
+  "app.onklav.home.YoutubeDownloadUiTest.separateProgressShowsDownloadCompleteWhileConversionContinues",
+  "app.onklav.home.YoutubeDownloadUiTest.disabledDownloadsCanBeEnabledInsideDialogAndReopenAWorkingSession",
+  "app.onklav.home.YoutubeDownloadUiTest.downloadDialogChoosesAudioAndRealVideoSizes",
+  "app.onklav.home.VideoEditorHostTest.compositionCarriesClipsTextSpeedAndMixedSound",
+  "app.onklav.home.VideoEditorHostTest.splitKeepsSourceTimingAndDividesCaptionRanges",
+  "app.onklav.home.VideoEditorHostTest.pcmGainAndFadesUseRealSamplesAndProtectPeaks",
+  "app.onklav.home.VideoEditorHostTest.bundledSignedAppLaunchesAndHonorsRevocation",
+  "app.onklav.home.VideoEditorHostTest.projectStoreRestoresOriginalCopiesAndRejectsUnsafePaths",
+  "app.onklav.home.VideoEditorHostTest.longCaptionsWrapInsideBoundedBitmapTextures"
+]

@@ -1,0 +1,7 @@
+{
+  "status": 200,
+  "source": "https://www.gutenberg.org/ebooks/11.epub3.images",
+  "bytes": 189249,
+  "sha256": "4f81245d31380ac1d6eafb9a321e3691369bc70985736ae4bccf849a4f784036",
+  "scope": "real Gutenberg EPUB retrieved using the environment HTTPS proxy; default Android-client route remains blocked"
+}

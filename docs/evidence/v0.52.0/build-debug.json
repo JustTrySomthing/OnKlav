@@ -1,0 +1,31 @@
+{
+  "plan": {
+    "sdk_apps": "reuse",
+    "mobile_rust": "reuse",
+    "games": "reuse",
+    "android_tests": [
+      "app.onklav.home.WalkiePresentationTest",
+      "app.onklav.home.PhoneNumbersTest",
+      "app.onklav.home.SwipeConversationTest"
+    ],
+    "variant": "debug",
+    "abis": [
+      "arm64-v8a"
+    ]
+  },
+  "phases": [
+    {
+      "phase": "assemble-debug",
+      "seconds": 197.98,
+      "returncode": 0,
+      "log": "docs/evidence/v0.52.0/assemble-debug.log"
+    },
+    {
+      "phase": "verify-debug",
+      "seconds": 3.18,
+      "returncode": 0,
+      "log": "docs/evidence/v0.52.0/verify-debug.log"
+    }
+  ],
+  "status": "passed"
+}

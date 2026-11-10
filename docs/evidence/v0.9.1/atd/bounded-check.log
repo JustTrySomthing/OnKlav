@@ -1,0 +1,65 @@
+Booting software device; one attempt, 300-second limit
+Waiting for boot 0 seconds
+List of devices attached
+
+
+
+Waiting for boot 32 seconds
+List of devices attached
+emulator-5554	offline
+
+
+
+Waiting for boot 65 seconds
+List of devices attached
+emulator-5554	offline
+
+
+
+Waiting for boot 97 seconds
+List of devices attached
+emulator-5554	offline
+
+
+
+Waiting for boot 129 seconds
+List of devices attached
+emulator-5554	offline
+
+
+
+Waiting for boot 161 seconds
+List of devices attached
+emulator-5554	offline
+
+
+
+Waiting for boot 193 seconds
+List of devices attached
+emulator-5554	offline
+
+
+
+Waiting for boot 225 seconds
+List of devices attached
+emulator-5554	offline
+
+
+
+Waiting for boot 257 seconds
+List of devices attached
+emulator-5554	offline
+
+
+
+Waiting for boot 289 seconds
+List of devices attached
+emulator-5554	offline
+
+
+
+Traceback (most recent call last):
+  File "/workspace/scratch/39f240a7e5bd/check_device_atd.py", line 49, in <module>
+    else: raise TimeoutError('Boot limit reached; no automatic restart')
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TimeoutError: Boot limit reached; no automatic restart

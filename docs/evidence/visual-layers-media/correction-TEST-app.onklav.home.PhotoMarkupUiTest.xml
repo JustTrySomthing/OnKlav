@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.PhotoMarkupUiTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-29T00:30:46" hostname="1b65f1fab707" time="8.753">
+  <properties/>
+  <testcase name="switchingToolsAndTabsCommitsTextAndLayersReopensEditableHistory" classname="app.onklav.home.PhotoMarkupUiTest" time="8.753"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.DriveSharingTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-24T04:59:47" hostname="7f28cc248fa2" time="1.971">
+  <properties/>
+  <testcase name="rejectsForeignCredentialDestinationsAndUnsafeIdentities" classname="app.onklav.home.DriveSharingTest" time="1.772"/>
+  <testcase name="confirmedUploadStreamsBytesAndPublishesOnlyAfterUpload" classname="app.onklav.home.DriveSharingTest" time="0.161"/>
+  <testcase name="failedUploadRetainsIdentityAndCleanupRequiresOriginalAccount" classname="app.onklav.home.DriveSharingTest" time="0.038"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

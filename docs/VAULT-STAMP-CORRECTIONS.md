@@ -1,0 +1,9 @@
+# Vault incomplete setup and sharper clone Stamp
+
+A valid Vault file without a recovery bundle now counts as unfinished setup. Launch shows password creation and confirmation, then all three questions/answers. No previous password is requested. Cancel or interruption preserves the old encrypted file until Complete atomically replaces it with a new empty Vault and both key wraps. Complete relocks and asks for the newly chosen password. This deliberately restarts incomplete setup; it does not decrypt or recover old password-only content. Recovery-enabled Vaults cannot use this path. Malformed headers fail closed.
+
+Stamp now exposes a compact Hardness control, default 90%. The central 90% of the radius copies sampled pixels at full strength; only the outer rim feathers into the destination. 100% produces a hard edge. No blur filter, automatic donor search or healing color adjustment is applied. The source remains frozen per stroke, with aligned sampling across strokes, crosshair, Undo/Redo and Layers persistence. Saved older strokes retain their previous 70% hardness to avoid changing reopened projects. Preview/export replay the same hardness value. Heal and Red eye are unchanged.
+
+Regression checks cover unfinished password-only restart without old credentials, Cancel/relaunch, required questions, completed-Vault replacement refusal, recovery/backup/corruption safeguards, sharp checkerboard copying, edge feathering, old Layers compatibility and retouch UI. Host checks do not establish physical-phone touch or independent security acceptance. No APK requested for this change.
+
+Verification: production/test compilation and all 32 focused tests passed (6 recovery, 6 Vault UI, 5 Vault data/crypto, 11 retouch rendering, 4 retouch UI). Existing native inputs and outputs match. No full lint, APK or phone qualification was performed.

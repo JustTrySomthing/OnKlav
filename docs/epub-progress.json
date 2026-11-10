@@ -1,0 +1,40 @@
+{
+  "status": "Chunk29 source complete for bounded offline EPUB2/3 text profile; full Android/device qualification pending",
+  "source_complete": [
+    29
+  ],
+  "preserved_prior_chunks": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28
+  ],
+  "next": 30,
+  "verification": "docs/epub-verification.json",
+  "supported_profile": "Offline text reflow; visual/DRM/fixed-layout limits are explicit",
+  "apk_created": false
+}

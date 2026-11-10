@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.DriveSharingTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-24T14:01:01" hostname="41b9fb140d3c" time="6.718">
+  <properties/>
+  <testcase name="overlappingUploadsCannotOverwriteTheUnfinishedFileRecord" classname="app.onklav.home.DriveSharingTest" time="6.226"/>
+  <testcase name="rejectsForeignCredentialDestinationsAndUnsafeIdentities" classname="app.onklav.home.DriveSharingTest" time="0.061"/>
+  <testcase name="confirmedUploadStreamsBytesAndPublishesOnlyAfterUpload" classname="app.onklav.home.DriveSharingTest" time="0.073"/>
+  <testcase name="cancellingUploadKeepsRecoveryRecordAndNeverPublishesPermission" classname="app.onklav.home.DriveSharingTest" time="0.248"/>
+  <testcase name="nonJsonErrorResponsesPreserveHttpStatusButSuccessfulGarbageFails" classname="app.onklav.home.DriveSharingTest" time="0.077"/>
+  <testcase name="failedUploadRetainsIdentityAndCleanupRequiresOriginalAccount" classname="app.onklav.home.DriveSharingTest" time="0.033"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

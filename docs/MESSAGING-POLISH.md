@@ -1,0 +1,13 @@
+# Messaging results, setup and bulk actions
+
+The user explicitly requested default picture-message support and all required approvals during setup. This supersedes the earlier requirement for a separate carrier-testing opt-in. Actual carrier qualification remains unverified (`MMS_READY=false`); default SMS role and Android permissions are still requested through Android and never granted silently.
+
+`MessageResultReceiver` previously called `goAsync()` before reading `resultCode`. Android clears the receiver's pending result on handoff, so callbacks were processed as code zero even when successful. This affected SMS sent/delivery and MMS sent/download result handling. Capture the result before handoff. The same defect in the Walkie carrier receiver is corrected. Durable receipt handling, multipart identity, settlement of real negative results, no automatic text resend, bounded incoming MMS retries and pending picture retention remain intact. Previously lost callback results cannot safely be guessed or automatically resent.
+
+Picture support defaults on; setup no longer adds a phone-testing enable dialog. Messaging readiness checks READ/SEND/RECEIVE_SMS, RECEIVE_MMS, RECEIVE_WAP_PUSH and READ_PHONE_STATE after default-role approval. Platform setup revision3 includes missing messaging permissions when the role is held and guides telephony devices to messaging setup before finishing. Explicit denied Android approvals remain respected.
+
+Messages and Groups share a wrapping bulk action bar with visible selection guidance, count, Inbox/Archive/Trash destinations, Done and confirmed Block/Unblock. Groups retain Mark unread and permanent deletion from Trash. The Messages bar formerly placed full-width OnKlav buttons into an unweighted Row, hiding later actions. No blanket width change to unrelated controls.
+
+SDK popup content now has 10dp spacing between ungrouped controls. Browser Settings and Tabs retain field/record actions with room between them. Convert category selection uses full-width scrolling rows rather than narrow two-column buttons, and the shared animated alert style.
+
+All 22 focused host cases passed against final compiled runtime classes. Carrier fixture supplies a real Android PendingResult before invoking MessageResultReceiver and waits for its asynchronous commit; it does not claim live ordered carrier delivery. Phone-sized and large-type toolbar and dialog layouts were reviewed. Initial timing/layout harness diagnostics and bounded-run failures are retained in evidence; final selection passed in 388.3 seconds. No broad test or lint repeat. Carrier/handset/Gboard and permission dialog acceptance remain separate. No APK requested; original signer, native and SDK identities retained.

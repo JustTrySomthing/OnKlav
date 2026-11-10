@@ -1,0 +1,6 @@
+readers-final-lint 20 seconds
+readers-final-lint 40 seconds
+readers-final-lint 60 seconds
+readers-final-lint 80 seconds
+readers-final-lint 100 seconds
+Exit 0

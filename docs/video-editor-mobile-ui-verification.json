@@ -1,0 +1,41 @@
+{
+  "status": "source UI complete",
+  "apk_created": false,
+  "unique_screen_checks": 5,
+  "result": "passed",
+  "runtime_class_bytes_matched": 261,
+  "checked_layouts": [
+    "360x740 portrait",
+    "320x480 short phone",
+    "320x640 at160% Compose text",
+    "740x360 landscape"
+  ],
+  "flows": [
+    "group and tool selection",
+    "slider value/reset synchronization",
+    "single audio-track selection",
+    "Done returns to timeline",
+    "fullscreen source fallback",
+    "long status details and close"
+  ],
+  "production_inputs_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt": "a15d2b7e9deadad1b2548567e11e90ab33583c4197dd9137e1f8da0751d5bc5e",
+    "android/app/src/main/kotlin/app/onklav/home/VideoProWorkspace.kt": "2f197b5ae2cf1791be5cb69375e505eb025b57b41cb272d449c8d56c5dba0f67",
+    "android/app/src/main/kotlin/app/onklav/home/VideoEditorLayout.kt": "52ee6f7fb0d3c3f953637252c40ad28709d309b104ae553e4c9a46a80cb83d18",
+    "android/app/src/main/kotlin/app/onklav/home/VideoEditData.kt": "a89137663d3ddd40cdcb7345f8180438de178cbb0b21c5a2cc573053ca617424",
+    "android/app/src/main/kotlin/app/onklav/home/VideoProData.kt": "4e9441e57e6d753fd4bed654c4f8549d7911755f7eacdc3940b9e621eb8011b8",
+    "android/app/src/main/kotlin/app/onklav/home/AudioEditorRefinements.kt": "7a64634f2f0d8f120599fdcb1a9648e5dea194902f643bd7c7fdc83255d8f26e",
+    "android/app/src/test/kotlin/app/onklav/home/VideoEditorUiTest.kt": "d26e82a6e60669e76a5f5d32f0b77bf6f42a7716aa2a051ca83c858c45fefb68"
+  },
+  "harness": "Exact production UI/data/contracts/resources compiled against test-only model/AppSdk/PlayerView/codec placeholders. Callback state assertions exercise the UI with a fixture model; they do not test actual playback, codecs, export or permissions. Test palette is Material3 dark, not a full host-theme qualification.",
+  "limits": [
+    "Full production module build and updated VideoEditorUiTest were not run: current Camera/Mail/Media3 dependency graph is not restored in this workspace.",
+    "No APK created, real movie playback/export or physical S21+/Android15/IME test.",
+    "Initial Compose idle wait was interrupted; bounded manual-frame tests passed. No assertion skips or increased deadlines."
+  ],
+  "retained": [
+    "Recent archived-message resurfacing fix",
+    "Audio Editor fixes and UI",
+    "23 internal apps/shared voices/native/SDK/game artifacts"
+  ]
+}

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.MessagePlaybackRegressionTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-26T17:09:55" hostname="844ebfe47829" time="5.333">
+  <properties/>
+  <testcase name="audioPreparesPlaysAndResumesWithoutInvalidPause" classname="app.onklav.home.MessagePlaybackRegressionTest" time="4.335"/>
+  <testcase name="immediatePreparationCannotBePausedByInitialClipSetup" classname="app.onklav.home.MessagePlaybackRegressionTest" time="0.148"/>
+  <testcase name="rotatingVideoHidesChromeAndRestoresItInPortrait" classname="app.onklav.home.MessagePlaybackRegressionTest" time="0.612"/>
+  <testcase name="videoPreparesPlaysAndResumesWithoutInvalidPause" classname="app.onklav.home.MessagePlaybackRegressionTest" time="0.237"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

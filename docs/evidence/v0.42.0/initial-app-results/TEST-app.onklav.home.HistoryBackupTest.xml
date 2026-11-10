@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.HistoryBackupTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-10-23T03:57:23" hostname="5347b9ab5bea" time="0.3">
+  <properties/>
+  <testcase name="providerFailureAndChangesNeverPublishSuccessOrLeavePrivateHistory" classname="app.onklav.home.HistoryBackupTest" time="0.025"/>
+  <testcase name="comparisonIsBoundToThePreviouslyCheckedArchiveAndRejectsChangedFiles" classname="app.onklav.home.HistoryBackupTest" time="0.032"/>
+  <testcase name="historyReviewUsesExportedZipWithoutSmsAccessOrProviderMutationAndRemovesCopies" classname="app.onklav.home.HistoryBackupTest" time="0.037"/>
+  <testcase name="realProviderToJniToZipPreservesTextAddressesMediaAndUnits" classname="app.onklav.home.HistoryBackupTest" time="0.033"/>
+  <testcase name="failedAndCancelledImportClearCopiesKeepOriginalAndCannotEnableRestore" classname="app.onklav.home.HistoryBackupTest" time="0.033"/>
+  <testcase name="comparisonPermissionChangeAndCancellationInvalidateResultsAndRemoveSnapshots" classname="app.onklav.home.HistoryBackupTest" time="0.046"/>
+  <testcase name="cancellationAndRevocationAreCheckedAgainBeforeDocumentWrite" classname="app.onklav.home.HistoryBackupTest" time="0.037"/>
+  <testcase name="comparisonMatchesSmsAndMmsAcrossChangedIdsWithoutMutatingProviderOrAppMetadata" classname="app.onklav.home.HistoryBackupTest" time="0.054"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

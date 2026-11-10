@@ -1,0 +1,16 @@
+{
+  "schema": "onklav.app.v1",
+  "runtime": "rust-wasm-ui.v1",
+  "id": "app.onklav.videoeditor",
+  "name": "Video Editor",
+  "version": 4,
+  "min_host": 95,
+  "icon": {
+    "symbol": "edit"
+  },
+  "capabilities": [
+    "storage.private",
+    "audio.playback",
+    "audio.record"
+  ]
+}

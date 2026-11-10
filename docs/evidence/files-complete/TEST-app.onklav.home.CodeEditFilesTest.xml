@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.CodeEditFilesTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-11-03T02:37:50" hostname="3bfb1ef11171" time="9.725">
+  <properties/>
+  <testcase name="selectedFileReplacementPreservesOldVersionAndRefusesExternalChange" classname="app.onklav.home.CodeEditFilesTest" time="9.725"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

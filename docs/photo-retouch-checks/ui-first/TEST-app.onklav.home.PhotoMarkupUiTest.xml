@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.PhotoMarkupUiTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-31T17:04:42" hostname="83231ba1f14b" time="29.906">
+  <properties/>
+  <testcase name="penHighlightMoveEraseTextUndoDraftAndExportWorkInOneEditor" classname="app.onklav.home.PhotoMarkupUiTest" time="15.616"/>
+  <testcase name="switchingToolsAndTabsCommitsTextAndLayersReopensEditableHistory" classname="app.onklav.home.PhotoMarkupUiTest" time="3.694"/>
+  <testcase name="saveMenuHasStackedActionsAndDiscardClosesWithoutChangingOriginal" classname="app.onklav.home.PhotoMarkupUiTest" time="3.217"/>
+  <testcase name="landscapeTextToolsStayInlineAndLeaveAVisibleCanvas" classname="app.onklav.home.PhotoMarkupUiTest" time="3.441"/>
+  <testcase name="cancelledStrokeDoesNotCommitAndEraseNeverChangesThePhoto" classname="app.onklav.home.PhotoMarkupUiTest" time="3.938"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

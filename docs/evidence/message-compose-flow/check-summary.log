@@ -1,0 +1,9 @@
+Verified unreleased Linux/ARM64 source checkpoint. Included signed app packages are retained; no SDK or APK release is implied.
+android-host-check: starting (maximum 300s)
+android-host-check: running, 30s elapsed
+android-host-check: running, 60s elapsed
+android-host-check: running, 90s elapsed
+android-host-check: running, 120s elapsed
+android-host-check: passed in 147.6s
+Android runtime bundle matches compiled Kotlin classes.
+Source/host tests complete. APK assembly is a separate build phase.

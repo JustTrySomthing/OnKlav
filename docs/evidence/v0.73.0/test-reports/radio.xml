@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.SdkRadioTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-26T10:25:45" hostname="8f63deef5806" time="2.919">
+  <properties/>
+  <testcase name="signInPagesDowngradesPrivateTargetsAndRevocationFailClosed" classname="app.onklav.home.SdkRadioTest" time="2.814"/>
+  <testcase name="directoryProjectionIsBoundedAndNeverReturnsCredentialsArtworkOrStreamUrls" classname="app.onklav.home.SdkRadioTest" time="0.064"/>
+  <testcase name="redirectResolutionValidatesEveryTargetAndDoesNotAddCredentials" classname="app.onklav.home.SdkRadioTest" time="0.041"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

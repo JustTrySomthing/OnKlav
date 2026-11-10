@@ -1,0 +1,46 @@
+{
+  "status": "source complete; no new APK requested or assembled",
+  "based_on": "0.100.4/code113",
+  "signed_app": {
+    "id": "app.onklav.photo",
+    "name": "Image Editor",
+    "version": 3,
+    "existing_publisher_preserved": true,
+    "all_packages_current": true
+  },
+  "validation": {
+    "focused_suites": [
+      {
+        "class": "PhotoEditorHostTest",
+        "tests": "3",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0"
+      },
+      {
+        "class": "PhotoEditorUiTest",
+        "tests": "1",
+        "failures": "0",
+        "errors": "0",
+        "skipped": "0"
+      }
+    ],
+    "runtime_classes_match": 2829,
+    "visual_review": [
+      "photo-crop.png",
+      "photo-color.png"
+    ],
+    "lint": "not rerun; earlier release full lint remains incomplete",
+    "physical_phone": "not performed"
+  },
+  "features": [
+    "Draggable corner and side crop handles, whole-edge hit areas and selection movement",
+    "Source-relative image bounds, minimum crop size, scrim and thirds grid",
+    "One undo step per drag",
+    "Compact accessible icon actions and four labeled tool tabs",
+    "Ratio, transform, effects and adjustment dialogs",
+    "One slider at a time, remaining height reserved for image",
+    "Existing app identity, permissions, drafts and source files retained"
+  ],
+  "evidence": "docs/evidence/image-editor-polish/android-check.log"
+}

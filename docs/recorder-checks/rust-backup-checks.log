@@ -1,0 +1,32 @@
+   Compiling onklav-core v0.8.0 (/workspace/scratch/c739b0c1372b/current/OnKlav/core)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 5.29s
+     Running unittests src/lib.rs (core/target/debug/deps/onklav_core-8a579202944a8eae)
+
+running 11 tests
+test library_backup::tests::files_invalid_graph_hash_extra_entry_and_cancel_never_publish_records ... ok
+test library_backup::tests::duplicate_maximum_length_names_cannot_poison_the_files_index ... ok
+test library_backup::tests::annotated_images_remain_editable_with_history_and_matching_dimensions ... ok
+test library_backup::tests::conflicting_unpublished_files_and_trashed_parents_fail_before_publication ... ok
+test library_backup::tests::rss_backup_rejects_invalid_sources_and_overfull_merges_without_changing_data ... ok
+test library_backup::tests::reader_backup_uses_one_accessible_draft_keeps_cleared_text_and_repairs_interrupted_pointer ... ok
+test library_backup::tests::files_preserve_tree_bytes_and_existing_ids_exclude_trash_notes_and_packages ... ok
+test library_backup::tests::youtube_backup_merges_history_and_bookmarks_without_copying_viewer_or_accounts ... ok
+test library_backup::tests::rss_backup_restores_offline_state_preserves_current_settings_and_is_repeatable ... ok
+test library_backup::tests::browser_backup_preserves_tabs_settings_and_current_entries_with_atomic_limit_checks ... ok
+test library_backup::tests::media_above_the_old_256_mib_limit_fits_the_existing_512_mib_archive has been running for over 60 seconds
+test library_backup::tests::media_above_the_old_256_mib_limit_fits_the_existing_512_mib_archive ... ok
+
+test result: ok. 11 passed; 0 failed; 0 ignored; 0 measured; 296 filtered out; finished in 88.47s
+
+     Running unittests src/bin/onklav-pack.rs (core/target/debug/deps/onklav_pack-ee23dc4255ec4a6b)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/notes_write_restore.rs (core/target/debug/deps/notes_write_restore-72fd2a02028c55ea)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 1 filtered out; finished in 0.00s
+

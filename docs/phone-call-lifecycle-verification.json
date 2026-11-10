@@ -1,0 +1,56 @@
+{
+  "production_and_test_compilation": "passed",
+  "runtime_bundle_matches_compiled_Kotlin": true,
+  "suites": [
+    {
+      "name": "app.onklav.home.PhoneCallLifecycleTest",
+      "tests": "10",
+      "failures": "0",
+      "errors": "0"
+    },
+    {
+      "name": "app.onklav.home.PhoneTest",
+      "tests": "14",
+      "failures": "0",
+      "errors": "0"
+    },
+    {
+      "name": "app.onklav.shared.NativeBridgeTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0"
+    },
+    {
+      "name": "app.onklav.shared.LauncherLayoutTest",
+      "tests": "8",
+      "failures": "0",
+      "errors": "0"
+    },
+    {
+      "name": "app.onklav.shared.Mp3CodecTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0"
+    },
+    {
+      "name": "app.onklav.shared.ThemePackageTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0"
+    }
+  ],
+  "tests_passed": 41,
+  "new_call_lifecycle_tests": 10,
+  "shared_checks_reused_on_final_run": true,
+  "physical_phone_testing": false,
+  "apk_built": false,
+  "initial_run": "Earlier compile snapshot exposed an early NEW-state automatic launch; final rebuilt source passes that regression and all other selected cases. Initial log retained.",
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/PhoneTelecom.kt": "7801f8654ed3b3e9654435a34046f8161bb7e0863feb98ddaf8cd1c153b63f09",
+    "android/app/src/main/kotlin/app/onklav/home/PhoneCallUi.kt": "36d26d007f403da378d615bd06fabb1b1c898c031824708e149bd3e66dd80f0d",
+    "android/app/src/main/kotlin/app/onklav/home/PhoneScreen.kt": "53033a8ebb974b5888feefd84986d3973bb673eceb99da2f4e3852af0228d273",
+    "android/app/src/main/kotlin/app/onklav/home/MainActivity.kt": "1aa7d06acea90bbbd24c41df08b70aab7600ef692187e6fabddea0652bb5f9ca",
+    "android/app/src/test/kotlin/app/onklav/home/PhoneCallLifecycleTest.kt": "71ddd69b77ca4c21ac595d15bde0f28d5590a358d9e1d9d48c6e3db67fc11cf2",
+    "android/app/src/test/kotlin/app/onklav/home/PhoneTest.kt": "f8bea7a18647d8256fdada39580aa0e63e2915c6b2f111376705c4ccb5fbe958"
+  }
+}

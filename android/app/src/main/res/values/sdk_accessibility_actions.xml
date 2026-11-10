@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="sdk_canvas_zoom_in" type="id" />
+    <item name="sdk_canvas_zoom_out" type="id" />
+    <item name="sdk_canvas_fit" type="id" />
+</resources>

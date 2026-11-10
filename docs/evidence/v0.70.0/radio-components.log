@@ -1,0 +1,10 @@
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/work/OnKlav/developer/components)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.17s
+     Running unittests src/lib.rs (developer/components/target/debug/deps/onklav_ui-b9729a29e05b7074)
+
+running 2 tests
+test radio::tests::radio_selects_exact_mount_without_switching_stream ... ok
+test radio::tests::radio_missing_bad_and_duplicate_mounts_fail_explicitly ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 70 filtered out; finished in 0.00s
+

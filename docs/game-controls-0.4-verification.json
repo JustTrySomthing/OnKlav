@@ -1,0 +1,74 @@
+{
+  "sdk": "0.4.0",
+  "source_host": "0.100.46-rc1/code155",
+  "latest_built_apk": "0.100.45-rc1/code154 predates these changes",
+  "apk_built_this_increment": false,
+  "checks": {
+    "hockey": 80,
+    "shared_rules": 12,
+    "sdk_unit_methods": 10,
+    "current_template_export_sign_verify": [
+      {
+        "template": "touch2d",
+        "bytes": 115126,
+        "signature_verified": true,
+        "minimum_host": 155
+      },
+      {
+        "template": "scene3d",
+        "bytes": 115604,
+        "signature_verified": true,
+        "minimum_host": 155
+      },
+      {
+        "template": "turn",
+        "bytes": 116782,
+        "signature_verified": true,
+        "minimum_host": 155
+      }
+    ],
+    "browser_phone_flows": [
+      {
+        "viewport": [
+          320,
+          560
+        ],
+        "saved_return_resume_new_discard_original_menu": true,
+        "manual_pause_label_and_blink": true,
+        "silent_options_and_centered_help": true,
+        "live_audio_rms": 0.041190689624579786,
+        "javascript_errors": [],
+        "engine_errors": []
+      },
+      {
+        "viewport": [
+          432,
+          740
+        ],
+        "saved_return_resume_new_discard_original_menu": true,
+        "manual_pause_label_and_blink": true,
+        "silent_options_and_centered_help": true,
+        "live_audio_rms": 0.048108030185501936,
+        "javascript_errors": [],
+        "engine_errors": []
+      }
+    ],
+    "android": "All production optimized Kotlin compiled successfully with current Android/Compose dependencies"
+  },
+  "fixes": [
+    "Original catalog start-dialog handoff after explicit New discard; same-game saved return/resume",
+    "Normalized JavaScriptBridge truth values before host startup checks",
+    "Removed legacy sliding modal and stale resume animation callback",
+    "Streamed audio fixes silent web sample playback; default synthesized loop and real mixer controls",
+    "Manual Game paused label and gentle Play pulse; no pause label under temporary options",
+    "Proportional gear and OnKlav Games default splash with studio override"
+  ],
+  "physical_device_tested": false,
+  "limitations": [
+    "No new APK/full packaging this increment; install a subsequent155 APK to test on phone.",
+    "Samsung Android Back gestures, actual speaker output and process-loss recovery still need handset acceptance.",
+    "Friend/network transport is not implemented.",
+    "Headless forced-exit SDK boot reports two ObjectDB instances; browser live/quit flows report zero engine errors.",
+    "Web storage sync remains asynchronous."
+  ]
+}

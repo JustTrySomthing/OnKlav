@@ -1,0 +1,836 @@
+{
+  "total": 13,
+  "completed": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+  ],
+  "next": 13,
+  "tasks": [
+    {
+      "number": 1,
+      "title": "SDK contract and extension system",
+      "status": "complete",
+      "reviewed_this_pass": true
+    },
+    {
+      "number": 2,
+      "title": "Shared UI and app lifecycle",
+      "status": "complete",
+      "reviewed_this_pass": true
+    },
+    {
+      "number": 3,
+      "title": "Storage and file services",
+      "status": "complete",
+      "reviewed_this_pass": true
+    },
+    {
+      "number": 4,
+      "title": "Networking and authentication",
+      "status": "source_complete",
+      "reviewed_this_pass": true,
+      "verification": "docs/services-completion-verification.json"
+    },
+    {
+      "number": 5,
+      "title": "Background jobs and downloads",
+      "status": "source_complete",
+      "reviewed_this_pass": true,
+      "verification": "docs/services-completion-verification.json"
+    },
+    {
+      "number": 6,
+      "title": "Media services",
+      "status": "source_complete",
+      "reviewed_this_pass": true,
+      "verification": "docs/services-completion-verification.json"
+    },
+    {
+      "number": 7,
+      "title": "Time, notifications and calendars",
+      "status": "source_complete_qualification_pending",
+      "reviewed_this_pass": true
+    },
+    {
+      "number": 8,
+      "title": "Scoped device services",
+      "status": "source_complete_qualification_pending",
+      "reviewed_this_pass": true
+    },
+    {
+      "number": 9,
+      "title": "App integration and sharing",
+      "status": "source_complete_qualification_pending",
+      "reviewed_this_pass": true
+    },
+    {
+      "number": 10,
+      "title": "Document and reading libraries",
+      "status": "source_complete_qualification_pending",
+      "reviewed_this_pass": true
+    },
+    {
+      "number": 11,
+      "title": "Maps and location libraries",
+      "status": "source_complete_qualification_pending",
+      "reviewed_this_pass": true
+    },
+    {
+      "number": 12,
+      "title": "Specialized adapters and examples",
+      "status": "source_complete_qualification_pending",
+      "reviewed_this_pass": true
+    },
+    {
+      "number": 13,
+      "title": "Developer tooling and qualification",
+      "status": "partial_qualification_release_deferred",
+      "reviewed_this_pass": true
+    }
+  ],
+  "task1": {
+    "changes": [
+      "Channel-aware capabilities CLI; unknown capabilities fail closed",
+      "Complete native effect inventory and per-capability scope/prerequisites",
+      "Public static-library and reviewed native-extension policy",
+      "Reconciled stale readiness notes without promoting WIP to release"
+    ],
+    "tests_passed": 13,
+    "runtime_changed": false,
+    "native_rebuild_required": false,
+    "apk_built": false,
+    "live_device_discovery_added": false
+  },
+  "task2": {
+    "status": "complete",
+    "completed_changes": [
+      "Foreground-only carrier UI polling and watcher lifecycle",
+      "Stable standalone control identity across earlier insertions",
+      "Accessible themed loading feedback without hiding Back",
+      "Resource-based common host toolbar labels",
+      "Native time picker honors Android 12/24-hour setting; ISO values unchanged",
+      "Public display-only per-node/frame translations with regional/per-attribute fallback and bounded resource handling",
+      "Guest RTL layout and mirrored original Back chevron; no global host redesign",
+      "English, Spanish and Arabic common SDK toolbar/recovery resources",
+      "Explicit saved-data restart policy and at-most-once consumed launch markers; no pending token restoration",
+      "In-memory field draft restoration without placing SDK text buffers in Android saved-instance bundles",
+      "Shared accessible loading/error/empty and bounded pagination helpers",
+      "Catalog, contract and source guidance updated; SDK release/package rebuild deferred"
+    ],
+    "remaining": [],
+    "apk_built": false,
+    "unique_tests_passed": 40,
+    "passing_cases": [
+      "ResponsiveAppearanceHostTest.landscapeSettingsAndAlertActionsStayReachable",
+      "ResponsiveAppearanceHostTest.narrowPhoneLargeTextLight",
+      "ResponsiveAppearanceHostTest.normalPhoneDark",
+      "ResponsiveAppearanceHostTest.tabletContentStaysBounded",
+      "SdkAccessibilityTest.audioControlsLabelTheirPositionAndAllowClipsWithoutDeleteActions",
+      "SdkAccessibilityTest.dateTimeActionsAreDistinctAndStayInsideNarrowLargeTextFields",
+      "SdkAccessibilityTest.drawingToolbarScrollsWithoutCoveringToolsAtLargeText",
+      "SdkAccessibilityTest.insertingAnEarlierControlKeepsExistingControlIdentity",
+      "SdkAccessibilityTest.mediaAndImageRowsAllowMissingOptionalActionsAndTimestamps",
+      "SdkAccessibilityTest.paletteTargetsKeepTheirSizeAndSelectedStateWhenNarrow",
+      "SdkAccessibilityTest.populatedFieldsKeepLabelsErrorsAndKeyboardFocus",
+      "SdkAccessibilityTest.rtlHeaderKeepsBackAndActionsInsideScreen",
+      "SdkAccessibilityTest.sharedDialogsAnnounceTheirPaneAndHeadingAtLargeText",
+      "SdkAccessibilityTest.sharedHeaderExposesLoadingWithoutHidingBack",
+      "SdkAccessibilityTest.sharedStatusAnnouncesUpdates",
+      "SdkAccessibilityTest.togglesExposeOneLabeledCheckboxAndDisabledState",
+      "SdkFieldInputsTest.datePickerReturnsIsoAndCancellationPreservesTheDraft",
+      "SdkFieldInputsTest.supportedInputsChooseTheirNativeKeyboard",
+      "SdkFieldInputsTest.timePickerFollowsUserClockWhileReturningIsoText",
+      "SdkFieldInputsTest.timePickerReturnsStableTwentyFourHourText",
+      "SdkForegroundPollingTest.pollingAndWatchersStopWhileHiddenAndRestartOnce",
+      "SdkLocalizationTest.exactLocaleWinsAndNestedLabelsTranslate",
+      "SdkLocalizationTest.languageFallbackDoesNotChangeDataOrActions",
+      "SdkLocalizationTest.oversizedResourcesFallBackAndRtlFollowsLocale",
+      "SdkSessionIsolationTest.aModelCannotMoveItsDraftOrPendingOperationIntoAnotherApp",
+      "SdkSessionIsolationTest.clearingTheOwnerClosesItsCoreSessionAndReleasesNativeCallbacks",
+      "SdkSessionIsolationTest.pendingLaunchesRejectForeignTokensAndNeverRepeatTheCurrentOperation",
+      "SdkSessionIsolationTest.recreatedOwnerReloadsSavedDataWithoutOldPendingTokens"
+    ],
+    "logs": [
+      "task2-final-checks.log",
+      "task2-ui-correction.log",
+      "task2-finish-final.log",
+      "task2-finish-verification.log",
+      "task2-localization-rust-final.log",
+      "task2-finish-contract.log"
+    ],
+    "test_correction": "Control insertion regression failed once, fixed by moving keyed groups outside positional while-loop composition; affected checks then passed.",
+    "initial_build_blocker": "Temporary Gradle binary-store read failure; fresh process proceeded.",
+    "device_acceptance": false,
+    "source_complete": true,
+    "unique_android_cases_passed": 28,
+    "rust_localization_cases_passed": 2,
+    "contract_tooling_cases_passed": 10,
+    "scope_note": "Source-level shared UI/lifecycle task complete; physical accessibility/IME/process-kill acceptance remains final task13. No blanket translation of all included apps claimed.",
+    "sdk_packages_rebuild_deferred": true,
+    "core_native_source_changed": false
+  },
+  "task3": {
+    "status": "complete",
+    "completed_changes": [
+      "Production broker app-private collections with scalar equality indexes and bounded pages",
+      "Single-collection atomic batches with expected-revision conflicts and explicit schema versions",
+      "Bounded usage reporting; quota, corruption and symlink protection",
+      "Grant/isolation/retained-data/removal coverage",
+      "Public Rust helpers, machine inventory and source guidance",
+      "Isolated working JNI build mode; released mobile native/provenance preserved",
+      "Private file handles with bounded chunks, checksum finish, immutable committed files and resumable staging",
+      "Native user-selected imports/exports with live authorization and explicit failure feedback",
+      "FIFO disposable cache eviction; saved files excluded from automatic eviction",
+      "Host-owned Settings storage controls; quota reductions preserve saved files/documents",
+      "Scoped collection backup/restore through private handles with schema/revision protection",
+      "Bounded native/provider loops and typed SDK chunk helpers"
+    ],
+    "remaining": [],
+    "collection_cases_included": 7,
+    "android_host_cases_passed": 5,
+    "record_migration_cases_passed": 3,
+    "contract_tooling_cases_passed": 10,
+    "native_source_proof": "docs/working-native-verification.json",
+    "device_acceptance": false,
+    "apk_built": false,
+    "sdk_release_built": false,
+    "logs": [
+      "docs/evidence/v0.70.0/task3-sdk-regressions.log",
+      "docs/evidence/v0.70.0/task3-broker-checks.log",
+      "docs/evidence/v0.70.0/task3-native-final.log",
+      "docs/evidence/v0.70.0/task3-android-storage.log",
+      "docs/evidence/v0.70.0/task3-record-migrations.log",
+      "docs/evidence/v0.70.0/task3-contract.log"
+    ],
+    "preceding_sdk_cases_before_file_services": 48,
+    "source_complete": true,
+    "current_core_cases_passed": 23,
+    "current_core_cases": [
+      "content::tests::text_api_never_follows_a_link_out_of_content_storage",
+      "history_journal::tests::symlink_storage_fails_closed",
+      "history_recovery::tests::corrupt_config_and_symlink_storage_fail_closed",
+      "sdk::tests::actual_notes_guest_create_reload_search_delete_and_scoped_storage",
+      "sdk::tests::collections_broker_grants_isolation_and_removal",
+      "sdk::tests::denied_private_storage_never_creates_app_documents",
+      "sdk::tests::storage_native_transfer_tokens_and_revocation_are_live",
+      "sdk_collections::tests::collections_clear_and_consistent_pages_reject_old_revisions",
+      "sdk_collections::tests::collections_failed_batch_keeps_all_old_rows",
+      "sdk_collections::tests::collections_paging_and_schema_upgrades_are_explicit",
+      "sdk_collections::tests::collections_paths_corruption_and_quotas_fail_closed",
+      "sdk_collections::tests::collections_symlink_cannot_read_or_overwrite_another_app",
+      "sdk_collections::tests::collections_transaction_query_reopen_and_conflicts",
+      "sdk_collections::tests::storage_collection_backup_restore_is_scoped_and_revision_checked",
+      "sdk_collections::tests::storage_invalid_backup_preserves_collection",
+      "sdk_storage::tests::storage_cache_eviction_and_lower_limits_preserve_saved_files",
+      "sdk_storage::tests::storage_foreign_handles_corruption_and_symlinks_are_rejected",
+      "sdk_storage::tests::storage_lower_saved_quota_and_unknown_admin_effect_never_delete_data",
+      "sdk_storage::tests::storage_reopen_resumes_staging_without_replaying_appends",
+      "sdk_storage::tests::storage_staging_retry_checksum_and_immutable_commit",
+      "sdk_storage::tests::storage_streams_a_file_larger_than_the_guest_memory_budget",
+      "sdk_storage::tests::storage_symlinked_directory_never_touches_external_files",
+      "tests::storage_lifecycle_and_search"
+    ],
+    "current_android_host_cases_passed": 8,
+    "current_android_cases": [
+      "SdkAccessibilityTest.storageControlsStayReachableAndApplyOnlyAfterATap",
+      "SdkBootstrapTest.apkUpgradeUpdatesExistingBundledPackageAndKeepsPermissionsAndData",
+      "SdkBootstrapTest.setupRecoversWhenRegistryIsMissingWithinSameProcess",
+      "SdkBootstrapTest.warmSetupPreservesRemovalAndLivePermissionRevocation",
+      "SdkCollectionsTest.signedGuestCommitsThroughTheAndroidJniBroker",
+      "SdkCollectionsTest.ungrantedStorageDoesNotCreateCollectionFiles",
+      "SdkStorageServicesTest.cacheClearAndInvalidQuotaKeepExistingCollectionData",
+      "SdkStorageServicesTest.hostQuotaControlsDoNotGrantGuestPermissions"
+    ],
+    "ui_crate_cases_passed": 28,
+    "scope_note": "Source storage task complete. Real document-provider/OEM/device and sustained workload qualification remains task13. Media playback integration is task6; network download/background work is task5.",
+    "current_logs": [
+      "docs/evidence/v0.70.0/task3-files-core.log",
+      "docs/evidence/v0.70.0/task3-files-collection-regressions.log",
+      "docs/evidence/v0.70.0/task3-files-ui-crate.log",
+      "docs/evidence/v0.70.0/task3-files-chunk-helper.log",
+      "docs/evidence/v0.70.0/task3-files-contract.log",
+      "docs/evidence/v0.70.0/task3-storage-final-android.log",
+      "docs/evidence/v0.70.0/task3-files-native.log"
+    ]
+  },
+  "task4": {
+    "status": "source_complete",
+    "networking_stage_complete": true,
+    "authentication_stage_complete": true,
+    "completed_changes": [
+      "Signed canonical exact-origin manifest policy and new revocable network.http capability",
+      "Bounded HTTPS methods/text/JSON helpers with credential/cookie/header restrictions",
+      "Platform TLS/public DNS checks, size/time/concurrency/rate limits and one-shot mutating bodies",
+      "Registered-before-final-authorization cancellation guard; close/update/revoke cancel calls",
+      "Declared HTTPS services shown during install/update and permission review",
+      "Developer CLI --origin with pre-copy validation and signed policy support",
+      "Source-matched Linux/ARM64 JNI; released main JNI/provenance unchanged",
+      "Signed account-provider metadata validated in Rust and developer preflight; install/update permission review tested; no account access granted",
+      "System-browser PKCE connection with exact one-use callback/state and bounded cancellation/timeout",
+      "Host-only encrypted app/publisher account handles, signed-policy invalidation and cleanup on removal/revocation"
+    ],
+    "remaining": [
+      "Physical browser/provider/Keystore refresh/revocation qualification"
+    ],
+    "current_core_cases_passed": 4,
+    "current_core_cases": [
+      "sdk::tests::http_manifest_and_live_authorization_bind_signed_origins",
+      "sdk_http::tests::http_requests_cannot_escape_origins_or_smuggle_credentials",
+      "sdk_http::tests::http_response_bounds_exclude_cookies_and_unbounded_text",
+      "sdk_http::tests::http_signed_origin_scope_rejects_paths_credentials_ports_and_wildcards"
+    ],
+    "android_host_cases_passed": 12,
+    "android_host_cases": [
+      "SdkBootstrapTest.apkUpgradeUpdatesExistingBundledPackageAndKeepsPermissionsAndData",
+      "SdkBootstrapTest.setupRecoversWhenRegistryIsMissingWithinSameProcess",
+      "SdkBootstrapTest.warmSetupPreservesRemovalAndLivePermissionRevocation",
+      "SdkFeedServiceTest.hostileXmlAndNonPublicSourcesAreRejected",
+      "SdkFeedServiceTest.rssAndAtomKeepPlainTextAndResolveArticleLinks",
+      "SdkHttpBridgeTest.declaringHttpAccessDoesNotGrantIt",
+      "SdkHttpBridgeTest.signedOriginsReachJniAuthorizationAndHostPacketTamperingCannotWidenThem",
+      "SdkHttpServiceTest.boundedResponsesKeepHttpErrorsButStripCookiesAndCrossOriginRedirects",
+      "SdkHttpServiceTest.oversizedResponsesAndAuthorizationChangesNeverReturnPayloads",
+      "SdkHttpServiceTest.perAppConcurrentRequestsAreBounded",
+      "SdkHttpServiceTest.requestPolicyRejectsOtherOriginsCredentialsAndUnsafeUrls",
+      "SdkHttpServiceTest.transportFailuresDoNotExposeRequestUrlsOrProviderMessages"
+    ],
+    "contract_tooling_cases_passed": 13,
+    "ui_crate_cases_passed": 28,
+    "device_acceptance": false,
+    "live_provider_tls_tested": false,
+    "apk_built": false,
+    "sdk_release_built": false,
+    "logs": [
+      "docs/evidence/v0.70.0/task4-http-broker.log",
+      "docs/evidence/v0.70.0/task4-http-native.log",
+      "docs/evidence/v0.70.0/task4-http-android.log",
+      "docs/evidence/v0.70.0/task4-http-final-guard.log",
+      "docs/evidence/v0.70.0/task4-http-contract-final.log",
+      "docs/evidence/v0.70.0/task4-http-ui-crate.log"
+    ],
+    "source_subtasks_complete": [
+      2,
+      3,
+      4,
+      5,
+      6
+    ],
+    "latest_verification": "docs/services-completion-verification.json"
+  },
+  "task10": {
+    "status": "in_progress",
+    "completed_changes": [
+      "Bounded UTF-8 text pagination and revision-bound bookmark/resume helpers",
+      "Bounded literal text search with UTF-8 result ranges and continuation"
+    ],
+    "remaining": [
+      "EPUB parsing/rendering and TOC",
+      "Native PDF viewing/search/selection",
+      "Font/reflow/theme controls and format qualification"
+    ],
+    "source_complete": false,
+    "tests_passed": 2
+  },
+  "task12": {
+    "status": "in_progress",
+    "completed_changes": [
+      "Bounded M3U/PLS radio metadata parser; rejects HLS and unsafe URL syntax",
+      "Permission-free format-helpers example verified through a disposable signed package and production Rust broker"
+    ],
+    "remaining": [
+      "Podcast enclosures/episode adapters",
+      "Weather adapter/components and provider qualification",
+      "Calendar/reminder/email/maps reference apps after their native services exist"
+    ],
+    "source_complete": false,
+    "playlist_tests_passed": 2,
+    "example_scenarios_passed": 1
+  },
+  "task13": {
+    "status": "in_progress",
+    "completed_changes": [
+      "Secret preview denial before compilation",
+      "Source-verified --working native cache restore and Android checks; released proofs remain independent",
+      "Exact source-set and Linux/ARM64 hash guards with negative tests"
+    ],
+    "remaining": [
+      "Full release SDK/package refresh when authorized",
+      "Physical device, two-phone carrier/account acceptance",
+      "Measured sustained performance and independent security qualification"
+    ],
+    "source_complete": false,
+    "latest_pass": {
+      "core": 215,
+      "android": 343,
+      "ui": 34,
+      "developer": 72,
+      "build_tools": 23,
+      "lint_errors": 0,
+      "lint_warnings": 147,
+      "hardware_acceptance": false
+    }
+  },
+  "task7": {
+    "status": "in_progress",
+    "completed_changes": [
+      "Read-only permission-free host clock/timezone with date/DST, locale/week start and user12/24-hour preference; signed public-helper JNI fixture passed",
+      "Bounded mixed UTC/all-day DATE ICS import/export with atomic validation and exclusive end dates",
+      "Host-themed chronological agenda and event-editor reducer, draft retention, validation and centered discard confirmation",
+      "Signed public-component fixture passed explicit collection-save/reload, invalid/cancel, conflict and permission checks",
+      "Bounded Android timezone recurrence with gap/overlap/civil-day handling, valid-date count and visible truncation",
+      "Absolute inexact reminders with app-owned pending/status, notification/channel feedback and reboot/clock repair"
+    ],
+    "remaining": [
+      "Snooze/repeat actions and explicit missed-event policy",
+      "Scoped Android calendar integration and named-timezone editor integration",
+      "Advanced ICS RRULE/BYDAY/EXDATE import beyond bounded recurrence API"
+    ],
+    "source_complete": false,
+    "tests_passed": null,
+    "clock_verification": "docs/clock-verification.json",
+    "calendar_verification": "docs/calendar-components-verification.json",
+    "recurrence_verification": "docs/recurrence-reminders-verification.json",
+    "testing_note": "Use exact selection counts in clock/calendar/recurrence verification reports; overlapping Rust selections are not summed."
+  },
+  "remaining_inventory": "docs/sdk-remaining-work.json",
+  "continuation_requires_confirmation": false,
+  "latest_review": "docs/game-entry-verification.json",
+  "implementation_chunks": "docs/implementation-chunks.json",
+  "recovery_state": {
+    "current": "0.100.2offline podcast and handoff source verified; latest delivered APK remains0.100.1",
+    "next": "Build an updated APK when requested. No further broad/repeated checks without new changes or failures.",
+    "latest_review": "docs/offline-handoff-verification.json"
+  },
+  "task5": {
+    "status": "source_complete",
+    "verification": "docs/services-completion-verification.json",
+    "completed_changes": [
+      "Owned host GET/HEAD jobs with durable status/cancel, network/battery/charging constraints, reboot repair and bounded retries",
+      "Validated ranged binary downloads with idempotent private staging, optional SHA256 and immutable publication"
+    ],
+    "remaining": [
+      "Real OEM scheduling/slow-network/process-death/battery qualification"
+    ]
+  },
+  "task6": {
+    "status": "source_complete",
+    "verification": "docs/services-completion-verification.json",
+    "completed_changes": [
+      "Shared local-file/progressive HTTPS player and themed controls",
+      "Queue/seek/speed/resume, focus/noisy-output handling, foreground media session and lock-screen controls"
+    ],
+    "remaining": [
+      "Physical codec/screen-off/headset/lock-screen qualification"
+    ],
+    "scope": "Progressive Android-supported audio/video; HLS/DASH are not implemented"
+  },
+  "source_complete_groups": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "current_source_verification": "docs/youtube-download-preview-verification.json",
+  "historical_entries_note": "Individual task reviews below are historical; current source status is docs/sdk-remaining-work.json and docs/implementation-chunks.json. Do not redo completed bounded source work.",
+  "current_integration_verification": {
+    "version": "0.100.2-offline-handoff",
+    "version_code": 111,
+    "status": "Source implemented and host-verified; not included in delivered0.100.1APK",
+    "implementation": "docs/OFFLINE-HANDOFF.md",
+    "prior_apk": "0.100.1contains initial default-route/NAT64 recovery, not these additional changes",
+    "tests": {
+      "OfflineHandoffTest": 4,
+      "PodcastDownloadsTest": 2,
+      "NetworkDownloadRecoveryTest": 3,
+      "SdkMediaLifecycleTest": 4,
+      "SdkMediaSourceTest": 9
+    },
+    "focused_tests": 22,
+    "lint": {
+      "errors": 0,
+      "warnings": 248,
+      "information": 1
+    },
+    "runtime_classes_checked": 2899,
+    "runtime_matches_compilation": true,
+    "native_sources_unchanged": true,
+    "included_signed_apps_current": 25,
+    "apk_assembled": false,
+    "apk_requested": false,
+    "physical_wifi_mobile_handoff_tested": false,
+    "device_decoder_tested": false,
+    "verified_behaviors": [
+      "Offline saved-show listing and direct local descriptor byte reads without a feed request",
+      "Local playback source path, no network restart for local files and stop on permission revocation",
+      "Streaming handoff retains seek/position and never resumes paused playback",
+      "Lost/superseded route callbacks discarded; reconnect retries bounded to one after handoff failure",
+      "Existing incomplete-download and media source/lifecycle guards preserved"
+    ],
+    "evidence": [
+      "docs/evidence/v0.100.2/offline-handoff-checks.log"
+    ],
+    "remaining_acceptance": [
+      "Actual Samsung/carrier Wi-Fi-to-mobile handoff",
+      "Native phone decoding of the reported saved episode; its error/file was not supplied"
+    ]
+  },
+  "radio_visualizer_refinement": {
+    "status": "source complete; 16 focused checks and full lint passed; phone acceptance pending",
+    "verification": "docs/radio-refinement-verification.json",
+    "apk_built": false
+  },
+  "file_ui_and_reading_polish": {
+    "status": "source complete; 15 focused app checks and full lint passed; phone acceptance pending",
+    "verification": "docs/files-reading-polish-verification.json",
+    "apk_built": false
+  },
+  "video_editor_refinements": {
+    "status": "source complete; 14 production backend and 9 isolated UI checks passed; no new APK; phone acceptance pending",
+    "verification": "docs/video-editor-refinements-verification.json",
+    "apk_built": false
+  },
+  "incoming_inbox_and_deep_review": {
+    "receiving_fix": "source complete; 21 unique host regression checks passed",
+    "audit": "complete; seven functional findings open; five defect observations; lint timed out at 300 seconds",
+    "report": "docs/APP-DEEP-REVIEW-2026-10-30.md",
+    "apk_built": false
+  },
+  "vault": {
+    "status": "source complete, focused checks passed; physical/security acceptance pending",
+    "report": "docs/VAULT.md",
+    "verification": "docs/vault-verification.json",
+    "new_apk_built": false
+  },
+  "recorders": {
+    "status": "source complete; focused checks passed; physical capture acceptance pending",
+    "report": "docs/RECORDERS.md",
+    "verification": "docs/recorder-verification.json",
+    "new_apk_built": false
+  },
+  "docu_view": {
+    "status": "source implemented; dependency DEX/resource merge passed",
+    "verification": "docs/docu-view-verification.json",
+    "host_checks_passed": 19,
+    "apk_built": false,
+    "phone_validation_pending": true
+  },
+  "apk_0_100_27": {
+    "status": "built and verified",
+    "version_code": 136,
+    "verification": "docs/apk27-verification.json",
+    "phone_acceptance_pending": true
+  },
+  "utility_icons": {
+    "status": "source updated and vector render inspected",
+    "report": "docs/UTILITY-ICON-REFRESH.json",
+    "apk_built": false
+  },
+  "setup_power_radio_write_refinements": {
+    "status": "source complete;35 unique focused checks passed including live deadline regression; included in APK0.100.28",
+    "report": "docs/SETUP-POWER-RADIO-WRITE-REFINEMENTS.md",
+    "apk_built": true,
+    "physical_radio_acceptance_pending": true
+  },
+  "apk_0_100_28": {
+    "status": "built and verified",
+    "version_code": 137,
+    "verification": "docs/apk28-verification.json",
+    "phone_acceptance_pending": true
+  },
+  "vault_recovery": {
+    "status": "source complete;15 focused host checks passed",
+    "report": "docs/VAULT-RECOVERY.md",
+    "verification": "docs/vault-recovery-verification.json",
+    "apk_built": false,
+    "phone_and_independent_security_acceptance_pending": true
+  },
+  "icon_and_name_refinements": {
+    "status": "source complete; native vector renders visually inspected and identity/storage checks passed",
+    "report": "docs/ICON-AND-NAME-REFINEMENTS.json",
+    "apk_built": false,
+    "android_compile_performed": false
+  },
+  "video_phone_workflow": {
+    "status": "implemented",
+    "production_compilation": "passed",
+    "unique_focused_checks_passed": 28,
+    "test_suites": {
+      "VideoProTest": 8,
+      "VideoRefinementsTest": 11,
+      "VideoPhoneWorkflowTest": 8,
+      "VideoEditorUiTest": 1
+    },
+    "production_hashes_match_final_compilation": true,
+    "production_sha256": {
+      "android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt": "1cf796ff2b556f79bffc8bee0e91d59617d76741d4b89923b7304770e310cb24",
+      "android/app/src/main/kotlin/app/onklav/home/VideoEditorLayout.kt": "940c8ae4e256a32884893a04a0cd3ac0e71150d65bec1ceeb84c2c1c6ecc9f8e",
+      "android/app/src/main/kotlin/app/onklav/home/VideoProWorkspace.kt": "d377b0fc50744e3cc7b93be53f3bb0f4cef696403aa7a68b3e2b999722d5cc49",
+      "android/app/src/main/kotlin/app/onklav/home/VideoPhonePanels.kt": "3688b17cf6747ca88668fb60be4cc0c4a028c15869083f63815b7f168d5832b3",
+      "android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt": "2baeeeb9053f41e439fd2c286901f739ec9c93b0fe8b852b6b77a16fce80cb8a"
+    },
+    "scope": "Android Kotlin/Compose UI and model safeguards; no native or SDK source changes",
+    "apk_built": false,
+    "limitations": [
+      "Host Compose renders use generated photo fixture, not physical-phone footage",
+      "Physical-phone keyboard, playback, export, audio/video and performance qualification remains pending"
+    ],
+    "evidence": "docs/video-phone-checks and docs/evidence/video-phone"
+  },
+  "video_ui_polish": {
+    "status": "implemented",
+    "production_and_test_compilation": "passed",
+    "focused_ui_checks_passed": 10,
+    "test_suites": {
+      "app.onklav.home.VideoPhoneWorkflowTest": {
+        "tests": 9,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "app.onklav.home.VideoEditorUiTest": {
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "source_sha256": {
+      "android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt": "8f30e3ecfb81b8a6c7c44458d0c51cb0c29add1917db7f43e4350f9042cd92d1",
+      "android/app/src/main/kotlin/app/onklav/home/VideoEditorLayout.kt": "b2c6e4b938e5f21302e38dfe3c5599b0653c841c5e0eef3ff92bc309ad7605c5",
+      "android/app/src/main/kotlin/app/onklav/home/VideoProWorkspace.kt": "34af98fa77f6e53ff5b58c28149267c8f1af8a6eca79bccdcc90073793198a75",
+      "android/app/src/main/kotlin/app/onklav/home/VideoPhonePanels.kt": "81b22d00189d5c6e5e88f33ce07953df502111b909a6c38e1cfcb85f5475e22d"
+    },
+    "source_unchanged_during_verification": true,
+    "native_sdk_or_media_engine_changed": false,
+    "apk_built": false,
+    "physical_phone_qualification": "pending",
+    "evidence": "docs/video-ui-polish-checks and docs/evidence/video-phone",
+    "render_fixture": "generated blue photo; not physical-phone footage"
+  },
+  "photo_retouch": {
+    "status": "implemented",
+    "production_compilation": "passed",
+    "unique_focused_checks_passed": 23,
+    "checks": {
+      "app.onklav.home.PhotoLayersTest.portableProjectRetainsOriginalEditsMarksAndBothHistoryDirections": "ui-first",
+      "app.onklav.home.PhotoLayersTest.cancellationStopsArchiveWithoutChangingOriginal": "ui-first",
+      "app.onklav.home.PhotoLayersTest.invalidVersionTraversalAndOversizedHistoryAreRejectedBeforeSourceIsWritten": "ui-first",
+      "app.onklav.home.PhotoMarkupTest.marksStayOnFixedCanvasAfterImageGeometryAndNeverChangeSourcePixels": "ui-first",
+      "app.onklav.home.PhotoMarkupTest.temporaryCollapsedViewportDuringKeyboardResizeRemainsFinite": "ui-first",
+      "app.onklav.home.PhotoMarkupTest.croppedContextIncludesMarksWithExactSelectedExportPixels": "ui-first",
+      "app.onklav.home.PhotoMarkupTest.fixedCanvasProjectionAndSegmentHitIgnoreImageGeometry": "ui-first",
+      "app.onklav.home.PhotoMarkupTest.legacyDraftsAndMarksRoundTripWithValidatedFiniteBounds": "ui-first",
+      "app.onklav.home.PhotoMarkupTest.highlightIsTranslucentAndSourceNormalizedMarksScaleWithExport": "ui-first",
+      "app.onklav.home.PhotoRetouchTest.correctionsRoundTripWithLayersAndLegacyEditsStillLoad": "ui-first",
+      "app.onklav.home.PhotoRetouchTest.retouchCoordinatesFollowRotationCropZoomAndPan": "ui-first",
+      "app.onklav.home.PhotoRetouchTest.healingReplacesDarkSpotWithNearbyTextureWithoutChangingOutsideOrAlpha": "ui-first",
+      "app.onklav.home.PhotoRetouchTest.smallAndTransparentImagesAndEdgesAreSafe": "ui-first",
+      "app.onklav.home.PhotoRetouchTest.invalidAndOversizedBrushWorkIsRejected": "ui-first",
+      "app.onklav.home.PhotoRetouchTest.previewAndExportUseSameNormalizedCorrectionAndNeverChangeSource": "ui-first",
+      "app.onklav.home.PhotoRetouchTest.redEyeRemovesRedButPreservesCatchlightSkinAndOutsideBrush": "ui-first",
+      "app.onklav.home.PhotoRetouchUiTest.pinchDoesNotApplyCorrectionAndCompareDisablesPainting": "ui-first",
+      "app.onklav.home.PhotoMarkupUiTest.penHighlightMoveEraseTextUndoDraftAndExportWorkInOneEditor": "ui-first",
+      "app.onklav.home.PhotoMarkupUiTest.switchingToolsAndTabsCommitsTextAndLayersReopensEditableHistory": "ui-first",
+      "app.onklav.home.PhotoMarkupUiTest.saveMenuHasStackedActionsAndDiscardClosesWithoutChangingOriginal": "ui-first",
+      "app.onklav.home.PhotoMarkupUiTest.landscapeTextToolsStayInlineAndLeaveAVisibleCanvas": "ui-first",
+      "app.onklav.home.PhotoMarkupUiTest.cancelledStrokeDoesNotCommitAndEraseNeverChangesThePhoto": "ui-first",
+      "app.onklav.home.PhotoRetouchUiTest.retouchTapUndoRedoAndDrawingRouteWork": "final"
+    },
+    "source_sha256": {
+      "android/app/src/main/kotlin/app/onklav/home/PhotoEditor.kt": "d3cbbed51866103b120dbab02bc821466a6d6de598fa219d0330cb2c8ff1364a",
+      "android/app/src/main/kotlin/app/onklav/home/PhotoRetouch.kt": "7e07cf43db8caf6e0652e677d90809c56cfaf8a4f23821c8c5e6214ffe3b79ae",
+      "android/app/src/main/kotlin/app/onklav/home/PhotoRetouchCanvas.kt": "7903332120bdbfddbe8a6da3c11e50eccee652252ca210aed9c86b2f9e57536e",
+      "android/app/src/main/kotlin/app/onklav/home/PhotoMarkupControls.kt": "2eaf19fae3bcd18f5bd4d77b01b8b9a411f68adc1d129f42feffbad8c30de4d6",
+      "android/shared/src/main/res/drawable/photo_tool_retouch.xml": "e3f686cf0c9f72d4b1bad2603fe428fc9f19c7f88e2a8bd8aec8278e440f3eee"
+    },
+    "production_unchanged_during_checks": true,
+    "new_dependencies_models_permissions": false,
+    "apk_built": false,
+    "verification_notes": [
+      "16 algorithm/markup/Layers checks passed in initial run.",
+      "Initial UI fixture needed explicit virtual-clock pumping; final route assertion needed to wait for asynchronous drawing-canvas rendering.",
+      "Generated Gradle transform metadata failed before testing; fresh isolated cache resolved it.",
+      "Six UI checks passed in staged UI run; corrected final route check passed separately."
+    ],
+    "limits": [
+      "Generated image fixtures, not real portrait qualification",
+      "Physical-phone touch, portrait variety and large-image performance qualification pending"
+    ]
+  },
+  "code_edit": {
+    "status": "implemented",
+    "production_and_test_compilation": "passed",
+    "focused_checks_passed": 14,
+    "test_suites": {
+      "app.onklav.home.CodeEditCoreTest": {
+        "tests": 9,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "app.onklav.home.CodeEditFilesTest": {
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "app.onklav.home.CodeEditUiTest": {
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "source_sha256": {
+      "android/app/src/main/kotlin/app/onklav/home/CodeEdit.kt": "d067e0b6b2462eec278fe61cf352aee1cac12871fc9e5d7b27aad8258441562b",
+      "android/app/src/main/kotlin/app/onklav/home/CodeEditCore.kt": "5e9bd5b7eb9fe1f1ed0b91c69fe1287a1baf5f468ea858ee2ba83d3742f5c930",
+      "android/app/src/main/kotlin/app/onklav/home/CodeEditModel.kt": "7f4ace88d42abc01ee01775872afb3579094bddd8f17dd0be92d155fd528e3bf",
+      "android/app/src/main/kotlin/app/onklav/home/CodeEditFiles.kt": "54c3f400e9b8cb9f0d9087165cc3b57e40ab0e708de8fcdcbada34fb1d418cf1",
+      "android/app/src/main/kotlin/app/onklav/home/CodeEditView.kt": "677a56449f1801cc5cd7d8a417f1025c309590341abf330a0b1af21fdc848790",
+      "android/app/src/main/kotlin/app/onklav/home/Catalog.kt": "ca9efdb05373c934bd01ce6634301c6a0daa0141a650f92154c2b199c3fd4c10",
+      "android/app/src/main/kotlin/app/onklav/home/MainActivity.kt": "47521bda63ce0ee0d0f19daf8ccc50949cc17c5c666f2b980a12097f8ddaf716",
+      "android/app/src/main/kotlin/app/onklav/home/SdkAppsCenter.kt": "3ae45c390df04c1acb7f821fb91636de231b1e723948b357a0f371d0a9b533f3",
+      "android/shared/src/main/res/drawable/ref_app_code_edit.xml": "e88d8f81c4e86cb819c98e5f7cde5fb94aae8912603bb3414bbb972c6b0d726a"
+    },
+    "production_unchanged_during_final_checks": true,
+    "new_dependencies_or_models": false,
+    "new_permissions": false,
+    "apk_built": false,
+    "build_plan": {
+      "sdk_apps": "reuse",
+      "mobile_rust": "reuse",
+      "neural_speech": "reuse",
+      "games": "reuse"
+    },
+    "scope": "Included host Code Edit app, native view and local text engine, signed Files transactions and atomic private drafts",
+    "verification_notes": [
+      "Initial eight core checks passed.",
+      "First combined run passed nine core and three UI checks; Files fixture failed because it attempted selection while its import transaction was pending.",
+      "Fixture import/selection was split into separate sessions, matching the established Files contract.",
+      "Final run passed all fourteen checks, including actual signed Files replacement/Trash preservation, refused external-change digest, rendered syntax spans, native auto-indent, recovered cursor, inline search and large-text small-phone layout."
+    ],
+    "limitations": [
+      "Physical-phone IME/accessibility/external-provider and large-file performance qualification pending",
+      "Lexical syntax coloring, not semantic analysis/LSP; no compiler, debugger, terminal or Sublime plugin runtime",
+      "1 MB / 500,000-character limit and eight open tabs; Save as for non-internal providers"
+    ]
+  },
+  "authentic": {
+    "status": "implemented",
+    "focused_checks_passed": 18,
+    "test_suites": {
+      "app.onklav.home.AuthenticOtpTest": {
+        "tests": 9,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "app.onklav.home.AuthenticQrTest": {
+        "tests": 2,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "app.onklav.home.AuthenticUiTest": {
+        "tests": 3,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      "app.onklav.home.AuthenticStoreTest": {
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    },
+    "final_production_compilation": "passed",
+    "tested_source_sha256": {
+      "android/app/src/main/kotlin/app/onklav/home/AuthenticModel.kt": "4321419c62f1c53f08e35f8089ec7291ada596dc1bf0fd6fddac062ce1fc14c9",
+      "android/app/src/main/kotlin/app/onklav/home/AuthenticStore.kt": "cf59f437bf018a9948596f6956e7d8f92b07d5f4b2b2e2cf287f2e359b6d9f28",
+      "android/app/src/main/kotlin/app/onklav/home/AuthenticOtp.kt": "eae71425283a2e6f410548d65ccf2ce903dabc2b797cb555360f9865d37a006a",
+      "android/app/src/main/kotlin/app/onklav/home/AuthenticMigration.kt": "8e0edc364fd58260b830bc9fcc974ccbc8979ac1f5778ad4712cb2f065549b9b",
+      "android/app/src/main/kotlin/app/onklav/home/Authentic.kt": "a1fb2efd3572c7d34bb6fd3b689c5a228d49ecfd198b7ddb23279562d8d58742",
+      "android/app/src/main/kotlin/app/onklav/home/AuthenticPrivacy.kt": "4bca5fa58106b9315f021fcd3332a00981b8789c04e677fd94fa10f1a79e41ea",
+      "android/app/src/main/kotlin/app/onklav/home/AuthenticQr.kt": "e367db5634b407e509ef19aa632f4ea56b8dbcdcacbf50971bb4a4842bca0e3c",
+      "android/app/src/main/kotlin/app/onklav/home/Catalog.kt": "84d541d8d1a84b46d0f54a7a1ff23921626d2e35b397825b9d3d8a8af4c64512",
+      "android/app/src/main/kotlin/app/onklav/home/MainActivity.kt": "2ad1e944e8f40ac489075a36ff131d9986a2dc53decbbab32612dfc2120b2fd7",
+      "android/app/src/main/kotlin/app/onklav/home/SdkAppsCenter.kt": "b232579ec75b4ab1367ecb604212a265e73bec7acf26539ff5d5e9588ebbe8fd",
+      "android/app/build.gradle.kts": "d5ed5bb64f07e6fb220ce26e60df9b42497b7b4c4dde89418d3935945e33e5bb",
+      "android/shared/src/main/res/drawable/ref_app_authentic.xml": "9c4a369e56b1167e3f88b027526b44c859defca0cb4f5b5a3756a9e0cf0cd90b"
+    },
+    "final_source_sha256": {
+      "android/app/src/main/kotlin/app/onklav/home/AuthenticModel.kt": "4321419c62f1c53f08e35f8089ec7291ada596dc1bf0fd6fddac062ce1fc14c9",
+      "android/app/src/main/kotlin/app/onklav/home/AuthenticStore.kt": "cf59f437bf018a9948596f6956e7d8f92b07d5f4b2b2e2cf287f2e359b6d9f28",
+      "android/app/src/main/kotlin/app/onklav/home/AuthenticOtp.kt": "eae71425283a2e6f410548d65ccf2ce903dabc2b797cb555360f9865d37a006a",
+      "android/app/src/main/kotlin/app/onklav/home/AuthenticMigration.kt": "8e0edc364fd58260b830bc9fcc974ccbc8979ac1f5778ad4712cb2f065549b9b",
+      "android/app/src/main/kotlin/app/onklav/home/Authentic.kt": "08c09513458d370c1dffc240a8860422ac43991505c02f8a8760f52a2204a888",
+      "android/app/src/main/kotlin/app/onklav/home/AuthenticPrivacy.kt": "4bca5fa58106b9315f021fcd3332a00981b8789c04e677fd94fa10f1a79e41ea",
+      "android/app/src/main/kotlin/app/onklav/home/AuthenticQr.kt": "e367db5634b407e509ef19aa632f4ea56b8dbcdcacbf50971bb4a4842bca0e3c",
+      "android/app/src/main/kotlin/app/onklav/home/Catalog.kt": "84d541d8d1a84b46d0f54a7a1ff23921626d2e35b397825b9d3d8a8af4c64512",
+      "android/app/src/main/kotlin/app/onklav/home/MainActivity.kt": "2ad1e944e8f40ac489075a36ff131d9986a2dc53decbbab32612dfc2120b2fd7",
+      "android/app/src/main/kotlin/app/onklav/home/SdkAppsCenter.kt": "b232579ec75b4ab1367ecb604212a265e73bec7acf26539ff5d5e9588ebbe8fd",
+      "android/app/build.gradle.kts": "d5ed5bb64f07e6fb220ce26e60df9b42497b7b4c4dde89418d3935945e33e5bb",
+      "android/shared/src/main/res/drawable/ref_app_authentic.xml": "9c4a369e56b1167e3f88b027526b44c859defca0cb4f5b5a3756a9e0cf0cd90b"
+    },
+    "post_test_change": "Only two password-guidance string literals; normalization hash verified. Final production Kotlin compilation passed after those changes.",
+    "native_rust_sdk_protocol_or_game_changes": false,
+    "new_library": "ZXing core 3.5.4, Apache-2.0, offline QR only",
+    "new_permissions": false,
+    "apk_built": false,
+    "validation": [
+      "RFC4226 ten HOTP vectors and RFC6238 eighteen SHA1/SHA256/SHA512 vectors through year2603",
+      "Base32/URI parameter validation, no secret input echoed in errors",
+      "Complete multi-fragment Google migration requires all parts and explicit confirmation; mixed batches reject",
+      "Encrypted-store absence of plaintext labels/seeds, wrong passwords, corruption/truncation, distinct envelope identity, password change/old backups and persisted counters",
+      "Offline generated QR roundtrip; temporary owner-checked clipboard behavior",
+      "Phone account list/copy/pin/lock, duplicate/deletion confirmation and 320dp large-text eight-digit code visibility"
+    ],
+    "attempt_notes": [
+      "Initial Kotlin UI delimiter/icon-reference errors corrected.",
+      "First combined run:16 checks passed; one test incorrectly retained a TOTP period for an HOTP URI. Corrected the fixture to the canonical HOTP period; no OTP algorithm change was required.",
+      "Final run:18 of18 passed; final UI guidance copy was then separately compiled."
+    ],
+    "qualification_pending": [
+      "Physical Galaxy/Android15 camera, lifecycle/IME/accessibility and real-provider transfer acceptance",
+      "Release R8/shrinker/APK verification",
+      "Large-account performance and independent security review"
+    ],
+    "backup_scope": "Explicit encrypted backups via OnKlav Files; no new Rust App Documents backup entry or cloud sync"
+  },
+  "phone_camera_root_navigation": {
+    "report": "docs/PHONE-CAMERA-ROOT-NAVIGATION.md",
+    "verification": "docs/phone-camera-root-verification.json",
+    "apk_built": false,
+    "physical_device_qualification": "pending"
+  },
+  "latest_apk_release": "docs/RELEASE-0.100.54.md",
+  "latest_apk_verification": "docs/apk54-verification.json",
+  "files_simplification": {
+    "status": "source verified; no APK produced",
+    "report": "docs/files-simplification-verification.json"
+  },
+  "latest_apk": {
+    "version": "0.100.54-rc1",
+    "version_code": 163
+  },
+  "game_sdk_05": {
+    "minimum_host": 157,
+    "report": "docs/NAVAL-AND-FRIEND-GAMES.md",
+    "apk_built": false
+  },
+  "latest_source_fix": "Native selected-game entry before a single loader, list-only catalog, acknowledged Quit and discarded-session guard",
+  "latest_apk_predates_source_fix": true
+}

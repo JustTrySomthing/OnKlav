@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.ResponsiveAppearanceHostTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-24T14:03:48" hostname="41b9fb140d3c" time="12.613">
+  <properties/>
+  <testcase name="tabletContentStaysBounded" classname="app.onklav.home.ResponsiveAppearanceHostTest" time="8.395"/>
+  <testcase name="normalPhoneDark" classname="app.onklav.home.ResponsiveAppearanceHostTest" time="1.255"/>
+  <testcase name="landscapeSettingsAndAlertActionsStayReachable" classname="app.onklav.home.ResponsiveAppearanceHostTest" time="1.727"/>
+  <testcase name="narrowPhoneLargeTextLight" classname="app.onklav.home.ResponsiveAppearanceHostTest" time="1.235"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

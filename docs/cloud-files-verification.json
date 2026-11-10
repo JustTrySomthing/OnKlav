@@ -1,0 +1,50 @@
+{
+  "scope": "Cloud Files and Google Drive UI retirement",
+  "status": "focused_host_ui_checks_and_lint_passed",
+  "apk_built": false,
+  "focused_tests": 14,
+  "failures": 0,
+  "lint": {
+    "Fatal": 0,
+    "Error": 0,
+    "Warning": 795,
+    "Information": 1
+  },
+  "production_compile": "Passed for final transfer-state refinement",
+  "verified": [
+    "First launch sign-in/signup and Koofr help",
+    "Encrypted account roundtrip, missing key/corruption preserves existing ciphertext",
+    "HTTPS/origin/root restrictions, encoded paths, XML namespace/status filtering, unsafe and oversized XML rejection",
+    "Redirect rejected without forwarding credentials; create-only one-shot upload streaming and conflict handling",
+    "Revision-checked download and failed-temp cleanup",
+    "Folder browse, up, current-folder search and new folder",
+    "Confirmed local disconnect never deletes remote files",
+    "Large-text short-screen Connect/help access",
+    "Acknowledged uploads remain successful if subsequent folder refresh fails",
+    "Cloud app registration, neutral Backups and absent Drive settings/attachment entry points"
+  ],
+  "limits": [
+    "Provider-specific authentication and actual network transfers require live user-account testing",
+    "Robolectric host tests and fixtures do not certify physical Android/network/lifecycle behavior",
+    "2 GB transfer limit, 4 MB/10000-entry listings and provider restrictions apply",
+    "No new APK built"
+  ],
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/CloudScreen.kt": "9484a2a61f8bd6f275ecd109b4d79fd76a0e28e5852d516a902a6b852c52e397",
+    "android/app/src/main/kotlin/app/onklav/home/CloudData.kt": "3c5625a8a3765efd1778d68ec537e3d20282efd366571c52e5b027c905c23273",
+    "android/app/src/main/kotlin/app/onklav/home/CloudModel.kt": "877bbf6f6b92e841eaab66f567a9f80e2e3a938a3c4e43740fe42b5fa5d9b6da",
+    "android/app/src/main/kotlin/app/onklav/home/CloudDav.kt": "09d3bb161f7a9fbcf546bbe7903f1ceecd6b6e12ccb12019280d6746a37311b0",
+    "android/app/src/test/kotlin/app/onklav/home/CloudFilesUiTest.kt": "229b031270ee261645efbc9072c39ddf0894a3c3b23527ce5d4504a379492ed6",
+    "android/app/src/test/kotlin/app/onklav/home/CloudFilesTest.kt": "a6b237c00977d29c741a6af05555249697afd7eaab8fcca7d5c6dc78497f6605",
+    "android/shared/src/main/res/drawable/ref_app_cloud_files.xml": "f684db50720d412c7d847e612bde4987bacca17831863029100f69b7297cf05b",
+    "android/shared/src/main/res/drawable/ref_setting_backups.xml": "4b43301c36f96f0f247898bf79aba9084e988783405e8a6eab05dca75595ade3",
+    "android/app/src/main/kotlin/app/onklav/home/MainActivity.kt": "4a4610f7cd3fc9bfbcf2e14571c45b82323375a97ff81d097aadf2e4eace635e",
+    "android/app/src/main/kotlin/app/onklav/home/Catalog.kt": "ff58609257440aa65d5bade80df059ea1e4c968ee960dfd2eb9a04f2af4ff6b8",
+    "android/app/src/main/kotlin/app/onklav/home/SettingsPane.kt": "940a5646d09c983520c13bb20baebc1797e65f0e8f320c5dd6376264b699d213",
+    "android/app/src/main/kotlin/app/onklav/home/SettingsScreens.kt": "784a411fd372d5bb5b36c879a6a34c4005fcf565cc652c89975c499e236e0708",
+    "android/app/src/main/kotlin/app/onklav/home/DriveBackup.kt": "cbcbef334fc1df4376bdb264b193b6f98fdcd21d52d5c2e9e001fe5f4c304053",
+    "android/app/src/main/kotlin/app/onklav/home/DriveSharing.kt": "6a2096fd18405f0217b57475dec48bd494566ca5a51b43432ebe10a45c4ed1e9",
+    "android/app/src/main/kotlin/app/onklav/home/MessageAttachments.kt": "9fef452bf5755a9af0ff5a150df05cd7d17c177479a4fa12e8f77a868fb04e33",
+    "android/app/src/main/kotlin/app/onklav/home/SdkAppsCenter.kt": "86c971cbffbcd165af283b116ba6cc54ab1791eb9409e2a3fa9fdd34d4059391"
+  }
+}

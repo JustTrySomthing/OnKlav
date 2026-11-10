@@ -1,0 +1,9 @@
+{
+  "native_current": true,
+  "mobile_current": true,
+  "sdk_current": true,
+  "games_current": true,
+  "new_permissions": false,
+  "new_capabilities": false,
+  "new_runtime_dependencies": false
+}

@@ -1,0 +1,8 @@
+<resources>
+    <string name="sdk_back">Atrás</string>
+    <string name="sdk_app_controls">Controles de la aplicación</string>
+    <string name="sdk_close_app">Cerrar aplicación</string>
+    <string name="sdk_loading">Cargando</string>
+    <string name="sdk_restarted">La aplicación se reinició. Solo se pueden recuperar los datos guardados; las acciones pendientes no se repitieron.</string>
+    <string name="sdk_dismiss">Cerrar</string>
+</resources>

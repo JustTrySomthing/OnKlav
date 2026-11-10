@@ -1,0 +1,49 @@
+{
+  "date": "2026-10-23",
+  "source_version": "0.63.0-dev",
+  "source_version_code": 71,
+  "scope": "Finish combined built-in app-document backup and passive Walkie restore",
+  "apk_built": false,
+  "tests": {
+    "passed": 187,
+    "failed": 0,
+    "unexpected_failures": 0,
+    "known_failures": [],
+    "rust_broad": {
+      "passed": 185,
+      "failed": 0,
+      "fresh_run": true,
+      "evidence": "docs/evidence/v0.63.0/rust-tests.log"
+    },
+    "fresh_framework_host": [
+      {
+        "class": "app.onklav.home.LibraryBackupTest.oneAppDocumentsBackupRestoresAcrossStoresAndRepeatsSafely",
+        "passed": 1,
+        "failed": 0,
+        "skipped": 0,
+        "evidence": "docs/evidence/v0.63.0/TEST-app.onklav.home.LibraryBackupTest.xml"
+      },
+      {
+        "class": "app.onklav.home.SettingsUiHostTest.combinedAppDocumentsBackupIsReachable",
+        "passed": 1,
+        "failed": 0,
+        "skipped": 0,
+        "evidence": "docs/evidence/v0.63.0/TEST-app.onklav.home.SettingsUiHostTest.xml"
+      }
+    ]
+  },
+  "build_evidence": null,
+  "apk_evidence": null,
+  "native_proof": "docs/native-provenance.json",
+  "sdk_proof": "docs/app-sdk-provenance.json",
+  "full_rewrite_complete": false,
+  "handset_acceptance": false,
+  "carrier_acceptance": false,
+  "next_work": "docs/FINISH-NON-GAME.md",
+  "note": "User wants backup finished and no APKs. Built-in app documents now have one combined archive, including passive Walkie media/preferences/recipients. All members validate before per-store commits; partial I/O remains retryable. One required full Rust pass and current host JNI build; only the combined provider/JNI round trip and button check were run on Android. No Android native LTO build or APK assembly. Stale mobile JNI is excluded by source packaging. Existing message metadata/history and Appearance backups remain separate. This closes built-in app-document backup implementation; no further backup chunk queued. Actual providers/phone/carrier acceptance is not claimed.",
+  "timezone": "America/Chicago",
+  "apk_skipped_by_user": true,
+  "last_delivered_apk": "0.61.0-dev/code69",
+  "mobile_native_rebuild_deferred": true,
+  "builtin_document_backup_implementation_complete": true
+}

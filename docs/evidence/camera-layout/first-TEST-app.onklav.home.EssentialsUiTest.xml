@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.EssentialsUiTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-29T03:15:44" hostname="8a3ee6b7e8e3" time="12.477">
+  <properties/>
+  <testcase name="cameraSettingsCapturesAndPermissionControlsHaveNoDeadEnds" classname="app.onklav.home.EssentialsUiTest" time="12.477"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

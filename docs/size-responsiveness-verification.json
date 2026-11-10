@@ -1,0 +1,46 @@
+{
+  "version": "0.100.25-rc1",
+  "version_code": 134,
+  "variant": "optimized, non-debuggable, shell-profileable",
+  "baseline_variant": "0.100.24 debug",
+  "before_bytes": 182552506,
+  "after_bytes": 120158675,
+  "saved_bytes": 62393831,
+  "reduction_percent": 34.18,
+  "before_packaged_categories": {
+    "speech_pack": 64093040,
+    "dex": 59163272,
+    "native": 41385632,
+    "other": 17723621
+  },
+  "after_packaged_categories": {
+    "speech_pack": 53251426,
+    "dex": 12691284,
+    "native": 37827510,
+    "other": 16265137
+  },
+  "speech_pack_bytes": 53251426,
+  "speech_voicebank_bytes": 819200,
+  "speech_pack_files": 13,
+  "selected_upstream_speakers": [
+    0,
+    2
+  ],
+  "internal_bank_rows": [
+    0,
+    1
+  ],
+  "graph_style_rows_pronunciation_unchanged": true,
+  "unchanged_non_speech_assets": 96,
+  "unchanged_signed_included_apps": 23,
+  "host_tests_passed": 22,
+  "native_tests_passed": 3,
+  "newpipe_interpreter_desktop_apis_blocked_check": "passed",
+  "vital_release_lint": "passed",
+  "full_lint": "not rerun",
+  "signature_sha256": "6ed975c5fc27d19f6291f751a8bb00fa8a2c2e7d268bffc7b6ddf7e1b1a7a69d",
+  "apk_sha256": "a2a9738228b255bd9eb81ba94d4c469d8ce955503c313c268f0434759bf7ee94",
+  "package_verification": "passed",
+  "physical_phone_performance_measured": false,
+  "remaining": "Actual phone UI/media/carrier/Bluetooth/accessibility/endurance and independent security qualification remain separate."
+}

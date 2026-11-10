@@ -1,0 +1,8 @@
+test_existing_download_is_not_overwritten (test_distribution.Distribution.test_existing_download_is_not_overwritten) ... ok
+test_modified_content_is_rejected (test_distribution.Distribution.test_modified_content_is_rejected) ... ok
+test_starter_contains_sources_tools_and_verified_content_without_builds_or_keys (test_distribution.Distribution.test_starter_contains_sources_tools_and_verified_content_without_builds_or_keys) ... ok
+
+----------------------------------------------------------------------
+Ran 3 tests in 1.510s
+
+OK

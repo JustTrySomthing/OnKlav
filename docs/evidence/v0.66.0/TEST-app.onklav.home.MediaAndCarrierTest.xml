@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.MediaAndCarrierTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-24T08:54:11" hostname="ac5668fae30d" time="0.149">
+  <properties/>
+  <testcase name="animatedImagesDefaultOnAndPreferencePersists" classname="app.onklav.home.MediaAndCarrierTest" time="0.033"/>
+  <testcase name="galleryIncludesAllMediaKindsAndPreservesIdentityWithoutDuplicates" classname="app.onklav.home.MediaAndCarrierTest" time="0.028"/>
+  <testcase name="driveProviderCopyStreamsSelectedFileAndRejectsSameDestination" classname="app.onklav.home.MediaAndCarrierTest" time="0.053"/>
+  <testcase name="carrierTrialRequiresExplicitChoiceAndDoesNotClaimReleaseAcceptance" classname="app.onklav.home.MediaAndCarrierTest" time="0.034"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

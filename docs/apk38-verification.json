@@ -1,0 +1,15 @@
+{
+  "status": "passed",
+  "version": "0.100.38-rc1",
+  "version_code": 147,
+  "package": "app.onklav.home.prototype.rewrite",
+  "bytes": 122750968,
+  "sha256": "0976949a6a05d2302723f9f6fce336c257a40f9a0aaeec6c0f21f8a5ef98711b",
+  "signer_sha256": "6ed975c5fc27d19f6291f751a8bb00fa8a2c2e7d268bffc7b6ddf7e1b1a7a69d",
+  "variant": "optimized",
+  "shrinking": true,
+  "checks": "docs/screenshot-refinements-verification.json",
+  "build": "docs/evidence/v0.100.38/build-optimized.json",
+  "package_verification": "docs/apk-verification-optimized.json",
+  "scope": "22 prior selected/shared host checks passed. APK identity, signature, DEX, alignment, native/SDK/game bytes verified. Physical Samsung rotation/cutout and carrier acceptance separate."
+}

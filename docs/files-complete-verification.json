@@ -1,0 +1,193 @@
+{
+  "scope": "Files engine/controller, Android storage, shared pickers, recovery, file providers, editor replacement saves, backups and navigation",
+  "production_compile": "passed",
+  "runtime_class_bytes": "changed production runtime classes match compiled Kotlin",
+  "unique_passing_host_checks": 36,
+  "classes": {
+    "AndroidSharedFilesTest": 4,
+    "BackupFilesTest": 3,
+    "CodeEditFilesTest": 1,
+    "FileExportRepairTest": 4,
+    "FileSelectionTest": 7,
+    "FileSelectionUiTest": 1,
+    "FilesBrokerHostTest": 6,
+    "FilesCoreWorkflowTest": 1,
+    "FilesFlowHostTest": 1,
+    "FilesPresentationUiTest": 5,
+    "FilesRoutingTest": 1,
+    "WriteMigrationHostTest": 2
+  },
+  "unresolved_failed_cases": [],
+  "resolved_test_fixture_failures": [
+    "Retired Notes fixtures updated to current document workflows",
+    "Storage category count includes hidden compatibility aliases",
+    "UI navigation waits for the intended storage state before clicking duplicate category labels"
+  ],
+  "feature_repairs": [
+    "Shared storage tabs and Internal files link in attachment picker",
+    "Trash excluded from attachment/save selection",
+    "MIME fallback for generic types",
+    "Read-only category folder selection distinct from writable saves",
+    "Android Restore all and confirmed Empty trash",
+    "Restore to Downloads if original parent or metadata unavailable",
+    "Readable backing names with bounded UTF-8 length",
+    "Hidden Photos/APK compatibility paths",
+    "Per-owner Android entry-table serialization",
+    "Successful Copy status accepted",
+    "Android header Back follows parents and folder names shown"
+  ],
+  "native_changes": false,
+  "apk_built": false,
+  "limits": [
+    "Host tests use Android API 29; physical Android 15/vendor behavior still needs device verification",
+    "Android Trash covers OnKlav-managed deletions",
+    "Search is scoped to the current folder/category",
+    "OS-protected Android private app directories remain inaccessible"
+  ],
+  "passing_cases": [
+    {
+      "class": "app.onklav.home.AndroidSharedFilesTest",
+      "name": "androidTrashRestoresWithoutOverwritingAndImagesIncludeCameraPhotos"
+    },
+    {
+      "class": "app.onklav.home.AndroidSharedFilesTest",
+      "name": "androidWorkflowPreservesBytesAcrossCopyMoveRenameZipAndTrashRecovery"
+    },
+    {
+      "class": "app.onklav.home.AndroidSharedFilesTest",
+      "name": "failedCopyKeepsAnUnrelatedFileCreatedAtTheDestination"
+    },
+    {
+      "class": "app.onklav.home.AndroidSharedFilesTest",
+      "name": "purgeRejectsLinksBeforeDeletingAnyFolderContents"
+    },
+    {
+      "class": "app.onklav.home.BackupFilesTest",
+      "name": "partialCopyFailureRetainsTheSourceAndNeverDeletesProviderDocuments"
+    },
+    {
+      "class": "app.onklav.home.BackupFilesTest",
+      "name": "sameDocumentAliasesRejectBeforeOpeningOrDeletingAnyFile"
+    },
+    {
+      "class": "app.onklav.home.BackupFilesTest",
+      "name": "unreadableSourceDoesNotDeleteOrTruncateTheChosenDestination"
+    },
+    {
+      "class": "app.onklav.home.CodeEditFilesTest",
+      "name": "selectedFileReplacementPreservesOldVersionAndRefusesExternalChange"
+    },
+    {
+      "class": "app.onklav.home.FileExportRepairTest",
+      "name": "actualFilesSaveWaitsForFilingAndKeepsFailedCopiesInRecovery"
+    },
+    {
+      "class": "app.onklav.home.FileExportRepairTest",
+      "name": "backupAndCloudSizeChecksRejectBeforeOpeningAnInternalDestination"
+    },
+    {
+      "class": "app.onklav.home.FileExportRepairTest",
+      "name": "backupFilingRunsAfterTheSharedStagingMutexIsReleased"
+    },
+    {
+      "class": "app.onklav.home.FileExportRepairTest",
+      "name": "failedWriterCannotPublishThroughANormalCloseButOwnerRecoveryRemainsAvailable"
+    },
+    {
+      "class": "app.onklav.home.FileSelectionTest",
+      "name": "actualSignedFilesControllerSelectsOneReadableFileWithoutCopyingOrExposingPaths"
+    },
+    {
+      "class": "app.onklav.home.FileSelectionTest",
+      "name": "defaultContractsLaunchOnlyOurNonExportedHostPickerAndPreserveResults"
+    },
+    {
+      "class": "app.onklav.home.FileSelectionTest",
+      "name": "directAndroidDownloadsUseTheSharedBrowserAndRespectRemovedAndroidAccess"
+    },
+    {
+      "class": "app.onklav.home.FileSelectionTest",
+      "name": "filtersAndNamesRejectUnsupportedTypesWithoutHidingFolders"
+    },
+    {
+      "class": "app.onklav.home.FileSelectionTest",
+      "name": "oldAndroidLocationsAndFolderSelectionsRemainUsableAndTrashCannotBeAttached"
+    },
+    {
+      "class": "app.onklav.home.FileSelectionTest",
+      "name": "revokedAccessKeepsUnfiledSaveAndFolderSelectionUsesTheSharedBrowser"
+    },
+    {
+      "class": "app.onklav.home.FileSelectionTest",
+      "name": "saveCommitUsesRustImportAndUpdatesRealListingSizeWhileKeepingNamesUnique"
+    },
+    {
+      "class": "app.onklav.home.FileSelectionUiTest",
+      "name": "chooseAndSaveStayInsideOurBrowserWithClearControls"
+    },
+    {
+      "class": "app.onklav.home.FilesBrokerHostTest",
+      "name": "androidFoldersExposeOpaqueTokensAndSupportRenameAndExplicitDelete"
+    },
+    {
+      "class": "app.onklav.home.FilesBrokerHostTest",
+      "name": "deletingPrivateDataClearsOnlyThatAppsFolderConnections"
+    },
+    {
+      "class": "app.onklav.home.FilesBrokerHostTest",
+      "name": "fileExportsAreReadOnlyAndCannotExposeArbitraryPrivatePaths"
+    },
+    {
+      "class": "app.onklav.home.FilesBrokerHostTest",
+      "name": "revokedSdkAuthorizationAndUnknownTokensCannotQueryAndroidFiles"
+    },
+    {
+      "class": "app.onklav.home.FilesBrokerHostTest",
+      "name": "selectedImportsStreamAndStopWhenAuthorizationIsRevoked"
+    },
+    {
+      "class": "app.onklav.home.FilesBrokerHostTest",
+      "name": "sharingAnAndroidFolderCreatesAReadableZipAndPreservesOriginals"
+    },
+    {
+      "class": "app.onklav.home.FilesCoreWorkflowTest",
+      "name": "nativeFoldersCopyMoveZipSearchAndTrashKeepDataAndRejectCycles"
+    },
+    {
+      "class": "app.onklav.home.FilesFlowHostTest",
+      "name": "fileIconFoldersRenameMoveTrashAndRestoreKeepDocumentBytes"
+    },
+    {
+      "class": "app.onklav.home.FilesPresentationUiTest",
+      "name": "androidBackNavigatesParentsBeforeReturningToOnKlav"
+    },
+    {
+      "class": "app.onklav.home.FilesPresentationUiTest",
+      "name": "filesHomeAndAndroidCategoriesUseTheSameModernBrowser"
+    },
+    {
+      "class": "app.onklav.home.FilesPresentationUiTest",
+      "name": "imageAttachmentPickerStartsInImagesWithViewSwitch"
+    },
+    {
+      "class": "app.onklav.home.FilesPresentationUiTest",
+      "name": "readableAndroidAudioCanBeChosenAsAFolderButNotAsASaveDestination"
+    },
+    {
+      "class": "app.onklav.home.FilesPresentationUiTest",
+      "name": "thumbnailAndListViewsKeepPencilsOnlyOnEditableItems"
+    },
+    {
+      "class": "app.onklav.home.FilesRoutingTest",
+      "name": "tappingDocumentResolvesBytesAndClosedFilesModelReopensWithoutBusyOverlay"
+    },
+    {
+      "class": "app.onklav.home.WriteMigrationHostTest",
+      "name": "conflictingWriteDocumentDoesNotRemoveNotesOrOverwriteEitherOriginal"
+    },
+    {
+      "class": "app.onklav.home.WriteMigrationHostTest",
+      "name": "startupConvertsLegacyNotesRetiresThePackageAndKeepsLinkedSaves"
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.PhotoHdrLocalTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-29T15:09:46" hostname="3d3a46c2e56a" time="24.85">
+  <properties/>
+  <testcase name="dramaticLooksHaveDistinctSceneResultsAndRecordMetrics" classname="app.onklav.home.PhotoHdrLocalTest" time="24.447"/>
+  <testcase name="naturalShapesLightLocallyAndStrengthRemainsUseful" classname="app.onklav.home.PhotoHdrLocalTest" time="0.403"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,25 @@
+{
+  "status": "source complete after 0.100.17-rc1; no APK requested",
+  "changes": [
+    "Removed Save image dialog heading",
+    "Stacked Save (Overwrite) above neutral gray Close (Discard Changes)",
+    "Close discards private working draft/history and exits signed Image Editor via normal SDK close; saved original and previous-version recovery retained",
+    "JPEG/PNG/Layers and Cancel/copy controls retained"
+  ],
+  "verification": {
+    "focused_cases": 2,
+    "passed": 2,
+    "includes": [
+      "label and vertical ordering assertions",
+      "discard callback/draft removal/original bytes unchanged",
+      "existing pen/highlight/text/move/erase/Undo/draft/PNG export workflow"
+    ],
+    "runtime": "runtime jar matches compiled Kotlin classes",
+    "lint": "Prior full lint0errors retained; not repeated for bounded save-menu change",
+    "handset": "not separately verified"
+  },
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/PhotoEditor.kt": "c1ff06b58820485948d72d838f554a5236676ad566dad8e509f89d3db0dc44f9",
+    "android/app/src/main/kotlin/app/onklav/home/SdkAppScreen.kt": "fe12e639b963465de3a70d65f89dd286c5be6d225adc2f424d6f45752384d7a8"
+  }
+}

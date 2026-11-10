@@ -1,0 +1,30 @@
+{
+  "plan": {
+    "sdk_apps": "reuse",
+    "mobile_rust": "reuse",
+    "games": "reuse",
+    "android_tests": [
+      "app.onklav.home.BrowserSdkHostTest",
+      "app.onklav.home.YouTubeSdkHostTest"
+    ],
+    "variant": "debug",
+    "abis": [
+      "arm64-v8a"
+    ]
+  },
+  "phases": [
+    {
+      "phase": "assemble-debug",
+      "seconds": 138.55,
+      "returncode": 0,
+      "log": "docs/evidence/v0.56.0/assemble-debug.log"
+    },
+    {
+      "phase": "verify-debug",
+      "seconds": 3.18,
+      "returncode": 0,
+      "log": "docs/evidence/v0.56.0/verify-debug.log"
+    }
+  ],
+  "status": "passed"
+}

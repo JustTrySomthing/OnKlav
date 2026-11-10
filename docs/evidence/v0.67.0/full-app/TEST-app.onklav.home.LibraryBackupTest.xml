@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.LibraryBackupTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-10-24T14:02:20" hostname="41b9fb140d3c" time="14.314">
+  <properties/>
+  <testcase name="annotatedImageUsesRealSdkImportAndLiveSessionsBlockRestoration" classname="app.onklav.home.LibraryBackupTest" time="3.826"/>
+  <testcase name="oneAppDocumentsBackupRestoresAcrossStoresAndRepeatsSafely" classname="app.onklav.home.LibraryBackupTest" time="1.847"/>
+  <testcase name="cancellationAndProviderFailureCleanStagingAndIncompleteOutput" classname="app.onklav.home.LibraryBackupTest" time="0.055"/>
+  <testcase name="youtubeBackupReopensBookmarksAndHistoryWithALocalViewerIdentity" classname="app.onklav.home.LibraryBackupTest" time="2.115"/>
+  <testcase name="rssProviderBackupReopensOfflineArticlesAndBookmarksInTheSignedApp" classname="app.onklav.home.LibraryBackupTest" time="2.175"/>
+  <testcase name="filesProviderToJniRoundTripKeepsBytesAndRejectsChangedReview" classname="app.onklav.home.LibraryBackupTest" time="0.068"/>
+  <testcase name="readerBackupRestoresAnAccessibleDraftAndKeepsAnExistingClearedDraft" classname="app.onklav.home.LibraryBackupTest" time="1.859"/>
+  <testcase name="browserBackupReopensTabsAndBookmarksAndPreservesLocalChanges" classname="app.onklav.home.LibraryBackupTest" time="2.369"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

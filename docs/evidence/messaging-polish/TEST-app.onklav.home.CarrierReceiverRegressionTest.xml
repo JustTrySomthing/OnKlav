@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.CarrierReceiverRegressionTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-29T13:07:51" hostname="3d3a46c2e56a" time="3.861">
+  <properties/>
+  <testcase name="picturesDefaultOnAndSetupIncludesAllMessagingApprovals" classname="app.onklav.home.CarrierReceiverRegressionTest" time="3.644"/>
+  <testcase name="realReceiverPreservesSuccessfulCarrierResultAcrossAsyncHandoff" classname="app.onklav.home.CarrierReceiverRegressionTest" time="0.217"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

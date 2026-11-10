@@ -1,0 +1,69 @@
+{
+  "scope": "Neon Dominos all-visible hand, larger adaptive chain, direct tap/drag placement and smoother presentation",
+  "phone_browser": [
+    {
+      "viewport": [
+        320,
+        640
+      ],
+      "no_hand_scrolling_all21_visible": true,
+      "one_tap_opening": true,
+      "distinct_end_choice": true,
+      "real_drag_drop_and_cancel": true,
+      "new_draw_highlight_and_face_feedback": true,
+      "readable_long_chain": true,
+      "sound_pause_and_prior_pause_intent": true,
+      "exact_saved_resume": true,
+      "reduced_motion": true,
+      "round_match_results": true,
+      "errors": []
+    },
+    {
+      "viewport": [
+        432,
+        800
+      ],
+      "no_hand_scrolling_all21_visible": true,
+      "one_tap_opening": true,
+      "distinct_end_choice": true,
+      "real_drag_drop_and_cancel": true,
+      "new_draw_highlight_and_face_feedback": true,
+      "readable_long_chain": true,
+      "sound_pause_and_prior_pause_intent": true,
+      "exact_saved_resume": true,
+      "reduced_motion": true,
+      "round_match_results": true,
+      "errors": []
+    }
+  ],
+  "checks": {
+    "rules_checks": 12,
+    "hockey_checks": 95,
+    "naval_turn_checks": 247,
+    "cats_dogs_checks": 383,
+    "blackjack_checks": 179,
+    "panda_checks": 805,
+    "dominos_checks": 4628,
+    "dominos_layout_checks": 60324
+  },
+  "game_export_source_current": true,
+  "source_sha256": {
+    "games/engine-checks/dominos/model.gd": "ab549440d7af254ce524aa483529937d92923861a918afc4a5a567d01d16b50f",
+    "games/engine-checks/dominos/scoreboard.gd": "024f35d1287b3bbcde420de66c49a5cc2d09cc4052884682f7aa5fd2f05721a2",
+    "games/engine-checks/dominos/layout_tests.gd": "d3d5086347cb62915e0eb8a496308d9229bdb83b257e8343cb08f396cdcfe7f3",
+    "games/engine-checks/dominos/main.gd": "54717976bf6007b163fdbd5cffde3059f488bf752b22bd713be04c20a4fa33c9",
+    "games/engine-checks/dominos/tests.gd": "ff8c95c46d7df3014162568c2249cdf64852ab2deb7753f71fd75057ac288744",
+    "games/engine-checks/dominos/table.gd": "4aced661494820f56f8180ec5c25419e1f748191ccea17049f8039cb476cfac1",
+    "games/engine-checks/dominos/layout.gd": "ec50021ebfa3a4ae6f4fef03a333952a964aad6e473402e8d3c606a7f6af4976",
+    "games/engine-checks/dominos/art.gd": "016e45d46fad142e28097afbb538730894831d1428f4866797cbb291a5a95e9a",
+    "games/engine-checks/dominos/tile.gd": "a2b641b2c8145d43738be12d5a801b06a2bb7dd77bb184ee632945a7a427121f",
+    "games/engine-checks/dominos/audio.gd": "63a09423580b91d4714b5ad3543d6563520d9cb5291aed1c2de9223bbea765cd"
+  },
+  "rules_ai_and_native_integration_unchanged": true,
+  "shared_sdk_helpers_unchanged": true,
+  "legacy_schema1_readable": true,
+  "apk_built": false,
+  "latest_apk": "0.100.53-rc1/code162",
+  "latest_apk_predates_source_fix": true,
+  "physical_phone_audio_performance_or_store_qualification": false
+}

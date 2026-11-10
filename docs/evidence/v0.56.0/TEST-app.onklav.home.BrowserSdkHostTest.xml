@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.BrowserSdkHostTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-23T22:39:41" hostname="41aed82b0335" time="79.592">
+  <properties/>
+  <testcase name="browserPackageBookmarksTabsSettingsAndReopen" classname="app.onklav.home.BrowserSdkHostTest" time="79.592"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

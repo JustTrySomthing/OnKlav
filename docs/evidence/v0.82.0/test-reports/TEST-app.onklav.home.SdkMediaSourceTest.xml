@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.SdkMediaSourceTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-10-26T19:05:04" hostname="844ebfe47829" time="2.906">
+  <properties/>
+  <testcase name="podcastWithoutValidatorsStillRejectsChangedLength" classname="app.onklav.home.SdkMediaSourceTest" time="2.387"/>
+  <testcase name="decoderCannotFollowRedirectsOrContinueAfterPermissionLoss" classname="app.onklav.home.SdkMediaSourceTest" time="0.099"/>
+  <testcase name="audiobookCanProbeTailFirstAndSeekUsingLastModified" classname="app.onklav.home.SdkMediaSourceTest" time="0.136"/>
+  <testcase name="dynamicPodcastDatesDoNotBreakValidRanges" classname="app.onklav.home.SdkMediaSourceTest" time="0.046"/>
+  <testcase name="audiobookRejectsChangedDateOrLengthAcrossSeek" classname="app.onklav.home.SdkMediaSourceTest" time="0.042"/>
+  <testcase name="readChunksAreBoundedAndClosedSourceCannotReopen" classname="app.onklav.home.SdkMediaSourceTest" time="0.051"/>
+  <testcase name="decoderLearnsLargeAudioLengthBeforeReadingWithoutDownloadingWholeFile" classname="app.onklav.home.SdkMediaSourceTest" time="0.045"/>
+  <testcase name="sourceReusesSequentialReadsAndRequiresMatchingRangeForSeeking" classname="app.onklav.home.SdkMediaSourceTest" time="0.035"/>
+  <testcase name="podcastTailProbeCanUseRangeWithoutEtag" classname="app.onklav.home.SdkMediaSourceTest" time="0.053"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

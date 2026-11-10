@@ -1,0 +1,42 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 968">
+  <defs>
+    <linearGradient id="shell" x2="1" y2="1">
+      <stop stop-color="#5c7086"/><stop offset=".18" stop-color="#252e40"/>
+      <stop offset=".56" stop-color="#101522"/><stop offset="1" stop-color="#39475d"/>
+    </linearGradient>
+    <linearGradient id="ice" x1="0" y1="0" x2="0" y2="1">
+      <stop stop-color="#322a3d"/><stop offset=".28" stop-color="#31465b"/>
+      <stop offset=".5" stop-color="#395461"/><stop offset=".76" stop-color="#29475e"/>
+      <stop offset="1" stop-color="#182f49"/>
+    </linearGradient>
+    <linearGradient id="pocket" x2="0" y2="1">
+      <stop stop-color="#02060d"/><stop offset=".62" stop-color="#101728"/><stop offset="1" stop-color="#36465b"/>
+    </linearGradient>
+    <pattern id="holes" width="18" height="18" patternUnits="userSpaceOnUse">
+      <circle cx="9" cy="9" r="1.25" fill="#122938" opacity=".43"/>
+      <path d="M8 10h2" stroke="#c4e7ed" stroke-opacity=".16"/>
+    </pattern>
+  </defs>
+  <rect x="1" y="1" width="598" height="966" rx="29" fill="url(#shell)" stroke="#070c17" stroke-width="2"/>
+  <rect x="5" y="5" width="590" height="958" rx="25" fill="none" stroke="#9ab1c7" stroke-opacity=".48"/>
+  <rect x="10" y="10" width="580" height="948" rx="20" fill="#081522" stroke="#263950" stroke-width="3"/>
+  <rect x="15" y="15" width="570" height="938" rx="17" fill="url(#ice)" stroke="#829ba9" stroke-width="2"/>
+  <rect x="18" y="18" width="564" height="932" rx="15" fill="url(#holes)"/>
+  <path d="M20 484H580" fill="none" stroke="#e1f2f6" stroke-opacity=".34" stroke-width="2"/>
+  <path d="M20 244H580M20 724H580" fill="none" stroke="#bad9e6" stroke-opacity=".20" stroke-dasharray="5 8"/>
+  <g fill="#e2eff5" fill-opacity=".36">
+    <circle cx="300" cy="484" r="4"/><circle cx="300" cy="244" r="3"/><circle cx="300" cy="724" r="3"/>
+  </g>
+  <g fill="none" stroke-width="2" stroke-linecap="round">
+    <path d="M25 170V38Q25 24 40 24H182M575 170V38Q575 24 560 24H418" stroke="#f69ab2" stroke-opacity=".68"/>
+    <path d="M25 798V930Q25 944 40 944H182M575 798V930Q575 944 560 944H418" stroke="#8cdef7" stroke-opacity=".68"/>
+  </g>
+  <rect x="197" y="0" width="206" height="22" rx="6" fill="url(#pocket)" stroke="#090d18" stroke-width="2"/>
+  <rect x="197" y="946" width="206" height="22" rx="6" fill="url(#pocket)" stroke="#090d18" stroke-width="2" transform="rotate(180 300 957)"/>
+  <path d="M204 17H396" stroke="#ff82a5" stroke-width="3" stroke-linecap="round"/>
+  <path d="M204 951H396" stroke="#7edcfb" stroke-width="3" stroke-linecap="round"/>
+  <g fill="#a9bed3" opacity=".54">
+    <circle cx="11" cy="36" r="2"/><circle cx="589" cy="36" r="2"/>
+    <circle cx="11" cy="932" r="2"/><circle cx="589" cy="932" r="2"/>
+  </g>
+</svg>

@@ -1,0 +1,17 @@
+{
+  "schema": "onklav.godot.web.engine.v1",
+  "version": "4.7.2",
+  "sdk_version": "0.6.0",
+  "runtime": "godot.web.v1",
+  "threads": false,
+  "renderer": "gl_compatibility",
+  "files_sha256": {
+    "index.audio.position.worklet.js": "be33985bc7160d6bf9646f259cd86b259cd67b02ccb297ee5c44f8ac84327bc8",
+    "index.audio.worklet.js": "5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3",
+    "index.js": "33c94cb3175f3333b82e2a3be5e8e86f77986f0aa2042b1631f6367a4e5bb6ba",
+    "index.wasm": "a6c2ef2815b919aa16e61fa09560bd50c20ee4ddac9ecc48d8a947dba8a50609",
+    "onklav-controls.json": "f22e384eb82c191bb815af2b76249d37bd0d3dc1ac61b4589b735f074e1eb824"
+  },
+  "build": "onklav1",
+  "export_template_sha256": "2d7e6d7e95a754a8207be9ba35b1067587b56312233f1dc9fbcfa6b89f85c5a7"
+}

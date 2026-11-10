@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.RecoveryNotificationTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-24T01:15:56" hostname="41aed82b0335" time="6.072">
+  <properties/>
+  <testcase name="collidingThreadsKeepIndependentNotificationsAndAllActionTargets" classname="app.onklav.home.RecoveryNotificationTest" time="4.504"/>
+  <testcase name="queuedReplyIsNotReportedAsFailedWhenReadAccessDisappears" classname="app.onklav.home.RecoveryNotificationTest" time="0.331"/>
+  <testcase name="markReadRechecksRoleAndPermissionBeforeProviderWritesAndLocalState" classname="app.onklav.home.RecoveryNotificationTest" time="0.343"/>
+  <testcase name="remindersAttentionAndThreadsCannotOverwriteOrCancelEachOther" classname="app.onklav.home.RecoveryNotificationTest" time="0.219"/>
+  <testcase name="removalRecoveryKeepsWorkEnqueuedDuringProfileDeletionAndRetriesFailures" classname="app.onklav.home.RecoveryNotificationTest" time="0.584"/>
+  <testcase name="profileCleanupAcceptsAlreadyMissingProfilesButRetainsRejectedExistingOnes" classname="app.onklav.home.RecoveryNotificationTest" time="0.088"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

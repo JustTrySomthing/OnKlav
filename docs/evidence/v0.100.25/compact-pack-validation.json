@@ -1,0 +1,31 @@
+{
+  "graph_byte_identical": true,
+  "selected_voice_rows_byte_identical": true,
+  "speed_priors_preserved": true,
+  "english_pronunciation_bytes_identical": true,
+  "upstream_speakers": [
+    0,
+    2
+  ],
+  "runtime_rows": [
+    0,
+    1
+  ],
+  "voicebank_bytes": 819200,
+  "pack_bytes": 53251426,
+  "files": [
+    "LICENSE",
+    "README.md",
+    "espeak-ng-data/en_dict",
+    "espeak-ng-data/intonations",
+    "espeak-ng-data/lang/gmw/en",
+    "espeak-ng-data/lang/gmw/en-US",
+    "espeak-ng-data/phondata",
+    "espeak-ng-data/phondata-manifest",
+    "espeak-ng-data/phonindex",
+    "espeak-ng-data/phontab",
+    "model.fp32.onnx",
+    "tokens.txt",
+    "voices.bin"
+  ]
+}

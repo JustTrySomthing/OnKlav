@@ -1,0 +1,40 @@
+[
+  {
+    "viewport": [
+      320,
+      560
+    ],
+    "touch_preview_then_single_drop": true,
+    "gravity_landing_and_audio": true,
+    "rms_baseline": 0,
+    "rms_during_drop": 0.03890176274003926,
+    "master_mute_actual_silence": true,
+    "pause_freezes_drop_and_audio": true,
+    "full_column_feedback": true,
+    "winning_line_and_report": true,
+    "stable_board_on_result": true,
+    "saved_game_no_replayed_moves_or_sounds": true,
+    "shared_help_quit_new_resume_dialogs": true,
+    "legacy_pending_ai_resumes_once": true,
+    "errors": []
+  },
+  {
+    "viewport": [
+      432,
+      740
+    ],
+    "touch_preview_then_single_drop": true,
+    "gravity_landing_and_audio": true,
+    "rms_baseline": 0,
+    "rms_during_drop": 0.0335311373210071,
+    "master_mute_actual_silence": true,
+    "pause_freezes_drop_and_audio": true,
+    "full_column_feedback": true,
+    "winning_line_and_report": true,
+    "stable_board_on_result": true,
+    "saved_game_no_replayed_moves_or_sounds": true,
+    "shared_help_quit_new_resume_dialogs": true,
+    "legacy_pending_ai_resumes_once": true,
+    "errors": []
+  }
+]

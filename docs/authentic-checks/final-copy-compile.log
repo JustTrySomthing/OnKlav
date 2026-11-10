@@ -1,0 +1,116 @@
+Picked up JAVA_TOOL_OPTIONS: -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=40201 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=40201 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.11.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :android:app
+WARNING: The option setting 'android.aapt2FromMavenOverride=/workspace/scratch/c739b0c1372b/video-env/sdk/build-tools/35.0.0/aapt2' is experimental.
+Checking the license for package Android SDK Platform-Tools in /workspace/scratch/c739b0c1372b/video-env/sdk/licenses
+Warning: License for package Android SDK Platform-Tools not accepted.
+WARNING: platform-tools package is not installed. Please accept the installation licence to continue
+
+> Task :android:app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:app:preBuild UP-TO-DATE
+> Task :android:app:preDebugBuild UP-TO-DATE
+> Task :android:games:preBuild UP-TO-DATE
+> Task :android:games:preDebugBuild UP-TO-DATE
+> Task :android:games:writeDebugAarMetadata UP-TO-DATE
+> Task :android:shared:preBuild UP-TO-DATE
+> Task :android:shared:preDebugBuild UP-TO-DATE
+> Task :android:shared:writeDebugAarMetadata UP-TO-DATE
+> Task :android:tools:preBuild UP-TO-DATE
+> Task :android:tools:preDebugBuild UP-TO-DATE
+> Task :android:tools:writeDebugAarMetadata UP-TO-DATE
+> Task :android:app:checkDebugAarMetadata UP-TO-DATE
+> Task :android:app:generateDebugResValues UP-TO-DATE
+> Task :android:games:generateDebugResValues UP-TO-DATE
+> Task :android:games:generateDebugResources UP-TO-DATE
+> Task :android:games:packageDebugResources UP-TO-DATE
+> Task :android:shared:generateDebugResValues UP-TO-DATE
+> Task :android:shared:generateDebugResources UP-TO-DATE
+> Task :android:shared:packageDebugResources UP-TO-DATE
+> Task :android:tools:generateDebugResValues UP-TO-DATE
+> Task :android:tools:generateDebugResources UP-TO-DATE
+> Task :android:tools:packageDebugResources UP-TO-DATE
+> Task :android:app:mapDebugSourceSetPaths UP-TO-DATE
+> Task :android:app:generateDebugResources UP-TO-DATE
+> Task :android:app:mergeDebugResources UP-TO-DATE
+> Task :android:app:packageDebugResources UP-TO-DATE
+> Task :android:app:parseDebugLocalResources UP-TO-DATE
+> Task :android:app:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :android:app:extractDeepLinksDebug UP-TO-DATE
+> Task :android:games:extractDeepLinksDebug UP-TO-DATE
+> Task :android:games:processDebugManifest UP-TO-DATE
+> Task :android:shared:extractDeepLinksDebug UP-TO-DATE
+> Task :android:shared:processDebugManifest UP-TO-DATE
+> Task :android:tools:extractDeepLinksDebug UP-TO-DATE
+> Task :android:tools:processDebugManifest UP-TO-DATE
+> Task :android:app:processDebugMainManifest UP-TO-DATE
+> Task :android:app:processDebugManifest UP-TO-DATE
+> Task :android:app:processDebugManifestForPackage UP-TO-DATE
+> Task :android:games:compileDebugLibraryResources UP-TO-DATE
+> Task :android:games:parseDebugLocalResources UP-TO-DATE
+> Task :android:games:generateDebugRFile UP-TO-DATE
+> Task :android:shared:compileDebugLibraryResources UP-TO-DATE
+> Task :android:shared:parseDebugLocalResources UP-TO-DATE
+> Task :android:shared:generateDebugRFile UP-TO-DATE
+> Task :android:tools:compileDebugLibraryResources UP-TO-DATE
+> Task :android:tools:parseDebugLocalResources UP-TO-DATE
+> Task :android:tools:generateDebugRFile UP-TO-DATE
+> Task :android:app:processDebugResources UP-TO-DATE
+> Task :android:games:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:games:compileDebugKotlin UP-TO-DATE
+> Task :android:games:javaPreCompileDebug UP-TO-DATE
+> Task :android:games:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:games:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :android:shared:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:shared:compileDebugKotlin UP-TO-DATE
+> Task :android:shared:javaPreCompileDebug UP-TO-DATE
+> Task :android:shared:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:shared:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :android:tools:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:tools:compileDebugKotlin UP-TO-DATE
+> Task :android:tools:javaPreCompileDebug UP-TO-DATE
+> Task :android:tools:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:tools:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :android:app:compileDebugKotlin
+w: file:///workspace/scratch/c739b0c1372b/video-work/OnKlav/android/app/src/main/kotlin/app/onklav/home/Authentic.kt:33:375 'constructor(capitalization: KeyboardCapitalization = ..., autoCorrect: Boolean, keyboardType: KeyboardType = ..., imeAction: ImeAction = ..., platformImeOptions: PlatformImeOptions? = ..., showKeyboardOnFocus: Boolean? = ..., hintLocales: LocaleList? = ...): KeyboardOptions' is deprecated. Please use the new constructor that takes optional autoCorrectEnabled parameter.
+w: file:///workspace/scratch/c739b0c1372b/video-work/OnKlav/android/app/src/main/kotlin/app/onklav/home/CameraScreen.kt:106:84 'val Icons.Outlined.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Outlined.ArrowBack.
+w: file:///workspace/scratch/c739b0c1372b/video-work/OnKlav/android/app/src/main/kotlin/app/onklav/home/CameraScreen.kt:132:67 'val Icons.Outlined.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Outlined.ArrowBack.
+w: file:///workspace/scratch/c739b0c1372b/video-work/OnKlav/android/app/src/main/kotlin/app/onklav/home/ClockEngine.kt:109:84 'fun vibrate(p0: VibrationEffect!, p1: AudioAttributes!): Unit' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/video-work/OnKlav/android/app/src/main/kotlin/app/onklav/home/ClockScreen.kt:137:68 The corresponding parameter in the supertype 'ComponentActivity' is named 'savedInstanceState'. This may cause problems when calling this function with named arguments.
+w: file:///workspace/scratch/c739b0c1372b/video-work/OnKlav/android/app/src/main/kotlin/app/onklav/home/CodeEditView.kt:60:46 'field scaledDensity: Float' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/video-work/OnKlav/android/app/src/main/kotlin/app/onklav/home/CompressEngine.kt:100:69 'constructor(vararg p0: EditedMediaItem): EditedMediaItemSequence.Builder' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/video-work/OnKlav/android/app/src/main/kotlin/app/onklav/home/EmailScreen.kt:67:191 'val Icons.Outlined.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Outlined.ArrowBack.
+w: file:///workspace/scratch/c739b0c1372b/video-work/OnKlav/android/app/src/main/kotlin/app/onklav/home/FolderVaultCrypto.kt:35:32 'static fun parseKeyset(serializedKeyset: ByteArray!, access: SecretKeyAccess!): KeysetHandle!' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/video-work/OnKlav/android/app/src/main/kotlin/app/onklav/home/FolderVaultCrypto.kt:39:33 'static fun serializeKeyset(keysetHandle: KeysetHandle!, access: SecretKeyAccess!): ByteArray!' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/video-work/OnKlav/android/app/src/main/kotlin/app/onklav/home/FolderVaultCrypto.kt:39:62 'static fun generateNew(parameters: Parameters!): KeysetHandle!' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/video-work/OnKlav/android/app/src/main/kotlin/app/onklav/home/MailCompose.kt:20:147 'val Icons.Outlined.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Outlined.ArrowBack.
+w: file:///workspace/scratch/c739b0c1372b/video-work/OnKlav/android/app/src/main/kotlin/app/onklav/home/MailCompose.kt:20:516 'val Icons.Outlined.Send: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Outlined.Send.
+w: file:///workspace/scratch/c739b0c1372b/video-work/OnKlav/android/app/src/main/kotlin/app/onklav/home/MainActivity.kt:52:55 'static field TRIM_MEMORY_RUNNING_LOW: Int' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/video-work/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessageAttachments.kt:71:9 'constructor(): MediaRecorder' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/video-work/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt:212:29 'fun get(p0: String!): Any?' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/video-work/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessengerPane.kt:141:21 'val LocalClipboardManager: ProvidableCompositionLocal<ClipboardManager>' is deprecated. Use LocalClipboard instead which supports suspend functions.
+w: file:///workspace/scratch/c739b0c1372b/video-work/OnKlav/android/app/src/main/kotlin/app/onklav/home/NeuralSpeech.kt:72:41 'static field TRIM_MEMORY_RUNNING_LOW: Int' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/video-work/OnKlav/android/app/src/main/kotlin/app/onklav/home/NeuralSpeech.kt:73:41 'static field TRIM_MEMORY_RUNNING_CRITICAL: Int' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/video-work/OnKlav/android/app/src/main/kotlin/app/onklav/home/NeuralSpeech.kt:75:41 'static field TRIM_MEMORY_MODERATE: Int' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/video-work/OnKlav/android/app/src/main/kotlin/app/onklav/home/NeuralSpeech.kt:76:41 'static field TRIM_MEMORY_COMPLETE: Int' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/video-work/OnKlav/android/app/src/main/kotlin/app/onklav/home/RecorderEngine.kt:49:187 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'MediaCodecInfo.VideoCapabilities?'.
+w: file:///workspace/scratch/c739b0c1372b/video-work/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkAppScreen.kt:591:179 'val Icons.Outlined.ArrowForward: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Outlined.ArrowForward.
+w: file:///workspace/scratch/c739b0c1372b/video-work/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkMedia.kt:243:260 'constructor(p0: Int, p1: CharSequence!, p2: PendingIntent?): Notification.Action.Builder' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/video-work/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkPdfViewer.kt:83:319 'fun <T : Parcelable!> getParcelableArrayList(p0: String?): ArrayList<T!>?' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/video-work/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkPdfViewer.kt:88:190 'fun <T : Parcelable!> getParcelableArrayList(p0: String?): ArrayList<T!>?' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/video-work/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditEngine.kt:20:18 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
+w: file:///workspace/scratch/c739b0c1372b/video-work/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditEngine.kt:33:83 'static fun createExperimentalSpeedChangingEffect(p0: SpeedProvider): Pair<AudioProcessor, Effect>' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/video-work/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditEngine.kt:61:120 'static fun createExperimentalSpeedChangingEffect(p0: SpeedProvider): Pair<AudioProcessor, Effect>' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/video-work/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:127:905 'constructor(p0: (Mutable)List<EditedMediaItem>): EditedMediaItemSequence.Builder' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/video-work/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:165:224 'constructor(): MediaRecorder' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/video-work/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoNoise.kt:14:18 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
+w: file:///workspace/scratch/c739b0c1372b/video-work/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoOfflineAudio.kt:23:18 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
+w: file:///workspace/scratch/c739b0c1372b/video-work/OnKlav/android/app/src/main/kotlin/app/onklav/home/YoutubeDownloads.kt:71:1112 'constructor(vararg p0: EditedMediaItem): EditedMediaItemSequence.Builder' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/video-work/OnKlav/android/app/src/main/kotlin/app/onklav/home/YoutubeDownloads.kt:71:1192 'constructor(vararg p0: EditedMediaItem): EditedMediaItemSequence.Builder' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/video-work/OnKlav/android/app/src/main/kotlin/app/onklav/home/YoutubeResolver.kt:48:107 'field resolution: String!' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/video-work/OnKlav/android/app/src/main/kotlin/app/onklav/home/YoutubeResolver.kt:48:223 'field resolution: String!' is deprecated. Deprecated in Java.
+w: Detected multiple Kotlin daemon sessions at 
+
+BUILD SUCCESSFUL in 2m 40s
+50 actionable tasks: 1 executed, 49 up-to-date

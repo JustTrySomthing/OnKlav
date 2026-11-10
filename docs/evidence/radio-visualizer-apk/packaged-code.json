@@ -1,0 +1,23 @@
+{
+  "defined_classes": [
+    "RadioVisualizerKt",
+    "RadioWaveform",
+    "SdkRadioPlayerKt",
+    "PhotoEffects",
+    "VideoEditorModel",
+    "VideoTransitionEffect",
+    "VideoNoise",
+    "VideoProxyKt",
+    "VideoProjectArchive"
+  ],
+  "control_markers": [
+    "Open music visualizer",
+    "Rotate your phone for full screen",
+    "Circular audio spectrum",
+    "Aurora colors",
+    "Sunset colors",
+    "Electric colors"
+  ],
+  "tested_visualizer_source_hashes_match": true,
+  "original_image_video_code_retained": true
+}

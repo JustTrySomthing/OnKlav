@@ -1,0 +1,306 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.11.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :android:app
+WARNING: The option setting 'android.aapt2FromMavenOverride=/workspace/scratch/c739b0c1372b/build-env/sdk/build-tools/35.0.0/aapt2' is experimental.
+WARNING: platform-tools package is not installed.
+
+> Task :android:app:preBuild UP-TO-DATE
+> Task :android:app:preOptimizedBuild UP-TO-DATE
+> Task :android:app:mergeOptimizedJniLibFolders
+> Task :android:games:preBuild UP-TO-DATE
+> Task :android:games:preReleaseBuild UP-TO-DATE
+> Task :android:games:mergeReleaseJniLibFolders
+> Task :android:games:mergeReleaseNativeLibs NO-SOURCE
+> Task :android:shared:preBuild UP-TO-DATE
+> Task :android:shared:preReleaseBuild UP-TO-DATE
+> Task :android:games:copyReleaseJniLibsProjectOnly
+> Task :android:shared:mergeReleaseJniLibFolders
+> Task :android:tools:preBuild UP-TO-DATE
+> Task :android:tools:preReleaseBuild UP-TO-DATE
+> Task :android:tools:mergeReleaseJniLibFolders
+> Task :android:tools:mergeReleaseNativeLibs NO-SOURCE
+> Task :android:tools:copyReleaseJniLibsProjectOnly
+> Task :android:shared:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:shared:generateReleaseResValues
+> Task :android:shared:generateReleaseResources
+> Task :android:shared:mergeReleaseNativeLibs
+> Task :android:shared:packageReleaseResources
+> Task :android:shared:copyReleaseJniLibsProjectOnly
+> Task :android:shared:parseReleaseLocalResources
+> Task :android:shared:generateReleaseRFile
+> Task :android:app:mergeOptimizedNativeLibs
+> Task :android:app:stripOptimizedDebugSymbols
+> Task :android:app:extractOptimizedNativeSymbolTables
+> Task :android:app:mergeOptimizedNativeDebugMetadata NO-SOURCE
+> Task :android:shared:javaPreCompileRelease
+> Task :android:tools:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:tools:generateReleaseResValues
+> Task :android:tools:generateReleaseResources
+> Task :android:tools:packageReleaseResources
+> Task :android:tools:parseReleaseLocalResources
+> Task :android:tools:generateReleaseRFile
+> Task :android:tools:javaPreCompileRelease
+> Task :android:games:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:games:generateReleaseResValues
+> Task :android:games:generateReleaseResources
+> Task :android:games:packageReleaseResources
+> Task :android:games:parseReleaseLocalResources
+> Task :android:games:generateReleaseRFile
+> Task :android:games:compileReleaseKotlin
+> Task :android:games:javaPreCompileRelease
+> Task :android:games:compileReleaseJavaWithJavac NO-SOURCE
+> Task :android:games:mergeReleaseGeneratedProguardFiles
+> Task :android:games:exportReleaseConsumerProguardFiles
+> Task :android:app:buildKotlinToolingMetadata
+> Task :android:app:checkOptimizedDuplicateClasses
+> Task :android:app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:games:writeReleaseAarMetadata
+> Task :android:shared:writeReleaseAarMetadata
+> Task :android:tools:writeReleaseAarMetadata
+> Task :android:app:checkOptimizedAarMetadata
+> Task :android:app:generateOptimizedResValues
+> Task :android:app:mapOptimizedSourceSetPaths
+> Task :android:app:generateOptimizedResources
+> Task :android:app:mergeOptimizedResources
+> Task :android:app:packageOptimizedResources
+> Task :android:app:parseOptimizedLocalResources
+> Task :android:app:createOptimizedCompatibleScreenManifests
+> Task :android:app:extractDeepLinksOptimized
+> Task :android:games:extractDeepLinksRelease
+> Task :android:games:processReleaseManifest
+> Task :android:shared:extractDeepLinksRelease
+> Task :android:shared:processReleaseManifest
+> Task :android:tools:extractDeepLinksRelease
+> Task :android:tools:processReleaseManifest
+> Task :android:app:processOptimizedMainManifest
+> Task :android:app:processOptimizedManifest
+> Task :android:app:processOptimizedManifestForPackage
+> Task :android:app:processOptimizedResources
+> Task :android:games:bundleLibCompileToJarRelease
+> Task :android:app:javaPreCompileOptimized
+> Task :android:games:prepareReleaseArtProfile
+> Task :android:shared:prepareReleaseArtProfile
+> Task :android:tools:prepareReleaseArtProfile
+> Task :android:app:mergeOptimizedArtProfile
+> Task :android:games:bundleLibRuntimeToJarRelease
+> Task :android:app:extractProguardFiles UP-TO-DATE
+> Task :android:games:processReleaseJavaRes
+> Task :android:app:mergeOptimizedStartupProfile
+> Task :android:app:mergeOptimizedShaders
+> Task :android:app:compileOptimizedShaders NO-SOURCE
+> Task :android:app:generateOptimizedAssets UP-TO-DATE
+> Task :android:games:mergeReleaseShaders
+> Task :android:games:compileReleaseShaders NO-SOURCE
+> Task :android:games:generateReleaseAssets UP-TO-DATE
+> Task :android:games:mergeReleaseAssets
+> Task :android:shared:mergeReleaseShaders
+> Task :android:shared:compileReleaseShaders NO-SOURCE
+> Task :android:shared:generateReleaseAssets UP-TO-DATE
+> Task :android:shared:mergeReleaseAssets
+> Task :android:tools:mergeReleaseShaders
+> Task :android:tools:compileReleaseShaders NO-SOURCE
+> Task :android:tools:generateReleaseAssets UP-TO-DATE
+> Task :android:tools:mergeReleaseAssets
+> Task :android:app:mergeOptimizedAssets
+> Task :android:app:compressOptimizedAssets
+> Task :android:app:extractOptimizedVersionControlInfo
+> Task :android:games:createFullJarRelease
+> Task :android:games:extractProguardFiles UP-TO-DATE
+> Task :android:games:generateReleaseLintModel
+> Task :android:games:prepareLintJarForPublish UP-TO-DATE
+> Task :android:shared:extractProguardFiles UP-TO-DATE
+> Task :android:shared:prepareLintJarForPublish UP-TO-DATE
+> Task :android:tools:extractProguardFiles UP-TO-DATE
+> Task :android:tools:prepareLintJarForPublish UP-TO-DATE
+> Task :android:tools:stripReleaseDebugSymbols NO-SOURCE
+> Task :android:tools:copyReleaseJniLibsProjectAndLocalJars
+> Task :android:tools:extractDeepLinksForAarRelease
+
+> Task :android:shared:stripReleaseDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libonklav_core.so, libonklav_speech.so, libonnxruntime.so, libsherpa-onnx-c-api.so.
+
+> Task :android:shared:copyReleaseJniLibsProjectAndLocalJars
+> Task :android:shared:extractDeepLinksForAarRelease
+> Task :android:games:stripReleaseDebugSymbols NO-SOURCE
+> Task :android:games:copyReleaseJniLibsProjectAndLocalJars
+> Task :android:games:extractDeepLinksForAarRelease
+> Task :android:games:extractReleaseAnnotations FAILED
+
+> Task :android:shared:compileReleaseKotlin
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/Chrome.kt:266:24 'var statusBarColor: Int' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/Chrome.kt:267:24 'var navigationBarColor: Int' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/Chrome.kt:268:65 'var isStatusBarContrastEnforced: Boolean' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/LauncherLayout.kt:4:27 Non-public primary constructor is exposed via the generated 'copy()' method of the 'data' class.
+
+The generated 'copy()' will change its visibility in future releases.
+
+To suppress the warning do one of the following:
+- Annotate the data class with the '@ConsistentCopyVisibility' annotation.
+- Use the '-Xconsistent-data-class-copy-visibility' compiler flag.
+- Annotate the data class with the '@ExposedCopyVisibility' annotation 
+  (Discouraged, but can be used to keep binary compatibility).
+
+To learn more, see the documentation of the '@ConsistentCopyVisibility' and '@ExposedCopyVisibility' annotations.
+
+This will become an error in Kotlin 2.2.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/OnKlavFileContracts.kt:17:29 The corresponding parameter in the supertype 'OpenDocument' is named 'context'. This may cause problems when calling this function with named arguments.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/OnKlavFileContracts.kt:18:28 The corresponding parameter in the supertype 'OpenDocument' is named 'resultCode'. This may cause problems when calling this function with named arguments.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/OnKlavFileContracts.kt:18:37 The corresponding parameter in the supertype 'OpenDocument' is named 'intent'. This may cause problems when calling this function with named arguments.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/OnKlavFileContracts.kt:21:29 The corresponding parameter in the supertype 'OpenMultipleDocuments' is named 'context'. This may cause problems when calling this function with named arguments.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/OnKlavFileContracts.kt:22:28 The corresponding parameter in the supertype 'OpenMultipleDocuments' is named 'resultCode'. This may cause problems when calling this function with named arguments.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/OnKlavFileContracts.kt:22:37 The corresponding parameter in the supertype 'OpenMultipleDocuments' is named 'intent'. This may cause problems when calling this function with named arguments.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/OnKlavFileContracts.kt:25:29 The corresponding parameter in the supertype 'CreateDocument' is named 'context'. This may cause problems when calling this function with named arguments.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/OnKlavFileContracts.kt:26:28 The corresponding parameter in the supertype 'CreateDocument' is named 'resultCode'. This may cause problems when calling this function with named arguments.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/OnKlavFileContracts.kt:26:37 The corresponding parameter in the supertype 'CreateDocument' is named 'intent'. This may cause problems when calling this function with named arguments.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/OnKlavFileContracts.kt:29:29 The corresponding parameter in the supertype 'OpenDocumentTree' is named 'context'. This may cause problems when calling this function with named arguments.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/OnKlavFileContracts.kt:30:28 The corresponding parameter in the supertype 'OpenDocumentTree' is named 'resultCode'. This may cause problems when calling this function with named arguments.
+w: file:///workspace/scratch/c739b0c1372b/current/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/OnKlavFileContracts.kt:30:37 The corresponding parameter in the supertype 'OpenDocumentTree' is named 'intent'. This may cause problems when calling this function with named arguments.
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':android:games:extractReleaseAnnotations'.
+> Could not resolve all files for configuration ':android:games:detachedConfiguration1'.
+   > Could not resolve commons-codec:commons-codec:1.10.
+     Required by:
+         project :android:games > com.android.tools.lint:lint-gradle:31.9.2 > com.android.tools.lint:lint:31.9.2 > com.android.tools:sdklib:31.9.2 > org.apache.httpcomponents:httpmime:4.5.6 > org.apache.httpcomponents:httpclient:4.5.6
+      > No cached version of commons-codec:commons-codec:1.10 available for offline mode.
+
+* Try:
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+* Exception is:
+org.gradle.api.tasks.TaskExecutionException: Execution failed for task ':android:games:extractReleaseAnnotations'.
+	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:38)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.executeTask(EventFiringTaskExecuter.java:77)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:55)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:52)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter.execute(EventFiringTaskExecuter.java:52)
+	at org.gradle.execution.plan.LocalTaskNodeExecutor.execute(LocalTaskNodeExecutor.java:42)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:331)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:318)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.lambda$execute$0(DefaultTaskExecutionGraph.java:314)
+	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:85)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:314)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:459)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:376)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
+Caused by: org.gradle.api.internal.artifacts.ivyservice.TypedResolveException: Could not resolve all files for configuration ':android:games:detachedConfiguration1'.
+	at org.gradle.api.internal.artifacts.ResolveExceptionMapper.mapFailure(ResolveExceptionMapper.java:68)
+	at org.gradle.api.internal.artifacts.ResolveExceptionMapper.mapFailures(ResolveExceptionMapper.java:60)
+	at org.gradle.api.internal.artifacts.configurations.DefaultConfiguration$DefaultResolutionHost.consolidateFailures(DefaultConfiguration.java:1995)
+	at org.gradle.api.internal.artifacts.configurations.ResolutionHost.rethrowFailuresAndReportProblems(ResolutionHost.java:75)
+	at org.gradle.api.internal.artifacts.configurations.ResolutionBackedFileCollection.maybeThrowResolutionFailures(ResolutionBackedFileCollection.java:87)
+	at org.gradle.api.internal.artifacts.configurations.ResolutionBackedFileCollection.visitContents(ResolutionBackedFileCollection.java:77)
+	at org.gradle.api.internal.file.AbstractFileCollection.visitStructure(AbstractFileCollection.java:360)
+	at org.gradle.api.internal.artifacts.configurations.DefaultConfiguration.visitContents(DefaultConfiguration.java:550)
+	at org.gradle.api.internal.file.AbstractFileCollection.visitStructure(AbstractFileCollection.java:360)
+	at org.gradle.api.internal.file.collections.DefaultConfigurableFileCollection.lambda$calculateFinalizedValue$1(DefaultConfigurableFileCollection.java:391)
+	at org.gradle.api.internal.file.collections.UnpackingVisitor.add(UnpackingVisitor.java:67)
+	at org.gradle.api.internal.file.collections.DefaultConfigurableFileCollection$UnresolvedItemsCollector.visitContents(DefaultConfigurableFileCollection.java:594)
+	at org.gradle.api.internal.file.collections.DefaultConfigurableFileCollection.calculateFinalizedValue(DefaultConfigurableFileCollection.java:391)
+	at org.gradle.api.internal.file.collections.DefaultConfigurableFileCollection.finalizeNow(DefaultConfigurableFileCollection.java:120)
+	at org.gradle.api.internal.file.collections.DefaultConfigurableFileCollection.lambda$visitChildren$2(DefaultConfigurableFileCollection.java:415)
+	at org.gradle.api.internal.provider.ValueState.finalizeOnReadIfNeeded(ValueState.java:139)
+	at org.gradle.api.internal.file.collections.DefaultConfigurableFileCollection.visitChildren(DefaultConfigurableFileCollection.java:415)
+	at org.gradle.api.internal.file.CompositeFileCollection.visitContents(CompositeFileCollection.java:113)
+	at org.gradle.api.internal.file.AbstractFileCollection.visitStructure(AbstractFileCollection.java:360)
+	at org.gradle.api.internal.file.CompositeFileCollection.lambda$visitContents$0(CompositeFileCollection.java:113)
+	at org.gradle.api.internal.file.collections.UnpackingVisitor.add(UnpackingVisitor.java:67)
+	at org.gradle.api.internal.file.collections.UnpackingVisitor.add(UnpackingVisitor.java:92)
+	at org.gradle.api.internal.file.DefaultFileCollectionFactory$ResolvingFileCollection.visitChildren(DefaultFileCollectionFactory.java:306)
+	at org.gradle.api.internal.file.CompositeFileCollection.visitContents(CompositeFileCollection.java:113)
+	at org.gradle.api.internal.file.AbstractFileCollection.visitStructure(AbstractFileCollection.java:360)
+	at org.gradle.api.internal.file.CompositeFileCollection.lambda$visitContents$0(CompositeFileCollection.java:113)
+	at org.gradle.api.internal.tasks.PropertyFileCollection.visitChildren(PropertyFileCollection.java:48)
+	at org.gradle.api.internal.file.CompositeFileCollection.visitContents(CompositeFileCollection.java:113)
+	at org.gradle.api.internal.file.AbstractFileCollection.visitStructure(AbstractFileCollection.java:360)
+	at org.gradle.internal.fingerprint.impl.DefaultFileCollectionSnapshotter.snapshot(DefaultFileCollectionSnapshotter.java:47)
+	at org.gradle.internal.execution.impl.DefaultInputFingerprinter$InputCollectingVisitor.visitInputFileProperty(DefaultInputFingerprinter.java:133)
+	at org.gradle.api.internal.tasks.execution.TaskExecution.visitRegularInputs(TaskExecution.java:324)
+	at org.gradle.internal.execution.impl.DefaultInputFingerprinter.fingerprintInputProperties(DefaultInputFingerprinter.java:63)
+	at org.gradle.internal.execution.steps.AbstractCaptureStateBeforeExecutionStep.captureExecutionStateWithOutputs(AbstractCaptureStateBeforeExecutionStep.java:109)
+	at org.gradle.internal.execution.steps.AbstractCaptureStateBeforeExecutionStep.lambda$captureExecutionState$0(AbstractCaptureStateBeforeExecutionStep.java:74)
+	at org.gradle.internal.execution.steps.BuildOperationStep$1.call(BuildOperationStep.java:37)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.internal.execution.steps.BuildOperationStep.operation(BuildOperationStep.java:34)
+	at org.gradle.internal.execution.steps.AbstractCaptureStateBeforeExecutionStep.captureExecutionState(AbstractCaptureStateBeforeExecutionStep.java:69)
+	at org.gradle.internal.execution.steps.AbstractCaptureStateBeforeExecutionStep.execute(AbstractCaptureStateBeforeExecutionStep.java:62)
+	at org.gradle.internal.execution.steps.AbstractCaptureStateBeforeExecutionStep.execute(AbstractCaptureStateBeforeExecutionStep.java:43)
+	at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.executeWithNonEmptySources(AbstractSkipEmptyWorkStep.java:125)
+	at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.execute(AbstractSkipEmptyWorkStep.java:56)
+	at org.gradle.internal.execution.steps.AbstractSkipEmptyWorkStep.execute(AbstractSkipEmptyWorkStep.java:36)
+	at org.gradle.internal.execution.steps.legacy.MarkSnapshottingInputsStartedStep.execute(MarkSnapshottingInputsStartedStep.java:38)
+	at org.gradle.internal.execution.steps.LoadPreviousExecutionStateStep.execute(LoadPreviousExecutionStateStep.java:36)
+	at org.gradle.internal.execution.steps.LoadPreviousExecutionStateStep.execute(LoadPreviousExecutionStateStep.java:23)
+	at org.gradle.internal.execution.steps.HandleStaleOutputsStep.execute(HandleStaleOutputsStep.java:75)
+	at org.gradle.internal.execution.steps.HandleStaleOutputsStep.execute(HandleStaleOutputsStep.java:41)
+	at org.gradle.internal.execution.steps.AssignMutableWorkspaceStep.lambda$execute$0(AssignMutableWorkspaceStep.java:35)
+	at org.gradle.api.internal.tasks.execution.TaskExecution$4.withWorkspace(TaskExecution.java:289)
+	at org.gradle.internal.execution.steps.AssignMutableWorkspaceStep.execute(AssignMutableWorkspaceStep.java:31)
+	at org.gradle.internal.execution.steps.AssignMutableWorkspaceStep.execute(AssignMutableWorkspaceStep.java:22)
+	at org.gradle.internal.execution.steps.ChoosePipelineStep.execute(ChoosePipelineStep.java:40)
+	at org.gradle.internal.execution.steps.ChoosePipelineStep.execute(ChoosePipelineStep.java:23)
+	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.lambda$execute$2(ExecuteWorkBuildOperationFiringStep.java:67)
+	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.execute(ExecuteWorkBuildOperationFiringStep.java:67)
+	at org.gradle.internal.execution.steps.ExecuteWorkBuildOperationFiringStep.execute(ExecuteWorkBuildOperationFiringStep.java:39)
+	at org.gradle.internal.execution.steps.IdentityCacheStep.execute(IdentityCacheStep.java:46)
+	at org.gradle.internal.execution.steps.IdentityCacheStep.execute(IdentityCacheStep.java:34)
+	at org.gradle.internal.execution.steps.IdentifyStep.execute(IdentifyStep.java:48)
+	at org.gradle.internal.execution.steps.IdentifyStep.execute(IdentifyStep.java:35)
+	at org.gradle.internal.execution.impl.DefaultExecutionEngine$1.execute(DefaultExecutionEngine.java:61)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.executeIfValid(ExecuteActionsTaskExecuter.java:127)
+	at org.gradle.api.internal.tasks.execution.ExecuteActionsTaskExecuter.execute(ExecuteActionsTaskExecuter.java:116)
+	at org.gradle.api.internal.tasks.execution.FinalizePropertiesTaskExecuter.execute(FinalizePropertiesTaskExecuter.java:46)
+	at org.gradle.api.internal.tasks.execution.ResolveTaskExecutionModeExecuter.execute(ResolveTaskExecutionModeExecuter.java:51)
+	at org.gradle.api.internal.tasks.execution.SkipTaskWithNoActionsExecuter.execute(SkipTaskWithNoActionsExecuter.java:57)
+	at org.gradle.api.internal.tasks.execution.SkipOnlyIfTaskExecuter.execute(SkipOnlyIfTaskExecuter.java:74)
+	at org.gradle.api.internal.tasks.execution.CatchExceptionTaskExecuter.execute(CatchExceptionTaskExecuter.java:36)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.executeTask(EventFiringTaskExecuter.java:77)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:55)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter$1.call(EventFiringTaskExecuter.java:52)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.api.internal.tasks.execution.EventFiringTaskExecuter.execute(EventFiringTaskExecuter.java:52)
+	at org.gradle.execution.plan.LocalTaskNodeExecutor.execute(LocalTaskNodeExecutor.java:42)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:331)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$InvokeNodeExecutorsAction.execute(DefaultTaskExecutionGraph.java:318)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.lambda$execute$0(DefaultTaskExecutionGraph.java:314)
+	at org.gradle.internal.operations.CurrentBuildOperationRef.with(CurrentBuildOperationRef.java:85)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:314)
+	at org.gradle.execution.taskgraph.DefaultTaskExecutionGraph$BuildOperationAwareExecutionAction.execute(DefaultTaskExecutionGraph.java:303)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.execute(DefaultPlanExecutor.java:459)
+	at org.gradle.execution.plan.DefaultPlanExecutor$ExecutorWorker.run(DefaultPlanExecutor.java:376)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
+Caused by: org.gradle.internal.resolve.ModuleVersionResolveException: Could not resolve commons-codec:commons-codec:1.10.
+Required by:
+    project :android:games > com.android.tools.lint:lint-gradle:31.9.2 > com.android.tools.lint:lint:31.9.2 > com.android.tools:sdklib:31.9.2 > org.apache.httpcomponents:httpmime:4.5.6 > org.apache.httpcomponents:httpclient:4.5.6
+Caused by: org.gradle.internal.resolve.ModuleVersionResolveException: No cached version of commons-codec:commons-codec:1.10 available for offline mode.
+
+
+BUILD FAILED in 37s
+93 actionable tasks: 86 executed, 7 up-to-date

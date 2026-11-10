@@ -1,0 +1,307 @@
+{
+  "scope": "Independent per-game/publisher cartridge saves and title-specific launch, shared SDK/lifecycle and all six included games",
+  "source_host": "0.100.56-rc1/code165",
+  "latest_built_apk": "0.100.55-rc1/code164 predates this source",
+  "apk_built": false,
+  "host_cases": [
+    {
+      "class": "app.onklav.home.GameSaveStoreTest",
+      "method": "invalidOrOversizedNewGamePreservesPreviousSave"
+    },
+    {
+      "class": "app.onklav.home.GameSaveStoreTest",
+      "method": "rebootPreservesDataAndTerminalProgressIsDistinctFromResumability"
+    },
+    {
+      "class": "app.onklav.home.GameSaveStoreTest",
+      "method": "slotNamesCannotEscapePrivateStorage"
+    },
+    {
+      "class": "app.onklav.home.GameSaveStoreTest",
+      "method": "diskFailureKeepsOldCheckpoint"
+    },
+    {
+      "class": "app.onklav.home.GameSaveStoreTest",
+      "method": "obsoleteRendererCannotOverwriteNewSession"
+    },
+    {
+      "class": "app.onklav.home.GameSaveStoreTest",
+      "method": "corruptPrimaryIsReportedAndPreviousCopyRetained"
+    },
+    {
+      "class": "app.onklav.home.GameSaveStoreTest",
+      "method": "everyGameAndPublisherHasItsOwnCartridge"
+    },
+    {
+      "class": "app.onklav.home.GameSaveStoreTest",
+      "method": "profileAndFriendSessionSurviveClearingSolo"
+    },
+    {
+      "class": "app.onklav.home.FriendGameUiTest",
+      "method": "navalTapOpensNavalAndLeavesOtherSavedGameAlone"
+    },
+    {
+      "class": "app.onklav.home.GameSessionStatusTest",
+      "method": "catalogReaderObservesEveryWriterChangeWithoutPreferenceReload"
+    },
+    {
+      "class": "app.onklav.home.GameSessionStatusTest",
+      "method": "quitOrNewCannotResurrectTheOldPreferenceMarker"
+    },
+    {
+      "class": "app.onklav.home.GameSessionStatusTest",
+      "method": "oldOrOversizedHintsCannotBeUsedAsAGameIdentity"
+    },
+    {
+      "class": "app.onklav.home.GameSessionStatusTest",
+      "method": "sessionClaimsNeverRedirectOrReleaseAnotherGame"
+    },
+    {
+      "class": "app.onklav.home.FriendGamesTest",
+      "method": "retryExpiredAttemptCreatesFreshWindowAndCancelCannotEndAcceptedGame"
+    },
+    {
+      "class": "app.onklav.home.FriendGamesTest",
+      "method": "otherGamesRemainIndependentWhileFriendMatchIsPaused"
+    },
+    {
+      "class": "app.onklav.home.FriendGamesTest",
+      "method": "replayJournalPreservesBothDirectionsAndAcknowledgesDrainedFrames"
+    },
+    {
+      "class": "app.onklav.home.FriendGamesTest",
+      "method": "outOfOrderTurnsDrainContiguouslyAndWrongGameCannotSend"
+    },
+    {
+      "class": "app.onklav.home.FriendGamesTest",
+      "method": "wireRejectsMalformedOversizedAndRealtimePayloads"
+    },
+    {
+      "class": "app.onklav.home.FriendGamesTest",
+      "method": "originalReadableCheckInvitationAcceptanceTurnsAndAcknowledgement"
+    },
+    {
+      "class": "app.onklav.home.FriendGamesTest",
+      "method": "pandaIsFirstPreinstalledAndUsesScopedTurnTransport"
+    },
+    {
+      "class": "app.onklav.home.FriendGamesTest",
+      "method": "standaloneReverificationNeverCreatesAnInvitationAndHonorsClose"
+    },
+    {
+      "class": "app.onklav.home.FriendGamesTest",
+      "method": "cancelledInvitationDoesNotBlockSoloOrReviveOnLateAppReply"
+    },
+    {
+      "class": "app.onklav.home.FriendGamesTest",
+      "method": "incomingCancelDeclinesAndReleasesThePendingSlot"
+    },
+    {
+      "class": "app.onklav.home.NeonDominosCatalogTest",
+      "method": "includedGameUsesSoloEntryArtworkAndTheSharedHost"
+    },
+    {
+      "class": "app.onklav.home.NeonDominosCatalogTest",
+      "method": "savedPandaDoesNotRedirectOrBlockDominos"
+    }
+  ],
+  "host_case_count": 25,
+  "android_runtime_matches_compiled_classes": true,
+  "web_browser": {
+    "cases": [
+      {
+        "viewport": [
+          320,
+          640
+        ],
+        "game": "panda",
+        "host_ack_before_return": true,
+        "exact_resume": true,
+        "new_cancel_preserves_save": true,
+        "other_games_unchanged": true
+      },
+      {
+        "viewport": [
+          320,
+          640
+        ],
+        "game": "dominos",
+        "host_ack_before_return": true,
+        "exact_resume": true,
+        "new_cancel_preserves_save": true,
+        "other_games_unchanged": true
+      },
+      {
+        "viewport": [
+          320,
+          640
+        ],
+        "game": "hockey",
+        "host_ack_before_return": true,
+        "exact_resume": true,
+        "new_cancel_preserves_save": true,
+        "other_games_unchanged": true
+      },
+      {
+        "viewport": [
+          320,
+          640
+        ],
+        "game": "naval",
+        "host_ack_before_return": true,
+        "exact_resume": true,
+        "new_cancel_preserves_save": true,
+        "other_games_unchanged": true
+      },
+      {
+        "viewport": [
+          320,
+          640
+        ],
+        "game": "four",
+        "host_ack_before_return": true,
+        "exact_resume": true,
+        "new_cancel_preserves_save": true,
+        "other_games_unchanged": true
+      },
+      {
+        "viewport": [
+          320,
+          640
+        ],
+        "game": "blackjack",
+        "host_ack_before_return": true,
+        "exact_resume": true,
+        "new_cancel_preserves_save": true,
+        "other_games_unchanged": true
+      },
+      {
+        "viewport": [
+          432,
+          800
+        ],
+        "game": "panda",
+        "host_ack_before_return": true,
+        "exact_resume": true,
+        "new_cancel_preserves_save": true,
+        "other_games_unchanged": true
+      },
+      {
+        "viewport": [
+          432,
+          800
+        ],
+        "game": "dominos",
+        "host_ack_before_return": true,
+        "exact_resume": true,
+        "new_cancel_preserves_save": true,
+        "other_games_unchanged": true
+      },
+      {
+        "viewport": [
+          432,
+          800
+        ],
+        "game": "hockey",
+        "host_ack_before_return": true,
+        "exact_resume": true,
+        "new_cancel_preserves_save": true,
+        "other_games_unchanged": true
+      },
+      {
+        "viewport": [
+          432,
+          800
+        ],
+        "game": "naval",
+        "host_ack_before_return": true,
+        "exact_resume": true,
+        "new_cancel_preserves_save": true,
+        "other_games_unchanged": true
+      },
+      {
+        "viewport": [
+          432,
+          800
+        ],
+        "game": "four",
+        "host_ack_before_return": true,
+        "exact_resume": true,
+        "new_cancel_preserves_save": true,
+        "other_games_unchanged": true
+      },
+      {
+        "viewport": [
+          432,
+          800
+        ],
+        "game": "blackjack",
+        "host_ack_before_return": true,
+        "exact_resume": true,
+        "new_cancel_preserves_save": true,
+        "other_games_unchanged": true
+      }
+    ],
+    "permanent_rpg_data_roundtrip": true,
+    "failed_new_preserves_committed_save": true,
+    "failed_save_pauses_and_retry_succeeds": true,
+    "console_errors": []
+  },
+  "checks": {
+    "rules_checks": 12,
+    "session_checks": 30,
+    "hockey_checks": 95,
+    "naval_turn_checks": 247,
+    "cats_dogs_checks": 387,
+    "blackjack_checks": 179,
+    "panda_checks": 2102,
+    "dominos_checks": 4628,
+    "dominos_layout_checks": 60324
+  },
+  "sdk_unit_methods": 11,
+  "portable_templates_import_tests_boot": [
+    "touch2d",
+    "scene3d",
+    "turn"
+  ],
+  "game_export_source_current": true,
+  "legacy_checkpoints_imported_without_deletion": true,
+  "friend_wire_unchanged": true,
+  "native_rust_and_app_sdk_binaries_unchanged": true,
+  "host_atomic_write_failure_injection": "IOException after AtomicFile.startWrite, exercising failWrite and old-checkpoint preservation",
+  "physical_device_process_death_storage_pressure_oem_and_carrier_acceptance": false,
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/GameSaveStore.kt": "f7d3c856852f8cb80c65c155d7c56c5577bfa320875d4b08d3f2e969a908aa89",
+    "android/app/src/main/kotlin/app/onklav/home/GameSessionStatus.kt": "036737473b4444764c8dc5bfd8bb4eacac0e698ba6b90a11be9c76aa000c408f",
+    "android/app/src/main/kotlin/app/onklav/home/WebGameActivity.kt": "5dc4280a27ef096660faf6abcbef92ced5f943c91b309f18b9e2b9a6e1a7153b",
+    "android/app/src/main/kotlin/app/onklav/home/GamesCatalog.kt": "90b104b055382ef3c1931640e62e4645ca356d25674f8ff5cb31048da09b9e55",
+    "android/app/src/main/kotlin/app/onklav/home/FriendGames.kt": "b7e9d1ada3fd3f3b9dfaf9a652e9fdd06c82f5c91b6dd0622428de5b40d9c5da",
+    "games/engine-checks/onklav_game.gd": "7692ebf2bfdc107308d549f9cf5baf094241be0d5fe8334c8027bb1a64a324da",
+    "games/engine-checks/air_hockey/store.gd": "0140c1edaa629af345e31dddcd8cd8e273d567b8a896ddeaabec7f0b6095d08a",
+    "games/engine-checks/air_hockey/main.gd": "df6755cd757cfb4fe8934e5d160fbf8b597b1112b91b3e67860b1ff5bfff3f84",
+    "developer/games/gamekit.py": "11f7426bd3bb952b8f7f95e298b60584abbafd199c916cef7076c804cf90b793"
+  },
+  "post_matrix_hockey_resume_fix": "After a failed host save, clear both shared SceneTree pause and the dedicated rink pause only on explicit successful resume. Shared SDK code and native sources unchanged.",
+  "hockey_failed_save_retry_play_sound_browser": [
+    {
+      "viewport": [
+        320,
+        640
+      ],
+      "failed_save_retains_previous": true,
+      "resume_blocked_until_saved": true,
+      "successful_retry_resumes_scene_and_rink": true,
+      "sound_done_after_retry_resumes": true
+    },
+    {
+      "viewport": [
+        432,
+        800
+      ],
+      "failed_save_retains_previous": true,
+      "resume_blocked_until_saved": true,
+      "successful_retry_resumes_scene_and_rink": true,
+      "sound_done_after_retry_resumes": true
+    }
+  ]
+}

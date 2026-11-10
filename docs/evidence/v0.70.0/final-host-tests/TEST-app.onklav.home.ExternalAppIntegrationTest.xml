@@ -1,0 +1,11 @@
+<?xml version='1.0' encoding='utf-8'?>
+<testsuite name="app.onklav.home.ExternalAppIntegrationTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-24T18:57:30" hostname="57745e8cfbd5" time="25.878">
+  <properties />
+  <testcase name="unknownReservedIdentityIsRejected" classname="app.onklav.home.ExternalAppIntegrationTest" time="7.088" />
+  <testcase name="longFormsScrollAtLargeFontAndSaveThroughSharedController" classname="app.onklav.home.ExternalAppIntegrationTest" time="1.845" />
+  <testcase name="customIconDecodeIsBoundedAndTrimKeepsDisplayedBitmapValid" classname="app.onklav.home.ExternalAppIntegrationTest" time="0.14" />
+  <testcase name="newerHostRequirementIsRejected" classname="app.onklav.home.ExternalAppIntegrationTest" time="0.846" />
+  <system-out />
+  <system-err />
+<testcase name="hostChromeOverflowModalDrawerAndCloseRemainUsable" classname="app.onklav.home.ExternalAppIntegrationTest" time="7.511" />
+  </testsuite>

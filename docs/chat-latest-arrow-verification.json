@@ -1,0 +1,26 @@
+{
+  "date": "2026-11-01",
+  "scope": "Bold high-contrast jump-to-latest arrow for shared regular/group feeds",
+  "tests": {
+    "app.onklav.home.ChatFeedActionUiTest": 1,
+    "app.onklav.home.ChatLatestContrastTest": 1
+  },
+  "passed": 2,
+  "palette_combinations": 30,
+  "contrast_minimum": 4.5,
+  "lint_errors": 0,
+  "lint_includes_production_and_tests": true,
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/ChatFeedAction.kt": "c2e1af78e71ec7114933c445d4b0e418b8d37ea29e7294b9483f8d26c4a2e467",
+    "android/app/src/main/kotlin/app/onklav/home/MessengerPane.kt": "3aeed0a54baf2ab1ca36b7aa2c56aed7b77ab68c002de1cda43cc908f2a456f2",
+    "android/shared/src/main/res/drawable/ref_action_jump_latest.xml": "dd6fb89a0a750f70b58d6297a12c73fc7d252cf8597cc842428203fe1fac502d"
+  },
+  "shared_feed_path": "GroupsPane and regular MessengerPane use the same ChatFeedAction in MessengerPane",
+  "retained_phone_checks": "14 passing checks and 30 palette combinations from phone-chrome-keypad-verification.json; not repeated because Phone production behavior is unchanged",
+  "notes": [
+    "Refreshed only the stale generated app R.jar after a new shared drawable was absent from it; shared and packaged symbols now agree.",
+    "Corrected the UI fixture to query the unmerged child icon for size inspection; final rendering/action test passed."
+  ],
+  "apk_version": "0.100.36-rc1/code145",
+  "physical_acceptance": "Device/OEM behavior and real calls remain separate from host checks."
+}

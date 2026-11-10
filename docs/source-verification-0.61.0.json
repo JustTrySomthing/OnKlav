@@ -1,0 +1,45 @@
+{
+  "date": "2026-10-23",
+  "source_version": "0.61.0-dev",
+  "source_version_code": 69,
+  "scope": "Settings RSS offline-state and single saved Read Aloud draft backups with checked merge/restore",
+  "apk_built": true,
+  "tests": {
+    "passed": 187,
+    "failed": 0,
+    "unexpected_failures": 0,
+    "known_failures": [],
+    "rust_broad": {
+      "passed": 181,
+      "failed": 0,
+      "fresh_run": true,
+      "evidence": "docs/evidence/v0.61.0/rust-tests.log"
+    },
+    "fresh_framework_host": [
+      {
+        "class": "app.onklav.home.LibraryBackupTest",
+        "passed": 5,
+        "failed": 0,
+        "skipped": 0,
+        "evidence": "docs/evidence/v0.61.0/TEST-app.onklav.home.LibraryBackupTest.xml"
+      },
+      {
+        "class": "app.onklav.home.SettingsUiHostTest.sdkDocumentBackupsAreReachableAndReturnToSettings",
+        "passed": 1,
+        "failed": 0,
+        "skipped": 0,
+        "evidence": "docs/evidence/v0.61.0/TEST-app.onklav.home.SettingsUiHostTest.xml"
+      }
+    ]
+  },
+  "build_evidence": "docs/evidence/v0.61.0/build-debug.json",
+  "apk_evidence": "docs/apk-verification-debug.json",
+  "native_proof": "docs/native-provenance.json",
+  "sdk_proof": "docs/app-sdk-provenance.json",
+  "full_rewrite_complete": false,
+  "handset_acceptance": false,
+  "carrier_acceptance": false,
+  "next_work": "docs/FINISH-NON-GAME.md",
+  "note": "One fresh full Rust pass with source-matched Linux/ARM64 native rebuild; existing signed SDK packages/Godot reused. Three new Rust cases are included in 181, not double-counted with the focused run. Five Android provider/JNI checks reopen restored signed apps (RSS offline refresh is simulated) and preserve cleared Reader text. One navigation check covers all four ZIP dialogs. Canonical SDK data only; full SDK data integration, real-provider/process-death and phone/carrier/account acceptance remain open. Final APK assembled in 42.68s and verified in 3.30s, after all focused checks passed.",
+  "timezone": "America/Chicago"
+}

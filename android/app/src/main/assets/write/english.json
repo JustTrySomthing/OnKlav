@@ -1,0 +1,11 @@
+{
+  "source": "SCOWL/Hunspell en_US, Debian hunspell-en-us 1:2020.12.07-2",
+  "upstream": "https://wordlist.aspell.net/",
+  "words": 163006,
+  "source_sha256": {
+    "en_US.dic": "829a043cf078d1e80e886289a13823454977f442a239a859d2133ea61944aa60",
+    "en_US.aff": "70fe5778717d097ce2f3326baaa5c1e4d2206d81a5a81d3ea8e11c4770806dd5"
+  },
+  "generated_sha256": "2d8eddb5b5bdecbee0842d1831be409cd8ca067903246831a9df9f823525a36a",
+  "license": "english-COPYRIGHT.txt"
+}

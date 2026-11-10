@@ -1,0 +1,79 @@
+{
+  "scope": "Calendar offline native app",
+  "status": "implemented",
+  "unique_focused_tests": 32,
+  "suites": [
+    {
+      "suite": "CalendarTest",
+      "tests": 15,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "suite": "CalendarUiTest",
+      "tests": 7,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "suite": "CalendarRemindersTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "suite": "CalendarModelTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "suite": "CalendarIntentTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0
+    }
+  ],
+  "production_and_test_compilation": "PASS",
+  "lint": {
+    "status": "PASS",
+    "errors": 0,
+    "check_test_sources": true,
+    "report": "docs/evidence/calendar/lint-results-debug.xml"
+  },
+  "verification_sequence": "30 unique focused checks; final adaptive editor UI checks and full lint; final compilation after notification-permission recovery simplification. Apps-center inclusion label updated as a text-only follow-up. Follow-up UI review: seven UI checks (two new) and full lint passed after all-day scroll correction; small large-text header refinement then compiled. Twenty-five non-UI baseline checks were not rerun.",
+  "apk_built": false,
+  "new_dependencies": false,
+  "native_or_sdk_changes": false,
+  "preview_images": [
+    "month.png",
+    "day.png",
+    "week.png",
+    "search.png",
+    "reminders.png",
+    "light-month.png",
+    "small-editor.png",
+    "small-editor-dates.png",
+    "day-all-day.png"
+  ],
+  "remaining": [
+    "Real-phone reminder/lock-screen sound/reboot/Doze and external calendar interoperability acceptance",
+    "Store/security/accessibility qualification",
+    "Calendar is not in Rust App Documents Backup; .ics export supplies portable event backup"
+  ],
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/CalendarEntryActivity.kt": "b0405723485657115c2c6f980c1b474bd73d4908a6f4440f4d8fccf719e35bc1",
+    "android/app/src/main/kotlin/app/onklav/home/CalendarIcons.kt": "31357df0c8d7f8cac30ee32f25ac179ada6ec7966149ef74bb4dc578f655aa02",
+    "android/app/src/main/kotlin/app/onklav/home/CalendarReminders.kt": "6a98dcdffbfb42312d017aa16bd09dc4a162922a5c549143846a0225c4176831",
+    "android/app/src/main/kotlin/app/onklav/home/CalendarIcs.kt": "9e0f6cf62dd8024fa2a923a4598a2495bad1d5c4bc254f1c84745c356e1832c7",
+    "android/app/src/main/kotlin/app/onklav/home/CalendarScreen.kt": "8e174672dabc36f6afcdd4b60701b47b4500b227efa87cdc4833a0106d4c63b9",
+    "android/app/src/main/kotlin/app/onklav/home/CalendarData.kt": "a5ad1910a6efb2a538f11ac88663df4d0a44955b7af31ca244d0e5f89779c1a8",
+    "android/app/src/main/kotlin/app/onklav/home/CalendarEditor.kt": "1f04fb75a8819c9f1796a074a4587310a4f1cf8872bed55fa978be6692af76f8",
+    "android/app/src/main/kotlin/app/onklav/home/CalendarModel.kt": "1fc5df5400c4ca666b3d466fe9ddc49efdc36507dac8690f0e7a60d81023994d",
+    "android/app/src/main/kotlin/app/onklav/home/Catalog.kt": "98400e0aa9c245e5e6b3b0239b45798ca620992efd1795f18dc4e342a2352973",
+    "android/app/src/main/kotlin/app/onklav/home/MainActivity.kt": "172f6469efdd23aa65bb9fac8c177f1e4980a9cff2a36c0e0e19965574f215e4",
+    "android/app/src/main/AndroidManifest.xml": "e55160ecb0493013c4623cd325023c9604e32c46820bab728da9cebf8cbf83f5",
+    "android/shared/src/main/res/drawable/ref_app_calendar.xml": "e9cc01c07a144b49608528cf2227ea71d5f1df27cb4320af8e3b3b45ae164b2c"
+  },
+  "latest_review": "docs/CALENDAR-UI-REVIEW.md"
+}

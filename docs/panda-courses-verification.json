@@ -1,0 +1,119 @@
+{
+  "date": "2026-11-04",
+  "apk_built": false,
+  "physical_device_tested": false,
+  "course_piece_counts": [
+    15,
+    18,
+    20,
+    22,
+    24,
+    26,
+    28,
+    30,
+    32,
+    34,
+    36,
+    40
+  ],
+  "max_platforms": 4,
+  "max_bodies": 45,
+  "duel_checks": 48521,
+  "course_checks": 470,
+  "legacy_checks": 2102,
+  "volley_checks": 68,
+  "audit_checks": 15,
+  "browser_final_source": [
+    {
+      "viewport": [
+        360,
+        780
+      ],
+      "real_touch_full_pull": true,
+      "resize_cancels_pull_without_shot": true,
+      "direct_start_and_resume": true,
+      "complete_player_then_rival_volley": true,
+      "center_shot_scores": true,
+      "sound_pause_preserves_flight": true,
+      "saved_towers_and_scores_preserved": true,
+      "round_continues_without_building": true,
+      "profile_write_failure_retry": true
+    }
+  ],
+  "browser_three_screen": [
+    {
+      "viewport": [
+        360,
+        780
+      ],
+      "real_touch_full_pull": true,
+      "resize_cancels_pull_without_shot": true,
+      "direct_start_and_resume": true,
+      "complete_player_then_rival_volley": true,
+      "center_shot_scores": true,
+      "sound_pause_preserves_flight": true,
+      "saved_towers_and_scores_preserved": true,
+      "round_continues_without_building": true,
+      "profile_write_failure_retry": true
+    },
+    {
+      "viewport": [
+        320,
+        640
+      ],
+      "real_touch_full_pull": true,
+      "resize_cancels_pull_without_shot": true,
+      "direct_start_and_resume": true,
+      "complete_player_then_rival_volley": true,
+      "center_shot_scores": true,
+      "sound_pause_preserves_flight": true,
+      "saved_towers_and_scores_preserved": true,
+      "round_continues_without_building": true,
+      "profile_write_failure_retry": true
+    },
+    {
+      "viewport": [
+        640,
+        360
+      ],
+      "real_touch_full_pull": true,
+      "resize_cancels_pull_without_shot": true,
+      "direct_start_and_resume": true,
+      "complete_player_then_rival_volley": true,
+      "center_shot_scores": true,
+      "sound_pause_preserves_flight": true,
+      "saved_towers_and_scores_preserved": true,
+      "round_continues_without_building": true,
+      "profile_write_failure_retry": true
+    }
+  ],
+  "visual_inspection_courses": [
+    2,
+    4,
+    8,
+    12
+  ],
+  "source_sha256": {
+    "games/engine-checks/panda/main.gd": "73aff3d71261e6cc55bf7c5554c04224a19271c628de702898db69a41deedb52",
+    "games/engine-checks/panda/hud.gd": "759c1e08172fb42d0553c6abfee26f6a62025d7d13c13972a67a4dd57544bd7c",
+    "games/engine-checks/panda/arena.gd": "e06bb5e44b26da0b5befe0456fb77b9524ca2b861782e33746bae2cab1242647",
+    "games/engine-checks/panda/duel_tests.gd": "093ddd8a5f3cbc867966acb82b17d7662295111bc559f414826d247e4623cf22",
+    "games/engine-checks/panda/course_tests.gd": "ecc5f8eca3ad4cba544bc0316a8b1518fc4d0f703691ffb5e82ffa611564b6b2",
+    "games/engine-checks/panda/physics.gd": "d0d8426a71fb4738f75ba495991c3ee9288d1ede88f9aef6d4a9ec04e1ace793",
+    "games/engine-checks/panda/volley_tests.gd": "23e69b08f9e11ec4db167ab08193d757afd08df5e72d176cc494ad6546931b3b",
+    "games/engine-checks/panda/audio.gd": "5c2cff9a76fb77fe7910ef7697fde98e0f3e28db13a2cb1c22243d12773ca0af",
+    "games/engine-checks/panda/performance_tests.gd": "dca45c18d9e1804ecae6fec893aee4361c96981635b8b2a1eafceaa0e8749ead",
+    "games/engine-checks/panda/battle_arena.gd": "1dd38bd17f699721ee47e3f3167683f04c1e8cacedaa980c9eabe82a38244815",
+    "games/engine-checks/panda/audit_tests.gd": "b12c46436be7f2ad9a0dba611f826dce9931f73cb7643cdfb4d3b7eaa5a3a576",
+    "games/engine-checks/panda/duel.gd": "96a94889760a2a7b00cfad573c1f1785397e531d8c8ce4614d9204f53774991f",
+    "games/engine-checks/panda/flight_clock.gd": "ae20b491dc8e120bcd1c7a2370695ddb6ca82afe02c71607757fbf0b77e1851e",
+    "games/engine-checks/panda/battle_hud.gd": "64f543051f7df4b0325a9d4cf85782fe94c3ff2ab7d5a98ff67b855648018eb6",
+    "games/engine-checks/panda/duel_physics.gd": "0795a696213f2e09927041b801cb454dbea0ab1181d5a2f00534390bfdfd9c2b",
+    "games/engine-checks/panda/tests.gd": "3ee735eb38e256770e50ba4743bd97d9d0ddef45aa3feb9a3fc3683513f5545d",
+    "games/engine-checks/panda/model.gd": "5e5b52cd2d4026d982c5ec2f64d641361128966e510d67ccea46537009f3e6ba"
+  },
+  "limits": [
+    "No physical-phone performance or subjective difficulty acceptance.",
+    "APK0.100.61 predates this source update."
+  ]
+}

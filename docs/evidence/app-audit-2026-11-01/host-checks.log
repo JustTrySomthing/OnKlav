@@ -1,0 +1,33 @@
+/workspace/scratch/21249b7ec6ea/audit-host/CalendarRemindersTest.kt:18:238: warning: 'val nextScheduledAlarm: ShadowAlarmManager.ScheduledAlarm?' is deprecated. Deprecated in Java.
+ @Test fun oneScheduledAlarmRecoversAndEmptyCalendarCancelsIt(){val e=event();CalendarDisk(app).write(CalendarState(events=listOf(e)));CalendarReminders.recover(app);assertNotNull(shadowOf(app.getSystemService(AlarmManager::class.java)).nextScheduledAlarm);CalendarDisk(app).write(CalendarState());CalendarReminders.recover(app);assertNull(shadowOf(app.getSystemService(AlarmManager::class.java)).nextScheduledAlarm)}
+                                                                                                                                                                                                                                             ^^^^^^^^^^^^^^^^^^
+/workspace/scratch/21249b7ec6ea/audit-host/CalendarRemindersTest.kt:18:398: warning: 'val nextScheduledAlarm: ShadowAlarmManager.ScheduledAlarm?' is deprecated. Deprecated in Java.
+ @Test fun oneScheduledAlarmRecoversAndEmptyCalendarCancelsIt(){val e=event();CalendarDisk(app).write(CalendarState(events=listOf(e)));CalendarReminders.recover(app);assertNotNull(shadowOf(app.getSystemService(AlarmManager::class.java)).nextScheduledAlarm);CalendarDisk(app).write(CalendarState());CalendarReminders.recover(app);assertNull(shadowOf(app.getSystemService(AlarmManager::class.java)).nextScheduledAlarm)}
+                                                                                                                                                                                                                                                                                                                                                                                                             ^^^^^^^^^^^^^^^^^^
+/workspace/scratch/21249b7ec6ea/audit-host/CalendarRemindersTest.kt:20:809: warning: 'val nextScheduledAlarm: ShadowAlarmManager.ScheduledAlarm?' is deprecated. Deprecated in Java.
+ @Test fun snoozePersistsAndDeletingEventCancelsItsNotificationsAndAlarm(){val e=event();CalendarDisk(app).write(CalendarState(events=listOf(e)));CalendarReminders.fire(app);val key=app.getSystemService(NotificationManager::class.java).activeNotifications.single().tag;CalendarReminders.snooze(app,Intent().setAction("calendar.snooze").putExtra("key",key).putExtra("id",e.id).putExtra("updated",e.updated).putExtra("sound",true));assertEquals(1,org.json.JSONArray(app.getSharedPreferences("calendar-reminders",0).getString("snoozes","[]")).length());CalendarDisk(app).write(CalendarState());CalendarReminders.cleanup(app,listOf(e),emptyList());assertTrue(app.getSystemService(NotificationManager::class.java).activeNotifications.isEmpty());assertNull(shadowOf(app.getSystemService(AlarmManager::class.java)).nextScheduledAlarm)}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        ^^^^^^^^^^^^^^^^^^
+android/shared/src/main/kotlin/app/onklav/shared/LauncherLayout.kt:4:27: warning: non-public primary constructor is exposed via the generated 'copy()' method of the 'data' class.
+
+The generated 'copy()' will change its visibility in future releases.
+
+To suppress the warning do one of the following:
+- Annotate the data class with the '@ConsistentCopyVisibility' annotation.
+- Use the '-Xconsistent-data-class-copy-visibility' compiler flag.
+- Annotate the data class with the '@ExposedCopyVisibility' annotation 
+  (Discouraged, but can be used to keep binary compatibility).
+
+To learn more, see the documentation of the '@ConsistentCopyVisibility' and '@ExposedCopyVisibility' annotations.
+
+This will become an error in Kotlin 2.2.
+data class LauncherLayout private constructor(val slots: List<String>) {
+                          ^^^^^^^
+JUnit version 4.13.2
+................................OBSERVED B05: valid accounts written (166673 bytes), subsequent load and save rejected
+.OBSERVED B04: timestamp UNTIL admits an extra occurrence: 2026-11-03T10:00Z[UTC]
+.OBSERVED B06: scheduling throws, durable event exists, UI reports Event saved without failure
+
+Time: 3.613
+
+OK (34 tests)
+

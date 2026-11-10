@@ -1,0 +1,76 @@
+{
+  "unique_cases": 14,
+  "results": [
+    {
+      "name": "app.onklav.home.AppearancePolishTest.exportedFilesAndMessageFilesRejectLinkedTargets",
+      "passed": true,
+      "report": "docs/evidence/v0.70.0/final-host-tests/metadata/TEST-app.onklav.home.AppearancePolishTest.xml"
+    },
+    {
+      "name": "app.onklav.home.AppearancePolishTest.nativePickersUseCurrentPaletteAndFontOnAndroid15",
+      "passed": true,
+      "report": "docs/evidence/v0.70.0/final-host-tests/metadata/TEST-app.onklav.home.AppearancePolishTest.xml"
+    },
+    {
+      "name": "app.onklav.home.AppearancePolishTest.memoryPressureDropsBackgroundCacheWithoutRecyclingDisplayedImages",
+      "passed": true,
+      "report": "docs/evidence/v0.70.0/final-host-tests/metadata/TEST-app.onklav.home.AppearancePolishTest.xml"
+    },
+    {
+      "name": "app.onklav.home.AppearancePolishTest.everyPaletteHasReadableControlsAndNoDefaultSecondaryAccent",
+      "passed": true,
+      "report": "docs/evidence/v0.70.0/final-host-tests/metadata/TEST-app.onklav.home.AppearancePolishTest.xml"
+    },
+    {
+      "name": "app.onklav.home.AppearancePolishTest.annotationChecksHeaderDimensionsBeforeFullDecode",
+      "passed": true,
+      "report": "docs/evidence/v0.70.0/final-host-tests/metadata/TEST-app.onklav.home.AppearancePolishTest.xml"
+    },
+    {
+      "name": "app.onklav.home.AppearancePolishTest.grayscaleNeutralSurfacesStayNeutral",
+      "passed": true,
+      "report": "docs/evidence/v0.70.0/final-host-tests/metadata/TEST-app.onklav.home.AppearancePolishTest.xml"
+    },
+    {
+      "name": "app.onklav.home.SdkAppsHostTest.sdkNotesSaveReopenClipboardRemoveReinstallAndDeveloperApp",
+      "passed": true,
+      "report": "docs/evidence/v0.70.0/final-host-tests/metadata/TEST-app.onklav.home.SdkAppsHostTest.xml"
+    },
+    {
+      "name": "app.onklav.home.ExternalAppIntegrationTest.unknownReservedIdentityIsRejected",
+      "passed": true,
+      "report": "docs/evidence/v0.70.0/final-host-tests/metadata/TEST-app.onklav.home.ExternalAppIntegrationTest.xml"
+    },
+    {
+      "name": "app.onklav.home.ExternalAppIntegrationTest.longFormsScrollAtLargeFontAndSaveThroughSharedController",
+      "passed": true,
+      "report": "docs/evidence/v0.70.0/final-host-tests/metadata/TEST-app.onklav.home.ExternalAppIntegrationTest.xml"
+    },
+    {
+      "name": "app.onklav.home.ExternalAppIntegrationTest.hostChromeOverflowModalDrawerAndCloseRemainUsable",
+      "passed": true,
+      "report": "docs/evidence/v0.70.0/final-host-tests/icon-query-corrected/TEST-app.onklav.home.ExternalAppIntegrationTest.xml"
+    },
+    {
+      "name": "app.onklav.home.ChromeLayoutHostTest.headersAndBottomBarReachBothEdgesAcrossEveryHomeTab",
+      "passed": true,
+      "report": "docs/evidence/v0.70.0/final-host-tests/metadata/TEST-app.onklav.home.ChromeLayoutHostTest.xml"
+    },
+    {
+      "name": "app.onklav.home.ChromeLayoutHostTest.sharedPopupGrowsSubtlyAtCenterWithoutSidewaysTravel",
+      "passed": true,
+      "report": "docs/evidence/v0.70.0/final-host-tests/metadata/TEST-app.onklav.home.ChromeLayoutHostTest.xml"
+    },
+    {
+      "name": "app.onklav.home.ExternalAppIntegrationTest.customIconDecodeIsBoundedAndTrimKeepsDisplayedBitmapValid",
+      "passed": true,
+      "report": "docs/evidence/v0.70.0/final-host-tests/metadata/TEST-app.onklav.home.ExternalAppIntegrationTest.xml"
+    },
+    {
+      "name": "app.onklav.home.ExternalAppIntegrationTest.newerHostRequirementIsRejected",
+      "passed": true,
+      "report": "docs/evidence/v0.70.0/final-host-tests/metadata/TEST-app.onklav.home.ExternalAppIntegrationTest.xml"
+    }
+  ],
+  "note": "Latest actual result per named case; original XMLs are retained unchanged. Shared12 baseline cases are not counted again."
+}

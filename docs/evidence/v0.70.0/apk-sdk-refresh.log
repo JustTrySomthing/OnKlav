@@ -1,0 +1,55 @@
+{
+  "build": [
+    "Files",
+    "Notes",
+    "RSS",
+    "ReadAloud",
+    "Browser",
+    "YouTube",
+    "Annotation",
+    "Social",
+    "WalkieTalkie"
+  ],
+  "restore_bundles": [],
+  "reuse": [
+    "Counter"
+  ],
+  "unselected_stale": []
+}
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.07s
+Files: compiling changed app
+    Finished `release` profile [optimized] target(s) in 0.01s
+Created /workspace/scratch/75acf774e3b8/work/OnKlav/sdk/packages/.sdk-build-3usmo_ve/Files.onklav-a
+Notes: compiling changed app
+   Compiling onklav-notes v0.1.0 (/workspace/scratch/75acf774e3b8/work/OnKlav/sdk/apps/notes)
+    Finished `release` profile [optimized] target(s) in 1.21s
+Created /workspace/scratch/75acf774e3b8/work/OnKlav/sdk/packages/.sdk-build-4qvj06li/Notes.onklav-a
+RSS: compiling changed app
+   Compiling onklav-rss v0.1.0 (/workspace/scratch/75acf774e3b8/work/OnKlav/sdk/apps/rss)
+    Finished `release` profile [optimized] target(s) in 1.59s
+Created /workspace/scratch/75acf774e3b8/work/OnKlav/sdk/packages/.sdk-build-02kxzh00/RSS.onklav-a
+ReadAloud: compiling changed app
+   Compiling onklav-reader v0.1.0 (/workspace/scratch/75acf774e3b8/work/OnKlav/sdk/apps/reader)
+    Finished `release` profile [optimized] target(s) in 1.27s
+Created /workspace/scratch/75acf774e3b8/work/OnKlav/sdk/packages/.sdk-build-df63rkgb/ReadAloud.onklav-a
+Browser: compiling changed app
+   Compiling onklav-browser v0.1.0 (/workspace/scratch/75acf774e3b8/work/OnKlav/sdk/apps/browser)
+    Finished `release` profile [optimized] target(s) in 1.41s
+Created /workspace/scratch/75acf774e3b8/work/OnKlav/sdk/packages/.sdk-build-4eqe0x8k/Browser.onklav-a
+YouTube: compiling changed app
+   Compiling onklav-youtube v0.1.0 (/workspace/scratch/75acf774e3b8/work/OnKlav/sdk/apps/youtube)
+    Finished `release` profile [optimized] target(s) in 1.37s
+Created /workspace/scratch/75acf774e3b8/work/OnKlav/sdk/packages/.sdk-build-3kkl8llb/YouTube.onklav-a
+Annotation: compiling changed app
+   Compiling onklav-annotation v0.1.0 (/workspace/scratch/75acf774e3b8/work/OnKlav/sdk/apps/annotation)
+    Finished `release` profile [optimized] target(s) in 1.27s
+Created /workspace/scratch/75acf774e3b8/work/OnKlav/sdk/packages/.sdk-build-yeeqbbhc/Annotation.onklav-a
+Social: compiling changed app
+   Compiling onklav-social v0.1.0 (/workspace/scratch/75acf774e3b8/work/OnKlav/sdk/apps/social)
+    Finished `release` profile [optimized] target(s) in 1.06s
+Created /workspace/scratch/75acf774e3b8/work/OnKlav/sdk/packages/.sdk-build-bu8bucsb/Social.onklav-a
+WalkieTalkie: compiling changed app
+   Compiling onklav-walkie v0.1.0 (/workspace/scratch/75acf774e3b8/work/OnKlav/sdk/apps/walkie)
+    Finished `release` profile [optimized] target(s) in 1.42s
+Created /workspace/scratch/75acf774e3b8/work/OnKlav/sdk/packages/.sdk-build-mid982lg/WalkieTalkie.onklav-a
+{"built": ["Files", "Notes", "RSS", "ReadAloud", "Browser", "YouTube", "Annotation", "Social", "WalkieTalkie"], "bundles_restored": [], "all_packages_current": true}

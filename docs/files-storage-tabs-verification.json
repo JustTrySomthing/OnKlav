@@ -1,0 +1,21 @@
+{
+  "change": "Files storage tabs and grid/toolbar polish",
+  "production_compile": "passed",
+  "runtime_classes": "changed production runtime classes match compiled Kotlin",
+  "focused_host_tests": {
+    "FilesPresentationUiTest": 3,
+    "AndroidSharedFilesTest": 1
+  },
+  "visual_review": [
+    "files-home.png",
+    "android-categories.png",
+    "thumbnails.png"
+  ],
+  "native_changes": false,
+  "apk_built": false,
+  "latest_apk": "0.100.40-quick predates these changes",
+  "limitations": [
+    "No physical-phone verification",
+    "Android Trash contains items deleted through OnKlav; other apps trash stores are separate"
+  ]
+}

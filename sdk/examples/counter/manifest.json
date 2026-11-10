@@ -1,0 +1,8 @@
+{
+  "schema": "onklav.app.v1",
+  "runtime": "rust-wasm-ui.v1",
+  "id": "developer.example.counter",
+  "name": "SDK Counter",
+  "version": 1,
+  "capabilities": []
+}

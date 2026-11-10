@@ -1,0 +1,15 @@
+{
+  "source": "https://download.geonames.org/export/zip/US.zip",
+  "source_text_sha256": "88495471922bbafb1e982c01aafd1e38038d08dde578be2ec5bbc0f16bf9dc9e",
+  "rows": 41488,
+  "fields": [
+    "ZIP",
+    "place",
+    "state",
+    "latitude",
+    "longitude"
+  ],
+  "license": "GeoNames CC BY 3.0",
+  "zip_plus_four": "Matches the first five digits; not an address lookup",
+  "timezone": "Nearest offline US city in same state; approximate near zone boundaries"
+}

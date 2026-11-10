@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.ChromeLayoutHostTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-24T15:27:29" hostname="41b9fb140d3c" time="13.518">
+  <properties/>
+  <testcase name="sharedPopupGrowsSubtlyAtCenterWithoutSidewaysTravel" classname="app.onklav.home.ChromeLayoutHostTest" time="13.518"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

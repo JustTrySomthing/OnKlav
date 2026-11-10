@@ -1,0 +1,8 @@
+{
+  "cache_restoration": "pass",
+  "all_part_checksums": "pass",
+  "safe_extraction": "pass",
+  "restored_JDK_launch": "pass",
+  "restored_Gradle_offline_launch": "pass",
+  "host_native_checksum": "pass"
+}

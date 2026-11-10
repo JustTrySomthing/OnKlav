@@ -1,0 +1,20 @@
+{
+  "model_entrypoints": {
+    "Lapp/onklav/home/AuthenticModel;": {
+      "application_constructor": "defined and executable"
+    },
+    "Lapp/onklav/home/CodeEditModel;": {
+      "application_constructor": "defined and executable"
+    },
+    "Lapp/onklav/home/PhotoEditorModel;": {
+      "application_constructor": "defined and executable"
+    },
+    "Lapp/onklav/home/VaultModel;": {
+      "application_constructor": "defined and executable"
+    },
+    "Lapp/onklav/home/VideoEditorModel;": {
+      "application_constructor": "defined and executable"
+    }
+  },
+  "zxing_notice": "matches source"
+}

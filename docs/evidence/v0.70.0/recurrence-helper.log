@@ -1,0 +1,11 @@
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/ed752e8a1957/current/OnKlav/developer/components)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 2.52s
+     Running unittests src/lib.rs (developer/components/target/debug/deps/onklav_ui-c94c9f1e1c388478)
+
+running 3 tests
+test recurrence::tests::reminders_helpers_do_not_export_host_owners_or_make_delivery_claims ... ok
+test recurrence::tests::builders_keep_dst_choices_and_civil_duration_explicit ... ok
+test calendar::tests::rejects_invalid_dates_intervals_and_unsupported_recurrence ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 48 filtered out; finished in 0.00s
+

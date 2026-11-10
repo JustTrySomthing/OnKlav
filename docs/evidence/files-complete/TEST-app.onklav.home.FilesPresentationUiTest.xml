@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.FilesPresentationUiTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-11-03T02:50:13" hostname="3bfb1ef11171" time="20.684">
+  <properties/>
+  <testcase name="thumbnailAndListViewsKeepPencilsOnlyOnEditableItems" classname="app.onklav.home.FilesPresentationUiTest" time="7.672"/>
+  <testcase name="filesHomeAndAndroidCategoriesUseTheSameModernBrowser" classname="app.onklav.home.FilesPresentationUiTest" time="4.132"/>
+  <testcase name="readableAndroidAudioCanBeChosenAsAFolderButNotAsASaveDestination" classname="app.onklav.home.FilesPresentationUiTest" time="5.438"/>
+  <testcase name="imageAttachmentPickerStartsInImagesWithViewSwitch" classname="app.onklav.home.FilesPresentationUiTest" time="3.442"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

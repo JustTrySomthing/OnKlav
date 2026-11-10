@@ -1,0 +1,189 @@
+Publisher key created. Keep it private and backed up.
+   Compiling zmij v1.0.23
+   Compiling serde_core v1.0.229
+   Compiling serde_json v1.0.154
+   Compiling memchr v2.8.3
+   Compiling itoa v1.0.18
+   Compiling onklav-app v0.1.0 (/workspace/scratch/75acf774e3b8/work/OnKlav/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/work/OnKlav/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/workspace/scratch/75acf774e3b8/work/OnKlav/developer/examples/map-viewer)
+    Finished `release` profile [optimized] target(s) in 9.18s
+Created /tmp/onklav-verify-dc9kkro3/check.onklav-a
+error: linking with `cc` failed: exit status: 1
+  |
+  = note:  "cc" "-Wl,--version-script=/tmp/rustcbmaEpS/list" "-Wl,--no-undefined-version" "-m64" "/tmp/rustcbmaEpS/symbols.o" "<17 object files omitted>" "-Wl,--as-needed" "-Wl,-Bstatic" "/workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/{libuuid-9760fcdbf4c971df,libgetrandom-c588bb57c0a417b5,liblibc-037a4e687807bc6f,libjni-80d3e4981ef5ae62,libcesu8-4c6a9d8d264185ae,libcombine-5f5a77827180c432,libbytes-31b8f712e3be84e8,libthiserror-031df4af06294802,libjni_sys-1626fde6b9a2d213,libjni_sys-aae0652cc1483429,libwasmi-85de68ba2112feab,libwasmi_ir-ed295e240668aa5f,libwasmi_collections-515a0da714bce4be,libwasmi_core-ee193d4391782c00,libdowncast_rs-343c6145c5a47665,libwat-1f0d6fc8291b2630,libwast-7b8503cb5a185eaf,libwasm_encoder-62d07c33fe309532,libleb128fmt-bd2e62485a356d84,libunicode_width-fb146b92fd3fa727,libmulti_stash-cc8a2fa575b6d1c4,libarrayvec-788376b9c80ceb22,libsmallvec-dd2b0d63e8c3b67b,libwasmparser-ab49e1789b609ec2,libbitflags-fcaa4d659835b98b,libspin-0827546257a4d0c0,libed25519_dalek-36b0a4d3bc1c2945,libcurve25519_dalek-1d6dce06532b6974,libzeroize-6a5a139049f25ea3,libsubtle-23bbe7a6e0b68b65,libed25519-9c77a6e0546c78df,libsignature-579891035a818ff9,libzip-067490f34c0a4637,libzopfli-654319b40ce53dd6,libbumpalo-9135c560ea1f5cdd,liblog-1068ce6977136de4,libflate2-7d10bd01da0b7f2b,libminiz_oxide-c2922ae78b6a96b3,libsimd_adler32-6cf0bab66077caf8,libindexmap-109e9af6614c4205,libequivalent-8110e6c1cbfebe97,libhashbrown-ec51c5a561a8b86f,libcrc32fast-88e842320e2ea6c0,libsha2-39acc3f2571841df,libcpufeatures-69aa18d40df9d02d,libcfg_if-6c1c477526152577,libdigest-7fce7b5fe77ad000,libblock_buffer-e9948de05193e2e3,libcrypto_common-fa4386ba966bbe29,libgeneric_array-61813b4a1ec935e5,libtypenum-845b6faf8792574a,libserde_json-a5a939fb129029b9,libmemchr-0ece8d1a968630e0,libitoa-c923aff3da9a3732,libzmij-e76c2aacc27c92c9,libserde-371c8fe587190b9b,libserde_core-316448cb4fcc49af}.rlib" "<sysroot>/lib/rustlib/x86_64-unknown-linux-gnu/lib/{libstd-*,libpanic_unwind-*,libobject-*,libmemchr-*,libaddr2line-*,libgimli-*,librustc_demangle-*,libstd_detect-*,libhashbrown-*,librustc_std_workspace_alloc-*,libminiz_oxide-*,libadler2-*,libunwind-*,libcfg_if-*,liblibc-*,librustc_std_workspace_core-*,liballoc-*,libcore-*,libcompiler_builtins-*}.rlib" "-Wl,-Bdynamic" "-lc" "-lm" "-lrt" "-lpthread" "-lgcc_s" "-lutil" "-lrt" "-lpthread" "-lm" "-ldl" "-lc" "-L" "/tmp/rustcbmaEpS/raw-dylibs" "-B<sysroot>/lib/rustlib/x86_64-unknown-linux-gnu/bin/gcc-ld" "-fuse-ld=lld" "-Wl,--eh-frame-hdr" "-Wl,-z,noexecstack" "-L" "<sysroot>/lib/rustlib/x86_64-unknown-linux-gnu/lib" "-o" "/workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/libonklav_core.so" "-Wl,--gc-sections" "-shared" "-Wl,-z,relro,-z,now" "-nodefaultlibs"
+  = note: some arguments are omitted. use `--verbose` to show all linker arguments
+  = note: rust-lld: error: undefined hidden symbol: core::alloc::layout::Layout::from_size_align_unchecked::precondition_check::h4fe721e5078a5aff
+          >>> referenced by ub_checks.rs:77 (/rustc/1159e78c4747b02ef996e55082b704c09b970588/library/core/src/ub_checks.rs:77)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.00.rcgu.o:(alloc::collections::btree::node::NodeRef$LT$alloc..collections..btree..node..marker..Dying$C$K$C$V$C$alloc..collections..btree..node..marker..LeafOrInternal$GT$::deallocate_and_ascend::h0075bd5c4237fcd6)
+          >>> referenced by ub_checks.rs:77 (/rustc/1159e78c4747b02ef996e55082b704c09b970588/library/core/src/ub_checks.rs:77)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.00.rcgu.o:(alloc::collections::btree::node::NodeRef$LT$alloc..collections..btree..node..marker..Dying$C$K$C$V$C$alloc..collections..btree..node..marker..LeafOrInternal$GT$::deallocate_and_ascend::h0075bd5c4237fcd6)
+          >>> referenced by ub_checks.rs:77 (/rustc/1159e78c4747b02ef996e55082b704c09b970588/library/core/src/ub_checks.rs:77)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.00.rcgu.o:(alloc::collections::btree::node::NodeRef$LT$alloc..collections..btree..node..marker..Dying$C$K$C$V$C$alloc..collections..btree..node..marker..LeafOrInternal$GT$::deallocate_and_ascend::h044b3c2489c47205)
+          >>> referenced 377 more times
+          
+          rust-lld: error: undefined hidden symbol: _$LT$serde_json..value..ser..Serializer$u20$as$u20$serde_core..ser..Serializer$GT$::serialize_u64::hc98a3995c1157baa
+          >>> referenced by number.rs:379 (/root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_json-1.0.154/src/number.rs:379)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.08.rcgu.o:(_$LT$serde_json..number..Number$u20$as$u20$serde_core..ser..Serialize$GT$::serialize::hf3deac5651c76ac7)
+          >>> referenced by impls.rs:15 (/root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_core-1.0.229/src/ser/impls.rs:15)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.10.rcgu.o:(serde_core::ser::impls::_$LT$impl$u20$serde_core..ser..Serialize$u20$for$u20$u64$GT$::serialize::h70418408abac577c)
+          >>> referenced by impls.rs:15 (/root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_core-1.0.229/src/ser/impls.rs:15)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.10.rcgu.o:(serde_core::ser::impls::_$LT$impl$u20$serde_core..ser..Serialize$u20$for$u20$usize$GT$::serialize::h3e472376b8edbac0)
+          
+          rust-lld: error: undefined hidden symbol: _$LT$serde_json..value..ser..Serializer$u20$as$u20$serde_core..ser..Serializer$GT$::serialize_f64::h5e9d3f6c14e2ec3d
+          >>> referenced by number.rs:381 (/root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_json-1.0.154/src/number.rs:381)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.08.rcgu.o:(_$LT$serde_json..number..Number$u20$as$u20$serde_core..ser..Serialize$GT$::serialize::hf3deac5651c76ac7)
+          >>> referenced by impls.rs:15 (/root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_core-1.0.229/src/ser/impls.rs:15)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.10.rcgu.o:(serde_core::ser::impls::_$LT$impl$u20$serde_core..ser..Serialize$u20$for$u20$f64$GT$::serialize::hb220e1c3d57d6f33)
+          
+          rust-lld: error: undefined hidden symbol: core::slice::_$LT$impl$u20$$u5b$T$u5d$$GT$::split_at_mut_unchecked::precondition_check::hff84e74464ab8b62
+          >>> referenced by ub_checks.rs:77 (/rustc/1159e78c4747b02ef996e55082b704c09b970588/library/core/src/ub_checks.rs:77)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.05.rcgu.o:(core::slice::_$LT$impl$u20$$u5b$T$u5d$$GT$::split_at_mut_unchecked::h08f163901d82d17f)
+          >>> referenced by ub_checks.rs:77 (/rustc/1159e78c4747b02ef996e55082b704c09b970588/library/core/src/ub_checks.rs:77)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.05.rcgu.o:(core::slice::_$LT$impl$u20$$u5b$T$u5d$$GT$::split_at_mut_unchecked::hb1424764eb989f60)
+          >>> referenced by ub_checks.rs:77 (/rustc/1159e78c4747b02ef996e55082b704c09b970588/library/core/src/ub_checks.rs:77)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.02.rcgu.o:(core::slice::_$LT$impl$u20$$u5b$T$u5d$$GT$::split_at_mut_unchecked::h69224390cbfef365)
+          >>> referenced 11 more times
+          
+          rust-lld: error: undefined hidden symbol: _$LT$serde_json..value..ser..Serializer$u20$as$u20$serde_core..ser..Serializer$GT$::serialize_none::hdb3f035b78304bcd
+          >>> referenced by impls.rs:110 (/root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_core-1.0.229/src/ser/impls.rs:110)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.03.rcgu.o:(serde_core::ser::impls::_$LT$impl$u20$serde_core..ser..Serialize$u20$for$u20$core..option..Option$LT$T$GT$$GT$::serialize::h28a13564fcf6f1cd)
+          >>> referenced by impls.rs:110 (/root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_core-1.0.229/src/ser/impls.rs:110)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.03.rcgu.o:(serde_core::ser::impls::_$LT$impl$u20$serde_core..ser..Serialize$u20$for$u20$core..option..Option$LT$T$GT$$GT$::serialize::h507ef654bbb83eae)
+          >>> referenced by impls.rs:110 (/root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/serde_core-1.0.229/src/ser/impls.rs:110)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.03.rcgu.o:(serde_core::ser::impls::_$LT$impl$u20$serde_core..ser..Serialize$u20$for$u20$core..option..Option$LT$T$GT$$GT$::serialize::h8ecac6ae5f22fa88)
+          >>> referenced 4 more times
+          
+          rust-lld: error: undefined hidden symbol: std::fs::Metadata::is_dir::hb2e2f5a3d371f455
+          >>> referenced by content.rs:17 (src/content.rs:17)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.05.rcgu.o:(onklav_core::content::directory::hfeae9d97e933bd5f)
+          >>> referenced by sdk_storage.rs:20 (src/sdk_storage.rs:20)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.04.rcgu.o:(onklav_core::sdk_storage::directory::h67f2f5dc098e1dfe)
+          >>> referenced by history_journal.rs:17 (src/history_journal.rs:17)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.03.rcgu.o:(onklav_core::history_journal::base::h64274aee1a2842ff)
+          >>> referenced 1 more times
+          
+          rust-lld: error: undefined hidden symbol: core::slice::_$LT$impl$u20$$u5b$T$u5d$$GT$::swap_unchecked::precondition_check::h40b9441ad163bcdd
+          >>> referenced by ub_checks.rs:77 (/rustc/1159e78c4747b02ef996e55082b704c09b970588/library/core/src/ub_checks.rs:77)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.02.rcgu.o:(core::slice::_$LT$impl$u20$$u5b$T$u5d$$GT$::swap_unchecked::hac3dd424fefb175e)
+          >>> referenced by ub_checks.rs:77 (/rustc/1159e78c4747b02ef996e55082b704c09b970588/library/core/src/ub_checks.rs:77)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.03.rcgu.o:(core::slice::_$LT$impl$u20$$u5b$T$u5d$$GT$::swap_unchecked::hccc9314998962c16)
+          >>> referenced by ub_checks.rs:77 (/rustc/1159e78c4747b02ef996e55082b704c09b970588/library/core/src/ub_checks.rs:77)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.13.rcgu.o:(core::slice::_$LT$impl$u20$$u5b$T$u5d$$GT$::swap_unchecked::he7298c08f188c7d1)
+          
+          rust-lld: error: undefined hidden symbol: _$LT$std..ffi..os_str..OsString$u20$as$u20$core..ops..deref..Deref$GT$::deref::h6897a1ea87c213c3
+          >>> referenced by content.rs:60 (src/content.rs:60)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.05.rcgu.o:(onklav_core::content::load::h763117f2ad7b45e5)
+          >>> referenced by sdk.rs:129 (src/sdk.rs:129)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.04.rcgu.o:(onklav_core::sdk::collect_unused_packages::h2345539239ce5bd0)
+          >>> referenced by drawing.rs:39 (src/drawing.rs:39)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.05.rcgu.o:(onklav_core::drawing::service::h10249490ecafb672)
+          >>> referenced 5 more times
+          
+          rust-lld: error: undefined hidden symbol: std::ffi::os_str::OsStr::to_string_lossy::h4cd033fa51ba5d1e
+          >>> referenced by content.rs:60 (src/content.rs:60)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.05.rcgu.o:(onklav_core::content::load::h763117f2ad7b45e5)
+          >>> referenced by drawing.rs:39 (src/drawing.rs:39)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.05.rcgu.o:(onklav_core::drawing::service::h10249490ecafb672)
+          >>> referenced by drawing.rs:69 (src/drawing.rs:69)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.05.rcgu.o:(onklav_core::drawing::backup_export::h9c0416803b508484)
+          >>> referenced 3 more times
+          
+          rust-lld: error: undefined hidden symbol: _$LT$std..fs..File$u20$as$u20$std..io..Write$GT$::flush::hc49aa9a6ebb8f56a
+          >>> referenced by write.rs:79 (/root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zip-2.6.1/src/write.rs:79)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.04.rcgu.o:(_$LT$zip..write..MaybeEncrypted$LT$W$GT$$u20$as$u20$std..io..Write$GT$::flush::h1f3133d6557a0082)
+          >>> referenced by zipcrypto.rs:173 (/root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zip-2.6.1/src/zipcrypto.rs:173)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.03.rcgu.o:(zip::zipcrypto::ZipCryptoWriter$LT$W$GT$::finish::h7b53adc550e5e0fc)
+          >>> referenced by write.rs:1104 (/root/.cargo/registry/src/index.crates.io-1949cf8c6b5b557f/zip-2.6.1/src/write.rs:1104)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.12.rcgu.o:(zip::write::_$LT$impl$u20$zip..write..zip_writer..ZipWriter$LT$W$GT$$GT$::finish_file::hacade34a33715168)
+          
+          rust-lld: error: undefined hidden symbol: std::io::impls::_$LT$impl$u20$std..io..Read$u20$for$u20$$RF$$u5b$u8$u5d$$GT$::read::hc47fbe01e1787f9f
+          >>> referenced by bufreader.rs:347 (/rustc/1159e78c4747b02ef996e55082b704c09b970588/library/std/src/io/buffered/bufreader.rs:347)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.04.rcgu.o:(_$LT$std..io..buffered..bufreader..BufReader$LT$R$GT$$u20$as$u20$std..io..Read$GT$::read::h33053c2c4ad519a1)
+          >>> referenced by bufreader.rs:347 (/rustc/1159e78c4747b02ef996e55082b704c09b970588/library/std/src/io/buffered/bufreader.rs:347)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.04.rcgu.o:(_$LT$std..io..buffered..bufreader..BufReader$LT$R$GT$$u20$as$u20$std..io..Read$GT$::read::h8ee2aff805ab6789)
+          >>> referenced by bufreader.rs:347 (/rustc/1159e78c4747b02ef996e55082b704c09b970588/library/std/src/io/buffered/bufreader.rs:347)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.04.rcgu.o:(_$LT$std..io..buffered..bufreader..BufReader$LT$R$GT$$u20$as$u20$std..io..Read$GT$::read::h904d13aee02e6707)
+          >>> referenced 3 more times
+          
+          rust-lld: error: undefined hidden symbol: std::fs::Metadata::is_file::h360a5e0d6463e5ed
+          >>> referenced by library_backup.rs:15 (src/library_backup.rs:15)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.04.rcgu.o:(onklav_core::library_backup::regular::h786feb1d21481283)
+          >>> referenced by content.rs:68 (src/content.rs:68)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.05.rcgu.o:(onklav_core::content::note_bytes::hb6ab8c31af55f9b2)
+          >>> referenced by content.rs:91 (src/content.rs:91)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.05.rcgu.o:(onklav_core::content::text_snapshot::h2b0e5f35ca9746fc)
+          >>> referenced 15 more times
+          
+          rust-lld: error: undefined hidden symbol: std::fs::Metadata::len::h0e100a46c3e6f39e
+          >>> referenced by library_backup.rs:15 (src/library_backup.rs:15)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.04.rcgu.o:(onklav_core::library_backup::regular::h786feb1d21481283)
+          >>> referenced by library_backup.rs:15 (src/library_backup.rs:15)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.04.rcgu.o:(onklav_core::library_backup::regular::h786feb1d21481283)
+          >>> referenced by content.rs:68 (src/content.rs:68)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.05.rcgu.o:(onklav_core::content::note_bytes::hb6ab8c31af55f9b2)
+          >>> referenced 20 more times
+          
+          rust-lld: error: undefined hidden symbol: std::fs::OpenOptions::new::h7ee60ce6f1523da6
+          >>> referenced by library_backup.rs:66 (src/library_backup.rs:66)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.04.rcgu.o:(onklav_core::library_backup::dispatch::_$u7b$$u7b$closure$u7d$$u7d$::h2bdfddefd85ebb44)
+          >>> referenced by messaging.rs:41 (src/messaging.rs:41)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.02.rcgu.o:(onklav_core::messaging::save_guarded::_$u7b$$u7b$closure$u7d$$u7d$::heec5957028cdf4b2)
+          >>> referenced by sdk.rs:122 (src/sdk.rs:122)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.04.rcgu.o:(onklav_core::sdk::atomic::_$u7b$$u7b$closure$u7d$$u7d$::ha24c6a8f32f53fb1)
+          >>> referenced 9 more times
+          
+          rust-lld: error: undefined hidden symbol: std::fs::OpenOptions::write::hc5ec032ed60146eb
+          >>> referenced by library_backup.rs:66 (src/library_backup.rs:66)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.04.rcgu.o:(onklav_core::library_backup::dispatch::_$u7b$$u7b$closure$u7d$$u7d$::h2bdfddefd85ebb44)
+          >>> referenced by messaging.rs:41 (src/messaging.rs:41)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.02.rcgu.o:(onklav_core::messaging::save_guarded::_$u7b$$u7b$closure$u7d$$u7d$::heec5957028cdf4b2)
+          >>> referenced by sdk.rs:122 (src/sdk.rs:122)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.04.rcgu.o:(onklav_core::sdk::atomic::_$u7b$$u7b$closure$u7d$$u7d$::ha24c6a8f32f53fb1)
+          >>> referenced 14 more times
+          
+          rust-lld: error: undefined hidden symbol: std::fs::OpenOptions::create_new::h17ff6fdaec473758
+          >>> referenced by library_backup.rs:66 (src/library_backup.rs:66)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.04.rcgu.o:(onklav_core::library_backup::dispatch::_$u7b$$u7b$closure$u7d$$u7d$::h2bdfddefd85ebb44)
+          >>> referenced by messaging.rs:41 (src/messaging.rs:41)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.02.rcgu.o:(onklav_core::messaging::save_guarded::_$u7b$$u7b$closure$u7d$$u7d$::heec5957028cdf4b2)
+          >>> referenced by sdk.rs:122 (src/sdk.rs:122)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.04.rcgu.o:(onklav_core::sdk::atomic::_$u7b$$u7b$closure$u7d$$u7d$::ha24c6a8f32f53fb1)
+          >>> referenced 14 more times
+          
+          rust-lld: error: undefined hidden symbol: std::fs::Metadata::file_type::h134abfc6dcba2cab
+          >>> referenced by sdk.rs:119 (src/sdk.rs:119)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.04.rcgu.o:(onklav_core::sdk::dir::h9f1576f61e578dea)
+          >>> referenced by sdk.rs:120 (src/sdk.rs:120)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.04.rcgu.o:(onklav_core::sdk::sub::hb4d2eed689aa9b1b)
+          >>> referenced by sdk.rs:132 (src/sdk.rs:132)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.04.rcgu.o:(onklav_core::sdk::scope::h6114036f3c1d7529)
+          >>> referenced 1 more times
+          
+          rust-lld: error: undefined hidden symbol: std::fs::FileType::is_symlink::h6689373c07137739
+          >>> referenced by sdk.rs:119 (src/sdk.rs:119)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.04.rcgu.o:(onklav_core::sdk::dir::h9f1576f61e578dea)
+          >>> referenced by sdk.rs:120 (src/sdk.rs:120)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.04.rcgu.o:(onklav_core::sdk::sub::hb4d2eed689aa9b1b)
+          >>> referenced by sdk.rs:132 (src/sdk.rs:132)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.04.rcgu.o:(onklav_core::sdk::scope::h6114036f3c1d7529)
+          >>> referenced 1 more times
+          
+          rust-lld: error: undefined hidden symbol: std::fs::FileType::is_file::hf8cfe3dbb19d5218
+          >>> referenced by sdk.rs:129 (src/sdk.rs:129)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.04.rcgu.o:(onklav_core::sdk::collect_unused_packages::h2345539239ce5bd0)
+          >>> referenced by sdk_storage.rs:29 (src/sdk_storage.rs:29)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.04.rcgu.o:(onklav_core::sdk_storage::collect_orphans::hc5c4ba2f925ac1ba)
+          
+          rust-lld: error: undefined hidden symbol: std::ffi::os_str::OsStr::to_str::h4ec79f7aac52e716
+          >>> referenced by sdk.rs:129 (src/sdk.rs:129)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.04.rcgu.o:(onklav_core::sdk::collect_unused_packages::h2345539239ce5bd0)
+          >>> referenced by sdk_storage.rs:29 (src/sdk_storage.rs:29)
+          >>>               /workspace/scratch/75acf774e3b8/work/OnKlav/developer/target/host/debug/deps/onklav_core.onklav_core.18c6e08eaa3b0fdd-cgu.04.rcgu.o:(onklav_core::sdk_storage::collect_orphans::hc5c4ba2f925ac1ba)
+          
+          rust-lld: error: too many errors emitted, stopping now (use --error-limit=0 to see all errors)
+          collect2: error: ld returned 1 exit status
+          
+
+error: could not compile `onklav-core` (lib) due to 1 previous error
+OnKlav SDK: Command '['cargo', 'build', '--quiet', '--locked', '--manifest-path', '/workspace/scratch/75acf774e3b8/work/OnKlav/developer/host/Cargo.toml']' returned non-zero exit status 101.

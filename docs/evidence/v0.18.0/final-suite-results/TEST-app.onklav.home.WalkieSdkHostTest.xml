@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.WalkieSdkHostTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-22T15:48:41" hostname="2383b52a5fc7" time="3.238">
+  <properties/>
+  <testcase name="walkieSettingsOfflineDialAndRecipientStorageUseSignedSdk" classname="app.onklav.home.WalkieSdkHostTest" time="3.238"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

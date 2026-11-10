@@ -1,0 +1,29 @@
+{
+  "sdk_apps": "reuse",
+  "mobile_rust": "reuse",
+  "neural_speech": "reuse",
+  "games": "reuse",
+  "android_tests": "not requested",
+  "variant": "optimized",
+  "abis": [
+    "arm64-v8a"
+  ]
+}
+Resource inputs changed: refreshing generated resource/package/DEX caches
+assemble-optimized: starting (maximum 900s)
+assemble-optimized: 20s elapsed
+assemble-optimized: 40s elapsed
+assemble-optimized: 60s elapsed
+assemble-optimized: 80s elapsed
+assemble-optimized: 100s elapsed
+assemble-optimized: 120s elapsed
+assemble-optimized: 140s elapsed
+assemble-optimized: 160s elapsed
+assemble-optimized: 180s elapsed
+assemble-optimized: 200s elapsed
+assemble-optimized: 220s elapsed
+assemble-optimized: 240s elapsed
+assemble-optimized: finished in 245.28s
+verify-optimized: starting (maximum 120s)
+verify-optimized: finished in 3.13s
+APK assembled and verified. Phone/carrier/performance acceptance remains separate.

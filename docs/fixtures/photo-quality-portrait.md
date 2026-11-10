@@ -1,0 +1,1 @@
+Internal photo-processing fixture: Grace Hopper portrait distributed with Matplotlib sample_data/grace_hopper.jpg (U.S. Navy photograph). Stored as docs/evidence/v0.100.14/quality-source.png. Used for native render contact sheets, not app artwork.

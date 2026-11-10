@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.SdkAudioBooksTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-10-26T15:39:40" hostname="844ebfe47829" time="17.652">
+  <properties/>
+  <testcase name="previewIsNotInMyLibraryUntilSavedAndImportedBookStartsWithDefaultGrants" classname="app.onklav.home.SdkAudioBooksTest" time="6.149"/>
+  <testcase name="failedMultiFileImportRollsBackWithoutLosingExistingBooks" classname="app.onklav.home.SdkAudioBooksTest" time="2.318"/>
+  <testcase name="quickTimeTextChapterTrackResolvesSampleOffsetsAndTimes" classname="app.onklav.home.SdkAudioBooksTest" time="0.047"/>
+  <testcase name="publicAudioRedirectsCannotEscapeTrustedHostsOrDowngradeTls" classname="app.onklav.home.SdkAudioBooksTest" time="0.041"/>
+  <testcase name="publicCatalogProjectionRejectsCredentialsAndPrivateSources" classname="app.onklav.home.SdkAudioBooksTest" time="0.044"/>
+  <testcase name="actualLibriVoxCatalogBuildsAllItsChapterSources" classname="app.onklav.home.SdkAudioBooksTest" time="3.749"/>
+  <testcase name="m4bNeroChaptersAndMalformedMarkersAreBounded" classname="app.onklav.home.SdkAudioBooksTest" time="0.03"/>
+  <testcase name="signedLibraryImportsNaturallyResumesAndRevokesLocalSourceReads" classname="app.onklav.home.SdkAudioBooksTest" time="1.674"/>
+  <testcase name="interruptedPublicDownloadKeepsCompletedChaptersAndResumesOnlyMissingOnes" classname="app.onklav.home.SdkAudioBooksTest" time="3.552"/>
+  <testcase name="progressUsesWholeBookAndFinishedState" classname="app.onklav.home.SdkAudioBooksTest" time="0.043"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

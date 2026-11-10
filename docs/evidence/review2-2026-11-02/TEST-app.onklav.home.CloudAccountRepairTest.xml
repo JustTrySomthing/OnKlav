@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.CloudAccountRepairTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-11-02T16:49:57" hostname="13575fdd974e" time="3.629">
+  <properties/>
+  <testcase name="separateStoreInstancesSerializeTheirReadModifyWriteTransactions" classname="app.onklav.home.CloudAccountRepairTest" time="2.913"/>
+  <testcase name="cancelDuringConnectCommitStillAcknowledgesTheCommittedAccount" classname="app.onklav.home.CloudAccountRepairTest" time="0.434"/>
+  <testcase name="connectMergesAnAccountAddedAfterThisWindowLoaded" classname="app.onklav.home.CloudAccountRepairTest" time="0.1"/>
+  <testcase name="disconnectPreservesAnAccountAddedByAnotherWindow" classname="app.onklav.home.CloudAccountRepairTest" time="0.105"/>
+  <testcase name="cancelDuringDisconnectCommitDoesNotLeaveARemovedAccountInMemory" classname="app.onklav.home.CloudAccountRepairTest" time="0.075"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

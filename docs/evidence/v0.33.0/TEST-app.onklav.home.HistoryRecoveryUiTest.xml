@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.HistoryRecoveryUiTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-22T22:14:44" hostname="276516236850" time="1.328">
+  <properties/>
+  <testcase name="knownIncompleteCleanupRemainsGateClosed" classname="app.onklav.home.HistoryRecoveryUiTest" time="0.133"/>
+  <testcase name="unknownInsertReviewStaysPausedWithoutClearOrRetry" classname="app.onklav.home.HistoryRecoveryUiTest" time="0.172"/>
+  <testcase name="compactConfirmationRetainsReplayProtectionAndPendingRecords" classname="app.onklav.home.HistoryRecoveryUiTest" time="0.224"/>
+  <testcase name="finishSavedRecordOnlyAcknowledgesExistingMetadata" classname="app.onklav.home.HistoryRecoveryUiTest" time="0.161"/>
+  <testcase name="recoveryRouteAndStagedIdentitySaveCancelAndValidation" classname="app.onklav.home.HistoryRecoveryUiTest" time="0.637"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

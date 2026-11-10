@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.SdkPodcastsTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-26T14:59:45" hostname="844ebfe47829" time="2.475">
+  <properties/>
+  <testcase name="longFeedsArePagedAndMissingEnclosureLengthsDoNotHideEpisodes" classname="app.onklav.home.SdkPodcastsTest" time="2.356"/>
+  <testcase name="localDirectoryHasNoNetworkCallOrSearchUsageCounter" classname="app.onklav.home.SdkPodcastsTest" time="0.072"/>
+  <testcase name="unsafeFeedsAndEnclosuresAreRejectedWithoutMarkupOrDuplicates" classname="app.onklav.home.SdkPodcastsTest" time="0.046"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

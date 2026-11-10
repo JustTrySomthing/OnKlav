@@ -1,0 +1,15 @@
+{
+  "build": [
+    "Email"
+  ],
+  "restore_bundles": [],
+  "remove_bundles": [],
+  "reuse": [],
+  "unselected_stale": []
+}
+   Compiling onklav-core v0.8.0 (/workspace/scratch/b5e698131b7f/source/OnKlav/core)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 1.66s
+Email: compiling changed app
+    Finished `release` profile [optimized] target(s) in 0.02s
+Created /workspace/scratch/b5e698131b7f/source/OnKlav/sdk/packages/.sdk-build-pvy116aj/Email.onklav-a
+{"built": ["Email"], "bundles_restored": [], "all_packages_current": true}

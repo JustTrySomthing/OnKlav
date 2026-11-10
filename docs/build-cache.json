@@ -1,0 +1,59 @@
+{
+  "version": "0.9.2",
+  "scope": "Linux x86_64 JDK17 SDK36/build-tools35 Gradle8.11.1 and cached dependencies; no signing keys, emulator or user data",
+  "parts": [
+    {
+      "name": "OnKlav-Build-Cache-v0.9.2.part01",
+      "bytes": 209715200,
+      "sha256": "aaac175a0e4a8155dfc523e9b3df08a4b2b0409fb2cd0a2490c666a45b015f7b"
+    },
+    {
+      "name": "OnKlav-Build-Cache-v0.9.2.part02",
+      "bytes": 209715200,
+      "sha256": "0627df47635ea853000aa653770daf328da81fce08ac22a7ea09a82ad14d8491"
+    },
+    {
+      "name": "OnKlav-Build-Cache-v0.9.2.part03",
+      "bytes": 209715200,
+      "sha256": "a2ee7237966c0fae6a41dd186329cfed91465f0597c2c52225ebc006eb932bb8"
+    },
+    {
+      "name": "OnKlav-Build-Cache-v0.9.2.part04",
+      "bytes": 209715200,
+      "sha256": "2b374d229904f1793d471d6a2d58ac92445b654464efb39ecc1a73a81f8e777f"
+    },
+    {
+      "name": "OnKlav-Build-Cache-v0.9.2.part05",
+      "bytes": 209715200,
+      "sha256": "ed858b8582a50421dfd4f1d69581d54b66d974ebcb42e8f70d22419374030cbe"
+    },
+    {
+      "name": "OnKlav-Build-Cache-v0.9.2.part06",
+      "bytes": 209715200,
+      "sha256": "e1afb97ffaf22e4c39c77fe6de48fd524e8ad6b32a55ca794abfce3ef1b40d10"
+    },
+    {
+      "name": "OnKlav-Build-Cache-v0.9.2.part07",
+      "bytes": 209715200,
+      "sha256": "4bad6f13a8edc0867f66ff615403d811f5abe21d441d6962522281fbe6af06b9"
+    },
+    {
+      "name": "OnKlav-Build-Cache-v0.9.2.part08",
+      "bytes": 209715200,
+      "sha256": "def7cc281c3f94ee15a3eaf04d400d6107d3befcba56989fa28c86a256ec59c6"
+    },
+    {
+      "name": "OnKlav-Build-Cache-v0.9.2.part09",
+      "bytes": 84109274,
+      "sha256": "83715e6fa6da3eb5c0577d3cc0ac841ac7cef43a254105964eeeeaaf396eb5a4"
+    }
+  ],
+  "host_native_sha256": "1be0aba0aeaec21879c9bd0bb943d382ed943e58d2dbed85540c134f259295a5",
+  "optional_supplements": [
+    {
+      "name": "OnKlav-Android-Dependencies.zip",
+      "library_file_id": "libfile_0721f01c08388191a5a99ef0e4cff0a0",
+      "scope": "Exact restored host3 dependencies/transitives and lint dependencies, plus Gradle8.11.1 module metadata. Stop Gradle, verify dependency manifest then overlay caches/ into GRADLE_USER_HOME after original v0.9.2 restoration. No keys/APKs/toolchains."
+    }
+  ]
+}

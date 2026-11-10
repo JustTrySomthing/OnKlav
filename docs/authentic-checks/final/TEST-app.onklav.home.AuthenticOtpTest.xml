@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.AuthenticOtpTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-10-31T18:12:21" hostname="83231ba1f14b" time="5.738">
+  <properties/>
+  <testcase name="malformedTransferAndHostileUrisNeverExposeInputInErrors" classname="app.onklav.home.AuthenticOtpTest" time="3.295"/>
+  <testcase name="base32RoundTripAndNonCanonicalInputs" classname="app.onklav.home.AuthenticOtpTest" time="0.068"/>
+  <testcase name="invalidBase32AndUnsupportedUriParametersAreRejected" classname="app.onklav.home.AuthenticOtpTest" time="0.044"/>
+  <testcase name="uriRoundTripRetainsAllOtpParametersAndPlusLabels" classname="app.onklav.home.AuthenticOtpTest" time="0.041"/>
+  <testcase name="googleTransferParsesBatchAndRejectsUnsupportedAlgorithms" classname="app.onklav.home.AuthenticOtpTest" time="0.034"/>
+  <testcase name="rfc4226AllTenHotpVectors" classname="app.onklav.home.AuthenticOtpTest" time="0.048"/>
+  <testcase name="completeGoogleTransferWaitsForAllQrFragmentsAndExplicitConfirmation" classname="app.onklav.home.AuthenticOtpTest" time="2.137"/>
+  <testcase name="rfc6238AllAlgorithmsAndPost2038Times" classname="app.onklav.home.AuthenticOtpTest" time="0.042"/>
+  <testcase name="duplicatesDoNotRollHotpCountersBackward" classname="app.onklav.home.AuthenticOtpTest" time="0.024"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

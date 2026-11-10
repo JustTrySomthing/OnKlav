@@ -1,0 +1,9 @@
+{
+  "debug": {
+    "status": "compiled class bytes match runtime bundle",
+    "class_files": 804
+  },
+  "optimized": {
+    "status": "not emitted by this variant pipeline"
+  }
+}

@@ -1,0 +1,16 @@
+   Compiling onklav-core v0.8.0 (/workspace/scratch/75acf774e3b8/work/OnKlav/core)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 9.27s
+     Running unittests src/lib.rs (core/target/debug/deps/onklav_core-8a579202944a8eae)
+
+running 2 tests
+test sdk_devices::tests::scope_and_bounds ... ok
+test sdk_devices::tests::valid_workflows ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 228 filtered out; finished in 0.00s
+
+     Running unittests src/bin/onklav-pack.rs (core/target/debug/deps/onklav_pack-ee23dc4255ec4a6b)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

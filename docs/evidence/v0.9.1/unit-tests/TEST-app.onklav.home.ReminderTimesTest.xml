@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.ReminderTimesTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-22T03:50:59" hostname="e2a58be9e39b" time="0.049">
+  <properties/>
+  <testcase name="calendarMorningSurvivesSpringClockChange" classname="app.onklav.home.ReminderTimesTest" time="0.049"/>
+  <testcase name="lateEveningCapsTonightWithoutSchedulingPastTime" classname="app.onklav.home.ReminderTimesTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

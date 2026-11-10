@@ -1,0 +1,75 @@
+{
+  "version": "0.96.0-video1",
+  "android_code": 104,
+  "media3": "1.9.3",
+  "status": "source complete; APK ready",
+  "features": [
+    "themed timeline, project library, auto-save, undo/redo",
+    "trim/split/duplicate/reorder; rotate/flip/zoom/pan and eased zoom motion",
+    "timed wrapped styled text; four mixed sound tracks and volume/fades",
+    "brightness/contrast/saturation/hue/warmth and presets",
+    "foreground paused composition preview and H.264/AAC MP4 export"
+  ],
+  "validation": {
+    "focused_unique_passed": 7,
+    "cases": [
+      {
+        "class": "app.onklav.home.VideoEditorUiTest",
+        "case": "timelineTextCanvasAndProjectLibraryAreReachable"
+      },
+      {
+        "class": "app.onklav.home.VideoEditorHostTest",
+        "case": "compositionCarriesClipsTextSpeedAndMixedSound"
+      },
+      {
+        "class": "app.onklav.home.VideoEditorHostTest",
+        "case": "splitKeepsSourceTimingAndDividesCaptionRanges"
+      },
+      {
+        "class": "app.onklav.home.VideoEditorHostTest",
+        "case": "pcmGainAndFadesUseRealSamplesAndProtectPeaks"
+      },
+      {
+        "class": "app.onklav.home.VideoEditorHostTest",
+        "case": "bundledSignedAppLaunchesAndHonorsRevocation"
+      },
+      {
+        "class": "app.onklav.home.VideoEditorHostTest",
+        "case": "projectStoreRestoresOriginalCopiesAndRejectsUnsafePaths"
+      },
+      {
+        "class": "app.onklav.home.VideoEditorHostTest",
+        "case": "longCaptionsWrapInsideBoundedBitmapTextures"
+      }
+    ],
+    "native_ui_gpu_preparation_disabled_for_host_test": true,
+    "lint_status": "passed",
+    "signed_included_apps": 21,
+    "native_core_changed": false,
+    "apk": {
+      "file": "OnKlav-0.96.0-ARM64.apk",
+      "bytes": 91857458,
+      "sha256": "76c306c05110eb64b985c18095b7a30ad235becdb2a6066780378bddc08d36bf",
+      "build_and_signature_verification": "passed",
+      "original_android_signer": "6ed975c5fc27d19f6291f751a8bb00fa8a2c2e7d268bffc7b6ddf7e1b1a7a69d"
+    },
+    "lint_severities": {
+      "Warning": 208,
+      "Information": 1
+    },
+    "lint_errors": 0,
+    "runtime_classes_matched": 159,
+    "native_ui_review": "Timeline and Text native screens inspected; snapshots internal only",
+    "final_apk_build_seconds": 36.2,
+    "final_apk_verify_seconds": 2.57,
+    "lint_exemption": "WriteNativeEditor intentionally uses platform EditText in ComponentActivity; scoped AppCompatCustomView exemption after Lottie introduced transitive AppCompat"
+  },
+  "limits": [
+    "one video/photo lane; timed text and up to four sound tracks",
+    "no automatic captions, AI cutout, cloud templates, arbitrary video overlays or recording",
+    "fades through black, no overlapping crossfade",
+    "private imports max4GB each;100clips;12hours/project"
+  ],
+  "phone_acceptance": false,
+  "phone_notes": "GPU composition preview, real codecs/export/provider, touch/keyboard and long-file performance require handset testing."
+}

@@ -1,0 +1,35 @@
+   Compiling jni-sys v0.3.1
+   Compiling jni v0.21.1
+   Compiling onklav-core v0.8.0 (/workspace/scratch/ed752e8a1957/current/OnKlav/core)
+warning: unused import: `BTreeSet`
+ --> src/sdk_storage.rs:6:34
+  |
+6 | use std::{collections::{BTreeMap,BTreeSet},fs::{self,File,OpenOptions},io::{Read,Seek,SeekFrom,Write},path::{Path,PathBuf}};
+  |                                  ^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` on by default
+
+warning: `onklav-core` (lib) generated 1 warning (run `cargo fix --lib -p onklav-core` to apply 1 suggestion)
+warning: `onklav-core` (lib test) generated 1 warning (1 duplicate)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 3.72s
+     Running unittests src/lib.rs (core/target/debug/deps/onklav_core-8a579202944a8eae)
+
+running 9 tests
+test sdk_collections::tests::collections_transaction_query_reopen_and_conflicts ... ok
+test sdk_collections::tests::collections_failed_batch_keeps_all_old_rows ... ok
+test sdk_collections::tests::collections_symlink_cannot_read_or_overwrite_another_app ... ok
+test sdk_collections::tests::collections_clear_and_consistent_pages_reject_old_revisions ... ok
+test sdk_collections::tests::collections_paging_and_schema_upgrades_are_explicit ... ok
+test sdk_collections::tests::storage_invalid_backup_preserves_collection ... ok
+test sdk_collections::tests::storage_collection_backup_restore_is_scoped_and_revision_checked ... ok
+test sdk_collections::tests::collections_paths_corruption_and_quotas_fail_closed ... ok
+test sdk::tests::collections_broker_grants_isolation_and_removal ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 202 filtered out; finished in 0.13s
+
+     Running unittests src/bin/onklav-pack.rs (core/target/debug/deps/onklav_pack-ee23dc4255ec4a6b)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

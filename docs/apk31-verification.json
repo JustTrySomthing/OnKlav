@@ -1,0 +1,16 @@
+{
+  "status": "passed",
+  "version": "0.100.31-rc1",
+  "version_code": 140,
+  "package": "app.onklav.home.prototype.rewrite",
+  "bytes": 122076843,
+  "sha256": "d96498b7903d36afbe853ce686d2550f79a30e4c0458a90e29b5b72f33f96116",
+  "signer_sha256": "6ed975c5fc27d19f6291f751a8bb00fa8a2c2e7d268bffc7b6ddf7e1b1a7a69d",
+  "verification": "docs/apk-verification-optimized.json",
+  "build": "docs/evidence/v0.100.31/build-optimized.json",
+  "entrypoints": "docs/evidence/v0.100.31/feature-packaging.json",
+  "release_blocking_lint": "passed",
+  "full_lint": "not repeated; release-blocking lint ran during assembly",
+  "previous_feature_checks": "18 Email and 32 Vault/Stamp focused tests passed; not rerun for packaging",
+  "physical_phone_qualification": "pending"
+}

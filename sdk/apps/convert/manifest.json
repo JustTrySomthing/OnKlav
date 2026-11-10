@@ -1,0 +1,15 @@
+{
+  "schema": "onklav.app.v1",
+  "runtime": "rust-wasm-ui.v1",
+  "id": "app.onklav.convert",
+  "name": "Convert",
+  "version": 17,
+  "min_host": 90,
+  "icon": {
+    "symbol": "convert"
+  },
+  "capabilities": [
+    "storage.private",
+    "clipboard.write"
+  ]
+}

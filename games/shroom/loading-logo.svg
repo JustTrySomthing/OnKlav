@@ -1,0 +1,24 @@
+<svg xmlns:xlink="http://www.w3.org/1999/xlink" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 435" role="img" aria-label="SHROOM — Deep Spore Containment">
+<defs>
+ <radialGradient id="haze"><stop stop-color="#483055"/><stop offset=".58" stop-color="#23162e"/><stop offset="1" stop-color="#130e1c"/></radialGradient>
+ <linearGradient id="face" x1="0" y1="87" x2="0" y2="315" gradientUnits="userSpaceOnUse">
+  <stop stop-color="#ffe8aa"/><stop offset=".30" stop-color="#ff9e79"/><stop offset=".48" stop-color="#f25b81"/><stop offset=".49" stop-color="#923976"/><stop offset=".68" stop-color="#cf75a8"/><stop offset="1" stop-color="#725ab4"/>
+ </linearGradient>
+ <linearGradient id="rim" x2="0" y2="1"><stop stop-color="#fff4c8"/><stop offset=".54" stop-color="#ffb193"/><stop offset="1" stop-color="#a4f8de"/></linearGradient>
+ <pattern id="etch" width="32" height="19" patternUnits="userSpaceOnUse"><path d="M0 0h13m7 11h12M3 15h6" fill="none" stroke="#361d55" stroke-opacity=".35" stroke-width="1.5"/></pattern>
+ <g id="word" fill-rule="evenodd"><path d="M69,116.1 91,87.7 188,94.9 188,142.9 112,139.8 112,177.1 167,178.0 189,206.1 189,285.6 164,320.5 69,328.5 69,272.3 147,268.7 147,232.3 93,233.4 69,201.1Z"/><path d="M200,95.8 243,99.1 243,178.0 282,178.6 282,102.0 324,105.2 324,307.2 282,310.7 282,229.3 243,230.2 243,313.9 200,317.5Z"/><path d="M335,106.0 435,113.5 459,139.8 459,201.0 437,222.8 468,295.1 420,299.1 395,234.4 378,234.9 378,302.7 335,306.2Z M378,149.7 415,151.2 419,156.7 419,185.2 413,192.5 378,192.3Z"/><path d="M496,115.9 576,109.9 598,133.6 598,277.2 574,301.7 496,295.2 473,270.5 473,139.5Z M515,159.8 522,152.3 549,151.2 557,158.3 557,251.2 549,259.3 522,258.0 515,249.4Z"/><path d="M632,105.7 712,99.7 734,126.2 734,285.7 710,313.1 632,306.6 609,277.9 609,133.0Z M651,155.0 658,146.6 685,145.5 693,153.5 693,257.0 685,266.1 658,264.7 651,255.2Z"/><path d="M745,97.2 787,94.0 818,171.1 849,89.4 894,86.0 894,328.5 852,325.0 852,186.4 818,260.9 787,188.3 787,319.5 745,316.0Z"/></g>
+</defs>
+<rect width="960" height="435" fill="url(#haze)"/>
+<g fill="none" stroke="#9e649f" stroke-opacity=".20">
+ <path d="M37 128V75l57-30h177m652 83V75l-57-30H689M40 302v39l54 32h157m669-71v39l-54 32H709"/>
+ <path d="M59 153V85l37-23h72m733 91V85l-37-23h-72"/>
+ <ellipse cx="480" cy="214" rx="448" ry="154"/>
+</g>
+<g fill="#83f4cf" opacity=".55"><circle cx="47" cy="176" r="2"/><circle cx="218" cy="63" r="2"/><circle cx="580" cy="63" r="2"/><circle cx="735" cy="76" r="2"/><circle cx="906" cy="207" r="2"/><circle cx="54" cy="292" r="2"/><circle cx="871" cy="356" r="2"/></g>
+<use xlink:href="#word" x="8" y="20" fill="#100917" stroke="#100917" stroke-width="18" stroke-linejoin="bevel"/>
+<use xlink:href="#word" x="6" y="13" fill="#3d254e" stroke="#54335c" stroke-width="6" stroke-linejoin="bevel"/>
+<use xlink:href="#word" fill="url(#face)" stroke="#1c1028" stroke-width="8" stroke-linejoin="bevel"/>
+<use xlink:href="#word" fill="url(#etch)" stroke="url(#rim)" stroke-width="2.2" stroke-linejoin="bevel"/>
+<path d="M101 353h115l22-9h23m598 9H744l-22-9h-23" fill="none" stroke="#75d6bf" stroke-opacity=".55" stroke-width="2"/>
+<text x="480" y="359" text-anchor="middle" font-family="DejaVu Sans,sans-serif" font-weight="700" font-size="17" letter-spacing="4.3" fill="#a4f8de">DEEP SPORE CONTAINMENT</text>
+</svg>

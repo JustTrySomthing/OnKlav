@@ -1,0 +1,7 @@
+Bounded native themed screen run; three tests passed. Physical hardware was disabled/unavailable in the host.
+EssentialsUiTest > flashlightHasExplicitModesAutoOffAndRestorableScreenLight STARTED
+EssentialsUiTest > flashlightHasExplicitModesAutoOffAndRestorableScreenLight PASSED
+EssentialsUiTest > clockTabsTimerDialogAndStopwatchControlsAreReachable STARTED
+EssentialsUiTest > clockTabsTimerDialogAndStopwatchControlsAreReachable PASSED
+EssentialsUiTest > cameraSettingsCapturesAndPermissionControlsHaveNoDeadEnds STARTED
+EssentialsUiTest > cameraSettingsCapturesAndPermissionControlsHaveNoDeadEnds PASSED

@@ -1,0 +1,1460 @@
+[
+  {
+    "class": "app.onklav.home.MessageFocusTest",
+    "name": "exactMessageAndDateAreRequired",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.MessageFocusTest.xml"
+  },
+  {
+    "class": "app.onklav.home.ReminderTimesTest",
+    "name": "calendarMorningSurvivesSpringClockChange",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.ReminderTimesTest.xml"
+  },
+  {
+    "class": "app.onklav.home.ReminderTimesTest",
+    "name": "lateEveningCapsTonightWithoutSchedulingPastTime",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.ReminderTimesTest.xml"
+  },
+  {
+    "class": "app.onklav.home.AppearancePolishTest",
+    "name": "exportedFilesAndMessageFilesRejectLinkedTargets",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.AppearancePolishTest.xml"
+  },
+  {
+    "class": "app.onklav.home.AppearancePolishTest",
+    "name": "nativePickersUseCurrentPaletteAndFontOnAndroid15",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.AppearancePolishTest.xml"
+  },
+  {
+    "class": "app.onklav.home.AppearancePolishTest",
+    "name": "memoryPressureDropsBackgroundCacheWithoutRecyclingDisplayedImages",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.AppearancePolishTest.xml"
+  },
+  {
+    "class": "app.onklav.home.AppearancePolishTest",
+    "name": "everyPaletteHasReadableControlsAndNoDefaultSecondaryAccent",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.AppearancePolishTest.xml"
+  },
+  {
+    "class": "app.onklav.home.AppearancePolishTest",
+    "name": "annotationChecksHeaderDimensionsBeforeFullDecode",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.AppearancePolishTest.xml"
+  },
+  {
+    "class": "app.onklav.home.AppearancePolishTest",
+    "name": "grayscaleNeutralSurfacesStayNeutral",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.AppearancePolishTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryApplyTest",
+    "name": "stoppingContinuationRetainsNewCommitAndNextReviewDoesNotInsertAgain",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryApplyTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryApplyTest",
+    "name": "confirmationNeedsComparisonMmsIdentitiesAndExplicitUncancelledReview",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryApplyTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryApplyTest",
+    "name": "pendingMessageAppearingOrChangedCompletedTargetRequiresReviewBeforeInsertion",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryApplyTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryApplyTest",
+    "name": "partialBatchFinishesOnlyMissingMessageUnderOriginalRecord",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryApplyTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryApplyTest",
+    "name": "providerChangeDuringPostCaptureStopsMetadataMerge",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryApplyTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryApplyTest",
+    "name": "reviewedApplyUsesFreshPlanAndCannotReuseConfirmation",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryApplyTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryApplyTest",
+    "name": "changedSavedRecordOrWrongOriginalArchiveCannotContinue",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryApplyTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryApplyTest",
+    "name": "secondMessageFailureKeepsFirstAndCleansOnlyIncompleteInsert",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryApplyTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryApplyTest",
+    "name": "stopAfterCommitPreservesPartialOutcomeMapAndReceipt",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryApplyTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryApplyTest",
+    "name": "pendingBatchesHaveExplicitSourcesAndProductionGatePrecedesSnapshot",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryApplyTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryApplyTest",
+    "name": "wrongRecordedPhoneIdsAndProviderChangesLeaveResumeMetadataUntouched",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryApplyTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryApplyTest",
+    "name": "lostInsertAcknowledgementBlocksContinuationWithoutDiscardingPartialMap",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryApplyTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryApplyTest",
+    "name": "freshPhoneComparisonSkipsExistingRowsAndAbsentCommittedRowsBlockReplay",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryApplyTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryApplyTest",
+    "name": "changedContentOrWrongPostIdsLeaveMetadataUntouchedAndReceiptsIntact",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryApplyTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryApplyTest",
+    "name": "productionGateBlocksBeforeSafAndProviderSnapshot",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryApplyTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryApplyTest",
+    "name": "postSnapshotRemapsFlagsAndFoldersAndDisarmsOldReminders",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryApplyTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryApplyTest",
+    "name": "changedIdentityConfigurationRejectsReviewBeforeSafOrProviderReads",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryApplyTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryApplyTest",
+    "name": "changedArchiveAndMissingMmsIdentitiesFailBeforeFirstInsert",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryApplyTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryApplyTest",
+    "name": "identityChangeAtProviderBoundaryPausesWithKnownReceiptAndNoAutomaticRetry",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryApplyTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryApplyTest",
+    "name": "recoveredCommitBeforeMapAcknowledgementRequiresNoNewInsert",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryApplyTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryApplyTest",
+    "name": "checkedArchiveFeedsTypedExecutorAndPersistsActualIdsWithoutOldIds",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryApplyTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryApplyTest",
+    "name": "metadataEditedDuringInsertsWinsOverArchiveEntries",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryApplyTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryApplyTest",
+    "name": "changedPhonePlanRequiresAnotherReviewBeforeAnyInsertion",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryApplyTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryApplyTest",
+    "name": "resumeTicketCannotStartAnotherInsertBatchAndChangedIdentitiesNeedReview",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryApplyTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryApplyTest",
+    "name": "savedRecordMetadataResumesOriginalJobWithoutInsertingOrReplayingMessages",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryApplyTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryBackupTest",
+    "name": "providerFailureAndChangesNeverPublishSuccessOrLeavePrivateHistory",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryBackupTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryBackupTest",
+    "name": "comparisonIsBoundToThePreviouslyCheckedArchiveAndRejectsChangedFiles",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryBackupTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryBackupTest",
+    "name": "historyReviewUsesExportedZipWithoutSmsAccessOrProviderMutationAndRemovesCopies",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryBackupTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryBackupTest",
+    "name": "realProviderToJniToZipPreservesTextAddressesMediaAndUnits",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryBackupTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryBackupTest",
+    "name": "failedAndCancelledImportClearCopiesKeepOriginalAndCannotEnableRestore",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryBackupTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryBackupTest",
+    "name": "comparisonPermissionChangeAndCancellationInvalidateResultsAndRemoveSnapshots",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryBackupTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryBackupTest",
+    "name": "cancellationAndRevocationAreCheckedAgainBeforeDocumentWrite",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryBackupTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryBackupTest",
+    "name": "comparisonMatchesSmsAndMmsAcrossChangedIdsWithoutMutatingProviderOrAppMetadata",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryBackupTest.xml"
+  },
+  {
+    "class": "app.onklav.home.LibraryBackupTest",
+    "name": "annotatedImageUsesRealSdkImportAndLiveSessionsBlockRestoration",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.LibraryBackupTest.xml"
+  },
+  {
+    "class": "app.onklav.home.LibraryBackupTest",
+    "name": "oneAppDocumentsBackupRestoresAcrossStoresAndRepeatsSafely",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.LibraryBackupTest.xml"
+  },
+  {
+    "class": "app.onklav.home.LibraryBackupTest",
+    "name": "cancellationAndProviderFailureCleanStagingAndIncompleteOutput",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.LibraryBackupTest.xml"
+  },
+  {
+    "class": "app.onklav.home.LibraryBackupTest",
+    "name": "youtubeBackupReopensBookmarksAndHistoryWithALocalViewerIdentity",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.LibraryBackupTest.xml"
+  },
+  {
+    "class": "app.onklav.home.LibraryBackupTest",
+    "name": "rssProviderBackupReopensOfflineArticlesAndBookmarksInTheSignedApp",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.LibraryBackupTest.xml"
+  },
+  {
+    "class": "app.onklav.home.LibraryBackupTest",
+    "name": "filesProviderToJniRoundTripKeepsBytesAndRejectsChangedReview",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.LibraryBackupTest.xml"
+  },
+  {
+    "class": "app.onklav.home.LibraryBackupTest",
+    "name": "readerBackupRestoresAnAccessibleDraftAndKeepsAnExistingClearedDraft",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.LibraryBackupTest.xml"
+  },
+  {
+    "class": "app.onklav.home.LibraryBackupTest",
+    "name": "browserBackupReopensTabsAndBookmarksAndPreservesLocalChanges",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.LibraryBackupTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryRestoreTest",
+    "name": "cancellationDuringChildrenRollsBackButCleanupFailureBlocksContinuation",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryRestoreTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryRestoreTest",
+    "name": "lostInsertAcknowledgementNeverRetriesOrGuessesWhichRowToDelete",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryRestoreTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryRestoreTest",
+    "name": "explicitAbsentReviewRetainsEvidenceAndDoesNotRetryOrDelete",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryRestoreTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryRestoreTest",
+    "name": "unsafeInputsAndClosedProductionGateHaveNoInsertEffects",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryRestoreTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryRestoreTest",
+    "name": "permissionLossRetainsReceiptUntilExplicitCleanup",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryRestoreTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryRestoreTest",
+    "name": "changedOwnershipOrFailedReadbackCannotCommit",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryRestoreTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryRestoreTest",
+    "name": "processInterruptionAfterParentReceiptCanBeCleanedAfterRestart",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryRestoreTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryRestoreTest",
+    "name": "childrenReappearanceCancellationAndAccessLossRetainPendingEvidence",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryRestoreTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryRestoreTest",
+    "name": "successfulMessagesRetainActualIdsAcrossRecoveryAndBlockReplay",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryRestoreTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryRestoreTest",
+    "name": "incompleteMmsDeletesOnlyNewParentAndChildren",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryRestoreTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryRestoreTest",
+    "name": "presentOwnedOrChangedMessageCannotBeAcknowledgedAbsent",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryRestoreTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryRestoreTest",
+    "name": "unknownAndCommittedOutcomesNeverQueryOrResolveGuessedIds",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryRestoreTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryRestoreTest",
+    "name": "explicitAbsentReviewProductionEntryStaysGateClosed",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryRestoreTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryRestoreTest",
+    "name": "processInterruptionBeforeReceiptStaysUncertain",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryRestoreTest.xml"
+  },
+  {
+    "class": "app.onklav.home.PagingAndReactionsTest",
+    "name": "galleryReadsOneBoundedPageAndUsesIdToAdvanceThroughEqualTimestamps",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.PagingAndReactionsTest.xml"
+  },
+  {
+    "class": "app.onklav.home.PagingAndReactionsTest",
+    "name": "knownAndArbitraryEmojiReactionsAndRemovalParseWithoutEatingOrdinaryMessages",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.PagingAndReactionsTest.xml"
+  },
+  {
+    "class": "app.onklav.home.PagingAndReactionsTest",
+    "name": "viewerKeepsItsSnapshotWhenGalleryRefreshesOrShrinks",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.PagingAndReactionsTest.xml"
+  },
+  {
+    "class": "app.onklav.home.PagingAndReactionsTest",
+    "name": "newestRefreshPreservesOlderRowsAndUpdatesChangedStatusWithoutDuplicates",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.PagingAndReactionsTest.xml"
+  },
+  {
+    "class": "app.onklav.home.PagingAndReactionsTest",
+    "name": "tabViewModelRetainsLoadedRowsAndWindows",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.PagingAndReactionsTest.xml"
+  },
+  {
+    "class": "app.onklav.home.PagingAndReactionsTest",
+    "name": "reactionsOnBothSidesBecomeCornerBadgesAndTransportRowsAreHidden",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.PagingAndReactionsTest.xml"
+  },
+  {
+    "class": "app.onklav.home.ResponsiveAppearanceHostTest",
+    "name": "tabletContentStaysBounded",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.ResponsiveAppearanceHostTest.xml"
+  },
+  {
+    "class": "app.onklav.home.ResponsiveAppearanceHostTest",
+    "name": "normalPhoneDark",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.ResponsiveAppearanceHostTest.xml"
+  },
+  {
+    "class": "app.onklav.home.ResponsiveAppearanceHostTest",
+    "name": "landscapeSettingsAndAlertActionsStayReachable",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.ResponsiveAppearanceHostTest.xml"
+  },
+  {
+    "class": "app.onklav.home.ResponsiveAppearanceHostTest",
+    "name": "narrowPhoneLargeTextLight",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.ResponsiveAppearanceHostTest.xml"
+  },
+  {
+    "class": "app.onklav.home.MessageControlsTest",
+    "name": "historySearchIsThreadScopedAndOpeningAResultLoadsTheRequestedDateWindow",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.MessageControlsTest.xml"
+  },
+  {
+    "class": "app.onklav.home.MessageControlsTest",
+    "name": "firstTapWaitsForVoiceAndEachMessageStartsAtTheBeginningUsingReaderPreferences",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.MessageControlsTest.xml"
+  },
+  {
+    "class": "app.onklav.home.MessageControlsTest",
+    "name": "pendingMessageSpeechCannotStartAfterStop",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.MessageControlsTest.xml"
+  },
+  {
+    "class": "app.onklav.home.MessageControlsTest",
+    "name": "inboxTimestampsMatchTodayMonthDayAndOlderYear",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.MessageControlsTest.xml"
+  },
+  {
+    "class": "app.onklav.home.MessageControlsTest",
+    "name": "pinAndMutePersistAndTransferWhenANewGroupGetsItsPhoneThread",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.MessageControlsTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SwipeConversationTest",
+    "name": "smallMovementClosesAndLargeMovementRevealsOnEitherSide",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.SwipeConversationTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SwipeConversationTest",
+    "name": "swipingEitherWayRevealsActionsWithoutArchivingDeletingOrBlocking",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.SwipeConversationTest.xml"
+  },
+  {
+    "class": "app.onklav.home.BrowserSdkHostTest",
+    "name": "browserPackageBookmarksTabsSettingsAndReopen",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.BrowserSdkHostTest.xml"
+  },
+  {
+    "class": "app.onklav.home.RssAppsHostTest",
+    "name": "rssPackageRunsOfflineArticlesBookmarksDrawersAndSettings",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.RssAppsHostTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SdkContactsTest",
+    "name": "missingInvalidAndOversizedSelectionsFailWithoutLeakingContacts",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.SdkContactsTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SdkContactsTest",
+    "name": "selectedRowOnlyAndPermissionChecksSurroundProviderRead",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.SdkContactsTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SdkVoiceTest",
+    "name": "controllerUsesRealSignedSdkAndRustArchiveWithFixtureDeviceOnly",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.SdkVoiceTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SdkVoiceTest",
+    "name": "focusDenialBackendErrorAndOtherOwnerLeaveNoDraft",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.SdkVoiceTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SdkVoiceTest",
+    "name": "twelveSecondLimitReviewQueueAndDiscard",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.SdkVoiceTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SdkVoiceTest",
+    "name": "playbackMarksHeardOnlyOnAuthorizedCompletion",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.SdkVoiceTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SdkVoiceTest",
+    "name": "liveRecordingWaitsForOwnershipAndWarmupAndCancelsBeforeStart",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.SdkVoiceTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SdkVoiceTest",
+    "name": "revocationBackgroundAndStaleCallbacksDiscardWithoutQueueing",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.SdkVoiceTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SdkVoiceTest",
+    "name": "unverifiedCarrierCannotStartOrConsumeTrafficOrChangeRole",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.SdkVoiceTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SdkAppsHostTest",
+    "name": "sdkNotesSaveReopenClipboardRemoveReinstallAndDeveloperApp",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/lint-regressions-app/TEST-app.onklav.home.SdkAppsHostTest.xml"
+  },
+  {
+    "class": "app.onklav.home.FilesBrokerHostTest",
+    "name": "fileExportsAreReadOnlyAndCannotExposeArbitraryPrivatePaths",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.FilesBrokerHostTest.xml"
+  },
+  {
+    "class": "app.onklav.home.FilesBrokerHostTest",
+    "name": "deletingPrivateDataClearsOnlyThatAppsFolderConnections",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.FilesBrokerHostTest.xml"
+  },
+  {
+    "class": "app.onklav.home.FilesBrokerHostTest",
+    "name": "revokedSdkAuthorizationAndUnknownTokensCannotQueryAndroidFiles",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.FilesBrokerHostTest.xml"
+  },
+  {
+    "class": "app.onklav.home.FilesBrokerHostTest",
+    "name": "androidFoldersExposeOpaqueTokensAndSupportRenameAndExplicitDelete",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.FilesBrokerHostTest.xml"
+  },
+  {
+    "class": "app.onklav.home.FilesBrokerHostTest",
+    "name": "selectedImportsStreamAndStopWhenAuthorizationIsRevoked",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.FilesBrokerHostTest.xml"
+  },
+  {
+    "class": "app.onklav.home.DriveSharingTest",
+    "name": "overlappingUploadsCannotOverwriteTheUnfinishedFileRecord",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.DriveSharingTest.xml"
+  },
+  {
+    "class": "app.onklav.home.DriveSharingTest",
+    "name": "rejectsForeignCredentialDestinationsAndUnsafeIdentities",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.DriveSharingTest.xml"
+  },
+  {
+    "class": "app.onklav.home.DriveSharingTest",
+    "name": "confirmedUploadStreamsBytesAndPublishesOnlyAfterUpload",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.DriveSharingTest.xml"
+  },
+  {
+    "class": "app.onklav.home.DriveSharingTest",
+    "name": "cancellingUploadKeepsRecoveryRecordAndNeverPublishesPermission",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.DriveSharingTest.xml"
+  },
+  {
+    "class": "app.onklav.home.DriveSharingTest",
+    "name": "nonJsonErrorResponsesPreserveHttpStatusButSuccessfulGarbageFails",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.DriveSharingTest.xml"
+  },
+  {
+    "class": "app.onklav.home.DriveSharingTest",
+    "name": "failedUploadRetainsIdentityAndCleanupRequiresOriginalAccount",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.DriveSharingTest.xml"
+  },
+  {
+    "class": "app.onklav.home.ChromeLayoutHostTest",
+    "name": "headersAndBottomBarReachBothEdgesAcrossEveryHomeTab",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.ChromeLayoutHostTest.xml"
+  },
+  {
+    "class": "app.onklav.home.ChromeLayoutHostTest",
+    "name": "sharedPopupMovesIntoPlaceInsteadOfAppearingAtItsFinalPosition",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.ChromeLayoutHostTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SdkSpeechTest",
+    "name": "chunkedPlaybackPauseSeekRevocationAndLateCallbacks",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.SdkSpeechTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SdkSpeechTest",
+    "name": "defaultRateAndInvalidStoredRateStayUsable",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.SdkSpeechTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SdkSpeechTest",
+    "name": "queuedSpeechCannotInterruptNewerReaderOrSurviveRevocation",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.SdkSpeechTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SdkSpeechTest",
+    "name": "utf16BoundariesAndPreviewRestoresPosition",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.SdkSpeechTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SdkSpeechTest",
+    "name": "retryIgnoresOldInitializationAndCloseCancelsQueue",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.SdkSpeechTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SdkDrawingTest",
+    "name": "exportRendersImageCoordinatesAndTextBounds",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/lint-regressions-app/TEST-app.onklav.home.SdkDrawingTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SdkDrawingTest",
+    "name": "importsAreBoundedAndPreserveOrientedDimensions",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/lint-regressions-app/TEST-app.onklav.home.SdkDrawingTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SdkDrawingTest",
+    "name": "drawingGestureUsesImageSpaceAndCancellationDoesNotCommit",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/lint-regressions-app/TEST-app.onklav.home.SdkDrawingTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SdkDrawingTest",
+    "name": "switchingDocumentsRestoresTheNewViewportAndDiscardsTheOldGesture",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/lint-regressions-app/TEST-app.onklav.home.SdkDrawingTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SdkDrawingTest",
+    "name": "interruptedGesturesRequireANewDownAndOldCompletionsCannotCancelNewStrokes",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/lint-regressions-app/TEST-app.onklav.home.SdkDrawingTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SdkDrawingTest",
+    "name": "viewportSurvivesResizeAndARecreatedCanvasWithoutSavingAnUnfinishedGesture",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/lint-regressions-app/TEST-app.onklav.home.SdkDrawingTest.xml"
+  },
+  {
+    "class": "app.onklav.home.RssContinuationTest",
+    "name": "anExistingSdkListWinsOverPreviousPreferences",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.RssContinuationTest.xml"
+  },
+  {
+    "class": "app.onklav.home.RssContinuationTest",
+    "name": "scrollPositionsAreSeparateBoundedAndRefreshRecentlyUsedSlots",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.RssContinuationTest.xml"
+  },
+  {
+    "class": "app.onklav.home.RssContinuationTest",
+    "name": "ownSourcesAreAdoptedOnceWithoutChangingPreviousPreferences",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.RssContinuationTest.xml"
+  },
+  {
+    "class": "app.onklav.home.RssContinuationTest",
+    "name": "malformedPreferencesRemainIntactAndEmptyListCanBeRetried",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.RssContinuationTest.xml"
+  },
+  {
+    "class": "app.onklav.home.RecoveryNotificationTest",
+    "name": "collidingThreadsKeepIndependentNotificationsAndAllActionTargets",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.RecoveryNotificationTest.xml"
+  },
+  {
+    "class": "app.onklav.home.RecoveryNotificationTest",
+    "name": "queuedReplyIsNotReportedAsFailedWhenReadAccessDisappears",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.RecoveryNotificationTest.xml"
+  },
+  {
+    "class": "app.onklav.home.RecoveryNotificationTest",
+    "name": "markReadRechecksRoleAndPermissionBeforeProviderWritesAndLocalState",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.RecoveryNotificationTest.xml"
+  },
+  {
+    "class": "app.onklav.home.RecoveryNotificationTest",
+    "name": "remindersAttentionAndThreadsCannotOverwriteOrCancelEachOther",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.RecoveryNotificationTest.xml"
+  },
+  {
+    "class": "app.onklav.home.RecoveryNotificationTest",
+    "name": "removalRecoveryKeepsWorkEnqueuedDuringProfileDeletionAndRetriesFailures",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.RecoveryNotificationTest.xml"
+  },
+  {
+    "class": "app.onklav.home.RecoveryNotificationTest",
+    "name": "conversationReadDoesNotCommitLocalSuccessAfterPermissionLoss",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.RecoveryNotificationTest.xml"
+  },
+  {
+    "class": "app.onklav.home.RecoveryNotificationTest",
+    "name": "profileCleanupAcceptsAlreadyMissingProfilesButRetainsRejectedExistingOnes",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.RecoveryNotificationTest.xml"
+  },
+  {
+    "class": "app.onklav.home.FilesFlowHostTest",
+    "name": "fileIconFoldersRenameMoveTrashAndRestoreUseTheRealNotesStore",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.FilesFlowHostTest.xml"
+  },
+  {
+    "class": "app.onklav.home.FilesFlowHostTest",
+    "name": "openingANoteUsesNotesAndBackReturnsToFiles",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.FilesFlowHostTest.xml"
+  },
+  {
+    "class": "app.onklav.home.MediaAndCarrierTest",
+    "name": "animatedImagesDefaultOnAndPreferencePersists",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.MediaAndCarrierTest.xml"
+  },
+  {
+    "class": "app.onklav.home.MediaAndCarrierTest",
+    "name": "galleryIncludesAllMediaKindsAndPreservesIdentityWithoutDuplicates",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.MediaAndCarrierTest.xml"
+  },
+  {
+    "class": "app.onklav.home.MediaAndCarrierTest",
+    "name": "driveProviderCopyStreamsSelectedFileAndRejectsSameDestination",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.MediaAndCarrierTest.xml"
+  },
+  {
+    "class": "app.onklav.home.MediaAndCarrierTest",
+    "name": "carrierTrialRequiresExplicitChoiceAndDoesNotClaimReleaseAcceptance",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.MediaAndCarrierTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SettingsUiHostTest",
+    "name": "nestedSettingsSaveAndCancelAreRealAndReturnToParent",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.SettingsUiHostTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SettingsUiHostTest",
+    "name": "appearanceDraftCancelAndApplyAndNestedBackgroundCancel",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.SettingsUiHostTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SettingsUiHostTest",
+    "name": "walkieSettingsChangeTheSignedAppsPrivateStoreWithoutAddingPermissions",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.SettingsUiHostTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SettingsUiHostTest",
+    "name": "settingsRemainReachableWithLargeText",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.SettingsUiHostTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SettingsUiHostTest",
+    "name": "checkedHistoryReviewShowsCountsAndKeepsProviderRestoreDisabled",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.SettingsUiHostTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SettingsUiHostTest",
+    "name": "quietHoursUsesStagedRepeatChoicesAndPersistsOnlyOnSave",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.SettingsUiHostTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SettingsUiHostTest",
+    "name": "historyExportAndImportCheckAreReachable",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.SettingsUiHostTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SettingsUiHostTest",
+    "name": "notesBackupIsReachableAndReturnsToTheMetadataDialog",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.SettingsUiHostTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SettingsUiHostTest",
+    "name": "comparisonShowsReadOnlyCandidatesAndKeepsRestoreDisabled",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.SettingsUiHostTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SettingsUiHostTest",
+    "name": "sdkDocumentBackupsAreReachableAndReturnToSettings",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.SettingsUiHostTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SettingsUiHostTest",
+    "name": "combinedAppDocumentsBackupIsReachable",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.SettingsUiHostTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SettingsUiHostTest",
+    "name": "walkiePreferencesCanRecoverAfterPrivateStoragePermissionIsRestored",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.SettingsUiHostTest.xml"
+  },
+  {
+    "class": "app.onklav.home.MessageVisualCorrectionsHostTest",
+    "name": "setupNextActionAndEmptyTrashLabelsRemainVisibleAndContactsHasOnlyBackNavigation",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.MessageVisualCorrectionsHostTest.xml"
+  },
+  {
+    "class": "app.onklav.home.MessageVisualCorrectionsHostTest",
+    "name": "arrowStaysVisibleAtPhoneDensityWhilePortraitPreviewPreservesItsFullHeight",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.MessageVisualCorrectionsHostTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryRecoveryUiTest",
+    "name": "partialSavedRecordOffersExplicitReopenAndShowsRemainingCount",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryRecoveryUiTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryRecoveryUiTest",
+    "name": "completedRestoreCompactionCancelsThenRetainsReviewAndMetadata",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryRecoveryUiTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryRecoveryUiTest",
+    "name": "changedInsertionReviewExplainsAbsenceCheckWithoutEnablingPhoneAccess",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryRecoveryUiTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryRecoveryUiTest",
+    "name": "knownIncompleteCleanupRemainsGateClosed",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryRecoveryUiTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryRecoveryUiTest",
+    "name": "savedRecordReopenRouteDoesNotWriteOrRequestAnAutomaticRetry",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryRecoveryUiTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryRecoveryUiTest",
+    "name": "unknownInsertReviewStaysPausedWithoutClearOrRetry",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryRecoveryUiTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryRecoveryUiTest",
+    "name": "compactConfirmationRetainsReplayProtectionAndPendingRecords",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryRecoveryUiTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryRecoveryUiTest",
+    "name": "finishSavedRecordOnlyAcknowledgesExistingMetadata",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryRecoveryUiTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryRecoveryUiTest",
+    "name": "recoveryRouteAndStagedIdentitySaveCancelAndValidation",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryRecoveryUiTest.xml"
+  },
+  {
+    "class": "app.onklav.home.HistoryRecoveryUiTest",
+    "name": "finalConfirmationShowsReviewedIdentitiesAndRemainsGateClosed",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.HistoryRecoveryUiTest.xml"
+  },
+  {
+    "class": "app.onklav.home.UiPolishHostTest",
+    "name": "contactsGroupLettersShowNoNumberAndChooseMessageOrWalkieRecipient",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.UiPolishHostTest.xml"
+  },
+  {
+    "class": "app.onklav.home.UiPolishHostTest",
+    "name": "contactsUnavailableCanRetryAndSearchHasAnExplicitEmptyResult",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/full-app/TEST-app.onklav.home.UiPolishHostTest.xml"
+  },
+  {
+    "class": "app.onklav.home.UiPolishHostTest",
+    "name": "keypadAddsDigitsFormatsAndBackspacesWithoutChangingDialableTarget",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/full-app/TEST-app.onklav.home.UiPolishHostTest.xml"
+  },
+  {
+    "class": "app.onklav.home.UiPolishHostTest",
+    "name": "pageSlidesFromRightAndRetainsContentUntilExitCompletes",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/full-app/TEST-app.onklav.home.UiPolishHostTest.xml"
+  },
+  {
+    "class": "app.onklav.home.UiPolishHostTest",
+    "name": "mailboxTabsSelectAndExposeBothTrashActions",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/full-app/TEST-app.onklav.home.UiPolishHostTest.xml"
+  },
+  {
+    "class": "app.onklav.home.UiPolishHostTest",
+    "name": "contactsRefreshAfterEditorReturnAndHideRevokedContacts",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/full-app/TEST-app.onklav.home.UiPolishHostTest.xml"
+  },
+  {
+    "class": "app.onklav.home.UiPolishHostTest",
+    "name": "messageFoldersFilterProviderRowsAndRestoreAllUpdatesRustState",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/full-app/TEST-app.onklav.home.UiPolishHostTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SdkBootstrapTest",
+    "name": "warmSetupPreservesRemovalAndLivePermissionRevocation",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.SdkBootstrapTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SdkBootstrapTest",
+    "name": "setupRecoversWhenRegistryIsMissingWithinSameProcess",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.SdkBootstrapTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SdkBootstrapTest",
+    "name": "apkUpgradeUpdatesExistingBundledPackageAndKeepsPermissionsAndData",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.SdkBootstrapTest.xml"
+  },
+  {
+    "class": "app.onklav.home.MessageIdentityTest",
+    "name": "differentInternationalRecipientsKeepSeparateDrafts",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.MessageIdentityTest.xml"
+  },
+  {
+    "class": "app.onklav.home.MessageIdentityTest",
+    "name": "contactFormattingAndUsPrefixShareDraft",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.MessageIdentityTest.xml"
+  },
+  {
+    "class": "app.onklav.home.MessageIdentityTest",
+    "name": "groupOrderingAndDuplicateRecipientsDoNotForkDraft",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.MessageIdentityTest.xml"
+  },
+  {
+    "class": "app.onklav.home.WalkieSdkHostTest",
+    "name": "walkieSettingsOfflineDialAndRecipientStorageUseSignedSdk",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.WalkieSdkHostTest.xml"
+  },
+  {
+    "class": "app.onklav.home.FilesRoutingTest",
+    "name": "tappingNoteResolvesNotesAndClosedFilesModelReopensWithoutBusyOverlay",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.FilesRoutingTest.xml"
+  },
+  {
+    "class": "app.onklav.home.WalkiePresentationTest",
+    "name": "selectedRecipientShowsCompactDialAndOfflineRecordingIsStillAvailable",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.WalkiePresentationTest.xml"
+  },
+  {
+    "class": "app.onklav.home.MessageVideoPreviewsTest",
+    "name": "invalidImagesAreNotCachedAndCannotStopThePlayControl",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.MessageVideoPreviewsTest.xml"
+  },
+  {
+    "class": "app.onklav.home.MessageVideoPreviewsTest",
+    "name": "linksAreCanonicalDeduplicatedBoundedAndKeepStartTimes",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.MessageVideoPreviewsTest.xml"
+  },
+  {
+    "class": "app.onklav.home.MessageVideoPreviewsTest",
+    "name": "offMeansNoFetchOrCacheUseAndRevokeDropsStaleResults",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.MessageVideoPreviewsTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SettingsServicesTest",
+    "name": "metadataBackupRoundTripIsValidatedAndNeverRestoresCapabilitiesOrSends",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.SettingsServicesTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SettingsServicesTest",
+    "name": "spamWarningNeedsALinkAndRiskWordingAndHonorsDisabledPreference",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.SettingsServicesTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SettingsServicesTest",
+    "name": "temporaryCleanupWorksThroughAnAndroidStyleCacheDirectoryAlias",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.SettingsServicesTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SettingsServicesTest",
+    "name": "temporaryCleanupKeepsRecentExportsSymlinksAndAllOtherPrivateData",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.SettingsServicesTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SdkFeedServiceTest",
+    "name": "hostileXmlAndNonPublicSourcesAreRejected",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.SdkFeedServiceTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SdkFeedServiceTest",
+    "name": "rssAndAtomKeepPlainTextAndResolveArticleLinks",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.SdkFeedServiceTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SdkLifecycleTest",
+    "name": "messagesAndReaderShareVoicePreferencesAndOneCurrentReader",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.SdkLifecycleTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SdkLifecycleTest",
+    "name": "audioOwnerInterruptsOnlyThePreviousOwnerAndOldReleaseCannotStopNewAudio",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.SdkLifecycleTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SdkLifecycleTest",
+    "name": "partialNativeCleanupKeepsItsJournalAndRetriesWithoutRotatingAgain",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.SdkLifecycleTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SdkLifecycleTest",
+    "name": "deletedNativeProfileIsImmediatelyIsolatedAndOnlyItsOldProfileIsPurged",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.SdkLifecycleTest.xml"
+  },
+  {
+    "class": "app.onklav.home.DriveDocumentsTest",
+    "name": "sameDocumentAliasesRejectBeforeOpeningOrDeletingAnyFile",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.DriveDocumentsTest.xml"
+  },
+  {
+    "class": "app.onklav.home.DriveDocumentsTest",
+    "name": "partialCopyFailureCleansOnlyTheOpenedDestination",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.DriveDocumentsTest.xml"
+  },
+  {
+    "class": "app.onklav.home.DriveDocumentsTest",
+    "name": "unreadableSourceDoesNotDeleteOrTruncateTheChosenDestination",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.DriveDocumentsTest.xml"
+  },
+  {
+    "class": "app.onklav.home.GroupProtocolHostTest",
+    "name": "activityPickerOffersOneOtherPeerForCanonicalDuplicatesAndExcludesSelf",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.GroupProtocolHostTest.xml"
+  },
+  {
+    "class": "app.onklav.home.GroupProtocolHostTest",
+    "name": "productionJniProjectsPostAndReaction",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.GroupProtocolHostTest.xml"
+  },
+  {
+    "class": "app.onklav.home.GroupProtocolHostTest",
+    "name": "initialsMatchReference",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.GroupProtocolHostTest.xml"
+  },
+  {
+    "class": "app.onklav.home.TransportRecoveryTest",
+    "name": "walkieCallbackIsRetainedWhenPermissionGatePreventsReconciliation",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.TransportRecoveryTest.xml"
+  },
+  {
+    "class": "app.onklav.home.TransportRecoveryTest",
+    "name": "callbacksRequireMatchingActionUriKindAndPart",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.TransportRecoveryTest.xml"
+  },
+  {
+    "class": "app.onklav.home.TransportRecoveryTest",
+    "name": "receiptsSurviveRestartUntilCoreAcceptsTheOutcomeWithoutResending",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.TransportRecoveryTest.xml"
+  },
+  {
+    "class": "app.onklav.home.TransportRecoveryTest",
+    "name": "internalBrowserHandoffUsesTheSignedGuestNavigationAndRejectsUnsafeSchemes",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.TransportRecoveryTest.xml"
+  },
+  {
+    "class": "app.onklav.home.TransportRecoveryTest",
+    "name": "failedMmsAddressInsertRollsBackOnlyTheNewParent",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.TransportRecoveryTest.xml"
+  },
+  {
+    "class": "app.onklav.home.TransportRecoveryTest",
+    "name": "committedCoreRemovalWithBlockedPrivateCleanupResumesBeforeAnotherLaunch",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.TransportRecoveryTest.xml"
+  },
+  {
+    "class": "app.onklav.home.TransportRecoveryTest",
+    "name": "recoverySchedulingCoalescesAndDoesNotEnableTransport",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.TransportRecoveryTest.xml"
+  },
+  {
+    "class": "app.onklav.home.PhoneNumbersTest",
+    "name": "formatsNationalCountryCodeShortCodesAndInternationalWithoutLosingDigits",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.PhoneNumbersTest.xml"
+  },
+  {
+    "class": "app.onklav.home.PhoneNumbersTest",
+    "name": "contactRowsHaveAlphabetInitialsAndNoInventedNumbers",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.PhoneNumbersTest.xml"
+  },
+  {
+    "class": "app.onklav.home.PhoneNumbersTest",
+    "name": "partialInputFormatsWhilePreservingDialableNumbers",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.PhoneNumbersTest.xml"
+  },
+  {
+    "class": "app.onklav.home.PhoneNumbersTest",
+    "name": "cursorMapsAcrossEveryPartialInputAndFormattedPaste",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.PhoneNumbersTest.xml"
+  },
+  {
+    "class": "app.onklav.home.MessageVideoUiHostTest",
+    "name": "privacySwitchDrivesMessageCardsAndPlayStaysExplicit",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.MessageVideoUiHostTest.xml"
+  },
+  {
+    "class": "app.onklav.home.AnnotationSdkHostTest",
+    "name": "annotationPackageLibraryToolsRenameAndTextController",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/annotation-final-app/TEST-app.onklav.home.AnnotationSdkHostTest.xml"
+  },
+  {
+    "class": "app.onklav.home.NotesBackupTest",
+    "name": "invalidOrChangedReviewCannotWriteAndActiveAppMustCloseBeforeRestore",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.NotesBackupTest.xml"
+  },
+  {
+    "class": "app.onklav.home.NotesBackupTest",
+    "name": "providerWriteFailureRemovesIncompleteDocumentAndPrivateStaging",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.NotesBackupTest.xml"
+  },
+  {
+    "class": "app.onklav.home.NotesBackupTest",
+    "name": "realProviderJniRoundTripKeepsCurrentNotesAndNeverExportsGrants",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.NotesBackupTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SdkVideoPolicyTest",
+    "name": "historySectionsUseLocalCalendarDays",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.SdkVideoPolicyTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SdkVideoPolicyTest",
+    "name": "providerNavigationAndAdDomains",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.SdkVideoPolicyTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SdkVideoPolicyTest",
+    "name": "thumbnailInputIsBoundedAndChecksPermissionWhileReading",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.SdkVideoPolicyTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SdkWebPolicyTest",
+    "name": "rendererReplacementRejectsLateErrorsProgressAndClearCallbacks",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.SdkWebPolicyTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SdkWebPolicyTest",
+    "name": "systemBackUsesCurrentWebHistoryAndLiveGrant",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.SdkWebPolicyTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SdkWebPolicyTest",
+    "name": "historyMemoryIsBounded",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.SdkWebPolicyTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SdkWebPolicyTest",
+    "name": "nativeClipboardEntryPointsCheckLiveGrants",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.SdkWebPolicyTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SdkWebPolicyTest",
+    "name": "clearCompletionIsBoundToCurrentCommandGrantAndNewPageFinish",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.SdkWebPolicyTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SdkWebPolicyTest",
+    "name": "addressesAndProfilesStayWithinTheirBoundary",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.SdkWebPolicyTest.xml"
+  },
+  {
+    "class": "app.onklav.home.ReminderFlowHostTest",
+    "name": "choosePersistRescheduleAndRemove",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.ReminderFlowHostTest.xml"
+  },
+  {
+    "class": "app.onklav.home.MessageLoadingTest",
+    "name": "localMetadataChangesReuseProviderRowsAndApplyFreshUnreadState",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.MessageLoadingTest.xml"
+  },
+  {
+    "class": "app.onklav.home.CarrierMediaPlanTest",
+    "name": "invalidRangesAndUnavailableBudgetsCannotProduceAClip",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.CarrierMediaPlanTest.xml"
+  },
+  {
+    "class": "app.onklav.home.CarrierMediaPlanTest",
+    "name": "trimRecommendationsHonorAudioVideoAndActualCarrierBudgets",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.CarrierMediaPlanTest.xml"
+  },
+  {
+    "class": "app.onklav.home.CarrierMediaPlanTest",
+    "name": "floatingReactionMotionFadesInAndOutWithoutChangingItsMessage",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.CarrierMediaPlanTest.xml"
+  },
+  {
+    "class": "app.onklav.home.ReaderSdkHostTest",
+    "name": "readerSdkDraftControlsSettingsClearAndReopen",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.ReaderSdkHostTest.xml"
+  },
+  {
+    "class": "app.onklav.home.SocialSdkHostTest",
+    "name": "socialIsOnlyHelloWorldInsideSdkHost",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.SocialSdkHostTest.xml"
+  },
+  {
+    "class": "app.onklav.home.GroupsFlowHostTest",
+    "name": "failedContactLoadOffersRetryWithoutPretendingTheAddressBookIsEmpty",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.GroupsFlowHostTest.xml"
+  },
+  {
+    "class": "app.onklav.home.GroupsFlowHostTest",
+    "name": "createEditMembersFoldersSearchAndDelete",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.GroupsFlowHostTest.xml"
+  },
+  {
+    "class": "app.onklav.home.MessageCorrectionsTest",
+    "name": "selectedThemeFillAlwaysGetsReadableButtonText",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.MessageCorrectionsTest.xml"
+  },
+  {
+    "class": "app.onklav.home.MessageCorrectionsTest",
+    "name": "completePickerIsAcceptedByWireAndRepresentativeChoicesSurviveNativeReload",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.MessageCorrectionsTest.xml"
+  },
+  {
+    "class": "app.onklav.home.MessageCorrectionsTest",
+    "name": "mediaOnlyMessagesHaveNoSpeechButCaptionsAndTextDo",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.MessageCorrectionsTest.xml"
+  },
+  {
+    "class": "app.onklav.home.YouTubeSdkHostTest",
+    "name": "youtubePackageOpensOwnViewerLibraryAndResetDialog",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-app/TEST-app.onklav.home.YouTubeSdkHostTest.xml"
+  },
+  {
+    "class": "app.onklav.shared.NativeBridgeTest",
+    "name": "oversizedDocumentReturnsFailureAcrossJni",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-shared/TEST-app.onklav.shared.NativeBridgeTest.xml"
+  },
+  {
+    "class": "app.onklav.shared.NativeBridgeTest",
+    "name": "kotlinCallsRealRustAndReloadsUnicodeDocument",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-shared/TEST-app.onklav.shared.NativeBridgeTest.xml"
+  },
+  {
+    "class": "app.onklav.shared.NativeBridgeTest",
+    "name": "walkieRulesCrossJniWithoutAnyTransport",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-shared/TEST-app.onklav.shared.NativeBridgeTest.xml"
+  },
+  {
+    "class": "app.onklav.shared.ThemePackageTest",
+    "name": "rejectsInvalidUtf8AndCompressedExpansion",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-shared/TEST-app.onklav.shared.ThemePackageTest.xml"
+  },
+  {
+    "class": "app.onklav.shared.ThemePackageTest",
+    "name": "unicodeAndAllPresetsRoundTripWithoutExecutablePayload",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-shared/TEST-app.onklav.shared.ThemePackageTest.xml"
+  },
+  {
+    "class": "app.onklav.shared.ThemePackageTest",
+    "name": "rejectsPathsUnknownFieldsDuplicateFieldsAndInvalidValues",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-shared/TEST-app.onklav.shared.ThemePackageTest.xml"
+  },
+  {
+    "class": "app.onklav.shared.ThemePackageTest",
+    "name": "customImageIsEmbeddedAndPrivatePathCannotBeExported",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-shared/TEST-app.onklav.shared.ThemePackageTest.xml"
+  },
+  {
+    "class": "app.onklav.shared.LauncherLayoutTest",
+    "name": "hitTestingIncludesLastRowAndScrollOffset",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-shared/TEST-app.onklav.shared.LauncherLayoutTest.xml"
+  },
+  {
+    "class": "app.onklav.shared.LauncherLayoutTest",
+    "name": "sparseBottomRowAndNewPageSurviveReload",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-shared/TEST-app.onklav.shared.LauncherLayoutTest.xml"
+  },
+  {
+    "class": "app.onklav.shared.LauncherLayoutTest",
+    "name": "occupiedDropReordersWithoutLosingHolesOrIds",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-shared/TEST-app.onklav.shared.LauncherLayoutTest.xml"
+  },
+  {
+    "class": "app.onklav.shared.LauncherLayoutTest",
+    "name": "catalogReconciliationRejectsUnknownAndDuplicateIds",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-shared/TEST-app.onklav.shared.LauncherLayoutTest.xml"
+  },
+  {
+    "class": "app.onklav.shared.LauncherLayoutTest",
+    "name": "cancelSnapshotAndEmptyTrailingPageAreSafe",
+    "status": "passed",
+    "evidence": "docs/evidence/v0.67.0/focused-shared/TEST-app.onklav.shared.LauncherLayoutTest.xml"
+  }
+]

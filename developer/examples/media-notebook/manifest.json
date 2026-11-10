@@ -1,0 +1,15 @@
+{
+  "schema": "onklav.app.v1",
+  "runtime": "rust-wasm-ui.v1",
+  "id": "org.example.medianotebook",
+  "name": "Media notebook",
+  "version": 1,
+  "capabilities": [
+    "storage.private",
+    "files.manage"
+  ],
+  "min_host": 78,
+  "icon": {
+    "symbol": "notes"
+  }
+}

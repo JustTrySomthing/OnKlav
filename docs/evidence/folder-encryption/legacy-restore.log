@@ -1,0 +1,11 @@
+   Compiling jni-sys v0.3.1
+   Compiling jni v0.21.1
+   Compiling onklav-core v0.8.0 (/workspace/scratch/d853f89e99b7/onklav/OnKlav/core)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 11.98s
+     Running tests/notes_write_restore.rs (core/target/debug/deps/notes_write_restore-72fd2a02028c55ea)
+
+running 1 test
+test restoring_an_old_backup_after_retirement_creates_write_documents ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s
+

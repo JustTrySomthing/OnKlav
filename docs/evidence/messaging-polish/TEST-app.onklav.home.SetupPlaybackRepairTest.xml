@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.SetupPlaybackRepairTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-29T13:08:33" hostname="3d3a46c2e56a" time="21.513">
+  <properties/>
+  <testcase name="setupRequestsFeaturePermissionsAndRechecksAndroidApprovals" classname="app.onklav.home.SetupPlaybackRepairTest" time="15.441"/>
+  <testcase name="nativeSizeCallbackNeverOpensTheNetworkEvenWhenLengthIsUnknown" classname="app.onklav.home.SetupPlaybackRepairTest" time="0.131"/>
+  <testcase name="upgradeRepairsShippedDefaultsOnceAndLaterExplicitRevocationsStayEffective" classname="app.onklav.home.SetupPlaybackRepairTest" time="5.941"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

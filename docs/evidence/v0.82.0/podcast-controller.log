@@ -1,0 +1,11 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.01s
+     Running unittests src/lib.rs (developer/components/target/debug/deps/onklav_ui-1771de5ff2e26eff)
+
+running 4 tests
+test reference_apps::podcasts_app::tests::three_tabs_are_pinned_and_clean ... ok
+test reference_apps::podcasts_app::tests::settings_and_saved_sources_survive_restart ... ok
+test reference_apps::podcasts_app::tests::failed_feed_has_back_and_retry_and_never_subscribes ... ok
+test reference_apps::podcasts_app::tests::recent_is_saved_only_after_play_success_and_plays_without_subscription ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 115 filtered out; finished in 0.00s
+

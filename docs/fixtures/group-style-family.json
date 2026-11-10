@@ -1,0 +1,6 @@
+{
+  "purpose": "Reference styling fixture only; never automatically insert into user data",
+  "name": "Family",
+  "members": ["+15550100101", "+15550100102", "+15550100103"],
+  "expected": {"initials": "F", "detail": "3 recipients", "actions": ["Edit Family", "Pin Family"], "avatar": "active theme brush and contrasting ink"}
+}

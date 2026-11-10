@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.AudioEditorUiTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-30T01:28:43" hostname="b623e8e1265a" time="19.398">
+  <properties/>
+  <testcase name="shortLandscapeUsesSeparateToolPane" classname="app.onklav.home.AudioEditorUiTest" time="8.053"/>
+  <testcase name="largeTextAndNarrowWidthKeepSlidersAndActionsInBounds" classname="app.onklav.home.AudioEditorUiTest" time="2.922"/>
+  <testcase name="longPressExplainsIconsAndLongErrorsHaveReadableDetails" classname="app.onklav.home.AudioEditorUiTest" time="2.676"/>
+  <testcase name="smallPhoneKeepsToolsAndPlaybackReachable" classname="app.onklav.home.AudioEditorUiTest" time="3.023"/>
+  <testcase name="tinyPhoneCanExpandWaveformAndEnterExactValues" classname="app.onklav.home.AudioEditorUiTest" time="2.724"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

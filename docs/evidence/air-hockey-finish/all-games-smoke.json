@@ -1,0 +1,65 @@
+[
+  {
+    "game": "builtin/index.html?game=hockey",
+    "version": [
+      "Godot Engine v4.7.2.stable.onklav1.ed1daf0bf - https://godotengine.org"
+    ],
+    "javascript_errors": [],
+    "engine_errors": [],
+    "private_probe_absent": true
+  },
+  {
+    "game": "builtin/index.html?game=four",
+    "version": [
+      "Godot Engine v4.7.2.stable.onklav1.ed1daf0bf - https://godotengine.org"
+    ],
+    "javascript_errors": [],
+    "engine_errors": [],
+    "private_probe_absent": true
+  },
+  {
+    "game": "builtin/index.html?game=naval",
+    "version": [
+      "Godot Engine v4.7.2.stable.onklav1.ed1daf0bf - https://godotengine.org"
+    ],
+    "javascript_errors": [],
+    "engine_errors": [],
+    "private_probe_absent": true
+  },
+  {
+    "game": "builtin/index.html?game=blackjack",
+    "version": [
+      "Godot Engine v4.7.2.stable.onklav1.ed1daf0bf - https://godotengine.org"
+    ],
+    "javascript_errors": [],
+    "engine_errors": [],
+    "private_probe_absent": true
+  },
+  {
+    "game": "touch2d/index.html",
+    "version": [
+      "Godot Engine v4.7.2.stable.onklav1.ed1daf0bf - https://godotengine.org"
+    ],
+    "javascript_errors": [],
+    "engine_errors": [],
+    "private_probe_absent": true
+  },
+  {
+    "game": "scene3d/index.html",
+    "version": [
+      "Godot Engine v4.7.2.stable.onklav1.ed1daf0bf - https://godotengine.org"
+    ],
+    "javascript_errors": [],
+    "engine_errors": [],
+    "private_probe_absent": true
+  },
+  {
+    "game": "turn/index.html",
+    "version": [
+      "Godot Engine v4.7.2.stable.onklav1.ed1daf0bf - https://godotengine.org"
+    ],
+    "javascript_errors": [],
+    "engine_errors": [],
+    "private_probe_absent": true
+  }
+]

@@ -1,0 +1,26 @@
+{
+  "source_host": "0.100.47-rc1/code156",
+  "latest_apk": "0.100.46-rc1/code155 predates this correction",
+  "apk_built": false,
+  "cause": "Games activity runs in :games; process-cached SharedPreferences can hide the updated paused_game marker from the main-process catalog.",
+  "fix": "AtomicFile marker read afresh per catalog tap with process/thread locking; synchronous writes precede return; migrate existing hint once and retain empty cleared marker to prevent legacy resurrection. Game checkpoints/runtime/SDK/audio/dialog controls are unchanged.",
+  "verification": {
+    "focused_framework_host_tests": 3,
+    "failures": 0,
+    "errors": 0,
+    "test_names": [
+      "catalogReaderObservesEveryWriterChangeWithoutPreferenceReload",
+      "quitOrNewCannotResurrectTheOldPreferenceMarker",
+      "oldOrOversizedHintsCannotBeUsedAsAGameIdentity"
+    ],
+    "production_and_test_kotlin_compiled": true,
+    "unchanged_game_proof_current": true,
+    "physical_android_back_tested": false
+  },
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/GameSessionStatus.kt": "00e337568fcbc0f761e84d7a7cab90ebaae564a1950b66bebb7d179b2caf0f47",
+    "android/app/src/main/kotlin/app/onklav/home/GamesCatalog.kt": "e0cadbe5a4c23ad64e1959eb14898c1e3639f2fd305359e96712459c95606e24",
+    "android/app/src/main/kotlin/app/onklav/home/WebGameActivity.kt": "d1d7de0ce55e455b54b7c0e65ff87a3dbb3b7486aaf517b49cbf3d059e28cc1d",
+    "android/app/src/test/kotlin/app/onklav/home/GameSessionStatusTest.kt": "10d726541fdb3d578882ec0f285155f1c9c79dd6a29dce453ef5b909c5c39931"
+  }
+}

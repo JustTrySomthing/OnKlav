@@ -1,0 +1,7 @@
+extends SceneTree
+func _init():
+	var picture:=Image.new()
+	var result:=picture.load_svg_from_string(FileAccess.get_file_as_string("res://dominos/icon.svg"))
+	assert(result==OK)
+	assert(picture.save_webp(ProjectSettings.globalize_path("res://../../android/app/src/main/assets/catalog/dominos.webp"),false,.94)==OK)
+	quit()

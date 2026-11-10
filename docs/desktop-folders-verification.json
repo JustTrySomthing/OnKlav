@@ -1,0 +1,40 @@
+{
+  "scope": "Main navigation and desktop folders",
+  "status": "focused_host_ui_checks_and_lint_passed",
+  "apk_built": false,
+  "focused_tests": 11,
+  "failures": 0,
+  "lint": {
+    "Fatal": 0,
+    "Error": 0,
+    "Warning": 791,
+    "Information": 1
+  },
+  "production_compile": "Passed for final source",
+  "verified": [
+    "Phone/Camera/Apps/Messages/Groups order and navigation mapping",
+    "Apps resets to page zero; saved old page ignored",
+    "Settings and Games app routes, child Settings page and Back return",
+    "Create, rename, delete and multi-page folder UI",
+    "Actual host touch drag into a hover-opened folder, release over original icon and drag out",
+    "Small-screen large-text folder last row and Close remain reachable",
+    "101 members, unique cross-folder moves, roundtrip persistence, delete restores apps and preserves sparse layout",
+    "One-time defaults, empty saved state, unavailable membership and malformed data/name validation"
+  ],
+  "limits": [
+    "Robolectric host touch/UI checks do not replace physical Android/OEM/accessibility qualification",
+    "No APK built; current released APK predates these changes"
+  ],
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/AppsDesktop.kt": "f897491ccfcc5c3ca43e6cfff98808289490df411dc643ae59efb0e481bb332b",
+    "android/app/src/main/kotlin/app/onklav/home/DesktopFolders.kt": "94ae6cdc989800b633b1081de5921936e25271bc2a9d2acd4450b401a12b2f05",
+    "android/app/src/main/kotlin/app/onklav/home/HomeChrome.kt": "c6213ede7418ac5fb800a6a051d91a8f7ddb12cd93303bf0d6adc82d8cfc1f26",
+    "android/app/src/main/kotlin/app/onklav/home/Catalog.kt": "32145bfc3276c266f5f9f181eceb87c0a25369c69807f237cea462c415cf8def",
+    "android/app/src/main/kotlin/app/onklav/home/MainActivity.kt": "fd82c2924bb59edad6eb93b57e10b5d6f1d3e6406ebba71454bdfe407b298e40",
+    "android/app/src/main/kotlin/app/onklav/home/SdkAppsCenter.kt": "21d5565200a07af76fbc234f6d6f7629c11e21d4e956bb826c3419d1a8702667",
+    "android/app/src/test/kotlin/app/onklav/home/DesktopFoldersTest.kt": "65851d0585a2600265f5a2cc0538048096df7f9c80d0025659c3147c4a550fe1",
+    "android/app/src/test/kotlin/app/onklav/home/DesktopFoldersUiTest.kt": "c219833840233eff3cd3d77a78c16e4c80f1f7f006b1ffd1fe2ac0a14e046aee",
+    "android/shared/src/main/res/drawable/ref_action_folder_add.xml": "45cbd4ada837ff50383fdfaf5fba8d87c1d2dbff69e2c288c4f63a9d4b8c7049",
+    "android/shared/src/main/res/drawable/ref_desktop_folder.xml": "2fef08e098e86dcab30deb8dbc67b05cb691daf755dca1722333f9962eceddbe"
+  }
+}

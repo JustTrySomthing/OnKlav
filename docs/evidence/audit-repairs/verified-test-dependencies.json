@@ -1,0 +1,53 @@
+{
+  "scope": "Exact existing test dependency versions; primary repository SHA1 verified before use. Temporary repository only; no product dependency changes.",
+  "files": [
+    {
+      "repository_relative_path": "org/jetbrains/kotlinx/kotlinx-coroutines-guava/1.10.2/kotlinx-coroutines-guava-1.10.2.jar",
+      "sha256": "d54c4c9f9f2d3612afa5801daf70a7b68687f78d8936360341f1a89b535abfee",
+      "sha1": "8e600c59d64897a9e16909d54a4153df147f6a0b",
+      "bytes": 17969
+    },
+    {
+      "repository_relative_path": "org/jetbrains/kotlinx/kotlinx-coroutines-guava/1.10.2/kotlinx-coroutines-guava-1.10.2.pom",
+      "sha256": "126d860e3963148b36c180a04220401867b15703e71df201d4c89b3081456e3c",
+      "sha1": "08909e469451712a559969112e6323c1d16d6ad8",
+      "bytes": 2368
+    },
+    {
+      "repository_relative_path": "androidx/concurrent/concurrent-futures-ktx/1.2.0/concurrent-futures-ktx-1.2.0.jar",
+      "sha256": "e1f3e17bb4358ccd6c77ca45f70635c9aba237261f19eaa4f64a0218c00e2a3e",
+      "sha1": "13b49fdb58c74bdfb12eb131b5e22d6d09683e30",
+      "bytes": 15903
+    },
+    {
+      "repository_relative_path": "androidx/concurrent/concurrent-futures-ktx/1.2.0/concurrent-futures-ktx-1.2.0.pom",
+      "sha256": "7869d39aa7a7754a4f311771abfd9d95ccbd7ffb27e970f8cb15fdf5b5355b6d",
+      "sha1": "b65a884b990aed528c5cde26c1e53e243c18327c",
+      "bytes": 2516
+    },
+    {
+      "repository_relative_path": "androidx/concurrent/concurrent-futures/1.2.0/concurrent-futures-1.2.0.jar",
+      "sha256": "4810315a798690b5d3bb40c92bcd41c045fd2c36bbfc50b27cbac3d6a0eda190",
+      "sha1": "6a1dfd69226e148898410721f4b14315343d1429",
+      "bytes": 26311
+    },
+    {
+      "repository_relative_path": "androidx/concurrent/concurrent-futures/1.2.0/concurrent-futures-1.2.0.pom",
+      "sha256": "6be9a98d6cd75a787eeae2a1a0a3440ebe1ab4639740df9ec028094ab59b622f",
+      "sha1": "825ffa6adf75533983b4fdb0918dbc6fad5c100e",
+      "bytes": 2265
+    },
+    {
+      "repository_relative_path": "androidx/resourceinspection/resourceinspection-annotation/1.0.1/resourceinspection-annotation-1.0.1.pom",
+      "sha256": "b8eb4938ed95d7fcdaa2712ebca363e46a0f9228b8be7f23154def56846815dc",
+      "sha1": "2c264bd97530601a68f3952fe040e2f7786ebc60",
+      "bytes": 1808
+    },
+    {
+      "repository_relative_path": "androidx/resourceinspection/resourceinspection-annotation/1.0.1/resourceinspection-annotation-1.0.1.jar",
+      "sha256": "8cff870ec6fb31db48a52f4a792335b4bf8de07e03bd37823181526433ccd5cb",
+      "sha1": "8c21f8ff5d96d5d52c948707f7e4d6ca6773feef",
+      "bytes": 2336
+    }
+  ]
+}

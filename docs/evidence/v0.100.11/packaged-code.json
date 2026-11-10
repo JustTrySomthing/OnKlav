@@ -1,0 +1,21 @@
+{
+  "defined_classes_verified": [
+    "app/onklav/home/ExoRadioStream",
+    "app/onklav/home/RadioHttpSource",
+    "app/onklav/home/RadioMimeHints",
+    "app/onklav/home/RadioVisualSceneKt",
+    "androidx/media3/exoplayer/hls/HlsMediaSource",
+    "app/onklav/shared/Mp3Codec",
+    "app/onklav/home/FileBrowserActivity",
+    "app/onklav/home/PhotoCropFrameKt",
+    "app/onklav/home/VideoEditorModel",
+    "app/onklav/home/ClockScreenKt",
+    "app/onklav/home/CameraScreenKt",
+    "app/onklav/home/EbookReaderWorkspaceKt"
+  ],
+  "intensity_and_launcher_markers_verified": true,
+  "obsolete_reader_explanation_absent": true,
+  "audio_name": "Audio Editor",
+  "audio_version": 4,
+  "all_native_games_and_25_bundled_signed_apps_match_source": true
+}

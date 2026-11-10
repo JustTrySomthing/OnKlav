@@ -1,0 +1,205 @@
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=37493 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=37493 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.11.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+Checking the license for package Android SDK Platform-Tools in /workspace/scratch/39f240a7e5bd/restored-env/sdk/licenses
+Warning: License for package Android SDK Platform-Tools not accepted.
+WARNING: platform-tools package is not installed. Please accept the installation licence to continue
+> Task :android:app:preBuild UP-TO-DATE
+> Task :android:app:preDebugBuild UP-TO-DATE
+> Task :android:app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :android:app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:games:preBuild UP-TO-DATE
+> Task :android:games:preDebugBuild UP-TO-DATE
+> Task :android:games:writeDebugAarMetadata UP-TO-DATE
+> Task :android:shared:preBuild UP-TO-DATE
+> Task :android:shared:preDebugBuild UP-TO-DATE
+> Task :android:shared:writeDebugAarMetadata UP-TO-DATE
+> Task :android:tools:preBuild UP-TO-DATE
+> Task :android:tools:preDebugBuild UP-TO-DATE
+> Task :android:tools:writeDebugAarMetadata UP-TO-DATE
+> Task :android:app:checkDebugAarMetadata UP-TO-DATE
+> Task :android:app:generateDebugResValues UP-TO-DATE
+> Task :android:games:generateDebugResValues UP-TO-DATE
+> Task :android:games:generateDebugResources UP-TO-DATE
+> Task :android:games:packageDebugResources UP-TO-DATE
+> Task :android:shared:generateDebugResValues UP-TO-DATE
+> Task :android:shared:generateDebugResources UP-TO-DATE
+> Task :android:shared:packageDebugResources UP-TO-DATE
+> Task :android:tools:generateDebugResValues UP-TO-DATE
+> Task :android:tools:generateDebugResources UP-TO-DATE
+> Task :android:tools:packageDebugResources UP-TO-DATE
+> Task :android:app:mapDebugSourceSetPaths UP-TO-DATE
+> Task :android:app:generateDebugResources UP-TO-DATE
+> Task :android:app:mergeDebugResources UP-TO-DATE
+> Task :android:app:packageDebugResources UP-TO-DATE
+> Task :android:app:parseDebugLocalResources UP-TO-DATE
+> Task :android:app:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :android:app:extractDeepLinksDebug UP-TO-DATE
+> Task :android:games:extractDeepLinksDebug UP-TO-DATE
+> Task :android:games:processDebugManifest UP-TO-DATE
+> Task :android:shared:extractDeepLinksDebug UP-TO-DATE
+> Task :android:shared:processDebugManifest UP-TO-DATE
+> Task :android:tools:extractDeepLinksDebug UP-TO-DATE
+> Task :android:tools:processDebugManifest UP-TO-DATE
+> Task :android:app:processDebugMainManifest UP-TO-DATE
+> Task :android:app:processDebugManifest UP-TO-DATE
+> Task :android:app:processDebugManifestForPackage UP-TO-DATE
+> Task :android:games:compileDebugLibraryResources UP-TO-DATE
+> Task :android:games:parseDebugLocalResources UP-TO-DATE
+> Task :android:games:generateDebugRFile UP-TO-DATE
+> Task :android:shared:compileDebugLibraryResources UP-TO-DATE
+> Task :android:shared:parseDebugLocalResources UP-TO-DATE
+> Task :android:shared:generateDebugRFile UP-TO-DATE
+> Task :android:tools:compileDebugLibraryResources UP-TO-DATE
+> Task :android:tools:parseDebugLocalResources UP-TO-DATE
+> Task :android:tools:generateDebugRFile UP-TO-DATE
+> Task :android:app:processDebugResources UP-TO-DATE
+> Task :android:games:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:games:compileDebugKotlin UP-TO-DATE
+> Task :android:games:javaPreCompileDebug UP-TO-DATE
+> Task :android:games:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:games:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :android:shared:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:shared:compileDebugKotlin UP-TO-DATE
+> Task :android:shared:javaPreCompileDebug UP-TO-DATE
+> Task :android:shared:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:shared:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :android:tools:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:tools:compileDebugKotlin UP-TO-DATE
+> Task :android:tools:javaPreCompileDebug UP-TO-DATE
+> Task :android:tools:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:tools:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :android:app:compileDebugKotlin UP-TO-DATE
+> Task :android:app:javaPreCompileDebug UP-TO-DATE
+> Task :android:app:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:app:mergeDebugShaders UP-TO-DATE
+> Task :android:app:compileDebugShaders NO-SOURCE
+> Task :android:app:generateDebugAssets UP-TO-DATE
+> Task :android:games:mergeDebugShaders UP-TO-DATE
+> Task :android:games:compileDebugShaders NO-SOURCE
+> Task :android:games:generateDebugAssets UP-TO-DATE
+> Task :android:games:mergeDebugAssets UP-TO-DATE
+> Task :android:shared:mergeDebugShaders UP-TO-DATE
+> Task :android:shared:compileDebugShaders NO-SOURCE
+> Task :android:shared:generateDebugAssets UP-TO-DATE
+> Task :android:shared:mergeDebugAssets UP-TO-DATE
+> Task :android:tools:mergeDebugShaders UP-TO-DATE
+> Task :android:tools:compileDebugShaders NO-SOURCE
+> Task :android:tools:generateDebugAssets UP-TO-DATE
+> Task :android:tools:mergeDebugAssets UP-TO-DATE
+> Task :android:app:mergeDebugAssets UP-TO-DATE
+> Task :android:tools:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :android:app:compressDebugAssets
+> Task :android:shared:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :android:games:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :android:app:desugarDebugFileDependencies
+> Task :android:app:dexBuilderDebug
+> Task :android:app:processDebugJavaRes UP-TO-DATE
+> Task :android:games:processDebugJavaRes UP-TO-DATE
+> Task :android:shared:processDebugJavaRes UP-TO-DATE
+> Task :android:tools:processDebugJavaRes UP-TO-DATE
+> Task :android:app:mergeDebugGlobalSynthetics
+> Task :android:app:checkDebugDuplicateClasses
+> Task :android:app:mergeDebugJavaResource
+> Task :android:tools:bundleLibRuntimeToDirDebug
+> Task :android:app:mergeExtDexDebug
+> Task :android:shared:bundleLibRuntimeToDirDebug
+> Task :android:games:bundleLibRuntimeToDirDebug
+> Task :android:app:mergeLibDexDebug
+> Task :android:app:mergeDebugJniLibFolders
+> Task :android:games:mergeDebugJniLibFolders
+> Task :android:games:mergeDebugNativeLibs NO-SOURCE
+> Task :android:games:copyDebugJniLibsProjectOnly
+
+> Task :android:app:mergeProjectDexDebug FAILED
+ERROR: /workspace/scratch/39f240a7e5bd/project/OnKlav/android/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/10c4dc5b003c7fcd06f43fa011ffa980e8fb9f80338c8f8ac063b6812978ce4f_0.jar: D8: Type androidx.activity.compose.R is defined multiple times: /workspace/scratch/39f240a7e5bd/project/OnKlav/android/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/10c4dc5b003c7fcd06f43fa011ffa980e8fb9f80338c8f8ac063b6812978ce4f_0.jar:classes.dex, /workspace/scratch/39f240a7e5bd/project/OnKlav/android/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/5904defaed9b328d96eeaf7f062808cffe7d71f36543b49d11e84364ab93b70a_0.jar:classes.dex
+com.android.builder.dexing.DexArchiveMergerException: Error while merging dex archives: 
+Learn how to resolve the issue at https://developer.android.com/studio/build/dependencies#duplicate_classes.
+Type androidx.activity.compose.R is defined multiple times: /workspace/scratch/39f240a7e5bd/project/OnKlav/android/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/10c4dc5b003c7fcd06f43fa011ffa980e8fb9f80338c8f8ac063b6812978ce4f_0.jar:classes.dex, /workspace/scratch/39f240a7e5bd/project/OnKlav/android/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/5904defaed9b328d96eeaf7f062808cffe7d71f36543b49d11e84364ab93b70a_0.jar:classes.dex
+	at com.android.builder.dexing.D8DexArchiveMerger.getMergingExceptionToRethrow(D8DexArchiveMerger.java:235)
+	at com.android.builder.dexing.D8DexArchiveMerger.mergeDexArchives(D8DexArchiveMerger.java:223)
+	at com.android.build.gradle.internal.tasks.DexMergingWorkAction.merge(DexMergingTask.kt:914)
+	at com.android.build.gradle.internal.tasks.DexMergingWorkAction.run(DexMergingTask.kt:864)
+	at com.android.build.gradle.internal.profile.ProfileAwareWorkAction.execute(ProfileAwareWorkAction.kt:74)
+	at org.gradle.workers.internal.DefaultWorkerServer.execute(DefaultWorkerServer.java:63)
+	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:66)
+	at org.gradle.workers.internal.NoIsolationWorkerFactory$1$1.create(NoIsolationWorkerFactory.java:62)
+	at org.gradle.internal.classloader.ClassLoaderUtils.executeInClassloader(ClassLoaderUtils.java:100)
+	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.lambda$execute$0(NoIsolationWorkerFactory.java:62)
+	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:44)
+	at org.gradle.workers.internal.AbstractWorker$1.call(AbstractWorker.java:41)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:209)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$CallableBuildOperationWorker.execute(DefaultBuildOperationRunner.java:204)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:66)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner$2.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:166)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.execute(DefaultBuildOperationRunner.java:59)
+	at org.gradle.internal.operations.DefaultBuildOperationRunner.call(DefaultBuildOperationRunner.java:53)
+	at org.gradle.workers.internal.AbstractWorker.executeWrappedInBuildOperation(AbstractWorker.java:41)
+	at org.gradle.workers.internal.NoIsolationWorkerFactory$1.execute(NoIsolationWorkerFactory.java:59)
+	at org.gradle.workers.internal.DefaultWorkerExecutor.lambda$submitWork$0(DefaultWorkerExecutor.java:174)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runExecution(DefaultConditionalExecutionQueue.java:194)
+	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.access$700(DefaultConditionalExecutionQueue.java:127)
+	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner$1.run(DefaultConditionalExecutionQueue.java:169)
+	at org.gradle.internal.Factories$1.create(Factories.java:31)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.withLocks(DefaultWorkerLeaseService.java:263)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:127)
+	at org.gradle.internal.work.DefaultWorkerLeaseService.runAsWorkerThread(DefaultWorkerLeaseService.java:132)
+	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.runBatch(DefaultConditionalExecutionQueue.java:164)
+	at org.gradle.internal.work.DefaultConditionalExecutionQueue$ExecutionRunner.run(DefaultConditionalExecutionQueue.java:133)
+	at java.base/java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:539)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+	at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: com.android.tools.r8.CompilationFailedException: Compilation failed to complete, origin: /workspace/scratch/39f240a7e5bd/project/OnKlav/android/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/10c4dc5b003c7fcd06f43fa011ffa980e8fb9f80338c8f8ac063b6812978ce4f_0.jar:classes.dex
+	at Version.fakeStackEntry(Version_8.9.35.java:0)
+	at com.android.tools.r8.S.a(R8_8.9.35_b4dbea2f8bdfdf2cab3ae611558fd558945d3a458bfc50ef035fc9f5ad630d56:5)
+	at com.android.tools.r8.internal.Nu.a(R8_8.9.35_b4dbea2f8bdfdf2cab3ae611558fd558945d3a458bfc50ef035fc9f5ad630d56:82)
+	at com.android.tools.r8.internal.Nu.a(R8_8.9.35_b4dbea2f8bdfdf2cab3ae611558fd558945d3a458bfc50ef035fc9f5ad630d56:32)
+	at com.android.tools.r8.internal.Nu.a(R8_8.9.35_b4dbea2f8bdfdf2cab3ae611558fd558945d3a458bfc50ef035fc9f5ad630d56:31)
+	at com.android.tools.r8.internal.Nu.b(R8_8.9.35_b4dbea2f8bdfdf2cab3ae611558fd558945d3a458bfc50ef035fc9f5ad630d56:2)
+	at com.android.tools.r8.D8.run(R8_8.9.35_b4dbea2f8bdfdf2cab3ae611558fd558945d3a458bfc50ef035fc9f5ad630d56:11)
+	at com.android.builder.dexing.D8DexArchiveMerger.mergeDexArchives(D8DexArchiveMerger.java:221)
+	... 37 more
+Caused by: com.android.tools.r8.internal.g: Type androidx.activity.compose.R is defined multiple times: /workspace/scratch/39f240a7e5bd/project/OnKlav/android/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/10c4dc5b003c7fcd06f43fa011ffa980e8fb9f80338c8f8ac063b6812978ce4f_0.jar:classes.dex, /workspace/scratch/39f240a7e5bd/project/OnKlav/android/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/5904defaed9b328d96eeaf7f062808cffe7d71f36543b49d11e84364ab93b70a_0.jar:classes.dex
+	at com.android.tools.r8.internal.Me0.a(R8_8.9.35_b4dbea2f8bdfdf2cab3ae611558fd558945d3a458bfc50ef035fc9f5ad630d56:21)
+	at com.android.tools.r8.internal.s70.a(R8_8.9.35_b4dbea2f8bdfdf2cab3ae611558fd558945d3a458bfc50ef035fc9f5ad630d56:54)
+	at com.android.tools.r8.internal.s70.a(R8_8.9.35_b4dbea2f8bdfdf2cab3ae611558fd558945d3a458bfc50ef035fc9f5ad630d56:10)
+	at java.base/java.util.concurrent.ConcurrentHashMap.merge(ConcurrentHashMap.java:2056)
+	at com.android.tools.r8.internal.s70.a(R8_8.9.35_b4dbea2f8bdfdf2cab3ae611558fd558945d3a458bfc50ef035fc9f5ad630d56:6)
+	at com.android.tools.r8.graph.w4$a.d(R8_8.9.35_b4dbea2f8bdfdf2cab3ae611558fd558945d3a458bfc50ef035fc9f5ad630d56:6)
+	at com.android.tools.r8.dex.c.a(R8_8.9.35_b4dbea2f8bdfdf2cab3ae611558fd558945d3a458bfc50ef035fc9f5ad630d56:44)
+	at com.android.tools.r8.dex.c.a(R8_8.9.35_b4dbea2f8bdfdf2cab3ae611558fd558945d3a458bfc50ef035fc9f5ad630d56:12)
+	at com.android.tools.r8.dex.c.a(R8_8.9.35_b4dbea2f8bdfdf2cab3ae611558fd558945d3a458bfc50ef035fc9f5ad630d56:9)
+	at com.android.tools.r8.D8.a(R8_8.9.35_b4dbea2f8bdfdf2cab3ae611558fd558945d3a458bfc50ef035fc9f5ad630d56:33)
+	at com.android.tools.r8.D8.d(R8_8.9.35_b4dbea2f8bdfdf2cab3ae611558fd558945d3a458bfc50ef035fc9f5ad630d56:17)
+	at com.android.tools.r8.D8.b(R8_8.9.35_b4dbea2f8bdfdf2cab3ae611558fd558945d3a458bfc50ef035fc9f5ad630d56:1)
+	at com.android.tools.r8.internal.Nu.a(R8_8.9.35_b4dbea2f8bdfdf2cab3ae611558fd558945d3a458bfc50ef035fc9f5ad630d56:28)
+	... 40 more
+
+
+> Task :android:shared:mergeDebugJniLibFolders
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':android:app:mergeProjectDexDebug'.
+> A failure occurred while executing com.android.build.gradle.internal.tasks.DexMergingTaskDelegate
+   > There was a failure while executing work items
+      > A failure occurred while executing com.android.build.gradle.internal.tasks.DexMergingWorkAction
+         > com.android.builder.dexing.DexArchiveMergerException: Error while merging dex archives: 
+           Learn how to resolve the issue at https://developer.android.com/studio/build/dependencies#duplicate_classes.
+           Type androidx.activity.compose.R is defined multiple times: /workspace/scratch/39f240a7e5bd/project/OnKlav/android/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/10c4dc5b003c7fcd06f43fa011ffa980e8fb9f80338c8f8ac063b6812978ce4f_0.jar:classes.dex, /workspace/scratch/39f240a7e5bd/project/OnKlav/android/app/build/intermediates/project_dex_archive/debug/dexBuilderDebug/out/5904defaed9b328d96eeaf7f062808cffe7d71f36543b49d11e84364ab93b70a_0.jar:classes.dex
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 34s
+82 actionable tasks: 16 executed, 66 up-to-date

@@ -1,0 +1,31 @@
+{
+  "status": "source complete after 0.100.17-rc1; no APK requested",
+  "changes": [
+    "One-time new color preference defaults to Rainbow even when the old preference was a single color; subsequent choices retained",
+    "Mandala independent alternating rotation increased to roughly19/28/23/34deg per second; boosted separate frequency pulses and local audio-shaped two-frequency contour wiggle; beads follow same contours",
+    "Spectrum bars sway and bend with captured audio and vary opacity by local band and slow independent phase, retaining mirrored heights and palette",
+    "Aurora lower edge moved down by nine percent of stage height toward mountain ridge"
+  ],
+  "focused_cases": 8,
+  "cases": [
+    "RadioSceneRenderTest.featuredScenesMoveWithNewAudioAndIntensityChangesTheirOutput",
+    "RadioSceneRenderTest.removedPrismFallsBackAndMandalaLayersUseSeparateFrequencyEnvelopes",
+    "RadioSceneRenderTest.rainbowCoversAllHuesAndOneBandDoesNotDriveAllBars",
+    "RadioSceneRenderTest.frequencyLayersAreIndependentAndWaveComponentsKeepActualSound",
+    "RadioSceneRenderTest.allSixScenesReactToAudioAndPausedFramesRemainStill",
+    "RadioSceneRenderTest.starburstIsSymmetricAndTapersOutwardAndColorsStaySelected",
+    "RadioSceneRenderTest.radialScenesExpandPastFormerBoundsAndAllLayersReact",
+    "RadioVisualizerTest.visualizerModesLandscapeBackAndOrientationRestore"
+  ],
+  "runtime": "runtime jar matches compiled Kotlin classes",
+  "lint": "Prior full lint retained; not repeated for visual formulas and preference migration",
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/RadioVisualizer.kt": "2362e5226f0fab7bba32c0977a30d2daa2cb4ae46e767bd4934723017f7ce6fe",
+    "android/app/src/main/kotlin/app/onklav/home/RadioVisualScene.kt": "e4c36614a6d51b321419ace3a88ee82055422a4defa22f1ca07c0fdffb25cac2"
+  },
+  "limits": [
+    "Physical phone smoothness/performance acceptance remains separate",
+    "No radio transport, DSP, permission, native, SDK or signing changes",
+    "Latest APK0.100.17-rc1 predates this and the saved Image Editor save-menu update"
+  ]
+}

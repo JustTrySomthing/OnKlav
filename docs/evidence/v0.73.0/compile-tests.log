@@ -1,0 +1,127 @@
+Picked up JAVA_TOOL_OPTIONS: -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=38753 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=38753
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.11.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :android:app
+WARNING: The option setting 'android.aapt2FromMavenOverride=/workspace/scratch/75acf774e3b8/build-env/sdk/build-tools/35.0.0/aapt2' is experimental.
+WARNING: platform-tools package is not installed.
+
+> Task :android:app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:app:preBuild UP-TO-DATE
+> Task :android:app:preDebugBuild UP-TO-DATE
+> Task :android:games:preBuild UP-TO-DATE
+> Task :android:games:preDebugBuild UP-TO-DATE
+> Task :android:games:writeDebugAarMetadata UP-TO-DATE
+> Task :android:shared:preBuild UP-TO-DATE
+> Task :android:shared:preDebugBuild UP-TO-DATE
+> Task :android:shared:writeDebugAarMetadata UP-TO-DATE
+> Task :android:tools:preBuild UP-TO-DATE
+> Task :android:tools:preDebugBuild UP-TO-DATE
+> Task :android:tools:writeDebugAarMetadata UP-TO-DATE
+> Task :android:app:checkDebugAarMetadata UP-TO-DATE
+> Task :android:app:generateDebugResValues UP-TO-DATE
+> Task :android:games:generateDebugResValues UP-TO-DATE
+> Task :android:games:generateDebugResources UP-TO-DATE
+> Task :android:games:packageDebugResources UP-TO-DATE
+> Task :android:shared:generateDebugResValues UP-TO-DATE
+> Task :android:shared:generateDebugResources UP-TO-DATE
+> Task :android:shared:packageDebugResources UP-TO-DATE
+> Task :android:tools:generateDebugResValues UP-TO-DATE
+> Task :android:tools:generateDebugResources UP-TO-DATE
+> Task :android:tools:packageDebugResources UP-TO-DATE
+> Task :android:app:mapDebugSourceSetPaths UP-TO-DATE
+> Task :android:app:generateDebugResources UP-TO-DATE
+> Task :android:app:mergeDebugResources UP-TO-DATE
+> Task :android:app:packageDebugResources UP-TO-DATE
+> Task :android:app:parseDebugLocalResources UP-TO-DATE
+> Task :android:app:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :android:app:extractDeepLinksDebug UP-TO-DATE
+> Task :android:games:extractDeepLinksDebug UP-TO-DATE
+> Task :android:games:processDebugManifest UP-TO-DATE
+> Task :android:shared:extractDeepLinksDebug UP-TO-DATE
+> Task :android:shared:processDebugManifest UP-TO-DATE
+> Task :android:tools:extractDeepLinksDebug UP-TO-DATE
+> Task :android:tools:processDebugManifest UP-TO-DATE
+> Task :android:app:processDebugMainManifest UP-TO-DATE
+> Task :android:app:processDebugManifest UP-TO-DATE
+> Task :android:app:processDebugManifestForPackage UP-TO-DATE
+> Task :android:games:compileDebugLibraryResources UP-TO-DATE
+> Task :android:games:parseDebugLocalResources UP-TO-DATE
+> Task :android:games:generateDebugRFile UP-TO-DATE
+> Task :android:shared:compileDebugLibraryResources UP-TO-DATE
+> Task :android:shared:parseDebugLocalResources UP-TO-DATE
+> Task :android:shared:generateDebugRFile UP-TO-DATE
+> Task :android:tools:compileDebugLibraryResources UP-TO-DATE
+> Task :android:tools:parseDebugLocalResources UP-TO-DATE
+> Task :android:tools:generateDebugRFile UP-TO-DATE
+> Task :android:app:processDebugResources UP-TO-DATE
+> Task :android:games:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:games:compileDebugKotlin UP-TO-DATE
+> Task :android:games:javaPreCompileDebug UP-TO-DATE
+> Task :android:games:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:games:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :android:shared:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:shared:compileDebugKotlin UP-TO-DATE
+> Task :android:shared:javaPreCompileDebug UP-TO-DATE
+> Task :android:shared:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:shared:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :android:tools:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:tools:compileDebugKotlin UP-TO-DATE
+> Task :android:tools:javaPreCompileDebug UP-TO-DATE
+> Task :android:tools:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:tools:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :android:app:compileDebugKotlin
+w: file:///workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/MainActivity.kt:50:55 'static field TRIM_MEMORY_RUNNING_LOW: Int' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessageAttachments.kt:69:9 'constructor(): MediaRecorder' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt:201:29 'fun get(p0: String!): Any?' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessengerPane.kt:136:21 'val LocalClipboardManager: ProvidableCompositionLocal<ClipboardManager>' is deprecated. Use LocalClipboard instead which supports suspend functions.
+w: file:///workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkMedia.kt:90:245 'constructor(p0: Int, p1: CharSequence!, p2: PendingIntent?): Notification.Action.Builder' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkPdfViewer.kt:83:319 'fun <T : Parcelable!> getParcelableArrayList(p0: String?): ArrayList<T!>?' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkPdfViewer.kt:88:190 'fun <T : Parcelable!> getParcelableArrayList(p0: String?): ArrayList<T!>?' is deprecated. Deprecated in Java.
+
+> Task :android:app:javaPreCompileDebug
+> Task :android:app:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:app:bundleDebugClassesToCompileJar
+
+> Task :android:app:compileDebugUnitTestKotlin FAILED
+e: file:///workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/test/kotlin/app/onklav/home/SdkAudioBooksTest.kt:59:77 No parameter with name 'connect' found.
+e: file:///workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/test/kotlin/app/onklav/home/SdkAudioBooksTest.kt:59:86 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/test/kotlin/app/onklav/home/SdkAudioBooksTest.kt:60:70 No parameter with name 'connect' found.
+e: file:///workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/test/kotlin/app/onklav/home/SdkAudioBooksTest.kt:60:79 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/test/kotlin/app/onklav/home/SdkAudioBooksTest.kt:60:97 Unresolved reference 'url'.
+e: file:///workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/test/kotlin/app/onklav/home/SdkAudioBooksTest.kt:60:119 Unresolved reference 'method'.
+e: file:///workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/test/kotlin/app/onklav/home/SdkAudioBooksTest.kt:60:144 Unresolved reference 'url'.
+e: file:///workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/test/kotlin/app/onklav/home/SdkAudioBooksTest.kt:60:183 Unresolved reference 'method'.
+e: file:///workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/test/kotlin/app/onklav/home/SdkAudioBooksTest.kt:62:34 No parameter with name 'connect' found.
+e: file:///workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/test/kotlin/app/onklav/home/SdkAudioBooksTest.kt:62:43 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/test/kotlin/app/onklav/home/SdkAudioBooksTest.kt:62:61 Unresolved reference 'url'.
+e: file:///workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/test/kotlin/app/onklav/home/SdkAudioBooksTest.kt:68:166 Cannot access 'fun resolve(raw: String, token: String, verify: () -> Unit): Request': it is private in 'app/onklav/home/SdkAudioBooks'.
+e: file:///workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/test/kotlin/app/onklav/home/SdkAudioBooksTest.kt:68:217 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/test/kotlin/app/onklav/home/SdkAudioBooksTest.kt:69:29 Cannot access 'fun resolve(raw: String, token: String, verify: () -> Unit): Request': it is private in 'app/onklav/home/SdkAudioBooks'.
+e: file:///workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/test/kotlin/app/onklav/home/SdkAudioBooksTest.kt:69:81 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/test/kotlin/app/onklav/home/SdkAudioBooksTest.kt:69:97 Unresolved reference 'header'.
+e: file:///workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/test/kotlin/app/onklav/home/SdkAudioBooksTest.kt:69:135 Unresolved reference 'header'.
+e: file:///workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/test/kotlin/app/onklav/home/SdkAudioBooksTest.kt:69:170 Unresolved reference 'url'.
+[Incubating] Problems report is available at: file:///workspace/scratch/75acf774e3b8/recovered/OnKlav/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':android:app:compileDebugUnitTestKotlin'.
+> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+   > Compilation error. See log for more details
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.11.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 2m 6s
+53 actionable tasks: 4 executed, 49 up-to-date

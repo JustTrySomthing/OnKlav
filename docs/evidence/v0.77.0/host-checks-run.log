@@ -1,0 +1,10 @@
+readers-host-checks 20 seconds
+readers-host-checks 40 seconds
+readers-host-checks 60 seconds
+readers-host-checks 80 seconds
+readers-host-checks 100 seconds
+readers-host-checks 120 seconds
+readers-host-checks 140 seconds
+readers-host-checks 160 seconds
+readers-host-checks 180 seconds
+Exit 1

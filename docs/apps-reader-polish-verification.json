@@ -1,0 +1,47 @@
+{
+  "version": "0.90.0-apps-reader-polish1",
+  "android_code": 98,
+  "sdk_host": 95,
+  "status": "source complete; no APK requested or assembled",
+  "changes": [
+    "Apps previous/next chevrons and existing swipe navigation",
+    "Notes and Annotation folder drawers with New and saved items; redundant host overflow removed",
+    "Read Aloud icon transport, Clear/Paste above scrub bar, no Ready/repeated preview, expanded editor",
+    "Read Aloud primary-color word highlight, automatic cross-chunk text following and overflow scrollbar",
+    "Convert theme-tinted ruler and curved arrows vector"
+  ],
+  "validation": {
+    "controllers": {
+      "passed": 134,
+      "failed": 0
+    },
+    "android_focus": {
+      "tests": 12,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "android_ui": {
+      "unique_passed": 2,
+      "note": "Both UI cases are included in the final 12-case selection; the earlier speech-follow test was corrected to advance beyond the first viewport."
+    },
+    "lint": {
+      "Warning": 182
+    },
+    "visual_review": [
+      "Apps pages, paging arrows and Convert icon",
+      "Read Aloud active word and overflow scrollbar",
+      "Read Aloud editor and icon controls",
+      "Notes folder drawer and New action"
+    ],
+    "signed_packages": 16,
+    "native": "Core unchanged; source-matched existing Linux/ARM64 JNI reused",
+    "apk": "Not built",
+    "phone_acceptance": "Not performed"
+  },
+  "preserved": [
+    "Prior eBook library/settings fixes and all earlier work",
+    "Original publisher/signing identities",
+    "Existing saved documents and speech settings"
+  ]
+}

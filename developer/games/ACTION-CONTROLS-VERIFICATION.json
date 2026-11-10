@@ -1,0 +1,91 @@
+{
+  "sdk": "0.8",
+  "tests": {
+    "tooling": 16,
+    "touch": 14,
+    "components": 15,
+    "platformer": 6,
+    "firstperson": 8,
+    "topdown": 10,
+    "arena": 10,
+    "advanced_platformer": 5,
+    "advanced_firstperson": 7
+  },
+  "web_touch": {
+    "independent_move_and_aim": true,
+    "release_cleanup": true,
+    "resize": true,
+    "sizes": [
+      [
+        800,
+        400
+      ],
+      [
+        640,
+        360
+      ]
+    ]
+  },
+  "web_exports_checked": [
+    "platformer",
+    "firstperson",
+    "topdown",
+    "arena"
+  ],
+  "examples": {
+    "platformer": {
+      "package_sha256": "6e125f32a8d073b8601a8970182c4c1cbce9d02eb43e352ee140abd42d49fb7b",
+      "publisher_sha256": "3562a6e25a7da899538462ae77cd974fad28f724b99442575a6c8c3ecce7301d",
+      "signature_verified": true
+    },
+    "firstperson": {
+      "package_sha256": "823c4fb56415ab961d54c56d4dd4f2156a8d0180f40c8b36b4db35e475d7083d",
+      "publisher_sha256": "3562a6e25a7da899538462ae77cd974fad28f724b99442575a6c8c3ecce7301d",
+      "signature_verified": true
+    },
+    "topdown": {
+      "package_sha256": "e31f263ca29a1fcdc7384ef9eeeef25c3a661f6bcdd0cb59d18903a33216cafe",
+      "publisher_sha256": "3562a6e25a7da899538462ae77cd974fad28f724b99442575a6c8c3ecce7301d",
+      "signature_verified": true
+    },
+    "arena": {
+      "package_sha256": "9f30ae3076e417d46c63be0daf08a0cb102e4d1c124302f7ca42be164728e78e",
+      "publisher_sha256": "3562a6e25a7da899538462ae77cd974fad28f724b99442575a6c8c3ecce7301d",
+      "signature_verified": true
+    }
+  },
+  "physical_android_tested": false,
+  "host_plan": {
+    "sdk_apps": "reuse",
+    "mobile_rust": "reuse",
+    "neural_speech": "reuse",
+    "games": "reuse",
+    "android_tests": "not requested",
+    "variant": "optimized",
+    "abis": [
+      "arm64-v8a"
+    ]
+  },
+  "notes": [
+    "Starter scenes are minimal foundations, not completed games.",
+    "Existing session teardown tests emit two ObjectDB exit warnings; no script errors or test failures.",
+    "SDK owner redistribution license and Windows/macOS setup qualification remain open."
+  ],
+  "source_sha256": {
+    "templates/arena/main.gd": "ee35a7c69d5c5ce86257a1bbc78873a86fae1fb445e62939e2b252c060599e29",
+    "templates/platformer/main.gd": "0af922f5f094e8c9bdc18de20b0863bd60f5cab62a60b7438e99b2e989f2b82c",
+    "templates/firstperson/main.gd": "8a8605f9de08e0e38ae8bc97cc174d2218bdca1e9dedf7c6a9e7bfbf1d509824",
+    "templates/scene3d/main.gd": "cf3a5324f674be861986e8ced3140143e0898c9d78b7f1aada04cb53a38897be",
+    "templates/shared/enemy_steering.gd": "1d23d6820d70cdc3eeb11823ffc862415fe73d14a27943db3406dec8eff96f88",
+    "templates/shared/game_chrome.gd": "a6cfb8152a5e4368d824414ae8252d3c944c03fc426794164fc4ba06c05fa887",
+    "templates/shared/turn_channel.gd": "f52fe47a90747c5be207748bfc3120bc4d18029157ab66197aca6a29e181b69b",
+    "templates/shared/touch_controls.gd": "2aad2adcabc6ade5d3c94c21805c1f32cdf87e86fe93ec2c47a203e365ba29cb",
+    "templates/shared/gameplay_state.gd": "c92c4a4a20b83a945ae4396b62080896cfcd490678196a784fef429d32b0b4f7",
+    "templates/shared/tests.gd": "5a48e9a9bb47a73c01a72e53b995a38c6c4a16fa954eae8cc0028ce22fd2a2c6",
+    "templates/shared/onklav_game.gd": "e123b9034992166a6653b5dc59406996173a01875e483670e33ed894e8617595",
+    "templates/turn/main.gd": "cff069da26b908058d37316fbe5488cfeac363da39a4727682050abb3ebb2f9a",
+    "templates/turn/model.gd": "31bc98fc4e8d0136cc5179c13d0ed7244031e618272fda0326ce132e008793e2",
+    "templates/touch2d/main.gd": "062644c7548b619a2fa214d32ad6a5d90f73a2cf8e3066667eea44a399ffd3c1",
+    "templates/topdown/main.gd": "b62d03a77729d334d585aafe7d53d67e7552eb5a9291c1b2d580da3c0e5fce02"
+  }
+}

@@ -1,0 +1,395 @@
+{
+  "date": "2026-10-23",
+  "source_version": "0.48.0-dev",
+  "source_version_code": 55,
+  "scope": "Conversation gallery/media controls, explicit SMS/MMS/Walkie handset trial, Drive document-provider upload and backup/restore actions",
+  "status": "Selected automated checks passed; handset/carrier/account acceptance remains open",
+  "apk_built": true,
+  "apk_variant": "debug",
+  "apk_bytes": 70466992,
+  "apk_sha256": "f3b7383d8757ee2d2fb59181a7837392d0178262960352f2a7de43b3e5e52272",
+  "debug_feedback_build": true,
+  "optimized_release_size_comparison": false,
+  "mobile_native_rebuilt": true,
+  "sdk_apps_rebuilt": false,
+  "sdk_packages_reused": 10,
+  "godot_pack_reused_source_matched": true,
+  "games_changed": false,
+  "games_deferred_by_user": true,
+  "full_rewrite_complete": false,
+  "full_sdk_complete": false,
+  "installed_on_handset": false,
+  "phone_performance_measured": false,
+  "real_carrier_verified": false,
+  "two_phone_walkie_verified": false,
+  "release_mms_ready": false,
+  "explicit_carrier_trial_available": true,
+  "direct_drive_oauth_complete": false,
+  "automatic_drive_public_links_complete": false,
+  "internal_packages": [],
+  "tests": {
+    "app_host_passed": 57,
+    "shared_passed": 12,
+    "rust_passed": 168,
+    "python_passed": 20,
+    "failed": 0,
+    "skipped": 0,
+    "full_host_suite_rerun": false,
+    "case_results": [
+      {
+        "class": "app.onklav.home.MediaAndCarrierTest",
+        "name": "animatedImagesDefaultOnAndPreferencePersists",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.MediaAndCarrierTest.xml"
+      },
+      {
+        "class": "app.onklav.home.MediaAndCarrierTest",
+        "name": "galleryIncludesAllMediaKindsAndPreservesIdentityWithoutDuplicates",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.MediaAndCarrierTest.xml"
+      },
+      {
+        "class": "app.onklav.home.MediaAndCarrierTest",
+        "name": "driveProviderCopyStreamsSelectedFileAndRejectsSameDestination",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.MediaAndCarrierTest.xml"
+      },
+      {
+        "class": "app.onklav.home.MediaAndCarrierTest",
+        "name": "carrierTrialRequiresExplicitChoiceAndDoesNotClaimReleaseAcceptance",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.MediaAndCarrierTest.xml"
+      },
+      {
+        "class": "app.onklav.home.TransportRecoveryTest",
+        "name": "walkieCallbackIsRetainedWhenPermissionGatePreventsReconciliation",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.TransportRecoveryTest.xml"
+      },
+      {
+        "class": "app.onklav.home.TransportRecoveryTest",
+        "name": "callbacksRequireMatchingActionUriKindAndPart",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.TransportRecoveryTest.xml"
+      },
+      {
+        "class": "app.onklav.home.TransportRecoveryTest",
+        "name": "receiptsSurviveRestartUntilCoreAcceptsTheOutcomeWithoutResending",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.TransportRecoveryTest.xml"
+      },
+      {
+        "class": "app.onklav.home.TransportRecoveryTest",
+        "name": "internalBrowserHandoffUsesTheSignedGuestNavigationAndRejectsUnsafeSchemes",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.TransportRecoveryTest.xml"
+      },
+      {
+        "class": "app.onklav.home.TransportRecoveryTest",
+        "name": "failedMmsAddressInsertRollsBackOnlyTheNewParent",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.TransportRecoveryTest.xml"
+      },
+      {
+        "class": "app.onklav.home.TransportRecoveryTest",
+        "name": "committedCoreRemovalWithBlockedPrivateCleanupResumesBeforeAnotherLaunch",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.TransportRecoveryTest.xml"
+      },
+      {
+        "class": "app.onklav.home.TransportRecoveryTest",
+        "name": "recoverySchedulingCoalescesAndDoesNotEnableTransport",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.TransportRecoveryTest.xml"
+      },
+      {
+        "class": "app.onklav.home.HistoryApplyTest",
+        "name": "stoppingContinuationRetainsNewCommitAndNextReviewDoesNotInsertAgain",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.HistoryApplyTest.xml"
+      },
+      {
+        "class": "app.onklav.home.HistoryApplyTest",
+        "name": "confirmationNeedsComparisonMmsIdentitiesAndExplicitUncancelledReview",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.HistoryApplyTest.xml"
+      },
+      {
+        "class": "app.onklav.home.HistoryApplyTest",
+        "name": "pendingMessageAppearingOrChangedCompletedTargetRequiresReviewBeforeInsertion",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.HistoryApplyTest.xml"
+      },
+      {
+        "class": "app.onklav.home.HistoryApplyTest",
+        "name": "partialBatchFinishesOnlyMissingMessageUnderOriginalRecord",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.HistoryApplyTest.xml"
+      },
+      {
+        "class": "app.onklav.home.HistoryApplyTest",
+        "name": "providerChangeDuringPostCaptureStopsMetadataMerge",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.HistoryApplyTest.xml"
+      },
+      {
+        "class": "app.onklav.home.HistoryApplyTest",
+        "name": "reviewedApplyUsesFreshPlanAndCannotReuseConfirmation",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.HistoryApplyTest.xml"
+      },
+      {
+        "class": "app.onklav.home.HistoryApplyTest",
+        "name": "changedSavedRecordOrWrongOriginalArchiveCannotContinue",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.HistoryApplyTest.xml"
+      },
+      {
+        "class": "app.onklav.home.HistoryApplyTest",
+        "name": "secondMessageFailureKeepsFirstAndCleansOnlyIncompleteInsert",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.HistoryApplyTest.xml"
+      },
+      {
+        "class": "app.onklav.home.HistoryApplyTest",
+        "name": "stopAfterCommitPreservesPartialOutcomeMapAndReceipt",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.HistoryApplyTest.xml"
+      },
+      {
+        "class": "app.onklav.home.HistoryApplyTest",
+        "name": "pendingBatchesHaveExplicitSourcesAndProductionGatePrecedesSnapshot",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.HistoryApplyTest.xml"
+      },
+      {
+        "class": "app.onklav.home.HistoryApplyTest",
+        "name": "wrongRecordedPhoneIdsAndProviderChangesLeaveResumeMetadataUntouched",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.HistoryApplyTest.xml"
+      },
+      {
+        "class": "app.onklav.home.HistoryApplyTest",
+        "name": "lostInsertAcknowledgementBlocksContinuationWithoutDiscardingPartialMap",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.HistoryApplyTest.xml"
+      },
+      {
+        "class": "app.onklav.home.HistoryApplyTest",
+        "name": "freshPhoneComparisonSkipsExistingRowsAndAbsentCommittedRowsBlockReplay",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.HistoryApplyTest.xml"
+      },
+      {
+        "class": "app.onklav.home.HistoryApplyTest",
+        "name": "changedContentOrWrongPostIdsLeaveMetadataUntouchedAndReceiptsIntact",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.HistoryApplyTest.xml"
+      },
+      {
+        "class": "app.onklav.home.HistoryApplyTest",
+        "name": "productionGateBlocksBeforeSafAndProviderSnapshot",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.HistoryApplyTest.xml"
+      },
+      {
+        "class": "app.onklav.home.HistoryApplyTest",
+        "name": "postSnapshotRemapsFlagsAndFoldersAndDisarmsOldReminders",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.HistoryApplyTest.xml"
+      },
+      {
+        "class": "app.onklav.home.HistoryApplyTest",
+        "name": "changedIdentityConfigurationRejectsReviewBeforeSafOrProviderReads",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.HistoryApplyTest.xml"
+      },
+      {
+        "class": "app.onklav.home.HistoryApplyTest",
+        "name": "changedArchiveAndMissingMmsIdentitiesFailBeforeFirstInsert",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.HistoryApplyTest.xml"
+      },
+      {
+        "class": "app.onklav.home.HistoryApplyTest",
+        "name": "identityChangeAtProviderBoundaryPausesWithKnownReceiptAndNoAutomaticRetry",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.HistoryApplyTest.xml"
+      },
+      {
+        "class": "app.onklav.home.HistoryApplyTest",
+        "name": "recoveredCommitBeforeMapAcknowledgementRequiresNoNewInsert",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.HistoryApplyTest.xml"
+      },
+      {
+        "class": "app.onklav.home.HistoryApplyTest",
+        "name": "checkedArchiveFeedsTypedExecutorAndPersistsActualIdsWithoutOldIds",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.HistoryApplyTest.xml"
+      },
+      {
+        "class": "app.onklav.home.HistoryApplyTest",
+        "name": "metadataEditedDuringInsertsWinsOverArchiveEntries",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.HistoryApplyTest.xml"
+      },
+      {
+        "class": "app.onklav.home.HistoryApplyTest",
+        "name": "changedPhonePlanRequiresAnotherReviewBeforeAnyInsertion",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.HistoryApplyTest.xml"
+      },
+      {
+        "class": "app.onklav.home.HistoryApplyTest",
+        "name": "resumeTicketCannotStartAnotherInsertBatchAndChangedIdentitiesNeedReview",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.HistoryApplyTest.xml"
+      },
+      {
+        "class": "app.onklav.home.HistoryApplyTest",
+        "name": "savedRecordMetadataResumesOriginalJobWithoutInsertingOrReplayingMessages",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.HistoryApplyTest.xml"
+      },
+      {
+        "class": "app.onklav.home.HistoryRestoreTest",
+        "name": "cancellationDuringChildrenRollsBackButCleanupFailureBlocksContinuation",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.HistoryRestoreTest.xml"
+      },
+      {
+        "class": "app.onklav.home.HistoryRestoreTest",
+        "name": "lostInsertAcknowledgementNeverRetriesOrGuessesWhichRowToDelete",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.HistoryRestoreTest.xml"
+      },
+      {
+        "class": "app.onklav.home.HistoryRestoreTest",
+        "name": "explicitAbsentReviewRetainsEvidenceAndDoesNotRetryOrDelete",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.HistoryRestoreTest.xml"
+      },
+      {
+        "class": "app.onklav.home.HistoryRestoreTest",
+        "name": "unsafeInputsAndClosedProductionGateHaveNoInsertEffects",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.HistoryRestoreTest.xml"
+      },
+      {
+        "class": "app.onklav.home.HistoryRestoreTest",
+        "name": "permissionLossRetainsReceiptUntilExplicitCleanup",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.HistoryRestoreTest.xml"
+      },
+      {
+        "class": "app.onklav.home.HistoryRestoreTest",
+        "name": "changedOwnershipOrFailedReadbackCannotCommit",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.HistoryRestoreTest.xml"
+      },
+      {
+        "class": "app.onklav.home.HistoryRestoreTest",
+        "name": "processInterruptionAfterParentReceiptCanBeCleanedAfterRestart",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.HistoryRestoreTest.xml"
+      },
+      {
+        "class": "app.onklav.home.HistoryRestoreTest",
+        "name": "childrenReappearanceCancellationAndAccessLossRetainPendingEvidence",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.HistoryRestoreTest.xml"
+      },
+      {
+        "class": "app.onklav.home.HistoryRestoreTest",
+        "name": "successfulMessagesRetainActualIdsAcrossRecoveryAndBlockReplay",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.HistoryRestoreTest.xml"
+      },
+      {
+        "class": "app.onklav.home.HistoryRestoreTest",
+        "name": "incompleteMmsDeletesOnlyNewParentAndChildren",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.HistoryRestoreTest.xml"
+      },
+      {
+        "class": "app.onklav.home.HistoryRestoreTest",
+        "name": "presentOwnedOrChangedMessageCannotBeAcknowledgedAbsent",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.HistoryRestoreTest.xml"
+      },
+      {
+        "class": "app.onklav.home.HistoryRestoreTest",
+        "name": "unknownAndCommittedOutcomesNeverQueryOrResolveGuessedIds",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.HistoryRestoreTest.xml"
+      },
+      {
+        "class": "app.onklav.home.HistoryRestoreTest",
+        "name": "explicitAbsentReviewProductionEntryStaysGateClosed",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.HistoryRestoreTest.xml"
+      },
+      {
+        "class": "app.onklav.home.HistoryRestoreTest",
+        "name": "processInterruptionBeforeReceiptStaysUncertain",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.HistoryRestoreTest.xml"
+      },
+      {
+        "class": "app.onklav.home.SdkVoiceTest",
+        "name": "controllerUsesRealSignedSdkAndRustArchiveWithFixtureDeviceOnly",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.SdkVoiceTest.xml"
+      },
+      {
+        "class": "app.onklav.home.SdkVoiceTest",
+        "name": "focusDenialBackendErrorAndOtherOwnerLeaveNoDraft",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.SdkVoiceTest.xml"
+      },
+      {
+        "class": "app.onklav.home.SdkVoiceTest",
+        "name": "twelveSecondLimitReviewQueueAndDiscard",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.SdkVoiceTest.xml"
+      },
+      {
+        "class": "app.onklav.home.SdkVoiceTest",
+        "name": "playbackMarksHeardOnlyOnAuthorizedCompletion",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.SdkVoiceTest.xml"
+      },
+      {
+        "class": "app.onklav.home.SdkVoiceTest",
+        "name": "liveRecordingWaitsForOwnershipAndWarmupAndCancelsBeforeStart",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.SdkVoiceTest.xml"
+      },
+      {
+        "class": "app.onklav.home.SdkVoiceTest",
+        "name": "revocationBackgroundAndStaleCallbacksDiscardWithoutQueueing",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.SdkVoiceTest.xml"
+      },
+      {
+        "class": "app.onklav.home.SdkVoiceTest",
+        "name": "unverifiedCarrierCannotStartOrConsumeTrafficOrChangeRole",
+        "passed": true,
+        "evidence": "docs/evidence/v0.48.0/accepted/TEST-app.onklav.home.SdkVoiceTest.xml"
+      }
+    ],
+    "qualification": "Fixture/provider/JNI tests do not establish carrier, physical decoding/playback, cloud syncing or exact original visual parity."
+  },
+  "build_evidence": "docs/evidence/v0.48.0/build-debug.json",
+  "runtime_bundle_freshness": "Current compiled Kotlin class bytes match debug runtime bundle",
+  "remaining": [
+    "Real SMS/MMS receive/send/provider/SIM/APN/notification acceptance",
+    "Live two-phone Walkie audio, interruptions, floor and receipt acceptance",
+    "Handset GIF/video/audio/swipe/zoom/gallery/save acceptance",
+    "Drive provider/account syncing acceptance; direct OAuth/public links unfinished",
+    "Full SDK-document backup and existing migration gaps",
+    "Prior Files/Notes return host-test stall not rerun or resolved",
+    "Release size/performance measurement after functional handset feedback"
+  ]
+}

@@ -1,0 +1,8 @@
+{
+  "scope": "Host native processing on 1800x1200 image; not phone performance qualification",
+  "milliseconds": {
+    "denoise": 505,
+    "comic": 766,
+    "pencil": 565
+  }
+}

@@ -1,0 +1,17 @@
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':android:app:compileDebugUnitTestKotlin'.
+> Error while evaluating property 'friendPathsSet$kotlin_gradle_plugin_common' of task ':android:app:compileDebugUnitTestKotlin'.
+   > Could not resolve all dependencies for configuration ':android:app:debugUnitTestCompileClasspath'.
+      > Problems reading data from Binary store in /workspace/scratch/39f240a7e5bd/restored-env/gradle/.tmp/gradle13600928658214232695.bin offset 104804 exists? true
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 38s
+55 actionable tasks: 8 executed, 47 up-to-date
+202

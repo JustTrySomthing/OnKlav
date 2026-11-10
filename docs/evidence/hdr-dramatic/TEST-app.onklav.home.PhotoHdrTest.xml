@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.PhotoHdrTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-29T15:09:29" hostname="3d3a46c2e56a" time="15.73">
+  <properties/>
+  <testcase name="allLooksPreserveOpacityAndZeroStrengthIsExactWhileBwIsAchromatic" classname="app.onklav.home.PhotoHdrTest" time="11.06"/>
+  <testcase name="naturalKeepsEndpointsAndAvoidsHardEdgeRingingAndFlatNoiseInflation" classname="app.onklav.home.PhotoHdrTest" time="0.244"/>
+  <testcase name="portraitAndLandscapeLooksAreDistinctAndProduceReviewSheets" classname="app.onklav.home.PhotoHdrTest" time="4.084"/>
+  <testcase name="singleStyleStrengthAndSerializationKeepOldDraftsCompatible" classname="app.onklav.home.PhotoHdrTest" time="0.341"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

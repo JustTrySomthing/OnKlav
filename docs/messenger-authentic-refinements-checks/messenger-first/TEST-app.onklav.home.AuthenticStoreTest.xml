@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.AuthenticStoreTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-31T20:52:59" hostname="83231ba1f14b" time="36.167">
+  <properties/>
+  <testcase name="legacyEnrollmentPreservesAccountsAndOldBackups" classname="app.onklav.home.AuthenticStoreTest" time="8.002"/>
+  <testcase name="portableBackupsAuthenticateCompletelyAndMergeIsExplicit" classname="app.onklav.home.AuthenticStoreTest" time="4.794"/>
+  <testcase name="encryptedStoreDoesNotExposeSeedsAndWrongPasswordNeverReplacesData" classname="app.onklav.home.AuthenticStoreTest" time="2.834"/>
+  <testcase name="recoveryEnrollmentResetAndPasswordChangeKeepAccountsAndAuthenticateAllAnswers" classname="app.onklav.home.AuthenticStoreTest" time="11.661"/>
+  <testcase name="passwordChangeKeepsOldBackupsReadableOnlyWithTheirOriginalPassword" classname="app.onklav.home.AuthenticStoreTest" time="6.242"/>
+  <testcase name="countersPersistAndDifferentAppEnvelopesAreRejected" classname="app.onklav.home.AuthenticStoreTest" time="2.634"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

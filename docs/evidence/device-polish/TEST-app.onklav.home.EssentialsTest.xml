@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.EssentialsTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-28T12:15:56" hostname="1b65f1fab707" time="7.791">
+  <properties/>
+  <testcase name="localAlarmsHandleWeeklyDaysDstGapAndBothOverlapOccurrences" classname="app.onklav.home.EssentialsTest" time="1.966"/>
+  <testcase name="timerUsesMonotonicTimeAndRebootFallsBackToSavedWallDeadline" classname="app.onklav.home.EssentialsTest" time="3.24"/>
+  <testcase name="staleEventsCannotRingAndSnoozeAndTimerRecoveryPersist" classname="app.onklav.home.EssentialsTest" time="2.585"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

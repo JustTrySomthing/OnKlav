@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.SdkBootstrapTest" tests="2" skipped="0" failures="2" errors="0" timestamp="2026-10-23T11:13:11" hostname="41aed82b0335" time="1.876">
+  <properties/>
+  <testcase name="warmSetupPreservesRemovalAndLivePermissionRevocation" classname="app.onklav.home.SdkBootstrapTest" time="1.822">
+    <failure message="java.lang.UnsatisfiedLinkError: Native Library /workspace/scratch/0c4f42874eaa/source/OnKlav/core/target/debug/libonklav_core.so already loaded in another classloader" type="java.lang.UnsatisfiedLinkError">java.lang.UnsatisfiedLinkError: Native Library /workspace/scratch/0c4f42874eaa/source/OnKlav/core/target/debug/libonklav_core.so already loaded in another classloader
+	at java.base/jdk.internal.loader.NativeLibraries.loadLibrary(NativeLibraries.java:201)
+	at java.base/jdk.internal.loader.NativeLibraries.loadLibrary(NativeLibraries.java:174)
+	at java.base/jdk.internal.loader.NativeLibraries.findFromPaths(NativeLibraries.java:315)
+	at java.base/jdk.internal.loader.NativeLibraries.loadLibrary(NativeLibraries.java:287)
+	at java.base/java.lang.ClassLoader.loadLibrary(ClassLoader.java:2427)
+	at java.base/java.lang.Runtime.loadLibrary0(Runtime.java:818)
+	at java.base/java.lang.System.loadLibrary(System.java:2006)
+	at app.onklav.shared.NativeCore.&lt;clinit&gt;(Core.kt:13)
+	at app.onklav.home.AppSdk.raw(AppSdk.kt:31)
+	at app.onklav.home.AppSdk.sync(AppSdk.kt:58)
+	at app.onklav.home.AppSdk$call$2.invokeSuspend(AppSdk.kt:70)
+	at _COROUTINE._BOUNDARY._(CoroutineDebugging.kt:42)
+	at app.onklav.home.AppSdk.list(AppSdk.kt:77)
+	at app.onklav.home.AppSdk.bootstrap(AppSdk.kt:90)
+	at app.onklav.home.SdkBootstrapTest$warmSetupPreservesRemovalAndLivePermissionRevocation$1.invokeSuspend(SdkBootstrapTest.kt:19)
+Caused by: java.lang.UnsatisfiedLinkError: Native Library /workspace/scratch/0c4f42874eaa/source/OnKlav/core/target/debug/libonklav_core.so already loaded in another classloader
+	at java.base/jdk.internal.loader.NativeLibraries.loadLibrary(NativeLibraries.java:201)
+	at java.base/jdk.internal.loader.NativeLibraries.loadLibrary(NativeLibraries.java:174)
+	at java.base/jdk.internal.loader.NativeLibraries.findFromPaths(NativeLibraries.java:315)
+	at java.base/jdk.internal.loader.NativeLibraries.loadLibrary(NativeLibraries.java:287)
+	at java.base/java.lang.ClassLoader.loadLibrary(ClassLoader.java:2427)
+	at java.base/java.lang.Runtime.loadLibrary0(Runtime.java:818)
+	at java.base/java.lang.System.loadLibrary(System.java:2006)
+	at app.onklav.shared.NativeCore.&lt;clinit&gt;(Core.kt:13)
+	at app.onklav.home.AppSdk.raw(AppSdk.kt:31)
+	at app.onklav.home.AppSdk.sync(AppSdk.kt:58)
+	at app.onklav.home.AppSdk$call$2.invokeSuspend(AppSdk.kt:70)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+</failure>
+  </testcase>
+  <testcase name="setupRecoversWhenRegistryIsMissingWithinSameProcess" classname="app.onklav.home.SdkBootstrapTest" time="0.054">
+    <failure message="java.lang.UnsatisfiedLinkError: Native Library /workspace/scratch/0c4f42874eaa/source/OnKlav/core/target/debug/libonklav_core.so already loaded in another classloader" type="java.lang.UnsatisfiedLinkError">java.lang.UnsatisfiedLinkError: Native Library /workspace/scratch/0c4f42874eaa/source/OnKlav/core/target/debug/libonklav_core.so already loaded in another classloader
+	at java.base/jdk.internal.loader.NativeLibraries.loadLibrary(NativeLibraries.java:201)
+	at java.base/jdk.internal.loader.NativeLibraries.loadLibrary(NativeLibraries.java:174)
+	at java.base/jdk.internal.loader.NativeLibraries.findFromPaths(NativeLibraries.java:315)
+	at java.base/jdk.internal.loader.NativeLibraries.loadLibrary(NativeLibraries.java:287)
+	at java.base/java.lang.ClassLoader.loadLibrary(ClassLoader.java:2427)
+	at java.base/java.lang.Runtime.loadLibrary0(Runtime.java:818)
+	at java.base/java.lang.System.loadLibrary(System.java:2006)
+	at app.onklav.shared.NativeCore.&lt;clinit&gt;(Core.kt:13)
+	at app.onklav.home.AppSdk.raw(AppSdk.kt:31)
+	at app.onklav.home.AppSdk.sync(AppSdk.kt:58)
+	at app.onklav.home.AppSdk$call$2.invokeSuspend(AppSdk.kt:70)
+	at _COROUTINE._BOUNDARY._(CoroutineDebugging.kt:42)
+	at app.onklav.home.AppSdk.list(AppSdk.kt:77)
+	at app.onklav.home.AppSdk.bootstrap(AppSdk.kt:90)
+	at app.onklav.home.SdkBootstrapTest$warmSetupPreservesRemovalAndLivePermissionRevocation$1.invokeSuspend(SdkBootstrapTest.kt:19)
+Caused by: java.lang.UnsatisfiedLinkError: Native Library /workspace/scratch/0c4f42874eaa/source/OnKlav/core/target/debug/libonklav_core.so already loaded in another classloader
+	at java.base/jdk.internal.loader.NativeLibraries.loadLibrary(NativeLibraries.java:201)
+	at java.base/jdk.internal.loader.NativeLibraries.loadLibrary(NativeLibraries.java:174)
+	at java.base/jdk.internal.loader.NativeLibraries.findFromPaths(NativeLibraries.java:315)
+	at java.base/jdk.internal.loader.NativeLibraries.loadLibrary(NativeLibraries.java:287)
+	at java.base/java.lang.ClassLoader.loadLibrary(ClassLoader.java:2427)
+	at java.base/java.lang.Runtime.loadLibrary0(Runtime.java:818)
+	at java.base/java.lang.System.loadLibrary(System.java:2006)
+	at app.onklav.shared.NativeCore.&lt;clinit&gt;(Core.kt:13)
+	at app.onklav.home.AppSdk.raw(AppSdk.kt:31)
+	at app.onklav.home.AppSdk.sync(AppSdk.kt:58)
+	at app.onklav.home.AppSdk$call$2.invokeSuspend(AppSdk.kt:70)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

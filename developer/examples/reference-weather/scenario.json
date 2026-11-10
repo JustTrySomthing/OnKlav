@@ -1,0 +1,46 @@
+{
+  "grants": [
+    "storage.private",
+    "network.http"
+  ],
+  "steps": [
+    {
+      "action": "place.label",
+      "value": "Selected place"
+    },
+    {
+      "action": "place.latitude",
+      "value": "40"
+    },
+    {
+      "action": "place.longitude",
+      "value": "-80"
+    },
+    {
+      "action": "place.open",
+      "expect": {
+        "route": "weather"
+      }
+    },
+    {
+      "action": "place.back",
+      "expect": {
+        "route": "place"
+      }
+    },
+    {
+      "reopen": true,
+      "expect": {
+        "latitude": "40",
+        "longitude": "-80"
+      }
+    },
+    {
+      "action": "place.open"
+    },
+    {
+      "action": "weather.refresh",
+      "pending": "clock.read"
+    }
+  ]
+}

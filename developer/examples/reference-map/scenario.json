@@ -1,0 +1,33 @@
+{
+  "grants": [
+    "storage.private",
+    "network.http"
+  ],
+  "steps": [
+    {
+      "action": "map.latitude",
+      "value": "0"
+    },
+    {
+      "action": "map.longitude",
+      "value": "180"
+    },
+    {
+      "action": "map.zoom",
+      "value": "2"
+    },
+    {
+      "action": "map.open",
+      "expect": {
+        "open": true,
+        "x": 0
+      }
+    },
+    {
+      "action": "map.load",
+      "expect": {
+        "status": "Waiting for the native map viewport size"
+      }
+    }
+  ]
+}

@@ -1,0 +1,82 @@
+{
+  "status": "Chunks26\u201327 typed Android handoffs implemented in source; full-host/real-device acceptance pending",
+  "chunks": [
+    26,
+    27
+  ],
+  "production_path": "Public Rust handoff helpers -> strict Rust capability/action/token validation -> signed-owner private-file resolution -> shared Compose review -> Kotlin typed chooser and revocable read-only copy provider",
+  "preserved": "Prior chunks1\u201325 and released main JNI retained; no package/publisher/signing identity change",
+  "android_isolated_unique_checks_passed": 8,
+  "android_isolated_cases": [
+    "copiedFilesAreIsolatedReadOnlyAndExpireWithoutDeletingThePrivateSource",
+    "failedRemovalCleanupCannotResurrectAnOldUriWhenAccessIsRegranted",
+    "foreignPathsAndFailedAuthorizationNeverCreateCopies",
+    "handlerDiscoveryIsScopedAndReturnsAvailabilityWithoutAnInventory",
+    "interruptedAndRevokedStagingLeavesNoLiveCopyOrGrant",
+    "ownerPublisherVersionAndAllGrantsAreRechecked",
+    "removalAndLateRevocationDeleteOnlyTheOwningAppsCopies",
+    "typedIntentsGrantOneReadOnlyFileAndCannotInjectAPackageOrWriteGrant"
+  ],
+  "android_logs": [
+    "docs/evidence/v0.70.0/handoff-android.log",
+    "docs/evidence/v0.70.0/handoff-cleanup-final.log",
+    "docs/evidence/v0.70.0/handoff-regrant-final.log"
+  ],
+  "final_source_compilation": "Final regrant run compiled production Kotlin service/UI sources against actual shared UI; preceding compile-only run also passed",
+  "android_adapters": "Isolated harness has compile-only AppSdk/controller/JNI adapters that refuse execution. Provider owner lookup/authorization fixtures are explicitly injected; live ownership metadata matching is separately tested. No claim of full-host integration, platform URI grant enforcement or a real receiver.",
+  "rust_relevant_checks_passed": [
+    "sdk_handoff::tests::typed_requests_reject_authority_and_inventory_injection",
+    "sdk::tests::handoff_permissions_and_replies_fail_closed",
+    "sdk::tests::handoff_file_scope_tokens_and_removal_are_owner_bound"
+  ],
+  "rust_selection_note": "The handoff filter also ran three existing history handoff checks; all six passed, but only the three listed cases verify this feature.",
+  "public_helper_checks_passed": 1,
+  "developer_contract_checks_passed": 5,
+  "native": "Current source-matched Linux and ARM64 JNI rebuilt and independently verified; ARM64 LOAD alignment16384. Released main JNI/proofs unchanged.",
+  "native_proof": "docs/working-native-verification.json",
+  "bounds": {
+    "max_copy_bytes": 20971520,
+    "max_copies_per_app": 4,
+    "max_total_copies": 16,
+    "max_total_bytes": 41943040,
+    "ttl_ms": 600000,
+    "maximum_text_utf16": 50000
+  },
+  "ownership_protection": [
+    "Guest cannot supply filesystem paths, URIs, recipient packages or owners",
+    "Core resolves only an immutable private blob owned by current signed app and pending action",
+    "Provider binds copied export to signed app, publisher, installed hash and required grants",
+    "Durable revocation epoch commits before deletion, so cleanup failure/regrant cannot revive an older URI",
+    "Expiry, update, revocation and removal revoke future reads and clean only owner copies",
+    "Unpublished crash-orphan copies are collected before new staging; cancellation/revocation during copy retains the private source"
+  ],
+  "explicit_limits": [
+    "Handler discovery covers compatible Android activities, not arbitrary internal SDK handler registration",
+    "Availability is a boolean only; no installed app inventory",
+    "Chooser response reports handed_off:true,completed:false, including when a user later cancels externally",
+    "Already disclosed bytes or an already opened descriptor cannot be recalled",
+    "Legacy ExportProvider exports are not relabelled as this new provider; existing explicit internal host routes remain unchanged"
+  ],
+  "remaining": [
+    "Full Android host/JNI compilation and focused integration when three unavailable dependency artifacts can be restored",
+    "Real chooser/receiver, OS URI-grant enforcement, device/OEM and process-recovery acceptance",
+    "Next numbered feature28: shared text search UI and saved reading position; remaining reading/maps/adapters and final qualification"
+  ],
+  "apk_created": false,
+  "sdk_or_documentation_release_created": false,
+  "source_sha256": {
+    "core/src/sdk.rs": "200b7326c0f8eb78efd49d638493e5480e9b4772905a87c4890233878dd67f7f",
+    "core/src/sdk_handoff.rs": "a671557879792c036637223c1749427daeb67a9d6758e89b38751ded25029732",
+    "core/src/lib.rs": "7ad024d76847c5669382115cc3013d8812af46ce6ac816ccb075ab2edf301651",
+    "android/app/src/main/kotlin/app/onklav/home/SdkHandoffs.kt": "24ebb5fb7ad0bdf2d575edb7925e9fce5b54443112900431fe0cdde6921f12c5",
+    "android/app/src/main/kotlin/app/onklav/home/SdkHandoffProvider.kt": "7aa689c10719221dac7c174ac6128eb000d321efdad68fa9ecb6ef7c0b846591",
+    "android/app/src/main/kotlin/app/onklav/home/SdkHandoffEffects.kt": "ddbe5e4a938e444743a2b5a4180d1e9ed26cc0856af399b5cb64b4ac244b2b07",
+    "android/app/src/main/kotlin/app/onklav/home/AppSdk.kt": "0e74b0bccc91ace1dd8edc05aed56fb33376e54b487b64b6c76efb2045c1ec9b",
+    "android/app/src/main/kotlin/app/onklav/home/SdkNativeData.kt": "1fbf15674c2222aba1120f59c8bd07e9470d04cbba88e770911051fcbf2f6ec8",
+    "android/app/src/main/kotlin/app/onklav/home/SdkAppScreen.kt": "4c96d52b73f5bde8c7e4f53ceb69992d737c256484279a0c25dee3a327c34949",
+    "android/app/src/main/AndroidManifest.xml": "7dfde5eadf3c6a811dbf06db1ed4639a63137e61ac6901f218cfb3602883c276",
+    "developer/components/src/handoff.rs": "c378d9ee9c2894bbd7d493e0865bd59004ea05e84de92afeee9fcb2dbf6bab27",
+    "developer/contract.json": "32555e438db626e29c1ad8c6c619353b1aeb34160820fffb5fb6d4fd617b8df4",
+    "scripts/check_device_services.py": "7d8f854432de25cca44d09f0e6d2a21617a9271968c01620c121fd5a60b827b7"
+  }
+}

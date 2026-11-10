@@ -1,0 +1,16 @@
+   Compiling onklav-core v0.8.0 (/workspace/scratch/75acf774e3b8/work/OnKlav/core)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 14.81s
+     Running unittests src/lib.rs (core/target/debug/deps/onklav_core-8a579202944a8eae)
+
+running 2 tests
+test sdk::tests::pdf_widget_requires_one_bounded_body_and_an_opaque_handle ... ok
+test sdk::tests::pdf_component_resolves_only_the_current_signed_owners_visible_file ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 242 filtered out; finished in 1.08s
+
+     Running unittests src/bin/onklav-pack.rs (core/target/debug/deps/onklav_pack-ee23dc4255ec4a6b)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

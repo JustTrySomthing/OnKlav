@@ -1,0 +1,123 @@
+{
+  "elapsed_ms": 1621,
+  "measured_iterations_per_operation": 600,
+  "note": "Process RSS samples, not heap allocations or Android responsiveness; synthetic input reused; no network/native UI/carrier work",
+  "profile": "optimized Linux host SDK only",
+  "rss_samples": [
+    {
+      "batch": 0,
+      "rss_kib": 2196
+    },
+    {
+      "batch": 1,
+      "rss_kib": 2300
+    },
+    {
+      "batch": 2,
+      "rss_kib": 2296
+    },
+    {
+      "batch": 3,
+      "rss_kib": 2356
+    },
+    {
+      "batch": 4,
+      "rss_kib": 2360
+    },
+    {
+      "batch": 5,
+      "rss_kib": 2392
+    },
+    {
+      "batch": 6,
+      "rss_kib": 2416
+    }
+  ],
+  "timings": [
+    {
+      "max_us": 829,
+      "operation": "jmap20_header_parse_merge",
+      "p50_us": 163,
+      "p95_us": 331,
+      "samples": 600
+    },
+    {
+      "max_us": 4060,
+      "operation": "geojson2048_route_parse",
+      "p50_us": 2023,
+      "p95_us": 2600,
+      "samples": 600
+    },
+    {
+      "max_us": 711,
+      "operation": "weather_parse_imperial_rows",
+      "p50_us": 30,
+      "p95_us": 84,
+      "samples": 600
+    }
+  ],
+  "warmup_iterations": 100,
+  "source_sha256": {
+    "developer/components/src/accounts.rs": "7b79c86c18ee93c1c2d8c58c2dc736744bb4e0bc1f04370a0856e94f4e46ad77",
+    "developer/components/src/apps.rs": "d2bb61ae257ccb6b46f62e51f5af512cad1ef575bbe5f869015cf9ad7c63c4b4",
+    "developer/components/src/blobs.rs": "b8682857fa8e39731c68b204625102167bdf88aa7c13c06113c1c82be4936540",
+    "developer/components/src/calendar.rs": "218b157a792865e8c75b0c04a4fd30e223c782c435879d424759ae1b1e5a5a3a",
+    "developer/components/src/calendar_ui.rs": "b0634201e2fbff1159514cdad826b6effbf4b0bdd442304da586fa7ff3019053",
+    "developer/components/src/calendar_zoned_ui.rs": "eab8187ad7b3f6bc11f8531731e07cb38bf17430d4559a9dbd3c2e5d61646f75",
+    "developer/components/src/camera.rs": "a89fb294f4db31eff0889448598d6ae1b3417b136d1ecea4b057b48306523356",
+    "developer/components/src/clock.rs": "983418567733b70a7b0227c80d477a8aaeb979df38d159e8f4a5fbce750854ae",
+    "developer/components/src/collection.rs": "d250eaa6c2dfe206a5c549932c90a4c6b09d6e148170568cf3599dd876afc0cc",
+    "developer/components/src/collections.rs": "4e04d114ea41c88a230ea84e5e8e64a7e844e65f17dd95c026892986a23eaa58",
+    "developer/components/src/devices.rs": "d35301d5e5bebcc9285f5410a3437f7d71911852b3b64ce1058a18e53f65bc93",
+    "developer/components/src/downloads.rs": "e87ebc93b6454a929a944e5e266e7910fe0201f595cfa4a0d898447b788ae988",
+    "developer/components/src/email.rs": "3f81d894f65b29e73995bcd7e05ffc0181712228cbc58ae0891feb42c5661cac",
+    "developer/components/src/email_compose.rs": "88829f6c68f3f9253b6627359550500a55e3b19f2f0963f2eaed24ea0267251c",
+    "developer/components/src/email_content.rs": "24a4254a2dc32aa7c5e6976ea7b25a6f2765ecbb7ea3da882171f6e3c1577921",
+    "developer/components/src/epub.rs": "bf8233eaafabab64b7f0db9a4b9723b7e2e5cbd254d8be16a082b9e984848376",
+    "developer/components/src/epub_ui.rs": "d3d5ab7f497864749cb8ce218d45e111c853750ea81ca31ab8ca455ce4e78937",
+    "developer/components/src/files.rs": "2f07e8b107cdfb8a0b95cf63e0b385d29928ca889731c0154a6ea52d063a990c",
+    "developer/components/src/form_schema.rs": "bfb5bd49f77e10cc4035fa85e76c803f5f3c61d0bd0056e25f90650db3dd3598",
+    "developer/components/src/form_values.rs": "7beb208875c3e91f1baae148a10ae145db318255c7895726d554ffc48fcf04a0",
+    "developer/components/src/forms.rs": "1c2f8907142a44ed9bcea95b29b596f3481fa32ef943bac9548c7c3cfd86690b",
+    "developer/components/src/handoff.rs": "c378d9ee9c2894bbd7d493e0865bd59004ea05e84de92afeee9fcb2dbf6bab27",
+    "developer/components/src/http.rs": "f413d8e7f4d5c1aac1d5177f5df05a10f36f59b8bd61ebec88bb012da630f397",
+    "developer/components/src/jobs.rs": "76cbb7f4c04e7cb87371ec9a33ee83b43c545eac25d7c851e9088475864cbd25",
+    "developer/components/src/lib.rs": "088091ded56418db24e83efe33c6bc69ef3530f02cce0f983653997c1789d4e8",
+    "developer/components/src/localization.rs": "fe3fa770fdeeaf79966199c8142a43f828c5aa669822d49b07176e32f2c02eea",
+    "developer/components/src/maps.rs": "3df2336c96c707ad37d25ccb3112cfe0f85057605ed5671405bb14a9bc582fca",
+    "developer/components/src/maps_geo.rs": "c34906ec03b006fa4d26ae11d16bf022f0cdaffdd75db6881dd3832435d316dc",
+    "developer/components/src/media.rs": "0eb754c57b006b3d3a4594d74fe6d26d3428adc98b1b9d0b9d859e57b49bb018",
+    "developer/components/src/navigation.rs": "64e97b167dd495b4660f6312a1f44eef986fc162b9a9f0cc5ed78dc60e9c90ed",
+    "developer/components/src/notifications.rs": "532766a146029267ff9c859aa872441ed0dfe8d4097c89225c5a5ddc1937807f",
+    "developer/components/src/pdf.rs": "fc3e61a381224a5f42e56a0866f0b95c9dc7f0a0cd75b04d37baa62d113c1ce7",
+    "developer/components/src/permissions.rs": "40a6fd6935aaea431f03f7bf3a657206f4f1c7336c2fbf25e78954e14d0753cc",
+    "developer/components/src/playlists.rs": "603929ccf67f3b7c1195050d30a7adca2f09994905e10d070525d634f20b07c5",
+    "developer/components/src/podcasts.rs": "e801bb24bbd5f28da3a339bf1db864ef4816cd370ba96ff6874c166160dff511",
+    "developer/components/src/radio.rs": "99a5dc78923b9686a325f1d541d2f32eaf67d010cb91d475ca97d8c676ccaee7",
+    "developer/components/src/reading.rs": "5cb2703020e5e95a39408a94b16c84fe870f58c2ddbf78074fa8f99de1145a31",
+    "developer/components/src/reading_ui.rs": "6c713d0125e10b823965742eb54998c3b738f18b844b707e3816a0b849413e2c",
+    "developer/components/src/records.rs": "b424c22857e8319b95a7a0a162a3f19f39086a378577788086018af7912afd05",
+    "developer/components/src/recurrence.rs": "84af14813019959910def9f1df0d3cb0d8a4046e1335d402fe2637c19e733203",
+    "developer/components/src/reference_apps/annotation.rs": "4f38b5e8abc9fe2a202ccc197a54dbcc228eaee2451254cc5964b223a959475b",
+    "developer/components/src/reference_apps/browser.rs": "ef37fccee0a8425e93898ccef0caae735dbedcaf82f43af00c61ca2dbfcd83b7",
+    "developer/components/src/reference_apps/files.rs": "885ad2a8b628c45e1bce89e549fba71ebeca49d1e0f2b945ed06aa9e405e0088",
+    "developer/components/src/reference_apps/listening.rs": "7f9371e1d1e09de57f2193914d7b39614a89fc2b8f9eda0bdb7a1bbb0945322c",
+    "developer/components/src/reference_apps/mail.rs": "5ef30d5045f287be4bc352179885c624b505b8dae8abb2101ea6b318d1671ee9",
+    "developer/components/src/reference_apps/mod.rs": "80956ac3f89100ee2bfedbfff812421bfc613cd7fa1963727b415817f596cd9f",
+    "developer/components/src/reference_apps/notes.rs": "cc0a1224d61712638f9aa4dd2858c64d446ddbd470899208c5595caee82da70f",
+    "developer/components/src/reference_apps/reader.rs": "92d153109fbf96c14a2602e26b11bf2c82ffa96d25850c605055080235fa18ed",
+    "developer/components/src/reference_apps/rss.rs": "acfaf9ac15796524d6f51b188a257da353e7bfcffcdb70e451a32f4fff436941",
+    "developer/components/src/reference_apps/service_tests.rs": "d3a35385ef1f4f54c510384a57034073c30d611297842e6ce3ec48fcaefe580a",
+    "developer/components/src/reference_apps/social.rs": "bf4a8eb0a7cb0c94e305a64eaf9a12e52048db63e495a9607d902300534ad1df",
+    "developer/components/src/reference_apps/tile_map.rs": "6086abffbe2e84ef6e609b2249395fe31148204c900926a39e001374b9d2e9ff",
+    "developer/components/src/reference_apps/walkie.rs": "3a172178c19ee520dfdd73de8044bc17dee78fca9ef08638810ea8a0a6928bf7",
+    "developer/components/src/reference_apps/weather.rs": "1b576e4f0d15b0eef68681bc97c12cfddbb21203048818fb0d0c6f341da1cda8",
+    "developer/components/src/reference_apps/youtube.rs": "1330220b63f060e80b833df1438627127780b8f3527a44db780a6180c55ae69f",
+    "developer/components/src/secrets.rs": "5d6f8476171fd606436b1ee42e883594a665239986754b38b770266c51399438",
+    "developer/components/src/status.rs": "1f59c7e4a2b70ba7be219f2eb1ee8ea12e755f2c5c4ccef081b8ac0671a8a77e",
+    "developer/components/src/tests_shared.rs": "264bcaddfb31e380e4d10e6036bf697a144a877ef87230ab1e881060631d94d8",
+    "developer/components/src/weather.rs": "e46323f3c15d8d613b5e1773fc86021b8b51e23265ef64d9b2ef884cb4f12f85"
+  },
+  "runner_sha256": "47c4c95eb1fc6aeb6527114d453bc8e731718a4aea19e9a1aa4c51d20e20c521",
+  "apk_created": false
+}

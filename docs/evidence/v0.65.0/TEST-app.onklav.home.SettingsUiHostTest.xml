@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.SettingsUiHostTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-24T04:59:51" hostname="7f28cc248fa2" time="3.125">
+  <properties/>
+  <testcase name="combinedAppDocumentsBackupIsReachable" classname="app.onklav.home.SettingsUiHostTest" time="3.125"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

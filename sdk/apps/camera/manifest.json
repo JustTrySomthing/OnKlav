@@ -1,0 +1,19 @@
+{
+  "schema": "onklav.app.v1",
+  "runtime": "rust-wasm-ui.v1",
+  "id": "app.onklav.camera",
+  "name": "Camera",
+  "version": 2,
+  "min_host": 96,
+  "icon": {
+    "symbol": "settings"
+  },
+  "capabilities": [
+    "storage.private",
+    "camera.capture",
+    "audio.record",
+    "audio.playback",
+    "files.manage",
+    "files.export"
+  ]
+}

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.SdkSpeechTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-22T16:20:46" hostname="2383b52a5fc7" time="2.275">
+  <properties/>
+  <testcase name="chunkedPlaybackPauseSeekRevocationAndLateCallbacks" classname="app.onklav.home.SdkSpeechTest" time="2.22"/>
+  <testcase name="utf16BoundariesAndPreviewRestoresPosition" classname="app.onklav.home.SdkSpeechTest" time="0.055"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

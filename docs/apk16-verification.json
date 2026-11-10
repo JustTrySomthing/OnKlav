@@ -1,0 +1,32 @@
+{
+  "version": "0.100.16-rc1",
+  "code": 125,
+  "status": "APK assembled and verified",
+  "apk": {
+    "name": "OnKlav-0.100.16-rc1.apk",
+    "bytes": 102527433,
+    "sha256": "22aa75c001a6ac906d9df219d81b3718aeb4bbc6e9a67a214d8ab044dc37abf3"
+  },
+  "standard_apk_verification": "docs/apk-verification-debug.json",
+  "build_evidence": "docs/evidence/v0.100.16/build-debug.json",
+  "included": [
+    "Radio visualizer control/color/Wave/Spectrum/Mandala refinements",
+    "Image Editor fixed-canvas gestures and simplified geometry",
+    "Pending-picture enable/status/watchdog/callback recovery",
+    "Stronger HDR; Technicolor/Pencil/Comic removed",
+    "Inline Image Editor Pen/Highlighter/Text/Move/Eraser tools",
+    "Standalone Annotation retired; existing data retained"
+  ],
+  "packaged_signed_apps": 24,
+  "new_markup_defined_classes_verified": true,
+  "annotation_asset_absent": true,
+  "functional_checks_reused": [
+    "docs/radio-geometry-polish-verification.json",
+    "docs/pictures-hdr-verification.json",
+    "docs/photo-markup-verification.json"
+  ],
+  "validation_note": "Only version/package verification changes for this APK task; previously passed targeted tests and lint were not repeated. Product source unchanged.",
+  "limits": [
+    "Real phone/carrier/live-station/provider/touch/IME/GPU/performance qualification remains separate."
+  ]
+}

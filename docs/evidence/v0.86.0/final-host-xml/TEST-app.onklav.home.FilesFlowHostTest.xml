@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.FilesFlowHostTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-26T22:19:00" hostname="844ebfe47829" time="14.88">
+  <properties/>
+  <testcase name="fileIconFoldersRenameMoveTrashAndRestoreUseTheRealNotesStore" classname="app.onklav.home.FilesFlowHostTest" time="11.567"/>
+  <testcase name="openingANoteUsesNotesAndBackReturnsToFiles" classname="app.onklav.home.FilesFlowHostTest" time="3.313"/>
+  <system-out><![CDATA[Files UI waiting: tab-Apps
+Files UI waiting: app-icon-files
+Files UI waiting: sdk-entry:documents
+Files UI waiting: sdk-entry:documents
+Files UI waiting: sdk-name
+Files UI waiting: sdk-name.save
+Files UI waiting: sdk-entry:notes
+Files UI waiting: sdk-rename
+Files UI waiting: sdk-name
+Files UI waiting: sdk-name.save
+Files UI waiting: sdk-menu.status
+Files UI waiting: sdk-name.save
+Files UI waiting: sdk-move
+Files UI waiting: sdk-entry:documents
+Files UI waiting: sdk-entry:6bef287b47e2414bbb65cca23d03f2b1
+Files UI waiting: sdk-destination.accept
+Files UI waiting: sdk-entry:4727dfa25a2f4942a61c0555d07bd465
+Files UI waiting: sdk-trash
+Files UI waiting: action-Files Home
+Files UI waiting: sdk-entry:trash
+Files UI waiting: sdk-restore
+Files UI waiting: action-Files Home
+Files UI waiting: sdk-entry:documents
+Files UI waiting: sdk-entry:6bef287b47e2414bbb65cca23d03f2b1
+Files UI waiting: sdk-entry:4727dfa25a2f4942a61c0555d07bd465
+Files UI waiting: tab-Apps
+Files UI waiting: app-icon-files
+Files UI waiting: sdk-entry:documents
+Files UI waiting: sdk-entry:documents
+Files UI waiting: sdk-entry:notes
+Files UI waiting: sdk-entry:098f41ebde054861864fd686d100041c
+Files UI waiting: sdk-note.text
+Files UI waiting: sdk-query
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

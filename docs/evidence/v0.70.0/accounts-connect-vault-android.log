@@ -1,0 +1,234 @@
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=33107 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=33107 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.11.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :android:app
+WARNING: The option setting 'android.aapt2FromMavenOverride=/workspace/scratch/ed752e8a1957/account-env/sdk/build-tools/35.0.0/aapt2' is experimental.
+Checking the license for package Android SDK Platform-Tools in /workspace/scratch/ed752e8a1957/account-env/sdk/licenses
+Warning: License for package Android SDK Platform-Tools not accepted.
+WARNING: platform-tools package is not installed. Please accept the installation licence to continue
+
+> Task :android:app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:app:preBuild UP-TO-DATE
+> Task :android:app:preDebugBuild UP-TO-DATE
+> Task :android:games:preBuild UP-TO-DATE
+> Task :android:games:preDebugBuild UP-TO-DATE
+> Task :android:games:writeDebugAarMetadata UP-TO-DATE
+> Task :android:shared:preBuild UP-TO-DATE
+> Task :android:shared:preDebugBuild UP-TO-DATE
+> Task :android:shared:writeDebugAarMetadata UP-TO-DATE
+> Task :android:tools:preBuild UP-TO-DATE
+> Task :android:tools:preDebugBuild UP-TO-DATE
+> Task :android:tools:writeDebugAarMetadata UP-TO-DATE
+> Task :android:app:checkDebugAarMetadata UP-TO-DATE
+> Task :android:app:generateDebugResValues UP-TO-DATE
+> Task :android:games:generateDebugResValues UP-TO-DATE
+> Task :android:games:generateDebugResources UP-TO-DATE
+> Task :android:games:packageDebugResources UP-TO-DATE
+> Task :android:shared:generateDebugResValues UP-TO-DATE
+> Task :android:shared:generateDebugResources UP-TO-DATE
+> Task :android:shared:packageDebugResources UP-TO-DATE
+> Task :android:tools:generateDebugResValues UP-TO-DATE
+> Task :android:tools:generateDebugResources UP-TO-DATE
+> Task :android:tools:packageDebugResources UP-TO-DATE
+> Task :android:app:mapDebugSourceSetPaths UP-TO-DATE
+> Task :android:app:generateDebugResources UP-TO-DATE
+> Task :android:app:mergeDebugResources UP-TO-DATE
+> Task :android:app:packageDebugResources UP-TO-DATE
+> Task :android:app:parseDebugLocalResources UP-TO-DATE
+> Task :android:app:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :android:app:extractDeepLinksDebug UP-TO-DATE
+> Task :android:games:extractDeepLinksDebug UP-TO-DATE
+> Task :android:games:processDebugManifest UP-TO-DATE
+> Task :android:shared:extractDeepLinksDebug UP-TO-DATE
+> Task :android:shared:processDebugManifest UP-TO-DATE
+> Task :android:tools:extractDeepLinksDebug UP-TO-DATE
+> Task :android:tools:processDebugManifest UP-TO-DATE
+> Task :android:app:processDebugMainManifest UP-TO-DATE
+> Task :android:app:processDebugManifest UP-TO-DATE
+> Task :android:app:processDebugManifestForPackage UP-TO-DATE
+> Task :android:games:compileDebugLibraryResources UP-TO-DATE
+> Task :android:games:parseDebugLocalResources UP-TO-DATE
+> Task :android:games:generateDebugRFile UP-TO-DATE
+> Task :android:shared:compileDebugLibraryResources UP-TO-DATE
+> Task :android:shared:parseDebugLocalResources UP-TO-DATE
+> Task :android:shared:generateDebugRFile UP-TO-DATE
+> Task :android:tools:compileDebugLibraryResources UP-TO-DATE
+> Task :android:tools:parseDebugLocalResources UP-TO-DATE
+> Task :android:tools:generateDebugRFile UP-TO-DATE
+> Task :android:app:processDebugResources UP-TO-DATE
+> Task :android:games:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:games:compileDebugKotlin UP-TO-DATE
+> Task :android:games:javaPreCompileDebug UP-TO-DATE
+> Task :android:games:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:games:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :android:shared:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:shared:compileDebugKotlin UP-TO-DATE
+> Task :android:shared:javaPreCompileDebug UP-TO-DATE
+> Task :android:shared:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:shared:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :android:tools:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:tools:compileDebugKotlin UP-TO-DATE
+> Task :android:tools:javaPreCompileDebug UP-TO-DATE
+> Task :android:tools:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:tools:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :android:app:javaPreCompileDebug UP-TO-DATE
+> Task :android:app:preDebugUnitTestBuild UP-TO-DATE
+> Task :android:app:javaPreCompileDebugUnitTest
+> Task :android:app:mergeDebugShaders
+> Task :android:app:compileDebugShaders NO-SOURCE
+> Task :android:app:generateDebugAssets UP-TO-DATE
+> Task :android:games:mergeDebugShaders
+> Task :android:games:compileDebugShaders NO-SOURCE
+> Task :android:games:generateDebugAssets UP-TO-DATE
+> Task :android:games:mergeDebugAssets
+> Task :android:shared:mergeDebugShaders
+> Task :android:shared:compileDebugShaders NO-SOURCE
+> Task :android:shared:generateDebugAssets UP-TO-DATE
+> Task :android:shared:mergeDebugAssets
+> Task :android:tools:mergeDebugShaders
+> Task :android:tools:compileDebugShaders NO-SOURCE
+> Task :android:tools:generateDebugAssets UP-TO-DATE
+> Task :android:tools:mergeDebugAssets
+> Task :android:app:mergeDebugAssets
+> Task :android:app:packageDebugUnitTestForUnitTest
+> Task :android:app:generateDebugUnitTestConfig
+> Task :android:games:bundleLibRuntimeToJarDebug
+> Task :android:games:processDebugJavaRes
+> Task :android:shared:bundleLibRuntimeToJarDebug
+> Task :android:shared:processDebugJavaRes
+> Task :android:tools:bundleLibRuntimeToJarDebug
+> Task :android:tools:processDebugJavaRes
+> Task :android:shared:preDebugUnitTestBuild UP-TO-DATE
+> Task :android:shared:generateDebugUnitTestStubRFile
+> Task :android:shared:compileDebugUnitTestKotlin
+> Task :android:shared:javaPreCompileDebugUnitTest
+> Task :android:shared:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :android:shared:processDebugUnitTestJavaRes
+
+> Task :android:shared:testDebugUnitTest
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=33107 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=33107 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+> Task :android:app:compileDebugKotlin
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/MainActivity.kt:50:55 'static field TRIM_MEMORY_RUNNING_LOW: Int' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessageAttachments.kt:69:9 'constructor(): MediaRecorder' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt:201:29 'fun get(p0: String!): Any?' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessengerPane.kt:136:21 'val LocalClipboardManager: ProvidableCompositionLocal<ClipboardManager>' is deprecated. Use LocalClipboard instead which supports suspend functions.
+
+> Task :android:app:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:app:bundleDebugClassesToRuntimeJar
+> Task :android:app:bundleDebugClassesToCompileJar
+> Task :android:app:processDebugJavaRes
+> Task :android:app:compileDebugUnitTestKotlin
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/FilesBrokerHostTest.kt:30:144 Type argument for reified type parameter 'T' was inferred to the intersection of ['Comparable<*>' & 'Serializable']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/FilesBrokerHostTest.kt:30:288 Type argument for reified type parameter 'T' was inferred to the intersection of ['Comparable<*>' & 'Serializable']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/FilesBrokerHostTest.kt:31:181 Type argument for reified type parameter 'T' was inferred to the intersection of ['Comparable<*>' & 'Serializable']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/MessageControlsTest.kt:64:179 Type argument for reified type parameter 'T' was inferred to the intersection of ['Comparable<*>' & 'Serializable']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/MessageLoadingTest.kt:27:107 Type argument for reified type parameter 'T' was inferred to the intersection of ['Comparable<*>' & 'Serializable']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/PagingAndReactionsTest.kt:52:126 Type argument for reified type parameter 'T' was inferred to the intersection of ['Comparable<*>?' & 'Serializable?']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/SdkDrawingTest.kt:78:61 'static fun obtain(): AccessibilityNodeInfo!' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/SdkDrawingTest.kt:84:224 'fun recycle(): Unit' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/SdkNativeBridgeTest.kt:22:17 Java type mismatch: inferred type is 'String?', but 'String' was expected.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/UiPolishHostTest.kt:80:43 Type argument for reified type parameter 'T' was inferred to the intersection of ['Comparable<*>' & 'Serializable']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/UiPolishHostTest.kt:134:24 Type argument for reified type parameter 'T' was inferred to the intersection of ['Comparable<*>' & 'Serializable']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/UiPolishHostTest.kt:134:56 Type argument for reified type parameter 'T' was inferred to the intersection of ['Comparable<*>' & 'Serializable']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/UiPolishHostTest.kt:134:88 Type argument for reified type parameter 'T' was inferred to the intersection of ['Comparable<*>' & 'Serializable']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/UiPolishHostTest.kt:136:24 Type argument for reified type parameter 'T' was inferred to the intersection of ['Comparable<*>?' & 'Serializable?']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/UiPolishHostTest.kt:136:58 Type argument for reified type parameter 'T' was inferred to the intersection of ['Comparable<*>?' & 'Serializable?']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/test/kotlin/app/onklav/home/UiPolishHostTest.kt:136:96 Type argument for reified type parameter 'T' was inferred to the intersection of ['Comparable<*>?' & 'Serializable?']. Reification of an intersection type results in the common supertype being used. This may lead to subtle issues and an explicit type argument is encouraged. This will become an error in a future release.
+
+> Task :android:app:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :android:app:processDebugUnitTestJavaRes
+
+> Task :android:app:testDebugUnitTest
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=33107 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=33107 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+SdkAccountReviewTest > providerReviewShowsScopesAndDoesNotOfferPrematureSignIn STARTED
+
+SdkAccountReviewTest > providerReviewShowsScopesAndDoesNotOfferPrematureSignIn PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=33107 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=33107 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+SdkAccountsTest > pkceVectorAndExactCallbacksRejectReplayWrongRoutesAndExpiry STARTED
+
+SdkAccountsTest > pkceVectorAndExactCallbacksRejectReplayWrongRoutesAndExpiry PASSED
+
+SdkAccountsTest > signedGuestConnectsThroughJniAndReceivesOnlyPublicAccountFields STARTED
+
+SdkAccountsTest > signedGuestConnectsThroughJniAndReceivesOnlyPublicAccountFields PASSED
+
+SdkAccountsTest > removingAppClearsAccountsEvenWhenDocumentsAreKept STARTED
+
+SdkAccountsTest > removingAppClearsAccountsEvenWhenDocumentsAreKept PASSED
+
+SdkAccountsTest > invalidTokenTypeScopesAndExpiryAreRejected STARTED
+
+SdkAccountsTest > invalidTokenTypeScopesAndExpiryAreRejected PASSED
+
+SdkAccountsTest > browserTimeoutCancellationAndDeniedFlowLeaveNoReusableState STARTED
+
+SdkAccountsTest > browserTimeoutCancellationAndDeniedFlowLeaveNoReusableState PASSED
+
+SdkAccountsTest > browserExchangeSavesOpaqueHandleAndRechecksAuthorization STARTED
+
+SdkAccountsTest > browserExchangeSavesOpaqueHandleAndRechecksAuthorization PASSED
+
+SdkAccountsTest > encryptedVaultIsPublisherIsolatedPolicyBoundAndDoesNotExportTokens STARTED
+
+SdkAccountsTest > encryptedVaultIsPublisherIsolatedPolicyBoundAndDoesNotExportTokens PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=33107 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=33107 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+SdkLifecycleTest > messagesAndReaderShareVoicePreferencesAndOneCurrentReader STARTED
+
+SdkLifecycleTest > messagesAndReaderShareVoicePreferencesAndOneCurrentReader PASSED
+
+SdkLifecycleTest > audioOwnerInterruptsOnlyThePreviousOwnerAndOldReleaseCannotStopNewAudio STARTED
+
+SdkLifecycleTest > audioOwnerInterruptsOnlyThePreviousOwnerAndOldReleaseCannotStopNewAudio PASSED
+
+SdkLifecycleTest > keyDeletionFailureRetainsCleanupForAnExplicitRetry STARTED
+
+SdkLifecycleTest > keyDeletionFailureRetainsCleanupForAnExplicitRetry PASSED
+
+SdkLifecycleTest > partialNativeCleanupKeepsItsJournalAndRetriesWithoutRotatingAgain STARTED
+
+SdkLifecycleTest > partialNativeCleanupKeepsItsJournalAndRetriesWithoutRotatingAgain PASSED
+
+SdkLifecycleTest > deletedNativeProfileIsImmediatelyIsolatedAndOnlyItsOldProfileIsPurged STARTED
+
+SdkLifecycleTest > deletedNativeProfileIsImmediatelyIsolatedAndOnlyItsOldProfileIsPurged PASSED
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=33107 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=33107 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+SdkSecretsTest > publisherAndAppNamespacesStayIsolatedAndSwappedCiphertextFailsClosed STARTED
+
+SdkSecretsTest > publisherAndAppNamespacesStayIsolatedAndSwappedCiphertextFailsClosed PASSED
+
+SdkSecretsTest > boundsAndLateRevocationKeepThePreviousCiphertext STARTED
+
+SdkSecretsTest > boundsAndLateRevocationKeepThePreviousCiphertext PASSED
+
+SdkSecretsTest > encryptedRoundTripUsesFreshNoncesAndDoesNotCreateDataOnMissingReads STARTED
+
+SdkSecretsTest > encryptedRoundTripUsesFreshNoncesAndDoesNotCreateDataOnMissingReads PASSED
+
+SdkSecretsTest > corruptDataAndLostKeysNeverResetOrOverwriteExistingSecrets STARTED
+
+SdkSecretsTest > corruptDataAndLostKeysNeverResetOrOverwriteExistingSecrets PASSED
+
+SdkSecretsTest > deletionRemovesOnlyThatAppsCiphertextAndKeys STARTED
+
+SdkSecretsTest > deletionRemovesOnlyThatAppsCiphertextAndKeys PASSED
+
+SdkSecretsTest > deletionAlsoRemovesKeysAfterCiphertextWasLost STARTED
+
+SdkSecretsTest > deletionAlsoRemovesKeysAfterCiphertextWasLost PASSED
+w: Detected multiple Kotlin daemon sessions at 
+[Incubating] Problems report is available at: file:///workspace/scratch/ed752e8a1957/current/OnKlav/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.11.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 3m 17s
+79 actionable tasks: 29 executed, 50 up-to-date

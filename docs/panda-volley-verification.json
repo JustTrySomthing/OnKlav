@@ -1,0 +1,114 @@
+{
+  "date": "2026-11-04",
+  "apk_built": false,
+  "physical_device_tested": false,
+  "volley_checks": 57,
+  "duel_checks": 48422,
+  "legacy_checks": 2102,
+  "audit_checks": 15,
+  "browser": [
+    {
+      "viewport": [
+        360,
+        780
+      ],
+      "real_touch_full_pull": true,
+      "resize_cancels_pull_without_shot": true,
+      "direct_start_and_resume": true,
+      "complete_player_then_rival_volley": true,
+      "center_shot_scores": true,
+      "sound_pause_preserves_flight": true,
+      "saved_towers_and_scores_preserved": true,
+      "round_continues_without_building": true,
+      "profile_write_failure_retry": true
+    },
+    {
+      "viewport": [
+        320,
+        640
+      ],
+      "real_touch_full_pull": true,
+      "resize_cancels_pull_without_shot": true,
+      "direct_start_and_resume": true,
+      "complete_player_then_rival_volley": true,
+      "center_shot_scores": true,
+      "sound_pause_preserves_flight": true,
+      "saved_towers_and_scores_preserved": true,
+      "round_continues_without_building": true,
+      "profile_write_failure_retry": true
+    },
+    {
+      "viewport": [
+        640,
+        360
+      ],
+      "real_touch_full_pull": true,
+      "resize_cancels_pull_without_shot": true,
+      "direct_start_and_resume": true,
+      "complete_player_then_rival_volley": true,
+      "center_shot_scores": true,
+      "sound_pause_preserves_flight": true,
+      "saved_towers_and_scores_preserved": true,
+      "round_continues_without_building": true,
+      "profile_write_failure_retry": true
+    }
+  ],
+  "pacing": {
+    "scope": "Software-rendered headless browser comparison, not Samsung performance acceptance",
+    "results": [
+      {
+        "variant": "baseline",
+        "viewport": [
+          360,
+          780
+        ],
+        "course": 12,
+        "wall_seconds": 8.163,
+        "simulation_seconds": 5.0,
+        "simulation_wall_ratio": 0.612,
+        "score": 1175,
+        "ticks": 1200,
+        "median_frame_ms": 83.3,
+        "p95_frame_ms": 116.6,
+        "style_cache_entries": 0
+      },
+      {
+        "variant": "fixed",
+        "viewport": [
+          360,
+          780
+        ],
+        "course": 12,
+        "wall_seconds": 5.669,
+        "simulation_seconds": 5.0,
+        "simulation_wall_ratio": 0.882,
+        "score": 1175,
+        "ticks": 1200,
+        "median_frame_ms": 149.95,
+        "p95_frame_ms": 283.2,
+        "style_cache_entries": 18
+      }
+    ]
+  },
+  "source_sha256": {
+    "games/engine-checks/panda/main.gd": "296343c6a2aa1de2c40e45f785c1af9741579c5e9022b1722bc8df0b6f5dd424",
+    "games/engine-checks/panda/hud.gd": "759c1e08172fb42d0553c6abfee26f6a62025d7d13c13972a67a4dd57544bd7c",
+    "games/engine-checks/panda/arena.gd": "e06bb5e44b26da0b5befe0456fb77b9524ca2b861782e33746bae2cab1242647",
+    "games/engine-checks/panda/duel_tests.gd": "7bb497e05f72a9815124592c81fa782370b5ee201833e81eb5197175d49fbbb0",
+    "games/engine-checks/panda/physics.gd": "d0d8426a71fb4738f75ba495991c3ee9288d1ede88f9aef6d4a9ec04e1ace793",
+    "games/engine-checks/panda/volley_tests.gd": "71fa6acb939d654ba1f485b27fe2394e24c9bceb7d37a2893532f388c2d51153",
+    "games/engine-checks/panda/audio.gd": "5c2cff9a76fb77fe7910ef7697fde98e0f3e28db13a2cb1c22243d12773ca0af",
+    "games/engine-checks/panda/battle_arena.gd": "dc7cc45109063fa75edc4cf72b13ea7a40b1ff70313e0607f18f8cbe24ae1294",
+    "games/engine-checks/panda/audit_tests.gd": "b12c46436be7f2ad9a0dba611f826dce9931f73cb7643cdfb4d3b7eaa5a3a576",
+    "games/engine-checks/panda/duel.gd": "8e0119433f663a94795e24e57e1dc0d911d2233feed32b30e21090a3c4e79cb4",
+    "games/engine-checks/panda/flight_clock.gd": "9776c6fa20dbf485a37969bed104dc611216bfcde8fd71d067bb9e0057d0939d",
+    "games/engine-checks/panda/battle_hud.gd": "646108f899ba1f9f690e259f3722ca421ac027fd9b63fad70fb3db1fb298d487",
+    "games/engine-checks/panda/duel_physics.gd": "c9a7baff9308f4bf9020156a3adebe06410273e1a9413b4d074a9b12d6bc856a",
+    "games/engine-checks/panda/tests.gd": "3ee735eb38e256770e50ba4743bd97d9d0ddef45aa3feb9a3fc3683513f5545d",
+    "games/engine-checks/panda/model.gd": "5e5b52cd2d4026d982c5ec2f64d641361128966e510d67ccea46537009f3e6ba"
+  },
+  "limitations": [
+    "Software browser checks do not establish handset frame rate or subjective audio quality.",
+    "No new APK; 0.100.59 predates this source update."
+  ]
+}

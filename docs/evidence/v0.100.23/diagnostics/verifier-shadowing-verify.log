@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/d65c45a36bab/source/OnKlav/scripts/verify_apks.py", line 191, in <module>
+    report = {"scope": "Development builds; not full Inner Circle 2.2.85 parity", "source_counts": {extension: sum(p.suffix == extension for p in source) for extension in [".java", ".kt", ".rs", ".gd"]}, "application_modules": application_modules, "apks": results}
+                                                                                                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/d65c45a36bab/source/OnKlav/scripts/verify_apks.py", line 191, in <genexpr>
+    report = {"scope": "Development builds; not full Inner Circle 2.2.85 parity", "source_counts": {extension: sum(p.suffix == extension for p in source) for extension in [".java", ".kt", ".rs", ".gd"]}, "application_modules": application_modules, "apks": results}
+                                                                                                                   ^^^^^^^^
+AttributeError: 'str' object has no attribute 'suffix'

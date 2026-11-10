@@ -1,0 +1,71 @@
+   Compiling onklav-core v0.8.0 (/workspace/scratch/b5e698131b7f/source/OnKlav/core)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 13.00s
+     Running unittests src/lib.rs (core/target/debug/deps/onklav_core-8a579202944a8eae)
+
+running 63 tests
+test sdk::tests::actual_notes_guest_pages_every_saved_match_without_losing_search ... ok
+test sdk::tests::browser_download_commit_is_scoped_to_a_live_authorized_web_component ... ok
+test sdk::tests::accounts_signed_policy_and_revocation_bind_pending_connection ... ok
+test sdk::tests::collections_broker_grants_isolation_and_removal ... ok
+test sdk::tests::denied_private_storage_never_creates_app_documents ... ok
+test sdk::tests::drawing_component_count_is_bounded ... ok
+test sdk::tests::audiobooks_are_private_owner_bound_and_revocable ... ok
+test sdk::tests::exported_notes_use_the_onklav_documents_folder_without_exposing_paths ... ok
+test sdk::tests::app_ui_limits_and_unknown_capabilities_fail_closed ... ok
+test sdk::tests::content_file_previews_require_the_live_files_grant_and_only_resolve_media ... ok
+test sdk::tests::actual_rss_guest_refresh_cache_bookmarks_and_offline_reopen ... ok
+test sdk::tests::files_permission_and_pending_tokens_cannot_be_bypassed ... ok
+test sdk::tests::browser_guest_ui_data_and_web_callbacks_are_scoped_and_non_gestural ... ok
+test sdk::tests::group12_reminder_policy_is_bounded_and_legacy_requests_remain_valid ... ok
+test sdk::tests::annotation_guest_edits_import_permissions_export_and_reopen ... ok
+test sdk::tests::external_file_mutations_can_refresh_without_automatically_authorizing_new_writes ... ok
+test sdk::tests::handoff_permissions_and_replies_fail_closed ... ok
+test sdk::tests::actual_notes_guest_create_reload_search_delete_and_scoped_storage ... ok
+test sdk::tests::files_trailing_create_copy_paste_and_compress_use_the_live_broker ... ok
+test sdk::tests::files_android_exports_require_the_separate_live_export_permission ... ok
+test sdk::tests::maps_widget_requires_one_non_scrolling_body ... ok
+test sdk::tests::group12_foreground_native_authorization_binds_session_owner_and_revocation ... ok
+test sdk::tests::imports_memory_growth_cpu_abuse_and_invalid_pointers_trap ... ok
+test sdk::tests::http_manifest_and_live_authorization_bind_signed_origins ... ok
+test sdk::tests::handoff_file_scope_tokens_and_removal_are_owner_bound ... ok
+test sdk::tests::maps_component_scopes_tiles_to_current_visible_signed_owner ... ok
+test sdk::tests::message_video_opens_real_signed_controller_with_live_grants_and_canonical_source ... ok
+test sdk::tests::files_guest_manages_folders_and_the_same_live_notes ... ok
+test sdk::tests::pdf_widget_requires_one_bounded_body_and_an_opaque_handle ... ok
+test sdk::tests::messenger_media_import_uses_shared_media_folders_and_rejects_other_types ... ok
+test sdk::tests::notes_preserve_utf16_limits_and_full_length_unicode ... ok
+test sdk::tests::package_collection_retains_current_removed_apps_and_unrelated_entries ... ok
+test sdk::tests::own_notes_migration_keeps_originals_and_does_not_restore_deleted_app_data ... ok
+test sdk::tests::incoming_consent_permission_revoke_and_local_decline_use_signed_controller ... ok
+test sdk::tests::native_text_controls_cannot_bypass_clipboard_grants ... ok
+test sdk::tests::radio_broker_is_owner_bound_revocable_and_does_not_widen_generic_networking ... ok
+test sdk::tests::same_code_in_other_package_cannot_read_first_app_data ... ok
+test sdk::tests::revocation_and_uninstall_invalidate_pending_services_and_keep_publisher_pin ... ok
+test sdk::tests::pdf_component_resolves_only_the_current_signed_owners_visible_file ... ok
+test sdk::tests::signed_metadata_is_optional_bounded_and_rejects_newer_hosts ... ok
+test sdk::tests::rss_adoption_checks_publisher_grant_and_guest_preserves_article_page ... ok
+test sdk::tests::reader_guest_draft_selection_clear_reopen_and_live_voice_permission ... ok
+test sdk::tests::separate_programmable_package_runs_without_host_rebuild ... ok
+test sdk::tests::podcast_broker_is_owner_bound_revocable_and_does_not_widen_generic_networking ... ok
+test sdk::tests::rss_fetch_permission_revocation_prevents_commit ... ok
+test sdk::tests::system_files_show_real_public_packages_without_exposing_the_registry ... ok
+test sdk::tests::social_is_only_a_permission_free_hello_world_package ... ok
+test sdk::tests::settings_use_private_walkie_preferences_without_granting_communications ... ok
+test sdk::tests::storage_native_transfer_tokens_and_revocation_are_live ... ok
+test sdk::tests::tasks_background_owner_policy_and_media_handles_are_live_and_scoped ... ok
+test sdk::tests::walkie_session_host_gate_recovery_and_guest_isolation ... ok
+test sdk::tests::valid_update_keeps_data_invalidates_sessions_and_binds_host_root ... ok
+test sdk::tests::wrap_map_callbacks_are_owned_bounded_and_non_gestural ... ok
+test sdk::tests::web_callback_cannot_authorize_clipboard_or_other_host_tap_actions ... ok
+test sdk::tests::wrap_upload_live_authorization_resolves_only_owned_private_files ... ok
+test sdk::tests::youtube_channel_bookmarks_use_validated_metadata_and_persist ... ok
+test sdk::tests::signed_podcast_download_buttons_have_scoped_services_and_live_storage_permission ... ok
+test sdk::tests::walkie_contact_selection_permission_cancel_validation_and_revocation ... ok
+test sdk::tests::tamper_publisher_downgrade_and_stale_review_leave_installed_version_intact ... ok
+test sdk::tests::walkie_signed_controller_persists_preferences_and_never_fakes_connection ... ok
+test sdk::tests::walkie_archive_is_consumed_by_signed_sdk_and_host_writes_are_gated ... ok
+test sdk::tests::voice_component_permissions_binding_trim_commit_and_playback_are_host_only ... ok
+test sdk::tests::youtube_guest_library_reset_suppression_and_capability_lifecycle ... ok
+
+test result: ok. 63 passed; 0 failed; 0 ignored; 0 measured; 247 filtered out; finished in 87.81s
+

@@ -1,0 +1,266 @@
+{
+  "status": "source complete",
+  "after_release": "0.100.15-rc1/code124",
+  "apk_built": false,
+  "unique_targeted_checks": 36,
+  "tests": [
+    {
+      "class": "app.onklav.home.MmsDownloadRecoveryTest",
+      "test": "cancelledCodeAndLegacyStatusesRemainRetryableAndTruthful",
+      "passed": true,
+      "evidence": "docs/evidence/pictures-hdr-fix/TEST-app.onklav.home.MmsDownloadRecoveryTest.xml"
+    },
+    {
+      "class": "app.onklav.home.MmsDownloadRecoveryTest",
+      "test": "temporaryDownloadFailureStaysVisibleAndSchedulesBoundedIncomingRetries",
+      "passed": true,
+      "evidence": "docs/evidence/pictures-hdr-fix/TEST-app.onklav.home.MmsDownloadRecoveryTest.xml"
+    },
+    {
+      "class": "app.onklav.home.MmsDownloadRecoveryTest",
+      "test": "carrierErrorsExplainConfigurationAndDoNotRetryPermanentFailures",
+      "passed": true,
+      "evidence": "docs/evidence/pictures-hdr-fix/TEST-app.onklav.home.MmsDownloadRecoveryTest.xml"
+    },
+    {
+      "class": "app.onklav.home.MmsDownloadRecoveryTest",
+      "test": "stalledDownloadSchedulesBoundedRecoveryWithoutResendingAnything",
+      "passed": true,
+      "evidence": "docs/evidence/pictures-hdr-fix/TEST-app.onklav.home.MmsDownloadRecoveryTest.xml"
+    },
+    {
+      "class": "app.onklav.home.MmsDownloadRecoveryTest",
+      "test": "acknowledgementFailureCannotReportAnAlreadyFiledPictureAsDownloadFailure",
+      "passed": true,
+      "evidence": "docs/evidence/pictures-hdr-fix/TEST-app.onklav.home.MmsDownloadRecoveryTest.xml"
+    },
+    {
+      "class": "app.onklav.home.MmsDownloadRecoveryTest",
+      "test": "oldAttemptCallbackCannotClearOrFailCurrentDownload",
+      "passed": true,
+      "evidence": "docs/evidence/pictures-hdr-fix/TEST-app.onklav.home.MmsDownloadRecoveryTest.xml"
+    },
+    {
+      "class": "app.onklav.home.MmsDownloadRecoveryTest",
+      "test": "scheduledDownloadNeverRunsWhenRoleWasRevokedAndMessagesRemainRecoverable",
+      "passed": true,
+      "evidence": "docs/evidence/pictures-hdr-fix/TEST-app.onklav.home.MmsDownloadRecoveryTest.xml"
+    },
+    {
+      "class": "app.onklav.home.MmsDownloadRecoveryTest",
+      "test": "inFlightDownloadCannotBeTruncatedByDuplicateRetryAndRevokedRolePreventsDownload",
+      "passed": true,
+      "evidence": "docs/evidence/pictures-hdr-fix/TEST-app.onklav.home.MmsDownloadRecoveryTest.xml"
+    },
+    {
+      "class": "app.onklav.home.MmsDownloadRecoveryTest",
+      "test": "independentPictureNotificationsCannotOverwriteEachOtherAndCompletionClearsOnlyItsOwn",
+      "passed": true,
+      "evidence": "docs/evidence/pictures-hdr-fix/TEST-app.onklav.home.MmsDownloadRecoveryTest.xml"
+    },
+    {
+      "class": "app.onklav.home.MmsDownloadRecoveryTest",
+      "test": "realPlatformRequestUsesOriginalSimUniqueOutputAndMatchingCallback",
+      "passed": true,
+      "evidence": "docs/evidence/pictures-hdr-fix/TEST-MmsPlatformRequest.xml"
+    },
+    {
+      "class": "app.onklav.home.MmsDownloadRecoveryTest",
+      "test": "unrecognizedCallbackCannotCreateAnIncomingMessageOrError",
+      "passed": true,
+      "evidence": "docs/evidence/pictures-hdr-fix/TEST-MmsUnknownCallback.xml"
+    },
+    {
+      "class": "app.onklav.home.PendingPicturesUiTest",
+      "test": "disabledDownloadsOfferAnActionAndExpiredStatusDoesNotPretendToBeDownloading",
+      "passed": true,
+      "evidence": "docs/evidence/pictures-hdr-fix/TEST-app.onklav.home.PendingPicturesUiTest.xml"
+    },
+    {
+      "class": "app.onklav.home.PhotoEditorUiTest",
+      "test": "editingToolsAndExportAreReachable",
+      "passed": true,
+      "evidence": "docs/evidence/pictures-hdr-fix/TEST-app.onklav.home.PhotoEditorUiTest.xml"
+    },
+    {
+      "class": "app.onklav.home.PhotoEffectsTest",
+      "test": "threeLooksHaveDistinctGradingAndRemovedLooksAreNeutral",
+      "passed": true,
+      "evidence": "docs/evidence/pictures-hdr-fix/TEST-app.onklav.home.PhotoEffectsTest.xml"
+    },
+    {
+      "class": "app.onklav.home.PhotoEffectsTest",
+      "test": "hdrAddsStructureWithoutLiftingBlacksOrWashingTonalRange",
+      "passed": true,
+      "evidence": "docs/evidence/pictures-hdr-fix/TEST-app.onklav.home.PhotoEffectsTest.xml"
+    },
+    {
+      "class": "app.onklav.home.PhotoEffectsTest",
+      "test": "hdrStrengthHasClearlyVisibleRangeWithoutGlobalBrightnessLift",
+      "passed": true,
+      "evidence": "docs/evidence/pictures-hdr-fix/TEST-app.onklav.home.PhotoEffectsTest.xml"
+    },
+    {
+      "class": "app.onklav.home.PhotoEffectsTest",
+      "test": "powerfulHdrDoesNotTurnFineGrainIntoTexture",
+      "passed": true,
+      "evidence": "docs/evidence/pictures-hdr-fix/TEST-app.onklav.home.PhotoEffectsTest.xml"
+    },
+    {
+      "class": "app.onklav.home.PhotoEffectsTest",
+      "test": "portraitAndScenicHdrStrengthContactSheet",
+      "passed": true,
+      "evidence": "docs/evidence/pictures-hdr-fix/TEST-app.onklav.home.PhotoEffectsTest.xml"
+    },
+    {
+      "class": "app.onklav.home.PhotoEffectsTest",
+      "test": "renderedLookContactSheet",
+      "passed": true,
+      "evidence": "docs/evidence/pictures-hdr-fix/TEST-app.onklav.home.PhotoEffectsTest.xml"
+    },
+    {
+      "class": "app.onklav.home.PhotoEffectsTest",
+      "test": "hdrDoesNotDrawHalosAroundHardEdges",
+      "passed": true,
+      "evidence": "docs/evidence/pictures-hdr-fix/TEST-app.onklav.home.PhotoEffectsTest.xml"
+    },
+    {
+      "class": "app.onklav.home.PhotoEffectsTest",
+      "test": "sharpeningHasVisibleStrengthWithoutChangingFlatAreasOrAlpha",
+      "passed": true,
+      "evidence": "docs/evidence/pictures-hdr-fix/TEST-app.onklav.home.PhotoEffectsTest.xml"
+    },
+    {
+      "class": "app.onklav.home.PhotoGestureTest",
+      "test": "sustainedNativeDragAndPinchSurviveRecompositionAndCommitOnce",
+      "passed": true,
+      "evidence": "docs/evidence/pictures-hdr-fix/TEST-app.onklav.home.PhotoGestureTest.xml"
+    },
+    {
+      "class": "app.onklav.home.PhotoGestureTest",
+      "test": "croppedAnchorStaysUnderFingersAndCropColorAngleRemainUnchanged",
+      "passed": true,
+      "evidence": "docs/evidence/pictures-hdr-fix/TEST-app.onklav.home.PhotoGestureTest.xml"
+    },
+    {
+      "class": "app.onklav.home.PhotoCropConsistencyTest",
+      "test": "extremePerspectiveDoesNotCollapseOrInvertTheVisibleSelection",
+      "passed": true,
+      "evidence": "docs/evidence/pictures-hdr-fix/TEST-app.onklav.home.PhotoCropConsistencyTest.xml"
+    },
+    {
+      "class": "app.onklav.home.PhotoCropConsistencyTest",
+      "test": "cropContextIncludesAllEditsAndSelectedPixelsMatchExport",
+      "passed": true,
+      "evidence": "docs/evidence/pictures-hdr-fix/TEST-app.onklav.home.PhotoCropConsistencyTest.xml"
+    },
+    {
+      "class": "app.onklav.home.PhotoCropConsistencyTest",
+      "test": "transformedHandlesUseInverseMappingAndPreserveEveryOtherEdit",
+      "passed": true,
+      "evidence": "docs/evidence/pictures-hdr-fix/TEST-app.onklav.home.PhotoCropConsistencyTest.xml"
+    },
+    {
+      "class": "app.onklav.home.TransportRecoveryTest",
+      "test": "walkieCallbackIsRetainedWhenPermissionGatePreventsReconciliation",
+      "passed": true,
+      "evidence": "docs/evidence/pictures-hdr-fix/TEST-TransportRecovery-initial.xml"
+    },
+    {
+      "class": "app.onklav.home.TransportRecoveryTest",
+      "test": "callbacksRequireMatchingActionUriKindAndPart",
+      "passed": true,
+      "evidence": "docs/evidence/pictures-hdr-fix/TEST-TransportRecovery-initial.xml"
+    },
+    {
+      "class": "app.onklav.home.TransportRecoveryTest",
+      "test": "failedAttemptJournalStopsBeforeCallingTheCarrier",
+      "passed": true,
+      "evidence": "docs/evidence/pictures-hdr-fix/TEST-TransportRecovery-initial.xml"
+    },
+    {
+      "class": "app.onklav.home.TransportRecoveryTest",
+      "test": "receiptsSurviveRestartUntilCoreAcceptsTheOutcomeWithoutResending",
+      "passed": true,
+      "evidence": "docs/evidence/pictures-hdr-fix/TEST-TransportRecovery-initial.xml"
+    },
+    {
+      "class": "app.onklav.home.TransportRecoveryTest",
+      "test": "internalBrowserHandoffUsesTheSignedGuestNavigationAndRejectsUnsafeSchemes",
+      "passed": true,
+      "evidence": "docs/evidence/pictures-hdr-fix/TEST-TransportRecovery-initial.xml"
+    },
+    {
+      "class": "app.onklav.home.TransportRecoveryTest",
+      "test": "failedMmsAddressInsertRollsBackOnlyTheNewParent",
+      "passed": true,
+      "evidence": "docs/evidence/pictures-hdr-fix/TEST-TransportRecovery-initial.xml"
+    },
+    {
+      "class": "app.onklav.home.TransportRecoveryTest",
+      "test": "committedCoreRemovalWithBlockedPrivateCleanupResumesBeforeAnotherLaunch",
+      "passed": true,
+      "evidence": "docs/evidence/pictures-hdr-fix/TEST-TransportRecovery-initial.xml"
+    },
+    {
+      "class": "app.onklav.home.TransportRecoveryTest",
+      "test": "failedDownloadErrorJournalRetainsTheDurableCallback",
+      "passed": true,
+      "evidence": "docs/evidence/pictures-hdr-fix/TEST-TransportRecovery-corrected.xml"
+    },
+    {
+      "class": "app.onklav.home.TransportRecoveryTest",
+      "test": "completedCallbackIsRetainedWhenDurabilityCannotBeConfirmed",
+      "passed": true,
+      "evidence": "docs/evidence/pictures-hdr-fix/TEST-TransportRecovery-corrected.xml"
+    },
+    {
+      "class": "app.onklav.home.TransportRecoveryTest",
+      "test": "recoverySchedulingCoalescesAndDoesNotEnableTransport",
+      "passed": true,
+      "evidence": "docs/evidence/pictures-hdr-fix/TEST-TransportRecovery-initial.xml"
+    }
+  ],
+  "lint": {
+    "version": "source after 0.100.15-rc1",
+    "command": ":android:app:lintDebug",
+    "status": "passed",
+    "scope": "application, host-test and instrumented-test sources",
+    "errors": 0,
+    "warnings": 288,
+    "information": 1,
+    "evidence": "docs/evidence/pictures-hdr-fix/full-lint.log"
+  },
+  "compiled_runtime_classes_matched": 3178,
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/PhotoEditor.kt": "1b41c2462060041b9ff8dae16c1a8d21fb11ef3bb60783db25dadd3f0b12bbfb",
+    "android/app/src/main/kotlin/app/onklav/home/PhotoEffects.kt": "38c713326e543bfc7512dc316e3337487cc6be486cf0c74a1ee11ebc22637554",
+    "android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt": "5f1455d609c680dff02f65f18ea63f8e0bc211259c30ce8d83cb1849ee4cf4a8",
+    "android/app/src/main/kotlin/app/onklav/home/MmsDownloadRecovery.kt": "e29deeaf968797c723220f1a5087a7f28a2ada4ba6b514172ebca367c1836bc3",
+    "android/app/src/main/kotlin/app/onklav/home/SettingsMessaging.kt": "60b21bb523588f0b6a092ec2dd66a54851fcbf70a16a136b431eef999853fdbd",
+    "android/app/src/main/kotlin/app/onklav/home/TransportRecovery.kt": "53a1395c4c0b9df8e9e7e06193c6c866d870e1a6ae416c110900a514df21d44d",
+    "android/app/src/test/kotlin/app/onklav/home/PhotoEditorUiTest.kt": "145b799ee8c4fac49441e34bc2d71c7f4f5ba8038b96e043710f7eef19213a75",
+    "android/app/src/test/kotlin/app/onklav/home/PhotoArtEffectsTest.kt": "2752a99cf06a40a7db3a156e424e004cb515f233905bd0646434955029745a04",
+    "android/app/src/test/kotlin/app/onklav/home/PhotoEffectsTest.kt": "9405da3925590434a1853f985fb05f787af37220aa3d10430b804a7b24c83b10",
+    "android/app/src/test/kotlin/app/onklav/home/MmsDownloadRecoveryTest.kt": "b50e485f3e56b01bc193fe645440f90f68e4dde3cf1d573bb61dbbe60ac34a05",
+    "android/app/src/test/kotlin/app/onklav/home/PendingPicturesUiTest.kt": "fad838479aa62c1b517172a45bd99605e1ff3420da4af7a904c6234da971acc8",
+    "android/app/src/test/kotlin/app/onklav/home/TransportRecoveryTest.kt": "b223c91264bbac4a38280848d20521b8c23c747a0312f20fa08e0ad61e5730ee"
+  },
+  "diagnostics": [
+    "Two older transport durability fixtures had no known pending job and were ignored by the new correlation guard; fixtures now stage a known job before failed-commit injection, and original durability assertions pass. Unknown callbacks are explicitly covered.",
+    "Initial HDR grain amplification was caught by native visual review; medium-scale enhancement added. First smoothed edge guard failed the hard-edge halo check; restored original-luminance edge guard and all eight final HDR cases pass.",
+    "Earlier lint was interrupted on source change; only full-lint.log is final."
+  ],
+  "preserved": [
+    "MMS_READY remains false; trial/default-role changes require explicit in-app action.",
+    "No outgoing resend or receiving-SIM substitution.",
+    "Previous Radio connection/pending-action/visualizer improvements.",
+    "Previous fixed photo canvas/gestures/history/save and original signing/native/SDK identities."
+  ],
+  "limitations": [
+    "No actual affected carrier payload/modem trace or physical phone access was available.",
+    "Real carrier delivery, APN/subscription settings, carrier expiry and OEM scheduling remain unverified.",
+    "No new APK requested/built. Latest installed/delivered APK predates both pending source updates."
+  ],
+  "evidence_folder": "docs/evidence/pictures-hdr-fix"
+}

@@ -1,0 +1,43 @@
+{
+  "defined_classes_verified": [
+    "app/onklav/shared/Mp3Codec",
+    "app/onklav/shared/OnKlavFileContracts",
+    "de/sciss/jump3r/mp3/Lame",
+    "de/sciss/jump3r/mpg/MPGLib",
+    "app/onklav/home/Mp3Playback",
+    "app/onklav/home/MessagingTransport",
+    "app/onklav/home/FileBrowserActivity",
+    "app/onklav/home/FileSelectionProvider",
+    "app/onklav/home/RadioVisualSceneKt",
+    "app/onklav/home/PhotoCropFrameKt",
+    "app/onklav/home/VideoEditorModel",
+    "app/onklav/home/ClockScreenKt",
+    "app/onklav/home/CameraScreenKt"
+  ],
+  "desktop_wrappers_excluded": true,
+  "license_bytes_match": true,
+  "audio_editor_manifest": {
+    "capabilities": [
+      "storage.private",
+      "audio.playback"
+    ],
+    "icon": {
+      "symbol": "edit"
+    },
+    "id": "app.onklav.audioeditor",
+    "min_host": 95,
+    "name": "Audio Editor",
+    "publisher": "4dabb2d88e13dfc4e5f3410abf85819aa92a528cb945f869fcf3033d95f82fad",
+    "runtime": "rust-wasm-ui.v1",
+    "schema": "onklav.app.v1",
+    "version": 4
+  },
+  "control_markers": [
+    "MP3",
+    "Opening MP3",
+    "MP3 playback could not be prepared",
+    "Prism Bloom audio art",
+    "Shutter sound"
+  ],
+  "all_signed_app_native_and_game_bytes_verified": "docs/apk-verification-debug.json"
+}

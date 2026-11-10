@@ -1,0 +1,22 @@
+scene,style,mean_rgb_change
+angkor,Original,0.0
+angkor,HDR Natural,14.341768055555555
+angkor,HDR Surreal,20.725902777777776
+angkor,HDR Shiny,7.865854166666667
+angkor,HDR Gritty Grunge,8.461275
+angkor,HDR Painterly Glow,19.648079166666665
+angkor,HDR B & W,24.565809722222223
+forest,Original,0.0
+forest,HDR Natural,15.266816690107829
+forest,HDR Surreal,18.064685888420065
+forest,HDR Shiny,8.857784810126581
+forest,HDR Gritty Grunge,9.271048992030005
+forest,HDR Painterly Glow,17.12054266291608
+forest,HDR B & W,11.637966479137365
+coast,Original,0.0
+coast,HDR Natural,19.548495077355838
+coast,HDR Surreal,27.44279535864979
+coast,HDR Shiny,14.02528129395218
+coast,HDR Gritty Grunge,18.046658462259728
+coast,HDR Painterly Glow,22.80723042662916
+coast,HDR B & W,41.58389006094702

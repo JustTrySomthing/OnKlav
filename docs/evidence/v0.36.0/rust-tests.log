@@ -1,0 +1,156 @@
+   Compiling jni-sys v0.3.1
+   Compiling jni v0.21.1
+   Compiling onklav-core v0.8.0 (/workspace/scratch/39f240a7e5bd/project/OnKlav/core)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 4.01s
+     Running unittests src/lib.rs (core/target/debug/deps/onklav_core-6ccca8313f97529d)
+
+running 134 tests
+test drawing::tests::binary_dimensions_and_path_bounds ... ok
+test group_wire::tests::missing_ambiguous_or_media_targets_never_hide_events ... ok
+test group_wire::tests::reactions_are_actor_scoped_idempotent_and_removable ... ok
+test group_wire::tests::strict_parse_preserves_unknown_text ... ok
+test history_apply::tests::prepared_payload_excludes_old_provider_authorities ... ok
+test history_apply::tests::changed_plan_or_payload_cannot_publish_a_durable_map ... ok
+test feeds::tests::feed_identity_limits_and_isolation ... ok
+test history_backup::tests::cancelled_and_oversized_record_do_not_publish ... ok
+test history_backup::tests::rejects_escape_orphan_missing_and_drafts ... ok
+test history_backup::tests::symlink_media_is_rejected ... ok
+test history_backup::tests::streams_provider_records_and_verifies_archive ... ok
+test drawing::tests::text_bounds_and_limits ... ok
+test history_apply::tests::source_candidates_without_parent_or_over_capacity_fail_before_writes ... ok
+test feeds::tests::feed_lifecycle_offline_bookmarks_filters_and_removal ... ok
+test drawing::tests::edits_history_reopen_scope_delete_and_invalid_revision ... ok
+test history_apply::tests::outcome_map_uses_only_committed_receipts_and_preserves_existing_targets ... ok
+test browser::tests::scoped_tabs_bookmarks_settings_and_navigation ... ok
+test history_import::tests::cancellation_compression_and_symlink_entry_do_not_produce_review ... ok
+test history_completed::tests::conflicting_active_metadata_receipt_blocks_all_handoff_consumers ... ok
+test history_completed::tests::forged_insert_or_conflicting_raw_copy_never_loses_evidence ... ok
+test history_completed::tests::completed_handoff_keeps_summary_journal_and_metadata_replay_protection ... ok
+test history_import::tests::checked_review_returns_counts_without_retaining_extracted_history_or_writing_messages ... ok
+test history_import::tests::escape_extra_missing_and_forged_sizes_are_rejected ... ok
+test history_import::tests::corrupt_hash_counts_and_unsupported_versions_fail_with_cleanup ... ok
+test history_journal::tests::committed_receipt_survives_restart_and_cannot_be_cleaned_or_reinserted ... ok
+test history_import::tests::zip64_directory_is_supported_but_forged_entry_counts_fail_before_zip_allocation ... ok
+test history_completed::tests::corrupt_duplicate_and_symlink_archives_fail_closed ... ok
+test history_journal::tests::compaction_preserves_receipt_consumers_and_replay_guard ... ok
+test history_import::tests::malformed_records_unknown_fields_duplicate_fields_and_ids_fail_even_with_valid_hashes ... ok
+test history_journal::tests::invalid_receipts_and_corruption_fail_closed ... ok
+test history_journal::tests::corrupt_or_conflicting_archive_cannot_free_capacity ... ok
+test history_journal::tests::known_incomplete_rows_recover_for_cleanup_and_never_change_ids ... ok
+test history_completed::tests::interruption_before_and_after_metadata_prune_can_finish_without_replay ... ok
+test history_journal::tests::uncertain_insert_blocks_replay_and_cannot_be_claimed_successful ... ok
+test history_journal::tests::symlink_storage_fails_closed ... ok
+test history_completed::tests::incomplete_and_unacknowledged_maps_are_retained_in_full ... ok
+test history_journal::tests::symlink_archive_cannot_be_overwritten ... ok
+test history_plan::tests::provider_ids_and_read_flags_are_not_identity_and_mapping_is_content_based ... ok
+test history_recovery::tests::corrupt_config_and_symlink_storage_fail_closed ... ok
+test history_plan::tests::metadata_binds_only_dated_unique_messages_and_wholly_resolved_nonconflicting_threads ... ok
+test history_plan::tests::repeated_source_or_target_content_is_never_collapsed_or_arbitrarily_bound ... ok
+test history_plan::tests::mms_uses_actual_media_bytes_and_recipients_not_provider_part_ids ... ok
+test history_plan::tests::unsent_pending_and_incomplete_content_are_not_new_candidates_and_order_is_deterministic ... ok
+test history_journal::tests::interrupted_archive_handoff_is_idempotent_and_preserves_unknowns ... ok
+test history_resume::tests::changed_record_pending_messages_and_unknown_results_remain_paused ... ok
+test history_resume::tests::inserted_targets_require_their_committed_journal_proof_even_after_compaction ... ok
+test history_resume::tests::original_record_digest_and_exact_targets_are_reviewed_without_metadata_effects ... ok
+test messaging::group_tests::binding_transfers_controls_and_delete_preserves_messages ... ok
+test messaging::group_tests::groups_reload_and_rename_keep_thread ... ok
+test history_resume::tests::other_archives_missing_sources_and_changed_targets_cannot_resume ... ok
+test messaging::group_tests::invalid_group_changes_are_atomic ... ok
+test messaging::group_tests::membership_change_keeps_old_conversation_flags ... ok
+test messaging::history_merge_tests::metadata_and_receipt_are_atomic_and_replay_never_resurrects_deleted_flags ... ok
+test messaging::history_merge_tests::cancellation_keeps_state_and_completion_receipt_unchanged ... ok
+test messaging::history_merge_tests::current_metadata_and_private_drafts_win_and_receipts_are_not_portable ... ok
+test messaging::tests::delivery_and_unknown_result_never_imply_success ... ok
+test messaging::tests::drafts_folders_and_flags_survive_reload ... ok
+test history_recovery::tests::detail_is_counts_only_and_ack_repair_requires_committed_matching_receipt ... ok
+test mms::tests::compose_wire_and_multipart_unicode ... ok
+test mms::tests::every_truncation_is_bounded ... ok
+test mms::tests::independent_notification_fixture ... ok
+test mms::tests::unsafe_identity_cannot_write ... ok
+test messaging::tests::invalid_updates_preserve_previous_state ... ok
+test history_recovery::tests::review_is_paginated_and_invalid_records_cannot_be_acknowledged ... ok
+test history_recovery::tests::identities_are_canonical_private_bounded_and_invalid_save_preserves_previous ... ok
+test messaging::tests::multipart_callbacks_are_idempotent_and_failures_stick ... ok
+test messaging::tests::metadata_restore_is_checked_atomic_and_never_replays_sends_or_reminders ... ok
+test history_completed::tests::full_active_receipts_and_maps_are_reclaimed_but_archive_overflow_is_refused ... ok
+test sdk::tests::drawing_component_count_is_bounded ... ok
+test history_journal::tests::full_active_journal_frees_slots_but_archive_bound_never_discards_receipts ... ok
+test sdk::tests::denied_private_storage_never_creates_app_documents ... ok
+test sdk::tests::browser_guest_ui_data_and_web_callbacks_are_scoped_and_non_gestural ... ok
+test sdk::tests::app_ui_limits_and_unknown_capabilities_fail_closed ... ok
+test sdk::tests::imports_memory_growth_cpu_abuse_and_invalid_pointers_trap ... ok
+test sdk::tests::actual_notes_guest_create_reload_search_delete_and_scoped_storage ... ok
+test sdk::tests::message_video_opens_real_signed_controller_with_live_grants_and_canonical_source ... ok
+test sdk::tests::annotation_guest_edits_import_permissions_export_and_reopen ... ok
+test sdk::tests::native_text_controls_cannot_bypass_clipboard_grants ... ok
+test sdk::tests::notes_preserve_utf16_limits_and_full_length_unicode ... ok
+test sdk::tests::rss_fetch_permission_revocation_prevents_commit ... ok
+test sdk::tests::settings_use_private_walkie_preferences_without_granting_communications ... ok
+test sdk::tests::reader_guest_draft_selection_clear_reopen_and_live_voice_permission ... ok
+test sdk::tests::separate_programmable_package_runs_without_host_rebuild ... ok
+test sdk::tests::revocation_and_uninstall_invalidate_pending_services_and_keep_publisher_pin ... ok
+test sdk::tests::incoming_consent_permission_revoke_and_local_decline_use_signed_controller ... ok
+test sdk::tests::same_code_in_other_package_cannot_read_first_app_data ... ok
+test sdk::tests::own_notes_migration_keeps_originals_and_does_not_restore_deleted_app_data ... ok
+test sdk::tests::social_is_only_a_permission_free_hello_world_package ... ok
+test sdk::tests::walkie_contact_selection_permission_cancel_validation_and_revocation ... ok
+test sdk::tests::voice_component_permissions_binding_trim_commit_and_playback_are_host_only ... ok
+test sdk::tests::youtube_guest_library_reset_suppression_and_capability_lifecycle ... ok
+test tests::archive_paths ... ok
+test tests::broken_document_is_reported ... ok
+test tests::inspect_valid_archive_never_grants_execution ... ok
+test tests::invalid_archives_reject_paths_missing_entry_and_metadata ... ok
+test tests::storage_lifecycle_and_search ... ok
+test tests::traversal_and_invalid_data_do_not_replace_notes ... ok
+test tests::unicode_limits ... ok
+test videos::tests::library_is_durable_scoped_normalized_and_preserves_bookmarks ... ok
+test videos::tests::links_titles_and_account_boundaries ... ok
+test walkie::tests::amr_structural_duration_and_size_boundaries ... ok
+test walkie::tests::capture_and_autoplay_never_promote_cancelled_or_background_audio ... ok
+test walkie::tests::capture_trims_only_valid_complete_frames_and_rejects_bad_tail ... ok
+test walkie::tests::control_roundtrip_and_invalid_frames ... ok
+test walkie::tests::floor_cancel_replay_epoch_and_no_steal ... ok
+test walkie_carrier::tests::actual_audio_envelope_delivery_dedup_and_receiver_proof ... ok
+test walkie_carrier::tests::cancellation_invalidates_an_already_claimed_control ... ok
+test walkie_carrier::tests::every_readiness_fact_and_changed_recipient_fail_before_claim ... ok
+test walkie_carrier::tests::peer_confirmation_wins_over_late_failed_sms_callback ... ok
+test walkie_carrier::tests::standalone_voice_message_uses_plain_mms_and_retry_attempt_is_not_a_receipt ... ok
+test walkie_carrier::tests::two_peer_driver_connects_with_early_peer_replies_and_grants_one_microphone ... ok
+test walkie_clips::tests::clips_are_durable_scoped_validated_deleted_and_deduplicated ... ok
+test sdk::tests::web_callback_cannot_authorize_clipboard_or_other_host_tap_actions ... ok
+test walkie_clips::tests::outcomes_bind_attempts_and_keep_receiver_proof ... ok
+test walkie_clips::tests::trusted_playback_reads_real_bytes_and_marks_only_incoming_played ... ok
+test walkie_session::tests::automatic_reply_limits_survive_cancellation_and_restart ... ok
+test walkie_session::tests::blocked_malformed_unconfirmed_expired_and_busy_probes_do_not_auto_reply ... ok
+test walkie_session::tests::idle_expiry_corruption_quota_and_closed_production_gate ... ok
+test walkie_session::tests::incoming_decline_timeout_restart_and_replay_cannot_join ... ok
+test walkie_session::tests::incoming_requires_confirmed_matching_probe_and_explicit_consent ... ok
+test walkie_session::tests::invitations_expire_and_uncertain_sends_cannot_retry_automatically ... ok
+test walkie_session::tests::mismatched_sender_sim_id_legacy_and_replayed_attempt_fail_without_mutation ... ok
+test walkie_session::tests::outgoing_verification_invite_accept_and_duplicate_do_not_extend_deadlines ... ok
+test walkie_session::tests::timeout_cancellation_restart_clock_rollback_and_one_active_session ... ok
+test walkie_store::tests::bounded_state_invalid_inputs_and_corruption_fail_closed ... ok
+test walkie_store::tests::contact_labels_are_bounded_durable_and_old_recipients_still_load ... ok
+test walkie_store::tests::durable_preferences_recipients_and_offline_only ... ok
+test sdk::tests::walkie_session_host_gate_recovery_and_guest_isolation ... ok
+test sdk::tests::walkie_signed_controller_persists_preferences_and_never_fakes_connection ... ok
+test walkie_clips::tests::expiry_limits_clear_and_quota_preserve_duplicate_proofs ... ok
+test sdk::tests::actual_rss_guest_refresh_cache_bookmarks_and_offline_reopen ... ok
+test sdk::tests::valid_update_keeps_data_invalidates_sessions_and_binds_host_root ... ok
+test sdk::tests::tamper_publisher_downgrade_and_stale_review_leave_installed_version_intact ... ok
+test sdk::tests::walkie_archive_is_consumed_by_signed_sdk_and_host_writes_are_gated ... ok
+
+test result: ok. 134 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 24.77s
+
+     Running unittests src/bin/onklav-pack.rs (core/target/debug/deps/onklav_pack-2fac9ac7e747cfc1)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests onklav_core
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

@@ -1,0 +1,30 @@
+{
+  "plan": {
+    "sdk_apps": "reuse",
+    "mobile_rust": "reuse",
+    "neural_speech": "reuse",
+    "games": "reuse",
+    "android_tests": [
+      "app.onklav.home.SdkSpeechTest"
+    ],
+    "variant": "debug",
+    "abis": [
+      "arm64-v8a"
+    ]
+  },
+  "phases": [
+    {
+      "phase": "assemble-debug",
+      "seconds": 180.22,
+      "returncode": 0,
+      "log": "docs/evidence/v0.100.24/assemble-debug.log"
+    },
+    {
+      "phase": "verify-debug",
+      "seconds": 3.78,
+      "returncode": 0,
+      "log": "docs/evidence/v0.100.24/verify-debug.log"
+    }
+  ],
+  "status": "passed"
+}

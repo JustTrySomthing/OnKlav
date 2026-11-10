@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.SdkPdfTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-10-25T21:29:04" hostname="1122594d9286" time="4.559">
+  <properties/>
+  <testcase name="selectionClampsCoordinatesAndTextHasExplicitLimits" classname="app.onklav.home.SdkPdfTest" time="4.085"/>
+  <testcase name="engineAndPageRequestFailuresDoNotLeaveAnOpenRenderer" classname="app.onklav.home.SdkPdfTest" time="0.052"/>
+  <testcase name="boundedSearchContinuationDoesNotSkipMatchesOnTheSamePage" classname="app.onklav.home.SdkPdfTest" time="0.119"/>
+  <testcase name="savedPagesArePinnedToPublisherAndContentAndRemovalIsOwnerOnly" classname="app.onklav.home.SdkPdfTest" time="0.144"/>
+  <testcase name="renderingDimensionsBoundPixelCountAndRejectInvalidGeometry" classname="app.onklav.home.SdkPdfTest" time="0.051"/>
+  <testcase name="infoAndRasterRemainAvailableWhenAdvancedTextIsUnsupported" classname="app.onklav.home.SdkPdfTest" time="0.042"/>
+  <testcase name="nativeSourceMustBeAnOwnedCanonicalPrivatePdf" classname="app.onklav.home.SdkPdfTest" time="0.063"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.MailWorkflowTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-31T22:58:34" hostname="a174a9bf0ea4" time="7.037">
+  <properties/>
+  <testcase name="suggestionsIncludeSavedRecipientsAndRejectBlankAndInvalidInput" classname="app.onklav.home.MailWorkflowTest" time="3.05"/>
+  <testcase name="headRefreshKeepsOlderPagesAndOtherFoldersButDropsStaleValidity" classname="app.onklav.home.MailWorkflowTest" time="0.056"/>
+  <testcase name="suggestionsAreScopedDeduplicatedAndQuotedNamesInsertCorrectly" classname="app.onklav.home.MailWorkflowTest" time="0.038"/>
+  <testcase name="queuedDraftFlushCannotReplaceAcceptedOrNewerSavedData" classname="app.onklav.home.MailWorkflowTest" time="3.791"/>
+  <testcase name="explicitLinksThreadRepliesWithoutSubjectOrAccountCollisions" classname="app.onklav.home.MailWorkflowTest" time="0.056"/>
+  <testcase name="missingRootsAndCyclesAreBoundedAndLegacyHeadersRemainSeparate" classname="app.onklav.home.MailWorkflowTest" time="0.044"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

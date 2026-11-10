@@ -1,0 +1,8 @@
+{
+  "duration_seconds": 8.783458333333334,
+  "website_duration_seconds": 8.784958333333334,
+  "rms_envelope_correlation": 0.9995756661323097,
+  "method": "10ms RMS windows every5ms, no time warping",
+  "passed": true,
+  "limitation": "Timing/energy similarity is not a human listening judgment or bit-exact MP3 equivalence."
+}

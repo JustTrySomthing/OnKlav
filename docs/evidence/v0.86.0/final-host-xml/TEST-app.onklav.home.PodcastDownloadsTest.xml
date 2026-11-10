@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.PodcastDownloadsTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-26T22:19:19" hostname="844ebfe47829" time="2.554">
+  <properties/>
+  <testcase name="incompleteOrCancelledDownloadsNeverBecomePlayable" classname="app.onklav.home.PodcastDownloadsTest" time="2.393"/>
+  <testcase name="largeEpisodeCommitsAndOfflinePreparationUsesDiskAfterFeedCacheCleared" classname="app.onklav.home.PodcastDownloadsTest" time="0.16"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

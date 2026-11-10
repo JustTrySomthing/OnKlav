@@ -1,0 +1,14 @@
+{
+  "schema": "onklav.app.v1",
+  "runtime": "rust-wasm-ui.v1",
+  "id": "app.onklav.photo",
+  "name": "Image Editor",
+  "version": 3,
+  "min_host": 95,
+  "icon": {
+    "symbol": "edit"
+  },
+  "capabilities": [
+    "storage.private"
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "plan": {
+    "sdk_apps": "reuse",
+    "mobile_rust": "reuse",
+    "games": "reuse",
+    "android_tests": [
+      "app.onklav.home.ReaderSdkHostTest"
+    ],
+    "variant": "debug",
+    "abis": [
+      "arm64-v8a"
+    ]
+  },
+  "phases": [
+    {
+      "phase": "assemble-debug",
+      "seconds": 52.32,
+      "returncode": 0,
+      "log": "docs/evidence/v0.55.0/assemble-debug.log"
+    },
+    {
+      "phase": "verify-debug",
+      "seconds": 4.11,
+      "returncode": 0,
+      "log": "docs/evidence/v0.55.0/verify-debug.log"
+    }
+  ],
+  "status": "passed"
+}

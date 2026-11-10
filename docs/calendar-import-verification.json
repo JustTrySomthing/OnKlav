@@ -1,0 +1,10 @@
+{
+  "status": "library increment; overall plan incomplete",
+  "ui_library_cases_passed": 36,
+  "calendar_cases_passed": 4,
+  "source_sha256": "ddcd6fd61daafc88cb5f2e4eef5ea0f1ba9a3c915140ca9f648bc5cce7a626ee",
+  "native_core_changed": false,
+  "android_changed": false,
+  "release_built": false,
+  "previous_review": "docs/sdk-review-pass-verification.json"
+}

@@ -1,0 +1,7 @@
+{
+  "ready": true,
+  "rust": "rustc 1.90.0 (1159e78c4 2025-09-14)",
+  "python": "3.12.14",
+  "target": "wasm32-unknown-unknown",
+  "note": "First build downloads Cargo dependencies and needs a native linker. Android UI/media still require a phone."
+}

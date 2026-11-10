@@ -1,0 +1,170 @@
+{
+  "date": "2026-11-04",
+  "apk_built": false,
+  "physical_device_tested": false,
+  "game_repair_checks": 190,
+  "hockey_checks": 96,
+  "shared_session_checks": 31,
+  "browser": [
+    {
+      "game": "hockey",
+      "viewport": [
+        360,
+        780
+      ],
+      "direct_result_replay": true,
+      "no_entry_or_help_dialog": true,
+      "save_acknowledged": true,
+      "touch_paddle": true,
+      "opening_AI_blocks": false
+    },
+    {
+      "game": "hockey",
+      "viewport": [
+        640,
+        360
+      ],
+      "direct_result_replay": true,
+      "no_entry_or_help_dialog": true,
+      "save_acknowledged": true,
+      "touch_paddle": true,
+      "opening_AI_blocks": false
+    },
+    {
+      "game": "four",
+      "viewport": [
+        360,
+        780
+      ],
+      "direct_result_replay": true,
+      "no_entry_or_help_dialog": true,
+      "save_acknowledged": true,
+      "touch_paddle": false,
+      "opening_AI_blocks": true
+    },
+    {
+      "game": "blackjack",
+      "viewport": [
+        360,
+        780
+      ],
+      "direct_result_replay": true,
+      "no_entry_or_help_dialog": true,
+      "save_acknowledged": true,
+      "touch_paddle": false,
+      "opening_AI_blocks": false
+    },
+    {
+      "game": "dominos",
+      "viewport": [
+        360,
+        780
+      ],
+      "direct_result_replay": true,
+      "no_entry_or_help_dialog": true,
+      "save_acknowledged": true,
+      "touch_paddle": false,
+      "opening_AI_blocks": false
+    },
+    {
+      "game": "panda",
+      "viewport": [
+        360,
+        780
+      ],
+      "direct_result_replay": true,
+      "no_entry_or_help_dialog": true,
+      "save_acknowledged": true,
+      "touch_paddle": false,
+      "opening_AI_blocks": false
+    },
+    {
+      "game": "naval",
+      "viewport": [
+        360,
+        780
+      ],
+      "direct_result_replay": true,
+      "no_entry_or_help_dialog": true,
+      "save_acknowledged": true,
+      "touch_paddle": false,
+      "opening_AI_blocks": false
+    }
+  ],
+  "source_sha256": {
+    "games/engine-checks/rules_tests.gd": "84988d3cb27eb78ae91eff884b777ae2dd7c559d20f924c572c2298d3ccaf22b",
+    "games/engine-checks/main.gd": "adbb620433e3b007bcff3d18307503d7356ce925acb5419ec000601f771c71ba",
+    "games/engine-checks/game_repair_tests.gd": "61fac2607fba05cfaa7ba612d03b594eaa47f9f5bdab4bdbe588b852f55a5e24",
+    "games/engine-checks/rules.gd": "7c69cd6ef932b13c081d53df6ed12e0891518d7572777545de56f1679547ce99",
+    "games/engine-checks/game_chrome.gd": "a6cfb8152a5e4368d824414ae8252d3c944c03fc426794164fc4ba06c05fa887",
+    "games/engine-checks/turn_channel.gd": "f52fe47a90747c5be207748bfc3120bc4d18029157ab66197aca6a29e181b69b",
+    "games/engine-checks/session_tests.gd": "1abbcc080b450aee9594ce2391bde65e261d3edc455ce93ced407965b66cffaf",
+    "games/engine-checks/friend_table_model.gd": "7bda222229deef30f885421286d2187c45559f9b2963337212ac5cd1b417b5c0",
+    "games/engine-checks/friend_table.gd": "a6b282b6ae9fe3ece567f122525f08b569d09119e2c15cfeb105b3176abd6b6c",
+    "games/engine-checks/onklav_game.gd": "e123b9034992166a6653b5dc59406996173a01875e483670e33ed894e8617595",
+    "games/engine-checks/dominos/main.gd": "43f141a19f7922d803b6167918fa7cc6e1652967368a9cd385ff13001e205bcf",
+    "games/engine-checks/dominos/tournament.gd": "84d46b0ae41cf7d71685090b4ddb7bf7d2de737214cbae7a1d0771f3ccf80183",
+    "games/engine-checks/dominos/art.gd": "1a90bab4cdb46dff27fcbef963694557247f03074f61927830731e5e1a821295",
+    "games/engine-checks/dominos/audio.gd": "63a09423580b91d4714b5ad3543d6563520d9cb5291aed1c2de9223bbea765cd",
+    "games/engine-checks/dominos/scoreboard.gd": "30e3217009172295fa975739903d6758f153ca0e6e6c7426aa26561d8b66f66b",
+    "games/engine-checks/dominos/tile.gd": "86ca9004717d5a9572c82ed08e4dece72bfa137cc67f530651499b83186f769b",
+    "games/engine-checks/dominos/layout.gd": "ec50021ebfa3a4ae6f4fef03a333952a964aad6e473402e8d3c606a7f6af4976",
+    "games/engine-checks/dominos/layout_tests.gd": "d3d5086347cb62915e0eb8a496308d9229bdb83b257e8343cb08f396cdcfe7f3",
+    "games/engine-checks/dominos/table.gd": "2472e796d3a5823f55363cae01fe4ec4d874d19eced9439aa3eafafd749b1b7f",
+    "games/engine-checks/dominos/tests.gd": "ff8c95c46d7df3014162568c2249cdf64852ab2deb7753f71fd75057ac288744",
+    "games/engine-checks/dominos/model.gd": "ab549440d7af254ce524aa483529937d92923861a918afc4a5a567d01d16b50f",
+    "games/engine-checks/blackjack/main.gd": "211274323fb14ba1b421122576d05415ef2b4a55c468cc27895e94f5d63a629b",
+    "games/engine-checks/blackjack/tournament.gd": "5d8495958e47ee930cdd066596ff5575e1e93baa585a496a2900468295e4c6c8",
+    "games/engine-checks/blackjack/solo.gd": "a0003a9a54b3aa825f6befcd7038ac5399aa8d6b94983d2d955b7634bf6d5270",
+    "games/engine-checks/blackjack/audio.gd": "e3a20b7a4a2b9d6c5190c86b8c838f156cd392be97e60a040dd860306a5e1e46",
+    "games/engine-checks/blackjack/scoreboard.gd": "8afb21aade437e8cd1447bf0750935b1d7b99c5e26ee7852343a9774dd405522",
+    "games/engine-checks/blackjack/card_art.gd": "246654666ac27ba0f2eecd51dfc5448c8bebccfcf8e6b2ed199a417936c094fd",
+    "games/engine-checks/blackjack/table.gd": "3e257f5eb2c2c1b0c8f3451eb1f9d1c407683d43ce8fb15c1f2fa2e52d5a6c9f",
+    "games/engine-checks/blackjack/tests.gd": "56ea0bfa0476df988680db0986a047568389ee7ce0f983d8d335bbcb5667f1e1",
+    "games/engine-checks/naval_battle/main.gd": "d86221a1031204a781651c26449c8270c6c6660b6e872852cc24315a36e6bcb5",
+    "games/engine-checks/naval_battle/board.gd": "d30dbc74fd021945cedbe3c23bb32916f354efe99b5b6c94f1a44744031a7bdd",
+    "games/engine-checks/naval_battle/audio.gd": "72699fc23b40d747f2e50f7519c097be22faeb32cf851dfe329524a2920aa5bc",
+    "games/engine-checks/naval_battle/dock.gd": "87bfc56fc4052f04f2f6983a31d1a26de78d7611b281a0f6c01a9372fb8ce46f",
+    "games/engine-checks/naval_battle/scoreboard.gd": "32c53b78cfef7ffe822d200a42a0bb4a3316355fb139a983d0958cfba177e2a4",
+    "games/engine-checks/naval_battle/ship_art.gd": "7234599db49710986d09fbd792ce4fcd2708134deb23fddd70e5125fef008e7e",
+    "games/engine-checks/naval_battle/tests.gd": "5b921e37640450cb63a70a016049cbb7091c52bd7657d8fbc7ada6426598c200",
+    "games/engine-checks/naval_battle/model.gd": "9566d5a812a0abccbf1ab64b141982f686bdb622ae2406810550ff62588d3ba5",
+    "games/engine-checks/panda/main.gd": "73aff3d71261e6cc55bf7c5554c04224a19271c628de702898db69a41deedb52",
+    "games/engine-checks/panda/hud.gd": "759c1e08172fb42d0553c6abfee26f6a62025d7d13c13972a67a4dd57544bd7c",
+    "games/engine-checks/panda/arena.gd": "e06bb5e44b26da0b5befe0456fb77b9524ca2b861782e33746bae2cab1242647",
+    "games/engine-checks/panda/duel_tests.gd": "7bb497e05f72a9815124592c81fa782370b5ee201833e81eb5197175d49fbbb0",
+    "games/engine-checks/panda/physics.gd": "d0d8426a71fb4738f75ba495991c3ee9288d1ede88f9aef6d4a9ec04e1ace793",
+    "games/engine-checks/panda/volley_tests.gd": "5fe15621d538796ce930bfaaab38b830006df8b32fe0104aed8dfb56d86e3232",
+    "games/engine-checks/panda/audio.gd": "5c2cff9a76fb77fe7910ef7697fde98e0f3e28db13a2cb1c22243d12773ca0af",
+    "games/engine-checks/panda/performance_tests.gd": "6ccdbba402a78f9df84ba91a18d6b676696e283db2f9a8c6ab8748f7bc8fff71",
+    "games/engine-checks/panda/battle_arena.gd": "1dd38bd17f699721ee47e3f3167683f04c1e8cacedaa980c9eabe82a38244815",
+    "games/engine-checks/panda/audit_tests.gd": "b12c46436be7f2ad9a0dba611f826dce9931f73cb7643cdfb4d3b7eaa5a3a576",
+    "games/engine-checks/panda/duel.gd": "7661d45c71745b0fe6fd5c8d23c390d118743825b90c7abdc977814a13862130",
+    "games/engine-checks/panda/flight_clock.gd": "ae20b491dc8e120bcd1c7a2370695ddb6ca82afe02c71607757fbf0b77e1851e",
+    "games/engine-checks/panda/battle_hud.gd": "a9cc992da863a0b217df12e3c2cfd3c16f913213ba44313fb7eb9a17c81e1305",
+    "games/engine-checks/panda/duel_physics.gd": "b23c15373e546dccfaa18d54b9ff9f80bfa0687b4fc8bac81065c99e08562b4f",
+    "games/engine-checks/panda/tests.gd": "3ee735eb38e256770e50ba4743bd97d9d0ddef45aa3feb9a3fc3683513f5545d",
+    "games/engine-checks/panda/model.gd": "5e5b52cd2d4026d982c5ec2f64d641361128966e510d67ccea46537009f3e6ba",
+    "games/engine-checks/air_hockey/main.gd": "c9ae6ab28276890046bd2f2a917b4ca00f89f22f900c920a8371a37497df4a14",
+    "games/engine-checks/air_hockey/audio.gd": "e4516b1e70ba557a6b27ad17d5c96886865da590960c7ddc2140185eaf57f0ab",
+    "games/engine-checks/air_hockey/match.gd": "cd2f134952c5330cd58a950a2941a13bfb8a9cc4b0ccd9c0c7a90d6a3c6622aa",
+    "games/engine-checks/air_hockey/puck.gd": "1fcf739a13183b73570ea46716baf09ea7338d1b0bb3ee39082bab5cae1921ad",
+    "games/engine-checks/air_hockey/store.gd": "0140c1edaa629af345e31dddcd8cd8e273d567b8a896ddeaabec7f0b6095d08a",
+    "games/engine-checks/air_hockey/tests.gd": "4362b1ebf32c4058d050f9eb82df135a553636031af34a85cbabe98b761eb760",
+    "games/engine-checks/air_hockey/rink.gd": "9a09e163f1900aceff2d24bb33dcdbec22cc212ac93631193787c59e3843a556",
+    "games/engine-checks/cat_dog/series.gd": "cfacb0fa743fc85703151715c6a4ff5d6f62a7b2c08792f26cd9db2170350d53",
+    "games/engine-checks/cat_dog/main.gd": "6d45a3b7d1a37eb02c2e3e263c13dec3692fc4090ac496a3360435e64963a1cb",
+    "games/engine-checks/cat_dog/board.gd": "d3eb3bc5c01de5b8b5672c2145f30511f5744d8961c5cc0a664bd00f6dbccde9",
+    "games/engine-checks/cat_dog/art.gd": "b301aac013a8cbd4e02851405bede95e3866f8acf02325f62fd26b332778c6e1",
+    "games/engine-checks/cat_dog/audio.gd": "03e2a328712053ccfb3894e227e21cb2a58ad5c62af732f4c92d9944da26c4c8",
+    "games/engine-checks/cat_dog/scoreboard.gd": "2a031efe9244d03dd77e57318c5a16b3bbd40b536026472b653c567800c47ac6",
+    "games/engine-checks/cat_dog/tests.gd": "1f3712446fcd1e33a3aa995bc686911630f523b7f9fc99b901bb9f20d2a50ebf",
+    "games/engine-checks/cat_dog/model.gd": "b1d3d027d0edc0fc2470a7c6878a0c4fa0e668557fb15f02fd761408f6698c1d"
+  },
+  "limits": [
+    "No real phone, carrier or two-device peer validation.",
+    "Shared session test retains its prior four ObjectDB shutdown warnings; all 31 assertions passed.",
+    "Peer round/rematch continuations require the updated runtime on both devices.",
+    "No new APK; 0.100.60 predates these repairs."
+  ]
+}

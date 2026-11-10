@@ -1,0 +1,2 @@
+NewPipe interpreter passed with desktop JIT/Bean APIs unavailable
+{"actual_newpipe_interpreter": "passed", "desktop_apis_blocked": true, "android_runtime_adapter_needed": false}

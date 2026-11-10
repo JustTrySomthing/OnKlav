@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.CalendarTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2026-11-01T02:59:42" hostname="1f798ec8a9f2" time="8.17">
+  <properties/>
+  <testcase name="allDayCalendarExportPreservesDateRange" classname="app.onklav.home.CalendarTest" time="3.322"/>
+  <testcase name="icsRejectsUnsupportedRecurrenceInsteadOfChangingItSilently" classname="app.onklav.home.CalendarTest" time="0.085"/>
+  <testcase name="oldRecurrencesJumpToRequestedWindowAndLimitsAreApplied" classname="app.onklav.home.CalendarTest" time="0.057"/>
+  <testcase name="recurringLocalTimesSurviveDstAndMidnightRanges" classname="app.onklav.home.CalendarTest" time="0.046"/>
+  <testcase name="springGapNeverCreatesAZeroLengthOccurrence" classname="app.onklav.home.CalendarTest" time="0.07"/>
+  <testcase name="weeklyIntervalExclusionsAndInclusiveRepeatEnd" classname="app.onklav.home.CalendarTest" time="0.059"/>
+  <testcase name="reminderPlanSeparatesSoundAndSkipsDeliveredAndStaleTimes" classname="app.onklav.home.CalendarTest" time="0.062"/>
+  <testcase name="icsRoundTripKeepsZonesRecurrenceEscapesAndReminders" classname="app.onklav.home.CalendarTest" time="0.048"/>
+  <testcase name="monthlySkipsMissingDatesAndYearlySkipsNonLeapYears" classname="app.onklav.home.CalendarTest" time="0.076"/>
+  <testcase name="countedImportsPreserveExactOccurrenceCount" classname="app.onklav.home.CalendarTest" time="0.119"/>
+  <testcase name="fiveReminderLimitAndValidationAreStrict" classname="app.onklav.home.CalendarTest" time="0.106"/>
+  <testcase name="calendarStateRoundTripsAndCorruptionDoesNotBecomeEmpty" classname="app.onklav.home.CalendarTest" time="0.281"/>
+  <testcase name="overlapColumnsResetAfterEachConflictGroup" classname="app.onklav.home.CalendarTest" time="0.084"/>
+  <testcase name="fullSupportedEventSetCanBeExportedAndReimported" classname="app.onklav.home.CalendarTest" time="3.659"/>
+  <testcase name="allDayIsFloatingAndEndIsExclusive" classname="app.onklav.home.CalendarTest" time="0.09"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

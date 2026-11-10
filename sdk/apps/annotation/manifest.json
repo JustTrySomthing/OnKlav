@@ -1,0 +1,15 @@
+{
+  "schema": "onklav.app.v1",
+  "runtime": "rust-wasm-ui.v1",
+  "id": "app.onklav.annotation",
+  "name": "Annotation",
+  "version": 40,
+  "capabilities": [
+    "storage.private",
+    "images.edit",
+    "files.images",
+    "files.export",
+    "share.text",
+    "clipboard.write"
+  ]
+}

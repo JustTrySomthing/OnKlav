@@ -1,0 +1,33 @@
+{
+  "plan": {
+    "sdk_apps": "reuse",
+    "mobile_rust": "build",
+    "games": "reuse",
+    "android_tests": "not requested",
+    "variant": "debug",
+    "abis": [
+      "arm64-v8a"
+    ]
+  },
+  "phases": [
+    {
+      "phase": "native-build",
+      "seconds": 96.23,
+      "returncode": 0,
+      "log": "docs/evidence/v0.100.19/native-build.log"
+    },
+    {
+      "phase": "assemble-debug",
+      "seconds": 196.81,
+      "returncode": 0,
+      "log": "docs/evidence/v0.100.19/assemble-debug.log"
+    },
+    {
+      "phase": "verify-debug",
+      "seconds": 4.85,
+      "returncode": 1,
+      "log": "docs/evidence/v0.100.19/verify-debug.log"
+    }
+  ],
+  "status": "failed"
+}

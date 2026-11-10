@@ -1,0 +1,21 @@
+{
+  "apk_sha256": "b256996da93c03c61eeb722de915691d88bdbb47fbffb68c1e05e8f87a86bbbd",
+  "device": "Android 10 x86_64 software emulator; 2 GiB, 4 cores, no KVM",
+  "phone_carrier_acceptance": false,
+  "default_role_changed": false,
+  "tests": {
+    "MessengerDeviceTest": "pass"
+  },
+  "captures": [
+    "messenger-draft"
+  ],
+  "boot": "pass",
+  "install": "pass",
+  "grant_READ_SMS": true,
+  "grant_SEND_SMS": true,
+  "grant_READ_CONTACTS": true,
+  "grant_READ_PHONE_STATE": true,
+  "sms_fixture_injected": true,
+  "installed_sha256": "b256996da93c03c61eeb722de915691d88bdbb47fbffb68c1e05e8f87a86bbbd",
+  "exact_apk_installed": true
+}

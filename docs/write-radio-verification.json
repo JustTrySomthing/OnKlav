@@ -1,0 +1,44 @@
+{
+  "status": "source complete; production compile passed; bounded host checks; no APK built",
+  "focused_passed": 25,
+  "passed": [
+    "AudioHandoffTest > lateInterruptionCannotPauseReplacementAndHandoffInterruptsBeforeFocusIsRequested",
+    "AudioHandoffTest > previousOwnerCleanupDoesNotHoldTheOwnershipMonitorOrBlockNewAudioOnFailure",
+    "AudioHandoffTest > radioPodcastAndOtherAudioReleaseOldPlayersAndKeepTheNewOwnerPlaying",
+    "AudioHandoffTest > staleServiceStartsAndDuplicateDeliveryCannotStopOrReprepareTheNewSession",
+    "RadioActionRecoveryTest > cancellingACompletionStillCommitsItsFailureAndBusyActionsCannotCrossPendingBarrier",
+    "RadioActionRecoveryTest > radioPreparationReleasesOldStreamBeforeProbeAndRepairsOnlyTheSelectedAddress",
+    "RadioActionRecoveryTest > rejectedSuccessReplyIsAcknowledgedAsFailureInsteadOfOrphaningTheSdkToken",
+    "RadioActionRecoveryTest > repeatedStationStartsPassStrictSdkValidationAndEverySubsequentClickWorks",
+    "RadioActionRecoveryTest > switchingAndReopeningWaitForTheOldConnectionBeforeTheFirstProbe",
+    "RadioStreamRepairTest > abandonedAudioFocusCallbackCannotPauseNewStation",
+    "RadioStreamRepairTest > closingDuringResponseArrivalClosesLateBodyAndCannotResurrectAConnection",
+    "RadioStreamRepairTest > extensionlessHlsKeepsItsContentType",
+    "RadioStreamRepairTest > frozenPlaybackClockIsRecoveredEvenWhenEngineClaimsPlaying",
+    "RadioStreamRepairTest > longPauseAndRepeatedRouteChangesNeverRequireAppRestart",
+    "RadioStreamRepairTest > newRadioSessionRestoresQueryAndLoadsCachedResultsWithoutAUserSearch",
+    "RadioStreamRepairTest > offlineWaitDoesNotExhaustRetriesAndFallbackRecoversWithoutCallback",
+    "RadioStreamRepairTest > playlistsResolveRelativeAudioAndPublicHttpButNeverPrivateSchemes",
+    "RadioStreamRepairTest > readyWithoutAudioAndLongBufferingCannotRemainStuck",
+    "RadioStreamRepairTest > replacedStationCannotAuthorizeOldReadsOrReceiveOldCallbacks",
+    "RadioStreamRepairTest > resumeCreatesFreshLiveConnectionAndNeverStaysReady",
+    "RadioStreamRepairTest > screenOffDoesNotStopServiceAndExplicitStopAndRevocationCancelRecovery",
+    "RadioStreamRepairTest > stationProbeCancelsTheLiveSocketBeforeClosingTheResponseBody",
+    "RadioStreamRepairTest > streamingSourcePreservesIcyHeadersAndChecksPermissionOnEachRead",
+    "WriteToolbarLayoutTest > textComesFirstParagraphMenusAreIndependentAndHistoryIsStackedOnTheRight",
+    "WriteUiTest > signedWriterFormatsManagesAndExportsWithoutLosingSelection"
+  ],
+  "limits": [
+    "Broad passes reached compilation-plus-test time caps.",
+    "The 320dp/large-text scrolling check stalled under a paused Compose clock. The clock was corrected; the final isolated runner exited before tests and without a diagnostic, so no pass is claimed for that case.",
+    "No physical Samsung/public-station acceptance performed."
+  ],
+  "visual_review": [
+    "384dp toolbar layout",
+    "Full Write editor with selected list/alignment/indent formatting"
+  ],
+  "test_updates": [
+    "Queued decoder release assertions now drain the main queue before checking release.",
+    "Narrow toolbar test uses new icon rows and advances the clock for horizontal scrolling."
+  ]
+}

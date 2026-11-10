@@ -1,0 +1,7 @@
+{
+  "source": "https://raw.githubusercontent.com/Podcastindex-org/database/master/db_newsfeeds_1000rows.csv",
+  "source_sha256": "b467c7254613e244d8d3fe9854baa20c48a422873ede8b4a53674875c352b43f",
+  "license": "MIT, per repository README",
+  "records": 484,
+  "profile": "Bundled starter sample, not complete/live index; availability checked when opened"
+}

@@ -1,0 +1,15 @@
+{
+  "schema": "onklav.app.v1",
+  "runtime": "rust-wasm-ui.v1",
+  "id": "app.onklav.browser",
+  "name": "Browser",
+  "version": 40,
+  "capabilities": [
+    "storage.private",
+    "network.web",
+    "share.text",
+    "links.external",
+    "clipboard.read",
+    "clipboard.write"
+  ]
+}

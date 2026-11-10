@@ -1,0 +1,30 @@
+{
+  "version": "0.79.0-media-autoplay1",
+  "version_code": 87,
+  "status": "Completed; signed ARM64 APK assembled and verified",
+  "changes": [
+    "Audio/video attachments opened from Messages, Groups, Gallery and Files automatically start once prepared, foregrounded and attached to a video surface. Pauses, backgrounding, audio-focus loss, close and retry remain lifecycle owned.",
+    "Playable YouTube URLs are replaced in the message display by a thumbnail and Play Video button. Both the thumbnail and button use the existing internal signed YouTube handoff, preserving the start timestamp. Original message text remains intact for copy/search. Other/unrepresented links remain visible.",
+    "YouTube previews default on; explicit Privacy off remains respected, and unavailable thumbnails retain a clickable play placeholder.",
+    "Explicit YouTube handoffs arm a bounded one-shot autoplay request in the native host. Playback no longer requires an extra WebView gesture. Wrong-video/expired requests are discarded and a later pause is preserved.",
+    "Video screens temporarily enable sensor rotation. Landscape hides app chrome and system bars and removes safe-inset padding; portrait restores controls. Exit restores prior orientation/bar/window settings.",
+    "YouTube landscape uses an immersive video viewport, avoiding gesture-gated requestFullscreen. Native custom fullscreen also hides system bars and safely clears its callback before notifying Chromium. Attachment controls are hidden in landscape until tapped."
+  ],
+  "checks": {
+    "focused_android_unique": 15,
+    "final_rotation_rechecks": 2,
+    "javascript": "Exact production scripts passed autoplay, stale/expired intent, pause/cleanup, landscape/portrait restoration and prior ad/metadata scenarios",
+    "lint": {
+      "Warning": 172
+    },
+    "apk": "Original signing identity, native16KiB alignment and current SDK/native source provenance verified"
+  },
+  "limits": [
+    "Actual Samsung/YouTube audible playback, streaming/autoplay restrictions and physical rotation remain unverified; public provider markup can change."
+  ],
+  "apk": {
+    "name": "OnKlav-0.79.0-ARM64.apk",
+    "bytes": 71476434,
+    "sha256": "7b39664b238ab3f345cae5c820b30111022eb9c2c6c21651470362e61a8525d7"
+  }
+}

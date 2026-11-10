@@ -1,0 +1,23 @@
+{
+  "plan": {
+    "sdk_apps": "reuse",
+    "mobile_rust": "reuse",
+    "games": "reuse",
+    "android_tests": [
+      "app.onklav.home.RssAppsHostTest"
+    ],
+    "variant": "debug",
+    "abis": [
+      "arm64-v8a"
+    ]
+  },
+  "phases": [
+    {
+      "phase": "assemble-debug",
+      "seconds": 93.7,
+      "returncode": 1,
+      "log": "docs/evidence/v0.57.0/assemble-debug.log"
+    }
+  ],
+  "status": "failed"
+}

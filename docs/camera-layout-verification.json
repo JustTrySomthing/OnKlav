@@ -1,0 +1,40 @@
+{
+  "status": "source complete after 0.100.18-rc1; no new APK requested",
+  "changes": [
+    "Flash/timer/settings in portrait SDK header; crossed-out timer Off icon, accessible state and numeric badge for 3/10 seconds",
+    "Capture stage uses available space with overlaid zoom/mode/shutter/captures/lens controls and gradient scrim",
+    "Landscape SDK/system chrome hidden through existing immersive lifecycle, with floating back/settings controls and one bottom row starting with zoom",
+    "Normal chrome restored for gallery, startup/access failures and exit; source viewport and output ratios preserved",
+    "Composition reads synchronize timer/flash/torch values into header; fixed-zoom lenses disable slider"
+  ],
+  "verification": {
+    "unique_focused_checks": 4,
+    "final_layout_checks_passed": 2,
+    "retained_settings_and_ratio_checks_passed": 2,
+    "runtime": "runtime jar matches compiled Kotlin classes",
+    "ui": "Portrait and landscape native layout screenshots reviewed without camera hardware",
+    "lint": "Prior full lint retained; not repeated after bounded camera layout checks",
+    "physical_device": "not verified"
+  },
+  "diagnostics": [
+    "Source and JDK/SDK/Gradle cache recovered after workspace reset; checksummed dependency supplement and pinned missing media/runtime artifacts restored",
+    "Cold build hit compilation deadline; generated transform cache quarantined. This restored cache requires --online; offline checks can reference an incomplete transform workspace",
+    "Initial portrait check exposed unsynchronized header timer; explicit composition reads fixed timer/flash/torch synchronization; final timer-cycle/geometry/gallery checks pass"
+  ],
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/CameraScreen.kt": "e94030e26806da37fa4108f269dc0adac340a930335deda8ab49555f4a306968",
+    "android/app/src/main/kotlin/app/onklav/home/SdkAppScreen.kt": "58363d22dfd2d96ada14428d6e314664c5fe17f293d30fdd3849c18d502865c4",
+    "android/shared/src/main/res/drawable/camera_timer.xml": "afa4859106ed3675e4cff299d1f57ee504af27689b867b646816b0aa4033901d",
+    "android/shared/src/main/res/drawable/camera_timer_off.xml": "bd07a947bd6deca36a62abf04df144e375c9e128fe919c9c9980e6c2d9ca34b9"
+  },
+  "unchanged": [
+    "CameraX engine/capture/viewports/recording",
+    "SDK shells/core/native/publisher/grants/signing identities",
+    "All prior Image Editor/Radio/media fixes"
+  ],
+  "limits": [
+    "Capture ratios fit without stretching; differing screen ratios retain letterboxing",
+    "Physical phone sensor/FOV/cutout/system-bar gestures/recording rotation/provider performance remain acceptance work",
+    "Original signing key is not restored in this reset workspace; restore the existing backup before any requested APK, never regenerate"
+  ]
+}

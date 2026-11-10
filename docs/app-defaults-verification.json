@@ -1,0 +1,41 @@
+{
+  "status": "Implemented, host-verified and assembled into the signed0.99.1ARM64APK; physical acceptance remains separate",
+  "version": "0.99.1-app-defaults1",
+  "version_code": 108,
+  "implementation": "docs/APP-DEFAULTS.md",
+  "root_cause": "Included package updates intersected old grants with new capabilities, leaving newly shipped download access off after prior first-use defaults",
+  "changes": [
+    "Automatic and manual included-app upgrades enable newly declared capabilities while retaining old user choices",
+    "One-time publisher-checked migration restores YouTube browser/download requirements for installed copies",
+    "No Settings detour; deliberate later revocation offers an inline Enable downloads action with a fresh working session",
+    "Removed built-in apps stay removed; third-party review behavior is unchanged"
+  ],
+  "tests": {
+    "BundledDefaultsTest": 3,
+    "YoutubeDownloadUiTest": 2,
+    "ReaderReadinessTest": 1
+  },
+  "unique_focused_android_tests": 6,
+  "lint": {
+    "errors": 0,
+    "warnings": 248,
+    "information": 1
+  },
+  "runtime_classes_checked": 87,
+  "runtime_matches_compilation": true,
+  "native_sources_unchanged": true,
+  "native_reused": "Verified0.99Linux/main/diagnostic JNI; prior288Rust checks remain source-matched, not rerun for Kotlin-only changes",
+  "included_signed_apps_current": 25,
+  "apk_requested": true,
+  "apk_assembled": true,
+  "phone_or_live_provider_tested": false,
+  "remaining_limitations": [
+    "Existing YouTube direct-stream availability and supported-format limitations are unchanged",
+    "Android-controlled hardware permissions are not silently granted by this app-default repair"
+  ],
+  "evidence": [
+    "docs/evidence/v0.99.1/app-defaults-checks.log"
+  ],
+  "apk_verification": "docs/apk-verification-debug.json",
+  "apk_file": "OnKlav-0.99.1-ARM64.apk"
+}

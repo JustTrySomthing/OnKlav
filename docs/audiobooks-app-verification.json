@@ -1,0 +1,94 @@
+{
+  "status": "AudioBooks implemented, bundled in OnKlav81, full lint passed, ARM64 test APK assembled and verified",
+  "host": "0.73.0-audiobooks1",
+  "build": 81,
+  "delivery": "AudioBooks included signed SDK app inside the OnKlav host; no standalone Android app",
+  "features": [
+    "multi-file and folder imports copied privately, originals untouched",
+    "natural chapter order and manual reorder",
+    "per-book durable progress, five-second resume rewind, saved speed",
+    "Nero and QuickTime M4B chapters and physical-file chapters",
+    "bookmarks with chapter/time and edit title/author",
+    "library search, recent/title/author sort, in-progress/finished/offline filters",
+    "LibriVox title/author search, language filter per page, twenty-item pagination",
+    "public HTTPS streams and resumable offline chapter downloads",
+    "one foreground transfer with progress/cancel and completed-chapter recovery",
+    "background player/audio focus/noisy-headset/media-session integration",
+    "seek, skip, chapter navigation, speed0.5\u20133x, timed/end-of-chapter sleep"
+  ],
+  "security": [
+    "new revocable audiobooks.library capability",
+    "rendered enabled widget owner checked by Rust/JNI",
+    "host-only UUID leases; every read rechecks app publisher/hash/capabilities",
+    "only public LibriVox/Internet Archive HTTPS origins with checked redirects and DNS",
+    "no credentials/API key/subscription or app listening quota",
+    "default declared permissions for bundled first install; preserve later revocations"
+  ],
+  "checks": {
+    "rust_core": "269 passed; Linux/ARM64 freshly built",
+    "sdk_packages": "all current; original publisher retained",
+    "complete_host_compile": "passed",
+    "contract": "5 passed",
+    "signed_audioBooks_ui": "passed; import buttons enabled by default, Library/Discover views verified",
+    "regression": "Podcasts3/Radio3 passed",
+    "downloads_chapters": "fixture transport tests passed; incomplete second chapter retries without redownloading first",
+    "progress_regression": "8 AudioBooks backend tests passed after deletion-guard fix",
+    "android_app_selected": {
+      "passed": 15,
+      "failed": 0,
+      "runs": [
+        "bounded-audiobooks-tests-recovered.log (UI1/Podcasts3/Radio3 passed; progress regression found)",
+        "audiobooks-final-tests.log (AudioBooks backend8 passed after fix)"
+      ]
+    },
+    "shared_host_tests": 12,
+    "full_lint": {
+      "errors": 0,
+      "warnings": 168,
+      "report": "docs/full-lint-verification.json"
+    },
+    "apk": {
+      "bytes": 70996422,
+      "sha256": "f1c42a4f274d4d2453d8d8400ff61c6a0f8cd8eb1b5a58020d8af4d5fd070749",
+      "version_name": "0.73.0-audiobooks1",
+      "version_code": 81,
+      "package": "app.onklav.home.prototype.rewrite",
+      "signer_sha256": "6ed975c5fc27d19f6291f751a8bb00fa8a2c2e7d268bffc7b6ddf7e1b1a7a69d",
+      "zipalign_16kb": "pass",
+      "signature_v2_verified": true,
+      "bundled_apps": 12
+    }
+  },
+  "provider_live": {
+    "accepted": false,
+    "observed": "LibriVox public API GET returned403 in this environment",
+    "schema": "checked official LibriVox API documentation and catalog application/libraries/Librivox_API.php; sections listen_url/playtime/section_number"
+  },
+  "device_playback": {
+    "accepted": false,
+    "remaining": [
+      "audible playback and codec combinations",
+      "Bluetooth/headset and background/lock-screen controls on actual phone",
+      "Live LibriVox availability/stream seeking/downloads over real network"
+    ]
+  },
+  "limits": [
+    "MP3 ID3 chapter markers are not parsed; multi-file and Nero/QuickTime M4B chapters supported",
+    "Unknown/malformed embedded chapter tables fall back to file navigation",
+    "Streaming seeking requires verifiable range responses; offline downloads give local random access",
+    "Folder import reads supported audio files immediately in selected folder, not recursive subfolders",
+    "Interrupted downloads restart the incomplete chapter and preserve completed chapters",
+    "Catalog availability/provider rate restrictions apply; no unlimited third-party service guarantee",
+    "No DRM unlocking or account/cloud sync"
+  ],
+  "remaining": [
+    "actual phone audio/background/headset acceptance",
+    "live LibriVox service search/stream/download qualification"
+  ],
+  "resolved_problems": [
+    "Transient working folder was empty; restored last saved source and original signing/build inputs",
+    "Gradle failed on generated Godot transform metadata between processes; regenerating only f4a5b5bd91f5089cc9fd04a62aa1d31c fixed bounded phases",
+    "A retained private-data deletion guard blocked recording progress for a new import; clear it only after committing an authorized new book",
+    "Progress write failures are visible; deliberate deleted-book late callbacks do not recreate progress"
+  ]
+}

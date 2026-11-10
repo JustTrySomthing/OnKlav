@@ -1,0 +1,21 @@
+{
+  "changed_prior_files": [
+    "OnKlav/AGENTS.md",
+    "OnKlav/README.md",
+    "OnKlav/TODO.md",
+    "OnKlav/docs/CHUNKS.md",
+    "OnKlav/docs/REWRITE-STATUS.md",
+    "OnKlav/docs/SDK-BUILD-WORKFLOW.md",
+    "OnKlav/docs/source-verification.json",
+    "OnKlav/docs/verification.json",
+    "OnKlav/scripts/build_inputs.py",
+    "OnKlav/scripts/check_android.py",
+    "OnKlav/scripts/sdk_build_plan.py",
+    "OnKlav/scripts/test_build_inputs.py",
+    "OnKlav/scripts/test_sdk_build_plan.py",
+    "OnKlav/sdk/README.md"
+  ],
+  "deleted_prior_files": [],
+  "java_application_source_files": [],
+  "apk_inputs_unchanged": true
+}

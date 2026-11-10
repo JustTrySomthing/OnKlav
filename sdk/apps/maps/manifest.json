@@ -1,0 +1,24 @@
+{
+  "schema": "onklav.app.v1",
+  "runtime": "rust-wasm-ui.v1",
+  "id": "app.onklav.maps",
+  "name": "Maps",
+  "version": 2,
+  "min_host": 95,
+  "icon": {
+    "symbol": "browser"
+  },
+  "capabilities": [
+    "storage.private",
+    "network.http",
+    "location.foreground",
+    "links.external"
+  ],
+  "network": {
+    "origins": [
+      "https://tile.openstreetmap.org",
+      "https://photon.komoot.io",
+      "https://routing.openstreetmap.de"
+    ]
+  }
+}

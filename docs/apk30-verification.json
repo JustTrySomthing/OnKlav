@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "version": "0.100.30-rc1",
+  "version_code": 139,
+  "package": "app.onklav.home.prototype.rewrite",
+  "bytes": 122052027,
+  "sha256": "e65c4769a05ec104f64cc4bc317ac0bc028e58cab59a6892abc24628bf79f27f",
+  "signer_sha256": "6ed975c5fc27d19f6291f751a8bb00fa8a2c2e7d268bffc7b6ddf7e1b1a7a69d",
+  "verification": "docs/apk-verification-optimized.json",
+  "build": "docs/evidence/v0.100.30/build-optimized.json",
+  "entrypoints": "docs/evidence/v0.100.30/feature-packaging.json",
+  "previous_feature_checks": "10 Video Edit surface; 23 Stamp/retouch; 21 Messenger/Authentic/UI focused checks passed in prior implementation tasks, not rerun for this APK",
+  "physical_phone_qualification": "pending; packaging validation is separate"
+}

@@ -1,0 +1,80 @@
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/developer/components)
+error[E0277]: the trait bound `Flatten<std::option::IntoIter<&Vec<onklav_app::serde_json::Value>>>: ExactSizeIterator` is not satisfied
+  --> src/reference_apps/calc.rs:39:109
+   |
+39 | ...e().rev(){h.push(record(&format!("calc.pick.{i}"),r["result"].as_str().unwrap_or(""),r["expr"].as_str().unwrap_or("")));}if h.is_empty...
+   |        ^^^ the trait `ExactSizeIterator` is not implemented for `Flatten<std::option::IntoIter<&Vec<onklav_app::serde_json::Value>>>`
+   |
+   = help: the following other types implement trait `ExactSizeIterator`:
+             &mut I
+             Args
+             ArgsOs
+             ArrayChunks<I, N>
+             ArrayWindows<'_, T, N>
+             Box<I, A>
+             Chunks<'_, T>
+             ChunksExact<'_, T>
+           and 131 others
+   = note: required for `Enumerate<Flatten<std::option::IntoIter<&Vec<onklav_app::serde_json::Value>>>>` to implement `DoubleEndedIterator`
+note: required by a bound in `rev`
+  --> /rustc/1159e78c4747b02ef996e55082b704c09b970588/library/core/src/iter/traits/iterator.rs:3350:5
+
+error[E0277]: the trait bound `Flatten<std::option::IntoIter<&Vec<onklav_app::serde_json::Value>>>: ExactSizeIterator` is not satisfied
+  --> src/reference_apps/calc.rs:39:51
+   |
+39 | ...{let mut h=vec![];for(i,r)in s["history"].as_array().into_iter().flatten().enumerate().rev(){h.push(record(&format!("calc.pick.{i}"),r...
+   |                                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^ the trait `ExactSizeIterator` is not implemented for `Flatten<std::option::IntoIter<&Vec<onklav_app::serde_json::Value>>>`
+   |
+   = help: the following other types implement trait `ExactSizeIterator`:
+             &mut I
+             Args
+             ArgsOs
+             ArrayChunks<I, N>
+             ArrayWindows<'_, T, N>
+             Box<I, A>
+             Chunks<'_, T>
+             ChunksExact<'_, T>
+           and 131 others
+   = note: required for `Enumerate<Flatten<std::option::IntoIter<&Vec<onklav_app::serde_json::Value>>>>` to implement `DoubleEndedIterator`
+   = note: required for `Rev<Enumerate<Flatten<std::option::IntoIter<&Vec<onklav_app::serde_json::Value>>>>>` to implement `Iterator`
+   = note: required for `Rev<Enumerate<Flatten<std::option::IntoIter<&Vec<onklav_app::serde_json::Value>>>>>` to implement `IntoIterator`
+
+error[E0599]: no method named `subtle` found for enum `onklav_app::serde_json::Value` in the current scope
+  --> src/reference_apps/calc.rs:39:350
+   |
+39 | ..."calc.clear_history","Clear history").subtle());}f=f.drawer("History","calc.close",h);}
+   |                                          ^^^^^^ method not found in `onklav_app::serde_json::Value`
+   |
+   = help: items from traits can only be used if the trait is implemented and in scope
+   = help: trait `crate::reference_apps::podcasts_app::Subtle` which provides `subtle` is implemented but not reachable
+
+error[E0599]: no method named `subtle` found for enum `onklav_app::serde_json::Value` in the current scope
+  --> src/reference_apps/convert.rs:29:536
+   |
+29 | ...utton("convert.swap","⇅  Swap units").subtle(),choices("select","convert.to","To",s["to"].as_str().unwrap_or("m"),&options),field("con...
+   |                                          ^^^^^^ method not found in `onklav_app::serde_json::Value`
+   |
+   = help: items from traits can only be used if the trait is implemented and in scope
+   = help: trait `crate::reference_apps::podcasts_app::Subtle` which provides `subtle` is implemented but not reachable
+
+error[E0599]: no method named `subtle` found for enum `onklav_app::serde_json::Value` in the current scope
+  --> src/reference_apps/weather_app.rs:33:827
+   |
+33 | ...ton("weather.back","Back to weather").subtle());}}
+   |                                          ^^^^^^ method not found in `onklav_app::serde_json::Value`
+   |
+   = help: items from traits can only be used if the trait is implemented and in scope
+   = help: trait `crate::reference_apps::podcasts_app::Subtle` which provides `subtle` is implemented but not reachable
+
+error[E0599]: no method named `subtle` found for enum `onklav_app::serde_json::Value` in the current scope
+  --> src/reference_apps/weather_app.rs:34:435
+   |
+34 | ...h(button("weather.refresh","Refresh").subtle());}
+   |                                          ^^^^^^ method not found in `onklav_app::serde_json::Value`
+   |
+   = help: items from traits can only be used if the trait is implemented and in scope
+   = help: trait `crate::reference_apps::podcasts_app::Subtle` which provides `subtle` is implemented but not reachable
+
+Some errors have detailed explanations: E0277, E0599.
+For more information about an error, try `rustc --explain E0277`.
+error: could not compile `onklav-ui` (lib test) due to 6 previous errors

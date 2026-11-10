@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.LibraryBackupTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-10-24T00:51:24" hostname="41aed82b0335" time="16.773">
+  <properties/>
+  <testcase name="annotatedImageUsesRealSdkImportAndLiveSessionsBlockRestoration" classname="app.onklav.home.LibraryBackupTest" time="6.433"/>
+  <testcase name="cancellationAndProviderFailureCleanStagingAndIncompleteOutput" classname="app.onklav.home.LibraryBackupTest" time="0.075"/>
+  <testcase name="youtubeBackupReopensBookmarksAndHistoryWithALocalViewerIdentity" classname="app.onklav.home.LibraryBackupTest" time="2.896"/>
+  <testcase name="rssProviderBackupReopensOfflineArticlesAndBookmarksInTheSignedApp" classname="app.onklav.home.LibraryBackupTest" time="2.739"/>
+  <testcase name="filesProviderToJniRoundTripKeepsBytesAndRejectsChangedReview" classname="app.onklav.home.LibraryBackupTest" time="0.059"/>
+  <testcase name="readerBackupRestoresAnAccessibleDraftAndKeepsAnExistingClearedDraft" classname="app.onklav.home.LibraryBackupTest" time="1.93"/>
+  <testcase name="browserBackupReopensTabsAndBookmarksAndPreservesLocalChanges" classname="app.onklav.home.LibraryBackupTest" time="2.641"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,11 @@
+{
+  "status": "incomplete",
+  "boot": "API 29 and API 33 ATD each exceeded 300-second software-boot limit; checked runs terminated",
+  "install": "not attempted; Android boot did not complete",
+  "ReminderDeviceTest": "compiled, not executed",
+  "apk_sha256": "ae7a70e012ac8cd64f227cd12e77f6df46ebb120b4ebb8c767d683f5c4add116",
+  "phone_carrier_acceptance": false,
+  "default_role_changed": false,
+  "pixel_capture": "not performed",
+  "exact_apk_installation_verified": false
+}

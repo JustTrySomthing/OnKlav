@@ -1,0 +1,59 @@
+{
+  "status": "Offline finishing features implemented and host-checked; phone qualification open",
+  "latest_delivered_apk": "0.100.7/code116; no APK requested or built",
+  "neural_ai_or_cloud_services_added": false,
+  "validation": {
+    "final_suites": [
+      {
+        "class": "VideoOfflineTest",
+        "tests": 8,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "class": "VideoProTest",
+        "tests": 8,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "class": "VideoEditorUiTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    ],
+    "final_checks_passed": 17,
+    "unchanged_host_cases_passed_initial_run": 6,
+    "total_unique_focused_cases_passed": 23,
+    "runtime_matches_compiled_classes": 2926,
+    "initial_failure": "Invalid-data regression fixture tried to serialize NaN; Android JSON rejected it before the validator. Fixture corrected to read a NaN string into the validator; initial failed evidence preserved.",
+    "full_lint": "Not rerun",
+    "shader": "Existing six pixel checks retained; cutout shader unchanged",
+    "native_signed_apps_games_inputs_current": true
+  },
+  "implemented": [
+    "Keyframe easing with split-preserving curve intervals",
+    "Four editable camera motion presets",
+    "Fade/slide/pop title and sticker animations with split-preserving phase",
+    "Bounded active glyph cache plus one composited text texture",
+    "Narration role, scheduled ducking, stereo balance and conventional tone DSP",
+    "Portable ZIP project/media backups and restoration to new project identity",
+    "Default-marked resettable sliders and apply color to all main clips"
+  ],
+  "limits_and_phone_gates": "See docs/VIDEO-OFFLINE-FINISH.md; no full CapCut parity or handset production qualification claimed",
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/VideoEditData.kt": "fa1227dafd839b545ff3bed6dc043f9248ce29e4158c4a0173eb4a09a220550e",
+    "android/app/src/main/kotlin/app/onklav/home/VideoProData.kt": "3a0bd1808a034f36c501383a67898b6c22698160d1162bdf357d8c2a33782745",
+    "android/app/src/main/kotlin/app/onklav/home/VideoEditEngine.kt": "7b133dd99908ecf7d1fa6d2be8f383d1ff9b008652c695eca27fae557f0b99c5",
+    "android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt": "9c87827fd68e3dc2f7bd5c85b98d9dccb2cfeface6843d3893e64296b04e2b34",
+    "android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt": "0aa042dc0c7b334bc4fbdf96e900f65e7d53ece0973622ee6b0597dcfdc0a671",
+    "android/app/src/main/kotlin/app/onklav/home/VideoProWorkspace.kt": "8c0fccfa11e0f9856b58ec312edfcf02cfd8dd6cd3b38448dac8141da59f7060",
+    "android/app/src/main/kotlin/app/onklav/home/VideoTitleOverlay.kt": "837d4f61c46a1f3a2e64551ffbf5edfc0aef9675ea0baf7ad26a3d0138afd08b",
+    "android/app/src/main/kotlin/app/onklav/home/VideoOfflineAudio.kt": "bd721a6ecfaaa0c6edc3b51cefe9d20a05eeb1684f28c1b7e6f1588e5c7f41da",
+    "android/app/src/main/kotlin/app/onklav/home/VideoProjectArchive.kt": "62b12f92090eda6026f4ce9e969a67886bc8162df696db17d3b9593c26b39f17"
+  }
+}

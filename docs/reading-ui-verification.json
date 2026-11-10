@@ -1,0 +1,59 @@
+{
+  "status": "Chunk28 source complete; full Android/UI/device qualification remains open",
+  "chunk": 28,
+  "production_path": "Public reading_ui::reader -> shared widgets and existing reading Unicode helpers -> collections.get/transact through signed guest production Rust broker -> app-private revision-checked page bookmark",
+  "new_component_checks_passed": 5,
+  "existing_reading_helper_checks_passed": 3,
+  "tests_note": "Initial reading filter selected9 cases including one unrelated Files regression; only8 reading cases counted. After match-jump rendering adjustment, all5 component cases passed again.",
+  "granted_signed_guest_scenario_steps_passed": 11,
+  "denied_signed_guest_scenario_steps_passed": 8,
+  "scenario_details": [
+    "Page navigation autosaves and restores across close/relaunch",
+    "Emoji search byte ranges are preserved and result selection saves its exact start",
+    "Result list hides after selecting a match so the requested page is visible; Show matches retains search results",
+    "Case-sensitive search does not match different capitalization",
+    "Denied storage presents shared recovery guidance, permits reading/search, does not claim a saved position and resets on reopen"
+  ],
+  "developer_contract_checks_passed": 5,
+  "logs": [
+    "docs/evidence/v0.70.0/reading-ui-tests.log",
+    "docs/evidence/v0.70.0/reading-ui-tests-final.log",
+    "docs/evidence/v0.70.0/reading-ui-scenario-final.log",
+    "docs/evidence/v0.70.0/reading-ui-denied-repaired.log",
+    "docs/evidence/v0.70.0/reading-ui-contract.log"
+  ],
+  "diagnosed_failures": [
+    "One zero-length cached Rust core object prevented initial desktop packer build. Removed only that crate cache and disabled incremental compilation.",
+    "First granted scenario used close instead of the actual close_requested frame key; corrected the test assertion.",
+    "A stale desktop runner embedded a different source fingerprint. The guard remained fail-closed; removing only that runner crate cache restored a correctly fingerprinted runner. Failed attempt logs retained."
+  ],
+  "bounds": {
+    "text_utf8_bytes": 1000000,
+    "page_unicode_scalars": 4000,
+    "search_matches_per_page": 40,
+    "query_utf8_bytes": 256
+  },
+  "persistence": "Page-start UTF-8 offset, exact content ID/revision; no document text duplicated in component state or bookmark record",
+  "conflict_behavior": "Failed save retains page; explicit retry fetches current collection revision and asks before overwriting a different saved position. No automatic blind retry.",
+  "native": "Core source and JNI inputs unchanged. Existing source-matched Linux/ARM64 proof verified; no native rebuild needed.",
+  "native_proof": "docs/working-native-verification.json",
+  "android_ui_tested": false,
+  "full_android_host": "Still blocked by the three previously recorded unrelated Android dependency artifacts; no repeat dependency probe",
+  "existing_read_aloud_app": "Preserved editable controller and signed package; not replaced by this read-only screen",
+  "epub_pdf": "Not parsed/rendered by this component; chunks29\u201330 remain",
+  "apk_created": false,
+  "shipping_sdk_package_or_documentation_release_created": false,
+  "disposable_verification_packages": "Created and discarded by verify, with temporary test-only signer. No phone installation.",
+  "next_feature": 29,
+  "source_sha256": {
+    "developer/components/src/reading_ui.rs": "2d5e1fd1e04751905e5e942de614a25ccf0e45cd7606dd41d652719a87f7566c",
+    "developer/components/src/lib.rs": "4a5bde1acef2a69004e6f675b0cddaa2df8947b0545b4695e87510b75de816d6",
+    "developer/components/src/reading.rs": "5cb2703020e5e95a39408a94b16c84fe870f58c2ddbf78074fa8f99de1145a31",
+    "developer/examples/text-reader/src/lib.rs": "fc6acac569af6ce15fd5cf137e7a4ca7614514b2500d5cd39c9134981ecc597a",
+    "developer/examples/text-reader/Cargo.toml": "7672230540a0d0b417df5b5ff337300034ac23dcb74c80c83995b2f8e015b760",
+    "developer/examples/text-reader/Cargo.lock": "e23cbea61bc844d1908e12b37e3ddcde88147a4ee3bfaacf3f5c06830d4701dc",
+    "developer/examples/text-reader/manifest.json": "4e2c7e054a383702118fb0b7ef4d464f6c3c5f3e22240d75da50cbf8845797fe",
+    "developer/examples/text-reader/scenario.json": "0863d407e52fd7edcffbb35745340e2ba668307d59f11193d9370b7029f785ad",
+    "developer/examples/text-reader/scenario-denied.json": "b40b94a1b936512f84aa31c09cfcbaf185288f0b39357a24ba4ff17c74dc59e2"
+  }
+}

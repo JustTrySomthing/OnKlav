@@ -1,0 +1,116 @@
+{
+  "date": "2026-10-24",
+  "timezone": "America/Chicago",
+  "source_version": "0.68.0-rc1",
+  "source_version_code": 76,
+  "target_sdk": 36,
+  "scope": "Centered dialog and panel motion, Read/Unread toggle persistence, wand reference, Contacts add action, Walkie labels and optimized Godot JNI retention",
+  "apk_built": true,
+  "apk_skipped_by_user": false,
+  "tests": {
+    "passed": 24,
+    "failed": 0,
+    "skipped": 0,
+    "unexpected_failures": 0,
+    "known_failures": [],
+    "counting": "12 unique affected app cases plus12 shared cases freshly run in this follow-up. Two initial failures corrected; only those two rerun. Prior0.67 broad451-case evidence is retained separately, not rerun or counted here.",
+    "evidence": "docs/evidence/v0.68.0/focused-cases.json",
+    "prior_baseline": "docs/evidence/v0.68.0/prior-source-verification-0.67.json"
+  },
+  "review": "docs/RESUME-0.68.0.md",
+  "native_proof": "docs/native-provenance.json",
+  "sdk_proof": "docs/app-sdk-provenance.json",
+  "internal_packages": [
+    "WalkieTalkie"
+  ],
+  "full_rewrite_complete": false,
+  "handset_acceptance": false,
+  "carrier_acceptance": false,
+  "google_account_acceptance": false,
+  "store_certified": false,
+  "games_deferred": true,
+  "mobile_native_rebuild_deferred": false,
+  "builtin_document_backup_implementation_complete": true,
+  "lint": {
+    "fresh_run": false,
+    "baseline": "docs/evidence/v0.67.0/lint-results-optimized.xml",
+    "baseline_errors": 0,
+    "baseline_warnings": 143,
+    "note": "No new broad lint/audit loop for this focused follow-up; Kotlin compilation and affected host checks passed."
+  },
+  "note": "Source-matched Linux/ARM64 JNI and game pack reused; only signed Walkie package13 rebuilt with the existing publisher. Existing Android signer retained. Full game feature work remains deferred; this fixes optimized Godot JNI retention. Physical device/carrier/account qualifications remain open.",
+  "build_evidence": "docs/evidence/v0.68.0/build-optimized.json",
+  "games_launch_packaging_fixed": true,
+  "apk": {
+    "name": "host",
+    "variant": "optimized",
+    "package": "app.onklav.home.prototype.rewrite",
+    "version_name": "0.68.0-rc1",
+    "version_code": 76,
+    "target_sdk": 36,
+    "bytes": 39441232,
+    "sha256": "10c16a9378fe9bab906902456c19584f462e491fd715d1b76b9e11357563b854",
+    "signer_sha256": "6ed975c5fc27d19f6291f751a8bb00fa8a2c2e7d268bffc7b6ddf7e1b1a7a69d",
+    "signature_v2_verified": true,
+    "zip_integrity": "pass",
+    "zipalign_16kb": "pass",
+    "abis": [
+      "arm64-v8a"
+    ],
+    "elf_minimum_load_alignment": {
+      "lib/arm64-v8a/libandroidx.graphics.path.so": 16384,
+      "lib/arm64-v8a/libc++_shared.so": 16384,
+      "lib/arm64-v8a/libgodot_android.so": 16384,
+      "lib/arm64-v8a/libonklav_core.so": 16384
+    },
+    "native_library_sha256": {
+      "lib/arm64-v8a/libandroidx.graphics.path.so": "41e9a793c43a0f4fddb19e33f346bace464f30f888ba7b9eaf96294ea115bfb6",
+      "lib/arm64-v8a/libc++_shared.so": "ad74bf43eb1fd576518168f664ad16a74e00eeda9595875c33dd87f6dd197869",
+      "lib/arm64-v8a/libgodot_android.so": "9e10c5ebda9bb629c671929441cdde3b4a8ab0e5542fc7e88de8d71f2b9840db",
+      "lib/arm64-v8a/libonklav_core.so": "5b758569fd5b02f6563c58289155ab026ba596892ec2786a321e968d9a8f54fe"
+    },
+    "legacy_defined_classes": 0,
+    "defined_class_count": 4711,
+    "permissions": [
+      "android.permission.INTERNET",
+      "android.permission.ACCESS_NETWORK_STATE",
+      "android.permission.VIBRATE",
+      "android.permission.READ_SMS",
+      "android.permission.READ_CONTACTS",
+      "android.permission.SEND_SMS",
+      "android.permission.RECEIVE_SMS",
+      "android.permission.RECEIVE_MMS",
+      "android.permission.RECEIVE_WAP_PUSH",
+      "android.permission.READ_PHONE_STATE",
+      "android.permission.READ_PHONE_NUMBERS",
+      "android.permission.POST_NOTIFICATIONS",
+      "android.permission.RECORD_AUDIO",
+      "android.permission.RECEIVE_BOOT_COMPLETED",
+      "app.onklav.home.prototype.rewrite.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+    ],
+    "rust_libraries": {
+      "arm64-v8a": "5b758569fd5b02f6563c58289155ab026ba596892ec2786a321e968d9a8f54fe"
+    },
+    "delivery_filename": "OnKlav-0.68.0.apk"
+  },
+  "godot_native_callbacks": "Required callback classes present; optimized usage removes only empty static initializers and R8 intermediate interfaces, not original classes/callback methods.",
+  "sdk_readiness": {
+    "toolkit_version": "0.2.0",
+    "reference_host": "0.68.0-rc1",
+    "apk_rebuilt": false,
+    "production_runtime_changed": false,
+    "tests": {
+      "unique_passed": 51,
+      "failed": 0,
+      "runtime_cases": 39,
+      "independent_developer_cases": 9,
+      "contract_cases": 3,
+      "counting": "39 unique SDK Rust cases after one stale cfg(test) assertion was corrected; 9 independent-author acceptance cases;3 contract/content cases. Repeated or clean-extraction scenario steps are supplementary, not counted again."
+    },
+    "evidence": "docs/evidence/sdk-readiness",
+    "clean_starter_workflow": "passed on Linux; actual source extraction, doctor/new/keygen/build/inspect/test",
+    "independent_security_audit": false,
+    "handset_native_acceptance": false,
+    "notes": "Developer tools/docs and cfg(test)-only correction. Existing native binaries retained with exact unchanged production-prefix reconciliation; Android app production sources unchanged."
+  }
+}

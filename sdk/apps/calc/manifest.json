@@ -1,0 +1,15 @@
+{
+  "schema": "onklav.app.v1",
+  "runtime": "rust-wasm-ui.v1",
+  "id": "app.onklav.calc",
+  "name": "Calc",
+  "version": 17,
+  "min_host": 90,
+  "icon": {
+    "symbol": "calc"
+  },
+  "capabilities": [
+    "storage.private",
+    "clipboard.write"
+  ]
+}

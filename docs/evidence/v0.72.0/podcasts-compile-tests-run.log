@@ -1,0 +1,3 @@
+podcasts-compile-tests: 20s
+podcasts-compile-tests: 40s
+podcasts-compile-tests: exit 1 in 52.2s

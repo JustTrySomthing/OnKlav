@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.BottomPhoneCameraUiTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-11-02T03:01:50" hostname="0df0e3b6efb4" time="6.668">
+  <properties/>
+  <testcase name="smallRootDialerKeepsCallAndTabsAboveTheMainMenu" classname="app.onklav.home.BottomPhoneCameraUiTest" time="6.668"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

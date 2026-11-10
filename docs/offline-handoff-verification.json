@@ -1,0 +1,42 @@
+{
+  "version": "0.100.2-offline-handoff",
+  "version_code": 111,
+  "status": "Source implemented and host-verified; not included in delivered0.100.1APK",
+  "implementation": "docs/OFFLINE-HANDOFF.md",
+  "prior_apk": "0.100.1contains initial default-route/NAT64 recovery, not these additional changes",
+  "tests": {
+    "OfflineHandoffTest": 4,
+    "PodcastDownloadsTest": 2,
+    "NetworkDownloadRecoveryTest": 3,
+    "SdkMediaLifecycleTest": 4,
+    "SdkMediaSourceTest": 9
+  },
+  "focused_tests": 22,
+  "lint": {
+    "errors": 0,
+    "warnings": 248,
+    "information": 1
+  },
+  "runtime_classes_checked": 2899,
+  "runtime_matches_compilation": true,
+  "native_sources_unchanged": true,
+  "included_signed_apps_current": 25,
+  "apk_assembled": false,
+  "apk_requested": false,
+  "physical_wifi_mobile_handoff_tested": false,
+  "device_decoder_tested": false,
+  "verified_behaviors": [
+    "Offline saved-show listing and direct local descriptor byte reads without a feed request",
+    "Local playback source path, no network restart for local files and stop on permission revocation",
+    "Streaming handoff retains seek/position and never resumes paused playback",
+    "Lost/superseded route callbacks discarded; reconnect retries bounded to one after handoff failure",
+    "Existing incomplete-download and media source/lifecycle guards preserved"
+  ],
+  "evidence": [
+    "docs/evidence/v0.100.2/offline-handoff-checks.log"
+  ],
+  "remaining_acceptance": [
+    "Actual Samsung/carrier Wi-Fi-to-mobile handoff",
+    "Native phone decoding of the reported saved episode; its error/file was not supplied"
+  ]
+}

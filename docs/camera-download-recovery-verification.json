@@ -1,0 +1,38 @@
+{
+  "version": "0.100.1-camera-downloads",
+  "version_code": 110,
+  "status": "Source/host checks and signed ARM64APK verification passed; physical camera and live media transfer remain unverified",
+  "implementation": "docs/CAMERA-DOWNLOAD-RECOVERY.md",
+  "restored_source_version": 119,
+  "tests": {
+    "CameraDownloadRecoveryTest": 6,
+    "NetworkDownloadRecoveryTest": 3,
+    "YoutubeDownloadUiTest": 2,
+    "EssentialsTest": 6,
+    "EssentialsUiTest": 3
+  },
+  "focused_android_tests": 20,
+  "lint": {
+    "errors": 0,
+    "warnings": 248,
+    "information": 1
+  },
+  "runtime_classes_checked": 2897,
+  "runtime_matches_compilation": true,
+  "native_and_sdk_unchanged": true,
+  "camera_device_crash_stack_obtained": false,
+  "camera_fix": "Canonical trusted Android data-root alias support with leaf-symlink rejection, startup/provider retry handling and guarded teardown",
+  "youtube_fix": "Previously unshipped URL resolver/actual format list preserved; rejected403/410links re-extracted once, paired tracks restarted together",
+  "live_transfer": "Not verified: previous environment returned Site Unavailable HTML in place of media; not repeated or counted as success",
+  "phone_hardware_tested": false,
+  "apk_assembled": true,
+  "source_distribution": "Corresponding source and pinned extractor source/license notices retained",
+  "evidence": [
+    "docs/evidence/v0.100.1/camera-download-recovery.log"
+  ],
+  "apk_file": "OnKlav-0.100.1-ARM64.apk",
+  "apk_sha256": "4d50233143b15d31e2bdcaccc660fd1d70b8a6a50d28c8c1b87014fab3141812",
+  "apk_bytes": 100373276,
+  "apk_signer_sha256": "6ed975c5fc27d19f6291f751a8bb00fa8a2c2e7d268bffc7b6ddf7e1b1a7a69d",
+  "apk_verification": "docs/apk-verification-debug.json"
+}

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.DriveDocumentsTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-24T08:54:09" hostname="ac5668fae30d" time="2.05">
+  <properties/>
+  <testcase name="sameDocumentAliasesRejectBeforeOpeningOrDeletingAnyFile" classname="app.onklav.home.DriveDocumentsTest" time="1.956"/>
+  <testcase name="partialCopyFailureCleansOnlyTheOpenedDestination" classname="app.onklav.home.DriveDocumentsTest" time="0.058"/>
+  <testcase name="unreadableSourceDoesNotDeleteOrTruncateTheChosenDestination" classname="app.onklav.home.DriveDocumentsTest" time="0.036"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

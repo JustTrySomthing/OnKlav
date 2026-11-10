@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.VideoEditorHostTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-30T16:44:00" hostname="e89dc6ba27f3" time="7.779">
+  <properties/>
+  <testcase name="compositionCarriesClipsTextSpeedAndMixedSound" classname="app.onklav.home.VideoEditorHostTest" time="2.099"/>
+  <testcase name="splitKeepsSourceTimingAndDividesCaptionRanges" classname="app.onklav.home.VideoEditorHostTest" time="0.064"/>
+  <testcase name="pcmGainAndFadesUseRealSamplesAndProtectPeaks" classname="app.onklav.home.VideoEditorHostTest" time="0.048"/>
+  <testcase name="bundledSignedAppLaunchesAndHonorsRevocation" classname="app.onklav.home.VideoEditorHostTest" time="3.092"/>
+  <testcase name="projectStoreRestoresOriginalCopiesAndRejectsUnsafePaths" classname="app.onklav.home.VideoEditorHostTest" time="0.049"/>
+  <testcase name="longCaptionsWrapInsideBoundedBitmapTextures" classname="app.onklav.home.VideoEditorHostTest" time="2.425"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

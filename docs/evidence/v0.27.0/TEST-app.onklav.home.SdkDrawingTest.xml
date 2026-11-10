@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.SdkDrawingTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-22T20:25:16" hostname="2383b52a5fc7" time="0.186">
+  <properties/>
+  <testcase name="exportRendersImageCoordinatesAndTextBounds" classname="app.onklav.home.SdkDrawingTest" time="0.055"/>
+  <testcase name="importsAreBoundedAndPreserveOrientedDimensions" classname="app.onklav.home.SdkDrawingTest" time="0.064"/>
+  <testcase name="drawingGestureUsesImageSpaceAndCancellationDoesNotCommit" classname="app.onklav.home.SdkDrawingTest" time="0.067"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

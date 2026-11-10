@@ -1,0 +1,20 @@
+   Compiling onklav-core v0.8.0 (/workspace/scratch/75acf774e3b8/work/OnKlav/core)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 8.98s
+     Running unittests src/lib.rs (core/target/debug/deps/onklav_core-8a579202944a8eae)
+
+running 6 tests
+test sdk_handoff::tests::typed_requests_reject_authority_and_inventory_injection ... ok
+test history_completed::tests::conflicting_active_metadata_receipt_blocks_all_handoff_consumers ... ok
+test history_journal::tests::interrupted_archive_handoff_is_idempotent_and_preserves_unknowns ... ok
+test history_completed::tests::completed_handoff_keeps_summary_journal_and_metadata_replay_protection ... ok
+test sdk::tests::handoff_permissions_and_replies_fail_closed ... ok
+test sdk::tests::handoff_file_scope_tokens_and_removal_are_owner_bound ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 229 filtered out; finished in 1.01s
+
+     Running unittests src/bin/onklav-pack.rs (core/target/debug/deps/onklav_pack-ee23dc4255ec4a6b)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

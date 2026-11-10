@@ -1,0 +1,38 @@
+[
+  {
+    "file": "0-reading.wav",
+    "frames": 564301,
+    "peak": 31501,
+    "clipped_samples": 0
+  },
+  {
+    "file": "1-reading.wav",
+    "frames": 565846,
+    "peak": 22092,
+    "clipped_samples": 0
+  },
+  {
+    "file": "1-reference.wav",
+    "frames": 198131,
+    "peak": 30734,
+    "clipped_samples": 0
+  },
+  {
+    "file": "0-reference.wav",
+    "frames": 210803,
+    "peak": 31765,
+    "clipped_samples": 0
+  },
+  {
+    "file": "0-message.wav",
+    "frames": 156024,
+    "peak": 29546,
+    "clipped_samples": 0
+  },
+  {
+    "file": "1-message.wav",
+    "frames": 160519,
+    "peak": 21214,
+    "clipped_samples": 0
+  }
+]

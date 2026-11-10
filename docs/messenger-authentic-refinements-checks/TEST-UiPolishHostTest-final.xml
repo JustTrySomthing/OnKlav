@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.UiPolishHostTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-31T20:59:45" hostname="83231ba1f14b" time="11.713">
+  <properties/>
+  <testcase name="messageFoldersFilterProviderRowsAndRestoreAllUpdatesRustState" classname="app.onklav.home.UiPolishHostTest" time="11.713"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

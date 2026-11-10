@@ -1,0 +1,105 @@
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=43529 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=43529 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.11.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :android:app
+WARNING: The option setting 'android.aapt2FromMavenOverride=/workspace/scratch/21249b7ec6ea/build-env/sdk/build-tools/35.0.0/aapt2' is experimental.
+WARNING: platform-tools package is not installed.
+
+> Task :android:app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:app:preBuild UP-TO-DATE
+> Task :android:app:preDebugBuild UP-TO-DATE
+> Task :android:games:preBuild UP-TO-DATE
+> Task :android:games:preDebugBuild UP-TO-DATE
+> Task :android:games:writeDebugAarMetadata UP-TO-DATE
+> Task :android:shared:preBuild UP-TO-DATE
+> Task :android:shared:preDebugBuild UP-TO-DATE
+> Task :android:shared:writeDebugAarMetadata UP-TO-DATE
+> Task :android:tools:preBuild UP-TO-DATE
+> Task :android:tools:preDebugBuild UP-TO-DATE
+> Task :android:tools:writeDebugAarMetadata UP-TO-DATE
+> Task :android:app:checkDebugAarMetadata FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':android:app:checkDebugAarMetadata'.
+> Could not resolve all files for configuration ':android:app:debugRuntimeClasspath'.
+   > Could not resolve org.apache.poi:poi:5.5.1.
+     Required by:
+         project :android:app
+      > No cached version of org.apache.poi:poi:5.5.1 available for offline mode.
+   > Could not resolve org.apache.poi:poi-scratchpad:5.5.1.
+     Required by:
+         project :android:app
+      > No cached version of org.apache.poi:poi-scratchpad:5.5.1 available for offline mode.
+   > Could not resolve androidx.camera:camera-camera2:1.5.3.
+     Required by:
+         project :android:app
+      > No cached version of androidx.camera:camera-camera2:1.5.3 available for offline mode.
+      > No cached version of androidx.camera:camera-camera2:1.5.3 available for offline mode.
+   > Could not resolve androidx.camera:camera-lifecycle:1.5.3.
+     Required by:
+         project :android:app
+      > No cached version of androidx.camera:camera-lifecycle:1.5.3 available for offline mode.
+      > No cached version of androidx.camera:camera-lifecycle:1.5.3 available for offline mode.
+   > Could not resolve androidx.camera:camera-view:1.5.3.
+     Required by:
+         project :android:app
+      > No cached version of androidx.camera:camera-view:1.5.3 available for offline mode.
+      > No cached version of androidx.camera:camera-view:1.5.3 available for offline mode.
+   > Could not resolve androidx.camera:camera-video:1.5.3.
+     Required by:
+         project :android:app
+      > No cached version of androidx.camera:camera-video:1.5.3 available for offline mode.
+      > No cached version of androidx.camera:camera-video:1.5.3 available for offline mode.
+   > Could not resolve com.sun.mail:android-mail:1.6.7.
+     Required by:
+         project :android:app
+      > No cached version of com.sun.mail:android-mail:1.6.7 available for offline mode.
+   > Could not resolve com.sun.mail:android-activation:1.6.7.
+     Required by:
+         project :android:app
+      > No cached version of com.sun.mail:android-activation:1.6.7 available for offline mode.
+   > Could not resolve androidx.media3:media3-transformer:1.9.3.
+     Required by:
+         project :android:app
+      > No cached version of androidx.media3:media3-transformer:1.9.3 available for offline mode.
+      > No cached version of androidx.media3:media3-transformer:1.9.3 available for offline mode.
+   > Could not resolve androidx.media3:media3-effect:1.9.3.
+     Required by:
+         project :android:app
+      > No cached version of androidx.media3:media3-effect:1.9.3 available for offline mode.
+      > No cached version of androidx.media3:media3-effect:1.9.3 available for offline mode.
+   > Could not resolve androidx.media3:media3-exoplayer:1.9.3.
+     Required by:
+         project :android:app
+      > No cached version of androidx.media3:media3-exoplayer:1.9.3 available for offline mode.
+      > No cached version of androidx.media3:media3-exoplayer:1.9.3 available for offline mode.
+   > Could not resolve androidx.media3:media3-exoplayer-hls:1.9.3.
+     Required by:
+         project :android:app
+      > No cached version of androidx.media3:media3-exoplayer-hls:1.9.3 available for offline mode.
+      > No cached version of androidx.media3:media3-exoplayer-hls:1.9.3 available for offline mode.
+   > Could not resolve androidx.media3:media3-ui:1.9.3.
+     Required by:
+         project :android:app
+      > No cached version of androidx.media3:media3-ui:1.9.3 available for offline mode.
+      > No cached version of androidx.media3:media3-ui:1.9.3 available for offline mode.
+   > Could not resolve com.google.crypto.tink:tink-android:1.24.0.
+     Required by:
+         project :android:app
+      > No cached version of com.google.crypto.tink:tink-android:1.24.0 available for offline mode.
+   > Could not resolve com.google.zxing:core:3.5.4.
+     Required by:
+         project :android:app
+      > No cached version of com.google.zxing:core:3.5.4 available for offline mode.
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 10s
+4 actionable tasks: 1 executed, 3 up-to-date

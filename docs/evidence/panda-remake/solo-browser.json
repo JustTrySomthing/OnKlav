@@ -1,0 +1,34 @@
+[
+  {
+    "viewport": [
+      432,
+      800
+    ],
+    "original_music_rms": 0.003635065737242203,
+    "touch_pull_aim_launch": true,
+    "pause_freezes_physics_music": true,
+    "shockwave_consumes_charge_and_real_score": true,
+    "midflight_json_restore": true,
+    "drag_rotate_reposition_reserve": true,
+    "random_reset_fill": true,
+    "saved_draft_new_resume": true,
+    "master_mute": true,
+    "errors": []
+  },
+  {
+    "viewport": [
+      320,
+      560
+    ],
+    "original_music_rms": 0.022501162045285943,
+    "touch_pull_aim_launch": true,
+    "pause_freezes_physics_music": true,
+    "shockwave_consumes_charge_and_real_score": true,
+    "midflight_json_restore": true,
+    "drag_rotate_reposition_reserve": true,
+    "random_reset_fill": true,
+    "saved_draft_new_resume": true,
+    "master_mute": true,
+    "errors": []
+  }
+]

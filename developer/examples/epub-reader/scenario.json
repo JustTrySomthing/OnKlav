@@ -1,0 +1,17 @@
+{"grants":["storage.private"],"steps":[
+ {"action":"sample.create","expect":{"status":"Sample created"}},
+ {"action":"sample.open","expect":{"reader.chapter.chapter":0,"reader.reading.ready":true}},
+ {"action":"epub.toc","expect":{"reader.mode":"toc"}},
+ {"action":"epub.back","expect":{"open":true,"reader.mode":"read"}},
+ {"action":"epub.toc"},
+ {"action":"epub.toc.1","expect":{"reader.chapter.chapter":1,"reader.reading.offset":0,"reader.reading.dirty":false}},
+ {"action":"epub.search","expect":{"reader.mode":"search"}},
+ {"action":"epub.query","value":"needle"},
+ {"action":"epub.find","expect":{"reader.matches.0.chapter":0,"reader.matches.1.chapter":1}},
+ {"action":"epub.hit.0","expect":{"reader.chapter.chapter":0,"reader.reading.offset":23,"reader.reading.dirty":false}},
+ {"reopen":true},
+ {"action":"sample.open","expect":{"reader.chapter.chapter":0,"reader.reading.offset":23}},
+ {"action":"epub.next","expect":{"reader.chapter.chapter":1,"reader.reading.offset":0}},
+ {"reopen":true},
+ {"action":"sample.open","expect":{"reader.chapter.chapter":1,"reader.reading.offset":0}}
+]}

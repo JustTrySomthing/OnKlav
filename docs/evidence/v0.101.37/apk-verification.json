@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "version": "0.101.37-rc1",
+  "version_code": 216,
+  "apk": "OnKlav-0.101.37-Air-Hockey.apk",
+  "base": "OnKlav-0.101.36-Cats-vs-Dogs.apk",
+  "changed_entries": [
+    "assets/godot-builtin/index.html",
+    "assets/godot-builtin/index.pck",
+    "AndroidManifest.xml"
+  ],
+  "sha256": "4f37d420c0f7955a3ca089e46b2b137d782d4dc12ec95953d7c5c41836ca7200",
+  "physical_android_test": "pending"
+}

@@ -1,0 +1,670 @@
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkDrawingImages.kt:4: Warning: Avoid using android.media.ExifInterface; use androidx.exifinterface.media.ExifInterface instead [ExifInterface]
+import android.media.ExifInterface
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SettingsScreens.kt:7: Warning: Avoid using android.media.ExifInterface; use androidx.exifinterface.media.ExifInterface instead [ExifInterface]
+import android.media.ExifInterface
+       ~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "ExifInterface":
+   The android.media.ExifInterface implementation has some known security bugs
+   in older versions of Android. There is a new implementation available of
+   this library in the support library, which is preferable.
+
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkNativeData.kt:40: Warning: deleteProfile should only be called if the feature MULTI_PROFILE is present; to check call androidx.webkit.WebViewFeature#isFeatureSupported [RequiresFeature]
+    internal fun deleteProfile(store:ProfileStore,name:String)=store.deleteProfile(name)||name !in store.allProfileNames
+                                                               ~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkNativeData.kt:40: Warning: getAllProfileNames should only be called if the feature MULTI_PROFILE is present; to check call androidx.webkit.WebViewFeature#isFeatureSupported [RequiresFeature]
+    internal fun deleteProfile(store:ProfileStore,name:String)=store.deleteProfile(name)||name !in store.allProfileNames
+                                                                                                   ~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkWebComponent.kt:191: Warning: setProfile should only be called if the feature MULTI_PROFILE is present; to check call androidx.webkit.WebViewFeature#isFeatureSupported [RequiresFeature]
+                        WebViewCompat.setProfile(view,SdkNativeData.profile(ctx,auth.getString("app")))
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkWebComponent.kt:192: Warning: getProfile should only be called if the feature MULTI_PROFILE is present; to check call androidx.webkit.WebViewFeature#isFeatureSupported [RequiresFeature]
+                        val profile=WebViewCompat.getProfile(view)
+                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkWebComponent.kt:193: Warning: getServiceWorkerController should only be called if the feature MULTI_PROFILE is present; to check call androidx.webkit.WebViewFeature#isFeatureSupported [RequiresFeature]
+                        profile.serviceWorkerController.serviceWorkerWebSettings.apply { blockNetworkLoads=true;allowFileAccess=false;allowContentAccess=false }
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkWebComponent.kt:203: Warning: getCookieManager should only be called if the feature MULTI_PROFILE is present; to check call androidx.webkit.WebViewFeature#isFeatureSupported [RequiresFeature]
+                        profile.cookieManager.setAcceptThirdPartyCookies(view,false)
+                        ~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkWebComponent.kt:267: Warning: getProfile should only be called if the feature MULTI_PROFILE is present; to check call androidx.webkit.WebViewFeature#isFeatureSupported [RequiresFeature]
+                            val profile=WebViewCompat.getProfile(view);val navigation=page.navigation;pool.entries.clear();view.clearHistory();pool.findStatus=null
+                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkWebComponent.kt:270: Warning: deleteBrowsingData should only be called if the feature DELETE_BROWSING_DATA is present; to check call androidx.webkit.WebViewFeature#isFeatureSupported [RequiresFeature]
+                            WebStorageCompat.deleteBrowsingData(profile.webStorage) {
+                            ^
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkWebComponent.kt:270: Warning: getWebStorage should only be called if the feature MULTI_PROFILE is present; to check call androidx.webkit.WebViewFeature#isFeatureSupported [RequiresFeature]
+                            WebStorageCompat.deleteBrowsingData(profile.webStorage) {
+                                                                ~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "RequiresFeature":
+   Some APIs require optional features to be present. This check makes sure
+   that calls to these APIs are surrounded by a check which enforces this.
+
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/AndroidManifest.xml:30: Warning: Attribute usesPermissionFlags is only used in API level 31 and higher (current min is 29) [UnusedAttribute]
+  <uses-permission android:name="android.permission.BLUETOOTH_SCAN" android:usesPermissionFlags="neverForLocation" />
+                                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/AndroidManifest.xml:32: Warning: Attribute usesPermissionFlags is only used in API level 31 and higher (current min is 29) [UnusedAttribute]
+  <uses-permission android:name="android.permission.NEARBY_WIFI_DEVICES" android:usesPermissionFlags="neverForLocation" />
+                                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UnusedAttribute":
+   This check finds attributes set in XML files that were introduced in a
+   version newer than the oldest version targeted by your application (with
+   the minSdkVersion attribute).
+
+   This is not an error; the application will simply ignore the attribute.
+   However, if the attribute is important to the appearance or functionality
+   of your application, you should consider finding an alternative way to
+   achieve the same result with only available attributes, and then you can
+   optionally create a copy of the layout in a layout-vNN folder which will be
+   used on API NN or higher where you can take advantage of the newer
+   attribute.
+
+   Note: This check does not only apply to attributes. For example, some tags
+   can be unused too, such as the new <tag> element in layouts introduced in
+   API 21.
+
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkPdfEngine.kt:67: Warning: Use @RequiresApi(35) instead of @TargetApi` to propagate the requirement to callers of text [UseRequiresApi]
+ @android.annotation.TargetApi(35) override fun text(page:Int):String{check(textSupported);return renderer.openPage(page).use{p->val out=StringBuilder();for(c in p.textContents){out.append(c.text).append('\n');if(out.length>=50000)break};SdkPdfProtocol.boundedText(out.toString(),50000)}}
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkPdfEngine.kt:68: Warning: Use @RequiresApi(35) instead of @TargetApi` to propagate the requirement to callers of search [UseRequiresApi]
+ @android.annotation.TargetApi(35) override fun search(page:Int,query:String,after:Int):List<List<RectF>>{check(textSupported);return renderer.openPage(page).use{p->p.searchText(query).drop(after).take(41).map{it.bounds.take(16)}}}
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkPdfEngine.kt:69: Warning: Use @RequiresApi(35) instead of @TargetApi` to propagate the requirement to callers of select [UseRequiresApi]
+ @android.annotation.TargetApi(35) override fun select(page:Int,start:Point,end:Point):Pair<String,List<RectF>>{check(textSupported);return renderer.openPage(page).use{p->val selection=p.selectContent(SelectionBoundary(start),SelectionBoundary(end));val chunks=selection?.selectedTextContents.orEmpty();val text=StringBuilder();val bounds=ArrayList<RectF>();for(c in chunks){text.append(c.text).append('\n');bounds.addAll(c.bounds.take((128-bounds.size).coerceAtLeast(0)));if(text.length>=20000)break};SdkPdfProtocol.boundedText(text.toString(),20000) to bounds}}
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "UseRequiresApi":
+   The @TargetApi annotation only suppresses API warnings locally.
+   @RequiresApi on the other hand will propagate the requirement out to any
+   callers of this API, making sure that they either perform API level checks
+   (using for example SDK_INT), or defining @RequiresApi annotations
+   themselves.
+
+   (The @TargetApi annotation predates @RequiresApi, and was introduced as an
+   early way to suppress lint API warnings for a particular API level.
+   Accidentally using @TargetApi can lead to crashes since there is no check
+   that other calls to this method actually check that the call is safe.)
+
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/build.gradle.kts:8: Warning: Missing x86_64 ABI support for ChromeOS [ChromeOsAbiSupport]
+    defaultConfig { applicationId="app.onklav.home.prototype";minSdk=29;targetSdk=36;versionCode=85;versionName="0.77.0-readers-polish1";testInstrumentationRunner="androidx.test.runner.AndroidJUnitRunner";ndk {abiFilters+=onklavAbis} }
+                                                                                                                                                                                                                              ~~~~~~~~~~
+
+   Explanation for issues of type "ChromeOsAbiSupport":
+   To properly support ChromeOS, your Android application should have an x86
+   and/or x86_64 binary as part of the build configuration. To fix the issue,
+   ensure your files are properly optimized for ARM; the binary translator
+   will then ensure compatibility with x86. Alternatively, add an abiSplit for
+   x86 within your build.gradle file and create the required x86
+   dependencies.
+
+   https://developer.android.com/ndk/guides/abis
+
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkMedia.kt:16: Warning: Do not place Android context classes in static fields (static reference to SdkMedia which has field context pointing to Context); this is a memory leak [StaticFieldLeak]
+/** One shared player, focus owner and media session for all SDK apps. */
+^
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkMedia.kt:21: Warning: Do not place Android context classes in static fields; this is a memory leak [StaticFieldLeak]
+ private var context:Context?=null;private var service:SdkPlaybackService?=null;private var session:MediaSession?=null
+ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "StaticFieldLeak":
+   A static field will leak contexts.
+
+   Non-static inner classes have an implicit reference to their outer class.
+   If that outer class is for example a Fragment or Activity, then this
+   reference means that the long-running handler/loader/task will hold a
+   reference to the activity which prevents it from getting garbage
+   collected.
+
+   Similarly, direct field references to activities and fragments from these
+   longer running instances can cause leaks.
+
+   ViewModel classes should never point to Views or non-application Contexts.
+
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/CarrierMedia.kt:40: Warning: Consider also using StorageManager#getAllocatableBytes and allocateBytes which will consider clearable cached data [UsableSpace]
+  require(c.cacheDir.usableSpace>s.budget*5L+8*1024*1024){"Free some phone storage before preparing this clip"}
+                     ~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkAudioBooks.kt:59: Warning: Consider also using StorageManager#getAllocatableBytes and allocateBytes which will consider clearable cached data [UsableSpace]
+    c.contentResolver.openInputStream(uri)?.use{input->file.outputStream().use{out->val buffer=ByteArray(131072);while(true){val n=input.read(buffer);if(n<0)break;check(c,o,token);kotlin.check(d.usableSpace>n+8L*1024*1024){"Not enough free storage"};out.write(buffer,0,n);bytes+=n}}}?:error("File could not be opened")
+                                                                                                                                                                                                   ~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkAudioBooks.kt:104: Warning: Consider also using StorageManager#getAllocatableBytes and allocateBytes which will consider clearable cached data [UsableSpace]
+   try{val req=resolve(t.getString("url"),token,connect){check(c,o,token)};val call=connect(req);calls[token]=call;call.execute().use{res->require(res.code==200){"Download unavailable (${res.code}); try again later"};val body=res.body?:error("Empty download");require(body.contentType()?.type !in setOf("text","image")){"Source did not return audio"};val total=body.contentLength();var bytes=0L;require(total!=0L);if(total>0)kotlin.check(folder.usableSpace>total+8L*1024*1024){"Not enough free storage"};body.byteStream().use{input->part.outputStream().use{out->val buffer=ByteArray(131072);var last=0L;while(true){val n=input.read(buffer);if(n<0)break;check(c,o,token);kotlin.check(folder.usableSpace>n+8L*1024*1024){"Not enough free storage"};out.write(buffer,0,n);bytes+=n;val now=android.os.SystemClock.elapsedRealtime();if(now-last>1000){last=now;notify("Chapter ${i+1}/${tracks.length()} · ${bytes/1048576} MB")}}}};kotlin.check(bytes>0&&(total<0||bytes==total)){"Incomplete download; completed chapters are kept"}}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                             ~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkAudioBooks.kt:104: Warning: Consider also using StorageManager#getAllocatableBytes and allocateBytes which will consider clearable cached data [UsableSpace]
+   try{val req=resolve(t.getString("url"),token,connect){check(c,o,token)};val call=connect(req);calls[token]=call;call.execute().use{res->require(res.code==200){"Download unavailable (${res.code}); try again later"};val body=res.body?:error("Empty download");require(body.contentType()?.type !in setOf("text","image")){"Source did not return audio"};val total=body.contentLength();var bytes=0L;require(total!=0L);if(total>0)kotlin.check(folder.usableSpace>total+8L*1024*1024){"Not enough free storage"};body.byteStream().use{input->part.outputStream().use{out->val buffer=ByteArray(131072);var last=0L;while(true){val n=input.read(buffer);if(n<0)break;check(c,o,token);kotlin.check(folder.usableSpace>n+8L*1024*1024){"Not enough free storage"};out.write(buffer,0,n);bytes+=n;val now=android.os.SystemClock.elapsedRealtime();if(now-last>1000){last=now;notify("Chapter ${i+1}/${tracks.length()} · ${bytes/1048576} MB")}}}};kotlin.check(bytes>0&&(total<0||bytes==total)){"Incomplete download; completed chapters are kept"}}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  ~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SettingsStorage.kt:86: Warning: Consider also using StorageManager#getAllocatableBytes and allocateBytes which will consider clearable cached data [UsableSpace]
+            Text("Phone Storage Available · ${size(c.filesDir.usableSpace)}",fontSize=14.sp)
+                                                              ~~~~~~~~~~~
+
+   Explanation for issues of type "UsableSpace":
+   When you need to allocate disk space for large files, consider using the
+   new allocateBytes(FileDescriptor, long) API, which will automatically clear
+   cached files belonging to other apps (as needed) to meet your request.
+
+   When deciding if the device has enough disk space to hold your new data,
+   call getAllocatableBytes(UUID) instead of using getUsableSpace(), since the
+   former will consider any cached data that the system is willing to clear on
+   your behalf.
+
+   Note that these methods require API level 26. If your app is running on
+   older devices, you will probably need to use both APIs, conditionally
+   switching on Build.VERSION.SDK_INT. Lint only looks in the same compilation
+   unit to see if you are already using both APIs, so if it warns even though
+   you are already using the new API, consider moving the calls to the same
+   file or suppressing the warning.
+
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkGatedWebView.kt:16: Warning: Custom view SdkGatedWebView is missing constructor used by tools: (Context) or (Context,AttributeSet) or (Context,AttributeSet,int) [ViewConstructor]
+internal class SdkGatedWebView(context:Context,private val granted:(String)->Boolean):WebView(context) {
+               ~~~~~~~~~~~~~~~
+
+   Explanation for issues of type "ViewConstructor":
+   Some layout tools (such as the Android layout editor) need to find a
+   constructor with one of the following signatures:
+   * View(Context context)
+   * View(Context context, AttributeSet attrs)
+   * View(Context context, AttributeSet attrs, int defStyle)
+
+   If your custom view needs to perform initialization which does not apply
+   when used in a layout editor, you can surround the given code with a check
+   to see if View#isInEditMode() is false, since that method will return false
+   at runtime but true within a user interface editor.
+
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/AppsDesktop.kt:80: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+        prefs
+        ^
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/AppsDesktop.kt:168: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+        if (dragging == null) prefs.edit().putInt("page", pager.currentPage).apply()
+                              ~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/AppsDesktop.kt:242: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+                    prefs
+                    ^
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/CarrierResults.kt:37: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+                (kind.startsWith("sms_")||part==0)&&intent.action=="app.onklav.$kind"&&intent.data==Uri.parse("onklav-result://$kind/$id/$part")
+                                                                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/Catalog.kt:63: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+        visibilityPrefs(context)
+        ^
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/ChatStore.kt:36: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+                check(prefs.edit().putBoolean("folders", true).commit())
+                      ~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/ConversationMedia.kt:52: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+ fun set(c:Context,key:String,value:Boolean){check(c.getSharedPreferences("message-media",0).edit().putBoolean(key,value).commit());epoch.value++}
+                                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/ConversationMedia.kt:60: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+  value=withContext(Dispatchers.IO){MediaPreferences.decoders.withPermit{try{ImageDecoder.decodeDrawable(ImageDecoder.createSource(c.contentResolver,Uri.parse(part.uri))){decoder,info,_->
+                                                                                                                                                     ~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/ConversationMedia.kt:175: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+  try{player.setDataSource(c,Uri.parse(part.uri));player.prepareAsync()}catch(e:Exception){error="Unable to open this audio or video. Try again or use Open With."}
+                             ~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/DriveBackup.kt:57: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+   try{DriveDocuments.copy(c,Uri.parse(source),uri);runCatching{c.contentResolver.takePersistableUriPermission(uri,Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION)};val remembered=withContext(Dispatchers.IO){prefs.edit().putString("last_uri",uri.toString()).putString("last_mime",mime).putString("last_name",name).commit()};latest=uri.toString();status=if(remembered)"Saved through Android Files. If you chose Google Drive, Drive manages cloud syncing."else"File saved, but the last-saved shortcut could not be remembered."}
+                                                                                                                                                                                                                                                ~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/DriveBackup.kt:57: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+   try{DriveDocuments.copy(c,Uri.parse(source),uri);runCatching{c.contentResolver.takePersistableUriPermission(uri,Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION)};val remembered=withContext(Dispatchers.IO){prefs.edit().putString("last_uri",uri.toString()).putString("last_mime",mime).putString("last_name",name).commit()};latest=uri.toString();status=if(remembered)"Saved through Android Files. If you chose Google Drive, Drive manages cloud syncing."else"File saved, but the last-saved shortcut could not be remembered."}
+                             ~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/DriveBackup.kt:84: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+   latest?.let{uri->ChoiceButton("Open last saved file",outlined=false,enabled=!busy){try{c.startActivity(Intent(Intent.ACTION_VIEW).setDataAndType(Uri.parse(uri),prefs.getString("last_mime","application/octet-stream")).addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION))}catch(e:Exception){error=e.message}}}
+                                                                                                                                                    ~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/DriveSharing.kt:49: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+            val u=Uri.parse(value)
+                  ~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/DriveSharing.kt:129: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+        val uri=Uri.parse(link);check(uri.scheme=="https"&&uri.host=="drive.google.com"&&uri.userInfo==null&&uri.port in setOf(-1,443)) { "Drive returned an invalid sharing link" }
+                ~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/DriveSharing.kt:130: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+        check(prefs.edit().putString("last_link",link).remove("pending").commit()) { "Uploaded; recovery information could not be cleared. Review the saved file in Drive." }
+              ~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/DriveSharing.kt:140: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+        check(prefs.edit().remove("pending").commit()) { "File removed; could not clear the saved recovery record" }
+              ~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/DriveSharing.kt:161: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+        job=scope.launch { try { val email=api.account(value);check(withContext(Dispatchers.IO){prefs.edit().putString("account",email).commit()});account=email;token=value;status="Connected" }
+                                                                                                ~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/DriveSharing.kt:195: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+                    .addOnSuccessListener { if(active&&attempt==generation){token=null;account="";prefs.edit().remove("account").apply();busy=false;status="Disconnected. Shared files remain in Drive."} }
+                                                                                                  ~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/DriveSharing.kt:208: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+                            try { withTimeout(240000) { val uri=Uri.parse(source);staged=File(c.cacheDir,"drive-${UUID.randomUUID()}.tmp");DriveSharing.stage(c,uri,staged!!)
+                                                                ~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/FilesBroker.kt:76: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+    private fun save(entries:JSONObject){check(prefs.edit().putString("entries",entries.toString()).commit()){"Folder access could not be saved"}}
+                                               ~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/FilesBroker.kt:77: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+    private fun active(row:JSONObject):Uri{val tree=Uri.parse(row.getString("tree"));check(c.contentResolver.persistedUriPermissions.any{it.uri==tree&&it.isReadPermission}){"Android folder access was removed. Connect the folder again."};val uri=Uri.parse(row.getString("uri"));val root=Docs.buildDocumentUriUsingTree(tree,Docs.getTreeDocumentId(tree));check(uri==root||Docs.isChildDocument(c.contentResolver,root,uri)){"This file is outside the connected Android folder"};return uri}
+                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/FilesBroker.kt:77: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+    private fun active(row:JSONObject):Uri{val tree=Uri.parse(row.getString("tree"));check(c.contentResolver.persistedUriPermissions.any{it.uri==tree&&it.isReadPermission}){"Android folder access was removed. Connect the folder again."};val uri=Uri.parse(row.getString("uri"));val root=Docs.buildDocumentUriUsingTree(tree,Docs.getTreeDocumentId(tree));check(uri==root||Docs.isChildDocument(c.contentResolver,root,uri)){"This file is outside the connected Android folder"};return uri}
+                                                                                                                                                                                                                                                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/FilesBroker.kt:78: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+    private fun writable(row:JSONObject){val tree=Uri.parse(row.getString("tree"));check(c.contentResolver.persistedUriPermissions.any{it.uri==tree&&it.isWritePermission}){"This Android folder is read-only. Choose a writable folder to change files."}}
+                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/FilesBroker.kt:98: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+                val tree=Uri.parse(row.getString("tree"));val child=Docs.buildChildDocumentsUriUsingTree(tree,Docs.getDocumentId(uri))
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/GamesCatalog.kt:59: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+        prefs.edit().putString("order", ids.joinToString(",")).apply()
+        ~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/HistoryBackup.kt:75: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+            c.contentResolver.registerContentObserver(Uri.parse("content://mms-sms"),true,observer)
+                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/HistoryBackup.kt:76: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+            c.contentResolver.registerContentObserver(Uri.parse("content://sms"),true,observer)
+                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/HistoryBackup.kt:77: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+            c.contentResolver.registerContentObserver(Uri.parse("content://mms"),true,observer)
+                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/HistoryBackup.kt:85: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+                stable();c.contentResolver.query(Uri.parse(uri),null,selection,null,null,stop.signal)?.use{body(it)} ?: error("Message provider could not be read")
+                                                 ~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/HistoryBackup.kt:115: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+                                    val input=c.contentResolver.openAssetFileDescriptor(Uri.parse("content://mms/part/$pid"),"r",stop.signal)?.createInputStream() ?: error("An attachment could not be opened")
+                                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/HistoryRestoreProvider.kt:34: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+        return Uri.parse("content://${parts[0]}/${parts[1]}")
+               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/HistoryRestoreProvider.kt:74: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+                c.contentResolver.openAssetFileDescriptor(Uri.parse("content://mms/part/$id"),"w",stop.signal)?.createOutputStream()?.use{output->
+                                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/HistoryRestoreProvider.kt:114: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+                    c.contentResolver.openAssetFileDescriptor(Uri.parse("content://mms/part/$id"),"r",stop.signal)?.createInputStream()?.use{stream->
+                                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessageIdentity.kt:41: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+   ImageDecoder.decodeBitmap(ImageDecoder.createSource(context.contentResolver,Uri.parse(photo))){decoder,info,_->val scale=(128f/maxOf(info.size.width,info.size.height)).coerceAtMost(1f);decoder.setTargetSize((info.size.width*scale).toInt().coerceAtLeast(1),(info.size.height*scale).toInt().coerceAtLeast(1));decoder.allocator=ImageDecoder.ALLOCATOR_SOFTWARE}
+                                                                               ~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessageMedia.kt:102: Warning: Use the KTX function createBitmap instead? [UseKtx]
+        var bitmap = Bitmap.createBitmap(decoded.width, decoded.height, Bitmap.Config.ARGB_8888)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessageMedia.kt:119: Warning: Use the KTX extension function Bitmap.scale instead? [UseKtx]
+                    Bitmap.createScaledBitmap(
+                    ^
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessageMedia.kt:148: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+        val u = Uri.parse(p.uri)
+                ~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessageMedia.kt:161: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+        val metadata=FilesBroker.stage(c,Uri.parse(p.uri)){}
+                                         ~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessageMedia.kt:207: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+                                context.contentResolver.openInputStream(Uri.parse(part.uri))?.use {
+                                                                        ~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessageMedia.kt:221: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+                                context.contentResolver.openInputStream(Uri.parse(part.uri))?.use {
+                                                                        ~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessageMedia.kt:225: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+                                android.media.MediaMetadataRetriever().use{retriever->retriever.setDataSource(context,Uri.parse(part.uri));retriever.getScaledFrameAtTime(0,android.media.MediaMetadataRetriever.OPTION_CLOSEST_SYNC,640,640)?.asImageBitmap()}
+                                                                                                                      ~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessageNotifications.kt:55: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+                .setData(key?.let { android.net.Uri.parse("onklav-reminder://open/${android.net.Uri.encode(it)}") } ?: android.net.Uri.parse("onklav-message://thread/$thread"))
+                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessageNotifications.kt:55: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+                .setData(key?.let { android.net.Uri.parse("onklav-reminder://open/${android.net.Uri.encode(it)}") } ?: android.net.Uri.parse("onklav-message://thread/$thread"))
+                                                                                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessageNotifications.kt:95: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+                    .setData(android.net.Uri.parse("onklav-message://thread/$thread"))
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessageNotifications.kt:105: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+                    .setData(android.net.Uri.parse("onklav-message://thread/$thread"))
+                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessageVideoPreviews.kt:77: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+        check(c.getSharedPreferences("privacy",0).edit().putBoolean("youtube",value).commit()){ "Could not save Privacy settings" }
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/Messages.kt:111: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+            resolver.query(Uri.parse("content://mms-sms/canonical-addresses"),arrayOf("_id","address"),null,null,null)?.use { c ->
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/Messages.kt:132: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+                            Uri.parse("content://mms-sms/canonical-address/$id"),
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/Messages.kt:274: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+                Uri.parse("content://mms/$id/part"),
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/Messages.kt:291: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+                                            resolver.openInputStream(Uri.parse(uri))?.use {
+                                                                     ~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/Messages.kt:313: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+    private fun mmsSender(id:Long):String = resolver.query(Uri.parse("content://mms/$id/addr"),arrayOf("address","type"),"type=?",arrayOf("137"),null)?.use{c->if(c.moveToFirst())c.getString(0).orEmpty().takeUnless{it=="insert-address-token"}.orEmpty()else ""}.orEmpty()
+                                                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/Messages.kt:326: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+            resolver.query(Uri.parse("content://mms/part"),arrayOf("mid"),"ct=? AND (text LIKE ? OR text LIKE ?)",arrayOf("text/plain",*patterns),null)?.use{partsCursor->
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/Messages.kt:330: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+                    resolver.query(Uri.parse("content://mms/$id"),arrayOf("_id","date","msg_box"),"thread_id=? AND msg_box IN (1,2)",arrayOf(thread.toString()),null)?.use{c->if(c.moveToFirst()){
+                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/Messages.kt:349: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+        resolver.query(Uri.parse("content://mms/part"),arrayOf("mid"),"ct=? AND text LIKE ? ESCAPE '\\'",arrayOf("text/plain",pattern),null)?.use{c->
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/Messages.kt:351: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+                resolver.query(Uri.parse("content://mms/$mid"),arrayOf("thread_id"),null,null,null)?.use{m->if(m.moveToFirst()){val id=m.getLong(0);if(id in candidates)result+=id}}
+                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/Messages.kt:397: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+            resolver.query(Uri.parse("content://mms/part"),arrayOf("mid","text"),"mid IN ($slots) AND ct=? AND text LIKE ? ESCAPE '\\'",args,null)?.use{c->
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/Messages.kt:604: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+            check(resolver.delete(Uri.parse(message.uri), null, null) > 0) {
+                                  ~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt:26: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+        check(c.getSharedPreferences("messaging_setup",0).edit().putBoolean("carrier_trial",true).commit())
+              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt:73: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+                .setData(Uri.parse("onklav-result://$kind/$id/$part"))
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt:184: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+            if (v.size() > 0) context.contentResolver.update(Uri.parse(uri), v, null, null)
+                                                             ~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt:188: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+                    Uri.parse(uri),
+                    ~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt:361: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+                    Uri.parse("content://mms/$mid/addr"),
+                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt:367: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+                        Uri.parse("content://mms/$mid/addr"),
+                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt:389: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+                        context.contentResolver.insert(Uri.parse("content://mms/$mid/part"), pv)
+                                                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt:479: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+        val url = Uri.parse(location)
+                  ~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt:495: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+            prefs
+            ^
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt:538: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+            check(prefs.edit().putString("$id.error", e.message).putLong("$id.attempt", 0).commit()){ "Download failure could not be saved. Check available storage." }
+                  ~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt:555: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+            check(prefs.edit().putBoolean("$id.complete",true).commit()){ "Completed message metadata could not be saved. Check available storage." }
+                  ~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt:567: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+            check(prefs
+                  ^
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt:608: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+            check(prefs.edit().putString("$id.error", e.message).putLong("$id.attempt", 0).commit()){ "Download failure could not be saved. Check available storage." }
+                  ~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessengerSettings.kt:79: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+                        val edit=prefs.edit()
+                                 ~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessengerSetup.kt:108: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+                ChoiceButton("Android App Permissions",outlined=false){launch(Intent(Settings.ACTION_APPLICATION_DETAILS_SETTINGS,Uri.parse("package:"+c.packageName)))}
+                                                                                                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessengerSetup.kt:174: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+                        c.getSharedPreferences("profile", 0)
+                        ^
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/ReplyReminders.kt:15: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+                .setData(Uri.parse("onklav-reminder://message/${Uri.encode(key)}"))
+                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkAppScreen.kt:240: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+                    "links.external" -> { val url=SdkWebPolicy.external(args.getString("url"));if(openBrowser!=null&&args.optString("target")!="youtube"){model.reply(pending);openBrowser(url)}else{val intent=Intent(Intent.ACTION_VIEW,android.net.Uri.parse(url));if(args.optString("target")=="youtube")intent.setPackage("com.google.android.youtube");try{context.startActivity(intent)}catch(e:android.content.ActivityNotFoundException){error(if(args.optString("target")=="youtube")"YouTube App Is Not Installed"else"No Browser Is Installed")};model.reply(pending)} }
+                                                                                                                                                                                                                                          ~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkAudioBooks.kt:45: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+ fun finished(c:Context,o:JSONObject,key:String,done:Boolean)=AppSdk.carrierEgress{authorize(c,o);get(c,o,key);val p=progress(c,o,key).put("finished",done).put("updated",System.currentTimeMillis());check(prefs(c,o).edit().putString(key,p.toString()).commit());changes.value++}
+                                                                                                                                                                                                            ~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkAudioBooks.kt:46: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+ fun remove(c:Context,o:JSONObject,key:String)=AppSdk.carrierEgress{authorize(c,o);synchronized(lock){val d=root(c,o);val kept=JSONArray(index(d).objects().filter{it.getString("id")!=id(key)});write(d,kept);check(prefs(c,o).edit().remove(key).commit());File(d,id(key)).deleteRecursively();leases.entries.removeAll{it.value.optString("book")==key&&it.value.getJSONObject("owner").optString("id")==o.optString("id")}};cancelDownload(o.getString("id"),key);SdkMedia.changed(c,o.getString("id"))}
+                                                                                                                                                                                                                     ~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkAudioBooks.kt:47: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+ fun clearApp(c:Context,key:String){deletedApps.add(key);invalidate(key);synchronized(lock){root(c,key).deleteRecursively();check(c.getSharedPreferences("audiobooks-progress-$key",0).edit().clear().commit())}}
+                                                                                                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkAudioBooks.kt:75: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+ fun recorded(c:Context,o:JSONObject,item:JSONObject,position:Long,duration:Long,speed:Float,done:Boolean=false){if(!item.has("audiobook_track")||o.getString("id") in deletedApps||(!done&&position<=0&&duration<=0))return;runCatching{AppSdk.carrierEgress{authorize(c,o);synchronized(lock){val key=item.getString("audiobook_book");if(index(root(c,o)).objects().none{it.getString("id")==key})return@carrierEgress;val p=progress(c,o,key).put("index",item.getInt("audiobook_index")).put("position_ms",position).put("duration_ms",duration).put("speed",speed).put("finished",done).put("listened",true).put("updated",System.currentTimeMillis());kotlin.check(prefs(c,o).edit().putString(key,p.toString()).commit()){ "Listening position could not be saved" }}}}.onSuccess{saveErrors.value=saveErrors.value-o.getString("id")}.onFailure{saveErrors.value=saveErrors.value+(o.getString("id") to "Listening position could not be saved. Reopen AudioBooks and retry.")}}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkAudioBooks.kt:78: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+ fun reorder(c:Context,o:JSONObject,key:String,from:Int,to:Int)=update(c,o,key){val tracks=it.getJSONArray("tracks").objects().toMutableList();require(from in tracks.indices&&to in tracks.indices);val row=tracks.removeAt(from);tracks.add(to,row);it.put("tracks",JSONArray(tracks));val marks=it.getJSONArray("bookmarks");marks.objects().forEach{m->val old=m.getInt("index");m.put("index",when{old==from->to;from<to&&old in from+1..to->old-1;from>to&&old in to until from->old+1;else->old})};val p=progress(c,o,key);val old=p.optInt("index");p.put("index",when{old==from->to;from<to&&old in from+1..to->old-1;from>to&&old in to until from->old+1;else->old});prefs(c,o).edit().putString(key,p.toString()).apply();SdkMedia.changed(c,o.getString("id"))}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                ~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkDrawingImages.kt:28: Warning: Use the KTX function createBitmap instead? [UseKtx]
+   val paper=Bitmap.createBitmap(oriented.width,oriented.height,Bitmap.Config.ARGB_8888).also { owned.add(it) }
+             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkDrawingImages.kt:69: Warning: Use the KTX extension function Canvas.withTranslation instead? [UseKtx]
+   val saved=canvas.save();canvas.translate(b.left+10,b.top+10);text.paint.setShadowLayer(maxOf(1f,width/900f),0f,0f,if(luminance>140) Color.WHITE else Color.BLACK);text.draw(canvas);canvas.restoreToCount(saved)
+             ~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkDrawingImages.kt:78: Warning: Use the KTX function createBitmap instead? [UseKtx]
+  val base=image(doc);val output=Bitmap.createBitmap(base.width,base.height,Bitmap.Config.ARGB_8888)
+                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkDrawingView.kt:116: Warning: Use the KTX extension function Canvas.withSave instead? [UseKtx]
+  for(i in 0 until marks.length()) { val m=marks.getJSONObject(i);val layer=c.save();if(i==selected) c.translate(dx,dy);SdkDrawingImages.drawMark(c,m,b.width);c.restoreToCount(layer) }
+                                                                            ~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkFilesEffects.kt:52: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+                val input=if(file.has("path"))File(file.getString("path")).inputStream()else c.contentResolver.openInputStream(Uri.parse(file.getString("uri")))?:error("Source file is unavailable")
+                                                                                                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkFilesEffects.kt:72: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+                    "open"->{val file=withContext(Dispatchers.IO){external.run(args){model.authorizeNow(p)}};model.authorize(p);val uri=Uri.parse(file.getString("uri"));val mime=file.optString("mime","application/octet-stream");model.reply(p);focus.clearFocus(force=true);if(mime.startsWith("image/")||mime.startsWith("video/")||mime.startsWith("audio/"))media=MessagePart(uri.toString(),mime,file.optString("name","File"))else FilesBroker.open(c,uri,mime)}
+                                                                                                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkGatedWebView.kt:31: Warning: Use the KTX extension function Menu.get instead? [UseKtx]
+        fun prune(menu:Menu) { for(i in menu.size()-1 downTo 0) { val entry=menu.getItem(i);if(!item(entry.itemId)) menu.removeItem(entry.itemId) } }
+                                                                            ~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkGatedWebView.kt:31: Warning: Use the KTX extension property Menu.size instead? [UseKtx]
+        fun prune(menu:Menu) { for(i in menu.size()-1 downTo 0) { val entry=menu.getItem(i);if(!item(entry.itemId)) menu.removeItem(entry.itemId) } }
+                                        ~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkHandoffProvider.kt:44: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+  private fun erase(c:Context,id:String){c.revokeUriPermission(uri(c,id),Intent.FLAG_GRANT_READ_URI_PERMISSION);val target=file(c,id);check(!target.exists()||target.delete()){"Temporary handoff cleanup must be retried"};check(prefs(c).edit().remove(id).commit())}
+                                                                                                                                                                                                                                  ~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkHandoffProvider.kt:46: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+  fun clearApp(c:Context,id:String)=AppSdk.carrierEgress{val e=epochs(c);check(e.edit().putLong(id,Math.addExact(e.getLong(id,0),1)).commit());prefs(c).all.forEach{(key,value)->if(value is String&&runCatching{JSONObject(value).getJSONObject("owner").getString("id")==id}.getOrDefault(false))erase(c,key)}}
+                                                                               ~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkHandoffProvider.kt:56: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+   try{original.inputStream().use{input->target.outputStream().use{out->val buffer=ByteArray(65536);var total=0L;while(true){authorize();val n=input.read(buffer);if(n<0)break;total+=n;check(total<=size);out.write(buffer,0,n)};check(total==size);out.fd.sync()}};authorize();val record=JSONObject().put("owner",JSONObject(owner.toString())).put("name",name).put("mime",mime).put("size",size).put("expires",Math.addExact(now,TTL)).put("epoch",epochs(c).getLong(owner.getString("id"),0));check(p.edit().putString(id,record.toString()).commit());uri(c,id)}catch(e:Exception){target.delete();throw e}
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          ~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkLocalization.kt:37: Warning: Use the KTX extension property Locale.layoutDirection instead? [UseKtx]
+    fun rtl(tags:List<String>):Boolean = tags.firstOrNull()?.let{android.text.TextUtils.getLayoutDirectionFromLocale(Locale.forLanguageTag(it))==android.view.View.LAYOUT_DIRECTION_RTL}?:false
+                                                                 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkMedia.kt:47: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+ private fun save()=AppSdk.carrierEgress{if(liveRadio())return@carrierEgress;val c=context?:return@carrierEgress;val o=owner?:return@carrierEgress;if(queue.length()==0||o.getString("id")in discardedPositions)return@carrierEgress;val prefs=c.getSharedPreferences("sdk-media-positions-"+o.getString("id"),0);val edit=prefs.edit();if(prefs.all.size>=128&&!prefs.contains(positionKey()))prefs.all.keys.take(prefs.all.size-127).forEach{edit.remove(it)};edit.putLong(positionKey(),position.coerceAtLeast(0)).apply();SdkAudioBooks.recorded(c,o,queue.getJSONObject(index),position,duration,speed,state=="ended");lastSaved=SystemClock.elapsedRealtime()}
+                                                                                                                                                                                                                                                                                                                           ~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkMedia.kt:86: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+ fun clearPositions(c:Context,id:String)=AppSdk.carrierEgress{discardedPositions.add(id);check(c.getSharedPreferences("sdk-media-positions-$id",0).edit().clear().commit())}
+                                                                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkMedia.kt:91: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+  fun action(op:String,icon:Int,label:String):Notification.Action{val intent=Intent(s,SdkPlaybackService::class.java).setData(Uri.parse("onklav://sdk-media/$generation/$op")).putExtra("generation",generation).putExtra("control",op);return Notification.Action.Builder(icon,label,PendingIntent.getService(s,0,intent,PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE)).build()}
+                                                                                                                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkNativeData.kt:21: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+        check(prefs(c).edit().putString("removal.$id",row.toString()).commit()){"Could not save app removal; nothing was removed"}
+              ~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkNativeData.kt:23: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+    fun cancel(c:Context,id:String){valid(id);check(prefs(c).edit().remove("removal.$id").commit())}
+                                                    ~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkNativeData.kt:29: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+            val edit=p.edit()
+                     ~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkNativeData.kt:35: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+        if(delete){SdkAudioBooks.clearApp(c,id);SdkPdfPositions.clearApp(c,id);SdkMedia.clearPositions(c,id);clearSecrets(c,id);check(c.getSharedPreferences("sdk-speech-$id",0).edit().clear().commit());check(c.getSharedPreferences("external-files-${AppSdk.desktopId(id)}",0).edit().clear().commit());SdkThumbnails.clear(c,id)}
+                                                                                                                                                                                                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkNativeData.kt:50: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+            AppSdk.carrierEgress {if(p.getLong("walkie_cleanup_epoch",0)==walkie)check(p.edit().putBoolean("walkie_cleanup",false).commit())}
+                                                                                       ~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkNativeData.kt:54: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+        if(transports.isNotEmpty())AppSdk.carrierEgress{check(p.edit().putStringSet("transport_cleanup",p.getStringSet("transport_cleanup",emptySet()).orEmpty()-transports).commit())}
+                                                              ~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkNativeData.kt:59: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+            check(p.edit().putStringSet("pending",latest-deleted).commit())
+                  ~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkNotifications.kt:34: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+  if(service=="notifications.cancel"){SdkScheduledNotifications.cancel(c,id,key);manager(c).cancel(tag,0);check(p.edit().remove(tag).commit());return@carrierEgress JSONObject().put("cancelled",true)}
+                                                                                                                ~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkNotifications.kt:39: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+  val active=manager(c).activeNotifications.mapNotNull{it.tag}.toSet();val stale=p.all.keys.filter{it.startsWith(prefix(id))&&it !in active};if(stale.isNotEmpty()){val edit=p.edit();stale.forEach{edit.remove(it)};check(edit.commit())}
+                                                                                                                                                                             ~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkNotifications.kt:42: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+  val intent=Intent(c,MainActivity::class.java).setData(Uri.parse("onklav://sdk-notification/$token")).putExtra("sdk_notice",token).addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP)
+                                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkNotifications.kt:47: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+   val snooze=Intent(c,SdkReminderActionReceiver::class.java).setData(Uri.parse("onklav://sdk-snooze/$token")).putExtra("token",token)
+                                                                      ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkNotifications.kt:52: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+  try{authorize();manager(c).notify(tag,0,notice)}catch(error:Exception){val edit=p.edit();if(previous==null)edit.remove(tag)else edit.putString(tag,previous);check(edit.commit());open.cancel();throw error}
+                                                                                  ~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkNotifications.kt:58: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+  val p=c.getSharedPreferences(PREFS,0);val edit=p.edit();p.all.keys.filter{it.startsWith(start)}.forEach{edit.remove(it)};check(edit.commit())
+                                                 ~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkNotifications.kt:70: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+  check(p.edit().remove(match.key).commit());manager(c).cancel(match.key,0)
+        ~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkOAuth.kt:31: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+   val uri=Uri.parse(raw);val states=uri.getQueryParameters("state");if(states.size!=1)return false
+           ~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkOAuth.kt:32: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+   val flow=flows[states.single()]?:return false;val expected=Uri.parse(flow.redirect)
+                                                              ~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkOAuth.kt:47: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+  open:(String)->Unit={url->context.startActivity(Intent(Intent.ACTION_VIEW,Uri.parse(url)).addCategory(Intent.CATEGORY_BROWSABLE).addFlags(Intent.FLAG_ACTIVITY_NEW_TASK))},timeoutMillis:Long=120_000):Pair<Flow,String> {
+                                                                            ~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkOAuth.kt:50: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+   val url=Uri.parse(provider.getString("authorization_endpoint")).buildUpon()
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkPdfEngine.kt:66: Warning: Use the KTX function createBitmap instead? [UseKtx]
+ override fun render(page:Int,width:Int,out:OutputStream){renderer.openPage(page).use{p->val(w,h)=SdkPdfProtocol.dimensions(p.width,p.height,width);val bitmap=Bitmap.createBitmap(w,h,Bitmap.Config.ARGB_8888);try{bitmap.eraseColor(Color.WHITE);val matrix=Matrix().apply{setScale(w.toFloat()/p.width,h.toFloat()/p.height)};p.render(bitmap,null,matrix,PdfRenderer.Page.RENDER_MODE_FOR_DISPLAY);check(bitmap.compress(Bitmap.CompressFormat.PNG,100,out))}finally{bitmap.recycle()}}}
+                                                                                                                                                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkPdfPositions.kt:17: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+ fun clearApp(c:Context,id:String)=AppSdk.carrierEgress{val p=prefs(c);val e=p.edit();p.all.keys.filter{it.startsWith(prefix(id))}.forEach{e.remove(it)};check(e.commit())}
+                                                                             ~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkRadioPlayer.kt:54: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+ val permission=rememberLauncherForActivityResult(ActivityResultContracts.RequestPermission()){granted->enabled=granted;denied=!granted;prefs.edit().putBoolean("waveform",granted).apply()}
+                                                                                                                                        ~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkRadioPlayer.kt:55: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+ Row(Modifier.fillMaxWidth(),verticalAlignment=Alignment.CenterVertically){Text("Audio waveform",Modifier.weight(1f));Switch(checked=enabled,onCheckedChange={value->if(value&&ContextCompat.checkSelfPermission(context,Manifest.permission.RECORD_AUDIO)!=PackageManager.PERMISSION_GRANTED)permission.launch(Manifest.permission.RECORD_AUDIO)else{enabled=value;prefs.edit().putBoolean("waveform",value).apply()}})}
+                                                                                                                                                                                                                                                                                                                                                                    ~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkRadioPlayer.kt:75: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+ val permission=rememberLauncherForActivityResult(ActivityResultContracts.RequestPermission()){granted->prefs.edit().putBoolean("waveform",granted).apply();waveform=granted;waveformEpoch++}
+                                                                                                        ~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkRadioPlayer.kt:77: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+ LaunchedEffect(playing,foreground){if(playing&&foreground&&waveform&&!prefs.getBoolean("waveform_asked",false)&&ContextCompat.checkSelfPermission(context,Manifest.permission.RECORD_AUDIO)!=PackageManager.PERMISSION_GRANTED){prefs.edit().putBoolean("waveform_asked",true).apply();permission.launch(Manifest.permission.RECORD_AUDIO)}}
+                                                                                                                                                                                                                                 ~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkScheduledNotifications.kt:33: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+ private fun remove(c:Context,index:Int){check(prefs(c).edit().remove(index.toString()).commit());scheduler(c).cancel(JOB_BASE+index)}
+                                               ~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkScheduledNotifications.kt:55: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+  try{enqueue(c,index,record,now)}catch(e:Exception){val edit=prefs(c).edit();if(saved==null)edit.remove(index.toString())else edit.putString(index.toString(),saved);check(edit.commit());throw e}
+                                                              ~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkScheduledNotifications.kt:81: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+  if(next==null){check(prefs(c).edit().remove(index.toString()).commit());return}
+                       ~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkScheduledNotifications.kt:84: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+  check(prefs(c).edit().putString(index.toString(),r.toString()).commit());enqueue(c,index,r,now)
+        ~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkScheduledNotifications.kt:111: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+   if(attempts>=3){remove(c,index);false}else{check(prefs(c).edit().putString(index.toString(),remaining.put("attempts",attempts).toString()).commit());true}
+                                                    ~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkSpeech.kt:83: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+            val edit=shared.edit();if(!shared.contains("voice")&&previous.contains("voice"))edit.putString("voice",previous.getString("voice",""));if(!shared.contains("rate")&&previous.contains("rate"))edit.putFloat("rate",previous.getFloat("rate",1f));edit.apply()
+                     ~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkSpeech.kt:167: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+    fun settingsVoice(id:String) { stop();if(voices.any { it.id==id }) { voice=id;prefs.edit().putString("voice",id).apply() } }
+                                                                                  ~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkSpeech.kt:168: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+    fun settingsRate(value:Float) { stop();rate=speechRate(value);prefs.edit().putFloat("rate",rate).apply() }
+                                                                  ~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkWalkieTransport.kt:92: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+            .setData(Uri.parse("onklav-walkie://result/$job"+if(part>=0)"/$part"else"")).putExtra("job",job).putExtra("part",part),
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkWalkieTransport.kt:128: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+        if(owners.isNotEmpty())prefs.edit().putInt("cursor",(start+1)%owners.size).apply()
+                               ~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkWalkieTransport.kt:178: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+        if(!job.matches(Regex("[a-f0-9]{32}")) || intent.action!="app.onklav.WALKIE_RESULT" || intent.data!=Uri.parse("onklav-walkie://result/$job"+if(part>=0)"/$part"else""))return
+                                                                                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkWalkieTransport.kt:264: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+        val open=PendingIntent.getActivity(c,410,Intent(c,MainActivity::class.java).setData(Uri.parse("onklav://carrier/"+SdkCarrierRoutes.route(owner))).putExtra("open_sdk_carrier",SdkCarrierRoutes.route(owner))
+                                                                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkWebComponent.kt:41: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+    fun address(raw:String):String { val safe=external(raw);require(Uri.parse(safe).host != "accounts.google.com") { "Continue This Sign-In with Open in Browser" };return safe }
+                                                                    ~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SettingsBackup.kt:21: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+        return p.getString("origin",null) ?: UUID.randomUUID().toString().also{check(p.edit().putString("origin",it).commit())}
+                                                                                     ~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SettingsDialogs.kt:96: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+                data = Uri.parse("package:${context.packageName}")
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SettingsDialogs.kt:96: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+                data = Uri.parse("package:${context.packageName}")
+                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SettingsDialogs.kt:153: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+            check(prefs.edit().putBoolean("sounds",sounds).putInt("timeout",timeout.toInt()).commit()) { "Could not save game preferences" }
+                  ~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SettingsMessaging.kt:48: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+                c.getSharedPreferences("conversation_sounds",0).edit().putBoolean(row.id.toString(),true).apply()
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SettingsMessaging.kt:90: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+        SettingsChoice((if(selected==-1)"✓ " else "")+"System Default") {p.edit().remove("sim").apply();close()}
+                                                                         ~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SettingsMessaging.kt:94: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+                p.edit().putInt("sim",sim.subscriptionId).apply();close()
+                ~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SettingsPreferences.kt:103: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+        DialogAction("Save"){runCatching {check(p.edit().putBoolean("enabled",enabled).commit());ChatStore.epoch.value++;close()}.onFailure{error=it.message}}
+                                                ~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SettingsPreferences.kt:111: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+        DialogAction("Reset",destructive=true){runCatching{check(p.edit().remove("trusted").commit());ChatStore.epoch.value++;reset=false}.onFailure{error=it.message}}
+                                                                 ~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SettingsScreens.kt:226: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+                            prefs
+                            ^
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SettingsScreens.kt:334: Warning: Use the KTX extension function Bitmap.scale instead? [UseKtx]
+            Bitmap.createScaledBitmap(cropped, minOf(edge, 256), minOf(edge, 256), true).also {
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SettingsScreens.kt:338: Warning: Use the KTX function createBitmap instead? [UseKtx]
+            Bitmap.createBitmap(small.width, small.height, Bitmap.Config.ARGB_8888).also {
+            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SettingsStorage.kt:45: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+        val uri=Uri.parse("content://mms/part")
+                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SettingsStorage.kt:101: Warning: Use the KTX extension function String.toUri instead? [UseKtx]
+                            c.contentResolver.query(Uri.parse("content://mms/${item.message}"),arrayOf("thread_id"),null,null,null)?.use{q->if(q.moveToFirst())q.getLong(0) else 0} ?: 0
+                                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+/workspace/scratch/75acf774e3b8/recovered/OnKlav/android/app/src/main/kotlin/app/onklav/home/SpamPolicy.kt:35: Warning: Use the KTX extension function SharedPreferences.edit instead? [UseKtx]
+        all.add(phoneKey(number));check(p.edit().putStringSet("trusted",all).commit())
+                                        ~~~~~~~~
+
+   Explanation for issues of type "UseKtx":
+   The Android KTX libraries decorates the Android platform SDK as well as
+   various libraries with more convenient extension functions available from
+   Kotlin, allowing you to use default parameters, named parameters, and
+   more.
+
+   Available options:
+
+   **remove-defaults** (default is true):
+   Whether to skip arguments that match the defaults provided by the extension.
+
+   Extensions often provide default values for some of the parameters. For example:
+   ```kotlin
+   fun Path.readLines(charset: Charset = Charsets.UTF_8): List<String> { return Files.readAllLines(this, charset) }
+   ```
+   This lint check will by default automatically omit parameters that match the default, so if your code was calling ```kotlin
+   Files.readAllLines(file, Charset.UTF_8)
+   ```
+   lint would replace this with
+   ```kotlin
+   file.readLines()
+   ```
+   rather than
+   ```kotlin
+   file.readLines(Charset.UTF_8
+   ```
+   You can turn this behavior off using this option.
+
+   To configure this option, use a `lint.xml` file with an <option> like this:
+
+   ```xml
+   <lint>
+       <issue id="UseKtx">
+           <option name="remove-defaults" value="true" />
+       </issue>
+   </lint>
+   ```
+
+   **require-present** (default is true):
+   Whether to only offer extensions already available.
+
+   This option lets you only have lint suggest extension replacements if those extensions are already available on the class path (in other words, you're already depending on the library containing the extension method.)
+
+   To configure this option, use a `lint.xml` file with an <option> like this:
+
+   ```xml
+   <lint>
+       <issue id="UseKtx">
+           <option name="require-present" value="true" />
+       </issue>
+   </lint>
+   ```
+
+0 errors, 172 warnings

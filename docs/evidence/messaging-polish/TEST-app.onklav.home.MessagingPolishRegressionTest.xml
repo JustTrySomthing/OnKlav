@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.MessagingPolishRegressionTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-29T13:07:56" hostname="3d3a46c2e56a" time="25.13">
+  <properties/>
+  <testcase name="browserMenuButtonsHaveGapsAndLongTextKeepsItsWidth" classname="app.onklav.home.MessagingPolishRegressionTest" time="14.872"/>
+  <testcase name="bulkActionsWrapAtLargeTypeAndRemainUsable" classname="app.onklav.home.MessagingPolishRegressionTest" time="5.142"/>
+  <testcase name="converterCategoryNamesFitAndSelectTemperature" classname="app.onklav.home.MessagingPolishRegressionTest" time="5.116"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

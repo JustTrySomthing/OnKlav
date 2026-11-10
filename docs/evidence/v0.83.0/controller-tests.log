@@ -1,0 +1,39 @@
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/developer/components)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.13s
+     Running unittests src/lib.rs (developer/components/target/debug/deps/onklav_ui-1771de5ff2e26eff)
+
+running 31 tests
+test reference_apps::convert::tests::fractions_and_feet_handle_signs_and_invalid_inputs ... ok
+test reference_apps::ebooks_app::polish_tests::browse_recent_library_tabs_and_previews_are_clear ... ok
+test reference_apps::calc::tests::arithmetic_precedence_sign_percent_and_bounds ... ok
+test reference_apps::convert::tests::units_are_dimensionally_correct_and_round_trip ... ok
+test reference_apps::ebooks_app::tests::starts_offline_and_only_acquires_displayed_catalog_ids ... ok
+test reference_apps::ebooks_app::polish_tests::recent_load_and_open_preserve_source_and_use_persistent_collection ... ok
+test reference_apps::ebooks_app::saved_screen_tests::finishing_import_yields_before_opening_reader ... ok
+test reference_apps::calc::tests::history_and_continue_from_result ... ok
+test reference_apps::internet_radio::tests::last_station_is_restored_without_autoplay ... ok
+test reference_apps::internet_radio::tests::compact_filters_keep_selected_values_inside_the_controls ... ok
+test reference_apps::internet_radio::tests::polished_tabs_recent_and_settings_keep_the_page_focused ... ok
+test reference_apps::ebooks_app::reading_tests::read_aloud_uses_current_page_and_auto_advances_without_network ... ok
+test reference_apps::internet_radio::tests::saved_stations_have_filled_bookmarks_and_independent_play_actions ... ok
+test reference_apps::internet_radio::tests::radio_starts_local_separately_and_has_no_credential_or_url_fields ... ok
+test reference_apps::podcasts_app::tests::failed_feed_has_back_and_retry_and_never_subscribes ... ok
+test reference_apps::internet_radio::tests::radio_favorites_get_live_revision_before_changing_and_failures_keep_data ... ok
+test reference_apps::internet_radio::tests::radio_search_is_bounded_and_station_selection_never_passes_a_url ... ok
+test reference_apps::service_tests::reference_mail_hides_handles_and_headers_on_account_menu ... ok
+test reference_apps::podcasts_app::tests::three_tabs_are_pinned_and_clean ... ok
+test reference_apps::podcasts_app::tests::settings_and_saved_sources_survive_restart ... ok
+test reference_apps::podcasts_app::tests::recent_is_saved_only_after_play_success_and_plays_without_subscription ... ok
+test reference_apps::service_tests::reference_listening_selects_episode_and_does_not_switch_radio_stream ... ok
+test reference_apps::service_tests::reference_map_bounds_center_and_uses_cache_before_http ... ok
+test reference_apps::service_tests::reference_weather_validates_place_and_persists_before_child ... ok
+test reference_apps::service_tests::wrap_mail_private_files_delete_requires_confirmation_and_retains_failed_file ... ok
+test reference_apps::weather_app::tests::malformed_forecasts_never_replace_cached_data ... ok
+test reference_apps::youtube::channel_tests::late_metadata_preserves_current_owner_but_home_navigation_clears_it ... ok
+test reference_apps::service_tests::wrap_map_batches_hits_and_network_without_skipping_or_erasing ... ok
+test reference_apps::ebooks_app::reading_tests::bookmarks_are_paged_and_mutations_require_latest_revision ... ok
+test reference_apps::service_tests::wrap_mail_private_file_page_stays_within_native_widget_budget ... ok
+test reference_apps::service_tests::wrap_mail_pages_all_saved_headers_and_opens_body ... ok
+
+test result: ok. 31 passed; 0 failed; 0 ignored; 0 measured; 93 filtered out; finished in 0.01s
+

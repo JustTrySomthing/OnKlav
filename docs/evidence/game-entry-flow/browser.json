@@ -1,0 +1,62 @@
+[
+  {
+    "game": "panda",
+    "start_without_runtime_dialog": true,
+    "resume_without_second_dialog": true,
+    "return_waits_for_save": true,
+    "quit_waits_for_discard": true,
+    "focus_loss_cannot_resurrect": true,
+    "profile_preserved": true,
+    "foreground_without_entry_dialog": true
+  },
+  {
+    "game": "dominos",
+    "start_without_runtime_dialog": true,
+    "resume_without_second_dialog": true,
+    "return_waits_for_save": true,
+    "quit_waits_for_discard": true,
+    "focus_loss_cannot_resurrect": true,
+    "profile_preserved": true,
+    "foreground_without_entry_dialog": true
+  },
+  {
+    "game": "hockey",
+    "start_without_runtime_dialog": true,
+    "resume_without_second_dialog": true,
+    "return_waits_for_save": true,
+    "quit_waits_for_discard": true,
+    "focus_loss_cannot_resurrect": true,
+    "profile_preserved": true,
+    "foreground_without_entry_dialog": true
+  },
+  {
+    "game": "naval",
+    "start_without_runtime_dialog": true,
+    "resume_without_second_dialog": true,
+    "return_waits_for_save": true,
+    "quit_waits_for_discard": true,
+    "focus_loss_cannot_resurrect": true,
+    "profile_preserved": true,
+    "foreground_without_entry_dialog": true
+  },
+  {
+    "game": "four",
+    "start_without_runtime_dialog": true,
+    "resume_without_second_dialog": true,
+    "return_waits_for_save": true,
+    "quit_waits_for_discard": true,
+    "focus_loss_cannot_resurrect": true,
+    "profile_preserved": true,
+    "foreground_without_entry_dialog": true
+  },
+  {
+    "game": "blackjack",
+    "start_without_runtime_dialog": true,
+    "resume_without_second_dialog": true,
+    "return_waits_for_save": true,
+    "quit_waits_for_discard": true,
+    "focus_loss_cannot_resurrect": true,
+    "profile_preserved": true,
+    "foreground_without_entry_dialog": true
+  }
+]

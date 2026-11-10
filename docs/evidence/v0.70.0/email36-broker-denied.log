@@ -1,0 +1,6 @@
+Publisher key created. Keep it private and backed up.
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/work/OnKlav/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/workspace/scratch/75acf774e3b8/work/OnKlav/developer/examples/email-compose)
+    Finished `release` profile [optimized] target(s) in 4.71s
+Created /tmp/onklav-verify-_w772zit/check.onklav-a
+OnKlav SDK: Scenario step 1 (redacted): Sensitive app check failed; payload omitted. Local diagnostic: /workspace/scratch/75acf774e3b8/work/OnKlav/developer/examples/email-compose/target/onklav-diagnostics/scenario-failure-5b3otiru.json

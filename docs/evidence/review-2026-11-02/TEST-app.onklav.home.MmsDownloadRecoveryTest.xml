@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.MmsDownloadRecoveryTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2026-11-02T16:08:56" hostname="13575fdd974e" time="14.569">
+  <properties/>
+  <testcase name="cancelledCodeAndLegacyStatusesRemainRetryableAndTruthful" classname="app.onklav.home.MmsDownloadRecoveryTest" time="7.484"/>
+  <testcase name="temporaryDownloadFailureStaysVisibleAndSchedulesBoundedIncomingRetries" classname="app.onklav.home.MmsDownloadRecoveryTest" time="0.596"/>
+  <testcase name="realPlatformRequestUsesOriginalSimUniqueOutputAndMatchingCallback" classname="app.onklav.home.MmsDownloadRecoveryTest" time="0.496"/>
+  <testcase name="carrierErrorsExplainConfigurationAndDoNotRetryPermanentFailures" classname="app.onklav.home.MmsDownloadRecoveryTest" time="0.05"/>
+  <testcase name="stalledDownloadSchedulesBoundedRecoveryWithoutResendingAnything" classname="app.onklav.home.MmsDownloadRecoveryTest" time="0.104"/>
+  <testcase name="acknowledgementFailureCannotReportAnAlreadyFiledPictureAsDownloadFailure" classname="app.onklav.home.MmsDownloadRecoveryTest" time="4.987"/>
+  <testcase name="oldAttemptCallbackCannotClearOrFailCurrentDownload" classname="app.onklav.home.MmsDownloadRecoveryTest" time="0.116"/>
+  <testcase name="scheduledDownloadNeverRunsWhenRoleWasRevokedAndMessagesRemainRecoverable" classname="app.onklav.home.MmsDownloadRecoveryTest" time="0.104"/>
+  <testcase name="oneRefusedJournalCannotLoseItsDeadlineOrBlockAnotherPicturesRecovery" classname="app.onklav.home.MmsDownloadRecoveryTest" time="0.189"/>
+  <testcase name="unrecognizedCallbackCannotCreateAnIncomingMessageOrError" classname="app.onklav.home.MmsDownloadRecoveryTest" time="0.243"/>
+  <testcase name="inFlightDownloadCannotBeTruncatedByDuplicateRetryAndRevokedRolePreventsDownload" classname="app.onklav.home.MmsDownloadRecoveryTest" time="0.132"/>
+  <testcase name="independentPictureNotificationsCannotOverwriteEachOtherAndCompletionClearsOnlyItsOwn" classname="app.onklav.home.MmsDownloadRecoveryTest" time="0.065"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,51 @@
+{
+  "date": "2026-11-01",
+  "scope": "Requested two-page desktop arrangement, folder moves, page-local gaps and edge dwell",
+  "final_checks": {
+    "app.onklav.shared.LauncherLayoutTest#occupiedSamePageDropNeverShiftsTheNextPageAndEmptyDropLeavesOthersStill": "passed",
+    "app.onklav.shared.LauncherLayoutTest#hitTestingIncludesLastRowAndScrollOffset": "passed",
+    "app.onklav.shared.LauncherLayoutTest#sparseBottomRowAndNewPageSurviveReload": "passed",
+    "app.onklav.shared.LauncherLayoutTest#fullPageSpillsOnlyUntilTheFirstFollowingGap": "passed",
+    "app.onklav.shared.LauncherLayoutTest#occupiedDropReordersWithoutLosingHolesOrIds": "passed",
+    "app.onklav.shared.LauncherLayoutTest#occupiedCrossPageDropUsesGapBeforeTargetBeforeSpilling": "passed",
+    "app.onklav.shared.LauncherLayoutTest#catalogReconciliationRejectsUnknownAndDuplicateIds": "passed",
+    "app.onklav.shared.LauncherLayoutTest#cancelSnapshotAndEmptyTrailingPageAreSafe": "passed",
+    "app.onklav.home.DesktopFoldersTest#namesValidateAndFirstLetterTracksRename": "passed",
+    "app.onklav.home.DesktopFoldersTest#deletingFolderReturnsAppsAndPreservesOtherDesktopPositions": "passed",
+    "app.onklav.home.DesktopFoldersTest#membershipHasNoNineAppLimitAndMovesWithoutDuplicates": "passed",
+    "app.onklav.home.DesktopFoldersTest#migrationMovesRequestedAppsAndKeepsCustomFolderData": "passed",
+    "app.onklav.home.DesktopFoldersTest#defaultsGroupOnlyRequestedAppsAndKeepSettingsAndGamesReachable": "passed",
+    "app.onklav.home.DesktopFoldersTest#requestedDefaultsExactlyMatchBothScreenshotPages": "passed",
+    "app.onklav.home.DesktopFoldersTest#savedEmptyLayoutDoesNotReseedAndMissingPackagesKeepMembership": "passed",
+    "app.onklav.home.DesktopFoldersUiTest#shellOpensPhoneSettingsAndGamesAndReturnsToApps": "passed",
+    "app.onklav.home.DesktopFoldersUiTest#quickDropNearEdgeDoesNotSendTheAppToAnotherPage": "passed",
+    "app.onklav.home.DesktopFoldersUiTest#requestedLayoutAppliesOnceAndCustomMovesSurviveReopen": "passed",
+    "app.onklav.home.DesktopFoldersUiTest#navigationOrderIsPhoneCameraAppsMessagesGroups": "passed",
+    "app.onklav.home.DesktopFoldersUiTest#appsAlwaysResetToFirstPageAndDefaultsOpen": "passed",
+    "app.onklav.home.DesktopFoldersUiTest#folderCreateRenameDeleteAndSecondPageAreUsable": "passed",
+    "app.onklav.home.DesktopFoldersUiTest#draggingAppIntoFolderThenOutsideMovesItWithoutLosingApp": "passed",
+    "app.onklav.home.DesktopFoldersUiTest#smallLargeTextFolderKeepsItsLastRowReachable": "passed"
+  },
+  "passed": 23,
+  "lint_errors": 0,
+  "lint_warnings": 807,
+  "lint_includes_production_and_tests": true,
+  "source_sha256": {
+    "android/shared/src/main/kotlin/app/onklav/shared/LauncherLayout.kt": "9caed46d7cc98a92b49128fed7c7e670c55218afa4479fe4832a3f677279fbe3",
+    "android/app/src/main/kotlin/app/onklav/home/AppsDesktop.kt": "c0600a96c20dd92ca095e54c461625a87a37a80df64bc84aab6cb8c367860ebf",
+    "android/app/src/main/kotlin/app/onklav/home/DesktopFolders.kt": "93665c3d9568bf475ab2a89e36e74fe98607493650e4152d54fb919b89c7e942",
+    "android/app/src/main/kotlin/app/onklav/home/DesktopArrangement.kt": "1226618bdf204269fc2cab8299d86fb8c0cc1f84078fdfa737c4167613974ad1"
+  },
+  "visual_review": [
+    "requested-page-one.png",
+    "requested-page-two.png"
+  ],
+  "notes": [
+    "Initial UI navigation fixture expected Settings on the first page; updated to assert the returned Games page and reran only that case successfully. Initial and final XML results are retained.",
+    "Corrected test access to the custom accessibility-action property; no production behavior changed during that fixture correction."
+  ],
+  "apk_built": false,
+  "latest_built_apk": "0.100.33-rc1/code142, predates this refinement",
+  "native_sdk_speech_games": "source-matched reuse",
+  "qualification_pending": "Real-device touch/rotation/OEM acceptance"
+}

@@ -1,0 +1,99 @@
+{
+  "status": "implemented",
+  "production_and_test_compilation": "passed",
+  "focused_unique_checks_passed": 21,
+  "test_cases": {
+    "AuthenticStoreTest": {
+      "legacyEnrollmentPreservesAccountsAndOldBackups": {
+        "passed": true
+      },
+      "portableBackupsAuthenticateCompletelyAndMergeIsExplicit": {
+        "passed": true
+      },
+      "encryptedStoreDoesNotExposeSeedsAndWrongPasswordNeverReplacesData": {
+        "passed": true
+      },
+      "recoveryEnrollmentResetAndPasswordChangeKeepAccountsAndAuthenticateAllAnswers": {
+        "passed": true
+      },
+      "passwordChangeKeepsOldBackupsReadableOnlyWithTheirOriginalPassword": {
+        "passed": true
+      },
+      "countersPersistAndDifferentAppEnvelopesAreRejected": {
+        "passed": true
+      }
+    },
+    "AuthenticUiTest": {
+      "duplicatesCounterUpdatesAndDeleteAreReversibleUntilConfirmed": {
+        "passed": true
+      },
+      "codesCopySearchPinAndLockAreClear": {
+        "passed": true
+      },
+      "eightDigitCodesFitOnSmallLargeTextPhones": {
+        "passed": true
+      }
+    },
+    "AuthenticRecoveryUiTest": {
+      "passwordOnlyLegacySetupCannotExposeAccountsBeforeRecovery": {
+        "passed": true
+      },
+      "incompleteSetupCreatesNoFileAndCompleteRequiresAllAnswersThenPassword": {
+        "passed": true
+      }
+    },
+    "MessageComposeFlowTest": {
+      "emptyComposerEntireWidthAcceptsAnotherMessageAfterSend": {
+        "passed": true
+      },
+      "sentTailStaysAboveComposerAfterResizeAndHistoryBrowsingIsRespected": {
+        "passed": true
+      }
+    },
+    "PhotoRetouchUiTest": {
+      "stampSamplesWithoutEditingThenPaintsAndCanResample": {
+        "passed": true
+      },
+      "redEyeNoMatchGivesFeedbackAndKeepsOtherToolsAvailable": {
+        "passed": true
+      },
+      "retouchTapUndoRedoAndPersistentToolRowWork": {
+        "passed": true
+      },
+      "pinchDoesNotApplyCorrectionAndCompareDisablesPainting": {
+        "passed": true
+      }
+    },
+    "SocialSdkHostTest": {
+      "socialShowsComingSoonInsideSdkHost": {
+        "passed": true
+      }
+    },
+    "UiPolishHostTest": {
+      "sameConversationIncomingRefreshKeepsComposerEditable": {
+        "passed": true
+      },
+      "conversationHistoryLoadsOnScrollWithoutLoadOlderButton": {
+        "passed": true
+      },
+      "messageFoldersFilterProviderRowsAndRestoreAllUpdatesRustState": {
+        "passed": true
+      }
+    }
+  },
+  "runtime_classes_matched": 340,
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/Authentic.kt": "21a0e2f5e75f21f7ab23d6c579306be7ad525f24ac667c7f14335cf687f893ba",
+    "android/app/src/main/kotlin/app/onklav/home/AuthenticModel.kt": "f1952665b4fd31edd58fb3094ad963636997ba269ef4001935debd0272b64e85",
+    "android/app/src/main/kotlin/app/onklav/home/AuthenticStore.kt": "a4315e63d6b769096b21e335584bd62c632d82aa154d8fc4ba21ec38a24797aa",
+    "android/app/src/main/kotlin/app/onklav/home/MessengerPane.kt": "29e5aba0ba64a7319f9d850154a5cb37285113ff693ac44da50d7a42226ad99c",
+    "android/app/src/main/kotlin/app/onklav/home/MessageComposer.kt": "b78298572c1d2b94d5f8cf6098702de8b43c77ef4d5616d3bd1a063be03e2850",
+    "android/app/src/main/kotlin/app/onklav/home/PhotoRetouchCanvas.kt": "42c4f340955690c425e356297d0ec331af2dd3da4fbe62a67b7d28ea16c5a451",
+    "android/app/src/main/kotlin/app/onklav/home/SdkAppScreen.kt": "f3fa948d7ed6558337da1deb2f4779a27c6dc246342aa1d859cc5e86eb6bc59d",
+    "android/shared/src/main/res/drawable/ref_app_voice_recorder.xml": "a6af6e4ee7641a76068e448d0a8371ceca6614bf545d2dd3c063b60fdf8dd9b1"
+  },
+  "native_or_sdk_package_changed": false,
+  "apk_built": false,
+  "physical_phone_ime_carrier_and_independent_security_qualification": "pending",
+  "staged_runs": "First batch: Authentic, input, retouch passed; Social fixture assumed first Apps page. Messenger incoming refresh and pagination passed; folder fixture did not honor thread lookup or await loading. Final Social host and folder fixtures corrected and passed. Evidence retains all runs."
+}

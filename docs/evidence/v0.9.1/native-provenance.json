@@ -1,0 +1,16 @@
+{
+  "rust_source_unchanged_from_saved_0_9_0": true,
+  "host_rust_tests": {
+    "passed": 15,
+    "failed": 0,
+    "toolchain": "1.90.0"
+  },
+  "mobile_rust_libraries": "retained; exact bytes match previous signed APK and restored source archive",
+  "files_sha256": {
+    "core/Cargo.toml": "83e1c74e8d7065222478d408a2fd9797c4a1b145c7e85659e37445dd3a74477b",
+    "core/Cargo.lock": "c1ac82fb09cbca1ca78df523a6bf0dfd686752cf3a4424f160ab85e2eee66de8",
+    "core/src/lib.rs": "520c552fda931986ebbf3bde02fd9ae44198176aeab11fbb1e983e3635637d95",
+    "core/src/messaging.rs": "186a1c6bfa0bfc56f37f31e00f4b1bb6603b009f93af5f6e41fad28dc2a969e0",
+    "core/src/mms.rs": "180b0a6695feae1f146a4660d77b9dc061e38ad67f99430f7f0b3512931422dd"
+  }
+}

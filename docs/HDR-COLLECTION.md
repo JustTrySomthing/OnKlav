@@ -1,0 +1,13 @@
+> The renderer described below shipped in0.100.20. It is superseded by the researched local-light rebuild in [HDR-DRAMATIC-REWORK.md](HDR-DRAMATIC-REWORK.md); the wheel, history and compatibility behavior remains.
+
+# Six HDR looks
+
+The Effects wheel replaces the generic HDR entry with HDR Natural, HDR Surreal, HDR Shiny, HDR Gritty Grunge, HDR Painterly Glow and HDR B & W. Choosing a style applies it at the current HDR strength, or75% on first use. These are mutually exclusive styles of one effect, not six stacked filters. One strength slider, its zero marker/reset and ordinary Undo/Redo remain. Undo updates the active HDR label as well as strength. Sharpen, other looks, crop/geometry and editable annotations retain their existing pipeline.
+
+These are single-image SDR photo looks, not exposure-bracket merging or HDR-display output. They cannot recover already clipped source detail. Two alpha-weighted guided luminance scales provide edge-aware medium detail, with bounded enhancement, fine-noise thresholding and hard-edge protection. Natural balances tones and restrained chroma; Surreal adds stronger local contrast/vibrance and cool atmospheric shadows; Shiny adds selective highlights and a tighter highlight bloom; Gritty emphasizes structure, desaturates and deepens shadows; Painterly smooths fine detail while retaining structural edges and adds a broader luminous bloom; B&W has achromatic output and its own tone/structure curve. Chroma is limited to available RGB gamut to avoid arbitrary channel clipping, with restrained skin saturation. Alpha is preserved, including transparent crop/geometry borders. Zero strength bypasses the effect exactly.
+
+Analysis is limited to800pixels per side with rolling box filters and a tone lookup table; full-resolution output uses interpolated guidance. Preview and export share PhotoRender and annotation rendering remains after effects. No phone performance claim.
+
+Project values store `hdr` strength plus `hdrStyle`. The six UI aliases never become six independent saved strengths. Existing generic-HDR drafts/layers retain their old renderer until the user chooses a new look. Portable layers/history preserve the chosen new style; older OnKlav versions cannot reproduce a new style they do not implement.
+
+All19 unique focused render/legacy/crop/layer/UI checks passed. Portrait and landscape review sheets are retained and visually reviewed. The initial UI matcher was scoped to the wheel to distinguish its Natural label from the covered toolbar; the final UI-only rerun passed and runtime classes match compilation. No effect code changed after render checks. User subsequently requested an APK;0.100.20-rc1/code129 is built and verified with the original signer and current native/SDK identities.

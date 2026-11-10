@@ -1,0 +1,44 @@
+{
+  "production_and_test_compilation": "passed",
+  "runtime_bundle_matches_compiled_Kotlin": true,
+  "suites": [
+    {
+      "name": "app.onklav.home.BottomPhoneCameraUiTest",
+      "tests": "5",
+      "failures": "0",
+      "errors": "0"
+    },
+    {
+      "name": "app.onklav.shared.NativeBridgeTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0"
+    },
+    {
+      "name": "app.onklav.shared.LauncherLayoutTest",
+      "tests": "8",
+      "failures": "0",
+      "errors": "0"
+    },
+    {
+      "name": "app.onklav.shared.ThemePackageTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0"
+    },
+    {
+      "name": "app.onklav.shared.Mp3CodecTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0"
+    }
+  ],
+  "tests_passed": 22,
+  "physical_phone_testing": false,
+  "apk_built": false,
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/MainActivity.kt": "f826f7c4bf889211f0316c3dfd5cea684d27490c1e9c615b528f5fc36b6901aa",
+    "android/app/src/main/kotlin/app/onklav/home/SdkAppScreen.kt": "a2d7c218c6d7346d0a5a7a29e6d3503b0b27f9177c4536d1631ee49f3f71e9c0",
+    "android/app/src/test/kotlin/app/onklav/home/BottomPhoneCameraUiTest.kt": "930d93ff97f24f7abdaec5ed82f481a16937c47d15b340ce57f8d36565f8f1aa"
+  }
+}

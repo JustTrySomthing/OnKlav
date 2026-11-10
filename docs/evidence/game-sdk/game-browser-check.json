@@ -1,0 +1,100 @@
+[
+  {
+    "game": "four",
+    "engine_started": true,
+    "canvas": 1,
+    "external_fetch_blocked": true,
+    "javascript_errors": [],
+    "log": [
+      "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org",
+      "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL",
+      "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support.",
+      "Connecting to 'https://example.com/' violates the following Content Security Policy directive: \"connect-src 'self'\". The action has been blocked.",
+      "Fetch API cannot load https://example.com/. Refused to connect because it violates the document's Content Security Policy."
+    ]
+  },
+  {
+    "game": "naval",
+    "engine_started": true,
+    "canvas": 1,
+    "external_fetch_blocked": true,
+    "javascript_errors": [],
+    "log": [
+      "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org",
+      "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL",
+      "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support.",
+      "Connecting to 'https://example.com/' violates the following Content Security Policy directive: \"connect-src 'self'\". The action has been blocked.",
+      "Fetch API cannot load https://example.com/. Refused to connect because it violates the document's Content Security Policy."
+    ]
+  },
+  {
+    "game": "blackjack",
+    "engine_started": true,
+    "canvas": 1,
+    "external_fetch_blocked": true,
+    "javascript_errors": [],
+    "log": [
+      "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org",
+      "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL",
+      "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support.",
+      "Connecting to 'https://example.com/' violates the following Content Security Policy directive: \"connect-src 'self'\". The action has been blocked.",
+      "Fetch API cannot load https://example.com/. Refused to connect because it violates the document's Content Security Policy."
+    ]
+  },
+  {
+    "game": "hockey",
+    "engine_started": true,
+    "canvas": 1,
+    "external_fetch_blocked": true,
+    "javascript_errors": [],
+    "log": [
+      "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org",
+      "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL",
+      "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support.",
+      "Connecting to 'https://example.com/' violates the following Content Security Policy directive: \"connect-src 'self'\". The action has been blocked.",
+      "Fetch API cannot load https://example.com/. Refused to connect because it violates the document's Content Security Policy."
+    ]
+  },
+  {
+    "game": "touch2d",
+    "engine_started": true,
+    "canvas": 1,
+    "external_fetch_blocked": true,
+    "javascript_errors": [],
+    "log": [
+      "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org",
+      "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL",
+      "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support.",
+      "Connecting to 'https://example.com/' violates the following Content Security Policy directive: \"connect-src 'self'\". The action has been blocked.",
+      "Fetch API cannot load https://example.com/. Refused to connect because it violates the document's Content Security Policy."
+    ]
+  },
+  {
+    "game": "scene3d",
+    "engine_started": true,
+    "canvas": 1,
+    "external_fetch_blocked": true,
+    "javascript_errors": [],
+    "log": [
+      "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org",
+      "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL",
+      "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support.",
+      "Connecting to 'https://example.com/' violates the following Content Security Policy directive: \"connect-src 'self'\". The action has been blocked.",
+      "Fetch API cannot load https://example.com/. Refused to connect because it violates the document's Content Security Policy."
+    ]
+  },
+  {
+    "game": "turn",
+    "engine_started": true,
+    "canvas": 1,
+    "external_fetch_blocked": true,
+    "javascript_errors": [],
+    "log": [
+      "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org",
+      "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL",
+      "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support.",
+      "Connecting to 'https://example.com/' violates the following Content Security Policy directive: \"connect-src 'self'\". The action has been blocked.",
+      "Fetch API cannot load https://example.com/. Refused to connect because it violates the document's Content Security Policy."
+    ]
+  }
+]

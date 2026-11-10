@@ -1,0 +1,24 @@
+   Compiling onklav-core v0.8.0 (/workspace/scratch/c739b0c1372b/current/OnKlav/core)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 4.07s
+     Running unittests src/lib.rs (core/target/debug/deps/onklav_core-8a579202944a8eae)
+
+running 4 tests
+test document_backup::tests::old_backups_without_vault_still_work_and_incomplete_saves_block_export ... ok
+test document_backup::tests::invalid_voice_in_combined_archive_rejects_before_notes_or_files_are_published ... ok
+test document_backup::tests::combined_backup_restores_notes_files_and_passive_voice_without_transport_replay ... ok
+test document_backup::tests::encrypted_vault_is_hidden_from_files_and_portable_without_overwriting_existing ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 302 filtered out; finished in 0.12s
+
+     Running unittests src/bin/onklav-pack.rs (core/target/debug/deps/onklav_pack-ee23dc4255ec4a6b)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/notes_write_restore.rs (core/target/debug/deps/notes_write_restore-72fd2a02028c55ea)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 1 filtered out; finished in 0.00s
+

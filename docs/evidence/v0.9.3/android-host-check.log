@@ -1,0 +1,185 @@
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=36463 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=36463 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.11.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :android:app
+WARNING: BuildType 'debug' is both debuggable and has 'isMinifyEnabled' set to true.
+All code optimizations and obfuscation are disabled for debuggable builds.
+Checking the license for package Android SDK Platform-Tools in /workspace/scratch/39f240a7e5bd/restored-env/sdk/licenses
+Warning: License for package Android SDK Platform-Tools not accepted.
+WARNING: platform-tools package is not installed. Please accept the installation licence to continue
+
+> Task :android:app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:app:preBuild UP-TO-DATE
+> Task :android:app:preDebugBuild UP-TO-DATE
+> Task :android:games:preBuild UP-TO-DATE
+> Task :android:games:preDebugBuild UP-TO-DATE
+> Task :android:games:writeDebugAarMetadata UP-TO-DATE
+> Task :android:shared:preBuild UP-TO-DATE
+> Task :android:shared:preDebugBuild UP-TO-DATE
+> Task :android:shared:writeDebugAarMetadata UP-TO-DATE
+> Task :android:tools:preBuild UP-TO-DATE
+> Task :android:tools:preDebugBuild UP-TO-DATE
+> Task :android:tools:writeDebugAarMetadata UP-TO-DATE
+> Task :android:app:checkDebugAarMetadata UP-TO-DATE
+> Task :android:app:generateDebugResValues UP-TO-DATE
+> Task :android:games:generateDebugResValues UP-TO-DATE
+> Task :android:games:generateDebugResources UP-TO-DATE
+> Task :android:games:packageDebugResources UP-TO-DATE
+> Task :android:shared:generateDebugResValues UP-TO-DATE
+> Task :android:shared:generateDebugResources
+> Task :android:shared:packageDebugResources
+> Task :android:tools:generateDebugResValues UP-TO-DATE
+> Task :android:tools:generateDebugResources UP-TO-DATE
+> Task :android:tools:packageDebugResources UP-TO-DATE
+> Task :android:app:mapDebugSourceSetPaths
+> Task :android:app:generateDebugResources UP-TO-DATE
+> Task :android:app:mergeDebugResources
+> Task :android:app:packageDebugResources UP-TO-DATE
+> Task :android:app:parseDebugLocalResources UP-TO-DATE
+> Task :android:app:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :android:app:extractDeepLinksDebug UP-TO-DATE
+> Task :android:games:extractDeepLinksDebug UP-TO-DATE
+> Task :android:games:processDebugManifest UP-TO-DATE
+> Task :android:shared:extractDeepLinksDebug UP-TO-DATE
+> Task :android:shared:processDebugManifest UP-TO-DATE
+> Task :android:tools:extractDeepLinksDebug UP-TO-DATE
+> Task :android:tools:processDebugManifest UP-TO-DATE
+> Task :android:app:processDebugMainManifest UP-TO-DATE
+> Task :android:app:processDebugManifest UP-TO-DATE
+> Task :android:app:processDebugManifestForPackage UP-TO-DATE
+> Task :android:games:compileDebugLibraryResources UP-TO-DATE
+> Task :android:games:parseDebugLocalResources UP-TO-DATE
+> Task :android:games:generateDebugRFile UP-TO-DATE
+> Task :android:shared:parseDebugLocalResources
+> Task :android:shared:compileDebugLibraryResources
+> Task :android:tools:compileDebugLibraryResources UP-TO-DATE
+> Task :android:tools:parseDebugLocalResources UP-TO-DATE
+> Task :android:tools:generateDebugRFile UP-TO-DATE
+> Task :android:games:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:shared:generateDebugRFile
+> Task :android:games:compileDebugKotlin UP-TO-DATE
+> Task :android:games:javaPreCompileDebug UP-TO-DATE
+> Task :android:games:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:games:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :android:shared:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:app:processDebugResources
+> Task :android:shared:javaPreCompileDebug UP-TO-DATE
+> Task :android:tools:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:tools:javaPreCompileDebug UP-TO-DATE
+> Task :android:app:javaPreCompileDebug UP-TO-DATE
+> Task :android:app:preDebugUnitTestBuild UP-TO-DATE
+> Task :android:app:javaPreCompileDebugUnitTest UP-TO-DATE
+> Task :android:app:mergeDebugShaders UP-TO-DATE
+> Task :android:app:compileDebugShaders NO-SOURCE
+> Task :android:app:generateDebugAssets UP-TO-DATE
+> Task :android:games:mergeDebugShaders UP-TO-DATE
+> Task :android:games:compileDebugShaders NO-SOURCE
+> Task :android:games:generateDebugAssets UP-TO-DATE
+> Task :android:games:mergeDebugAssets UP-TO-DATE
+> Task :android:shared:mergeDebugShaders UP-TO-DATE
+> Task :android:shared:compileDebugShaders NO-SOURCE
+> Task :android:shared:generateDebugAssets UP-TO-DATE
+> Task :android:shared:mergeDebugAssets UP-TO-DATE
+> Task :android:tools:mergeDebugShaders UP-TO-DATE
+> Task :android:tools:compileDebugShaders NO-SOURCE
+> Task :android:tools:generateDebugAssets UP-TO-DATE
+> Task :android:tools:mergeDebugAssets UP-TO-DATE
+> Task :android:app:mergeDebugAssets UP-TO-DATE
+> Task :android:app:packageDebugUnitTestForUnitTest
+> Task :android:app:generateDebugUnitTestConfig
+> Task :android:games:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :android:games:processDebugJavaRes UP-TO-DATE
+> Task :android:shared:preDebugUnitTestBuild UP-TO-DATE
+> Task :android:shared:generateDebugUnitTestStubRFile
+> Task :android:shared:javaPreCompileDebugUnitTest UP-TO-DATE
+> Task :android:app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :android:app:compressDebugAssets UP-TO-DATE
+> Task :android:games:mergeDebugGeneratedProguardFiles UP-TO-DATE
+> Task :android:games:exportDebugConsumerProguardFiles UP-TO-DATE
+> Task :android:app:checkDebugDuplicateClasses UP-TO-DATE
+> Task :android:app:extractProguardFiles UP-TO-DATE
+> Task :android:app:mergeDebugJniLibFolders UP-TO-DATE
+> Task :android:games:mergeDebugJniLibFolders UP-TO-DATE
+> Task :android:games:mergeDebugNativeLibs NO-SOURCE
+> Task :android:games:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :android:shared:mergeDebugJniLibFolders UP-TO-DATE
+> Task :android:shared:mergeDebugNativeLibs UP-TO-DATE
+> Task :android:shared:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :android:tools:mergeDebugJniLibFolders UP-TO-DATE
+> Task :android:tools:mergeDebugNativeLibs NO-SOURCE
+> Task :android:tools:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :android:app:mergeDebugNativeLibs UP-TO-DATE
+> Task :android:app:stripDebugDebugSymbols UP-TO-DATE
+> Task :android:app:validateSigningDebug UP-TO-DATE
+> Task :android:app:writeDebugAppMetadata UP-TO-DATE
+> Task :android:app:writeDebugSigningConfigVersions UP-TO-DATE
+
+> Task :android:shared:compileDebugKotlin
+w: file:///workspace/scratch/39f240a7e5bd/project/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/Chrome.kt:240:24 'var statusBarColor: Int' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/39f240a7e5bd/project/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/Chrome.kt:241:24 'var navigationBarColor: Int' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/39f240a7e5bd/project/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/LauncherLayout.kt:4:27 Non-public primary constructor is exposed via the generated 'copy()' method of the 'data' class.
+
+The generated 'copy()' will change its visibility in future releases.
+
+To suppress the warning do one of the following:
+- Annotate the data class with the '@ConsistentCopyVisibility' annotation.
+- Use the '-Xconsistent-data-class-copy-visibility' compiler flag.
+- Annotate the data class with the '@ExposedCopyVisibility' annotation 
+  (Discouraged, but can be used to keep binary compatibility).
+
+To learn more, see the documentation of the '@ConsistentCopyVisibility' and '@ExposedCopyVisibility' annotations.
+
+This will become an error in Kotlin 2.2.
+
+> Task :android:shared:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:shared:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :android:shared:processDebugJavaRes UP-TO-DATE
+> Task :android:shared:mergeDebugGeneratedProguardFiles UP-TO-DATE
+> Task :android:shared:exportDebugConsumerProguardFiles UP-TO-DATE
+> Task :android:shared:bundleLibCompileToJarDebug
+> Task :android:shared:compileDebugUnitTestKotlin
+> Task :android:shared:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :android:shared:processDebugUnitTestJavaRes UP-TO-DATE
+
+> Task :android:shared:testDebugUnitTest
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=36463 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=36463 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+> Task :android:tools:compileDebugKotlin
+w: file:///workspace/scratch/39f240a7e5bd/project/OnKlav/android/tools/src/main/kotlin/app/onklav/tools/AnnotationScreen.kt:200:46 'val Icons.Outlined.Undo: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Outlined.Undo.
+w: file:///workspace/scratch/39f240a7e5bd/project/OnKlav/android/tools/src/main/kotlin/app/onklav/tools/AnnotationScreen.kt:203:46 'val Icons.Outlined.Redo: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Outlined.Redo.
+w: file:///workspace/scratch/39f240a7e5bd/project/OnKlav/android/tools/src/main/kotlin/app/onklav/tools/BrowserScreen.kt:156:50 'val Icons.Outlined.ArrowForward: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Outlined.ArrowForward.
+w: file:///workspace/scratch/39f240a7e5bd/project/OnKlav/android/tools/src/main/kotlin/app/onklav/tools/ReaderScreen.kt:106:41 'val Icons.Outlined.VolumeUp: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Outlined.VolumeUp.
+
+> Task :android:tools:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:tools:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :android:tools:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :android:tools:processDebugJavaRes UP-TO-DATE
+> Task :android:tools:mergeDebugGeneratedProguardFiles UP-TO-DATE
+> Task :android:tools:exportDebugConsumerProguardFiles UP-TO-DATE
+
+> Task :android:app:compileDebugKotlin
+w: file:///workspace/scratch/39f240a7e5bd/project/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt:192:29 'fun get(p0: String!): Any?' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/39f240a7e5bd/project/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessengerPane.kt:89:21 'val LocalClipboardManager: ProvidableCompositionLocal<ClipboardManager>' is deprecated. Use LocalClipboard instead which supports suspend functions.
+
+> Task :android:app:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:app:bundleDebugClassesToCompileJar
+> Task :android:app:bundleDebugClassesToRuntimeJar
+> Task :android:app:processDebugJavaRes UP-TO-DATE
+> Task :android:app:mergeDebugGeneratedProguardFiles UP-TO-DATE
+> Task :android:app:mergeDebugJavaResource UP-TO-DATE
+> Task :android:app:compileDebugUnitTestKotlin
+> Task :android:app:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :android:app:processDebugUnitTestJavaRes UP-TO-DATE
+
+> Task :android:app:testDebugUnitTest
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=36463 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=36463 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+
+> Task :android:app:minifyDebugWithR8
+> Task :android:app:packageDebug
+> Task :android:app:createDebugApkListingFileRedirect UP-TO-DATE
+> Task :android:app:assembleDebug
+w: Detected multiple Kotlin daemon sessions at 
+
+BUILD SUCCESSFUL in 2m 6s
+106 actionable tasks: 23 executed, 83 up-to-date

@@ -1,0 +1,234 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.11.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :android:app
+WARNING: The option setting 'android.aapt2FromMavenOverride=/workspace/scratch/ed752e8a1957/build-env/sdk/build-tools/35.0.0/aapt2' is experimental.
+Checking the license for package Android SDK Platform-Tools in /workspace/scratch/ed752e8a1957/build-env/sdk/licenses
+Warning: License for package Android SDK Platform-Tools not accepted.
+WARNING: platform-tools package is not installed. Please accept the installation licence to continue
+
+> Task :android:app:preBuild UP-TO-DATE
+> Task :android:app:preOptimizedBuild UP-TO-DATE
+> Task :android:app:mergeOptimizedJniLibFolders
+> Task :android:games:preBuild UP-TO-DATE
+> Task :android:games:preReleaseBuild UP-TO-DATE
+> Task :android:games:mergeReleaseJniLibFolders
+> Task :android:games:mergeReleaseNativeLibs NO-SOURCE
+> Task :android:shared:preBuild UP-TO-DATE
+> Task :android:shared:preReleaseBuild UP-TO-DATE
+> Task :android:games:copyReleaseJniLibsProjectOnly
+> Task :android:shared:mergeReleaseJniLibFolders
+> Task :android:tools:preBuild UP-TO-DATE
+> Task :android:tools:preReleaseBuild UP-TO-DATE
+> Task :android:tools:mergeReleaseJniLibFolders
+> Task :android:tools:mergeReleaseNativeLibs NO-SOURCE
+> Task :android:tools:copyReleaseJniLibsProjectOnly
+> Task :android:shared:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:shared:mergeReleaseNativeLibs
+> Task :android:shared:generateReleaseResValues
+> Task :android:shared:generateReleaseResources
+> Task :android:shared:copyReleaseJniLibsProjectOnly
+> Task :android:shared:packageReleaseResources
+> Task :android:shared:parseReleaseLocalResources
+> Task :android:shared:generateReleaseRFile
+> Task :android:app:mergeOptimizedNativeLibs
+
+> Task :android:app:stripOptimizedDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libandroidx.graphics.path.so, libc++_shared.so, libgodot_android.so.
+
+> Task :android:app:extractOptimizedNativeSymbolTables
+> Task :android:app:mergeOptimizedNativeDebugMetadata NO-SOURCE
+> Task :android:shared:javaPreCompileRelease
+> Task :android:tools:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:tools:generateReleaseResValues
+> Task :android:tools:generateReleaseResources
+> Task :android:tools:packageReleaseResources
+> Task :android:tools:parseReleaseLocalResources
+> Task :android:tools:generateReleaseRFile
+> Task :android:tools:javaPreCompileRelease
+> Task :android:games:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:games:generateReleaseResValues
+> Task :android:games:generateReleaseResources
+> Task :android:games:packageReleaseResources
+> Task :android:games:parseReleaseLocalResources
+> Task :android:games:generateReleaseRFile
+> Task :android:games:compileReleaseKotlin
+> Task :android:games:javaPreCompileRelease
+> Task :android:games:compileReleaseJavaWithJavac NO-SOURCE
+> Task :android:games:mergeReleaseGeneratedProguardFiles
+> Task :android:games:exportReleaseConsumerProguardFiles
+> Task :android:app:buildKotlinToolingMetadata
+> Task :android:app:checkOptimizedDuplicateClasses
+> Task :android:app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:games:writeReleaseAarMetadata
+> Task :android:shared:writeReleaseAarMetadata
+> Task :android:tools:writeReleaseAarMetadata
+> Task :android:app:checkOptimizedAarMetadata
+> Task :android:app:generateOptimizedResValues
+> Task :android:app:mapOptimizedSourceSetPaths
+> Task :android:app:generateOptimizedResources
+> Task :android:app:mergeOptimizedResources
+> Task :android:app:packageOptimizedResources
+> Task :android:app:parseOptimizedLocalResources
+> Task :android:app:createOptimizedCompatibleScreenManifests
+> Task :android:app:extractDeepLinksOptimized
+> Task :android:games:extractDeepLinksRelease
+> Task :android:games:processReleaseManifest
+> Task :android:shared:extractDeepLinksRelease
+> Task :android:shared:processReleaseManifest
+> Task :android:tools:extractDeepLinksRelease
+> Task :android:tools:processReleaseManifest
+> Task :android:app:processOptimizedMainManifest
+> Task :android:app:processOptimizedManifest
+> Task :android:app:processOptimizedManifestForPackage
+> Task :android:app:processOptimizedResources
+> Task :android:games:bundleLibCompileToJarRelease
+> Task :android:app:javaPreCompileOptimized
+> Task :android:games:prepareReleaseArtProfile
+> Task :android:shared:prepareReleaseArtProfile
+> Task :android:tools:prepareReleaseArtProfile
+> Task :android:app:mergeOptimizedArtProfile
+> Task :android:games:bundleLibRuntimeToJarRelease
+> Task :android:app:extractProguardFiles
+> Task :android:games:processReleaseJavaRes
+> Task :android:app:mergeOptimizedStartupProfile
+> Task :android:app:mergeOptimizedShaders
+> Task :android:app:compileOptimizedShaders NO-SOURCE
+> Task :android:app:generateOptimizedAssets UP-TO-DATE
+> Task :android:games:mergeReleaseShaders
+> Task :android:games:compileReleaseShaders NO-SOURCE
+> Task :android:games:generateReleaseAssets UP-TO-DATE
+> Task :android:games:mergeReleaseAssets
+> Task :android:shared:mergeReleaseShaders
+> Task :android:shared:compileReleaseShaders NO-SOURCE
+> Task :android:shared:generateReleaseAssets UP-TO-DATE
+> Task :android:shared:mergeReleaseAssets
+> Task :android:tools:mergeReleaseShaders
+> Task :android:tools:compileReleaseShaders NO-SOURCE
+> Task :android:tools:generateReleaseAssets UP-TO-DATE
+> Task :android:tools:mergeReleaseAssets
+> Task :android:app:mergeOptimizedAssets
+> Task :android:app:compressOptimizedAssets
+> Task :android:app:extractOptimizedVersionControlInfo
+> Task :android:games:createFullJarRelease
+> Task :android:games:extractProguardFiles
+> Task :android:games:generateReleaseLintModel
+> Task :android:games:prepareLintJarForPublish
+> Task :android:shared:extractProguardFiles
+> Task :android:shared:prepareLintJarForPublish
+> Task :android:tools:extractProguardFiles
+> Task :android:tools:prepareLintJarForPublish
+> Task :android:tools:stripReleaseDebugSymbols NO-SOURCE
+> Task :android:tools:copyReleaseJniLibsProjectAndLocalJars
+> Task :android:tools:extractDeepLinksForAarRelease
+
+> Task :android:shared:stripReleaseDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libonklav_core.so.
+
+> Task :android:shared:copyReleaseJniLibsProjectAndLocalJars
+> Task :android:shared:extractDeepLinksForAarRelease
+> Task :android:games:stripReleaseDebugSymbols NO-SOURCE
+> Task :android:games:copyReleaseJniLibsProjectAndLocalJars
+> Task :android:games:extractDeepLinksForAarRelease
+
+> Task :android:shared:compileReleaseKotlin
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/Chrome.kt:266:24 'var statusBarColor: Int' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/Chrome.kt:267:24 'var navigationBarColor: Int' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/Chrome.kt:268:65 'var isStatusBarContrastEnforced: Boolean' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/LauncherLayout.kt:4:27 Non-public primary constructor is exposed via the generated 'copy()' method of the 'data' class.
+
+The generated 'copy()' will change its visibility in future releases.
+
+To suppress the warning do one of the following:
+- Annotate the data class with the '@ConsistentCopyVisibility' annotation.
+- Use the '-Xconsistent-data-class-copy-visibility' compiler flag.
+- Annotate the data class with the '@ExposedCopyVisibility' annotation 
+  (Discouraged, but can be used to keep binary compatibility).
+
+To learn more, see the documentation of the '@ConsistentCopyVisibility' and '@ExposedCopyVisibility' annotations.
+
+This will become an error in Kotlin 2.2.
+
+> Task :android:games:extractReleaseAnnotations
+> Task :android:shared:compileReleaseJavaWithJavac NO-SOURCE
+> Task :android:shared:mergeReleaseGeneratedProguardFiles
+> Task :android:shared:bundleLibCompileToJarRelease
+> Task :android:shared:exportReleaseConsumerProguardFiles
+> Task :android:shared:bundleLibRuntimeToJarRelease
+> Task :android:shared:processReleaseJavaRes
+> Task :android:shared:createFullJarRelease
+> Task :android:shared:generateReleaseLintModel
+> Task :android:shared:extractReleaseAnnotations
+> Task :android:shared:mergeReleaseConsumerProguardFiles
+> Task :android:shared:mergeReleaseJavaResource
+> Task :android:shared:syncReleaseLibJars
+> Task :android:shared:bundleReleaseLocalLintAar
+> Task :android:games:mergeReleaseConsumerProguardFiles
+> Task :android:games:mergeReleaseJavaResource
+> Task :android:games:syncReleaseLibJars
+> Task :android:games:bundleReleaseLocalLintAar
+> Task :android:tools:compileReleaseKotlin
+> Task :android:tools:compileReleaseJavaWithJavac NO-SOURCE
+> Task :android:tools:mergeReleaseGeneratedProguardFiles
+> Task :android:tools:exportReleaseConsumerProguardFiles
+> Task :android:tools:bundleLibCompileToJarRelease
+> Task :android:games:lintVitalAnalyzeRelease
+> Task :android:tools:bundleLibRuntimeToJarRelease
+> Task :android:tools:processReleaseJavaRes
+> Task :android:tools:createFullJarRelease
+> Task :android:tools:generateReleaseLintModel
+> Task :android:tools:extractReleaseAnnotations
+> Task :android:tools:mergeReleaseConsumerProguardFiles
+> Task :android:tools:mergeReleaseJavaResource
+> Task :android:tools:syncReleaseLibJars
+> Task :android:tools:bundleReleaseLocalLintAar
+> Task :android:games:writeReleaseLintModelMetadata
+> Task :android:app:compileOptimizedKotlin
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/MainActivity.kt:48:55 'static field TRIM_MEMORY_RUNNING_LOW: Int' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessageAttachments.kt:69:9 'constructor(): MediaRecorder' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt:196:29 'fun get(p0: String!): Any?' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt:354:17 Condition is always 'false'.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt:399:17 Condition is always 'true'.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessengerPane.kt:136:21 'val LocalClipboardManager: ProvidableCompositionLocal<ClipboardManager>' is deprecated. Use LocalClipboard instead which supports suspend functions.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkWebComponent.kt:196:29 Wrapping the left-hand side of assignments in parentheses, labels or annotations is not allowed. This will become an error in Kotlin 2.2.
+w: file:///workspace/scratch/ed752e8a1957/current/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkWebComponent.kt:197:29 Wrapping the left-hand side of assignments in parentheses, labels or annotations is not allowed. This will become an error in Kotlin 2.2.
+
+> Task :android:app:compileOptimizedJavaWithJavac NO-SOURCE
+> Task :android:app:expandOptimizedArtProfileWildcards
+> Task :android:app:mergeOptimizedGeneratedProguardFiles
+> Task :android:app:processOptimizedJavaRes
+> Task :android:app:mergeOptimizedJavaResource
+> Task :android:shared:lintVitalAnalyzeRelease
+> Task :android:app:generateOptimizedLintVitalReportModel
+> Task :android:shared:writeReleaseLintModelMetadata
+> Task :android:tools:lintVitalAnalyzeRelease
+> Task :android:tools:writeReleaseLintModelMetadata
+> Task :android:app:minifyOptimizedWithR8
+> Task :android:app:lintVitalAnalyzeOptimized
+> Task :android:games:generateReleaseLintVitalModel
+> Task :android:shared:generateReleaseLintVitalModel
+> Task :android:tools:generateReleaseLintVitalModel
+> Task :android:app:lintVitalReportOptimized
+> Task :android:app:lintVitalOptimized
+> Task :android:app:collectOptimizedDependencies
+> Task :android:app:sdkOptimizedDependencyData
+> Task :android:app:validateSigningOptimized
+> Task :android:app:writeOptimizedAppMetadata
+> Task :android:app:writeOptimizedSigningConfigVersions
+> Task :android:app:convertShrunkResourcesToBinaryOptimized
+> Task :android:app:optimizeOptimizedResources
+> Task :android:app:compileOptimizedArtProfile
+> Task :android:app:packageOptimized
+> Task :android:app:createOptimizedApkListingFileRedirect
+> Task :android:app:assembleOptimized
+w: Detected multiple Kotlin daemon sessions at 
+[Incubating] Problems report is available at: file:///workspace/scratch/ed752e8a1957/current/OnKlav/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.11.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 3m 15s
+151 actionable tasks: 151 executed

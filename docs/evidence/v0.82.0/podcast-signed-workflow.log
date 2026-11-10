@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/75acf774e3b8/recovered/OnKlav/scripts/test_podcast_polish.py", line 56, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/scratch/75acf774e3b8/recovered/OnKlav/scripts/test_podcast_polish.py", line 11, in main
+    with tempfile.TemporaryDirectory(prefix='onklav-podcast-polish-') as folder,Runtime(folder) as runtime:
+                                                                                ^^^^^^^^^^^^^^^
+  File "/workspace/scratch/75acf774e3b8/recovered/OnKlav/developer/onklav.py", line 261, in __init__
+    self.process=subprocess.Popen([str(binary or build_host()),str(root)],stdin=subprocess.PIPE,stdout=subprocess.PIPE,text=True,encoding='utf-8')
+                                                 ^^^^^^^^^^^^
+  File "/workspace/scratch/75acf774e3b8/recovered/OnKlav/developer/onklav.py", line 252, in build_host
+    if info.get('build')!=HOST_BUILD or info.get('source')!=fingerprint:raise ValueError('Linked desktop runtime does not match current host sources. Rebuild the local host cache.')
+                                                                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Linked desktop runtime does not match current host sources. Rebuild the local host cache.

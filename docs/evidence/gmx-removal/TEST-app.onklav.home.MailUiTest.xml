@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.MailUiTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-11-02T17:43:05" hostname="13575fdd974e" time="20.766">
+  <properties/>
+  <testcase name="yahooAndGoogleFormsUseOnlyAppPasswords" classname="app.onklav.home.MailUiTest" time="15.14"/>
+  <testcase name="yahooAndBlankPrivateDomainFields" classname="app.onklav.home.MailUiTest" time="5.626"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,33 @@
+{
+  "build": [],
+  "restore_bundles": [],
+  "reuse": [
+    "Notes",
+    "Counter",
+    "RSS",
+    "ReadAloud",
+    "Browser",
+    "YouTube",
+    "Annotation",
+    "Social",
+    "WalkieTalkie"
+  ],
+  "unselected_stale": []
+}
+{
+  "build": [],
+  "restore_bundles": [],
+  "reuse": [
+    "Notes",
+    "Counter",
+    "RSS",
+    "ReadAloud",
+    "Browser",
+    "YouTube",
+    "Annotation",
+    "Social",
+    "WalkieTalkie"
+  ],
+  "unselected_stale": []
+}
+{"built": [], "bundles_restored": [], "all_packages_current": true}

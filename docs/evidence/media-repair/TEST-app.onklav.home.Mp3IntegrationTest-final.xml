@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.Mp3IntegrationTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-29T18:23:58" hostname="b623e8e1265a" time="2.204">
+  <properties/>
+  <testcase name="pitchedAudioCanBeExportedAsMp3AndReopened" classname="app.onklav.home.Mp3IntegrationTest" time="2.107"/>
+  <testcase name="independentVbrMpeg2AndMpeg25FilesDecodeThroughTheEditorsSoftwareImport" classname="app.onklav.home.Mp3IntegrationTest" time="0.097"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

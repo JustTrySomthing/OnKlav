@@ -1,0 +1,210 @@
+{
+  "date": "2026-10-23",
+  "source_version": "0.49.0-dev",
+  "source_version_code": 56,
+  "scope": "Screenshot-driven themed stars/contact headers, message loading/provider caching, Files primary-open/internal routing and retained lifecycle",
+  "status": "Focused host checks and signed debug APK passed; handset acceptance open",
+  "apk_built": true,
+  "apk_variant": "debug",
+  "apk_bytes": 66930203,
+  "apk_sha256": "45ff35d56d5d072a74409f59bb8efc436bd8d0293155f259d890c400d8e069ec",
+  "debug_feedback_build": true,
+  "optimized_release_size_comparison": false,
+  "mobile_native_rebuilt": false,
+  "host_native_rebuilt": false,
+  "native_baseline_reused": {
+    "source_matched": true,
+    "previous_rust_tests": 168,
+    "evidence": "docs/source-verification-0.48-baseline.json"
+  },
+  "sdk_apps_rebuilt": [
+    "Files v8"
+  ],
+  "sdk_packages_reused": 9,
+  "godot_pack_reused_source_matched": true,
+  "games_changed": false,
+  "games_deferred_by_user": true,
+  "full_rewrite_complete": false,
+  "full_sdk_complete": false,
+  "installed_on_handset": false,
+  "phone_performance_measured": false,
+  "real_carrier_verified": false,
+  "two_phone_walkie_verified": false,
+  "release_mms_ready": false,
+  "tests": {
+    "app_host_passed": 14,
+    "shared_passed": 12,
+    "rust_passed": 0,
+    "python_passed": 0,
+    "failed": 0,
+    "skipped": 0,
+    "full_host_suite_rerun": false,
+    "case_results": [
+      {
+        "class_name": "app.onklav.shared.ThemePackageTest",
+        "name": "rejectsInvalidUtf8AndCompressedExpansion",
+        "passed": true,
+        "evidence": "docs/evidence/v0.49.0/accepted/TEST-app.onklav.shared.ThemePackageTest.xml"
+      },
+      {
+        "class_name": "app.onklav.shared.ThemePackageTest",
+        "name": "unicodeAndAllPresetsRoundTripWithoutExecutablePayload",
+        "passed": true,
+        "evidence": "docs/evidence/v0.49.0/accepted/TEST-app.onklav.shared.ThemePackageTest.xml"
+      },
+      {
+        "class_name": "app.onklav.shared.ThemePackageTest",
+        "name": "rejectsPathsUnknownFieldsDuplicateFieldsAndInvalidValues",
+        "passed": true,
+        "evidence": "docs/evidence/v0.49.0/accepted/TEST-app.onklav.shared.ThemePackageTest.xml"
+      },
+      {
+        "class_name": "app.onklav.shared.ThemePackageTest",
+        "name": "customImageIsEmbeddedAndPrivatePathCannotBeExported",
+        "passed": true,
+        "evidence": "docs/evidence/v0.49.0/accepted/TEST-app.onklav.shared.ThemePackageTest.xml"
+      },
+      {
+        "class_name": "app.onklav.shared.NativeBridgeTest",
+        "name": "oversizedDocumentReturnsFailureAcrossJni",
+        "passed": true,
+        "evidence": "docs/evidence/v0.49.0/accepted/TEST-app.onklav.shared.NativeBridgeTest.xml"
+      },
+      {
+        "class_name": "app.onklav.shared.NativeBridgeTest",
+        "name": "kotlinCallsRealRustAndReloadsUnicodeDocument",
+        "passed": true,
+        "evidence": "docs/evidence/v0.49.0/accepted/TEST-app.onklav.shared.NativeBridgeTest.xml"
+      },
+      {
+        "class_name": "app.onklav.shared.NativeBridgeTest",
+        "name": "walkieRulesCrossJniWithoutAnyTransport",
+        "passed": true,
+        "evidence": "docs/evidence/v0.49.0/accepted/TEST-app.onklav.shared.NativeBridgeTest.xml"
+      },
+      {
+        "class_name": "app.onklav.shared.LauncherLayoutTest",
+        "name": "hitTestingIncludesLastRowAndScrollOffset",
+        "passed": true,
+        "evidence": "docs/evidence/v0.49.0/accepted/TEST-app.onklav.shared.LauncherLayoutTest.xml"
+      },
+      {
+        "class_name": "app.onklav.shared.LauncherLayoutTest",
+        "name": "sparseBottomRowAndNewPageSurviveReload",
+        "passed": true,
+        "evidence": "docs/evidence/v0.49.0/accepted/TEST-app.onklav.shared.LauncherLayoutTest.xml"
+      },
+      {
+        "class_name": "app.onklav.shared.LauncherLayoutTest",
+        "name": "occupiedDropReordersWithoutLosingHolesOrIds",
+        "passed": true,
+        "evidence": "docs/evidence/v0.49.0/accepted/TEST-app.onklav.shared.LauncherLayoutTest.xml"
+      },
+      {
+        "class_name": "app.onklav.shared.LauncherLayoutTest",
+        "name": "catalogReconciliationRejectsUnknownAndDuplicateIds",
+        "passed": true,
+        "evidence": "docs/evidence/v0.49.0/accepted/TEST-app.onklav.shared.LauncherLayoutTest.xml"
+      },
+      {
+        "class_name": "app.onklav.shared.LauncherLayoutTest",
+        "name": "cancelSnapshotAndEmptyTrailingPageAreSafe",
+        "passed": true,
+        "evidence": "docs/evidence/v0.49.0/accepted/TEST-app.onklav.shared.LauncherLayoutTest.xml"
+      },
+      {
+        "class_name": "app.onklav.home.GroupProtocolHostTest",
+        "name": "activityPickerOffersOneOtherPeerForCanonicalDuplicatesAndExcludesSelf",
+        "passed": true,
+        "evidence": "docs/evidence/v0.49.0/accepted/TEST-app.onklav.home.GroupProtocolHostTest.xml"
+      },
+      {
+        "class_name": "app.onklav.home.GroupProtocolHostTest",
+        "name": "productionJniProjectsPostAndReaction",
+        "passed": true,
+        "evidence": "docs/evidence/v0.49.0/accepted/TEST-app.onklav.home.GroupProtocolHostTest.xml"
+      },
+      {
+        "class_name": "app.onklav.home.GroupProtocolHostTest",
+        "name": "initialsMatchReference",
+        "passed": true,
+        "evidence": "docs/evidence/v0.49.0/accepted/TEST-app.onklav.home.GroupProtocolHostTest.xml"
+      },
+      {
+        "class_name": "app.onklav.home.MediaAndCarrierTest",
+        "name": "animatedImagesDefaultOnAndPreferencePersists",
+        "passed": true,
+        "evidence": "docs/evidence/v0.49.0/accepted/TEST-app.onklav.home.MediaAndCarrierTest.xml"
+      },
+      {
+        "class_name": "app.onklav.home.MediaAndCarrierTest",
+        "name": "galleryIncludesAllMediaKindsAndPreservesIdentityWithoutDuplicates",
+        "passed": true,
+        "evidence": "docs/evidence/v0.49.0/accepted/TEST-app.onklav.home.MediaAndCarrierTest.xml"
+      },
+      {
+        "class_name": "app.onklav.home.MediaAndCarrierTest",
+        "name": "driveProviderCopyStreamsSelectedFileAndRejectsSameDestination",
+        "passed": true,
+        "evidence": "docs/evidence/v0.49.0/accepted/TEST-app.onklav.home.MediaAndCarrierTest.xml"
+      },
+      {
+        "class_name": "app.onklav.home.MediaAndCarrierTest",
+        "name": "carrierTrialRequiresExplicitChoiceAndDoesNotClaimReleaseAcceptance",
+        "passed": true,
+        "evidence": "docs/evidence/v0.49.0/accepted/TEST-app.onklav.home.MediaAndCarrierTest.xml"
+      },
+      {
+        "class_name": "app.onklav.home.FilesBrokerHostTest",
+        "name": "fileExportsAreReadOnlyAndCannotExposeArbitraryPrivatePaths",
+        "passed": true,
+        "evidence": "docs/evidence/v0.49.0/accepted/TEST-app.onklav.home.FilesBrokerHostTest.xml"
+      },
+      {
+        "class_name": "app.onklav.home.FilesBrokerHostTest",
+        "name": "deletingPrivateDataClearsOnlyThatAppsFolderConnections",
+        "passed": true,
+        "evidence": "docs/evidence/v0.49.0/accepted/TEST-app.onklav.home.FilesBrokerHostTest.xml"
+      },
+      {
+        "class_name": "app.onklav.home.FilesBrokerHostTest",
+        "name": "revokedSdkAuthorizationAndUnknownTokensCannotQueryAndroidFiles",
+        "passed": true,
+        "evidence": "docs/evidence/v0.49.0/accepted/TEST-app.onklav.home.FilesBrokerHostTest.xml"
+      },
+      {
+        "class_name": "app.onklav.home.FilesBrokerHostTest",
+        "name": "androidFoldersExposeOpaqueTokensAndSupportRenameAndExplicitDelete",
+        "passed": true,
+        "evidence": "docs/evidence/v0.49.0/accepted/TEST-app.onklav.home.FilesBrokerHostTest.xml"
+      },
+      {
+        "class_name": "app.onklav.home.FilesBrokerHostTest",
+        "name": "selectedImportsStreamAndStopWhenAuthorizationIsRevoked",
+        "passed": true,
+        "evidence": "docs/evidence/v0.49.0/accepted/TEST-app.onklav.home.FilesBrokerHostTest.xml"
+      },
+      {
+        "class_name": "app.onklav.home.MessageLoadingTest",
+        "name": "localMetadataChangesReuseProviderRowsAndApplyFreshUnreadState",
+        "passed": true,
+        "evidence": "docs/evidence/v0.49.0/accepted/TEST-app.onklav.home.MessageLoadingTest.xml"
+      },
+      {
+        "class_name": "app.onklav.home.FilesRoutingTest",
+        "name": "tappingNoteResolvesNotesAndClosedFilesModelReopensWithoutBusyOverlay",
+        "passed": true,
+        "evidence": "docs/evidence/v0.49.0/accepted/TEST-app.onklav.home.FilesRoutingTest.xml"
+      }
+    ],
+    "qualification": "Selected checks only; no new carrier, handset playback/visual/latency acceptance. Native baseline reused with source hashes. First loading regression check found short-inbox cache coverage bug, corrected and final rerun passed."
+  },
+  "build_evidence": "docs/evidence/v0.49.0/build-debug.json",
+  "runtime_bundle_freshness": "Tested MessageRepository/SdkAppModel class bytes match their runtime bundle; final UI read-state guard compiled by APK assembly",
+  "remaining": [
+    "Handset Files\u2192Notes\u2192Back transition and media handler acceptance",
+    "Contact-photo and theme visual acceptance against supplied screenshots",
+    "Handset cold/warm entry latency and scrolling measurement",
+    "Existing 0.48 carrier/Walkie/Drive and deferred game gaps remain"
+  ]
+}

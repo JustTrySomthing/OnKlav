@@ -1,0 +1,16 @@
+{
+  "scope": "Email enrollment: Gmail and Custom domain only",
+  "production_compile": "PASS",
+  "tests": "Not rerun for this UI-choice/text change; prior 18-test Email pass retained as historical evidence",
+  "apk_built": false,
+  "existing_accounts": "Preserved without deletion or credential migration",
+  "changes": [
+    "Two setup choices with Custom domain display label",
+    "Removed Proton webmail shortcuts from empty state and account sheet",
+    "Updated in-app help and custom-domain password/server guidance"
+  ],
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/MailDialogs.kt": "44245774206a3bc1a2c9e524ad231e4bc39dae5aa1c824b638e1587e3b788771",
+    "android/app/src/main/kotlin/app/onklav/home/EmailScreen.kt": "f839a4cd73e98ef3fea5e86a12da62a95de05ad4c585bf223213e0761b018f09"
+  }
+}

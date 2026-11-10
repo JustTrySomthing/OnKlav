@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.UiPolishHostTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-10-23T12:25:50" hostname="41aed82b0335" time="6.949">
+  <properties/>
+  <testcase name="contactsGroupLettersShowNoNumberAndChooseMessageOrWalkieRecipient" classname="app.onklav.home.UiPolishHostTest" time="1.073"/>
+  <testcase name="contactsUnavailableCanRetryAndSearchHasAnExplicitEmptyResult" classname="app.onklav.home.UiPolishHostTest" time="1.093"/>
+  <testcase name="keypadAddsDigitsFormatsAndBackspacesWithoutChangingDialableTarget" classname="app.onklav.home.UiPolishHostTest" time="1.192"/>
+  <testcase name="pageSlidesFromRightAndRetainsContentUntilExitCompletes" classname="app.onklav.home.UiPolishHostTest" time="0.86"/>
+  <testcase name="mailboxTabsSelectAndExposeBothTrashActions" classname="app.onklav.home.UiPolishHostTest" time="0.85"/>
+  <testcase name="contactsRefreshAfterEditorReturnAndHideRevokedContacts" classname="app.onklav.home.UiPolishHostTest" time="0.907"/>
+  <testcase name="messageFoldersFilterProviderRowsAndRestoreAllUpdatesRustState" classname="app.onklav.home.UiPolishHostTest" time="0.973"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

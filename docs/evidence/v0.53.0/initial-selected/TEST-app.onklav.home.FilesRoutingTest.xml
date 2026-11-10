@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.FilesRoutingTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-23T19:56:58" hostname="41aed82b0335" time="7.187">
+  <properties/>
+  <testcase name="tappingNoteResolvesNotesAndClosedFilesModelReopensWithoutBusyOverlay" classname="app.onklav.home.FilesRoutingTest" time="7.187"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

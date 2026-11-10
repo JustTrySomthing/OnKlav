@@ -1,0 +1,63 @@
+{
+  "status": "source_complete",
+  "passing_check_count": 13,
+  "passing_checks": [
+    "WriteEnglishTest.bundledDictionaryChecksInflectionsAndCommonMisspellingsWithoutAndroidService",
+    "WriteEnglishTest.englishGrammarRetainsOffsetsAndLeavesUrlsCodeAndValidArticlesAlone",
+    "WriteEnglishTest.suggestionsNeverBecomeFormattingOrSilentlyRewriteDocument",
+    "WriteHostTest.documentsAreAtomicPrivateAndRespectRevocation",
+    "WriteHostTest.embeddedImagesSurviveWriteRoundTripAndSafeExports",
+    "WriteHostTest.numberedListsContinueAndRemovingOneParagraphKeepsItsNeighbors",
+    "WriteHostTest.partialAndCursorFormattingPreserveSurroundingText",
+    "WriteHostTest.proofreadingPreservesOffsetsAndDoesNotRewriteText",
+    "WriteHostTest.richDocumentsRoundTripDocxAndPdfPagination",
+    "WriteSaveCheckpointTest.discardRestoresExplicitSaveDespiteAutosaveAndDoesNotDeleteTheDocument",
+    "WriteUiTest.reviewAppliesOnlyTheChosenSpellingSuggestion",
+    "WriteUiTest.saveChoicesWrapAtLargeTypeAndExportUsesTheChosenFormat",
+    "WriteUiTest.signedWriterFormatsManagesAndExportsWithoutLosingSelection"
+  ],
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/WriteEditor.kt": "e3d1d585948a95cfe3e20eab9accab32b819d075ec3e96a9c71ad7a03043c502",
+    "android/app/src/main/kotlin/app/onklav/home/WriteProofreading.kt": "5fbeade86e6d39a908832fc6dd2da1422effc035738a7a35cec2f1bfefdccddf",
+    "android/app/src/main/kotlin/app/onklav/home/WriteSaveDialog.kt": "994dfec9fa21febfd6e32f47b9f99c0669984fc9c010cccf9a09d0bd440c0418",
+    "android/app/src/main/kotlin/app/onklav/home/SdkAppScreen.kt": "26441655ca576d1bb43a3548da2e4b70c07f59282b2f46d47c8d3961ca8462c7",
+    "android/app/src/main/assets/write/english.txt.gz": "2d8eddb5b5bdecbee0842d1831be409cd8ca067903246831a9df9f823525a36a",
+    "android/app/src/main/assets/write/english.json": "69b5cc748e7482ea5091816f45ccbe4edc58d0f76a1adba9cb866bec47d44c87",
+    "android/app/src/main/assets/write/english-COPYRIGHT.txt": "1d7c0128f6c72d2270bf1b271b37a3a21267f759161b68c4dc6c501574c0892e",
+    "android/shared/src/main/res/drawable/write_spellcheck.xml": "6300f81d4ab984efe13ac5ca251364064a083419e1a9f6390fba913972de916a",
+    "scripts/build_write_dictionary.py": "d7603be33e2730f08de0dba2925dd086de125166f10a3afdc948a2c0aa2fcc75",
+    "scripts/verify_apks.py": "4ccb99c609065b14dd2a4b237f4f36a5185a80082893550d08c344dc62edb0d8",
+    "android/app/src/test/kotlin/app/onklav/home/WriteUiTest.kt": "38b97bb335df4d7d8d9ad5b2fb28dbd91081de58214eee6dd9ada5aa08919760",
+    "android/app/src/test/kotlin/app/onklav/home/WriteEnglishTest.kt": "6c3b25e6cb4391d0ef1801ddb1355d0f5f51637e8e29a33624e3961e8d4a7e8f",
+    "android/app/src/test/kotlin/app/onklav/home/WriteSaveCheckpointTest.kt": "64f8c49091753173078a3ba1c8db1b386a6b5cdf6146537e83acc449c8ed5a50"
+  },
+  "tested_runtime_bundle_matches_compiled_classes": true,
+  "post_check_copy_only_edit": "Review count caption changed to Suggestions to review: N, avoiding singular/plural mismatch; no behavior changes or repeat suite.",
+  "tested_WriteEditor_sha256": "c435b5d1ea9f36870202a9f2c35ab223aae956ebe8f8b1b2d0c78887dbc3acf8",
+  "dictionary": {
+    "source": "SCOWL/Hunspell en_US, Debian hunspell-en-us 1:2020.12.07-2",
+    "upstream": "https://wordlist.aspell.net/",
+    "words": 163006,
+    "source_sha256": {
+      "en_US.dic": "829a043cf078d1e80e886289a13823454977f442a239a859d2133ea61944aa60",
+      "en_US.aff": "70fe5778717d097ce2f3326baaa5c1e4d2206d81a5a81d3ea8e11c4770806dd5"
+    },
+    "generated_sha256": "2d8eddb5b5bdecbee0842d1831be409cd8ca067903246831a9df9f823525a36a",
+    "license": "english-COPYRIGHT.txt"
+  },
+  "visually_reviewed": [
+    "write-editor.png",
+    "write-save-options.png",
+    "write-save-large-type.png",
+    "write-settings.png",
+    "write-review.png",
+    "write-review-suggestion.png"
+  ],
+  "diagnostics": "Initial compile: SuggestionSpan overload and word count scope corrected. First functional run:7 storage/format/document checks passed; asset lookup fixed for Android gzip suffix expansion; popup screenshot fixture corrected. Final engine/workflow6 passed, retained Host6. Test-only final UI2 passed after verifying actual 160% TextLayoutResult density and applying a chosen correction. Unique count13; no broad rerun.",
+  "apk_built": true,
+  "latest_apk": "0.100.22-rc1/code131 includes the Write update",
+  "phone_ime_acceptance_verified": false,
+  "grammar_scope": "Offline common English rules, not exhaustive semantic grammar or word definitions",
+  "future_apk_verifier": "Syntax checked; next requested APK must validate dictionary/class/metadata/license presence and bytes.",
+  "apk_dictionary_classes_license_and_final_caption_verified": true
+}

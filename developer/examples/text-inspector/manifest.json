@@ -1,0 +1,10 @@
+{
+  "schema": "onklav.app.v1",
+  "runtime": "rust-wasm-ui.v1",
+  "id": "org.example.textinspector",
+  "name": "Text inspector",
+  "version": 1,
+  "capabilities": ["files.manage"],
+  "min_host": 78,
+  "icon": {"symbol": "files"}
+}

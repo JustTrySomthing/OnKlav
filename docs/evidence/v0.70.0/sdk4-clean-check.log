@@ -1,0 +1,37 @@
+{
+  "ready": true,
+  "rust": "rustc 1.90.0 (1159e78c4 2025-09-14)",
+  "python": "3.12.14",
+  "target": "wasm32-unknown-unknown",
+  "note": "First build downloads Cargo dependencies and needs a native linker. Android UI/media still require a phone."
+}
+{
+  "project": "/workspace/scratch/ed752e8a1957/sdk4-clean-project",
+  "id": "org.example.clean",
+  "template": "form",
+  "portable_dependencies": true,
+  "next": "build, inspect, test, then install inside OnKlav"
+}
+Publisher key created. Keep it private and backed up.
+   Compiling zmij v1.0.23
+   Compiling serde_core v1.0.229
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/workspace/scratch/ed752e8a1957/sdk4-clean-project/vendor/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/ed752e8a1957/sdk4-clean-project/vendor/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/workspace/scratch/ed752e8a1957/sdk4-clean-project)
+    Finished `release` profile [optimized] target(s) in 6.59s
+Created /tmp/onklav-verify-rrq4bbjm/check.onklav-a
+{
+  "project": "/workspace/scratch/ed752e8a1957/sdk4-clean-project",
+  "signature_install_startup": "passed",
+  "scenario": {
+    "passed": 4,
+    "runtime": "production Rust app broker",
+    "android_ui_tested": false
+  },
+  "signer": "disposable local test author; key and package discarded",
+  "shipping_package_created": false,
+  "native_phone_acceptance_required": true
+}

@@ -1,0 +1,15 @@
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/work/OnKlav/developer/components)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 6.48s
+     Running unittests src/lib.rs (developer/components/target/debug/deps/onklav_ui-b9729a29e05b7074)
+
+running 7 tests
+test maps::tests::maps_project_equator_dateline_and_poles ... ok
+test maps::cache_tests::maps_cache_request_never_fetches_a_hit_or_offline_miss ... ok
+test maps_geo::tests::geo_routing_orders_lon_lat_and_rejects_unsafe_profiles_and_coordinates ... ok
+test maps_geo::tests::geo_route_normalizes_summary_and_geometry_without_turn_by_turn_claims ... ok
+test maps_geo::tests::geo_places_normalize_coordinates_and_fail_on_bad_or_oversized_results ... ok
+test maps_geo::tests::geo_search_encodes_unicode_and_does_not_enable_public_autocomplete ... ok
+test maps::tests::maps_helper_carries_explicit_provider_credits_and_private_handles ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 63 filtered out; finished in 0.01s
+

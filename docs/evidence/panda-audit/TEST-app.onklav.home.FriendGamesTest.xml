@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.FriendGamesTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2026-11-04T20:35:28" hostname="1bb679a568a0" time="3.905">
+  <properties/>
+  <testcase name="retryExpiredAttemptCreatesFreshWindowAndCancelCannotEndAcceptedGame" classname="app.onklav.home.FriendGamesTest" time="2.987"/>
+  <testcase name="otherGamesRemainIndependentWhileFriendMatchIsPaused" classname="app.onklav.home.FriendGamesTest" time="0.169"/>
+  <testcase name="replayJournalPreservesBothDirectionsAndAcknowledgesDrainedFrames" classname="app.onklav.home.FriendGamesTest" time="0.138"/>
+  <testcase name="outOfOrderTurnsDrainContiguouslyAndWrongGameCannotSend" classname="app.onklav.home.FriendGamesTest" time="0.098"/>
+  <testcase name="wireRejectsMalformedOversizedAndRealtimePayloads" classname="app.onklav.home.FriendGamesTest" time="0.05"/>
+  <testcase name="originalReadableCheckInvitationAcceptanceTurnsAndAcknowledgement" classname="app.onklav.home.FriendGamesTest" time="0.094"/>
+  <testcase name="pandaIsFirstPreinstalledAndSoloOnly" classname="app.onklav.home.FriendGamesTest" time="0.094"/>
+  <testcase name="standaloneReverificationNeverCreatesAnInvitationAndHonorsClose" classname="app.onklav.home.FriendGamesTest" time="0.068"/>
+  <testcase name="cancelledInvitationDoesNotBlockSoloOrReviveOnLateAppReply" classname="app.onklav.home.FriendGamesTest" time="0.058"/>
+  <testcase name="retiredPandaMatchIsRetainedButCannotInterceptSoloOrSend" classname="app.onklav.home.FriendGamesTest" time="0.077"/>
+  <testcase name="incomingCancelDeclinesAndReleasesThePendingSlot" classname="app.onklav.home.FriendGamesTest" time="0.069"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

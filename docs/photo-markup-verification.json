@@ -1,0 +1,271 @@
+{
+  "status": "source complete",
+  "after_release": "0.100.15-rc1/code124",
+  "apk_built": false,
+  "android_targeted_cases": 33,
+  "python_build_planner_cases": 16,
+  "unique_targeted_checks": 49,
+  "tests": [
+    {
+      "class": "app.onklav.home.PhotoEditorHostTest",
+      "test": "geometryHandlesAndColorEffectsHaveRealOutput",
+      "passed": true,
+      "evidence": "docs/evidence/photo-markup/TEST-app.onklav.home.PhotoEditorHostTest.xml"
+    },
+    {
+      "class": "app.onklav.home.PhotoEditorHostTest",
+      "test": "tonesTransparencyAndParameterRoundTrip",
+      "passed": true,
+      "evidence": "docs/evidence/photo-markup/TEST-app.onklav.home.PhotoEditorHostTest.xml"
+    },
+    {
+      "class": "app.onklav.home.PhotoEditorHostTest",
+      "test": "cropHandlesClampMoveAndKeepOtherEdits",
+      "passed": true,
+      "evidence": "docs/evidence/photo-markup/TEST-app.onklav.home.PhotoEditorHostTest.xml"
+    },
+    {
+      "class": "app.onklav.home.PhotoEditorHostTest",
+      "test": "geometryPreservesOriginalAndFlipsActualPixels",
+      "passed": true,
+      "evidence": "docs/evidence/photo-markup/TEST-app.onklav.home.PhotoEditorHostTest.xml"
+    },
+    {
+      "class": "app.onklav.home.PhotoCanvasTest",
+      "test": "transformedImageIsClippedInsideCanvasWithRealTransparentEdges",
+      "passed": true,
+      "evidence": "docs/evidence/photo-markup/TEST-app.onklav.home.PhotoCanvasTest.xml"
+    },
+    {
+      "class": "app.onklav.home.PhotoCanvasTest",
+      "test": "fitCentersPerspectiveWithinTheSelectedCanvas",
+      "passed": true,
+      "evidence": "docs/evidence/photo-markup/TEST-app.onklav.home.PhotoCanvasTest.xml"
+    },
+    {
+      "class": "app.onklav.home.PhotoCanvasTest",
+      "test": "rotationScalePerspectiveNeverResizeOrRotateTheCropCanvas",
+      "passed": true,
+      "evidence": "docs/evidence/photo-markup/TEST-app.onklav.home.PhotoCanvasTest.xml"
+    },
+    {
+      "class": "app.onklav.home.PhotoCanvasTest",
+      "test": "fitAndResetChangeImageOnlyAndPrecisionCombinesLegacyQuarterTurns",
+      "passed": true,
+      "evidence": "docs/evidence/photo-markup/TEST-app.onklav.home.PhotoCanvasTest.xml"
+    },
+    {
+      "class": "app.onklav.home.PhotoEditorUiTest",
+      "test": "editingToolsAndExportAreReachable",
+      "passed": true,
+      "evidence": "docs/evidence/photo-markup/TEST-app.onklav.home.PhotoEditorUiTest.xml"
+    },
+    {
+      "class": "app.onklav.home.PhotoGestureTest",
+      "test": "sustainedNativeDragAndPinchSurviveRecompositionAndCommitOnce",
+      "passed": true,
+      "evidence": "docs/evidence/photo-markup/TEST-app.onklav.home.PhotoGestureTest.xml"
+    },
+    {
+      "class": "app.onklav.home.PhotoGestureTest",
+      "test": "croppedAnchorStaysUnderFingersAndCropColorAngleRemainUnchanged",
+      "passed": true,
+      "evidence": "docs/evidence/photo-markup/TEST-app.onklav.home.PhotoGestureTest.xml"
+    },
+    {
+      "class": "app.onklav.home.PhotoMarkupTest",
+      "test": "marksStayOnFixedCanvasAfterImageGeometryAndNeverChangeSourcePixels",
+      "passed": true,
+      "evidence": "docs/evidence/photo-markup/TEST-app.onklav.home.PhotoMarkupTest.xml"
+    },
+    {
+      "class": "app.onklav.home.PhotoMarkupTest",
+      "test": "temporaryCollapsedViewportDuringKeyboardResizeRemainsFinite",
+      "passed": true,
+      "evidence": "docs/evidence/photo-markup/TEST-app.onklav.home.PhotoMarkupTest.xml"
+    },
+    {
+      "class": "app.onklav.home.PhotoMarkupTest",
+      "test": "croppedContextIncludesMarksWithExactSelectedExportPixels",
+      "passed": true,
+      "evidence": "docs/evidence/photo-markup/TEST-app.onklav.home.PhotoMarkupTest.xml"
+    },
+    {
+      "class": "app.onklav.home.PhotoMarkupTest",
+      "test": "fixedCanvasProjectionAndSegmentHitIgnoreImageGeometry",
+      "passed": true,
+      "evidence": "docs/evidence/photo-markup/TEST-app.onklav.home.PhotoMarkupTest.xml"
+    },
+    {
+      "class": "app.onklav.home.PhotoMarkupTest",
+      "test": "legacyDraftsAndMarksRoundTripWithValidatedFiniteBounds",
+      "passed": true,
+      "evidence": "docs/evidence/photo-markup/TEST-app.onklav.home.PhotoMarkupTest.xml"
+    },
+    {
+      "class": "app.onklav.home.PhotoMarkupTest",
+      "test": "highlightIsTranslucentAndSourceNormalizedMarksScaleWithExport",
+      "passed": true,
+      "evidence": "docs/evidence/photo-markup/TEST-app.onklav.home.PhotoMarkupTest.xml"
+    },
+    {
+      "class": "app.onklav.home.PhotoMarkupUiTest",
+      "test": "penHighlightMoveEraseTextUndoDraftAndExportWorkInOneEditor",
+      "passed": true,
+      "evidence": "docs/evidence/photo-markup/TEST-PhotoMarkupUi-final.xml"
+    },
+    {
+      "class": "app.onklav.home.PhotoMarkupUiTest",
+      "test": "landscapeTextToolsStayInlineAndLeaveAVisibleCanvas",
+      "passed": true,
+      "evidence": "docs/evidence/photo-markup/TEST-app.onklav.home.PhotoMarkupUiTest.xml"
+    },
+    {
+      "class": "app.onklav.home.PhotoMarkupUiTest",
+      "test": "cancelledStrokeDoesNotCommitAndEraseNeverChangesThePhoto",
+      "passed": true,
+      "evidence": "docs/evidence/photo-markup/TEST-PhotoMarkupUi-pinch.xml"
+    },
+    {
+      "class": "app.onklav.home.AnnotationSdkHostTest",
+      "test": "freshHostIncludesImageEditorAndNoStandaloneAnnotation",
+      "passed": true,
+      "evidence": "docs/evidence/photo-markup/TEST-app.onklav.home.AnnotationSdkHostTest.xml"
+    },
+    {
+      "class": "app.onklav.home.AnnotationSdkHostTest",
+      "test": "upgradeRetiresOldAppRevokesItsSessionAndKeepsAllSavedImageData",
+      "passed": true,
+      "evidence": "docs/evidence/photo-markup/TEST-app.onklav.home.AnnotationSdkHostTest.xml"
+    },
+    {
+      "class": "app.onklav.home.LibraryBackupTest",
+      "test": "annotatedImageUsesRealSdkImportAndLiveSessionsBlockRestoration",
+      "passed": true,
+      "evidence": "docs/evidence/photo-markup/TEST-app.onklav.home.LibraryBackupTest.xml"
+    },
+    {
+      "class": "app.onklav.home.SdkDrawingTest",
+      "test": "exportRendersImageCoordinatesAndTextBounds",
+      "passed": true,
+      "evidence": "docs/evidence/photo-markup/TEST-app.onklav.home.SdkDrawingTest.xml"
+    },
+    {
+      "class": "app.onklav.home.SdkDrawingTest",
+      "test": "importsAreBoundedAndPreserveOrientedDimensions",
+      "passed": true,
+      "evidence": "docs/evidence/photo-markup/TEST-app.onklav.home.SdkDrawingTest.xml"
+    },
+    {
+      "class": "app.onklav.home.SdkDrawingTest",
+      "test": "keyboardAndAccessibilityViewportActionsNeverCommitDrawingEdits",
+      "passed": true,
+      "evidence": "docs/evidence/photo-markup/TEST-app.onklav.home.SdkDrawingTest.xml"
+    },
+    {
+      "class": "app.onklav.home.SdkDrawingTest",
+      "test": "drawingGestureUsesImageSpaceAndCancellationDoesNotCommit",
+      "passed": true,
+      "evidence": "docs/evidence/photo-markup/TEST-app.onklav.home.SdkDrawingTest.xml"
+    },
+    {
+      "class": "app.onklav.home.SdkDrawingTest",
+      "test": "switchingDocumentsRestoresTheNewViewportAndDiscardsTheOldGesture",
+      "passed": true,
+      "evidence": "docs/evidence/photo-markup/TEST-app.onklav.home.SdkDrawingTest.xml"
+    },
+    {
+      "class": "app.onklav.home.SdkDrawingTest",
+      "test": "interruptedGesturesRequireANewDownAndOldCompletionsCannotCancelNewStrokes",
+      "passed": true,
+      "evidence": "docs/evidence/photo-markup/TEST-app.onklav.home.SdkDrawingTest.xml"
+    },
+    {
+      "class": "app.onklav.home.SdkDrawingTest",
+      "test": "viewportSurvivesResizeAndARecreatedCanvasWithoutSavingAnUnfinishedGesture",
+      "passed": true,
+      "evidence": "docs/evidence/photo-markup/TEST-app.onklav.home.SdkDrawingTest.xml"
+    },
+    {
+      "class": "app.onklav.home.PhotoCropConsistencyTest",
+      "test": "extremePerspectiveDoesNotCollapseOrInvertTheVisibleSelection",
+      "passed": true,
+      "evidence": "docs/evidence/photo-markup/TEST-app.onklav.home.PhotoCropConsistencyTest.xml"
+    },
+    {
+      "class": "app.onklav.home.PhotoCropConsistencyTest",
+      "test": "cropContextIncludesAllEditsAndSelectedPixelsMatchExport",
+      "passed": true,
+      "evidence": "docs/evidence/photo-markup/TEST-app.onklav.home.PhotoCropConsistencyTest.xml"
+    },
+    {
+      "class": "app.onklav.home.PhotoCropConsistencyTest",
+      "test": "transformedHandlesUseInverseMappingAndPreserveEveryOtherEdit",
+      "passed": true,
+      "evidence": "docs/evidence/photo-markup/TEST-app.onklav.home.PhotoCropConsistencyTest.xml"
+    }
+  ],
+  "python_evidence": "docs/evidence/photo-markup/sdk-build-tests.log",
+  "lint": {
+    "version": "source after 0.100.15-rc1",
+    "command": ":android:app:lintDebug",
+    "status": "passed",
+    "scope": "application, host-test and instrumented-test sources",
+    "errors": 0,
+    "warnings": 291,
+    "information": 1,
+    "evidence": "docs/evidence/photo-markup/full-lint.log"
+  },
+  "compiled_runtime_classes_matched": 3184,
+  "active_bundled_signed_apps": 24,
+  "sdk_source_packages_including_counter_and_archived_annotation": 26,
+  "sdk_packages_current": true,
+  "native_rebuild_required": false,
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/PhotoMarkupCanvas.kt": "9dd47f1f4af1dbc0d20db399b9c9f35d0393820b694eeeb54356a0fd7bf514dc",
+    "android/app/src/main/kotlin/app/onklav/home/PhotoMarkup.kt": "98a430812a3f6a5625d4b9d50a99b843cf955151052b3f5eab23eef5378ed144",
+    "android/app/src/main/kotlin/app/onklav/home/PhotoMarkupControls.kt": "aa483ce0e65bd86403c763b0e6f575cfd9ca94daa90bad7618e45cf8a378ce80",
+    "android/app/src/main/kotlin/app/onklav/home/PhotoEditor.kt": "0aa3aa402c94c17274143b3285b05da543212bdaa148e03eae19579f19d8bfae",
+    "android/app/src/main/kotlin/app/onklav/home/PhotoCropFrame.kt": "6a78754009cdc90003d0bea07e6ae1b06fd6337fa4f75d7dc64b3bdf1d2d0812",
+    "android/app/src/main/kotlin/app/onklav/home/AppSdk.kt": "57a9f632ecd20243e204e3bfa3c3226d6c4be1ca89b1b51ff5daf1b9c72740a1",
+    "android/app/src/main/kotlin/app/onklav/home/Catalog.kt": "7b8e20c7613d71dcc6a09a879b9a83f268721699437c3958f796feb2270bd243",
+    "android/app/src/main/kotlin/app/onklav/home/SdkAppsCenter.kt": "daa237919271a6ff21e07b65c6e44cbde2a71d4974d4f9f829021599ba5e6474",
+    "android/app/src/test/kotlin/app/onklav/home/PhotoMarkupTest.kt": "e4133144fe547c9964ef25d7a6e68fba88be75ebb1f39ac72c482c4942699b3a",
+    "android/app/src/test/kotlin/app/onklav/home/PhotoMarkupUiTest.kt": "c285e0f2b722b3ccccfa7f7339ebe6de3a25cf3a909e0c648c683dedfe882524",
+    "android/app/src/test/kotlin/app/onklav/home/AnnotationSdkHostTest.kt": "8f5d3b0ff70315fa3a679d146b32a9895bfdc5faf81c46137a94c19d71c5d238",
+    "android/app/src/test/kotlin/app/onklav/home/LibraryBackupTest.kt": "103242160c87d3e0d4c11e90f25a3b17ca69e152b60a9e5d2cec3ebf1118fe70",
+    "scripts/build_inputs.py": "d2fa633b20b53a494f79b25614081725672f9943a8e10fe949462deb508bd3ee",
+    "scripts/sdk_build_plan.py": "05885d1af7816ee4ed2950db9f9421265220176dc4630b3609a4d78ea70d7af1",
+    "scripts/build_sdk_apps.py": "9db95b8c86b5cdb115467edf88d0728f5fd060c515aae24405a7cbbf7b4f0b5a",
+    "scripts/test_sdk_build_plan.py": "5a0dc905a1c8f9d7454dc8443bdc4fd76def8c164b35c1d3145d246645944086",
+    "scripts/verify_apks.py": "5381b63acc497ef8a6318548b0c0cdf7cad0577216a39e2c465db9ea009aa222",
+    "android/shared/src/main/res/drawable/photo_tool_pen.xml": "ed764ee0f0142d917c459ca1dbb0bedec39cc348659cdfd8f8c6f5ffb5fd64d7",
+    "android/shared/src/main/res/drawable/photo_tool_check.xml": "930ee76ff03ed02c512fb268ac704f6e9af21ea2bf38b2b8446f0faab150dd5a",
+    "android/shared/src/main/res/drawable/photo_tool_eraser.xml": "c9785760fd092666907d8f9949b183a28f39c8f55812d516cc74bfcd1ab2c2d4",
+    "android/shared/src/main/res/drawable/photo_tool_text.xml": "830e066bf8745a90efe2af50e2bb2264100c173ce808d7128ac2f6e8bdc9f22b",
+    "android/shared/src/main/res/drawable/photo_tool_hand.xml": "4258f5dfc49e2eb61380292a813d05c0ea3046e60abe0e001252962f8a5c0a6e",
+    "android/shared/src/main/res/drawable/photo_tool_highlight.xml": "dc7ca63403c3ece24d72b175a1955c21b77c2043e3e8a9850e812b67f5a6c6da"
+  },
+  "deleted_files": [
+    "android/app/src/main/assets/sdk/Annotation.onklav-a"
+  ],
+  "retirement": {
+    "old_id": "app.onklav.annotation",
+    "delete_data": false,
+    "old_sessions_revoked": true,
+    "legacy_backup_after_retirement_tested": true,
+    "automatic_legacy_library_import": false
+  },
+  "diagnostics": [
+    "Initial raw-source UI fixture retained an existing model/draft; switched to actual model.open and asserted a fresh edit before gesture checks. Cancellation and fresh portrait/landscape tests pass.",
+    "Fixed one parenthesis compile error in enlarged text hit testing.",
+    "First lint rejected Layout.BREAK_STRATEGY_HIGH_QUALITY; used the required LineBreaker constant. Final lint passed without a baseline/suppression.",
+    "Added finite projection for zero-size viewport during keyboard/window resize; tested."
+  ],
+  "limitations": [
+    "Native host rendering/input and build checks do not qualify actual handset touch/stylus/IME/accessibility/GPU/provider/process-death or sustained performance.",
+    "Legacy Annotation artwork remains in its retained private library and backup; it is not silently imported over the active Photo draft.",
+    "No new APK built. Next APK must increment version, include all pending source, preserve original signer/native/SDK identities, refresh generated DEX/assets/package caches and verify Annotation asset absence."
+  ],
+  "evidence_folder": "docs/evidence/photo-markup"
+}

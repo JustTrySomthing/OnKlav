@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.FilesPresentationUiTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-11-03T02:07:34" hostname="3bfb1ef11171" time="19.498">
+  <properties/>
+  <testcase name="thumbnailAndListViewsKeepPencilsOnlyOnEditableItems" classname="app.onklav.home.FilesPresentationUiTest" time="11.658"/>
+  <testcase name="filesHomeAndAndroidCategoriesUseTheSameModernBrowser" classname="app.onklav.home.FilesPresentationUiTest" time="4.525"/>
+  <testcase name="imageAttachmentPickerStartsInImagesWithViewSwitch" classname="app.onklav.home.FilesPresentationUiTest" time="3.315"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

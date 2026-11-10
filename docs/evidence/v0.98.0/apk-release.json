@@ -1,0 +1,19 @@
+{
+  "file_name": "OnKlav-0.98.0-ARM64.apk",
+  "bytes": 93299649,
+  "sha256": "4e522829de8ad4db7ad5ffbd11a1cc08b5a6fd07b553a15549468bfbe86bf74d",
+  "version_name": "0.98.0-media1",
+  "version_code": 106,
+  "package": "app.onklav.home.prototype.rewrite",
+  "abis": [
+    "arm64-v8a"
+  ],
+  "variant": "debug",
+  "signer_sha256": "6ed975c5fc27d19f6291f751a8bb00fa8a2c2e7d268bffc7b6ddf7e1b1a7a69d",
+  "status": "assembled and signature/source/package/alignment verified",
+  "build_log": "docs/evidence/v0.98.0/assemble-debug.log",
+  "verify_log": "docs/evidence/v0.98.0/verify-debug.log",
+  "packaging_fix": "Merge both email dependency license and notice Markdown resources; retain their full text.",
+  "phone_verified": false,
+  "live_youtube_download_verified": false
+}

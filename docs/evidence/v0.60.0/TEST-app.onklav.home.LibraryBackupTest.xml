@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.LibraryBackupTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-24T00:09:33" hostname="41aed82b0335" time="6.232">
+  <properties/>
+  <testcase name="annotatedImageUsesRealSdkImportAndLiveSessionsBlockRestoration" classname="app.onklav.home.LibraryBackupTest" time="5.96"/>
+  <testcase name="cancellationAndProviderFailureCleanStagingAndIncompleteOutput" classname="app.onklav.home.LibraryBackupTest" time="0.151"/>
+  <testcase name="filesProviderToJniRoundTripKeepsBytesAndRejectsChangedReview" classname="app.onklav.home.LibraryBackupTest" time="0.115"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.CalendarModelTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-11-01T02:59:32" hostname="1f798ec8a9f2" time="4.3">
+  <properties/>
+  <testcase name="undoRestoresTheFreshTransactionWithoutLosingAnotherWindowsEvent" classname="app.onklav.home.CalendarModelTest" time="3.759"/>
+  <testcase name="occurrenceRevisionStaysMonotonicWhenPhoneClockMovesBack" classname="app.onklav.home.CalendarModelTest" time="0.132"/>
+  <testcase name="staleEditorCannotResurrectAnEventDeletedInAnotherWindow" classname="app.onklav.home.CalendarModelTest" time="0.132"/>
+  <testcase name="notificationOpensTheRequestedRecurringDate" classname="app.onklav.home.CalendarModelTest" time="0.134"/>
+  <testcase name="importsChooseACalendarKeepExistingUidsAndCanBeUndone" classname="app.onklav.home.CalendarModelTest" time="0.142"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

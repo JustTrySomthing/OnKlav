@@ -1,0 +1,17 @@
+{
+  "schema": "onklav.app.v1",
+  "runtime": "rust-wasm-ui.v1",
+  "id": "app.onklav.ebooks",
+  "name": "eBooks",
+  "version": 34,
+  "min_host": 95,
+  "capabilities": [
+    "storage.private",
+    "files.external",
+    "ebooks.library",
+    "speech.output"
+  ],
+  "icon": {
+    "symbol": "ebooks"
+  }
+}

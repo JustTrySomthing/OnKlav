@@ -1,0 +1,17 @@
+{
+  "hash": "01a2efbb1aeca6ab78df31a7a256ca9b7aa601966e4de5602a3e538d56d485c4",
+  "manifest": {
+    "capabilities": [
+      "storage.private"
+    ],
+    "id": "net.independent.notebook",
+    "name": "Clean Notebook",
+    "publisher": "9635c82074357dd3305954f6a65968e42294c87b305a3896fbe471111d219843",
+    "runtime": "rust-wasm-ui.v1",
+    "schema": "onklav.app.v1",
+    "version": 1
+  },
+  "publisher_fingerprint": "e7d8b073e2ce9789d0ae17db5d784c80d18d77149bb418c1cbb4298b61add1f2",
+  "signature_verified": true,
+  "update": false
+}

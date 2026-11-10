@@ -1,0 +1,23 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.05s
+     Running unittests src/lib.rs (core/target/debug/deps/onklav_core-8a579202944a8eae)
+
+running 16 tests
+test history_recovery::tests::corrupt_config_and_symlink_storage_fail_closed ... ok
+test history_journal::tests::symlink_storage_fails_closed ... ok
+test sdk_storage::job_recovery_tests::storage_job_staging_is_idempotent_across_missing_host_receipts ... ok
+test sdk_storage::tests::storage_foreign_handles_corruption_and_symlinks_are_rejected ... ok
+test sdk_storage::tests::storage_lower_saved_quota_and_unknown_admin_effect_never_delete_data ... ok
+test sdk_collections::tests::storage_invalid_backup_preserves_collection ... ok
+test sdk_storage::job_recovery_tests::storage_job_staging_recovers_an_untracked_empty_file_without_touching_other_files ... ok
+test sdk_storage::tests::storage_symlinked_directory_never_touches_external_files ... ok
+test sdk_collections::tests::storage_collection_backup_restore_is_scoped_and_revision_checked ... ok
+test sdk_storage::tests::storage_staging_retry_checksum_and_immutable_commit ... ok
+test tests::storage_lifecycle_and_search ... ok
+test sdk_storage::tests::storage_reopen_resumes_staging_without_replaying_appends ... ok
+test sdk_storage::tests::storage_cache_eviction_and_lower_limits_preserve_saved_files ... ok
+test sdk::tests::storage_native_transfer_tokens_and_revocation_are_live ... ok
+test sdk::tests::denied_private_storage_never_creates_app_documents ... ok
+test sdk_storage::tests::storage_streams_a_file_larger_than_the_guest_memory_budget ... ok
+
+test result: ok. 16 passed; 0 failed; 0 ignored; 0 measured; 240 filtered out; finished in 3.19s
+

@@ -1,0 +1,10 @@
+{
+  "kind": "cfg(test)-only assertion correction",
+  "file": "core/src/sdk.rs",
+  "old_source_sha256": "8ce64b50c9fa16e2efd6e24216d1c421f46a054819b52a2f2c21a4e6a006f523",
+  "new_source_sha256": "793b47211d7f3801bcf46e039b9e41ec995049db76692642a603a854b5b6106a",
+  "production_prefix_sha256": "342b2aa9137a0ee6bec4d0fc27f13a88a0a01cb456fae4af8c910a09f61c0dc4",
+  "production_prefix_unchanged": true,
+  "change": "Expect current offline voice-save wording; no runtime code changed.",
+  "native_rebuild_required": false
+}

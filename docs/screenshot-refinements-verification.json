@@ -1,0 +1,62 @@
+{
+  "date": "2026-11-02",
+  "source_after_apk": "0.100.37-rc1/code146",
+  "apk_created": false,
+  "production_and_all_test_sources_compiled": true,
+  "runtime_classes_match_compiled_kotlin": true,
+  "suites": [
+    {
+      "suite": "app.onklav.home.BottomPhoneCameraUiTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "suite": "app.onklav.home.ClockPolishUiTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "suite": "app.onklav.shared.NativeBridgeTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "suite": "app.onklav.shared.LauncherLayoutTest",
+      "tests": 8,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "suite": "app.onklav.shared.ThemePackageTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "suite": "app.onklav.shared.Mp3CodecTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0
+    }
+  ],
+  "tests_passed": 22,
+  "failures": 0,
+  "visual_review": [
+    "Phone number/actions have balanced flexible clearance around the keypad",
+    "Yellow Clock alarm/header/selected tab use the shared dark-to-light theme brush"
+  ],
+  "device_limits": "No physical phone, landscape camera preview/cutout or carrier testing. Games bar and Camera inset fixes reviewed in source and compiled.",
+  "initial_environment_issue": "Offline dependencies missing; restored exact versions online, no product dependency changes.",
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/PhoneScreen.kt": "ef11c3254f3ffd49e6a29fe6616ea9b2f7e897568088f10dbddaeac967ad3c59",
+    "android/app/src/main/kotlin/app/onklav/home/ClockScreen.kt": "fdf31d3b9ec689fe46e395cc869fbed5f8cc76ec3a947e9544f048af07bf7b7c",
+    "android/app/src/main/kotlin/app/onklav/home/MainActivity.kt": "4deb1b057de16ff93d296d66e7a0a838458408fbf7125f3e531b468e96ec4673",
+    "android/shared/src/main/kotlin/app/onklav/shared/PageMotion.kt": "70a65218c9ed923777773955df217cfb92c6e5b4da18639ff271586c021eb7fb",
+    "android/app/src/test/kotlin/app/onklav/home/BottomPhoneCameraUiTest.kt": "034df78cab6d80410d6467433426233959edb9faa86d5a8bc529c548bf7276b1",
+    "android/app/src/test/kotlin/app/onklav/home/ClockPolishUiTest.kt": "76ef47263a578d2838772e1a7358bd69476b0b22ce144d3531f4f9fcf986e3f0"
+  },
+  "evidence": "docs/evidence/screenshot-refinements"
+}

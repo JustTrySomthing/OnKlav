@@ -1,0 +1,93 @@
+{
+  "change": "Complete GMX support and local-account retirement, explicitly requested by owner",
+  "android_host_checks": 34,
+  "android_suites": [
+    {
+      "name": "app.onklav.home.MailHostTest",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "app.onklav.home.MailRetirementTest",
+      "tests": "5",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "app.onklav.home.MailSetupUiTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "app.onklav.home.MailUiTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "app.onklav.shared.LauncherLayoutTest",
+      "tests": "8",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "app.onklav.shared.Mp3CodecTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "app.onklav.shared.NativeBridgeTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "app.onklav.shared.ThemePackageTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    }
+  ],
+  "app_checks_executed": 17,
+  "unchanged_shared_checks_reused_by_Gradle": 17,
+  "new_retirement_regressions": 5,
+  "production_and_all_test_compilation": "passed",
+  "runtime_bundle_matches_compiled_Kotlin": true,
+  "elapsed_seconds": 530.7,
+  "cleanup": [
+    "Account records and credentials",
+    "Cached headers, folders and bodies",
+    "Local drafts and their unreferenced attachments",
+    "Account-specific rules, sync status and notifications"
+  ],
+  "preserved": [
+    "Other accounts and their data",
+    "Attachments referenced by remaining drafts",
+    "GMX recipients",
+    "All remote/server mail"
+  ],
+  "interruptions": "Encrypted cleanup inventory supports resumption after account/draft reference removal; verified. Unreadable account envelopes cause no deletion; verified.",
+  "physical_phone_testing": false,
+  "apk_built": false,
+  "native_sdk_game_signing_changes": false,
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/MailSetup.kt": "371bbec80a5cef7a40feb44c479ed6966b7c6d7251c89f3cc9a848fbdd53d0ff",
+    "android/app/src/main/kotlin/app/onklav/home/MailDialogs.kt": "3ce456a3ca64e9384fd3157fb65c6adeed060c4b4c3a404127292e8fe4a57055",
+    "android/app/src/main/kotlin/app/onklav/home/MailData.kt": "d60513fe08204ca0c8dfdf4be6b841d9d5267a3ff5b58899f1f3c6e74d4674ff",
+    "android/app/src/main/kotlin/app/onklav/home/EmailScreen.kt": "17fc18e0126f5872b68b1c0fad489079ae30d148f2b1d403b349a1e731201e56",
+    "android/app/src/test/kotlin/app/onklav/home/MailGmxTest.kt": "a63b43039b8ae24cc873d5b5bd017c8ea943b4c19900486a3f0be8ceafbc0548",
+    "android/app/src/test/kotlin/app/onklav/home/MailSetupUiTest.kt": "990dc0aca690a3c13cf2ef04ebef03427ae939262ce4974c86a534d64fe1f68d",
+    "android/app/src/test/kotlin/app/onklav/home/MailUiTest.kt": "74f603fc73a32cb7070960389e7a85812a952d85f6e086a5459caf682367e270"
+  }
+}

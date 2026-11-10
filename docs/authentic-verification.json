@@ -1,0 +1,83 @@
+{
+  "status": "implemented",
+  "focused_checks_passed": 18,
+  "test_suites": {
+    "app.onklav.home.AuthenticOtpTest": {
+      "tests": 9,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "app.onklav.home.AuthenticQrTest": {
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "app.onklav.home.AuthenticUiTest": {
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "app.onklav.home.AuthenticStoreTest": {
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "final_production_compilation": "passed",
+  "tested_source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/AuthenticModel.kt": "4321419c62f1c53f08e35f8089ec7291ada596dc1bf0fd6fddac062ce1fc14c9",
+    "android/app/src/main/kotlin/app/onklav/home/AuthenticStore.kt": "cf59f437bf018a9948596f6956e7d8f92b07d5f4b2b2e2cf287f2e359b6d9f28",
+    "android/app/src/main/kotlin/app/onklav/home/AuthenticOtp.kt": "eae71425283a2e6f410548d65ccf2ce903dabc2b797cb555360f9865d37a006a",
+    "android/app/src/main/kotlin/app/onklav/home/AuthenticMigration.kt": "8e0edc364fd58260b830bc9fcc974ccbc8979ac1f5778ad4712cb2f065549b9b",
+    "android/app/src/main/kotlin/app/onklav/home/Authentic.kt": "a1fb2efd3572c7d34bb6fd3b689c5a228d49ecfd198b7ddb23279562d8d58742",
+    "android/app/src/main/kotlin/app/onklav/home/AuthenticPrivacy.kt": "4bca5fa58106b9315f021fcd3332a00981b8789c04e677fd94fa10f1a79e41ea",
+    "android/app/src/main/kotlin/app/onklav/home/AuthenticQr.kt": "e367db5634b407e509ef19aa632f4ea56b8dbcdcacbf50971bb4a4842bca0e3c",
+    "android/app/src/main/kotlin/app/onklav/home/Catalog.kt": "84d541d8d1a84b46d0f54a7a1ff23921626d2e35b397825b9d3d8a8af4c64512",
+    "android/app/src/main/kotlin/app/onklav/home/MainActivity.kt": "2ad1e944e8f40ac489075a36ff131d9986a2dc53decbbab32612dfc2120b2fd7",
+    "android/app/src/main/kotlin/app/onklav/home/SdkAppsCenter.kt": "b232579ec75b4ab1367ecb604212a265e73bec7acf26539ff5d5e9588ebbe8fd",
+    "android/app/build.gradle.kts": "d5ed5bb64f07e6fb220ce26e60df9b42497b7b4c4dde89418d3935945e33e5bb",
+    "android/shared/src/main/res/drawable/ref_app_authentic.xml": "9c4a369e56b1167e3f88b027526b44c859defca0cb4f5b5a3756a9e0cf0cd90b"
+  },
+  "final_source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/AuthenticModel.kt": "4321419c62f1c53f08e35f8089ec7291ada596dc1bf0fd6fddac062ce1fc14c9",
+    "android/app/src/main/kotlin/app/onklav/home/AuthenticStore.kt": "cf59f437bf018a9948596f6956e7d8f92b07d5f4b2b2e2cf287f2e359b6d9f28",
+    "android/app/src/main/kotlin/app/onklav/home/AuthenticOtp.kt": "eae71425283a2e6f410548d65ccf2ce903dabc2b797cb555360f9865d37a006a",
+    "android/app/src/main/kotlin/app/onklav/home/AuthenticMigration.kt": "8e0edc364fd58260b830bc9fcc974ccbc8979ac1f5778ad4712cb2f065549b9b",
+    "android/app/src/main/kotlin/app/onklav/home/Authentic.kt": "08c09513458d370c1dffc240a8860422ac43991505c02f8a8760f52a2204a888",
+    "android/app/src/main/kotlin/app/onklav/home/AuthenticPrivacy.kt": "4bca5fa58106b9315f021fcd3332a00981b8789c04e677fd94fa10f1a79e41ea",
+    "android/app/src/main/kotlin/app/onklav/home/AuthenticQr.kt": "e367db5634b407e509ef19aa632f4ea56b8dbcdcacbf50971bb4a4842bca0e3c",
+    "android/app/src/main/kotlin/app/onklav/home/Catalog.kt": "84d541d8d1a84b46d0f54a7a1ff23921626d2e35b397825b9d3d8a8af4c64512",
+    "android/app/src/main/kotlin/app/onklav/home/MainActivity.kt": "2ad1e944e8f40ac489075a36ff131d9986a2dc53decbbab32612dfc2120b2fd7",
+    "android/app/src/main/kotlin/app/onklav/home/SdkAppsCenter.kt": "b232579ec75b4ab1367ecb604212a265e73bec7acf26539ff5d5e9588ebbe8fd",
+    "android/app/build.gradle.kts": "d5ed5bb64f07e6fb220ce26e60df9b42497b7b4c4dde89418d3935945e33e5bb",
+    "android/shared/src/main/res/drawable/ref_app_authentic.xml": "9c4a369e56b1167e3f88b027526b44c859defca0cb4f5b5a3756a9e0cf0cd90b"
+  },
+  "post_test_change": "Only two password-guidance string literals; normalization hash verified. Final production Kotlin compilation passed after those changes.",
+  "native_rust_sdk_protocol_or_game_changes": false,
+  "new_library": "ZXing core 3.5.4, Apache-2.0, offline QR only",
+  "new_permissions": false,
+  "apk_built": false,
+  "validation": [
+    "RFC4226 ten HOTP vectors and RFC6238 eighteen SHA1/SHA256/SHA512 vectors through year2603",
+    "Base32/URI parameter validation, no secret input echoed in errors",
+    "Complete multi-fragment Google migration requires all parts and explicit confirmation; mixed batches reject",
+    "Encrypted-store absence of plaintext labels/seeds, wrong passwords, corruption/truncation, distinct envelope identity, password change/old backups and persisted counters",
+    "Offline generated QR roundtrip; temporary owner-checked clipboard behavior",
+    "Phone account list/copy/pin/lock, duplicate/deletion confirmation and 320dp large-text eight-digit code visibility"
+  ],
+  "attempt_notes": [
+    "Initial Kotlin UI delimiter/icon-reference errors corrected.",
+    "First combined run:16 checks passed; one test incorrectly retained a TOTP period for an HOTP URI. Corrected the fixture to the canonical HOTP period; no OTP algorithm change was required.",
+    "Final run:18 of18 passed; final UI guidance copy was then separately compiled."
+  ],
+  "qualification_pending": [
+    "Physical Galaxy/Android15 camera, lifecycle/IME/accessibility and real-provider transfer acceptance",
+    "Release R8/shrinker/APK verification",
+    "Large-account performance and independent security review"
+  ],
+  "backup_scope": "Explicit encrypted backups via OnKlav Files; no new Rust App Documents backup entry or cloud sync"
+}

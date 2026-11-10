@@ -1,0 +1,159 @@
+{
+  "version": "0.100.14-rc1",
+  "version_code": 123,
+  "checks": {
+    "PhotoArtEffectsTest.noiseReductionImprovesFlatRegionsAndKeepsStrongEdges": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.14/art-and-ui-final.log"
+    },
+    "PhotoArtEffectsTest.realPhotoContactSheetAndDeterministicResults": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.14/art-and-ui-final.log"
+    },
+    "PhotoArtEffectsTest.zeroStrengthIsNeutralAndArtPreservesDimensionsAlphaAndHistory": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.14/art-and-ui-final.log"
+    },
+    "PhotoArtEffectsTest.pencilHasGraphiteContoursAndTonalShadingWithoutColorCast": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.14/art-and-ui-final.log"
+    },
+    "PhotoCanvasTest.transformedImageIsClippedInsideCanvasWithRealTransparentEdges": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.14/canvas-and-ui-pass.log"
+    },
+    "PhotoCanvasTest.fitCentersPerspectiveWithinTheSelectedCanvas": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.14/canvas-and-ui-pass.log"
+    },
+    "PhotoCanvasTest.rotationScalePerspectiveNeverResizeOrRotateTheCropCanvas": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.14/canvas-and-ui-pass.log"
+    },
+    "PhotoCanvasTest.fitAndResetChangeImageOnlyAndPrecisionCombinesLegacyQuarterTurns": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.14/canvas-and-ui-pass.log"
+    },
+    "PhotoCropConsistencyTest.extremePerspectiveDoesNotCollapseOrInvertTheVisibleSelection": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.14/canvas-and-ui-pass.log"
+    },
+    "PhotoCropConsistencyTest.cropContextIncludesAllEditsAndSelectedPixelsMatchExport": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.14/canvas-and-ui-pass.log"
+    },
+    "PhotoCropConsistencyTest.transformedHandlesUseInverseMappingAndPreserveEveryOtherEdit": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.14/canvas-and-ui-pass.log"
+    },
+    "PhotoCropUiTest.returningToCropShowsGeometryColorAndEffectsAndKeepsHandlesUsable": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.14/art-and-ui-final.log"
+    },
+    "PhotoEditorUiTest.editingToolsAndExportAreReachable": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.14/art-and-ui-final.log"
+    },
+    "PhotoEffectsTest.fourLooksHaveDistinctGradingAndZeroStrengthIsNeutral": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.14/art-and-ui-final.log"
+    },
+    "PhotoEffectsTest.hdrAddsStructureWithoutLiftingBlacksOrWashingTonalRange": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.14/art-and-ui-final.log"
+    },
+    "PhotoEffectsTest.renderedLookContactSheet": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.14/art-and-ui-final.log"
+    },
+    "PhotoEffectsTest.hdrDoesNotDrawHalosAroundHardEdges": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.14/art-and-ui-final.log"
+    },
+    "PhotoEffectsTest.sharpeningHasVisibleStrengthWithoutChangingFlatAreasOrAlpha": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.14/art-and-ui-final.log"
+    },
+    "PhotoArtEffectsTest.scenicFixtureShowsSmoothTonesAndDistinctArtStyles": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.14/art-and-ui-final.log"
+    },
+    "PhotoArtEffectsTest.largeImageProcessingUsesBoundedRowsAndPreservesSource": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.14/art-and-ui-final.log"
+    },
+    "PhotoEditorHostTest.geometryHandlesAndColorEffectsHaveRealOutput": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.14/android-host-check.log"
+    },
+    "PhotoEditorHostTest.tonesTransparencyAndParameterRoundTrip": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.14/android-host-check.log"
+    },
+    "PhotoEditorHostTest.cropHandlesClampMoveAndKeepOtherEdits": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.14/android-host-check.log"
+    },
+    "PhotoEditorHostTest.geometryPreservesOriginalAndFlipsActualPixels": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.14/android-host-check.log"
+    }
+  },
+  "focused_checks_passed": 24,
+  "compiled_kotlin_runtime_classes": 3158,
+  "runtime_mismatches": 0,
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/PhotoEditor.kt": "d9bc12114df407f0d3f79b5d81c144761ab1df0c6ebfd079c58bf1e40744e437",
+    "android/app/src/main/kotlin/app/onklav/home/PhotoEffects.kt": "34628d622500f5de3d7b130815b1f735951945d9f32c761ac2cd890fbd289837",
+    "android/app/src/main/kotlin/app/onklav/home/PhotoArtEffects.kt": "213414346a5553bdfe5f320345d7589a88712395eb5e4e016f78d5417ddb2c18",
+    "android/app/src/main/kotlin/app/onklav/home/PhotoOptionsWheel.kt": "e5034c39e8b31098cb7eaecb16c6918829426fedf8aa2d1f26960b607bdd9710"
+  },
+  "quality_acceptance": {
+    "portrait_and_scenic_sheets_reviewed": true,
+    "comic": "Ink contours, flattened color, shadow dots; radius scales with image size",
+    "pencil": "Graphite contours and tonal hatching; alpha preserved",
+    "denoise": "Flat-region noise error below 65 percent of original; strong edge separation above 95 levels retained in fixture; noisy portrait reviewed",
+    "hdr": "Gentler monotonic local detail boost; tonal endpoints, hard-edge halo checks and real-photo review passed",
+    "styles": "Comic/Pencil mutually exclusive with Undo/Redo; adjustable strength",
+    "large_processing": "docs/evidence/v0.100.14/host-processing-ms.json"
+  },
+  "corrections": [
+    "Local fixture function syntax corrected",
+    "Paused native wheel automation uses bounded index jumps",
+    "HDR detail strength reduced after portrait review",
+    "Per-pixel boxing removed from new filters",
+    "HDR host fixture checks local structure instead of demanding change at every flat tone"
+  ],
+  "lint": {
+    "status": "passed",
+    "severity_counts": {
+      "Warning": 287,
+      "Information": 1
+    },
+    "evidence": "docs/evidence/v0.100.14/full-lint.log"
+  },
+  "apk": {
+    "status": "passed",
+    "version": "0.100.14-rc1",
+    "version_code": 123,
+    "sha256": "a9ea91b4f87c1632c983b698a63970524bb50ed115466fc1180ab0d438d37b38",
+    "bytes": 102374346,
+    "signer_sha256": "6ed975c5fc27d19f6291f751a8bb00fa8a2c2e7d268bffc7b6ddf7e1b1a7a69d",
+    "defined_classes_verified": [
+      "app/onklav/home/PhotoArtEffects",
+      "app/onklav/home/PhotoOptionsWheelKt",
+      "app/onklav/home/PhotoWheelOption",
+      "app/onklav/home/PhotoImageSave",
+      "app/onklav/home/PhotoCanvasPreviewKt",
+      "app/onklav/home/ExoRadioStream",
+      "app/onklav/home/MmsDownloadRecovery",
+      "app/onklav/shared/Mp3Codec"
+    ],
+    "standard_proof": "docs/apk-verification-debug.json"
+  },
+  "remaining_acceptance": [
+    "Real-phone touch/accessibility and image-provider qualification",
+    "Handset memory/thermal/performance on large photos",
+    "Earlier documented radio/carrier/provider gates"
+  ]
+}

@@ -1,0 +1,11 @@
+Publisher key created. Keep it private and backed up.
+   Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling serde_json v1.0.154
+   Compiling memchr v2.8.3
+   Compiling itoa v1.0.18
+   Compiling onklav-app v0.1.0 (/tmp/onklav-adk-smoke-c5_f1q15/moved app/vendor/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/tmp/onklav-adk-smoke-c5_f1q15/moved app/vendor/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-adk-smoke-c5_f1q15/moved app)
+    Finished `release` profile [optimized] target(s) in 9.46s
+Created /tmp/onklav-verify-uxlq1bjn/check.onklav-a

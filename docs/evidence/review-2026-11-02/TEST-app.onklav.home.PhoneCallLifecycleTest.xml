@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.PhoneCallLifecycleTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2026-11-02T16:17:43" hostname="13575fdd974e" time="16.453">
+  <properties/>
+  <testcase name="incomingCallAddedBeforeRingingDoesNotLaunchASecondScreen" classname="app.onklav.home.PhoneCallLifecycleTest" time="6.624"/>
+  <testcase name="android15DisconnectAlsoClearsTheOngoingNotification" classname="app.onklav.home.PhoneCallLifecycleTest" time="8.926"/>
+  <testcase name="outgoingCallThatStartsNewOpensItsScreenOnceWhenConnecting" classname="app.onklav.home.PhoneCallLifecycleTest" time="0.136"/>
+  <testcase name="unbindClearsLiveStateAndLateCallbacksCannotRecreateTheNotification" classname="app.onklav.home.PhoneCallLifecycleTest" time="0.071"/>
+  <testcase name="callControlsUseTheSameCallbackStateAsTheVisibleScreen" classname="app.onklav.home.PhoneCallLifecycleTest" time="0.085"/>
+  <testcase name="incomingDirectionNeverUsesTheOutgoingConnectingShortcut" classname="app.onklav.home.PhoneCallLifecycleTest" time="0.058"/>
+  <testcase name="destroyedCallIsRemovedEvenWithoutOnCallRemoved" classname="app.onklav.home.PhoneCallLifecycleTest" time="0.051"/>
+  <testcase name="remoteDisconnectClearsNotificationAndLiveIndicatorBeforeRemoval" classname="app.onklav.home.PhoneCallLifecycleTest" time="0.057"/>
+  <testcase name="answeredCallMovesToQuietChannelAndDoesNotCreateAnIconBadge" classname="app.onklav.home.PhoneCallLifecycleTest" time="0.056"/>
+  <testcase name="staleOngoingNotificationIsRemovedWithoutClearingMissedCallHistory" classname="app.onklav.home.PhoneCallLifecycleTest" time="0.044"/>
+  <testcase name="endingOneCallKeepsTheOtherCallAvailable" classname="app.onklav.home.PhoneCallLifecycleTest" time="0.06"/>
+  <testcase name="nonDefaultServiceDoesNotPostASecondDialerNotification" classname="app.onklav.home.PhoneCallLifecycleTest" time="0.064"/>
+  <testcase name="aNewWaitingCallCanAlertButRepeatedUpdatesOfTheSameCallDoNot" classname="app.onklav.home.PhoneCallLifecycleTest" time="0.123"/>
+  <testcase name="visibleIncomingScreenSuppressesTheDuplicateBannerAndRestoresItOnMinimize" classname="app.onklav.home.PhoneCallLifecycleTest" time="0.093"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

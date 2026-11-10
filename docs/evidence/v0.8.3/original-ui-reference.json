@@ -1,0 +1,14 @@
+{
+  "version": "Inner Circle 2.2.85",
+  "original_apk_sha256": "e55ac8ef3a5dad765b66acfc160a0dc22f45e0971c1f5316c30637bb60eeed64",
+  "inspection": "ARM native libraries and signatures removed from a separate UI-inspection copy, then debug-signed for x86 emulator compatibility. Original APK and source untouched. Java DEX, resources and assets byte-identical. Native functions are not exercised or verified. Inspection copy is not a deliverable.",
+  "entries_compared": 544,
+  "screens": [
+    "settings",
+    "appearance",
+    "appearance-lower",
+    "backgrounds",
+    "themes"
+  ],
+  "native_device_performance_baseline": false
+}

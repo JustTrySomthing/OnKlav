@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.FolderVaultCryptoTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-29T10:55:36" hostname="3d3a46c2e56a" time="5.273">
+  <properties/>
+  <testcase name="authenticatedStreamingRoundTripRejectsWrongPasswordTamperingAndTruncation" classname="app.onklav.home.FolderVaultCryptoTest" time="4.002"/>
+  <testcase name="passwordChangeKeepsPayloadAndRejectsOldPassword" classname="app.onklav.home.FolderVaultCryptoTest" time="1.271"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

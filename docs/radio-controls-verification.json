@@ -1,0 +1,44 @@
+{
+  "version": "0.87.0-radio-controls1",
+  "android_version_code": 95,
+  "sdk_host_build": 94,
+  "status": "Complete source update; no APK requested or produced",
+  "implemented": [
+    "Specific unavailable/busy/restricted/timeout/TLS/network/unsupported feedback without claiming permanent closure",
+    "Centered attempted-station Retry / Hide for now / Close dialog",
+    "Persistent automatic hiding, show hidden and unhide all controls",
+    "Manual 24-hour hiding; favorites and recents retained",
+    "Successful playback removes old failure; temporary failures stay visible",
+    "Radio decoder preparation timeout uses radio-specific feedback"
+  ],
+  "core_checks": 281,
+  "controller_checks": 129,
+  "selected_android_cases": {
+    "MediaReliabilityTest > confirmedRadioFailureCanBeHiddenAndRetriedWithoutDeletingFavorites": "PASSED",
+    "RadioControlsTest > usersCanDisableAutomaticHidingShowHiddenManuallyHideAndRestore": "PASSED",
+    "RadioControlsTest > successfulRetryRemovesOldFailureAndDoesNotChangeUserSettings": "PASSED",
+    "RadioControlsTest > networkTimeoutsAndOfflineDnsDoNotClaimStationClosure": "PASSED",
+    "RadioControlsTest > onlyConfirmedUnplayableResponsesAreAutomaticallyHidden": "PASSED",
+    "SdkRadioTest > signInPagesDowngradesPrivateTargetsAndRevocationFailClosed": "PASSED",
+    "SdkRadioTest > directoryProjectionIsBoundedAndNeverReturnsCredentialsArtworkOrStreamUrls": "PASSED",
+    "SdkRadioTest > redirectResolutionValidatesEveryTargetAndDoesNotAddCredentials": "PASSED",
+    "SdkRadioPolishTest > signedRadioHasOneTabRowCompactFiltersCleanListsAndSettings": "PASSED",
+    "SdkMediaLifecycleTest > sleepStopsOnlyItsCurrentPlayerAndReplacementCancelsDeadline": "PASSED",
+    "SdkMediaLifecycleTest > signedPlayerOwnsSessionControlsAndStopsOnRevocation": "PASSED",
+    "SdkMediaLifecycleTest > deletingAppDataClearsPositionsWithoutALateStopRecreatingThem": "PASSED",
+    "SdkMediaLifecycleTest > pauseDuringPreparationAndReplacementNeverRestartOldPlayback": "PASSED"
+  },
+  "lint": {
+    "errors": 0,
+    "warnings": 181,
+    "log": "docs/evidence/v0.87.0/final-media.log"
+  },
+  "native": "Source-matched Linux/main/diagnostic ARM64 JNI; actual LOAD alignment >=16KiB",
+  "included_apps": "All16 signed packages current with original publisher",
+  "build_plan": "docs/evidence/v0.87.0/build-plan.log",
+  "limitations": [
+    "No physical phone acceptance",
+    "Status describes last attempt; broadcast schedule/listener counts are unknown",
+    "No APK assembled; released0.84 remains unchanged"
+  ]
+}

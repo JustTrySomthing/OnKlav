@@ -1,0 +1,50 @@
+{
+  "chunk": 35,
+  "status": "configured read-only OAuth/JMAP header sync source implemented; actual provider and Android qualification pending",
+  "production_path": "email helpers -> host OAuth opaque account + signed authenticated HTTP -> correlated bounded JMAP query/get header parser -> binding/query-state checked merge -> app-private compare-revision collection snapshot commit",
+  "helper_cases_passed": 4,
+  "contract_cases_passed": 5,
+  "signed_guest_steps_passed": 3,
+  "signed_denial_steps_passed": 1,
+  "fixture_limits": "Synthetic JMAP headers; actual private collection save/reopen and pending host accounts.connect. No fake OAuth or native HTTP reply; no provider contacted.",
+  "bounds": {
+    "headers_per_page": 20,
+    "pages": 5,
+    "headers_max": 100,
+    "snapshot_bytes_max": 15000,
+    "response_bytes": 131072
+  },
+  "persistence": "Explicit optimistic commit; retain saved snapshot on transport/parse/binding/pagination/size/commit failure. Validate loaded connection binding before display. Clear headers explicitly; host delete-data removal clears scope.",
+  "unsupported": [
+    "IMAP/POP/SMTP/password auth and universal provider support",
+    "Push/background/incremental full-mailbox synchronization",
+    "Body/MIME/attachments/drafts/send (chunk36)"
+  ],
+  "remaining": [
+    "Actual chosen-provider OAuth/JMAP session/account/profile qualification",
+    "Full Android HTTP/JNI/device integration, permission/lifecycle/process/TalkBack checks",
+    "Final reference application workflows (chunk38)"
+  ],
+  "native_source_hashes_verified": true,
+  "native_rebuilt": false,
+  "reason_native_reused": "No core or Kotlin source changed; only public SDK/controller/docs/example source.",
+  "native": {
+    "linux_jni_sha256": "38bb36beff6772fa41d3fbd0d06f396bdcbb3271eb95c8ffc473701ef0f7a1d9",
+    "arm64_jni_sha256": "b03be9cec5f8a72afc9ca921269bb8600151af63c264b3334932c0ff2fb4378d"
+  },
+  "source_sha256": {
+    "developer/components/src/email.rs": "3f81d894f65b29e73995bcd7e05ffc0181712228cbc58ae0891feb42c5661cac",
+    "developer/components/src/lib.rs": "d3bbbfaa4a9b216a48224dd45d3fad2ba088f541370c754e901f3acfc6dbd08c",
+    "developer/examples/email-sync/src/lib.rs": "cebe70b9b52816109f808f39634e8195ca503a74a61a4146e357afdb1a3aefe8"
+  },
+  "logs": [
+    "docs/evidence/v0.70.0/email35-components-final.log",
+    "docs/evidence/v0.70.0/email35-contract.log",
+    "docs/evidence/v0.70.0/email35-broker.log",
+    "docs/evidence/v0.70.0/email35-broker-denied.log"
+  ],
+  "apk_created": false,
+  "sdk_release_created": false,
+  "shipping_package_created": false,
+  "next_feature": 36
+}

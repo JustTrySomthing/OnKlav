@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.PhotoMarkupTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-31T19:52:35" hostname="83231ba1f14b" time="11.818">
+  <properties/>
+  <testcase name="marksStayOnFixedCanvasAfterImageGeometryAndNeverChangeSourcePixels" classname="app.onklav.home.PhotoMarkupTest" time="11.099"/>
+  <testcase name="temporaryCollapsedViewportDuringKeyboardResizeRemainsFinite" classname="app.onklav.home.PhotoMarkupTest" time="0.073"/>
+  <testcase name="croppedContextIncludesMarksWithExactSelectedExportPixels" classname="app.onklav.home.PhotoMarkupTest" time="0.347"/>
+  <testcase name="fixedCanvasProjectionAndSegmentHitIgnoreImageGeometry" classname="app.onklav.home.PhotoMarkupTest" time="0.056"/>
+  <testcase name="legacyDraftsAndMarksRoundTripWithValidatedFiniteBounds" classname="app.onklav.home.PhotoMarkupTest" time="0.052"/>
+  <testcase name="highlightIsTranslucentAndSourceNormalizedMarksScaleWithExport" classname="app.onklav.home.PhotoMarkupTest" time="0.189"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

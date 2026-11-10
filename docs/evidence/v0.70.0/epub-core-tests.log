@@ -1,0 +1,19 @@
+   Compiling onklav-core v0.8.0 (/workspace/scratch/75acf774e3b8/work/OnKlav/core)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 7.16s
+     Running unittests src/lib.rs (core/target/debug/deps/onklav_core-8a579202944a8eae)
+
+running 5 tests
+test sdk_epub::tests::epub_xml_limits_and_malformed_documents_never_resolve_entities ... ok
+test sdk_epub::tests::epub_spine_toc_anchors_and_safe_reflow_preserve_unicode ... ok
+test sdk_epub::tests::epub_rejects_traversal_external_entities_and_active_content ... ok
+test sdk_epub::tests::epub_private_search_and_foreign_handles_are_scoped ... ok
+test sdk_epub::tests::epub_fixed_layout_duplicates_and_missing_navigation_fail_closed ... ok
+
+test result: ok. 5 passed; 0 failed; 0 ignored; 0 measured; 235 filtered out; finished in 0.02s
+
+     Running unittests src/bin/onklav-pack.rs (core/target/debug/deps/onklav_pack-ee23dc4255ec4a6b)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

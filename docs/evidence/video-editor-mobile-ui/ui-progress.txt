@@ -1,0 +1,22 @@
+fixture 740 360 font 1.0
+landscape ready
+landscape passed
+fixture 360 740 font 1.0
+portrait ready
+portrait passed
+fixture 320 480 font 1.0
+short passed
+fixture 320 640 font 1.6
+large passed
+fixture 740 360 font 1.0
+landscape ready
+landscape passed
+fixture 360 740 font 1.0
+portrait ready
+portrait passed
+fixture 360 740 font 1.0
+fullscreen and details passed
+fixture 320 480 font 1.0
+short passed
+fixture 320 640 font 1.6
+large passed

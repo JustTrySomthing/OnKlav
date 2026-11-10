@@ -1,0 +1,46 @@
+{
+  "status": "diagnostic APK only; not a store release or SDK release",
+  "package": "app.onklav.home.prototype.diagnostics",
+  "version": "0.70.0-rc1-device-checks2",
+  "apk_sha256": "39c093c814302d674d4b775a2eec0429e762cc26fd91f4bc11144722a865bc1c",
+  "arm64_jni_sha256": "700ceded80b0e68b2c9af92890224a839c617ee313dfc9f9f4a6fd4ecf4dbc55",
+  "signing_certificate_sha256": "6ed975c5fc27d19f6291f751a8bb00fa8a2c2e7d268bffc7b6ddf7e1b1a7a69d",
+  "zipalign_16kb": true,
+  "elf_load_alignment": {
+    "lib/arm64-v8a/libandroidx.graphics.path.so": 16384,
+    "lib/arm64-v8a/libc++_shared.so": 16384,
+    "lib/arm64-v8a/libgodot_android.so": 16384,
+    "lib/arm64-v8a/libonklav_core.so": 16384
+  },
+  "reused_stock_packages_sha256": {
+    "Annotation": "548b5b9c0c33b5912501a2963308096008b7523af63209622eec340f9ac53ceb",
+    "Browser": "015a25f7709e271b342dca17093b3b2efdcbb8cd9ceea7b3eea15b1e0286f8a5",
+    "Files": "c001ae05788f67e31f205089d0cb131c8b42c761afec821b5b81bc80adb0c2ce",
+    "Notes": "15c0618cf1d0973e9813febaef00d0e8ee1c166d03cf133ae63ef9d17131da53",
+    "RSS": "20d50cd4824a1ba1635c47eca2c22feea14c44c02b882d3560b8d443c03a26f0",
+    "ReadAloud": "cdf454fc27e8e4e85537e32980b4d8de2d911ba0c60c00252e8e66827d6ebc2d",
+    "Social": "22708c136d6213ee1d26b6ca0ab19bf6d2bd38c003d099b4246eb25f001ecb55",
+    "WalkieTalkie": "9d799d6b25365418335cd68b0808aca35bead410a8c9f845b1a300ea910bf909",
+    "YouTube": "a145db4967507bf311b35a5d2aa28dec75d145105390689eade3ce4caa2f9040"
+  },
+  "fresh_native_fixture_sha256": "f6829bf31824f176661f15219617b84007d0d9250b67c9e24399bff1b2b3571d",
+  "physical_device_tested": false,
+  "two_phone_tested": false,
+  "automated_checks": {
+    "passed": true,
+    "log": "work-session/diagnostic2-focused-test.log",
+    "scenarios": [
+      "existing checks1 sample installed before starting checks2",
+      "repeated Start checks reuses verified sample",
+      "read before store reports missing",
+      "store confirms saved",
+      "read validates test value and reports passed",
+      "failed reply displays generic failure without its secret-bearing error",
+      "null service feedback displays opened without null",
+      "native notification submission"
+    ],
+    "physical_device_tested": false
+  },
+  "version_code": 79,
+  "sample_update": "Separate checks2 sample identity avoids replacing a publisher identity whose original disposable key was deleted; future regeneration uses an existing explicitly supplied publisher key."
+}

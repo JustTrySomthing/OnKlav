@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.PhotoRetouchUiTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-31T17:07:21" hostname="83231ba1f14b" time="14.254">
+  <properties/>
+  <testcase name="retouchTapUndoRedoAndDrawingRouteWork" classname="app.onklav.home.PhotoRetouchUiTest" time="14.254"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

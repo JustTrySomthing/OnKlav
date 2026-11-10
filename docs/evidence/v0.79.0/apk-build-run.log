@@ -1,0 +1,17 @@
+{
+  "sdk_apps": "reuse",
+  "mobile_rust": "reuse",
+  "games": "reuse",
+  "android_tests": "not requested",
+  "variant": "debug",
+  "abis": [
+    "arm64-v8a"
+  ]
+}
+Resource inputs changed: refreshing generated resource/package/DEX caches
+assemble-debug: starting (maximum 600s)
+assemble-debug: 20s elapsed
+assemble-debug: finished in 29.47s
+verify-debug: starting (maximum 120s)
+verify-debug: finished in 2.63s
+APK assembled and verified. Phone/carrier/performance acceptance remains separate.

@@ -1,0 +1,58 @@
+{
+  "scope": "Current source-complete bounded profiles versus unclosed qualification; supersedes historical interrupted-reimplementation lists",
+  "source_complete_groups": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12
+  ],
+  "qualification_group": 13,
+  "next_chunk": 41,
+  "remaining": [
+    {
+      "number": 39,
+      "status": "requires_environment",
+      "title": "Phone UI/media/accessibility and process recovery"
+    },
+    {
+      "number": 40,
+      "status": "requires_environment",
+      "title": "Two-phone delivery/receipts/reconnect/removal"
+    },
+    {
+      "number": 41,
+      "status": "partial",
+      "title": "Sustained Android performance/heap and comprehensive security qualification"
+    },
+    {
+      "number": 42,
+      "status": "deferred_release",
+      "title": "Package/SDK/docs/APK release only when requested"
+    }
+  ],
+  "integration_blockers": [
+    "Real configured provider OAuth/HTTP/mail/upload/recovery/map/geocoder/router qualification"
+  ],
+  "source_limits_reference": "developer/docs/EMAIL-CONTENT.md; developer/docs/MAPS.md; individual format guides",
+  "latest_source_verification": "docs/workflow-wrap-verification.json",
+  "recovery_verification": "docs/recovery-current-verification.json",
+  "historical_recovery_note": "Earlier source-loss lists are resolved; do not reimplement them",
+  "hardware_tests_performed_this_pass": false,
+  "apk_built": false,
+  "sdk_released": false,
+  "media_format_limitations": [
+    "Android-supported progressive audio/video; HLS/DASH not implemented",
+    "Remote seeking requires strong ETag and range support",
+    "Downloads remain subject to private-file quotas and attempt/time budgets"
+  ],
+  "full_android_host_verification": "docs/integration-provider-verification.json",
+  "current_note": "Three dependencies restored; full app/test sources compile and48 focused host cases passed, including live OSM raster. Device/live mail/search/routes qualification remains."
+}

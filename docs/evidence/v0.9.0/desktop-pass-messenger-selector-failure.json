@@ -1,0 +1,28 @@
+{
+  "apk_sha256": "580c0c7e5870c07e0349fbffda8b241ce393bcb826deaef6f329601f0619db2d",
+  "device": "Android 10 x86_64 software emulator; 2 GiB, 4 cores, no KVM",
+  "phone_carrier_acceptance": false,
+  "default_role_changed": false,
+  "tests": {
+    "DesktopChromeDeviceTest": "pass",
+    "MessengerDeviceTest": "fail"
+  },
+  "captures": [
+    "messages-header",
+    "apps-original-grid",
+    "apps-second-page",
+    "games-artwork",
+    "settings-original-icons",
+    "settings-games-manager",
+    "settings-sounds-menu"
+  ],
+  "boot": "pass",
+  "install": "pass",
+  "grant_READ_SMS": true,
+  "grant_SEND_SMS": true,
+  "grant_READ_CONTACTS": true,
+  "grant_READ_PHONE_STATE": true,
+  "sms_fixture_injected": true,
+  "installed_sha256": "580c0c7e5870c07e0349fbffda8b241ce393bcb826deaef6f329601f0619db2d",
+  "exact_apk_installed": true
+}

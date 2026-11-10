@@ -1,0 +1,61 @@
+{
+  "version": "0.98.0-media1",
+  "version_code": 106,
+  "status": "Source implemented and host-verified; phone and live provider acceptance open",
+  "features": [
+    "download arrow replaces Home; clean Audio/M4A or480p/1080p dialog",
+    "current-page public media URLs, stale/ad identity filtering, checked ranged downloads and progress/cancel feedback",
+    "video/audio preparation and shared Audio/Video YouTube folders",
+    "streaming media imports up to2GiB with capability/destination checks",
+    "bookmark/normal-navigation unmute guard",
+    "standard decoder for unedited clips; compatible MP4 preview fallback and no automatic failure loop"
+  ],
+  "verification": {
+    "rust_core": 286,
+    "android_unique": 14,
+    "android_editor": 7,
+    "android_youtube": 7,
+    "javascript_fixture_groups": 4,
+    "full_lint": {
+      "errors": 0,
+      "warnings": 220,
+      "information": 1
+    },
+    "runtime_classes": 297,
+    "runtime_mismatches": [],
+    "native_source_matched": true,
+    "native_minimum_load_alignment": 16384,
+    "youtube_package_version": 41,
+    "apk_built": true,
+    "phone_tested": false,
+    "live_youtube_download_tested": false,
+    "reported_original_clip_available": false
+  },
+  "limitations": [
+    "M4A audio; MP3 encoding is not implemented",
+    "Only publicly supplied/observed current-page media addresses are supported; no signature/DRM bypass, sign-in, SABR/HLS extraction or universal-download guarantee",
+    "2GiB stream/import bound; conversion requires extra temporary space; no persisted resumable download job",
+    "Original phone GPU failure was not reproduced; native route and fallback require handset acceptance"
+  ],
+  "documentation": "docs/YOUTUBE-DOWNLOADS-PREVIEW.md",
+  "evidence": "docs/evidence/v0.98.0",
+  "apk": {
+    "file_name": "OnKlav-0.98.0-ARM64.apk",
+    "bytes": 93299649,
+    "sha256": "4e522829de8ad4db7ad5ffbd11a1cc08b5a6fd07b553a15549468bfbe86bf74d",
+    "version_name": "0.98.0-media1",
+    "version_code": 106,
+    "package": "app.onklav.home.prototype.rewrite",
+    "abis": [
+      "arm64-v8a"
+    ],
+    "variant": "debug",
+    "signer_sha256": "6ed975c5fc27d19f6291f751a8bb00fa8a2c2e7d268bffc7b6ddf7e1b1a7a69d",
+    "status": "assembled and signature/source/package/alignment verified",
+    "build_log": "docs/evidence/v0.98.0/assemble-debug.log",
+    "verify_log": "docs/evidence/v0.98.0/verify-debug.log",
+    "packaging_fix": "Merge both email dependency license and notice Markdown resources; retain their full text.",
+    "phone_verified": false,
+    "live_youtube_download_verified": false
+  }
+}

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.RadioSceneRenderTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-10-29T01:13:59" hostname="1b65f1fab707" time="6.486">
+  <properties/>
+  <testcase name="featuredScenesMoveWithNewAudioAndIntensityChangesTheirOutput" classname="app.onklav.home.RadioSceneRenderTest" time="4.953"/>
+  <testcase name="removedPrismFallsBackAndMandalaLayersUseSeparateFrequencyEnvelopes" classname="app.onklav.home.RadioSceneRenderTest" time="0.073"/>
+  <testcase name="rainbowCoversAllHuesAndOneBandDoesNotDriveAllBars" classname="app.onklav.home.RadioSceneRenderTest" time="0.059"/>
+  <testcase name="frequencyLayersAreIndependentAndWaveComponentsKeepActualSound" classname="app.onklav.home.RadioSceneRenderTest" time="0.052"/>
+  <testcase name="allSixScenesReactToAudioAndPausedFramesRemainStill" classname="app.onklav.home.RadioSceneRenderTest" time="0.956"/>
+  <testcase name="starburstIsSymmetricAndTapersOutwardAndColorsStaySelected" classname="app.onklav.home.RadioSceneRenderTest" time="0.054"/>
+  <testcase name="radialScenesExpandPastFormerBoundsAndAllLayersReact" classname="app.onklav.home.RadioSceneRenderTest" time="0.339"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

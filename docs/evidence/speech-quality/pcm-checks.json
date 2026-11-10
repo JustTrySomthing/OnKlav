@@ -1,0 +1,98 @@
+[
+  {
+    "file": "0-message.wav",
+    "frames": 132620,
+    "peak": 13969,
+    "clipped_samples": 0
+  },
+  {
+    "file": "0-reading.wav",
+    "frames": 442796,
+    "peak": 15554,
+    "clipped_samples": 0
+  },
+  {
+    "file": "1-message.wav",
+    "frames": 128892,
+    "peak": 11553,
+    "clipped_samples": 0
+  },
+  {
+    "file": "1-reading.wav",
+    "frames": 431972,
+    "peak": 14015,
+    "clipped_samples": 0
+  },
+  {
+    "file": "2-message.wav",
+    "frames": 133730,
+    "peak": 16694,
+    "clipped_samples": 0
+  },
+  {
+    "file": "2-reading.wav",
+    "frames": 422343,
+    "peak": 19847,
+    "clipped_samples": 0
+  },
+  {
+    "file": "3-message.wav",
+    "frames": 134519,
+    "peak": 22364,
+    "clipped_samples": 0
+  },
+  {
+    "file": "3-reading.wav",
+    "frames": 414488,
+    "peak": 23877,
+    "clipped_samples": 0
+  },
+  {
+    "file": "4-message.wav",
+    "frames": 154967,
+    "peak": 20158,
+    "clipped_samples": 0
+  },
+  {
+    "file": "4-reading.wav",
+    "frames": 459875,
+    "peak": 21383,
+    "clipped_samples": 0
+  },
+  {
+    "file": "5-message.wav",
+    "frames": 172905,
+    "peak": 22799,
+    "clipped_samples": 0
+  },
+  {
+    "file": "5-reading.wav",
+    "frames": 491565,
+    "peak": 25386,
+    "clipped_samples": 0
+  },
+  {
+    "file": "6-message.wav",
+    "frames": 147831,
+    "peak": 18902,
+    "clipped_samples": 0
+  },
+  {
+    "file": "6-reading.wav",
+    "frames": 459924,
+    "peak": 19384,
+    "clipped_samples": 0
+  },
+  {
+    "file": "7-message.wav",
+    "frames": 138283,
+    "peak": 24199,
+    "clipped_samples": 0
+  },
+  {
+    "file": "7-reading.wav",
+    "frames": 441700,
+    "peak": 26311,
+    "clipped_samples": 0
+  }
+]

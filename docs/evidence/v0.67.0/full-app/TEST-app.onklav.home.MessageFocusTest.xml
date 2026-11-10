@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.MessageFocusTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-24T14:02:46" hostname="41b9fb140d3c" time="0.019">
+  <properties/>
+  <testcase name="exactMessageAndDateAreRequired" classname="app.onklav.home.MessageFocusTest" time="0.019"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

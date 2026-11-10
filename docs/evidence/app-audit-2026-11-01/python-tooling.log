@@ -1,0 +1,36 @@
+PASS visible skip, disabled control, ad seek, playback restoration, cleanup
+PASS explicit autoplay, no restart after pause, wrong-video/expired intent, landscape/portrait viewport restoration
+PASS current video owner, stale player rejection, scoped owner link, channel page
+PASS download metadata, muxed audio, portrait quality labels, no undeciphered URL use, stale response rejection
+...............FF.......F.....
+======================================================================
+FAIL: test_complete_freshness_rejects_missing_package_and_new_sources (test_sdk_build_plan.SelectiveSdkBuildTest.test_complete_freshness_rejects_missing_package_and_new_sources)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/21249b7ec6ea/project/OnKlav/scripts/test_sdk_build_plan.py", line 85, in test_complete_freshness_rejects_missing_package_and_new_sources
+    self.write_proof(); self.assertTrue(sdk_current(self.root))
+                        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_complete_freshness_rejects_stale_per_package_proof_and_bundle (test_sdk_build_plan.SelectiveSdkBuildTest.test_complete_freshness_rejects_stale_per_package_proof_and_bundle)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/21249b7ec6ea/project/OnKlav/scripts/test_sdk_build_plan.py", line 92, in test_complete_freshness_rejects_stale_per_package_proof_and_bundle
+    self.write_proof();self.assertTrue(sdk_current(self.root))
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+======================================================================
+FAIL: test_retired_annotation_is_archived_but_never_restored_to_host (test_sdk_build_plan.SelectiveSdkBuildTest.test_retired_annotation_is_archived_but_never_restored_to_host)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/workspace/scratch/21249b7ec6ea/project/OnKlav/scripts/test_sdk_build_plan.py", line 37, in test_retired_annotation_is_archived_but_never_restored_to_host
+    self.write_proof();self.assertTrue(sdk_current(self.root))
+                       ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true
+
+----------------------------------------------------------------------
+Ran 30 tests in 0.979s
+
+FAILED (failures=3)

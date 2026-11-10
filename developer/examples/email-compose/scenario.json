@@ -1,0 +1,55 @@
+{
+  "grants": [
+    "storage.private",
+    "network.http",
+    "accounts.connect"
+  ],
+  "steps": [
+    {
+      "action": "compose.save",
+      "expect": {
+        "status": "Draft saved"
+      }
+    },
+    {
+      "reopen": true,
+      "expect": {
+        "status": "Draft ready"
+      }
+    },
+    {
+      "action": "compose.review"
+    },
+    {
+      "action": "compose.review.submit",
+      "frame_expect": {
+        "confirm.accept": "compose.confirm"
+      }
+    },
+    {
+      "action": "compose.cancel"
+    },
+    {
+      "action": "compose.review"
+    },
+    {
+      "action": "compose.review.submit",
+      "frame_expect": {
+        "confirm.accept": "compose.confirm"
+      }
+    },
+    {
+      "action": "compose.confirm",
+      "pending": "http.request",
+      "expect": {
+        "phase": "awaiting"
+      }
+    },
+    {
+      "reopen": true,
+      "expect": {
+        "phase": "sending"
+      }
+    }
+  ]
+}

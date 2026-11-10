@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.AudioPrecisionTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-30T01:25:15" hostname="b623e8e1265a" time="0.032">
+  <properties/>
+  <testcase name="displayedUnitsRoundTripWithoutChangingTheirMeaning" classname="app.onklav.home.AudioPrecisionTest" time="0.01"/>
+  <testcase name="decimalPrefillIsLocaleStableAndIncludesFineAdjustments" classname="app.onklav.home.AudioPrecisionTest" time="0.016"/>
+  <testcase name="invalidNumbersNeverBecomeEdits" classname="app.onklav.home.AudioPrecisionTest" time="0.006"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

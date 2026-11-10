@@ -1,0 +1,58 @@
+{
+  "status": "implemented",
+  "production_and_test_compilation": "passed",
+  "focused_checks_passed": 14,
+  "test_suites": {
+    "app.onklav.home.CodeEditCoreTest": {
+      "tests": 9,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "app.onklav.home.CodeEditFilesTest": {
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "app.onklav.home.CodeEditUiTest": {
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/CodeEdit.kt": "d067e0b6b2462eec278fe61cf352aee1cac12871fc9e5d7b27aad8258441562b",
+    "android/app/src/main/kotlin/app/onklav/home/CodeEditCore.kt": "5e9bd5b7eb9fe1f1ed0b91c69fe1287a1baf5f468ea858ee2ba83d3742f5c930",
+    "android/app/src/main/kotlin/app/onklav/home/CodeEditModel.kt": "7f4ace88d42abc01ee01775872afb3579094bddd8f17dd0be92d155fd528e3bf",
+    "android/app/src/main/kotlin/app/onklav/home/CodeEditFiles.kt": "54c3f400e9b8cb9f0d9087165cc3b57e40ab0e708de8fcdcbada34fb1d418cf1",
+    "android/app/src/main/kotlin/app/onklav/home/CodeEditView.kt": "677a56449f1801cc5cd7d8a417f1025c309590341abf330a0b1af21fdc848790",
+    "android/app/src/main/kotlin/app/onklav/home/Catalog.kt": "ca9efdb05373c934bd01ce6634301c6a0daa0141a650f92154c2b199c3fd4c10",
+    "android/app/src/main/kotlin/app/onklav/home/MainActivity.kt": "47521bda63ce0ee0d0f19daf8ccc50949cc17c5c666f2b980a12097f8ddaf716",
+    "android/app/src/main/kotlin/app/onklav/home/SdkAppsCenter.kt": "3ae45c390df04c1acb7f821fb91636de231b1e723948b357a0f371d0a9b533f3",
+    "android/shared/src/main/res/drawable/ref_app_code_edit.xml": "e88d8f81c4e86cb819c98e5f7cde5fb94aae8912603bb3414bbb972c6b0d726a"
+  },
+  "production_unchanged_during_final_checks": true,
+  "new_dependencies_or_models": false,
+  "new_permissions": false,
+  "apk_built": false,
+  "build_plan": {
+    "sdk_apps": "reuse",
+    "mobile_rust": "reuse",
+    "neural_speech": "reuse",
+    "games": "reuse"
+  },
+  "scope": "Included host Code Edit app, native view and local text engine, signed Files transactions and atomic private drafts",
+  "verification_notes": [
+    "Initial eight core checks passed.",
+    "First combined run passed nine core and three UI checks; Files fixture failed because it attempted selection while its import transaction was pending.",
+    "Fixture import/selection was split into separate sessions, matching the established Files contract.",
+    "Final run passed all fourteen checks, including actual signed Files replacement/Trash preservation, refused external-change digest, rendered syntax spans, native auto-indent, recovered cursor, inline search and large-text small-phone layout."
+  ],
+  "limitations": [
+    "Physical-phone IME/accessibility/external-provider and large-file performance qualification pending",
+    "Lexical syntax coloring, not semantic analysis/LSP; no compiler, debugger, terminal or Sublime plugin runtime",
+    "1 MB / 500,000-character limit and eight open tabs; Save as for non-internal providers"
+  ]
+}

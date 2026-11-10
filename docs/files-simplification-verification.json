@@ -1,0 +1,97 @@
+{
+  "date": "2026-11-02",
+  "status": "source changes verified; no APK produced",
+  "scope": "unused provider removal and simplified native Files/media/attachment UI",
+  "email": {
+    "choices": [
+      "Yahoo",
+      "Google",
+      "Private domain"
+    ],
+    "oauth_offered": false,
+    "gmx_migration_and_support_removed": true,
+    "signed_package_version": 4,
+    "original_publisher_retained": true,
+    "package_sha256": "0281df2bba1cddfec76ad1457da9efa3b16165ed1e70105985a1859673624131"
+  },
+  "cloud": {
+    "choices": [
+      "pCloud (US/EU)",
+      "Koofr"
+    ],
+    "google_drive_implementation_removed": true,
+    "legacy_provider_editor_removed": true,
+    "provider_neutral_backups_retained": true
+  },
+  "files": {
+    "automatic_media_roots": [
+      "images",
+      "audio",
+      "video"
+    ],
+    "old_media_consolidation": "retains content IDs/bytes/owners; preserves custom/protected folders and Trash",
+    "labels": [
+      "OnKlav System Files",
+      "Android Files"
+    ],
+    "android_categories": [
+      "Photos",
+      "Images",
+      "Audio",
+      "Video",
+      "Documents",
+      "Downloads",
+      "APK",
+      "Other"
+    ],
+    "views": [
+      "thumbnails",
+      "list"
+    ],
+    "mutable_entry_controls": "pencil menu",
+    "default_attachment_folders": "matching media root",
+    "read_only_preview_index_race_fixed": true,
+    "read_only_write_rejected_before_save_metadata": true
+  },
+  "verification": {
+    "native_content_tests": 42,
+    "sdk_tests": 63,
+    "android_host_checks_across_focused_phases": 43,
+    "final_file_selection_android_access_and_ui_checks": 16,
+    "unchanged_provider_and_broker_checks_reused_from_preceding_phase": 27,
+    "checkpoint_tooling_tests": 7,
+    "working_native_tooling_tests": 1,
+    "sdk_build_planner_tests": 16,
+    "linux_and_arm64_source_proof_matches": true,
+    "arm64_load_alignment": 16384,
+    "fresh_compiler_entries_in_both_verified_test_jars": 4963,
+    "signed_sdk_packages_current": true,
+    "screens_rendered_and_reviewed": [
+      "files-home.png",
+      "android-categories.png",
+      "image-picker.png",
+      "thumbnails.png",
+      "list.png"
+    ]
+  },
+  "limits": {
+    "apk_built": false,
+    "installed_phone_updated": false,
+    "physical_phone_carrier_and_live_provider_acceptance": false,
+    "android_access": "primary shared storage after Android file permission; private app directories are excluded",
+    "removable_storage_qualified": false,
+    "released_mobile_jni_unchanged": "source-matched diagnostic ARM64 is included; release APK requires the normal native rebuild"
+  },
+  "evidence": [
+    "docs/evidence/files-simplification/android-source-compile.log",
+    "docs/evidence/files-simplification/selection-ui-tests.log",
+    "docs/evidence/files-simplification/provider-file-checks-before-selection-fix.log",
+    "docs/evidence/files-simplification/sdk-tests.log",
+    "docs/evidence/files-simplification/email-package.log",
+    "docs/evidence/files-simplification/host-results.json",
+    "docs/evidence/files-simplification/class-bundle-validation.json",
+    "docs/evidence/v0.100.38/working-rust-tests.log",
+    "docs/evidence/v0.100.38/working-host-native.log",
+    "docs/evidence/v0.100.38/working-android-native.log"
+  ]
+}

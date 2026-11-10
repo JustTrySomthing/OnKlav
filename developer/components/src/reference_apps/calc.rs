@@ -1,0 +1,45 @@
+//! Standard arithmetic, bounded expression parser, private chronological history.
+use crate::{*,serde_json::{json,Value}};
+const HISTORY:&str="calc_history_v1";
+pub fn number(n:f64)->String{if n==0.{"0".into()}else if n.abs()>=1e14||n.abs()<1e-9{format!("{n:.10e}")}else{format!("{n:.10}").trim_end_matches('0').trim_end_matches('.').to_owned()}}
+struct Parser<'a>{s:&'a[u8],p:usize}
+impl Parser<'_>{
+ fn expr(&mut self)->Result<f64,String>{let mut v=self.term()?;while let Some(&c)=self.s.get(self.p){if c!=b'+'&&c!=b'-'{break}self.p+=1;let start=self.p;let mut r=self.term()?;let part=&self.s[start..self.p];if part.last()==Some(&b'%')&&!part.iter().any(|c|matches!(c,b'*'|b'/')){r*=v;}v=if c==b'+'{v+r}else{v-r};}Ok(v)}
+ fn term(&mut self)->Result<f64,String>{let mut v=self.factor()?;while let Some(&c)=self.s.get(self.p){if c!=b'*'&&c!=b'/'{break}self.p+=1;let r=self.factor()?;if c==b'/'&&r==0.{return Err("Cannot divide by zero".into())}v=if c==b'*'{v*r}else{v/r};}Ok(v)}
+ fn factor(&mut self)->Result<f64,String>{let mut v=if self.s.get(self.p)==Some(&b'-'){self.p+=1;-self.factor()?}else if self.s.get(self.p)==Some(&b'+'){self.p+=1;self.factor()?}else if self.s.get(self.p)==Some(&b'('){self.p+=1;let n=self.expr()?;if self.s.get(self.p)!=Some(&b')'){return Err("Close the parentheses".into())}self.p+=1;n}else{let start=self.p;while self.s.get(self.p).is_some_and(|c|c.is_ascii_digit()||*c==b'.'){self.p+=1;}if self.s.get(self.p).is_some_and(|c|*c==b'e'||*c==b'E'){self.p+=1;if self.s.get(self.p).is_some_and(|c|*c==b'+'||*c==b'-'){self.p+=1;}while self.s.get(self.p).is_some_and(u8::is_ascii_digit){self.p+=1;}}std::str::from_utf8(&self.s[start..self.p]).ok().and_then(|s|s.parse::<f64>().ok()).filter(|n|n.is_finite()).ok_or("Enter a number")?};while self.s.get(self.p)==Some(&b'%'){v/=100.;self.p+=1;}Ok(v)}
+}
+pub fn evaluate(expr:&str)->Result<f64,String>{let text=expr.replace('×',"*").replace('÷',"/").replace('−',"-").split_whitespace().collect::<String>();if text.len()>160{return Err("Calculation is too long".into())}let mut p=Parser{s:text.as_bytes(),p:0};let v=p.expr()?;if p.p!=p.s.len(){return Err("Complete the calculation".into())}if !v.is_finite(){return Err("Result is too large".into())}Ok(v)}
+fn save(s:&Value)->Value{collections::transact(HISTORY,s["revision"].as_u64().unwrap_or(0),1,None,vec![collections::put("entries",json!({"items":s["history"]}))],"calc.saved")}
+pub fn controller(input:Value)->Value{
+ let mut s=input["state"].clone();if !s.is_object(){s=json!({"expr":"","result":"0","history":[],"cursor":null,"revision":0,"drawer":false,"error":"","done":false});}
+ let e=&input["event"];let a=e["action"].as_str().unwrap_or("");let mut req=Value::Null;s["error"]=json!("");
+ match a{
+ "start"=>req=collections::get(HISTORY,"entries","calc.loaded"),
+ "calc.loaded" if e["reply"]["ok"]==true=>{s["revision"]=e["reply"]["value"]["revision"].clone();s["history"]=json!(e["reply"]["value"]["data"]["items"].as_array().into_iter().flatten().take(50).cloned().collect::<Vec<_>>());},
+ "calc.saved" if e["reply"]["ok"]==true=>s["revision"]=e["reply"]["value"]["revision"].clone(),
+ "calc.history"=>s["drawer"]=json!(s["drawer"]!=true),"calc.close"=>s["drawer"]=json!(false),
+ "calc.copy"=>req=effect("clipboard.write",json!({"text":s["result"]}),"calc.copied"),
+ "calc.clear"=>{s["expr"]=json!("");s["result"]=json!("0");s["done"]=json!(false);s["cursor"]=Value::Null;},
+ "calc.backspace"=>{let mut text=s["expr"].as_str().unwrap_or("").to_owned();text.pop();s["expr"]=json!(text);s["done"]=json!(false);},
+ "calc.sign"=>{let text=s["expr"].as_str().unwrap_or("");s["expr"]=json!(if let Some(v)=text.strip_prefix("-(").and_then(|v|v.strip_suffix(')')){v.to_owned()}else{format!("-({})",if text.is_empty(){"0"}else{text})});s["done"]=json!(false);},
+ "calc.equals"=>{let text=s["expr"].as_str().unwrap_or("").to_owned();match evaluate(&text){Ok(n)=>{let out=number(n);let mut h=s["history"].as_array().cloned().unwrap_or_default();if h.last().is_none_or(|r|r["expr"]!=text){h.push(json!({"expr":text,"result":out}));if h.len()>50{h.remove(0);}}s["history"]=json!(h);s["cursor"]=json!(s["history"].as_array().unwrap().len().saturating_sub(1));s["result"]=json!(out);s["done"]=json!(true);req=save(&s);},Err(err)=>s["error"]=json!(err)}},
+ "calc.previous"|"calc.next"=>{let h=s["history"].as_array().cloned().unwrap_or_default();if !h.is_empty(){let p=s["cursor"].as_u64().map(|n|n as usize);let n=if a=="calc.previous"{p.map_or(h.len()-1,|n|n.saturating_sub(1))}else{p.map_or(h.len()-1,|n|(n+1).min(h.len()-1))};s["cursor"]=json!(n);s["expr"]=h[n]["expr"].clone();s["result"]=h[n]["result"].clone();s["done"]=json!(true);}},
+ "calc.clear_history"=>{s["confirm"]=json!(true)},"calc.keep"=>s["confirm"]=json!(false),"calc.clear_accept"=>{s["confirm"]=json!(false);s["history"]=json!([]);s["cursor"]=Value::Null;req=save(&s);},
+ _ if a.starts_with("calc.pick.")=>{if let Some(row)=a[10..].parse::<usize>().ok().and_then(|i|s["history"].get(i)).cloned(){s["expr"]=row["expr"].clone();s["result"]=row["result"].clone();s["cursor"]=json!(a[10..].parse::<usize>().unwrap());s["done"]=json!(true);s["drawer"]=json!(false);}},
+ _ if a.starts_with("calc.key.")=>{let key=&a[9..];if matches!(key,"0"|"1"|"2"|"3"|"4"|"5"|"6"|"7"|"8"|"9"|"."|"+"|"−"|"×"|"÷"|"("|")"|"%"){let mut text=s["expr"].as_str().unwrap_or("").to_owned();if s["done"]==true{text=if matches!(key,"+"|"−"|"×"|"÷"|"%"){s["result"].as_str().unwrap_or("0").to_owned()}else{String::new()};}if text.len()+key.len()<=160{text.push_str(key);s["expr"]=json!(text);s["done"]=json!(false);s["cursor"]=Value::Null;}}},_=>{}
+ }
+ if e["reply"]["ok"]==false{s["error"]=json!("Could not save or copy. Try again.");}
+ let expression_text=s["expr"].as_str().unwrap_or("").to_owned();let expr=expression_text.as_str();if s["done"]!=true{s["result"]=json!(evaluate(expr).map(number).unwrap_or_else(|_|if expr.is_empty(){"0".into()}else{"…".into()}));}
+ let mut expression=label("calc.expression",if expr.is_empty(){" "}else{expr});expression["font"]=json!(20);expression["align"]=json!("end");
+ let mut display=heading("calc.output",s["result"].as_str().unwrap_or("0")).long_action("calc.copy","Copy result");display["font"]=json!(36);display["align"]=json!("end");display["utility_display"]=json!(true);
+ let mut nodes=vec![expression,display,label("calc.error",s["error"].as_str().unwrap_or(""))];
+ let rows=[[("calc.previous","‹"),("calc.next","›"),("calc.key.(","("),("calc.key.)",")")],[("calc.clear","AC"),("calc.sign","+/−"),("calc.key.%","%"),("calc.key.÷","÷")],[("calc.key.7","7"),("calc.key.8","8"),("calc.key.9","9"),("calc.key.×","×")],[("calc.key.4","4"),("calc.key.5","5"),("calc.key.6","6"),("calc.key.−","−")],[("calc.key.1","1"),("calc.key.2","2"),("calc.key.3","3"),("calc.key.+","+")],[("calc.backspace","⌫"),("calc.key.0","0"),("calc.key..","."),("calc.equals","=")]];
+ for(i,row)in rows.iter().enumerate(){for(id,text)in row{let mut n=button(id,text).row(&format!("calc.row.{i}"));n["keypad"]=json!(true);n["accent"]=json!(id==&"calc.equals");n["muted_key"]=json!(i<2||["+","−","×","÷"].contains(text));if *id=="calc.previous"||*id=="calc.next"{n["enabled"]=json!(s["history"].as_array().is_some_and(|h|!h.is_empty())&&if *id=="calc.previous"{s["cursor"].as_u64()!=Some(0)}else{s["cursor"].as_u64().is_some_and(|p|p+1<s["history"].as_array().unwrap().len()as u64)});n["accessibility_label"]=json!(if *id=="calc.previous"{"Previous calculation"}else{"Next calculation"});}nodes.push(n);}}
+ let mut f=Screen::new("Calc",s.clone()).body(nodes).actions(vec![icon("calc.history","Calculation history","history")]).scrollable().effect(req);
+ if s["drawer"]==true{let mut h=vec![];for(i,r)in s["history"].as_array().cloned().unwrap_or_default().iter().enumerate().rev(){h.push(record(&format!("calc.pick.{i}"),r["result"].as_str().unwrap_or(""),r["expr"].as_str().unwrap_or("")));}if h.is_empty(){h.push(label("calc.empty","No calculations yet"));}else{h.push(button("calc.clear_history","Clear history").subtle());}f=f.drawer("History","calc.close",h);}
+ if s["confirm"]==true{f=f.confirm_labeled("Clear calculation history?","Your current calculation stays on screen.","calc.clear_accept","calc.keep","Clear");}f.finish()
+}
+#[cfg(test)]mod tests{use super::*;#[test]fn arithmetic_precedence_sign_percent_and_bounds(){for(e,n)in[("2+3×4",14.),("(2+3)÷2",2.5),("−(4+2)",-6.),("200×10%",20.),("200+10%",220.),("1e3+2",1002.),(".5+.25",0.75)]{assert_eq!(evaluate(e).unwrap(),n);}for e in["1÷0","2..3","(2+3","1e999","2foo"]{assert!(evaluate(e).is_err(),"{e}");}assert!(evaluate(&"(".repeat(161)).is_err());}
+#[test]fn history_and_continue_from_result(){let mut f=controller(json!({}));for a in["calc.key.2","calc.key.+","calc.key.3","calc.equals"]{f=controller(json!({"state":f["state"],"event":{"action":a}}));}assert_eq!(f["state"]["result"],"5");assert_eq!(f["state"]["history"][0]["expr"],"2+3");let f=controller(json!({"state":f["state"],"event":{"action":"calc.key.×"}}));assert_eq!(f["state"]["expr"],"5×");}}
+
+trait Subtle{fn subtle(self)->Self;}impl Subtle for Value{fn subtle(mut self)->Self{self["subtle"]=json!(true);self}}

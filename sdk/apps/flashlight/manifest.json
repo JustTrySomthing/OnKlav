@@ -1,0 +1,17 @@
+{
+  "schema": "onklav.app.v1",
+  "runtime": "rust-wasm-ui.v1",
+  "id": "app.onklav.flashlight",
+  "name": "Flashlight",
+  "version": 2,
+  "min_host": 96,
+  "icon": {
+    "symbol": "settings"
+  },
+  "capabilities": [
+    "storage.private",
+    "device.torch",
+    "background.tasks",
+    "notifications.post"
+  ]
+}

@@ -1,0 +1,2 @@
+PASS 360 780 touch grab, no snap, drag tracking and release
+PASS 640 360 touch grab, no snap, drag tracking and release

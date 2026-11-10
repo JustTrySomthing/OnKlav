@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.SdkLifecycleTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-23T02:34:10" hostname="276516236850" time="0.222">
+  <properties/>
+  <testcase name="messagesAndReaderShareVoicePreferencesAndOneCurrentReader" classname="app.onklav.home.SdkLifecycleTest" time="0.13"/>
+  <testcase name="audioOwnerInterruptsOnlyThePreviousOwnerAndOldReleaseCannotStopNewAudio" classname="app.onklav.home.SdkLifecycleTest" time="0.06"/>
+  <testcase name="deletedNativeProfileIsImmediatelyIsolatedAndOnlyItsOldProfileIsPurged" classname="app.onklav.home.SdkLifecycleTest" time="0.032"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

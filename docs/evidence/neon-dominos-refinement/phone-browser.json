@@ -1,0 +1,36 @@
+[
+  {
+    "viewport": [
+      320,
+      640
+    ],
+    "no_hand_scrolling_all21_visible": true,
+    "one_tap_opening": true,
+    "distinct_end_choice": true,
+    "real_drag_drop_and_cancel": true,
+    "new_draw_highlight_and_face_feedback": true,
+    "readable_long_chain": true,
+    "sound_pause_and_prior_pause_intent": true,
+    "exact_saved_resume": true,
+    "reduced_motion": true,
+    "round_match_results": true,
+    "errors": []
+  },
+  {
+    "viewport": [
+      432,
+      800
+    ],
+    "no_hand_scrolling_all21_visible": true,
+    "one_tap_opening": true,
+    "distinct_end_choice": true,
+    "real_drag_drop_and_cancel": true,
+    "new_draw_highlight_and_face_feedback": true,
+    "readable_long_chain": true,
+    "sound_pause_and_prior_pause_intent": true,
+    "exact_saved_resume": true,
+    "reduced_motion": true,
+    "round_match_results": true,
+    "errors": []
+  }
+]

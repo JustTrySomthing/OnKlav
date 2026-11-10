@@ -1,0 +1,86 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.11.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :ui
+WARNING: The option setting 'android.aapt2FromMavenOverride=/tmp/onklav-video-env/sdk/build-tools/35.0.0/aapt2' is experimental.
+WARNING: platform-tools package is not installed.
+
+> Task :ui:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :ui:preBuild UP-TO-DATE
+> Task :ui:preDebugBuild UP-TO-DATE
+> Task :ui:checkDebugAarMetadata UP-TO-DATE
+> Task :ui:generateDebugResValues UP-TO-DATE
+> Task :ui:mapDebugSourceSetPaths UP-TO-DATE
+> Task :ui:generateDebugResources UP-TO-DATE
+> Task :ui:mergeDebugResources UP-TO-DATE
+> Task :ui:packageDebugResources UP-TO-DATE
+> Task :ui:parseDebugLocalResources UP-TO-DATE
+> Task :ui:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :ui:extractDeepLinksDebug UP-TO-DATE
+> Task :ui:processDebugMainManifest UP-TO-DATE
+> Task :ui:processDebugManifest UP-TO-DATE
+> Task :ui:processDebugManifestForPackage UP-TO-DATE
+> Task :ui:processDebugResources UP-TO-DATE
+> Task :ui:javaPreCompileDebug
+> Task :ui:preDebugUnitTestBuild UP-TO-DATE
+> Task :ui:javaPreCompileDebugUnitTest
+> Task :ui:mergeDebugShaders
+> Task :ui:compileDebugShaders NO-SOURCE
+> Task :ui:generateDebugAssets UP-TO-DATE
+> Task :ui:mergeDebugAssets
+> Task :ui:packageDebugUnitTestForUnitTest
+> Task :ui:generateDebugUnitTestConfig
+
+> Task :ui:compileDebugKotlin
+w: file:///tmp/video-ui-harness/ui/src/main/kotlin/app/onklav/shared/OnKlavFileContracts.kt:17:29 The corresponding parameter in the supertype 'OpenDocument' is named 'context'. This may cause problems when calling this function with named arguments.
+w: file:///tmp/video-ui-harness/ui/src/main/kotlin/app/onklav/shared/OnKlavFileContracts.kt:18:28 The corresponding parameter in the supertype 'OpenDocument' is named 'resultCode'. This may cause problems when calling this function with named arguments.
+w: file:///tmp/video-ui-harness/ui/src/main/kotlin/app/onklav/shared/OnKlavFileContracts.kt:18:37 The corresponding parameter in the supertype 'OpenDocument' is named 'intent'. This may cause problems when calling this function with named arguments.
+w: file:///tmp/video-ui-harness/ui/src/main/kotlin/app/onklav/shared/OnKlavFileContracts.kt:21:29 The corresponding parameter in the supertype 'OpenMultipleDocuments' is named 'context'. This may cause problems when calling this function with named arguments.
+w: file:///tmp/video-ui-harness/ui/src/main/kotlin/app/onklav/shared/OnKlavFileContracts.kt:22:28 The corresponding parameter in the supertype 'OpenMultipleDocuments' is named 'resultCode'. This may cause problems when calling this function with named arguments.
+w: file:///tmp/video-ui-harness/ui/src/main/kotlin/app/onklav/shared/OnKlavFileContracts.kt:22:37 The corresponding parameter in the supertype 'OpenMultipleDocuments' is named 'intent'. This may cause problems when calling this function with named arguments.
+w: file:///tmp/video-ui-harness/ui/src/main/kotlin/app/onklav/shared/OnKlavFileContracts.kt:25:29 The corresponding parameter in the supertype 'CreateDocument' is named 'context'. This may cause problems when calling this function with named arguments.
+w: file:///tmp/video-ui-harness/ui/src/main/kotlin/app/onklav/shared/OnKlavFileContracts.kt:26:28 The corresponding parameter in the supertype 'CreateDocument' is named 'resultCode'. This may cause problems when calling this function with named arguments.
+w: file:///tmp/video-ui-harness/ui/src/main/kotlin/app/onklav/shared/OnKlavFileContracts.kt:26:37 The corresponding parameter in the supertype 'CreateDocument' is named 'intent'. This may cause problems when calling this function with named arguments.
+w: file:///tmp/video-ui-harness/ui/src/main/kotlin/app/onklav/shared/OnKlavFileContracts.kt:29:29 The corresponding parameter in the supertype 'OpenDocumentTree' is named 'context'. This may cause problems when calling this function with named arguments.
+w: file:///tmp/video-ui-harness/ui/src/main/kotlin/app/onklav/shared/OnKlavFileContracts.kt:30:28 The corresponding parameter in the supertype 'OpenDocumentTree' is named 'resultCode'. This may cause problems when calling this function with named arguments.
+w: file:///tmp/video-ui-harness/ui/src/main/kotlin/app/onklav/shared/OnKlavFileContracts.kt:30:37 The corresponding parameter in the supertype 'OpenDocumentTree' is named 'intent'. This may cause problems when calling this function with named arguments.
+
+> Task :ui:compileDebugJavaWithJavac NO-SOURCE
+> Task :ui:bundleDebugClassesToRuntimeJar
+> Task :ui:bundleDebugClassesToCompileJar
+> Task :ui:processDebugJavaRes
+> Task :ui:compileDebugUnitTestKotlin
+> Task :ui:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :ui:processDebugUnitTestJavaRes
+> Task :ui:testDebugUnitTest
+
+VideoMobileLayoutTest > landscapeKeepsPreviewTimelineAndToolsSeparate FAILED
+    java.lang.InterruptedException
+        at kotlinx.coroutines.BlockingCoroutine.joinBlocking(Builders.kt:98)
+        at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking(Builders.kt:70)
+        at kotlinx.coroutines.BuildersKt.runBlocking(Unknown Source)
+        at kotlinx.coroutines.BuildersKt__BuildersKt.runBlocking$default(Builders.kt:48)
+        at kotlinx.coroutines.BuildersKt.runBlocking$default(Unknown Source)
+        at kotlinx.coroutines.test.TestBuildersJvmKt.createTestResult(TestBuildersJvm.kt:10)
+        at kotlinx.coroutines.test.TestBuildersKt__TestBuildersKt.runTest-8Mi8wO0(TestBuilders.kt:309)
+        at kotlinx.coroutines.test.TestBuildersKt.runTest-8Mi8wO0(Unknown Source)
+        at kotlinx.coroutines.test.TestBuildersKt__TestBuildersKt.runTest-8Mi8wO0$default(TestBuilders.kt:304)
+        at kotlinx.coroutines.test.TestBuildersKt.runTest-8Mi8wO0$default(Unknown Source)
+        at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.withTestCoroutines(ComposeUiTest.android.kt:430)
+        at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.access$withTestCoroutines(ComposeUiTest.android.kt:235)
+        at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1.invoke(ComposeUiTest.android.kt:367)
+        at androidx.compose.ui.test.IdlingStrategy.withStrategy(IdlingStrategy.android.kt:55)
+        at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1.invoke(ComposeUiTest.android.kt:366)
+        at androidx.compose.ui.test.IdlingResourceRegistry.withRegistry(IdlingResourceRegistry.jvm.kt:148)
+        at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1.invoke(ComposeUiTest.android.kt:365)
+        at androidx.compose.ui.test.ComposeRootRegistry.withRegistry(ComposeRootRegistry.android.kt:139)
+        at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.runTest(ComposeUiTest.android.kt:364)
+        at androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1.evaluate(AndroidComposeTestRule.android.kt:295)
+        at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+        at org.robolectric.RobolectricTestRunner$HelperTestRunner$1.evaluate(RobolectricTestRunner.java:502)
+        at org.robolectric.internal.SandboxTestRunner$2.lambda$evaluate$2(SandboxTestRunner.java:285)
+        at org.robolectric.internal.bytecode.Sandbox.lambda$runOnMainThread$0(Sandbox.java:104)
+        at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+        at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+        at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+        at java.base/java.lang.Thread.run(Thread.java:840)

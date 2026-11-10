@@ -1,0 +1,127 @@
+{
+  "scope": "Animated purple default Games loader for all bundled games and the Game SDK",
+  "source_host": "0.100.56-rc1/code165",
+  "latest_built_apk": "0.100.55-rc1/code164 predates this source",
+  "apk_built": false,
+  "loader_browser": {
+    "visual_cases": [
+      {
+        "viewport": [
+          320,
+          640
+        ],
+        "real_progress_percent": true,
+        "forward_overshoot_settle": true,
+        "legible_final_logo_word_bar": true,
+        "actual_sound_signal": true,
+        "slow_load_waits_for_engine": true
+      },
+      {
+        "viewport": [
+          432,
+          800
+        ],
+        "real_progress_percent": true,
+        "forward_overshoot_settle": true,
+        "legible_final_logo_word_bar": true,
+        "actual_sound_signal": true,
+        "slow_load_waits_for_engine": true
+      },
+      {
+        "viewport": [
+          740,
+          360
+        ],
+        "real_progress_percent": true,
+        "forward_overshoot_settle": true,
+        "legible_final_logo_word_bar": true,
+        "actual_sound_signal": true,
+        "slow_load_waits_for_engine": true
+      }
+    ],
+    "muted_and_zero_volume_silent": true,
+    "system_and_cached_reduced_motion": true,
+    "no_fake_completion_on_error": true,
+    "studio_brand_opt_out": true,
+    "browser_autoplay_cue_measured": true
+  },
+  "real_games": {
+    "games": [
+      {
+        "game": "dominos",
+        "actual_shared_export_started": true,
+        "loader_released_canvas": true,
+        "preferences_cache_written": true
+      },
+      {
+        "game": "hockey",
+        "actual_shared_export_started": true,
+        "loader_released_canvas": true,
+        "preferences_cache_written": true
+      },
+      {
+        "game": "panda",
+        "actual_shared_export_started": true,
+        "loader_released_canvas": true,
+        "preferences_cache_written": true
+      },
+      {
+        "game": "naval",
+        "actual_shared_export_started": true,
+        "loader_released_canvas": true,
+        "preferences_cache_written": true
+      },
+      {
+        "game": "four",
+        "actual_shared_export_started": true,
+        "loader_released_canvas": true,
+        "preferences_cache_written": true
+      },
+      {
+        "game": "blackjack",
+        "actual_shared_export_started": true,
+        "loader_released_canvas": true,
+        "preferences_cache_written": true
+      }
+    ],
+    "cached_mute_suppresses_early_cue": true,
+    "errors": []
+  },
+  "sdk_export": {
+    "default_export_new_loader": true,
+    "custom_png_export_preserves_image_and_color": true,
+    "custom_meta_only_for_studio": true,
+    "shared_binary_contract_verified_by_gamekit": true
+  },
+  "shared_engine_comparison": {
+    "only_changed_member": [
+      "godot.html"
+    ],
+    "shared_engine_binary_bytes_unchanged": true
+  },
+  "sdk_unit_methods": 14,
+  "game_checks": {
+    "rules_checks": 12,
+    "session_checks": 30,
+    "hockey_checks": 95,
+    "naval_turn_checks": 247,
+    "cats_dogs_checks": 365,
+    "blackjack_checks": 179,
+    "panda_checks": 2102,
+    "dominos_checks": 4628,
+    "dominos_layout_checks": 60324
+  },
+  "game_export_source_current": true,
+  "native_and_save_protocol_unchanged": true,
+  "template_theme_idempotent": true,
+  "screenshots_inspected_locally_not_packaged": true,
+  "physical_phone_autoplay_listening_and_performance_qualification": false,
+  "source_sha256": {
+    "developer/games/loading.py": "10dee4b24e394cdcd64b8cd84fa84caa1fdce6e3c86ac24d9c5936c6baa349f4",
+    "developer/games/templates/shared/loading.css": "03ad20b866ea3cb2a9c6fd51cefc60d0a24acbdbf6b6e2dda9b6271a74c807b9",
+    "developer/games/templates/shared/loading.js": "e11bbd694e604942116a5d66ad562c08e2dc744d5cb0f847f016360cd230272f",
+    "developer/games/templates/shared/loading.html": "fc1beb20377ea20ff29e52addb9f11046f3ee7e6b753704f182149e9891613a8",
+    "developer/games/templates/shared/loading-logo.svg": "cb065bab9f312b6cf414c97e935763cab2ca428ee19d7dde6a37d2a9c0f60b33",
+    "games/engine-checks/game_chrome.gd": "782155bb11a5449e636d8beb875167b26c01b772c3546f9b7dbff79ba7ad1fde"
+  }
+}

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.VideoRefinementsTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2026-10-30T16:44:08" hostname="e89dc6ba27f3" time="2.578">
+  <properties/>
+  <testcase name="realMp3ImportsNormalizeToProbeablePcmWithoutChangingTheSource" classname="app.onklav.home.VideoRefinementsTest" time="2.144"/>
+  <testcase name="corruptedProjectReopensThePreviousDurableRevision" classname="app.onklav.home.VideoRefinementsTest" time="0.076"/>
+  <testcase name="frameSteppingDoesNotAccumulateRoundingError" classname="app.onklav.home.VideoRefinementsTest" time="0.049"/>
+  <testcase name="m4aProbeFallsBackWhenExtractorDurationIsZero" classname="app.onklav.home.VideoRefinementsTest" time="0.047"/>
+  <testcase name="missingMediaKeepsTheProjectVisibleAndItsEditsIntact" classname="app.onklav.home.VideoRefinementsTest" time="0.033"/>
+  <testcase name="snappingFindsOverlapsTitlesLayersAudioAndBeatsWithinTolerance" classname="app.onklav.home.VideoRefinementsTest" time="0.027"/>
+  <testcase name="exactPositionsRejectInvalidAndOutOfRangeInput" classname="app.onklav.home.VideoRefinementsTest" time="0.028"/>
+  <testcase name="mixedAudioUsesOriginalSourceTrimSpeedAndTimelineOffset" classname="app.onklav.home.VideoRefinementsTest" time="0.075"/>
+  <testcase name="wavProbeUsesPcmSamplesAndRejectsTruncation" classname="app.onklav.home.VideoRefinementsTest" time="0.03"/>
+  <testcase name="failedSaveNeverRedirectsTheCurrentProjectPointer" classname="app.onklav.home.VideoRefinementsTest" time="0.033"/>
+  <testcase name="proxyCacheInvalidatesWhenOriginalChangesAndNeverReplacesExport" classname="app.onklav.home.VideoRefinementsTest" time="0.033"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

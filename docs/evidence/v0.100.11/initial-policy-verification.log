@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/d853f89e99b7/onklav/OnKlav/scripts/verify_apks.py", line 95, in <module>
+    assert not re.search(r"android:(?:allowBackup|usesCleartextTraffic)[^\n]*0xffffffff",manifest), "Private-data/cleartext policy changed"
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Private-data/cleartext policy changed

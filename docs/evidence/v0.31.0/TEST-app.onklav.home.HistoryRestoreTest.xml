@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.HistoryRestoreTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-10-22T21:43:33" hostname="2383b52a5fc7" time="0.406">
+  <properties/>
+  <testcase name="cancellationDuringChildrenRollsBackButCleanupFailureBlocksContinuation" classname="app.onklav.home.HistoryRestoreTest" time="0.051"/>
+  <testcase name="lostInsertAcknowledgementNeverRetriesOrGuessesWhichRowToDelete" classname="app.onklav.home.HistoryRestoreTest" time="0.046"/>
+  <testcase name="unsafeInputsAndClosedProductionGateHaveNoInsertEffects" classname="app.onklav.home.HistoryRestoreTest" time="0.024"/>
+  <testcase name="permissionLossRetainsReceiptUntilExplicitCleanup" classname="app.onklav.home.HistoryRestoreTest" time="0.036"/>
+  <testcase name="changedOwnershipOrFailedReadbackCannotCommit" classname="app.onklav.home.HistoryRestoreTest" time="0.036"/>
+  <testcase name="processInterruptionAfterParentReceiptCanBeCleanedAfterRestart" classname="app.onklav.home.HistoryRestoreTest" time="0.052"/>
+  <testcase name="successfulMessagesRetainActualIdsAcrossRecoveryAndBlockReplay" classname="app.onklav.home.HistoryRestoreTest" time="0.066"/>
+  <testcase name="incompleteMmsDeletesOnlyNewParentAndChildren" classname="app.onklav.home.HistoryRestoreTest" time="0.062"/>
+  <testcase name="processInterruptionBeforeReceiptStaysUncertain" classname="app.onklav.home.HistoryRestoreTest" time="0.027"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,4 @@
+<resources>
+    <string name="power_accessibility_label">OnKlav Power</string>
+    <string name="power_accessibility_description">Open the phone’s power menu without holding a physical button. OnKlav Power only opens this menu when you tap Power. It does not read your screen or perform gestures.</string>
+</resources>

@@ -1,0 +1,150 @@
+{
+  "unique_passed": 24,
+  "failed": 0,
+  "cases": [
+    {
+      "class": "app.onklav.home.ChromeLayoutHostTest",
+      "name": "headersAndBottomBarReachBothEdgesAcrossEveryHomeTab",
+      "passed": true,
+      "evidence": "docs/evidence/v0.68.0/initial-app/TEST-app.onklav.home.ChromeLayoutHostTest.xml"
+    },
+    {
+      "class": "app.onklav.home.ChromeLayoutHostTest",
+      "name": "sharedPopupGrowsSubtlyAtCenterWithoutSidewaysTravel",
+      "passed": true,
+      "evidence": "docs/evidence/v0.68.0/final-app/TEST-app.onklav.home.ChromeLayoutHostTest.xml"
+    },
+    {
+      "class": "app.onklav.home.UiPolishHostTest",
+      "name": "messageLongPressUsesReadUnreadDraftAndSaveCancel",
+      "passed": true,
+      "evidence": "docs/evidence/v0.68.0/final-app/TEST-app.onklav.home.UiPolishHostTest.xml"
+    },
+    {
+      "class": "app.onklav.home.UiPolishHostTest",
+      "name": "contactsGroupLettersShowNoNumberAndChooseMessageOrWalkieRecipient",
+      "passed": true,
+      "evidence": "docs/evidence/v0.68.0/initial-app/TEST-app.onklav.home.UiPolishHostTest.xml"
+    },
+    {
+      "class": "app.onklav.home.UiPolishHostTest",
+      "name": "contactsUnavailableCanRetryAndSearchHasAnExplicitEmptyResult",
+      "passed": true,
+      "evidence": "docs/evidence/v0.68.0/initial-app/TEST-app.onklav.home.UiPolishHostTest.xml"
+    },
+    {
+      "class": "app.onklav.home.UiPolishHostTest",
+      "name": "keypadAddsDigitsFormatsAndBackspacesWithoutChangingDialableTarget",
+      "passed": true,
+      "evidence": "docs/evidence/v0.68.0/initial-app/TEST-app.onklav.home.UiPolishHostTest.xml"
+    },
+    {
+      "class": "app.onklav.home.UiPolishHostTest",
+      "name": "pageSlidesFromRightAndRetainsContentUntilExitCompletes",
+      "passed": true,
+      "evidence": "docs/evidence/v0.68.0/initial-app/TEST-app.onklav.home.UiPolishHostTest.xml"
+    },
+    {
+      "class": "app.onklav.home.UiPolishHostTest",
+      "name": "mailboxTabsSelectAndExposeBothTrashActions",
+      "passed": true,
+      "evidence": "docs/evidence/v0.68.0/initial-app/TEST-app.onklav.home.UiPolishHostTest.xml"
+    },
+    {
+      "class": "app.onklav.home.UiPolishHostTest",
+      "name": "contactsRefreshAfterEditorReturnAndHideRevokedContacts",
+      "passed": true,
+      "evidence": "docs/evidence/v0.68.0/initial-app/TEST-app.onklav.home.UiPolishHostTest.xml"
+    },
+    {
+      "class": "app.onklav.home.UiPolishHostTest",
+      "name": "messageFoldersFilterProviderRowsAndRestoreAllUpdatesRustState",
+      "passed": true,
+      "evidence": "docs/evidence/v0.68.0/initial-app/TEST-app.onklav.home.UiPolishHostTest.xml"
+    },
+    {
+      "class": "app.onklav.home.WalkieSdkHostTest",
+      "name": "walkieSettingsOfflineDialAndRecipientStorageUseSignedSdk",
+      "passed": true,
+      "evidence": "docs/evidence/v0.68.0/initial-app/TEST-app.onklav.home.WalkieSdkHostTest.xml"
+    },
+    {
+      "class": "app.onklav.home.WalkiePresentationTest",
+      "name": "selectedRecipientShowsCompactDialAndOfflineRecordingIsStillAvailable",
+      "passed": true,
+      "evidence": "docs/evidence/v0.68.0/initial-app/TEST-app.onklav.home.WalkiePresentationTest.xml"
+    },
+    {
+      "class": "app.onklav.shared.NativeBridgeTest",
+      "name": "oversizedDocumentReturnsFailureAcrossJni",
+      "passed": true,
+      "evidence": "docs/evidence/v0.68.0/initial-shared/TEST-app.onklav.shared.NativeBridgeTest.xml"
+    },
+    {
+      "class": "app.onklav.shared.NativeBridgeTest",
+      "name": "kotlinCallsRealRustAndReloadsUnicodeDocument",
+      "passed": true,
+      "evidence": "docs/evidence/v0.68.0/initial-shared/TEST-app.onklav.shared.NativeBridgeTest.xml"
+    },
+    {
+      "class": "app.onklav.shared.NativeBridgeTest",
+      "name": "walkieRulesCrossJniWithoutAnyTransport",
+      "passed": true,
+      "evidence": "docs/evidence/v0.68.0/initial-shared/TEST-app.onklav.shared.NativeBridgeTest.xml"
+    },
+    {
+      "class": "app.onklav.shared.ThemePackageTest",
+      "name": "rejectsInvalidUtf8AndCompressedExpansion",
+      "passed": true,
+      "evidence": "docs/evidence/v0.68.0/initial-shared/TEST-app.onklav.shared.ThemePackageTest.xml"
+    },
+    {
+      "class": "app.onklav.shared.ThemePackageTest",
+      "name": "unicodeAndAllPresetsRoundTripWithoutExecutablePayload",
+      "passed": true,
+      "evidence": "docs/evidence/v0.68.0/initial-shared/TEST-app.onklav.shared.ThemePackageTest.xml"
+    },
+    {
+      "class": "app.onklav.shared.ThemePackageTest",
+      "name": "rejectsPathsUnknownFieldsDuplicateFieldsAndInvalidValues",
+      "passed": true,
+      "evidence": "docs/evidence/v0.68.0/initial-shared/TEST-app.onklav.shared.ThemePackageTest.xml"
+    },
+    {
+      "class": "app.onklav.shared.ThemePackageTest",
+      "name": "customImageIsEmbeddedAndPrivatePathCannotBeExported",
+      "passed": true,
+      "evidence": "docs/evidence/v0.68.0/initial-shared/TEST-app.onklav.shared.ThemePackageTest.xml"
+    },
+    {
+      "class": "app.onklav.shared.LauncherLayoutTest",
+      "name": "hitTestingIncludesLastRowAndScrollOffset",
+      "passed": true,
+      "evidence": "docs/evidence/v0.68.0/initial-shared/TEST-app.onklav.shared.LauncherLayoutTest.xml"
+    },
+    {
+      "class": "app.onklav.shared.LauncherLayoutTest",
+      "name": "sparseBottomRowAndNewPageSurviveReload",
+      "passed": true,
+      "evidence": "docs/evidence/v0.68.0/initial-shared/TEST-app.onklav.shared.LauncherLayoutTest.xml"
+    },
+    {
+      "class": "app.onklav.shared.LauncherLayoutTest",
+      "name": "occupiedDropReordersWithoutLosingHolesOrIds",
+      "passed": true,
+      "evidence": "docs/evidence/v0.68.0/initial-shared/TEST-app.onklav.shared.LauncherLayoutTest.xml"
+    },
+    {
+      "class": "app.onklav.shared.LauncherLayoutTest",
+      "name": "catalogReconciliationRejectsUnknownAndDuplicateIds",
+      "passed": true,
+      "evidence": "docs/evidence/v0.68.0/initial-shared/TEST-app.onklav.shared.LauncherLayoutTest.xml"
+    },
+    {
+      "class": "app.onklav.shared.LauncherLayoutTest",
+      "name": "cancelSnapshotAndEmptyTrailingPageAreSafe",
+      "passed": true,
+      "evidence": "docs/evidence/v0.68.0/initial-shared/TEST-app.onklav.shared.LauncherLayoutTest.xml"
+    }
+  ]
+}

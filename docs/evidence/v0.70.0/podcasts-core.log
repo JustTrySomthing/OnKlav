@@ -1,0 +1,10 @@
+   Compiling onklav-core v0.8.0 (/workspace/scratch/75acf774e3b8/work/OnKlav/core)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 5.97s
+     Running unittests src/lib.rs (core/target/debug/deps/onklav_core-8a579202944a8eae)
+
+running 2 tests
+test sdk_podcasts::tests::podcasts_extract_audio_without_description_markup ... ok
+test sdk_podcasts::tests::podcasts_reject_unsafe_ambiguous_and_oversized_sources ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 254 filtered out; finished in 0.00s
+

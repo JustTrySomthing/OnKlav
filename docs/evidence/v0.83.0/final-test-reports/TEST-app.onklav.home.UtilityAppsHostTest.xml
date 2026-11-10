@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.UtilityAppsHostTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-26T20:03:37" hostname="844ebfe47829" time="8.735">
+  <properties/>
+  <testcase name="calculatorKeypadCopyAndHistory" classname="app.onklav.home.UtilityAppsHostTest" time="8.735"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

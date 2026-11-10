@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.CloudExportRepairTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-11-02T16:50:01" hostname="13575fdd974e" time="3.925">
+  <properties/>
+  <testcase name="failedSaveRetainsFullDownloadAndRetrySavesItWithoutDownloadingAgain" classname="app.onklav.home.CloudExportRepairTest" time="3.775"/>
+  <testcase name="choosingDownloadDoesNotStartTheTransferBeforeDestinationSelection" classname="app.onklav.home.CloudExportRepairTest" time="0.095"/>
+  <testcase name="streamLimitsRejectKnownAndUnknownLengthBodiesWithoutLeavingPartialFiles" classname="app.onklav.home.CloudExportRepairTest" time="0.055"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

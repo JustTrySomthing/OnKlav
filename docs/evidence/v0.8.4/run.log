@@ -1,0 +1,40 @@
+* daemon not running; starting now at tcp:5037
+* daemon started successfully
+Booting test Android 0
+Booting test Android 10
+Booting test Android 20
+Booting test Android 30
+Booting test Android 40
+Android booted; installing host and UI tests
+Performing Push Install
+Success
+
+Performing Push Install
+Success
+
+Testing sparse drag, edge paging, recreation, original controls and package manager routes
+INSTRUMENTATION_STATUS: class=app.onklav.home.DesktopChromeDeviceTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stream=
+app.onklav.home.DesktopChromeDeviceTest:
+INSTRUMENTATION_STATUS: test=sparseLauncherChromeAndPackageManagement
+INSTRUMENTATION_STATUS_CODE: 1
+INSTRUMENTATION_STATUS: class=app.onklav.home.DesktopChromeDeviceTest
+INSTRUMENTATION_STATUS: current=1
+INSTRUMENTATION_STATUS: id=AndroidJUnitRunner
+INSTRUMENTATION_STATUS: numtests=1
+INSTRUMENTATION_STATUS: stream=.
+INSTRUMENTATION_STATUS: test=sparseLauncherChromeAndPackageManagement
+INSTRUMENTATION_STATUS_CODE: 0
+INSTRUMENTATION_RESULT: stream=
+
+Time: 82.427
+
+OK (1 test)
+
+
+INSTRUMENTATION_CODE: -1
+
+Capturing the reference Apps, Games and Settings screens

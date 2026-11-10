@@ -1,0 +1,40 @@
+{
+  "defined_editor_classes": [
+    "VideoLut",
+    "VideoTransitionEffect",
+    "VideoNoise",
+    "VideoBeatDetector",
+    "VideoProxyKt",
+    "VideoProjectArchive",
+    "VideoProWorkspaceKt",
+    "VideoEditorModel",
+    "PhotoEffects"
+  ],
+  "control_markers": [
+    "Create 360p proxy for this source",
+    "Import .cube color look",
+    "Custom easing curve",
+    "Noise cleanup",
+    "Transition length",
+    "Detect beat markers"
+  ],
+  "video_shell": {
+    "capabilities": [
+      "storage.private",
+      "audio.playback",
+      "audio.record"
+    ],
+    "icon": {
+      "symbol": "edit"
+    },
+    "id": "app.onklav.videoeditor",
+    "min_host": 95,
+    "name": "Video Editor",
+    "publisher": "4dabb2d88e13dfc4e5f3410abf85819aa92a528cb945f869fcf3033d95f82fad",
+    "runtime": "rust-wasm-ui.v1",
+    "schema": "onklav.app.v1",
+    "version": 4
+  },
+  "packaged_sdk_and_native": "verified by scripts/verify_apks.py",
+  "apk_sha256": "ad19ab6c1b6f0aad0015a2a448be89baa7844c4265f24acc6727dc601f66c9ee"
+}

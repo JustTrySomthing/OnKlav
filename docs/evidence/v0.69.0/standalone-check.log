@@ -1,0 +1,60 @@
+{
+  "ready": true,
+  "rust": "rustc 1.90.0 (1159e78c4 2025-09-14)",
+  "python": "3.12.14",
+  "target": "wasm32-unknown-unknown",
+  "note": "First build downloads Cargo dependencies and needs a native linker. Android UI/media still require a phone."
+}
+{
+  "project": "/workspace/scratch/ed752e8a1957/standalone-document",
+  "id": "org.example.standalone",
+  "template": "document",
+  "next": "build, inspect, test, then install inside OnKlav"
+}
+Publisher key created. Keep it private and backed up.
+{
+  "key_created": "/workspace/scratch/ed752e8a1957/standalone-private/author.key",
+  "note": "Keep private; reuse this key for updates."
+}
+   Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/workspace/scratch/ed752e8a1957/standalone-sdk/sdk/rust)
+   Compiling onklav-ui v0.3.0 (/workspace/scratch/ed752e8a1957/standalone-sdk/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/workspace/scratch/ed752e8a1957/standalone-document)
+    Finished `release` profile [optimized] target(s) in 3.50s
+Created /workspace/scratch/ed752e8a1957/standalone-document/dist/org.example.standalone-v1.onklav-a
+     Removed 332 files, 449.2MiB total
+{
+  "package": "/workspace/scratch/ed752e8a1957/standalone-document/dist/org.example.standalone-v1.onklav-a",
+  "review": {
+    "hash": "2f2b7f1decb53b2ae86428d65a727f26cf0446d7b4473465bc5100ec0979201e",
+    "manifest": {
+      "capabilities": [
+        "storage.private"
+      ],
+      "id": "org.example.standalone",
+      "name": "Standalone App",
+      "publisher": "a54548815648c1c922f01ee270cec8b08255d562112c04030f633cd4578f1e9c",
+      "runtime": "rust-wasm-ui.v1",
+      "schema": "onklav.app.v1",
+      "version": 1
+    },
+    "publisher_fingerprint": "a902f827d4057b75618d318fc5f0e901168c7e4f99c31e9501ff19a5fc032930",
+    "signature_verified": true,
+    "update": false
+  }
+}
+{
+  "signature_verified": true,
+  "launch_without_grants": "passed",
+  "reference_host": "0.69.0-rc1/code77",
+  "phone_acceptance_required": true
+}
+{
+  "passed": 4,
+  "runtime": "production Rust app broker",
+  "android_ui_tested": false
+}

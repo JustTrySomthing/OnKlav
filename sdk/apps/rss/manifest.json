@@ -1,0 +1,14 @@
+{
+  "schema": "onklav.app.v1",
+  "runtime": "rust-wasm-ui.v1",
+  "id": "app.onklav.rss",
+  "name": "RSS Reader",
+  "version": 42,
+  "capabilities": [
+    "storage.private",
+    "network.feeds",
+    "network.web",
+    "share.text",
+    "clipboard.write"
+  ]
+}

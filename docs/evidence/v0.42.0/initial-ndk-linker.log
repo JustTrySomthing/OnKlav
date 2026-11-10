@@ -1,0 +1,90 @@
+   Compiling proc-macro2 v1.0.107
+   Compiling quote v1.0.47
+   Compiling unicode-ident v1.0.27
+   Compiling version_check v0.9.5
+   Compiling generic-array v0.14.7
+   Compiling libc v0.2.191
+   Compiling wasm-encoder v0.240.0
+   Compiling syn v2.0.119
+   Compiling crc32fast v1.5.3
+   Compiling cfg-if v1.0.5
+   Compiling libm v0.2.16
+   Compiling serde_core v1.0.229
+   Compiling semver v1.0.28
+   Compiling rustc_version v0.4.1
+   Compiling curve25519-dalek v4.1.3
+   Compiling getrandom v0.4.3
+   Compiling typenum v1.20.1
+   Compiling zmij v1.0.23
+   Compiling jni-sys v0.3.1
+   Compiling memchr v2.8.3
+   Compiling jni-sys-macros v0.4.1
+   Compiling wasmparser v0.228.0
+   Compiling thiserror v1.0.69
+   Compiling thiserror-impl v1.0.69
+   Compiling serde_json v1.0.154
+   Compiling serde v1.0.229
+   Compiling zip v2.6.1
+   Compiling getrandom v0.3.4
+   Compiling bumpalo v3.20.3
+   Compiling block-buffer v0.10.4
+   Compiling crypto-common v0.1.7
+   Compiling syn v3.0.9
+   Compiling leb128fmt v0.1.0
+   Compiling simd-adler32 v0.3.10
+   Compiling serde_derive v1.0.229
+   Compiling digest v0.10.7
+   Compiling unicode-width v0.2.2
+   Compiling log v0.4.34
+   Compiling downcast-rs v2.0.2
+   Compiling adler2 v2.0.1
+   Compiling cpufeatures v0.2.17
+   Compiling miniz_oxide v0.9.1
+   Compiling wast v240.0.0
+   Compiling wasmi_core v0.46.0
+   Compiling jni-sys v0.4.1
+   Compiling curve25519-dalek-derive v0.1.1
+   Compiling subtle v2.6.1
+   Compiling signature v2.2.0
+   Compiling zeroize v1.9.1
+   Compiling hashbrown v0.17.1
+   Compiling equivalent v1.0.3
+   Compiling bytes v1.12.1
+   Compiling bitflags v2.13.2
+   Compiling combine v4.6.9
+   Compiling indexmap v2.14.2
+   Compiling ed25519 v2.2.3
+   Compiling sha2 v0.10.9
+   Compiling wat v1.240.0
+   Compiling wasmi_ir v0.46.0
+   Compiling flate2 v1.1.10
+   Compiling zopfli v0.8.4
+   Compiling cesu8 v1.1.0
+   Compiling itoa v1.0.18
+   Compiling smallvec v1.16.3
+   Compiling wasmi_collections v0.46.0
+   Compiling multi-stash v0.2.0
+   Compiling spin v0.9.9
+   Compiling arrayvec v0.7.8
+   Compiling wasmi v0.46.0
+   Compiling jni v0.21.1
+   Compiling ed25519-dalek v2.2.0
+   Compiling uuid v1.28.0
+   Compiling onklav-core v0.8.0 (/workspace/scratch/39f240a7e5bd/project/OnKlav/core)
+error: linking with `/workspace/scratch/39f240a7e5bd/restored-env/sdk/ndk/27.2.12479018/toolchains/llvm/prebuilt/linux-x86_64/bin/x86_64-linux-android29-clang` failed: exit status: 127
+  |
+  = note:  "/workspace/scratch/39f240a7e5bd/restored-env/sdk/ndk/27.2.12479018/toolchains/llvm/prebuilt/linux-x86_64/bin/x86_64-linux-android29-clang" "-Wl,--version-script=/workspace/scratch/39f240a7e5bd/project/OnKlav/core/target/x86_64-linux-android/release/deps/rustcxXhhlq/list" "-Wl,--no-undefined-version" "-m64" "/workspace/scratch/39f240a7e5bd/project/OnKlav/core/target/x86_64-linux-android/release/deps/rustcxXhhlq/symbols.o" "<2 object files omitted>" "-Wl,--as-needed" "-Wl,-Bstatic" "/workspace/scratch/39f240a7e5bd/project/OnKlav/core/target/x86_64-linux-android/release/deps/{libuuid-b4a9872a40f1d70c,libgetrandom-565c28cacdf8d684,liblibc-261ac241ca349684,libjni-1b70b280e5d73fcc,libcesu8-89650d37e4bf61a7,libcombine-3da72a187da8a2ed,libbytes-96aed7011fb6ac2c,libthiserror-1b08b89fc4847c5a,libjni_sys-fb032662cb8c327d,libjni_sys-cc9abe82a64846a9,libzip-fa4baf95ec5541fd,libzopfli-4c0c0eabaafffee3,liblog-24d5bc392f5702ec,libflate2-7c62b359091aa1ba,libminiz_oxide-44bfa9e7e1c64dae,libsimd_adler32-8b9484a52a4c560d,libindexmap-0f10f10b2d10a237,libequivalent-ff71ddb5131d400d,libhashbrown-9986960ba1c2fc2e,libcrc32fast-4f3171fecf2b5ec9,libwasmi-e1d5808ceee0977f,libwasmi_ir-f7e58b2834d5d9f4,libwasmi_collections-9cf67338bbb95e79,libwasmi_core-c1850dd46017c3b5,libdowncast_rs-3f614270c8aaca2f,libwat-9dcbbb57954f9ae2,libwast-a17465c82fde114b,libwasm_encoder-c1e43296d74e42f0,libleb128fmt-88faf9020f686c1c,libunicode_width-d35aedd15bb05fe0,libbumpalo-9db05658250cef8e,libmulti_stash-f93e30653fa53027,libarrayvec-3349d63d50b6e4a2,libsmallvec-b5ee79576e98f5a7,libwasmparser-a7b178b55f1d6cb1,libbitflags-3d1a7b4e73b4fdc3,libspin-427dadaeddb08de2,libed25519_dalek-b84fcb69a9cbd3ea,libcurve25519_dalek-d647a1d9448ce39a,libzeroize-5c33192a97ebc9bf,libsubtle-d92294572f9617df,libed25519-61317b466d8fc611,libsignature-a00d07d45e52d0ad,libserde-578eeb1aae01d03a,libsha2-1776700ab8e88e89,libcpufeatures-226ba3aad18e8273,libcfg_if-e184e01e627b8571,libdigest-c8a90e1eceebcbc4,libblock_buffer-3b7f8efa586a7db9,libcrypto_common-2b44ac942d732466,libgeneric_array-b13598db9c4c443d,libtypenum-347df00cca68cd6a,libserde_json-b70b78213fdfe575,libmemchr-3e0e405b887436a9,libitoa-88667170c8428fc5,libzmij-628c0858e6b5b19f,libserde_core-3e609ebe1f50d9a0}.rlib" "<sysroot>/lib/rustlib/x86_64-linux-android/lib/{libstd-*,libpanic_unwind-*,libobject-*,libmemchr-*,libaddr2line-*,libgimli-*,libcfg_if-*,librustc_demangle-*,libstd_detect-*,libhashbrown-*,librustc_std_workspace_alloc-*,libminiz_oxide-*,libadler2-*,libunwind-*,liblibc-*,librustc_std_workspace_core-*,liballoc-*,libcore-*,libcompiler_builtins-*}.rlib" "-Wl,-Bdynamic" "-lc" "-lm" "-ldl" "-llog" "-lunwind" "-ldl" "-lm" "-lc" "-L" "/workspace/scratch/39f240a7e5bd/project/OnKlav/core/target/x86_64-linux-android/release/deps/rustcxXhhlq/raw-dylibs" "-Wl,--eh-frame-hdr" "-Wl,-z,noexecstack" "-o" "/workspace/scratch/39f240a7e5bd/project/OnKlav/core/target/x86_64-linux-android/release/deps/libonklav_core.so" "-Wl,--gc-sections" "-shared" "-Wl,-z,relro,-z,now" "-Wl,-O1" "-Wl,--strip-all" "-nodefaultlibs" "-Wl,-z,max-page-size=16384"
+  = note: some arguments are omitted. use `--verbose` to show all linker arguments
+  = note: /workspace/scratch/39f240a7e5bd/restored-env/sdk/ndk/27.2.12479018/toolchains/llvm/prebuilt/linux-x86_64/bin/clang: line 1: clang-18: command not found
+          
+
+error: could not compile `onklav-core` (lib) due to 1 previous error
+warning: build failed, waiting for other jobs to finish...
+error: linking with `/workspace/scratch/39f240a7e5bd/restored-env/sdk/ndk/27.2.12479018/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android29-clang` failed: exit status: 127
+  |
+  = note:  "/workspace/scratch/39f240a7e5bd/restored-env/sdk/ndk/27.2.12479018/toolchains/llvm/prebuilt/linux-x86_64/bin/aarch64-linux-android29-clang" "-Wl,--version-script=/workspace/scratch/39f240a7e5bd/project/OnKlav/core/target/aarch64-linux-android/release/deps/rustcO4tgpe/list" "-Wl,--no-undefined-version" "/workspace/scratch/39f240a7e5bd/project/OnKlav/core/target/aarch64-linux-android/release/deps/rustcO4tgpe/symbols.o" "<2 object files omitted>" "-Wl,--as-needed" "-Wl,-Bstatic" "/workspace/scratch/39f240a7e5bd/project/OnKlav/core/target/aarch64-linux-android/release/deps/{libuuid-334d3a1fad1a72f9,libgetrandom-5d12ef57ddd9524e,liblibc-d9eadf8a275b3b11,libjni-c88469a73ba9802b,libcesu8-4157c1f8efb0cc67,libcombine-ba0ed704002c2ba3,libbytes-3f940550824a52b8,libthiserror-6416c82499bcaad7,libjni_sys-75d5137861d1ba46,libjni_sys-4d84b08b2dd8f3f3,libzip-817adfdfe5466a6c,libzopfli-c9c1beb4bc3a9782,liblog-120721c3ebcc4652,libflate2-a9c88e3c81810953,libminiz_oxide-bef6fdce2bf56b6a,libsimd_adler32-22e29dca205ce836,libindexmap-7469b8321790fc00,libequivalent-7561407dfa49c4a4,libhashbrown-b3972f06808012ea,libcrc32fast-71748fcd0674b2ef,libwasmi-99f669e98e2db98f,libwasmi_ir-6d0a8cba16d370bc,libwasmi_collections-42971785a7eff974,libwasmi_core-fb40eec248023b4b,libdowncast_rs-7a65a8160129e2fd,libwat-dab411c8bde1e32f,libwast-ceba9f0cd02570cd,libwasm_encoder-8c563eb7030b6c4d,libleb128fmt-849a3f2d18712190,libunicode_width-79434a9ed998cd4b,libbumpalo-434d3989d781dd98,libmulti_stash-6b0c9c00e29e26c6,libarrayvec-9756a8e70d886eec,libsmallvec-46b3fdb516fd7671,libwasmparser-011eb0d169ef9b11,libbitflags-25337c1308775258,libspin-9cfb16f800a99cc8,libed25519_dalek-e63efefd1d423734,libcurve25519_dalek-8bb99bee83373e83,libzeroize-c16d19941adf4e2d,libsubtle-58e5c3e944c524d6,libed25519-f56600e361e4fc37,libsignature-7034795b8269d197,libserde-c92f7cf7b763e6bb,libsha2-1d23670e53a8f9ad,libcfg_if-48f6590e2987b2d7,libdigest-3887aab906ce1081,libblock_buffer-91c18e61c2310e93,libcrypto_common-3cba557062bf0766,libgeneric_array-eb96c333edac77fd,libtypenum-8ad14fb3fa508bbc,libserde_json-3911edee72c7c4f3,libmemchr-863b4bf1680d621f,libitoa-38c15eee05ce814f,libzmij-c62af0e28cd0f40b,libserde_core-1407356104282fe0}.rlib" "<sysroot>/lib/rustlib/aarch64-linux-android/lib/{libstd-*,libpanic_unwind-*,libobject-*,libmemchr-*,libaddr2line-*,libgimli-*,libcfg_if-*,librustc_demangle-*,libstd_detect-*,libhashbrown-*,librustc_std_workspace_alloc-*,libminiz_oxide-*,libadler2-*,libunwind-*,liblibc-*,librustc_std_workspace_core-*,liballoc-*,libcore-*,libcompiler_builtins-*}.rlib" "-Wl,-Bdynamic" "-lc" "-lm" "-ldl" "-llog" "-lunwind" "-ldl" "-lm" "-lc" "-L" "/workspace/scratch/39f240a7e5bd/project/OnKlav/core/target/aarch64-linux-android/release/deps/rustcO4tgpe/raw-dylibs" "-Wl,--eh-frame-hdr" "-Wl,-z,noexecstack" "-o" "/workspace/scratch/39f240a7e5bd/project/OnKlav/core/target/aarch64-linux-android/release/deps/libonklav_core.so" "-Wl,--gc-sections" "-shared" "-Wl,-z,relro,-z,now" "-Wl,-O1" "-Wl,--strip-all" "-nodefaultlibs" "-Wl,-z,max-page-size=16384"
+  = note: some arguments are omitted. use `--verbose` to show all linker arguments
+  = note: /workspace/scratch/39f240a7e5bd/restored-env/sdk/ndk/27.2.12479018/toolchains/llvm/prebuilt/linux-x86_64/bin/clang: line 1: clang-18: command not found
+          
+
+error: could not compile `onklav-core` (lib) due to 1 previous error

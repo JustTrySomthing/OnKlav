@@ -1,0 +1,83 @@
+{
+  "status": "passed",
+  "base_library_file_id": "libfile_3617e6cb2514819198a142cb853d9df7",
+  "base_version": 353,
+  "base_archive_sha256": "ed302fdbe986936f814f76ca417e80c8db6aacda24d80e8d1cbaadbe1c6ecad8",
+  "video_update_library_file_id": "libfile_a7bd6611ce688191a3d67484c7a55298",
+  "video_update_version": 1,
+  "merge_conflicts": [],
+  "tests": [
+    {
+      "class": "app.onklav.home.FriendGameUiTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "class": "app.onklav.home.FriendGamesTest",
+      "tests": 11,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "class": "app.onklav.home.GameEntryFlowTest",
+      "tests": 9,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "class": "app.onklav.home.VideoCanvasMetadataTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "class": "app.onklav.home.VideoCanvasSizingTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "class": "app.onklav.home.VideoEditorUiTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "class": "app.onklav.home.VideoPhoneWorkflowTest",
+      "tests": 11,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "class": "app.onklav.home.VideoProTest",
+      "tests": 8,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "class": "app.onklav.home.VideoRefinementsTest",
+      "tests": 11,
+      "failures": 0,
+      "errors": 0
+    }
+  ],
+  "total_tests": 58,
+  "unchanged_base_files_verified": 7766,
+  "unchanged_game_files_verified": 309,
+  "identical_compiled_tracked_sources_verified": 924,
+  "video_update_files_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt": "99a5a87fcec79e9c40af7ac6a41bc6c6484331f980666e33fd1160e758911911",
+    "android/app/src/main/kotlin/app/onklav/home/VideoEditorLayout.kt": "080658296d597e229806371b7b9b11dc559faa32b0eb6117b6798257363bd892",
+    "android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt": "e6f13464a41bd67faab003c422bce1fc1e14a4c8bf2d40696cce62db0f0a78c0",
+    "android/app/src/main/kotlin/app/onklav/home/VideoProWorkspace.kt": "d6a712e7f79141953e0255e0b3d26f71443241330ef9edda133ad94955bffa38",
+    "android/app/src/main/kotlin/app/onklav/home/VideoCanvasSizing.kt": "d02e3196cecfb61fe801d1aa38105b040e2cfdbc0c01705a5849ee19773563e2",
+    "android/app/src/test/kotlin/app/onklav/home/VideoPhoneWorkflowTest.kt": "e71ba3d70ffbc855c916cb2fbc69217f3253d11f43a89e267c246e6df0ecf819",
+    "android/app/src/test/kotlin/app/onklav/home/VideoCanvasSizingTest.kt": "74b0ee42b775b6ee4103ea8139b5f49e5fbbd2ab721c8aeb1b3a84f995e6345f",
+    "android/app/src/test/kotlin/app/onklav/home/VideoCanvasMetadataTest.kt": "d7199296b7371f29f6ca1fa5513ffe14dcbed5d33b867e7a7a81c5e447e37e07"
+  },
+  "native_sdk_game_build_plan": "reuse; hash-verified",
+  "panda_audit_evidence_retained": "docs/PANDA-AUDIT-2026-11-04.md",
+  "apk_built": false,
+  "physical_phone_tested": false
+}

@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "version": "0.100.35-rc1",
+  "version_code": 144,
+  "package": "app.onklav.home.prototype.rewrite",
+  "variant": "debug",
+  "shrinking": false,
+  "debuggable": true,
+  "bytes": 186557678,
+  "sha256": "dd0651f2d37e3592e18b408f8121c7ec7c290afcd248b0912bfd63bca17ac674",
+  "signer_sha256": "6ed975c5fc27d19f6291f751a8bb00fa8a2c2e7d268bffc7b6ddf7e1b1a7a69d",
+  "verification": "docs/apk-verification-debug.json",
+  "build": "docs/evidence/v0.100.35/build-debug.json",
+  "prebuild_checks": [
+    "Six audit repairs:61 unique focused Android host regressions and30 Python tooling tests passed before this packaging task; docs/audit-repairs-verification.json",
+    "Phone/Camera refinement:24 focused host tests, production/test compilation and runtime bundle class matching passed before this packaging task; docs/phone-camera-root-verification.json"
+  ],
+  "tests_repeated_during_assembly": false,
+  "scope": "Owner-requested ARM64 testing APK with original package and signer; source-matched native/speech/SDK/games reused. Includes prior six audit repairs and Phone/Camera root navigation, dialer polish, and direct Default Phone consent.",
+  "build_attempt_notes": [
+    "First packaging attempt found uncached auto-value-annotations1.6.3. Restored the exact official Maven jar/POM and verified upstream SHA1; no dependency version substitution. Final offline build and APK verification passed."
+  ],
+  "physical_device_qualification": "pending; real carrier, camera hardware, lock-screen/OEM and Bluetooth behavior are not proved by host/package checks"
+}

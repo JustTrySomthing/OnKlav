@@ -1,0 +1,126 @@
+{
+  "build": [
+    "Files",
+    "Notes",
+    "RSS",
+    "ReadAloud",
+    "Browser",
+    "YouTube",
+    "Annotation",
+    "Social",
+    "WalkieTalkie"
+  ],
+  "restore_bundles": [],
+  "reuse": [
+    "Counter"
+  ],
+  "unselected_stale": []
+}
+   Compiling wasm-encoder v0.240.0
+   Compiling bitflags v2.13.2
+   Compiling wasmparser v0.228.0
+   Compiling wast v240.0.0
+   Compiling wat v1.240.0
+   Compiling wasmi v0.46.0
+   Compiling onklav-core v0.8.0 (/workspace/scratch/ed752e8a1957/current/OnKlav/core)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 18.23s
+Files: compiling changed app
+   Compiling zmij v1.0.23
+   Compiling serde_core v1.0.229
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/workspace/scratch/ed752e8a1957/current/OnKlav/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/ed752e8a1957/current/OnKlav/developer/components)
+   Compiling onklav-files v0.1.0 (/workspace/scratch/ed752e8a1957/current/OnKlav/sdk/apps/files)
+    Finished `release` profile [optimized] target(s) in 3.94s
+Created /workspace/scratch/ed752e8a1957/current/OnKlav/sdk/packages/.sdk-build-z0o4a39p/Files.onklav-a
+Notes: compiling changed app
+   Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/workspace/scratch/ed752e8a1957/current/OnKlav/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/ed752e8a1957/current/OnKlav/developer/components)
+   Compiling onklav-notes v0.1.0 (/workspace/scratch/ed752e8a1957/current/OnKlav/sdk/apps/notes)
+    Finished `release` profile [optimized] target(s) in 4.48s
+Created /workspace/scratch/ed752e8a1957/current/OnKlav/sdk/packages/.sdk-build-lqkphpxx/Notes.onklav-a
+RSS: compiling changed app
+   Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/workspace/scratch/ed752e8a1957/current/OnKlav/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/ed752e8a1957/current/OnKlav/developer/components)
+   Compiling onklav-rss v0.1.0 (/workspace/scratch/ed752e8a1957/current/OnKlav/sdk/apps/rss)
+    Finished `release` profile [optimized] target(s) in 4.44s
+Created /workspace/scratch/ed752e8a1957/current/OnKlav/sdk/packages/.sdk-build-861pg2jk/RSS.onklav-a
+ReadAloud: compiling changed app
+   Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/workspace/scratch/ed752e8a1957/current/OnKlav/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/ed752e8a1957/current/OnKlav/developer/components)
+   Compiling onklav-reader v0.1.0 (/workspace/scratch/ed752e8a1957/current/OnKlav/sdk/apps/reader)
+    Finished `release` profile [optimized] target(s) in 4.23s
+Created /workspace/scratch/ed752e8a1957/current/OnKlav/sdk/packages/.sdk-build-qa3aknrg/ReadAloud.onklav-a
+Browser: compiling changed app
+   Compiling zmij v1.0.23
+   Compiling serde_core v1.0.229
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/workspace/scratch/ed752e8a1957/current/OnKlav/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/ed752e8a1957/current/OnKlav/developer/components)
+   Compiling onklav-browser v0.1.0 (/workspace/scratch/ed752e8a1957/current/OnKlav/sdk/apps/browser)
+    Finished `release` profile [optimized] target(s) in 4.20s
+Created /workspace/scratch/ed752e8a1957/current/OnKlav/sdk/packages/.sdk-build-b_p9i_hr/Browser.onklav-a
+YouTube: compiling changed app
+   Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling serde_json v1.0.154
+   Compiling memchr v2.8.3
+   Compiling itoa v1.0.18
+   Compiling onklav-app v0.1.0 (/workspace/scratch/ed752e8a1957/current/OnKlav/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/ed752e8a1957/current/OnKlav/developer/components)
+   Compiling onklav-youtube v0.1.0 (/workspace/scratch/ed752e8a1957/current/OnKlav/sdk/apps/youtube)
+    Finished `release` profile [optimized] target(s) in 3.94s
+Created /workspace/scratch/ed752e8a1957/current/OnKlav/sdk/packages/.sdk-build-hjw4wjux/YouTube.onklav-a
+Annotation: compiling changed app
+   Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling serde_json v1.0.154
+   Compiling memchr v2.8.3
+   Compiling itoa v1.0.18
+   Compiling onklav-app v0.1.0 (/workspace/scratch/ed752e8a1957/current/OnKlav/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/ed752e8a1957/current/OnKlav/developer/components)
+   Compiling onklav-annotation v0.1.0 (/workspace/scratch/ed752e8a1957/current/OnKlav/sdk/apps/annotation)
+    Finished `release` profile [optimized] target(s) in 3.88s
+Created /workspace/scratch/ed752e8a1957/current/OnKlav/sdk/packages/.sdk-build-qea5o5vp/Annotation.onklav-a
+Social: compiling changed app
+   Compiling zmij v1.0.23
+   Compiling serde_core v1.0.229
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/workspace/scratch/ed752e8a1957/current/OnKlav/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/ed752e8a1957/current/OnKlav/developer/components)
+   Compiling onklav-social v0.1.0 (/workspace/scratch/ed752e8a1957/current/OnKlav/sdk/apps/social)
+    Finished `release` profile [optimized] target(s) in 3.64s
+Created /workspace/scratch/ed752e8a1957/current/OnKlav/sdk/packages/.sdk-build-_f3x9e3x/Social.onklav-a
+WalkieTalkie: compiling changed app
+   Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling serde_json v1.0.154
+   Compiling memchr v2.8.3
+   Compiling itoa v1.0.18
+   Compiling onklav-app v0.1.0 (/workspace/scratch/ed752e8a1957/current/OnKlav/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/ed752e8a1957/current/OnKlav/developer/components)
+   Compiling onklav-walkie v0.1.0 (/workspace/scratch/ed752e8a1957/current/OnKlav/sdk/apps/walkie)
+    Finished `release` profile [optimized] target(s) in 4.00s
+Created /workspace/scratch/ed752e8a1957/current/OnKlav/sdk/packages/.sdk-build-oa732yvw/WalkieTalkie.onklav-a
+{"built": ["Files", "Notes", "RSS", "ReadAloud", "Browser", "YouTube", "Annotation", "Social", "WalkieTalkie"], "bundles_restored": [], "all_packages_current": true}

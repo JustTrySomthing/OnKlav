@@ -1,0 +1,96 @@
+{
+  "chunks": [
+    32,
+    33
+  ],
+  "status": "source implemented; live-provider, full-host HTTP/JNI and physical-device qualification pending",
+  "production_paths": {
+    "tile_cache": "maps cached/cache_response helpers -> storage.private live signed app scope -> publisher/provider/XYZ-keyed atomic metadata -> immutable disposable private blobs -> shared raster map renderer",
+    "tile_network": "Online cache miss -> bounded binary http.request -> existing signed exact-origin/live-grant Android HTTP broker -> cache_response preserving native HTTP headers. Offline lookup returns no request.",
+    "geocoding_routing": "Public maps_geo provider/search/route -> ordinary signed HTTP effect -> bounded jsonv2/GeoJSON parser -> native result rows / map route overlay with separate credits"
+  },
+  "checks": {
+    "rust_map_cache_schema_route_cases_passed": 7,
+    "rust_http_policy_cases_passed": 6,
+    "sdk_map_cache_adapter_cases_passed": 7,
+    "android_payload_and_existing_raster_cases_passed": 7,
+    "developer_contract_cases_passed": 5,
+    "signed_guest_granted_scenario_steps_passed": 10,
+    "signed_guest_denied_steps_passed": 1
+  },
+  "counting_note": "Selections counted once, including existing regressions. The native rebuild reran the same seven Rust map cases; it adds no unique coverage.",
+  "android_evidence": "Real binary/text wire conversion and native-graphics raster/projection/attribution/denial checks passed. Actual updated Compose map viewer source compiled against real shared controls. Controller/JNI adapters refuse execution. The full SdkHttpService/OkHttp app build remains blocked by previously unavailable app dependencies; it was not compiled/executed by this isolated harness.",
+  "console_evidence_note": "Outer Gradle log ended before final lines, while the command exited0. Preserved test XML and the Gradle daemon test/result lines establish the seven passing cases and BUILD SUCCESSFUL; no rerun was needed.",
+  "fixture_evidence": "Signed sample stores a conspicuously synthetic tile response, exercises cache/offline/clear, parses synthetic geocoder/router fixtures and opens the route widget. Last granted step reaches a real pending HTTP request. No fake native/provider reply, public provider request or Android installation.",
+  "bounds": {
+    "cached_tiles_per_app": 64,
+    "encoded_cache_bytes_max": 16777216,
+    "binary_response_and_cached_tile_bytes": 262144,
+    "text_http_bytes": 131072,
+    "freshness_seconds_max": 604800,
+    "tile_request_radius_in_tile_units": 2.5,
+    "geocoding_results": 5,
+    "query_characters": 160,
+    "route_waypoints": [
+      2,
+      8
+    ],
+    "route_geometry_points": 2048
+  },
+  "cache_behavior": [
+    "App scope + publisher + full provider metadata + XYZ identity",
+    "max-age/no-cache/no-store/must-revalidate, Age/Date/Expires, conditional ETag/Last-Modified and304 metadata refresh",
+    "Approximate LRU, missing-handle recovery, atomic index replacement and clear without deleting ordinary saved files",
+    "Explicit offline provider policy, stale result flag, no request on offline miss; public OSM offline prohibition retained",
+    "No-store declines persistent file output; no transient no-store raster renderer",
+    "General private-cache quota may evict a tile independently; interrupted commits may leave disposable orphan cache blobs"
+  ],
+  "adapter_scope": [
+    "Configured keyless compatible providers only; no public Nominatim/OSRM demo default or implicit provider switch",
+    "Explicit place query/route request, no GPS or autocomplete",
+    "GeoJSON route preview with lon/lat normalization, bounded metrics and separate visible attribution; no turn-by-turn guidance",
+    "Provider/profile, actual viewport requests and licence provenance remain app/provider responsibilities; general network.http is not a licence-policy sandbox"
+  ],
+  "native": {
+    "linux_jni_sha256": "ccfb6b54356facc4647d86df7b96631b0a372de63d5db623b87fa6161330d13f",
+    "arm64_jni_sha256": "43e47f9a4e290ca8580674aa83440e49db01b6fa8c3bcb67c21809cc66e78e6a",
+    "arm64_load_alignment": 16384
+  },
+  "native_source_and_artifact_hashes_verified": true,
+  "released_main_jni_unchanged": true,
+  "remaining_qualification": [
+    "Full-host compilation and actual HTTP binary path with unavailable dependency bytes restored",
+    "Chosen-provider TLS/HTTP/cache headers, errors/rate limits and configured profile acceptance",
+    "Physical-phone route viewport, TalkBack, layout/lifecycle/process recovery and sustained memory/performance",
+    "Final public-API reference application workflows remain chunk38"
+  ],
+  "logs": [
+    "docs/evidence/v0.70.0/maps32-33-core.log",
+    "docs/evidence/v0.70.0/maps32-http-core.log",
+    "docs/evidence/v0.70.0/maps32-33-components-final.log",
+    "docs/evidence/v0.70.0/maps32-33-android-result.log",
+    "docs/evidence/v0.70.0/maps32-33-contract.log",
+    "docs/evidence/v0.70.0/maps32-33-broker.log",
+    "docs/evidence/v0.70.0/maps32-33-broker-denied.log",
+    "docs/evidence/v0.70.0/maps32-33-native.log"
+  ],
+  "source_sha256": {
+    "core/src/sdk_map_cache.rs": "6b46a3c50a232c685d62a6c1b6f4e600fe927c17e7de5988c3c3f1c7f32b28f5",
+    "core/src/sdk_http.rs": "693f50362251e132e06659de10f3d2e350fed34e802f59188e057d66f31490a1",
+    "core/src/sdk_maps.rs": "c663b9e1c5eceeb04d7f16cb40adf16e2a461c73806609d91e63e7c59053ed25",
+    "core/src/sdk.rs": "bce8a4a07a7e47dc499e81865f353be13c5e2b6da419fd1514779534a68c66f4",
+    "core/src/lib.rs": "50ed5445d8803efca2f45ccb79a971c6f15b642cf3a583feb1b767ec6c54bd8c",
+    "developer/components/src/maps.rs": "3df2336c96c707ad37d25ccb3112cfe0f85057605ed5671405bb14a9bc582fca",
+    "developer/components/src/maps_geo.rs": "c34906ec03b006fa4d26ae11d16bf022f0cdaffdd75db6881dd3832435d316dc",
+    "developer/components/src/http.rs": "f413d8e7f4d5c1aac1d5177f5df05a10f36f59b8bd61ebec88bb012da630f397",
+    "android/app/src/main/kotlin/app/onklav/home/SdkHttpService.kt": "75c3aa8e109de5b543bd9eb3689ec418f9c80e1f3d68123c83f8d5b9a9d970ed",
+    "android/app/src/main/kotlin/app/onklav/home/SdkHttpPayload.kt": "8b44e2f562cbeb188012a6b89e33714c3bcbbed21e64af3343bd080888c4dfa5",
+    "android/app/src/main/kotlin/app/onklav/home/SdkMapViewer.kt": "0f019a65db843e2f046c91e9d87377f6b5fd8a6c11d1f2d82f900b4b76023d49",
+    "developer/examples/map-services/src/lib.rs": "ed0e46e57d740eee44758fdddfbea1651a5b2816b562df5c9debc0cdce0800f2"
+  },
+  "apk_created": false,
+  "sdk_or_documentation_release_created": false,
+  "shipping_package_created": false,
+  "test_signing": "Disposable SDK author/package discarded; no publisher/signing identity changed",
+  "next_feature": 34
+}

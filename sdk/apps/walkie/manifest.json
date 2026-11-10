@@ -1,0 +1,14 @@
+{
+  "schema": "onklav.app.v1",
+  "runtime": "rust-wasm-ui.v1",
+  "id": "app.onklav.walkie",
+  "name": "Walkie-Talkie",
+  "version": 52,
+  "capabilities": [
+    "storage.private",
+    "audio.record",
+    "audio.playback",
+    "contacts.pick",
+    "communications.walkie"
+  ]
+}

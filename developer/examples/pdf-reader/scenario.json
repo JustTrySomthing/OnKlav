@@ -1,0 +1,7 @@
+{"grants":["storage.private","clipboard.write"],"steps":[
+ {"action":"sample.create","expect":{"status":"Sample created"}},
+ {"action":"sample.open","expect":{"open":true},"frame_expect":{"body.0.kind":"pdf_viewer"}},
+ {"action":"pdf.back","expect":{"open":false},"frame_expect":{"body.1.id":"sample.open"}},
+ {"reopen":true,"expect":{"status":"Ready"}},
+ {"action":"sample.open","expect":{"open":true},"frame_expect":{"body.0.kind":"pdf_viewer"}}
+]}

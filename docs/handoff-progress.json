@@ -1,0 +1,12 @@
+{
+  "status": "Chunks26\u201327 typed Android handoffs implemented in source; full-host/real-device acceptance pending",
+  "source_implemented": [
+    26,
+    27
+  ],
+  "prior_1_through_25_preserved": true,
+  "next": 28,
+  "verification": "docs/handoff-verification.json",
+  "full_host_integration": "Blocked by previously recorded missing play-services-auth22.0.0, webkit1.13.0 and okhttp4.12.0; no repeat dependency loop",
+  "apk_created": false
+}

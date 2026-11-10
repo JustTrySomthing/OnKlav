@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.HistoryRecoveryUiTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-10-22T23:04:28" hostname="276516236850" time="1.924">
+  <properties/>
+  <testcase name="completedRestoreCompactionCancelsThenRetainsReviewAndMetadata" classname="app.onklav.home.HistoryRecoveryUiTest" time="0.306"/>
+  <testcase name="changedInsertionReviewExplainsAbsenceCheckWithoutEnablingPhoneAccess" classname="app.onklav.home.HistoryRecoveryUiTest" time="0.194"/>
+  <testcase name="knownIncompleteCleanupRemainsGateClosed" classname="app.onklav.home.HistoryRecoveryUiTest" time="0.134"/>
+  <testcase name="savedRecordReopenRouteDoesNotWriteOrRequestAnAutomaticRetry" classname="app.onklav.home.HistoryRecoveryUiTest" time="0.215"/>
+  <testcase name="unknownInsertReviewStaysPausedWithoutClearOrRetry" classname="app.onklav.home.HistoryRecoveryUiTest" time="0.153"/>
+  <testcase name="compactConfirmationRetainsReplayProtectionAndPendingRecords" classname="app.onklav.home.HistoryRecoveryUiTest" time="0.199"/>
+  <testcase name="finishSavedRecordOnlyAcknowledgesExistingMetadata" classname="app.onklav.home.HistoryRecoveryUiTest" time="0.143"/>
+  <testcase name="recoveryRouteAndStagedIdentitySaveCancelAndValidation" classname="app.onklav.home.HistoryRecoveryUiTest" time="0.476"/>
+  <testcase name="finalConfirmationShowsReviewedIdentitiesAndRemainsGateClosed" classname="app.onklav.home.HistoryRecoveryUiTest" time="0.1"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,21 @@
+test_added_and_changed_rust_sources_invalidate_reuse (test_build_inputs.ArtifactReuseTest.test_added_and_changed_rust_sources_invalidate_reuse) ... ok
+test_android_snapshot_excludes_test_and_other_variant_outputs (test_build_inputs.ArtifactReuseTest.test_android_snapshot_excludes_test_and_other_variant_outputs) ... ok
+test_android_snapshot_tracks_code_resources_and_configuration (test_build_inputs.ArtifactReuseTest.test_android_snapshot_tracks_code_resources_and_configuration) ... ok
+test_game_pack_and_source_must_both_match (test_build_inputs.ArtifactReuseTest.test_game_pack_and_source_must_both_match) ... ok
+test_missing_and_malformed_proofs_never_count_as_current (test_build_inputs.ArtifactReuseTest.test_missing_and_malformed_proofs_never_count_as_current) ... ok
+test_requested_architecture_requires_its_own_proof_and_bytes (test_build_inputs.ArtifactReuseTest.test_requested_architecture_requires_its_own_proof_and_bytes) ... ok
+test_sdk_changes_and_mismatched_bundled_packages_invalidate_reuse (test_build_inputs.ArtifactReuseTest.test_sdk_changes_and_mismatched_bundled_packages_invalidate_reuse) ... ok
+test_changed_program_requires_version_bump_and_same_publisher (test_sdk_build_plan.SelectiveSdkBuildTest.test_changed_program_requires_version_bump_and_same_publisher) ... ok
+test_damaged_output_rebuilds_only_owner_but_bundle_damage_only_recopies (test_sdk_build_plan.SelectiveSdkBuildTest.test_damaged_output_rebuilds_only_owner_but_bundle_damage_only_recopies) ... ok
+test_new_local_source_and_manifest_change_are_detected (test_sdk_build_plan.SelectiveSdkBuildTest.test_new_local_source_and_manifest_change_are_detected) ... ok
+test_one_app_edit_rebuilds_only_that_app (test_sdk_build_plan.SelectiveSdkBuildTest.test_one_app_edit_rebuilds_only_that_app) ... ok
+test_partial_build_cannot_certify_another_stale_app (test_sdk_build_plan.SelectiveSdkBuildTest.test_partial_build_cannot_certify_another_stale_app) ... ok
+test_partial_flags_upgrade_keeps_other_packages_stale (test_sdk_build_plan.SelectiveSdkBuildTest.test_partial_flags_upgrade_keeps_other_packages_stale) ... ok
+test_shared_sdk_or_unknown_source_edit_rebuilds_all (test_sdk_build_plan.SelectiveSdkBuildTest.test_shared_sdk_or_unknown_source_edit_rebuilds_all) ... ok
+test_standalone_sdk_has_no_host_asset_copy_requirement (test_sdk_build_plan.SelectiveSdkBuildTest.test_standalone_sdk_has_no_host_asset_copy_requirement) ... ok
+test_unchanged_legacy_proof_reuses_every_package (test_sdk_build_plan.SelectiveSdkBuildTest.test_unchanged_legacy_proof_reuses_every_package) ... ok
+
+----------------------------------------------------------------------
+Ran 16 tests in 0.215s
+
+OK

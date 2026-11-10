@@ -1,0 +1,87 @@
+{
+  "version": "0.84.0-downloads-files1",
+  "android_version_code": 92,
+  "sdk_host_build": 91,
+  "status": "Complete: native/SDK/host checks, full lint, ARM64 APK build/signature verification passed; physical phone acceptance separate",
+  "core_tests": 281,
+  "controller_tests": 126,
+  "selected_android_cases_across_focused_runs": {
+    "PodcastDownloadsTest.incompleteOrCancelledDownloadsNeverBecomePlayable": "PASSED",
+    "PodcastDownloadsTest.largeEpisodeCommitsAndOfflinePreparationUsesDiskAfterFeedCacheCleared": "PASSED",
+    "SdkMediaSourceTest.podcastWithoutValidatorsStillRejectsChangedLength": "PASSED",
+    "SdkMediaSourceTest.decoderCannotFollowRedirectsOrContinueAfterPermissionLoss": "PASSED",
+    "SdkMediaSourceTest.audiobookCanProbeTailFirstAndSeekUsingLastModified": "PASSED",
+    "SdkMediaSourceTest.dynamicPodcastDatesDoNotBreakValidRanges": "PASSED",
+    "SdkMediaSourceTest.audiobookRejectsChangedDateOrLengthAcrossSeek": "PASSED",
+    "SdkMediaSourceTest.readChunksAreBoundedAndClosedSourceCannotReopen": "PASSED",
+    "SdkMediaSourceTest.decoderLearnsLargeAudioLengthBeforeReadingWithoutDownloadingWholeFile": "PASSED",
+    "SdkMediaSourceTest.sourceReusesSequentialReadsAndRequiresMatchingRangeForSeeking": "PASSED",
+    "SdkMediaSourceTest.podcastTailProbeCanUseRangeWithoutEtag": "PASSED",
+    "SdkPodcastsTest.longFeedsArePagedAndMissingEnclosureLengthsDoNotHideEpisodes": "PASSED",
+    "SdkPodcastsTest.localDirectoryHasNoNetworkCallOrSearchUsageCounter": "PASSED",
+    "SdkPodcastsTest.podcastAudioAllowsLongTrackingChainsButRejectsPrivateRedirects": "PASSED",
+    "SdkPodcastsTest.publicSearchUsesPublisherFeedsAndFiltersUnsafeResults": "PASSED",
+    "SdkPodcastsTest.unsafeFeedsAndEnclosuresAreRejectedWithoutMarkupOrDuplicates": "PASSED",
+    "FilesBrokerHostTest.fileExportsAreReadOnlyAndCannotExposeArbitraryPrivatePaths": "PASSED",
+    "FilesBrokerHostTest.deletingPrivateDataClearsOnlyThatAppsFolderConnections": "PASSED",
+    "FilesBrokerHostTest.sharingAnAndroidFolderCreatesAReadableZipAndPreservesOriginals": "PASSED",
+    "FilesBrokerHostTest.revokedSdkAuthorizationAndUnknownTokensCannotQueryAndroidFiles": "PASSED",
+    "FilesBrokerHostTest.androidFoldersExposeOpaqueTokensAndSupportRenameAndExplicitDelete": "PASSED",
+    "FilesBrokerHostTest.selectedImportsStreamAndStopWhenAuthorizationIsRevoked": "PASSED",
+    "FilesFlowHostTest.fileIconFoldersRenameMoveTrashAndRestoreUseTheRealNotesStore": "PASSED",
+    "FilesFlowHostTest.openingANoteUsesNotesAndBackReturnsToFiles": "PASSED",
+    "FilesRoutingTest.tappingNoteResolvesNotesAndClosedFilesModelReopensWithoutBusyOverlay": "PASSED"
+  },
+  "selected_android_passed": 25,
+  "android_run_logs": [
+    "docs/evidence/v0.84.0/downloads-checks.log",
+    "docs/evidence/v0.84.0/files-host-checks.log",
+    "docs/evidence/v0.84.0/files-final-recheck.log",
+    "docs/evidence/v0.84.0/files-ui-verified.log"
+  ],
+  "physical_phone_tested": false,
+  "source_notes": "docs/PODCAST-DOWNLOADS-FILES.md",
+  "limitations": [
+    "Downloads are foreground requests and are cancelled when leaving the app; completed files persist.",
+    "2GiB per episode,500 completed downloads; sufficient free disk required.",
+    "Android-provider move/write support varies; cross-storage Paste uses Import/Save a Copy instead.",
+    "Physical phone audio, touch, sharing providers and network behavior remain unverified."
+  ],
+  "initial_failures_resolved": [
+    "Android folder display-name query now uses the returned column name.",
+    "Options hide while a confirmation is open; test waits for the visible confirmation before clicking Delete."
+  ],
+  "lint": {
+    "errors": 0,
+    "warnings": 177,
+    "log": "docs/evidence/v0.84.0/lint-final.log"
+  },
+  "final_android_test_run": {
+    "app.onklav.home.PodcastDownloadsTest": {
+      "tests": 2,
+      "failures": 0,
+      "errors": 0
+    },
+    "app.onklav.home.FilesBrokerHostTest": {
+      "tests": 6,
+      "failures": 0,
+      "errors": 0
+    },
+    "app.onklav.home.FilesFlowHostTest": {
+      "tests": 2,
+      "failures": 0,
+      "errors": 0
+    }
+  },
+  "apk": {
+    "name": "OnKlav-0.84.0-ARM64.apk",
+    "sha256": "075967dddac791db44817916cadaee568c03d015b147ab014be0691a3d18aa2f",
+    "version_code": 92,
+    "version_name": "0.84.0-downloads-files1",
+    "signer_sha256": "6ed975c5fc27d19f6291f751a8bb00fa8a2c2e7d268bffc7b6ddf7e1b1a7a69d",
+    "abi": "arm64-v8a",
+    "verification": "docs/evidence/v0.84.0/verify-debug.log"
+  },
+  "final_native_build": "docs/evidence/v0.84.0/native-final-build.log",
+  "final_apk_and_host_run": "docs/evidence/v0.84.0/apk-build.log"
+}

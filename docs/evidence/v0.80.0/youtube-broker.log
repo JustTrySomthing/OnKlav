@@ -1,0 +1,17 @@
+   Compiling onklav-core v0.8.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/core)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 5.10s
+     Running unittests src/lib.rs (core/target/debug/deps/onklav_core-8a579202944a8eae)
+
+running 3 tests
+test library_backup::tests::youtube_backup_merges_history_and_bookmarks_without_copying_viewer_or_accounts ... ok
+test sdk::tests::youtube_channel_bookmarks_use_validated_metadata_and_persist ... ok
+test sdk::tests::youtube_guest_library_reset_suppression_and_capability_lifecycle ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 270 filtered out; finished in 2.41s
+
+     Running unittests src/bin/onklav-pack.rs (core/target/debug/deps/onklav_pack-ee23dc4255ec4a6b)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

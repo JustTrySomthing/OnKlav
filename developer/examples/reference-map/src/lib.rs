@@ -1,0 +1,3 @@
+use onklav_ui::serde_json::Value;
+fn step(input:Value)->Value{let p=onklav_ui::maps::provider("osm","OpenStreetMap standard tiles","https://tile.openstreetmap.org/{z}/{x}/{y}.png","Standard map tiles","https://www.openstreetmap.org/copyright",true,false);{let geo=onklav_ui::maps_geo::Provider::new("https://geo.example.org/search","Configured geocoder credits").unwrap();let routes=onklav_ui::maps_geo::Provider::new("https://routes.example.org/route/v1","Configured routing credits").unwrap();onklav_ui::reference_apps::tile_map::controller_with_routes(input,p,Some(&geo),Some(&routes))}}
+onklav_ui::app!(step);

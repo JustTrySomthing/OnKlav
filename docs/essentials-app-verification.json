@@ -1,0 +1,48 @@
+{
+  "version": "0.99.0-essentials1",
+  "version_code": 107,
+  "status": "Source implemented and host-verified; physical phone acceptance pending",
+  "apps": [
+    "Clock",
+    "Flashlight",
+    "Camera"
+  ],
+  "included_apps": 25,
+  "signed_packages_current": true,
+  "original_identities_retained": true,
+  "rust_tests": 288,
+  "android_backend_tests": 6,
+  "android_ui_tests": 3,
+  "lint": {
+    "errors": 0,
+    "warnings": 248,
+    "information": 1
+  },
+  "source_matched_jni": true,
+  "arm64_load_alignment": 16384,
+  "apk_assembled": true,
+  "apk_requested": false,
+  "phone_hardware_tested": false,
+  "remaining_acceptance": [
+    "Physical camera/codec, capture orientation and touch/landscape layout",
+    "Actual LED/strength, background and screen-light behavior",
+    "Locked-screen/Doze/OEM alarm and sound delivery"
+  ],
+  "implementation": "docs/ESSENTIALS.md",
+  "evidence": [
+    "docs/evidence/v0.99.0/rust-tests.log",
+    "docs/evidence/v0.99.0/host-native.log",
+    "docs/evidence/v0.99.0/android-native.log",
+    "docs/evidence/v0.99.0/android-ui-checks.log",
+    "docs/evidence/v0.99.0/android-checks-lint.log"
+  ],
+  "runtime_classes_checked": 208,
+  "runtime_matches_compilation": true,
+  "reviewed_warnings": [
+    "ImplicitSamInstance flags fresh Intent arguments to Context.stopService; Android matches the service component, not Java object identity.",
+    "Clock exact-alarm settings is reachable only when ClockDisk.exact is false, which cannot happen below API31; older platforms require no precise-alarm request.",
+    "Camera usable-space check is conservative; failed saves remain available for retry/discard."
+  ],
+  "packaged_in": "0.99.1-app-defaults1/code108",
+  "apk_verification": "docs/apk-verification-debug.json"
+}

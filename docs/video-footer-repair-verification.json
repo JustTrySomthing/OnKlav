@@ -1,0 +1,40 @@
+{
+  "status": "passed",
+  "unique_ui_tests_passed": 14,
+  "remaining_failures": 0,
+  "initial_test_selector_failure": [
+    "app.onklav.home.VideoPhoneWorkflowTest.inspectorKeepsTheTimelineReachableThroughMore"
+  ],
+  "selector_repair": "Select the Timeline dialog Done button rather than the inspector Done behind it; no production change was needed for this test correction.",
+  "test_results": {
+    "app.onklav.home.VideoEditorUiTest.timelineTextCanvasAndProjectLibraryAreReachable": true,
+    "app.onklav.home.VideoPhoneWorkflowTest.smallPhoneLargeTextKeepsPreviewDoneAndSettingsReachable": true,
+    "app.onklav.home.VideoPhoneWorkflowTest.portraitCanvasGetsMorePreviewSpaceAndToolSelectionDoesNotShrinkIt": true,
+    "app.onklav.home.VideoPhoneWorkflowTest.inspectorKeepsTheTimelineReachableThroughMore": true,
+    "app.onklav.home.VideoPhoneWorkflowTest.audioAndColorPagesStayFocusedAndTextCancelIsNonDestructive": true,
+    "app.onklav.home.VideoPhoneWorkflowTest.allToolsKeepTheSameVisiblePreviewAndOpeningToolsDoesNotEditProject": true,
+    "app.onklav.home.VideoPhoneWorkflowTest.selectionFeedbackAndUnavailableSettingsHaveClearRoutes": true,
+    "app.onklav.home.VideoPhoneWorkflowTest.veryShortWindowKeepsToolsAndTimelineReachable": true,
+    "app.onklav.home.VideoPhoneWorkflowTest.homeHasOnlyFourCategoryButtonsAndMenusUseDistinctIcons": true,
+    "app.onklav.home.VideoPhoneWorkflowTest.landscapeUsesSideInspectorWithoutMovingTheVideo": true,
+    "app.onklav.home.VideoPhoneWorkflowTest.browsingPreviewCannotTransformAndDeleteRequiresConfirmationThenUndoWorks": true,
+    "app.onklav.home.VideoPhoneWorkflowTest.narrowLandscapeUsesSideInspectorAndKeepsControlsVisible": true,
+    "app.onklav.home.VideoPhoneWorkflowTest.sliderChangesAndTimelineBrowsingNeverResizeOrAccidentallyTrim": true,
+    "app.onklav.home.VideoPhoneWorkflowTest.addedAudioOverlayAndMotionSubpanelsAreReachableWithoutLosingThePreview": true
+  },
+  "screenshot_scope": "Native Compose render using a generated portrait photo fixture; not a phone screenshot or hardware video decoder qualification.",
+  "portrait_fixture_viewport_dp": [
+    360,
+    800
+  ],
+  "portrait_preview_minimum_asserted_dp": 480,
+  "default_preview_allocation_dp": 504,
+  "previous_same_viewport_allocation_dp": 358,
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/VideoEditorLayout.kt": "353a16fb1a9d2672d76c8ed2fbd859ea2d0b5c29c97d151e0a106255b1fc73fa",
+    "android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt": "7afc066f75f212f4af1ef4c1e60245ec54906579bdccbe1a3fed2e83db38ed67",
+    "android/app/src/test/kotlin/app/onklav/home/VideoPhoneWorkflowTest.kt": "bfa6ef7349b6ea688d34a15b67905d746fc4b82bc2d532560f65f32c88f93ac3",
+    "android/app/src/test/kotlin/app/onklav/home/VideoEditorUiTest.kt": "461553e6fee8ed6bad4e39e58001a07f728ddb47ddf58aa900e9ed3693f5ab76"
+  },
+  "panda_modified": false
+}

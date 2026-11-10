@@ -1,0 +1,17 @@
+{
+  "version": "0.100.17-rc1",
+  "version_code": 126,
+  "status": "original-signer ARM64 debug RC assembled and verified",
+  "apk_report": "docs/apk-verification-debug.json",
+  "build_log": "docs/evidence/v0.100.17/assemble-debug.log",
+  "verification_log": "docs/evidence/v0.100.17/verify-debug.log",
+  "feature_proof": "docs/visual-layers-media-verification.json",
+  "tests": "47 focused feature checks and full lint0errors reused; no version-only repeat",
+  "new_dex_checks": [
+    "PhotoLayers",
+    "AudioImportWave",
+    "AndroidFolderShortcutsKt"
+  ],
+  "retained": "24 included signed apps; Annotation asset absent; original publisher/package/key/native/games retained",
+  "limitations": "Handset M4A/AAC/preview/export and provider/carrier/route/performance acceptance remains separate"
+}

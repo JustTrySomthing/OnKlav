@@ -1,0 +1,26 @@
+[
+  {
+    "viewport": [
+      320,
+      560
+    ],
+    "saved_return_resume_new_discard_original_menu": true,
+    "manual_pause_label_and_blink": true,
+    "silent_options_and_centered_help": true,
+    "live_audio_rms": 0.041190689624579786,
+    "javascript_errors": [],
+    "engine_errors": []
+  },
+  {
+    "viewport": [
+      432,
+      740
+    ],
+    "saved_return_resume_new_discard_original_menu": true,
+    "manual_pause_label_and_blink": true,
+    "silent_options_and_centered_help": true,
+    "live_audio_rms": 0.048108030185501936,
+    "javascript_errors": [],
+    "engine_errors": []
+  }
+]

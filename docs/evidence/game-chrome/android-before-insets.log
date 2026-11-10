@@ -1,0 +1,180 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.11.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :android:app
+WARNING: The option setting 'android.aapt2FromMavenOverride=/workspace/scratch/b5e698131b7f/build-toolchain/android-sdk/build-tools/35.0.0/aapt2' is experimental.
+Checking the license for package Android SDK Platform-Tools in /workspace/scratch/b5e698131b7f/build-toolchain/android-sdk/licenses
+Warning: License for package Android SDK Platform-Tools not accepted.
+WARNING: platform-tools package is not installed. Please accept the installation licence to continue
+
+> Task :android:app:buildKotlinToolingMetadata UP-TO-DATE
+> Task :android:app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:app:preBuild UP-TO-DATE
+> Task :android:app:preOptimizedBuild UP-TO-DATE
+> Task :android:app:generateOptimizedBuildConfig UP-TO-DATE
+> Task :android:games:preBuild UP-TO-DATE
+> Task :android:games:preReleaseBuild UP-TO-DATE
+> Task :android:games:writeReleaseAarMetadata UP-TO-DATE
+> Task :android:shared:preBuild UP-TO-DATE
+> Task :android:shared:preReleaseBuild UP-TO-DATE
+> Task :android:shared:writeReleaseAarMetadata UP-TO-DATE
+> Task :android:tools:preBuild UP-TO-DATE
+> Task :android:tools:preReleaseBuild UP-TO-DATE
+> Task :android:tools:writeReleaseAarMetadata UP-TO-DATE
+> Task :android:app:checkOptimizedAarMetadata UP-TO-DATE
+> Task :android:app:generateOptimizedResValues UP-TO-DATE
+> Task :android:games:generateReleaseResValues UP-TO-DATE
+> Task :android:games:generateReleaseResources UP-TO-DATE
+> Task :android:games:packageReleaseResources UP-TO-DATE
+> Task :android:shared:generateReleaseResValues UP-TO-DATE
+> Task :android:shared:generateReleaseResources UP-TO-DATE
+> Task :android:shared:packageReleaseResources UP-TO-DATE
+> Task :android:tools:generateReleaseResValues UP-TO-DATE
+> Task :android:tools:generateReleaseResources UP-TO-DATE
+> Task :android:tools:packageReleaseResources UP-TO-DATE
+> Task :android:app:mapOptimizedSourceSetPaths UP-TO-DATE
+> Task :android:app:generateOptimizedResources UP-TO-DATE
+> Task :android:app:mergeOptimizedResources UP-TO-DATE
+> Task :android:app:packageOptimizedResources UP-TO-DATE
+> Task :android:app:parseOptimizedLocalResources UP-TO-DATE
+> Task :android:app:createOptimizedCompatibleScreenManifests UP-TO-DATE
+> Task :android:app:extractDeepLinksOptimized UP-TO-DATE
+> Task :android:games:extractDeepLinksRelease UP-TO-DATE
+> Task :android:games:processReleaseManifest UP-TO-DATE
+> Task :android:shared:extractDeepLinksRelease UP-TO-DATE
+> Task :android:shared:processReleaseManifest UP-TO-DATE
+> Task :android:tools:extractDeepLinksRelease UP-TO-DATE
+> Task :android:tools:processReleaseManifest UP-TO-DATE
+> Task :android:app:processOptimizedMainManifest UP-TO-DATE
+> Task :android:app:processOptimizedManifest UP-TO-DATE
+> Task :android:app:processOptimizedManifestForPackage UP-TO-DATE
+> Task :android:games:parseReleaseLocalResources UP-TO-DATE
+> Task :android:games:generateReleaseRFile UP-TO-DATE
+> Task :android:shared:parseReleaseLocalResources UP-TO-DATE
+> Task :android:shared:generateReleaseRFile UP-TO-DATE
+> Task :android:tools:parseReleaseLocalResources UP-TO-DATE
+> Task :android:tools:generateReleaseRFile UP-TO-DATE
+> Task :android:app:processOptimizedResources UP-TO-DATE
+> Task :android:games:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:games:compileReleaseKotlin NO-SOURCE
+> Task :android:games:javaPreCompileRelease UP-TO-DATE
+> Task :android:games:compileReleaseJavaWithJavac NO-SOURCE
+> Task :android:games:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :android:shared:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:shared:compileReleaseKotlin UP-TO-DATE
+> Task :android:shared:javaPreCompileRelease UP-TO-DATE
+> Task :android:shared:compileReleaseJavaWithJavac NO-SOURCE
+> Task :android:shared:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :android:tools:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:tools:compileReleaseKotlin UP-TO-DATE
+> Task :android:tools:javaPreCompileRelease UP-TO-DATE
+> Task :android:tools:compileReleaseJavaWithJavac NO-SOURCE
+> Task :android:tools:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :android:app:compileOptimizedKotlin UP-TO-DATE
+> Task :android:app:javaPreCompileOptimized UP-TO-DATE
+> Task :android:app:compileOptimizedJavaWithJavac UP-TO-DATE
+> Task :android:app:bundleOptimizedClassesToRuntimeJar
+> Task :android:app:preOptimizedUnitTestBuild UP-TO-DATE
+> Task :android:app:javaPreCompileOptimizedUnitTest UP-TO-DATE
+> Task :android:app:mergeOptimizedShaders UP-TO-DATE
+> Task :android:app:compileOptimizedShaders NO-SOURCE
+> Task :android:app:generateOptimizedAssets UP-TO-DATE
+> Task :android:games:mergeReleaseShaders UP-TO-DATE
+> Task :android:games:compileReleaseShaders NO-SOURCE
+> Task :android:games:generateReleaseAssets UP-TO-DATE
+> Task :android:app:bundleOptimizedClassesToCompileJar
+> Task :android:games:mergeReleaseAssets
+> Task :android:app:compileOptimizedUnitTestKotlin UP-TO-DATE
+> Task :android:app:compileOptimizedUnitTestJavaWithJavac NO-SOURCE
+> Task :android:shared:mergeReleaseShaders UP-TO-DATE
+> Task :android:shared:compileReleaseShaders NO-SOURCE
+> Task :android:shared:generateReleaseAssets UP-TO-DATE
+> Task :android:shared:mergeReleaseAssets UP-TO-DATE
+> Task :android:tools:mergeReleaseShaders UP-TO-DATE
+> Task :android:tools:compileReleaseShaders NO-SOURCE
+> Task :android:tools:generateReleaseAssets UP-TO-DATE
+> Task :android:tools:mergeReleaseAssets UP-TO-DATE
+> Task :android:app:mergeOptimizedAssets
+> Task :android:app:convertLinkedResourcesToBinaryOptimized UP-TO-DATE
+> Task :android:app:packageOptimizedUnitTestForUnitTest
+> Task :android:app:generateOptimizedUnitTestConfig
+> Task :android:app:processOptimizedJavaRes UP-TO-DATE
+> Task :android:app:processOptimizedUnitTestJavaRes UP-TO-DATE
+> Task :android:games:bundleLibRuntimeToJarRelease UP-TO-DATE
+> Task :android:games:processReleaseJavaRes NO-SOURCE
+> Task :android:shared:bundleLibRuntimeToJarRelease UP-TO-DATE
+> Task :android:shared:processReleaseJavaRes UP-TO-DATE
+> Task :android:tools:bundleLibRuntimeToJarRelease UP-TO-DATE
+> Task :android:tools:processReleaseJavaRes UP-TO-DATE
+
+> Task :android:app:testOptimizedUnitTest
+
+GameWindowHostTest > returnReordersOnKlavWithoutDestroyingTheGame STARTED
+
+GameWindowHostTest > returnReordersOnKlavWithoutDestroyingTheGame PASSED
+
+GameWindowHostTest > resumedWebViewAlwaysRestartsTimersAndIgnoresLatePauseCallback STARTED
+
+GameWindowHostTest > resumedWebViewAlwaysRestartsTimersAndIgnoresLatePauseCallback PASSED
+
+GameWindowHostTest > immersiveWindowHasNoExtraHeaderAndRespectsCutout STARTED
+
+GameWindowHostTest > immersiveWindowHasNoExtraHeaderAndRespectsCutout FAILED
+    java.lang.AssertionError: expected:<8> but was:<88>
+        at org.junit.Assert.fail(Assert.java:89)
+        at org.junit.Assert.failNotEquals(Assert.java:835)
+        at org.junit.Assert.assertEquals(Assert.java:120)
+        at org.junit.Assert.assertEquals(Assert.java:146)
+        at app.onklav.home.GameWindowHostTest.immersiveWindowHasNoExtraHeaderAndRespectsCutout(GameWindowHostTest.kt:53)
+
+GamePackagesTest > updatesRejectWrongPublisherRollbackAndSameVersionChangedContent STARTED
+
+GamePackagesTest > updatesRejectWrongPublisherRollbackAndSameVersionChangedContent PASSED
+
+GamePackagesTest > rejectsTraversalAndSharedEngineReplacementEvenWhenPublisherSignsThem STARTED
+
+GamePackagesTest > rejectsTraversalAndSharedEngineReplacementEvenWhenPublisherSignsThem PASSED
+
+GamePackagesTest > userCanInstallWithoutOwnerApprovalAndRemoveWithoutErasingPublisherIdentity STARTED
+
+GamePackagesTest > userCanInstallWithoutOwnerApprovalAndRemoveWithoutErasingPublisherIdentity PASSED
+
+GamePackagesTest > installsRealPythonSignedGodotExportWithTheProductionEngineContract STARTED
+
+GamePackagesTest > installsRealPythonSignedGodotExportWithTheProductionEngineContract PASSED
+
+GamePackagesTest > changedStoredPackageFailsLaunchAndCannotExposeFilesystemPaths STARTED
+
+GamePackagesTest > changedStoredPackageFailsLaunchAndCannotExposeFilesystemPaths PASSED
+
+GameWebPolicyTest > onlyCurrentOriginGetResourcesAreServed STARTED
+
+GameWebPolicyTest > onlyCurrentOriginGetResourcesAreServed PASSED
+
+GameWebPolicyTest > onlyExactExitMarkerClosesTheCurrentGame STARTED
+
+GameWebPolicyTest > onlyExactExitMarkerClosesTheCurrentGame PASSED
+
+GameWebPolicyTest > samePublisherGameOriginSurvivesUpdatesAndOtherGamesAreSeparate STARTED
+
+GameWebPolicyTest > samePublisherGameOriginSurvivesUpdatesAndOtherGamesAreSeparate PASSED
+
+GameWebPolicyTest > encodedTraversalAndNonGamePathsNeverReachHostStorage STARTED
+
+GameWebPolicyTest > encodedTraversalAndNonGamePathsNeverReachHostStorage PASSED
+
+12 tests completed, 1 failed
+
+> Task :android:app:testOptimizedUnitTest FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':android:app:testOptimizedUnitTest'.
+> There were failing tests. See the report at: file:///workspace/scratch/b5e698131b7f/recovered/OnKlav/android/app/build/reports/tests/testOptimizedUnitTest/index.html
+
+* Try:
+> Run with --scan to get full insights.
+
+BUILD FAILED in 33s
+73 actionable tasks: 7 executed, 66 up-to-date

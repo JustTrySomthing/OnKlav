@@ -1,0 +1,7 @@
+{
+  "status": "source implemented; actual Android renderer/IPC/device qualification pending",
+  "verification": "docs/pdf-verification.json",
+  "native_rebuilt": true,
+  "next_feature": 31,
+  "apk_created": false
+}

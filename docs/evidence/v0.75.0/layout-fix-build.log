@@ -1,0 +1,76 @@
+{
+  "sdk_apps": "reuse",
+  "mobile_rust": "reuse",
+  "games": "reuse",
+  "android_tests": [
+    "app.onklav.home.SdkRadioPolishTest"
+  ],
+  "variant": "debug",
+  "abis": [
+    "arm64-v8a"
+  ]
+}
+assemble-debug: starting (maximum 600s)
+assemble-debug: 20s elapsed
+assemble-debug: 40s elapsed
+assemble-debug: 60s elapsed
+assemble-debug: finished in 71.67s
+tractFileCollection$FileCollectionElementsFactory.create(AbstractFileCollection.java:213)
+	at org.gradle.api.internal.provider.BuildableBackedProvider.calculateOwnValue(BuildableBackedProvider.java:94)
+	at org.gradle.api.internal.provider.AbstractMinimalProvider.calculateValue(AbstractMinimalProvider.java:115)
+	at org.gradle.api.internal.provider.TransformBackedProvider.calculateOwnValue(TransformBackedProvider.java:81)
+	at org.gradle.api.internal.provider.AbstractMinimalProvider.getOrNull(AbstractMinimalProvider.java:105)
+	at org.gradle.api.internal.provider.ProviderResolutionStrategy$1.resolve(ProviderResolutionStrategy.java:27)
+	at org.gradle.util.internal.DeferredUtil.unpack(DeferredUtil.java:59)
+	at org.gradle.util.internal.DeferredUtil.unpackOrNull(DeferredUtil.java:49)
+	at org.gradle.api.internal.tasks.properties.InputParameterUtils.prepareInputParameterValue(InputParameterUtils.java:38)
+	at org.gradle.api.internal.tasks.properties.InputParameterUtils.prepareInputParameterValue(InputParameterUtils.java:30)
+	... 69 more
+Caused by: java.lang.RuntimeException: Problems reading data from Binary store in /workspace/scratch/75acf774e3b8/build-env/gradle/.tmp/gradle6587866822763664952.bin offset 59320 exists? true
+	at org.gradle.api.internal.artifacts.ivyservice.resolveengine.store.DefaultBinaryStore$SimpleBinaryData.read(DefaultBinaryStore.java:137)
+	at org.gradle.api.internal.artifacts.ivyservice.resolveengine.result.StreamingResolutionResultBuilder$RootFactory.lambda$create$0(StreamingResolutionResultBuilder.java:184)
+	at org.gradle.api.internal.artifacts.ivyservice.resolveengine.store.CachedStoreFactory$SimpleStore.load(CachedStoreFactory.java:101)
+	at org.gradle.api.internal.artifacts.ivyservice.resolveengine.result.StreamingResolutionResultBuilder$RootFactory.create(StreamingResolutionResultBuilder.java:182)
+	at org.gradle.api.internal.artifacts.resolver.DefaultResolutionOutputs.lambda$getRootComponent$1(DefaultResolutionOutputs.java:99)
+	at org.gradle.api.internal.provider.DefaultProvider.calculateOwnValue(DefaultProvider.java:72)
+	at org.gradle.api.internal.provider.AbstractMinimalProvider.calculateOwnPresentValue(AbstractMinimalProvider.java:80)
+	at org.gradle.api.internal.provider.AbstractMinimalProvider.get(AbstractMinimalProvider.java:100)
+	at org.gradle.api.internal.artifacts.result.DefaultResolutionResult.getRoot(DefaultResolutionResult.java:54)
+	at org.gradle.api.internal.artifacts.result.DefaultResolutionResult.getAllComponents(DefaultResolutionResult.java:93)
+	at org.gradle.api.internal.artifacts.configurations.DefaultConfiguration.getConsistentResolutionConstraints(DefaultConfiguration.java:880)
+	at org.gradle.api.internal.artifacts.configurations.DefaultConfiguration.generateSyntheticDependencies(DefaultConfiguration.java:1364)
+	at org.gradle.internal.lazy.UnsafeLazy.get(UnsafeLazy.java:35)
+	at org.gradle.api.internal.artifacts.configurations.DefaultConfiguration.getSyntheticDependencies(DefaultConfiguration.java:1338)
+	at org.gradle.api.internal.artifacts.configurations.DefaultUnlockedConfiguration_Decorated.getSyntheticDependencies(Unknown Source)
+	at org.gradle.api.internal.artifacts.ivyservice.DefaultConfigurationResolver.doResolve(DefaultConfigurationResolver.java:404)
+	at org.gradle.api.internal.artifacts.ivyservice.DefaultConfigurationResolver.resolveGraph(DefaultConfigurationResolver.java:284)
+	at org.gradle.api.internal.artifacts.ivyservice.ShortCircuitEmptyConfigurationResolver.resolveGraph(ShortCircuitEmptyConfigurationResolver.java:88)
+	at org.gradle.api.internal.artifacts.configurations.DefaultConfiguration$1.call(DefaultConfiguration.java:799)
+	... 150 more
+Caused by: java.lang.RuntimeException: Problems loading the resolution results (0.0 secs). Read 0 values, last was: -1
+	at org.gradle.api.internal.artifacts.ivyservice.resolveengine.result.StreamingResolutionResultBuilder$RootFactory.deserialize(StreamingResolutionResultBuilder.java:239)
+	at org.gradle.api.internal.artifacts.ivyservice.resolveengine.store.DefaultBinaryStore$SimpleBinaryData.read(DefaultBinaryStore.java:135)
+	... 168 more
+Caused by: java.io.EOFException
+	at org.gradle.internal.serialize.kryo.StringDeduplicatingKryoBackedDecoder.maybeEndOfStream(StringDeduplicatingKryoBackedDecoder.java:91)
+	at org.gradle.internal.serialize.kryo.StringDeduplicatingKryoBackedDecoder.readByte(StringDeduplicatingKryoBackedDecoder.java:101)
+	at org.gradle.api.internal.artifacts.ivyservice.resolveengine.result.StreamingResolutionResultBuilder$RootFactory.deserialize(StreamingResolutionResultBuilder.java:205)
+	... 169 more
+Caused by: com.esotericsoftware.kryo.KryoException: Buffer underflow.
+	at com.esotericsoftware.kryo.io.Input.require(Input.java:181)
+	at com.esotericsoftware.kryo.io.Input.readByte(Input.java:295)
+	at org.gradle.internal.serialize.kryo.StringDeduplicatingKryoBackedDecoder.readByte(StringDeduplicatingKryoBackedDecoder.java:99)
+	... 170 more
+
+
+BUILD FAILED in 1m 11s
+99 actionable tasks: 8 executed, 91 up-to-date
+
+Traceback (most recent call last):
+  File "/workspace/scratch/75acf774e3b8/recovered/OnKlav/scripts/build.py", line 164, in <module>
+    main()
+  File "/workspace/scratch/75acf774e3b8/recovered/OnKlav/scripts/build.py", line 150, in main
+    run('assemble-' + args.variant, gradle + [':android:app:assemble' + args.variant.capitalize(),*selected], 600)
+  File "/workspace/scratch/75acf774e3b8/recovered/OnKlav/scripts/build.py", line 82, in run
+    raise RuntimeError(f'{label} failed; see {path}')
+RuntimeError: assemble-debug failed; see /workspace/scratch/75acf774e3b8/recovered/OnKlav/docs/evidence/v0.75.0/assemble-debug.log

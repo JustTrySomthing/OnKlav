@@ -1,0 +1,9 @@
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/developer/components)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.04s
+     Running unittests src/lib.rs (developer/components/target/debug/deps/onklav_ui-1771de5ff2e26eff)
+
+running 1 test
+test reference_apps::weather_app::tests::malformed_forecasts_never_replace_cached_data ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 128 filtered out; finished in 0.00s
+

@@ -1,0 +1,5 @@
+readers-compile 20 seconds
+readers-compile 40 seconds
+readers-compile 60 seconds
+readers-compile 80 seconds
+Exit 0

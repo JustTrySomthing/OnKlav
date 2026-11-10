@@ -1,0 +1,16 @@
+Booting software device; one attempt, 300-second limit
+Waiting for boot 0 seconds
+Waiting for boot 32 seconds
+Waiting for boot 64 seconds
+Waiting for boot 100 seconds
+Waiting for boot 130 seconds
+Waiting for boot 162 seconds
+Waiting for boot 195 seconds
+Waiting for boot 229 seconds
+Waiting for boot 262 seconds
+Waiting for boot 294 seconds
+Traceback (most recent call last):
+  File "/workspace/scratch/39f240a7e5bd/check_device.py", line 47, in <module>
+    else: raise TimeoutError('Boot limit reached; no automatic restart')
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+TimeoutError: Boot limit reached; no automatic restart

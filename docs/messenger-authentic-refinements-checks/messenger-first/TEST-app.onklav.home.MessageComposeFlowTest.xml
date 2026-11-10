@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.MessageComposeFlowTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-31T20:54:02" hostname="83231ba1f14b" time="8.266">
+  <properties/>
+  <testcase name="emptyComposerEntireWidthAcceptsAnotherMessageAfterSend" classname="app.onklav.home.MessageComposeFlowTest" time="7.527"/>
+  <testcase name="sentTailStaysAboveComposerAfterResizeAndHistoryBrowsingIsRespected" classname="app.onklav.home.MessageComposeFlowTest" time="0.739"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

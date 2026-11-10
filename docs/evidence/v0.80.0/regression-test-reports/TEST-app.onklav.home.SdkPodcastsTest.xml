@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.SdkPodcastsTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-26T17:10:23" hostname="844ebfe47829" time="2.453">
+  <properties/>
+  <testcase name="longFeedsArePagedAndMissingEnclosureLengthsDoNotHideEpisodes" classname="app.onklav.home.SdkPodcastsTest" time="2.306"/>
+  <testcase name="localDirectoryHasNoNetworkCallOrSearchUsageCounter" classname="app.onklav.home.SdkPodcastsTest" time="0.062"/>
+  <testcase name="publicSearchUsesPublisherFeedsAndFiltersUnsafeResults" classname="app.onklav.home.SdkPodcastsTest" time="0.041"/>
+  <testcase name="unsafeFeedsAndEnclosuresAreRejectedWithoutMarkupOrDuplicates" classname="app.onklav.home.SdkPodcastsTest" time="0.044"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

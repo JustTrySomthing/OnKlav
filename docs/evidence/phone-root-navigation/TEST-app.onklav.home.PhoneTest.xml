@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.PhoneTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2026-11-02T00:17:27" hostname="0df0e3b6efb4" time="6.853">
+  <properties/>
+  <testcase name="externalLinksOnlyPrefillAndNeverTreatCallIntentsAsPermissionToDial" classname="app.onklav.home.PhoneTest" time="2.416"/>
+  <testcase name="completeNumbersUseFullFormattingAndServiceCodesStayUnchanged" classname="app.onklav.home.PhoneTest" time="0.08"/>
+  <testcase name="speedDialPersistsOnlyExplicitValidAssignmentsAndRemovesCleanly" classname="app.onklav.home.PhoneTest" time="0.16"/>
+  <testcase name="dialInputsNormalizeVanityNumbersAndPreservePostDialControls" classname="app.onklav.home.PhoneTest" time="0.036"/>
+  <testcase name="restrictedHistoryNeverExposesANameOrOffersRedial" classname="app.onklav.home.PhoneTest" time="0.041"/>
+  <testcase name="partialTypingFormatsWithoutChangingDialedDigits" classname="app.onklav.home.PhoneTest" time="0.068"/>
+  <testcase name="defaultRoleAndCallAccessArePartOfVersionedSetup" classname="app.onklav.home.PhoneTest" time="0.073"/>
+  <testcase name="modernAudioUsesFrameworkSuppliedEndpoints" classname="app.onklav.home.PhoneTest" time="3.652"/>
+  <testcase name="inCallServicePublishesLegacyAudioAndClearsItWhenDestroyed" classname="app.onklav.home.PhoneTest" time="0.085"/>
+  <testcase name="manifestProvidesDialerEligibilityAndProtectsCallActions" classname="app.onklav.home.PhoneTest" time="0.029"/>
+  <testcase name="historyIsKeysetPagedAndSearchArgumentsAreBound" classname="app.onklav.home.PhoneTest" time="0.071"/>
+  <testcase name="returningToACallTargetsOnlyThePrivateOnKlavCallActivity" classname="app.onklav.home.PhoneTest" time="0.061"/>
+  <testcase name="contactDeletionUsesStableLookupAndChecksRevokedWriteAccess" classname="app.onklav.home.PhoneTest" time="0.038"/>
+  <testcase name="voicemailSettingsArePerAccountAndRejectInvalidNumbers" classname="app.onklav.home.PhoneTest" time="0.042"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

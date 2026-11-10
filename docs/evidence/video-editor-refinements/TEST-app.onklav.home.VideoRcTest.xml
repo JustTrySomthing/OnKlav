@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.VideoRcTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-30T12:43:09" hostname="e89dc6ba27f3" time="2.038">
+  <properties/>
+  <testcase name="previewProxyIsNeverUsedForExportOrPortableBackup" classname="app.onklav.home.VideoRcTest" time="2.038"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

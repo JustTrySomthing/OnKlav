@@ -1,0 +1,11 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+FAIL unattended tower course 2 toppled 7
+FAIL unattended tower course 3 toppled 7
+FAIL unattended tower course 4 toppled 5
+FAIL unattended tower course 5 toppled 6
+FAIL unattended tower course 7 toppled 7
+FAIL unattended tower course 8 toppled 12
+FAIL unattended tower course 9 toppled 8
+FAIL unattended tower course 12 toppled 11
+PANDA_PERFORMANCE_RESULT {"failures":8,"results":[{"cpu_ms":11886.604,"solver_steps":4800,"span":1},{"cpu_ms":2790.997,"solver_steps":2396,"span":2}],"unattended_courses":12}

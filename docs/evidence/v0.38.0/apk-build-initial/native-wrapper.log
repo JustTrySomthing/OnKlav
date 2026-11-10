@@ -1,0 +1,13 @@
+rust-tests: starting
+rust-tests: passed in 28.3s
+host-native: starting
+host-native: passed in 1.9s
+android-native: starting
+android-native: passed in 78.7s
+Traceback (most recent call last):
+  File "/workspace/scratch/39f240a7e5bd/project/OnKlav/scripts/build_native.py", line 32, in <module>
+    shutil.copyfile(ROOT/f'core/target/{target}/release/libonklav_core.so',destination)
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/shutil.py", line 262, in copyfile
+    with open(dst, 'wb') as fdst:
+         ^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: '/workspace/scratch/39f240a7e5bd/project/OnKlav/android/shared/src/main/jniLibs/arm64-v8a/libonklav_core.so'

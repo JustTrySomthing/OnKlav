@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.GameEntryFlowTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-11-04T20:44:50" hostname="1bb679a568a0" time="4.846">
+  <properties/>
+  <testcase name="resumeChoiceIsResolvedBeforeLoadingAndOnlyForSelectedGame" classname="app.onklav.home.GameEntryFlowTest" time="3.95"/>
+  <testcase name="explicitResumeBypassesSecondEntryDialog" classname="app.onklav.home.GameEntryFlowTest" time="0.244"/>
+  <testcase name="friendNewRetainsTheHostStorageProtocolWhenSwitchingToSolo" classname="app.onklav.home.GameEntryFlowTest" time="0.135"/>
+  <testcase name="hostRejectsLateSessionSaveAfterAcknowledgedDiscard" classname="app.onklav.home.GameEntryFlowTest" time="0.105"/>
+  <testcase name="noSaveShowsStartBeforeAnyWebViewAndCancelLoadsNothing" classname="app.onklav.home.GameEntryFlowTest" time="0.074"/>
+  <testcase name="retiredFriendIntentCannotSelectPandasFriendSaveSlot" classname="app.onklav.home.GameEntryFlowTest" time="0.059"/>
+  <testcase name="backFromEntryClosesToListWithoutAnySaveWarning" classname="app.onklav.home.GameEntryFlowTest" time="0.053"/>
+  <testcase name="completedGameHasNoResumePrompt" classname="app.onklav.home.GameEntryFlowTest" time="0.057"/>
+  <testcase name="newChoiceKeepsPreviousSaveUntilStartAndQuitTombstoneOffersOnlyStart" classname="app.onklav.home.GameEntryFlowTest" time="0.165"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

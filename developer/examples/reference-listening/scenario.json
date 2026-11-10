@@ -1,0 +1,17 @@
+{
+  "grants": [
+    "storage.private",
+    "network.http",
+    "audio.playback"
+  ],
+  "steps": [
+    {
+      "action": "listen.feed",
+      "value": "https://audio.example.org/podcast.xml"
+    },
+    {
+      "action": "listen.fetch",
+      "pending": "http.request"
+    }
+  ]
+}

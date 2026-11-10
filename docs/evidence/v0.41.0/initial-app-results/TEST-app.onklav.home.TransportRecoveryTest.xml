@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.TransportRecoveryTest" tests="5" skipped="0" failures="1" errors="0" timestamp="2026-10-23T02:34:17" hostname="276516236850" time="0.183">
+  <properties/>
+  <testcase name="walkieCallbackIsRetainedWhenPermissionGatePreventsReconciliation" classname="app.onklav.home.TransportRecoveryTest" time="0.069"/>
+  <testcase name="callbacksRequireMatchingActionUriKindAndPart" classname="app.onklav.home.TransportRecoveryTest" time="0.021"/>
+  <testcase name="receiptsSurviveRestartUntilCoreAcceptsTheOutcomeWithoutResending" classname="app.onklav.home.TransportRecoveryTest" time="0.04">
+    <failure message="java.lang.AssertionError: unexpected exception type thrown; expected:&lt;java.lang.Exception&gt; but was:&lt;java.lang.UnsatisfiedLinkError&gt;" type="java.lang.AssertionError">java.lang.AssertionError: unexpected exception type thrown; expected:&lt;java.lang.Exception&gt; but was:&lt;java.lang.UnsatisfiedLinkError&gt;
+	at org.junit.Assert.assertThrows(Assert.java:1020)
+	at org.junit.Assert.assertThrows(Assert.java:981)
+	at app.onklav.home.TransportRecoveryTest.receiptsSurviveRestartUntilCoreAcceptsTheOutcomeWithoutResending(TransportRecoveryTest.kt:38)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.robolectric.RobolectricTestRunner$HelperTestRunner$1.evaluate(RobolectricTestRunner.java:502)
+	at org.robolectric.internal.SandboxTestRunner$2.lambda$evaluate$2(SandboxTestRunner.java:285)
+	at org.robolectric.internal.bytecode.Sandbox.lambda$runOnMainThread$0(Sandbox.java:104)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: java.lang.UnsatisfiedLinkError: Native Library /workspace/scratch/39f240a7e5bd/project/OnKlav/core/target/debug/libonklav_core.so already loaded in another classloader
+	at java.base/jdk.internal.loader.NativeLibraries.loadLibrary(NativeLibraries.java:201)
+	at java.base/jdk.internal.loader.NativeLibraries.loadLibrary(NativeLibraries.java:174)
+	at java.base/jdk.internal.loader.NativeLibraries.findFromPaths(NativeLibraries.java:315)
+	at java.base/jdk.internal.loader.NativeLibraries.loadLibrary(NativeLibraries.java:287)
+	at java.base/java.lang.ClassLoader.loadLibrary(ClassLoader.java:2427)
+	at java.base/java.lang.Runtime.loadLibrary0(Runtime.java:818)
+	at java.base/java.lang.System.loadLibrary(System.java:2006)
+	at app.onklav.shared.NativeCore.&lt;clinit&gt;(Core.kt:13)
+	at app.onklav.home.ChatStore.requestSync(ChatStore.kt:43)
+	at app.onklav.home.MessagingTransport.outcome(MessagingTransport.kt:157)
+	at app.onklav.home.MessagingTransport.applyResult(MessagingTransport.kt:624)
+	at app.onklav.home.MessagingTransport.receiveResult(MessagingTransport.kt:616)
+	at app.onklav.home.TransportRecoveryTest.receiptsSurviveRestartUntilCoreAcceptsTheOutcomeWithoutResending$lambda$1(TransportRecoveryTest.kt:38)
+	at org.junit.Assert.assertThrows(Assert.java:1001)
+	... 18 more
+</failure>
+  </testcase>
+  <testcase name="failedMmsAddressInsertRollsBackOnlyTheNewParent" classname="app.onklav.home.TransportRecoveryTest" time="0.032"/>
+  <testcase name="recoverySchedulingCoalescesAndDoesNotEnableTransport" classname="app.onklav.home.TransportRecoveryTest" time="0.02"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

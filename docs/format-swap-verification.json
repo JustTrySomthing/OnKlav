@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-30",
+  "production_compilation": "passed",
+  "focused_host_checks": {
+    "silentVideoDoesNotOfferAudioExtraction": "passed",
+    "textImportRejectsBinaryAndOdtPreservesParagraphsAndRejectsEntities": "passed",
+    "largeTextKeepsCardsReadable": "passed",
+    "pcmConversionPreservesSamplesAndWritesCorrectWaveAndAiffHeaders": "passed",
+    "imageSaveFlowKeepsOriginalAndOffersDoneAndAnotherFile": "passed",
+    "documentsProduceRealDocxHtmlTextAndEscapedRtf": "passed",
+    "homeAndFormatFlowHaveClearStepsAndHonestTargets": "passed",
+    "imageConversionUsesRealEncodingResizesAndFlattensTransparency": "passed",
+    "landscapeCanScrollToAllFourCategories": "passed"
+  },
+  "method": "8 checks passed in main run; existing DOCX final paragraph newline expectation corrected, then document check passed in focused rerun. No production changes between runs.",
+  "visual_review": [
+    "portrait home and conversion options",
+    "landscape scroll reachability",
+    "1.5x text single-column cards",
+    "theme surface corrected"
+  ],
+  "not_verified_on_physical_phone": [
+    "PDF emission and page rendering (Robolectric has no PDF native implementation)",
+    "real MediaCodec/Media3 audio/video and HEIC/HDR compatibility",
+    "large files, process termination and connected phone-folder filing"
+  ],
+  "apk_built": false,
+  "new_native_dependencies": false
+}

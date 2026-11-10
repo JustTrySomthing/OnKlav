@@ -1,0 +1,12 @@
+Publisher key created. Keep it private and backed up.
+   Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/workspace/scratch/75acf774e3b8/work/OnKlav/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/work/OnKlav/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/workspace/scratch/75acf774e3b8/work/OnKlav/developer/examples/text-reader)
+    Finished `release` profile [optimized] target(s) in 7.19s
+Created /tmp/onklav-verify-yavwriwc/check.onklav-a
+OnKlav SDK: Scenario step 11 (reading.back): Missing scenario path: close Local diagnostic: /workspace/scratch/75acf774e3b8/work/OnKlav/developer/examples/text-reader/target/onklav-diagnostics/scenario-failure-2kq6nzvh.json

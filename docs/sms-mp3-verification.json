@@ -1,0 +1,255 @@
+{
+  "version": "0.100.10-rc1",
+  "code": 119,
+  "app_checks": 28,
+  "checks": {
+    "AudioEditorHostTest.pitchAndTempoAreIndependentAndStereoRemainsLinked": "PASSED",
+    "AudioEditorHostTest.learnedSpectralNoiseReductionReducesNoiseAndKeepsTone": "PASSED",
+    "AudioEditorHostTest.signedAppLaunchAndRevocableStorageAreEnforced": "PASSED",
+    "AudioEditorHostTest.editsKeepSourceAndRoundTripWithStereoSilence": "PASSED",
+    "AudioEditorHostTest.gainToneFadesNormalizationAndOverloadProtectionWork": "PASSED",
+    "AudioEditorUiTest.trimSoundCleanupAndSaveAreReachable": "PASSED",
+    "MessagePlaybackRegressionTest.audioPreparesPlaysAndResumesWithoutInvalidPause": "PASSED",
+    "MessagePlaybackRegressionTest.immediatePreparationCannotBePausedByInitialClipSetup": "PASSED",
+    "MessagePlaybackRegressionTest.rotatingVideoHidesChromeAndRestoresItInPortrait": "PASSED",
+    "MessagePlaybackRegressionTest.videoViewerDialogAutoplays": "PASSED",
+    "MessagePlaybackRegressionTest.audioViewerDialogAutoplays": "PASSED",
+    "MessagePlaybackRegressionTest.videoPreparesPlaysAndResumesWithoutInvalidPause": "PASSED",
+    "Mp3IntegrationTest.pitchedAudioCanBeExportedAsMp3AndReopened": "PASSED",
+    "Mp3IntegrationTest.independentVbrMpeg2AndMpeg25FilesDecodeThroughTheEditorsSoftwareImport": "PASSED",
+    "Mp3IntegrationTest.signedSdkAudiobookPlaybackUsesBundledFallbackAndRevocationStillStopsIt": "PASSED",
+    "RadioContinuityTest.sleepDeadlineAndRevocationCannotBeBypassedByReconnect": "PASSED",
+    "RadioContinuityTest.rapidEofAndIoErrorsAreBoundedAndManualPlayCanRetry": "PASSED",
+    "RadioContinuityTest.pauseStopAndReplacementCancelQueuedReconnection": "PASSED",
+    "RadioContinuityTest.trackBoundaryReconnectsLiveEdgeAndKeepsChangingAudioSession": "PASSED",
+    "SdkMediaLifecycleTest.sleepStopsOnlyItsCurrentPlayerAndReplacementCancelsDeadline": "PASSED",
+    "SdkMediaLifecycleTest.signedPlayerOwnsSessionControlsAndStopsOnRevocation": "PASSED",
+    "SdkMediaLifecycleTest.deletingAppDataClearsPositionsWithoutALateStopRecreatingThem": "PASSED",
+    "SdkMediaLifecycleTest.pauseDuringPreparationAndReplacementNeverRestartOldPlayback": "PASSED",
+    "SmsSettlementTest.transientNegativeThenSuccessNeverFlashesAFailureAndNeverResends": "PASSED",
+    "SmsSettlementTest.actionableSimRadioPermissionErrorsAndClockChangesDoNotWait": "PASSED",
+    "SmsSettlementTest.genuineFailuresStillAppearAfterTheBoundedDurableWindow": "PASSED",
+    "TransportRecoveryTest.receiptsSurviveRestartUntilCoreAcceptsTheOutcomeWithoutResending": "PASSED",
+    "TransportRecoveryTest.recoverySchedulingCoalescesAndDoesNotEnableTransport": "PASSED"
+  },
+  "retained_validation": "Unchanged app regressions passed in initial-app-tests; affected SMS/rename checks passed in short-file-drain-tests; final MP3 backend checks passed in android-host-check. No repeat of unaffected suites.",
+  "production_and_test_sha256": {
+    "android/app/build.gradle.kts": "b20589d9b4f2403451fbb2afab48bc2dcff3e472d0a0573cf70822d7631a5879",
+    "android/app/src/main/kotlin/app/onklav/home/AudioEditMedia.kt": "a8b9ed781e718122c884d17e9cbdf7f7b0d5ea2cbdaf613d237091e6f6a47cb6",
+    "android/app/src/main/kotlin/app/onklav/home/AudioEditor.kt": "61de546da9b089270efee88c52a7f537738a7c7cd4eca76b37422778729b72dd",
+    "android/app/src/main/kotlin/app/onklav/home/AudioEditorModel.kt": "3e91a29312d144acd067e2a1617be03751638b48aa11a051123f8a059cf8504a",
+    "android/app/src/main/kotlin/app/onklav/home/ConversationMedia.kt": "176510758bb26bd0f2c63d2138d03960295a9a9240edc06d27cbb4061a7922fb",
+    "android/app/src/main/kotlin/app/onklav/home/FileBrowserActivity.kt": "f11636943cd80de84cc9b40b984d847f8e3902e09363ef417cab7e856a91820c",
+    "android/app/src/main/kotlin/app/onklav/home/FileSelectionStore.kt": "905c03f26ade6401b285e8c3a50193e6a27a877ed83a6bad279ee8cfaf025a12",
+    "android/app/src/main/kotlin/app/onklav/home/FilesBroker.kt": "8aed60f9ce15e46f9417abe60c2aad0b3ea920ad9894e6723ae4238bf8d38678",
+    "android/app/src/main/kotlin/app/onklav/home/MessageAttachments.kt": "72bf9911bc967a9586cb77dab0b6833f7fa947854f787954773205d0dee6bfed",
+    "android/app/src/main/kotlin/app/onklav/home/MessageMedia.kt": "4bced56c5bee9361666e42bca5ef6171602ffeda07a0476f801847904d55d687",
+    "android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt": "5721708a3003cf48fe216315e9cbcb9b7d28fab673ca59236aa0c90cdfc55544",
+    "android/app/src/main/kotlin/app/onklav/home/SdkAudioBooks.kt": "e8456ba1a8708b682c815d8fe1df0d4260e800ef4ef5c11bf784c8e8d4608131",
+    "android/app/src/main/kotlin/app/onklav/home/SdkMedia.kt": "7b50a3b2073eb67e8d90ded756c77f59a35061cf12ec5067e62717c6cb457d7d",
+    "android/app/src/main/kotlin/app/onklav/home/SdkMediaSource.kt": "0cd0e81e58c930627acc44abe7f0ad989681cbcc6c220fc574d024aa8f167f5d",
+    "android/app/src/main/kotlin/app/onklav/home/SdkPodcasts.kt": "389a78a1d1833bd4afbf3995692e8ceec233048c6fe171d11511eb9ad3668074",
+    "android/app/src/main/kotlin/app/onklav/home/SdkPrivateFilesEffects.kt": "a19b244c1d8e653faa15449b4ec292794c88598bf5e3e920dadf93cb7ed8f37e",
+    "android/app/src/main/kotlin/app/onklav/home/SettingsDialogs.kt": "048e14ae846a37e751b9b6e70efc876d81a30c46db4cce777fafe7768884aa74",
+    "android/app/src/main/kotlin/app/onklav/home/TransportRecovery.kt": "e6ba3f681318e990481e270dd57ebda9b7aa6134adc3d255c82fc9d68b6cb79b",
+    "android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt": "d1056b5ecb0a5a8112543d97726b964baa5f9471cbdc6adf6ba29417bbc33003",
+    "android/app/src/test/kotlin/app/onklav/home/AudioEditorHostTest.kt": "6e6f008c3e06786dd9a84f3bc69a5e30d72abf8cc10314734a7552244a43289d",
+    "android/app/src/test/kotlin/app/onklav/home/AudioEditorUiTest.kt": "de0ee8506774ec5baf8abe0214a8276c6e27b8b0713c4e62877424f995229f54",
+    "android/shared/build.gradle.kts": "b0fc0ee49540bce72c21365578ec10db95c484fe8951145c4d163cd2925dd3a6",
+    "sdk/README.md": "a0b4d1f0527bfd22ffe460b1c58c227c66d045e7ac079bc11affe36b8d5ec1b2",
+    "android/shared/src/main/kotlin/app/onklav/shared/Mp3Codec.kt": "670e569270d6f85c2c7ee560fcd99374fe69a0311bca7151435fd31928a8b70a",
+    "android/app/src/main/kotlin/app/onklav/home/Mp3Playback.kt": "7ebdfaa85c13aa717db4c72d859fe7daff3ba7fa483af4decd9f148dd30d400c",
+    "android/shared/libs/jump3r-1.0.5-core.jar": "6b732a7f6eddcae41af61619b14dac1a744a3a2d0ffa2ab4ce6ec3dad130f09b"
+  },
+  "runtime_classes_match": 3113,
+  "independent_audio": {
+    "vbr-stereo": {
+      "rate": 44100,
+      "channels": 2,
+      "seconds": 0.4,
+      "rms": 0.062374343267737456,
+      "hz": 440.0
+    },
+    "mpeg2-mono": {
+      "rate": 22050,
+      "channels": 1,
+      "seconds": 0.4,
+      "rms": 0.08394465610395499,
+      "hz": 435.0
+    },
+    "mpeg25-mono": {
+      "rate": 11025,
+      "channels": 1,
+      "seconds": 0.4,
+      "rms": 0.08394898220191753,
+      "hz": 440.0
+    }
+  },
+  "corrections": [
+    "Synthetic zero-filled MP3 frame accepted as silence; malformed fixture replaced with genuinely truncated frame.",
+    "Missing File import and required render profile corrected during compilation.",
+    "Short-file pending header/sample drain corrected.",
+    "MPEG-2.5 Xing header size adapter preserves gapless fields.",
+    "Historical Audio heading expectation corrected; SMS timing test explicitly expires durable wall-clock receipt."
+  ],
+  "limitations": [
+    "Actual reported handset/carrier callback code unavailable; end-to-end phone send acceptance remains required.",
+    "Software file conversion bounded to two hours and storage; protected/malformed files may fail. Normal remote/radio streaming uses Android decoder.",
+    "No new Wasm encoding effect; public shared Android codec and existing authorized media.play are available."
+  ],
+  "status": "passed; matching ARM64 debug RC APK built and verified",
+  "shared_suites": [
+    {
+      "name": "app.onklav.shared.NativeBridgeTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0"
+    },
+    {
+      "name": "app.onklav.shared.Mp3CodecTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0"
+    },
+    {
+      "name": "app.onklav.shared.LauncherLayoutTest",
+      "tests": "5",
+      "failures": "0",
+      "errors": "0"
+    },
+    {
+      "name": "app.onklav.shared.ThemePackageTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0"
+    }
+  ],
+  "shared_checks": 14,
+  "lint": {
+    "version": "0.100.10-rc1",
+    "command": ":android:app:lintDebug",
+    "status": "passed",
+    "scope": "app, host-test and instrumented-test sources",
+    "errors": 0,
+    "warnings": 279,
+    "information": 1,
+    "evidence": "docs/evidence/v0.100.10/full-lint.log"
+  },
+  "apk": {
+    "name": "host",
+    "variant": "debug",
+    "package": "app.onklav.home.prototype.rewrite",
+    "version_name": "0.100.10-rc1",
+    "version_code": 119,
+    "target_sdk": 36,
+    "bytes": 101970299,
+    "sha256": "e2ad1351b71c797776b0c880468e52600fcdcec21486cb46481460905bd009f2",
+    "signer_sha256": "6ed975c5fc27d19f6291f751a8bb00fa8a2c2e7d268bffc7b6ddf7e1b1a7a69d",
+    "signature_v2_verified": true,
+    "zip_integrity": "pass",
+    "zipalign_16kb": "pass",
+    "abis": [
+      "arm64-v8a"
+    ],
+    "elf_minimum_load_alignment": {
+      "lib/arm64-v8a/libandroidx.graphics.path.so": 16384,
+      "lib/arm64-v8a/libc++_shared.so": 16384,
+      "lib/arm64-v8a/libgodot_android.so": 16384,
+      "lib/arm64-v8a/libimage_processing_util_jni.so": 16384,
+      "lib/arm64-v8a/libonklav_core.so": 16384,
+      "lib/arm64-v8a/libsurface_util_jni.so": 16384
+    },
+    "native_library_sha256": {
+      "lib/arm64-v8a/libandroidx.graphics.path.so": "41e9a793c43a0f4fddb19e33f346bace464f30f888ba7b9eaf96294ea115bfb6",
+      "lib/arm64-v8a/libc++_shared.so": "ad74bf43eb1fd576518168f664ad16a74e00eeda9595875c33dd87f6dd197869",
+      "lib/arm64-v8a/libgodot_android.so": "9e10c5ebda9bb629c671929441cdde3b4a8ab0e5542fc7e88de8d71f2b9840db",
+      "lib/arm64-v8a/libimage_processing_util_jni.so": "f0e4611db0d6b68942d8ba6977519f3dd1cdbffa87b7fc16d8006696ba954af4",
+      "lib/arm64-v8a/libonklav_core.so": "0759a52dc768dc572297db6f4ffcafb8ce8fef221020c1a314fe8e287f1b80b4",
+      "lib/arm64-v8a/libsurface_util_jni.so": "6cb2eac3c68e6a82ce2a5ea5aba86749eb8c609914392e125f6cdfbc208992f8"
+    },
+    "legacy_defined_classes": 0,
+    "defined_class_count": 33668,
+    "permissions": [
+      "android.permission.INTERNET",
+      "android.permission.ACCESS_NETWORK_STATE",
+      "android.permission.VIBRATE",
+      "android.permission.READ_SMS",
+      "android.permission.READ_CONTACTS",
+      "android.permission.SEND_SMS",
+      "android.permission.RECEIVE_SMS",
+      "android.permission.RECEIVE_MMS",
+      "android.permission.RECEIVE_WAP_PUSH",
+      "android.permission.READ_PHONE_STATE",
+      "android.permission.READ_PHONE_NUMBERS",
+      "android.permission.POST_NOTIFICATIONS",
+      "android.permission.RECORD_AUDIO",
+      "android.permission.MODIFY_AUDIO_SETTINGS",
+      "android.permission.RECEIVE_BOOT_COMPLETED",
+      "android.permission.WAKE_LOCK",
+      "android.permission.FOREGROUND_SERVICE",
+      "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+      "android.permission.ACCESS_WIFI_STATE",
+      "android.permission.CHANGE_WIFI_STATE",
+      "android.permission.CHANGE_NETWORK_STATE",
+      "android.permission.ACCESS_COARSE_LOCATION",
+      "android.permission.ACCESS_FINE_LOCATION",
+      "android.permission.CAMERA",
+      "android.permission.BLUETOOTH",
+      "android.permission.BLUETOOTH_ADMIN",
+      "android.permission.BLUETOOTH_SCAN",
+      "android.permission.BLUETOOTH_CONNECT",
+      "android.permission.NEARBY_WIFI_DEVICES",
+      "android.permission.FOREGROUND_SERVICE_DATA_SYNC",
+      "android.permission.SCHEDULE_EXACT_ALARM",
+      "android.permission.USE_FULL_SCREEN_INTENT",
+      "android.permission.FOREGROUND_SERVICE_CAMERA",
+      "app.onklav.home.prototype.rewrite.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+    ],
+    "rust_libraries": {
+      "arm64-v8a": "0759a52dc768dc572297db6f4ffcafb8ce8fef221020c1a314fe8e287f1b80b4"
+    }
+  },
+  "packaged_code": {
+    "defined_classes_verified": [
+      "app/onklav/shared/Mp3Codec",
+      "app/onklav/shared/OnKlavFileContracts",
+      "de/sciss/jump3r/mp3/Lame",
+      "de/sciss/jump3r/mpg/MPGLib",
+      "app/onklav/home/Mp3Playback",
+      "app/onklav/home/MessagingTransport",
+      "app/onklav/home/FileBrowserActivity",
+      "app/onklav/home/FileSelectionProvider",
+      "app/onklav/home/RadioVisualSceneKt",
+      "app/onklav/home/PhotoCropFrameKt",
+      "app/onklav/home/VideoEditorModel",
+      "app/onklav/home/ClockScreenKt",
+      "app/onklav/home/CameraScreenKt"
+    ],
+    "desktop_wrappers_excluded": true,
+    "license_bytes_match": true,
+    "audio_editor_manifest": {
+      "capabilities": [
+        "storage.private",
+        "audio.playback"
+      ],
+      "icon": {
+        "symbol": "edit"
+      },
+      "id": "app.onklav.audioeditor",
+      "min_host": 95,
+      "name": "Audio Editor",
+      "publisher": "4dabb2d88e13dfc4e5f3410abf85819aa92a528cb945f869fcf3033d95f82fad",
+      "runtime": "rust-wasm-ui.v1",
+      "schema": "onklav.app.v1",
+      "version": 4
+    },
+    "control_markers": [
+      "MP3",
+      "Opening MP3",
+      "MP3 playback could not be prepared",
+      "Prism Bloom audio art",
+      "Shutter sound"
+    ],
+    "all_signed_app_native_and_game_bytes_verified": "docs/apk-verification-debug.json"
+  }
+}

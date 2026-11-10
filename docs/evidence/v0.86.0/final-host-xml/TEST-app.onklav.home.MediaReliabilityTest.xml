@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.MediaReliabilityTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-26T22:19:16" hostname="844ebfe47829" time="2.549">
+  <properties/>
+  <testcase name="boundedHttpRangeSegmentsContinueInsteadOfEndingThePodcastEarly" classname="app.onklav.home.MediaReliabilityTest" time="2.09"/>
+  <testcase name="validOggAndM4aEnclosuresAreNotDiscardedByMimeFiltering" classname="app.onklav.home.MediaReliabilityTest" time="0.109"/>
+  <testcase name="largePodcastWithoutRangesUsesOneDiskCacheForRepeatedSeeks" classname="app.onklav.home.MediaReliabilityTest" time="0.232"/>
+  <testcase name="confirmedRadioFailureCanBeHiddenAndRetriedWithoutDeletingFavorites" classname="app.onklav.home.MediaReliabilityTest" time="0.088"/>
+  <testcase name="podcastTransportAcceptsPublicTlsPortsAndSafelyUpgradesExplicitHttpPort" classname="app.onklav.home.MediaReliabilityTest" time="0.03"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

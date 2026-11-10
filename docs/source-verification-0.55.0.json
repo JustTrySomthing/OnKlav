@@ -1,0 +1,64 @@
+{
+  "date": "2026-10-23",
+  "source_version": "0.55.0-dev",
+  "source_version_code": 63,
+  "scope": "Group 1 Reader: overflow notice, playback-control editor caret, queued speech cancellation and initialization retry lifecycle",
+  "apk_built": true,
+  "tests": {
+    "passed": 17,
+    "failed": 0,
+    "unexpected_failures": 0,
+    "known_failures": [],
+    "fresh_framework_host": [
+      {
+        "class": "app.onklav.home.ReaderSdkHostTest",
+        "passed": 1,
+        "failed": 0,
+        "skipped": 0,
+        "evidence": "docs/evidence/v0.55.0/TEST-app.onklav.home.ReaderSdkHostTest.xml"
+      },
+      {
+        "class": "app.onklav.home.SdkSpeechTest",
+        "passed": 4,
+        "failed": 0,
+        "skipped": 0,
+        "evidence": "docs/evidence/v0.55.0/TEST-app.onklav.home.SdkSpeechTest.xml"
+      },
+      {
+        "class": "app.onklav.shared.LauncherLayoutTest",
+        "passed": 5,
+        "failed": 0,
+        "skipped": 0,
+        "evidence": "docs/evidence/v0.55.0/TEST-app.onklav.shared.LauncherLayoutTest.xml"
+      },
+      {
+        "class": "app.onklav.shared.NativeBridgeTest",
+        "passed": 3,
+        "failed": 0,
+        "skipped": 0,
+        "evidence": "docs/evidence/v0.55.0/TEST-app.onklav.shared.NativeBridgeTest.xml"
+      },
+      {
+        "class": "app.onklav.shared.ThemePackageTest",
+        "passed": 4,
+        "failed": 0,
+        "skipped": 0,
+        "evidence": "docs/evidence/v0.55.0/TEST-app.onklav.shared.ThemePackageTest.xml"
+      }
+    ],
+    "rust_reused": {
+      "passed": 169,
+      "failed": 0,
+      "fresh_run": false,
+      "evidence": "docs/evidence/non-game-batch-1/rust-tests.log",
+      "source_and_jni_proof": "docs/host-native-provenance.json"
+    }
+  },
+  "build_evidence": "docs/evidence/v0.55.0/build-debug.json",
+  "apk_evidence": "docs/apk-verification-debug.json",
+  "full_rewrite_complete": false,
+  "handset_acceptance": false,
+  "carrier_acceptance": false,
+  "next_work": "docs/FINISH-NON-GAME.md",
+  "note": "Kotlin-only changes. Hash-verified SDK/mobile JNI/Godot reused; 17 fresh focused host checks, no repeated Rust/UI suite or emulator boot. Current installed offline speech engine and original icon/layout assets retained."
+}

@@ -1,0 +1,38 @@
+{
+  "Files": {
+    "before": 9,
+    "after": 10
+  },
+  "Notes": {
+    "before": 3,
+    "after": 4
+  },
+  "RSS": {
+    "before": 4,
+    "after": 5
+  },
+  "ReadAloud": {
+    "before": 2,
+    "after": 3
+  },
+  "Browser": {
+    "before": 2,
+    "after": 3
+  },
+  "YouTube": {
+    "before": 3,
+    "after": 4
+  },
+  "Annotation": {
+    "before": 2,
+    "after": 3
+  },
+  "Social": {
+    "before": 2,
+    "after": 3
+  },
+  "WalkieTalkie": {
+    "before": 14,
+    "after": 15
+  }
+}

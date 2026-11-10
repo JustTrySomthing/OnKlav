@@ -1,0 +1,9 @@
+{
+  "two_isolated_browser_peers": true,
+  "private_fleets_and_readiness": true,
+  "four_alternating_sms_turns": true,
+  "duplicate_history_ignored": true,
+  "saved_return_prompt": true,
+  "physical_carrier": false,
+  "errors": []
+}

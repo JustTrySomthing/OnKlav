@@ -1,0 +1,2720 @@
+{
+  "status": "All 151 original warnings and two informational items reviewed",
+  "baseline_warning_count": 151,
+  "fixed_original_warnings": 10,
+  "fixed_information_items": 2,
+  "current_warning_count": 142,
+  "current_errors": 0,
+  "current_warning_counts": {
+    "ExifInterface": 2,
+    "RequiresFeature": 9,
+    "GradleDependency": 5,
+    "ChromeOsAbiSupport": 1,
+    "UsableSpace": 2,
+    "ViewConstructor": 1,
+    "UseKtx": 122
+  },
+  "additional_style_advisory": "One new KTX edit suggestion comes from the explicit checked commit in repeated MMS completion recovery; it is deliberately retained.",
+  "suppressed_warning_ids_added": [],
+  "dependency_upgrades_applied": false,
+  "unique_host_cases_passed": 30,
+  "host_cases": [
+    "BrowserSdkHostTest.browserPackageBookmarksTabsSettingsAndReopen",
+    "GroupsFlowHostTest.createEditMembersFoldersSearchAndDelete",
+    "MediaAndCarrierTest.animatedImagesDefaultOnAndPreferencePersists",
+    "MediaAndCarrierTest.carrierTrialRequiresExplicitChoiceAndDoesNotClaimReleaseAcceptance",
+    "MediaAndCarrierTest.driveProviderCopyStreamsSelectedFileAndRejectsSameDestination",
+    "MediaAndCarrierTest.galleryIncludesAllMediaKindsAndPreservesIdentityWithoutDuplicates",
+    "MessagingFeatureTest.olderPhonesUseTheSupportedTelephonyFeature",
+    "MessagingFeatureTest.voiceHardwareAloneDoesNotEnableMessagingOnNewerPhones",
+    "ResponsiveAppearanceHostTest.landscapeSettingsAndAlertActionsStayReachable",
+    "ResponsiveAppearanceHostTest.narrowPhoneLargeTextLight",
+    "ResponsiveAppearanceHostTest.normalPhoneDark",
+    "ResponsiveAppearanceHostTest.tabletContentStaysBounded",
+    "SdkAccessibilityTest.audioControlsLabelTheirPositionAndAllowClipsWithoutDeleteActions",
+    "SdkAccessibilityTest.dateTimeActionsAreDistinctAndStayInsideNarrowLargeTextFields",
+    "SdkAccessibilityTest.drawingToolbarScrollsWithoutCoveringToolsAtLargeText",
+    "SdkAccessibilityTest.mediaAndImageRowsAllowMissingOptionalActionsAndTimestamps",
+    "SdkAccessibilityTest.paletteTargetsKeepTheirSizeAndSelectedStateWhenNarrow",
+    "SdkAccessibilityTest.populatedFieldsKeepLabelsErrorsAndKeyboardFocus",
+    "SdkAccessibilityTest.sharedDialogsAnnounceTheirPaneAndHeadingAtLargeText",
+    "SdkAccessibilityTest.togglesExposeOneLabeledCheckboxAndDisabledState",
+    "TransportRecoveryTest.callbacksRequireMatchingActionUriKindAndPart",
+    "TransportRecoveryTest.committedCoreRemovalWithBlockedPrivateCleanupResumesBeforeAnotherLaunch",
+    "TransportRecoveryTest.completedCallbackIsRetainedWhenDurabilityCannotBeConfirmed",
+    "TransportRecoveryTest.failedAttemptJournalStopsBeforeCallingTheCarrier",
+    "TransportRecoveryTest.failedDownloadErrorJournalRetainsTheDurableCallback",
+    "TransportRecoveryTest.failedMmsAddressInsertRollsBackOnlyTheNewParent",
+    "TransportRecoveryTest.internalBrowserHandoffUsesTheSignedGuestNavigationAndRejectsUnsafeSchemes",
+    "TransportRecoveryTest.receiptsSurviveRestartUntilCoreAcceptsTheOutcomeWithoutResending",
+    "TransportRecoveryTest.recoverySchedulingCoalescesAndDoesNotEnableTransport",
+    "TransportRecoveryTest.walkieCallbackIsRetainedWhenPermissionGatePreventsReconciliation"
+  ],
+  "verification_logs": [
+    "lint-warning-review/final.log",
+    "lint-warning-review/recovery-final.log",
+    "lint-warning-review/ui-flows.log"
+  ],
+  "report_sha256": "401af51c86d5c231cd11beec5938f6635c72fb8eb7d98ec0965ff4d7defaef83",
+  "apk_rebuilt": false,
+  "physical_carrier_and_phone_acceptance_complete": false,
+  "baseline_decisions": [
+    {
+      "id": "ApplySharedPref",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt",
+      "line": "512",
+      "message": "Consider using `apply()` instead; `commit` writes its data to persistent storage immediately, whereas `apply` will handle it in the background",
+      "decision": "fixed",
+      "reason": "Kept synchronous recovery writes and checked success; failed attempts stop before carrier calls and failed result writes retain callback receipts."
+    },
+    {
+      "id": "ApplySharedPref",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt",
+      "line": "533",
+      "message": "Consider using `apply()` instead; `commit` writes its data to persistent storage immediately, whereas `apply` will handle it in the background",
+      "decision": "fixed",
+      "reason": "Kept synchronous recovery writes and checked success; failed attempts stop before carrier calls and failed result writes retain callback receipts."
+    },
+    {
+      "id": "ApplySharedPref",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt",
+      "line": "563",
+      "message": "Consider using `apply()` instead; `commit` writes its data to persistent storage immediately, whereas `apply` will handle it in the background",
+      "decision": "fixed",
+      "reason": "Kept synchronous recovery writes and checked success; failed attempts stop before carrier calls and failed result writes retain callback receipts."
+    },
+    {
+      "id": "ApplySharedPref",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt",
+      "line": "599",
+      "message": "Consider using `apply()` instead; `commit` writes its data to persistent storage immediately, whereas `apply` will handle it in the background",
+      "decision": "fixed",
+      "reason": "Kept synchronous recovery writes and checked success; failed attempts stop before carrier calls and failed result writes retain callback receipts."
+    },
+    {
+      "id": "ExifInterface",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkDrawingImages.kt",
+      "line": "4",
+      "message": "Avoid using `android.media.ExifInterface`; use `androidx.exifinterface.media.ExifInterface` instead",
+      "decision": "reviewed_compatibility",
+      "reason": "Supported platform EXIF reader is used with bounded/sampled image decoding and orientation transforms. AndroidX migration is separate compatibility modernization."
+    },
+    {
+      "id": "ExifInterface",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SettingsScreens.kt",
+      "line": "7",
+      "message": "Avoid using `android.media.ExifInterface`; use `androidx.exifinterface.media.ExifInterface` instead",
+      "decision": "reviewed_compatibility",
+      "reason": "Supported platform EXIF reader is used with bounded/sampled image decoding and orientation transforms. AndroidX migration is separate compatibility modernization."
+    },
+    {
+      "id": "InlinedApi",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt",
+      "line": "22",
+      "message": "Field requires API level 33 (current min is 29): `android.content.pm.PackageManager#FEATURE_TELEPHONY_MESSAGING`",
+      "decision": "fixed",
+      "reason": "API33+ messaging feature checked only on API33+; older Android uses its supported telephony feature."
+    },
+    {
+      "id": "RequiresFeature",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkNativeData.kt",
+      "line": "40",
+      "message": "`deleteProfile` should only be called if the feature `MULTI_PROFILE` is present; to check call `androidx.webkit.WebViewFeature#isFeatureSupported`",
+      "decision": "reviewed_guarded",
+      "reason": "Production profile cleanup is guarded by MULTI_PROFILE in flush; WebView creation requires MULTI_PROFILE before profile access; clear operations check DELETE_BROWSING_DATA. No security guard was removed or bypassed."
+    },
+    {
+      "id": "RequiresFeature",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkNativeData.kt",
+      "line": "40",
+      "message": "`getAllProfileNames` should only be called if the feature `MULTI_PROFILE` is present; to check call `androidx.webkit.WebViewFeature#isFeatureSupported`",
+      "decision": "reviewed_guarded",
+      "reason": "Production profile cleanup is guarded by MULTI_PROFILE in flush; WebView creation requires MULTI_PROFILE before profile access; clear operations check DELETE_BROWSING_DATA. No security guard was removed or bypassed."
+    },
+    {
+      "id": "RequiresFeature",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkWebComponent.kt",
+      "line": "191",
+      "message": "`setProfile` should only be called if the feature `MULTI_PROFILE` is present; to check call `androidx.webkit.WebViewFeature#isFeatureSupported`",
+      "decision": "reviewed_guarded",
+      "reason": "Production profile cleanup is guarded by MULTI_PROFILE in flush; WebView creation requires MULTI_PROFILE before profile access; clear operations check DELETE_BROWSING_DATA. No security guard was removed or bypassed."
+    },
+    {
+      "id": "RequiresFeature",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkWebComponent.kt",
+      "line": "192",
+      "message": "`getProfile` should only be called if the feature `MULTI_PROFILE` is present; to check call `androidx.webkit.WebViewFeature#isFeatureSupported`",
+      "decision": "reviewed_guarded",
+      "reason": "Production profile cleanup is guarded by MULTI_PROFILE in flush; WebView creation requires MULTI_PROFILE before profile access; clear operations check DELETE_BROWSING_DATA. No security guard was removed or bypassed."
+    },
+    {
+      "id": "RequiresFeature",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkWebComponent.kt",
+      "line": "193",
+      "message": "`getServiceWorkerController` should only be called if the feature `MULTI_PROFILE` is present; to check call `androidx.webkit.WebViewFeature#isFeatureSupported`",
+      "decision": "reviewed_guarded",
+      "reason": "Production profile cleanup is guarded by MULTI_PROFILE in flush; WebView creation requires MULTI_PROFILE before profile access; clear operations check DELETE_BROWSING_DATA. No security guard was removed or bypassed."
+    },
+    {
+      "id": "RequiresFeature",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkWebComponent.kt",
+      "line": "203",
+      "message": "`getCookieManager` should only be called if the feature `MULTI_PROFILE` is present; to check call `androidx.webkit.WebViewFeature#isFeatureSupported`",
+      "decision": "reviewed_guarded",
+      "reason": "Production profile cleanup is guarded by MULTI_PROFILE in flush; WebView creation requires MULTI_PROFILE before profile access; clear operations check DELETE_BROWSING_DATA. No security guard was removed or bypassed."
+    },
+    {
+      "id": "RequiresFeature",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkWebComponent.kt",
+      "line": "267",
+      "message": "`getProfile` should only be called if the feature `MULTI_PROFILE` is present; to check call `androidx.webkit.WebViewFeature#isFeatureSupported`",
+      "decision": "reviewed_guarded",
+      "reason": "Production profile cleanup is guarded by MULTI_PROFILE in flush; WebView creation requires MULTI_PROFILE before profile access; clear operations check DELETE_BROWSING_DATA. No security guard was removed or bypassed."
+    },
+    {
+      "id": "RequiresFeature",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkWebComponent.kt",
+      "line": "270",
+      "message": "`deleteBrowsingData` should only be called if the feature `DELETE_BROWSING_DATA` is present; to check call `androidx.webkit.WebViewFeature#isFeatureSupported`",
+      "decision": "reviewed_guarded",
+      "reason": "Production profile cleanup is guarded by MULTI_PROFILE in flush; WebView creation requires MULTI_PROFILE before profile access; clear operations check DELETE_BROWSING_DATA. No security guard was removed or bypassed."
+    },
+    {
+      "id": "RequiresFeature",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkWebComponent.kt",
+      "line": "270",
+      "message": "`getWebStorage` should only be called if the feature `MULTI_PROFILE` is present; to check call `androidx.webkit.WebViewFeature#isFeatureSupported`",
+      "decision": "reviewed_guarded",
+      "reason": "Production profile cleanup is guarded by MULTI_PROFILE in flush; WebView creation requires MULTI_PROFILE before profile access; clear operations check DELETE_BROWSING_DATA. No security guard was removed or bypassed."
+    },
+    {
+      "id": "GradleDependency",
+      "severity": "Warning",
+      "file": "android/app/build.gradle.kts",
+      "line": "57",
+      "message": "A newer version of androidx.webkit:webkit than 1.13.0 is available: 1.18.0",
+      "decision": "reviewed_optional",
+      "reason": "Newer versions are available; pinned library upgrades need coordinated compatibility validation and are not automatically applied during warning cleanup."
+    },
+    {
+      "id": "GradleDependency",
+      "severity": "Warning",
+      "file": "android/app/build.gradle.kts",
+      "line": "62",
+      "message": "A newer version of androidx.test.ext:junit than 1.2.1 is available: 1.3.0",
+      "decision": "reviewed_optional",
+      "reason": "Newer versions are available; pinned library upgrades need coordinated compatibility validation and are not automatically applied during warning cleanup."
+    },
+    {
+      "id": "GradleDependency",
+      "severity": "Warning",
+      "file": "android/app/build.gradle.kts",
+      "line": "64",
+      "message": "A newer version of androidx.compose:compose-bom than 2025.04.01 is available: 2026.09.00",
+      "decision": "reviewed_optional",
+      "reason": "Newer versions are available; pinned library upgrades need coordinated compatibility validation and are not automatically applied during warning cleanup."
+    },
+    {
+      "id": "GradleDependency",
+      "severity": "Warning",
+      "file": "android/app/build.gradle.kts",
+      "line": "67",
+      "message": "A newer version of androidx.test.ext:junit than 1.2.1 is available: 1.3.0",
+      "decision": "reviewed_optional",
+      "reason": "Newer versions are available; pinned library upgrades need coordinated compatibility validation and are not automatically applied during warning cleanup."
+    },
+    {
+      "id": "GradleDependency",
+      "severity": "Warning",
+      "file": "android/app/build.gradle.kts",
+      "line": "70",
+      "message": "A newer version of androidx.compose:compose-bom than 2025.04.01 is available: 2026.09.00",
+      "decision": "reviewed_optional",
+      "reason": "Newer versions are available; pinned library upgrades need coordinated compatibility validation and are not automatically applied during warning cleanup."
+    },
+    {
+      "id": "ConfigurationScreenWidthHeight",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/GroupsPane.kt",
+      "line": "356",
+      "message": "Using Configuration.screenHeightDp instead of LocalWindowInfo.current.containerSize",
+      "decision": "fixed",
+      "reason": "SDK panels and menus use parent constraints; group sheet height uses current window size."
+    },
+    {
+      "id": "ConfigurationScreenWidthHeight",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkAppScreen.kt",
+      "line": "230",
+      "message": "Using Configuration.screenHeightDp instead of LocalWindowInfo.current.containerSize",
+      "decision": "fixed",
+      "reason": "SDK panels and menus use parent constraints; group sheet height uses current window size."
+    },
+    {
+      "id": "ConfigurationScreenWidthHeight",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkAppScreen.kt",
+      "line": "260",
+      "message": "Using Configuration.screenWidthDp instead of LocalWindowInfo.current.containerSize",
+      "decision": "fixed",
+      "reason": "SDK panels and menus use parent constraints; group sheet height uses current window size."
+    },
+    {
+      "id": "ChromeOsAbiSupport",
+      "severity": "Warning",
+      "file": "android/app/build.gradle.kts",
+      "line": "8",
+      "message": "Missing x86_64 ABI support for ChromeOS",
+      "decision": "reviewed_scope",
+      "reason": "Current APK is qualified for Android ARM64; extra ChromeOS ABI packaging is outside this build target."
+    },
+    {
+      "id": "ObsoleteSdkInt",
+      "severity": "Warning",
+      "file": "android/app/src/main/res/mipmap-anydpi-v26",
+      "line": null,
+      "message": "This folder configuration (`v26`) is unnecessary; `minSdkVersion` is 29. Merge all the resources in this folder into `mipmap-anydpi`.",
+      "decision": "fixed",
+      "reason": "Moved the unchanged adaptive launcher resource into the base mipmap folder; removed the obsolete v26 folder. API33 monochrome resources remain."
+    },
+    {
+      "id": "AutoboxingStateCreation",
+      "severity": "Information",
+      "file": "android/app/src/main/kotlin/app/onklav/home/HistoryRecoveryScreen.kt",
+      "line": "25",
+      "message": "Prefer `mutableIntStateOf` instead of `mutableStateOf`",
+      "decision": "fixed",
+      "reason": "Changed integer counters to primitive Compose integer state."
+    },
+    {
+      "id": "AutoboxingStateCreation",
+      "severity": "Information",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SettingsBackup.kt",
+      "line": "59",
+      "message": "Prefer `mutableIntStateOf` instead of `mutableStateOf`",
+      "decision": "fixed",
+      "reason": "Changed integer counters to primitive Compose integer state."
+    },
+    {
+      "id": "UnusedResources",
+      "severity": "Warning",
+      "file": "android/app/src/main/res/drawable/ic_onklav_logo.xml",
+      "line": "1",
+      "message": "The resource `R.drawable.ic_onklav_logo` appears to be unused",
+      "decision": "fixed",
+      "reason": "Removed unreferenced old logo drawable; active launcher and splash assets are preserved."
+    },
+    {
+      "id": "UsableSpace",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/CarrierMedia.kt",
+      "line": "40",
+      "message": "Consider also using `StorageManager#getAllocatableBytes` and `allocateBytes` which will consider clearable cached data",
+      "decision": "reviewed_conservative",
+      "reason": "Current free-space accounting is conservative and does not depend on reclaiming other cached content for imports or carrier processing."
+    },
+    {
+      "id": "UsableSpace",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SettingsStorage.kt",
+      "line": "86",
+      "message": "Consider also using `StorageManager#getAllocatableBytes` and `allocateBytes` which will consider clearable cached data",
+      "decision": "reviewed_conservative",
+      "reason": "Current free-space accounting is conservative and does not depend on reclaiming other cached content for imports or carrier processing."
+    },
+    {
+      "id": "ViewConstructor",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkGatedWebView.kt",
+      "line": "16",
+      "message": "Custom view `SdkGatedWebView` is missing constructor used by tools: `(Context)` or `(Context,AttributeSet)` or `(Context,AttributeSet,int)`",
+      "decision": "reviewed_intentional",
+      "reason": "Gated WebView is created by the host with an explicit authorization callback. A generic XML/tools constructor must not bypass that contract."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/AppsDesktop.kt",
+      "line": "80",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/AppsDesktop.kt",
+      "line": "168",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/AppsDesktop.kt",
+      "line": "242",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/CarrierResults.kt",
+      "line": "37",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/Catalog.kt",
+      "line": "59",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/ChatStore.kt",
+      "line": "36",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/ConversationMedia.kt",
+      "line": "52",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/ConversationMedia.kt",
+      "line": "60",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/ConversationMedia.kt",
+      "line": "175",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/DriveBackup.kt",
+      "line": "57",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/DriveBackup.kt",
+      "line": "57",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/DriveBackup.kt",
+      "line": "84",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/DriveSharing.kt",
+      "line": "49",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/DriveSharing.kt",
+      "line": "129",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/DriveSharing.kt",
+      "line": "130",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/DriveSharing.kt",
+      "line": "140",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/DriveSharing.kt",
+      "line": "161",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/DriveSharing.kt",
+      "line": "195",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/DriveSharing.kt",
+      "line": "208",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/FilesBroker.kt",
+      "line": "76",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/FilesBroker.kt",
+      "line": "77",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/FilesBroker.kt",
+      "line": "77",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/FilesBroker.kt",
+      "line": "78",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/FilesBroker.kt",
+      "line": "98",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/GamesCatalog.kt",
+      "line": "59",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/HistoryBackup.kt",
+      "line": "75",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/HistoryBackup.kt",
+      "line": "76",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/HistoryBackup.kt",
+      "line": "77",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/HistoryBackup.kt",
+      "line": "85",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/HistoryBackup.kt",
+      "line": "115",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/HistoryRestoreProvider.kt",
+      "line": "34",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/HistoryRestoreProvider.kt",
+      "line": "74",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/HistoryRestoreProvider.kt",
+      "line": "114",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessageIdentity.kt",
+      "line": "41",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessageMedia.kt",
+      "line": "102",
+      "message": "Use the KTX function `createBitmap` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessageMedia.kt",
+      "line": "119",
+      "message": "Use the KTX extension function `Bitmap.scale` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessageMedia.kt",
+      "line": "148",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessageMedia.kt",
+      "line": "161",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessageMedia.kt",
+      "line": "207",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessageMedia.kt",
+      "line": "221",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessageMedia.kt",
+      "line": "225",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessageNotifications.kt",
+      "line": "55",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessageNotifications.kt",
+      "line": "55",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessageNotifications.kt",
+      "line": "95",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessageNotifications.kt",
+      "line": "105",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessageVideoPreviews.kt",
+      "line": "77",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/Messages.kt",
+      "line": "111",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/Messages.kt",
+      "line": "132",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/Messages.kt",
+      "line": "274",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/Messages.kt",
+      "line": "291",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/Messages.kt",
+      "line": "313",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/Messages.kt",
+      "line": "326",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/Messages.kt",
+      "line": "330",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/Messages.kt",
+      "line": "349",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/Messages.kt",
+      "line": "351",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/Messages.kt",
+      "line": "397",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/Messages.kt",
+      "line": "604",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt",
+      "line": "22",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt",
+      "line": "68",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt",
+      "line": "179",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt",
+      "line": "183",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt",
+      "line": "356",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt",
+      "line": "362",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt",
+      "line": "384",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt",
+      "line": "474",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt",
+      "line": "490",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt",
+      "line": "533",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt",
+      "line": "558",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt",
+      "line": "599",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessengerSettings.kt",
+      "line": "79",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessengerSetup.kt",
+      "line": "108",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessengerSetup.kt",
+      "line": "174",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/ReplyReminders.kt",
+      "line": "15",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkAppScreen.kt",
+      "line": "197",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkDrawingImages.kt",
+      "line": "28",
+      "message": "Use the KTX function `createBitmap` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkDrawingImages.kt",
+      "line": "69",
+      "message": "Use the KTX extension function `Canvas.withTranslation` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkDrawingImages.kt",
+      "line": "78",
+      "message": "Use the KTX function `createBitmap` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkDrawingView.kt",
+      "line": "116",
+      "message": "Use the KTX extension function `Canvas.withSave` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkFilesEffects.kt",
+      "line": "52",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkFilesEffects.kt",
+      "line": "72",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkGatedWebView.kt",
+      "line": "31",
+      "message": "Use the KTX extension function `Menu.get` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkGatedWebView.kt",
+      "line": "31",
+      "message": "Use the KTX extension property `Menu.size` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkNativeData.kt",
+      "line": "21",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkNativeData.kt",
+      "line": "23",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkNativeData.kt",
+      "line": "29",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkNativeData.kt",
+      "line": "35",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkNativeData.kt",
+      "line": "50",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkNativeData.kt",
+      "line": "54",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkNativeData.kt",
+      "line": "59",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkNotifications.kt",
+      "line": "31",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkNotifications.kt",
+      "line": "36",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkNotifications.kt",
+      "line": "39",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkNotifications.kt",
+      "line": "43",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkNotifications.kt",
+      "line": "49",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkScheduledNotifications.kt",
+      "line": "33",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkScheduledNotifications.kt",
+      "line": "53",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkScheduledNotifications.kt",
+      "line": "83",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkScheduledNotifications.kt",
+      "line": "90",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkSpeech.kt",
+      "line": "83",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkSpeech.kt",
+      "line": "163",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkSpeech.kt",
+      "line": "164",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkWalkieTransport.kt",
+      "line": "92",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkWalkieTransport.kt",
+      "line": "128",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkWalkieTransport.kt",
+      "line": "178",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkWalkieTransport.kt",
+      "line": "264",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkWebComponent.kt",
+      "line": "41",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SettingsBackup.kt",
+      "line": "21",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SettingsDialogs.kt",
+      "line": "96",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SettingsDialogs.kt",
+      "line": "96",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SettingsDialogs.kt",
+      "line": "153",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SettingsMessaging.kt",
+      "line": "48",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SettingsMessaging.kt",
+      "line": "90",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SettingsMessaging.kt",
+      "line": "94",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SettingsPreferences.kt",
+      "line": "103",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SettingsPreferences.kt",
+      "line": "111",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SettingsScreens.kt",
+      "line": "226",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SettingsScreens.kt",
+      "line": "334",
+      "message": "Use the KTX extension function `Bitmap.scale` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SettingsScreens.kt",
+      "line": "338",
+      "message": "Use the KTX function `createBitmap` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SettingsStorage.kt",
+      "line": "45",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SettingsStorage.kt",
+      "line": "101",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SpamPolicy.kt",
+      "line": "35",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    }
+  ],
+  "remaining_decisions": [
+    {
+      "id": "ExifInterface",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkDrawingImages.kt",
+      "line": "4",
+      "message": "Avoid using `android.media.ExifInterface`; use `androidx.exifinterface.media.ExifInterface` instead",
+      "decision": "reviewed_compatibility",
+      "reason": "Supported platform EXIF reader is used with bounded/sampled image decoding and orientation transforms. AndroidX migration is separate compatibility modernization."
+    },
+    {
+      "id": "ExifInterface",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SettingsScreens.kt",
+      "line": "7",
+      "message": "Avoid using `android.media.ExifInterface`; use `androidx.exifinterface.media.ExifInterface` instead",
+      "decision": "reviewed_compatibility",
+      "reason": "Supported platform EXIF reader is used with bounded/sampled image decoding and orientation transforms. AndroidX migration is separate compatibility modernization."
+    },
+    {
+      "id": "RequiresFeature",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkNativeData.kt",
+      "line": "40",
+      "message": "`deleteProfile` should only be called if the feature `MULTI_PROFILE` is present; to check call `androidx.webkit.WebViewFeature#isFeatureSupported`",
+      "decision": "reviewed_guarded",
+      "reason": "Production profile cleanup is guarded by MULTI_PROFILE in flush; WebView creation requires MULTI_PROFILE before profile access; clear operations check DELETE_BROWSING_DATA. No security guard was removed or bypassed."
+    },
+    {
+      "id": "RequiresFeature",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkNativeData.kt",
+      "line": "40",
+      "message": "`getAllProfileNames` should only be called if the feature `MULTI_PROFILE` is present; to check call `androidx.webkit.WebViewFeature#isFeatureSupported`",
+      "decision": "reviewed_guarded",
+      "reason": "Production profile cleanup is guarded by MULTI_PROFILE in flush; WebView creation requires MULTI_PROFILE before profile access; clear operations check DELETE_BROWSING_DATA. No security guard was removed or bypassed."
+    },
+    {
+      "id": "RequiresFeature",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkWebComponent.kt",
+      "line": "191",
+      "message": "`setProfile` should only be called if the feature `MULTI_PROFILE` is present; to check call `androidx.webkit.WebViewFeature#isFeatureSupported`",
+      "decision": "reviewed_guarded",
+      "reason": "Production profile cleanup is guarded by MULTI_PROFILE in flush; WebView creation requires MULTI_PROFILE before profile access; clear operations check DELETE_BROWSING_DATA. No security guard was removed or bypassed."
+    },
+    {
+      "id": "RequiresFeature",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkWebComponent.kt",
+      "line": "192",
+      "message": "`getProfile` should only be called if the feature `MULTI_PROFILE` is present; to check call `androidx.webkit.WebViewFeature#isFeatureSupported`",
+      "decision": "reviewed_guarded",
+      "reason": "Production profile cleanup is guarded by MULTI_PROFILE in flush; WebView creation requires MULTI_PROFILE before profile access; clear operations check DELETE_BROWSING_DATA. No security guard was removed or bypassed."
+    },
+    {
+      "id": "RequiresFeature",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkWebComponent.kt",
+      "line": "193",
+      "message": "`getServiceWorkerController` should only be called if the feature `MULTI_PROFILE` is present; to check call `androidx.webkit.WebViewFeature#isFeatureSupported`",
+      "decision": "reviewed_guarded",
+      "reason": "Production profile cleanup is guarded by MULTI_PROFILE in flush; WebView creation requires MULTI_PROFILE before profile access; clear operations check DELETE_BROWSING_DATA. No security guard was removed or bypassed."
+    },
+    {
+      "id": "RequiresFeature",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkWebComponent.kt",
+      "line": "203",
+      "message": "`getCookieManager` should only be called if the feature `MULTI_PROFILE` is present; to check call `androidx.webkit.WebViewFeature#isFeatureSupported`",
+      "decision": "reviewed_guarded",
+      "reason": "Production profile cleanup is guarded by MULTI_PROFILE in flush; WebView creation requires MULTI_PROFILE before profile access; clear operations check DELETE_BROWSING_DATA. No security guard was removed or bypassed."
+    },
+    {
+      "id": "RequiresFeature",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkWebComponent.kt",
+      "line": "267",
+      "message": "`getProfile` should only be called if the feature `MULTI_PROFILE` is present; to check call `androidx.webkit.WebViewFeature#isFeatureSupported`",
+      "decision": "reviewed_guarded",
+      "reason": "Production profile cleanup is guarded by MULTI_PROFILE in flush; WebView creation requires MULTI_PROFILE before profile access; clear operations check DELETE_BROWSING_DATA. No security guard was removed or bypassed."
+    },
+    {
+      "id": "RequiresFeature",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkWebComponent.kt",
+      "line": "270",
+      "message": "`deleteBrowsingData` should only be called if the feature `DELETE_BROWSING_DATA` is present; to check call `androidx.webkit.WebViewFeature#isFeatureSupported`",
+      "decision": "reviewed_guarded",
+      "reason": "Production profile cleanup is guarded by MULTI_PROFILE in flush; WebView creation requires MULTI_PROFILE before profile access; clear operations check DELETE_BROWSING_DATA. No security guard was removed or bypassed."
+    },
+    {
+      "id": "RequiresFeature",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkWebComponent.kt",
+      "line": "270",
+      "message": "`getWebStorage` should only be called if the feature `MULTI_PROFILE` is present; to check call `androidx.webkit.WebViewFeature#isFeatureSupported`",
+      "decision": "reviewed_guarded",
+      "reason": "Production profile cleanup is guarded by MULTI_PROFILE in flush; WebView creation requires MULTI_PROFILE before profile access; clear operations check DELETE_BROWSING_DATA. No security guard was removed or bypassed."
+    },
+    {
+      "id": "GradleDependency",
+      "severity": "Warning",
+      "file": "android/app/build.gradle.kts",
+      "line": "57",
+      "message": "A newer version of androidx.webkit:webkit than 1.13.0 is available: 1.18.0",
+      "decision": "reviewed_optional",
+      "reason": "Newer versions are available; pinned library upgrades need coordinated compatibility validation and are not automatically applied during warning cleanup."
+    },
+    {
+      "id": "GradleDependency",
+      "severity": "Warning",
+      "file": "android/app/build.gradle.kts",
+      "line": "62",
+      "message": "A newer version of androidx.test.ext:junit than 1.2.1 is available: 1.3.0",
+      "decision": "reviewed_optional",
+      "reason": "Newer versions are available; pinned library upgrades need coordinated compatibility validation and are not automatically applied during warning cleanup."
+    },
+    {
+      "id": "GradleDependency",
+      "severity": "Warning",
+      "file": "android/app/build.gradle.kts",
+      "line": "64",
+      "message": "A newer version of androidx.compose:compose-bom than 2025.04.01 is available: 2026.09.00",
+      "decision": "reviewed_optional",
+      "reason": "Newer versions are available; pinned library upgrades need coordinated compatibility validation and are not automatically applied during warning cleanup."
+    },
+    {
+      "id": "GradleDependency",
+      "severity": "Warning",
+      "file": "android/app/build.gradle.kts",
+      "line": "67",
+      "message": "A newer version of androidx.test.ext:junit than 1.2.1 is available: 1.3.0",
+      "decision": "reviewed_optional",
+      "reason": "Newer versions are available; pinned library upgrades need coordinated compatibility validation and are not automatically applied during warning cleanup."
+    },
+    {
+      "id": "GradleDependency",
+      "severity": "Warning",
+      "file": "android/app/build.gradle.kts",
+      "line": "70",
+      "message": "A newer version of androidx.compose:compose-bom than 2025.04.01 is available: 2026.09.00",
+      "decision": "reviewed_optional",
+      "reason": "Newer versions are available; pinned library upgrades need coordinated compatibility validation and are not automatically applied during warning cleanup."
+    },
+    {
+      "id": "ChromeOsAbiSupport",
+      "severity": "Warning",
+      "file": "android/app/build.gradle.kts",
+      "line": "8",
+      "message": "Missing x86_64 ABI support for ChromeOS",
+      "decision": "reviewed_scope",
+      "reason": "Current APK is qualified for Android ARM64; extra ChromeOS ABI packaging is outside this build target."
+    },
+    {
+      "id": "UsableSpace",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/CarrierMedia.kt",
+      "line": "40",
+      "message": "Consider also using `StorageManager#getAllocatableBytes` and `allocateBytes` which will consider clearable cached data",
+      "decision": "reviewed_conservative",
+      "reason": "Current free-space accounting is conservative and does not depend on reclaiming other cached content for imports or carrier processing."
+    },
+    {
+      "id": "UsableSpace",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SettingsStorage.kt",
+      "line": "86",
+      "message": "Consider also using `StorageManager#getAllocatableBytes` and `allocateBytes` which will consider clearable cached data",
+      "decision": "reviewed_conservative",
+      "reason": "Current free-space accounting is conservative and does not depend on reclaiming other cached content for imports or carrier processing."
+    },
+    {
+      "id": "ViewConstructor",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkGatedWebView.kt",
+      "line": "16",
+      "message": "Custom view `SdkGatedWebView` is missing constructor used by tools: `(Context)` or `(Context,AttributeSet)` or `(Context,AttributeSet,int)`",
+      "decision": "reviewed_intentional",
+      "reason": "Gated WebView is created by the host with an explicit authorization callback. A generic XML/tools constructor must not bypass that contract."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/AppsDesktop.kt",
+      "line": "80",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/AppsDesktop.kt",
+      "line": "168",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/AppsDesktop.kt",
+      "line": "242",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/CarrierResults.kt",
+      "line": "37",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/Catalog.kt",
+      "line": "59",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/ChatStore.kt",
+      "line": "36",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/ConversationMedia.kt",
+      "line": "52",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/ConversationMedia.kt",
+      "line": "60",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/ConversationMedia.kt",
+      "line": "175",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/DriveBackup.kt",
+      "line": "57",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/DriveBackup.kt",
+      "line": "57",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/DriveBackup.kt",
+      "line": "84",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/DriveSharing.kt",
+      "line": "49",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/DriveSharing.kt",
+      "line": "129",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/DriveSharing.kt",
+      "line": "130",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/DriveSharing.kt",
+      "line": "140",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/DriveSharing.kt",
+      "line": "161",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/DriveSharing.kt",
+      "line": "195",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/DriveSharing.kt",
+      "line": "208",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/FilesBroker.kt",
+      "line": "76",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/FilesBroker.kt",
+      "line": "77",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/FilesBroker.kt",
+      "line": "77",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/FilesBroker.kt",
+      "line": "78",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/FilesBroker.kt",
+      "line": "98",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/GamesCatalog.kt",
+      "line": "59",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/HistoryBackup.kt",
+      "line": "75",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/HistoryBackup.kt",
+      "line": "76",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/HistoryBackup.kt",
+      "line": "77",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/HistoryBackup.kt",
+      "line": "85",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/HistoryBackup.kt",
+      "line": "115",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/HistoryRestoreProvider.kt",
+      "line": "34",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/HistoryRestoreProvider.kt",
+      "line": "74",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/HistoryRestoreProvider.kt",
+      "line": "114",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessageIdentity.kt",
+      "line": "41",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessageMedia.kt",
+      "line": "102",
+      "message": "Use the KTX function `createBitmap` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessageMedia.kt",
+      "line": "119",
+      "message": "Use the KTX extension function `Bitmap.scale` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessageMedia.kt",
+      "line": "148",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessageMedia.kt",
+      "line": "161",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessageMedia.kt",
+      "line": "207",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessageMedia.kt",
+      "line": "221",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessageMedia.kt",
+      "line": "225",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessageNotifications.kt",
+      "line": "55",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessageNotifications.kt",
+      "line": "55",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessageNotifications.kt",
+      "line": "95",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessageNotifications.kt",
+      "line": "105",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessageVideoPreviews.kt",
+      "line": "77",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/Messages.kt",
+      "line": "111",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/Messages.kt",
+      "line": "132",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/Messages.kt",
+      "line": "274",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/Messages.kt",
+      "line": "291",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/Messages.kt",
+      "line": "313",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/Messages.kt",
+      "line": "326",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/Messages.kt",
+      "line": "330",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/Messages.kt",
+      "line": "349",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/Messages.kt",
+      "line": "351",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/Messages.kt",
+      "line": "397",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/Messages.kt",
+      "line": "604",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt",
+      "line": "26",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt",
+      "line": "73",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt",
+      "line": "184",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt",
+      "line": "188",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt",
+      "line": "361",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt",
+      "line": "367",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt",
+      "line": "389",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt",
+      "line": "479",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt",
+      "line": "495",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt",
+      "line": "538",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt",
+      "line": "555",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt",
+      "line": "567",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt",
+      "line": "608",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessengerSettings.kt",
+      "line": "79",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessengerSetup.kt",
+      "line": "108",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/MessengerSetup.kt",
+      "line": "174",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/ReplyReminders.kt",
+      "line": "15",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkAppScreen.kt",
+      "line": "197",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkDrawingImages.kt",
+      "line": "28",
+      "message": "Use the KTX function `createBitmap` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkDrawingImages.kt",
+      "line": "69",
+      "message": "Use the KTX extension function `Canvas.withTranslation` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkDrawingImages.kt",
+      "line": "78",
+      "message": "Use the KTX function `createBitmap` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkDrawingView.kt",
+      "line": "116",
+      "message": "Use the KTX extension function `Canvas.withSave` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkFilesEffects.kt",
+      "line": "52",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkFilesEffects.kt",
+      "line": "72",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkGatedWebView.kt",
+      "line": "31",
+      "message": "Use the KTX extension function `Menu.get` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkGatedWebView.kt",
+      "line": "31",
+      "message": "Use the KTX extension property `Menu.size` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkNativeData.kt",
+      "line": "21",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkNativeData.kt",
+      "line": "23",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkNativeData.kt",
+      "line": "29",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkNativeData.kt",
+      "line": "35",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkNativeData.kt",
+      "line": "50",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkNativeData.kt",
+      "line": "54",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkNativeData.kt",
+      "line": "59",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkNotifications.kt",
+      "line": "31",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkNotifications.kt",
+      "line": "36",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkNotifications.kt",
+      "line": "39",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkNotifications.kt",
+      "line": "43",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkNotifications.kt",
+      "line": "49",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkScheduledNotifications.kt",
+      "line": "33",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkScheduledNotifications.kt",
+      "line": "53",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkScheduledNotifications.kt",
+      "line": "83",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkScheduledNotifications.kt",
+      "line": "90",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkSpeech.kt",
+      "line": "83",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkSpeech.kt",
+      "line": "163",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkSpeech.kt",
+      "line": "164",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkWalkieTransport.kt",
+      "line": "92",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkWalkieTransport.kt",
+      "line": "128",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkWalkieTransport.kt",
+      "line": "178",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkWalkieTransport.kt",
+      "line": "264",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SdkWebComponent.kt",
+      "line": "41",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SettingsBackup.kt",
+      "line": "21",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SettingsDialogs.kt",
+      "line": "96",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SettingsDialogs.kt",
+      "line": "96",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SettingsDialogs.kt",
+      "line": "153",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SettingsMessaging.kt",
+      "line": "48",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SettingsMessaging.kt",
+      "line": "90",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SettingsMessaging.kt",
+      "line": "94",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SettingsPreferences.kt",
+      "line": "103",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SettingsPreferences.kt",
+      "line": "111",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SettingsScreens.kt",
+      "line": "226",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SettingsScreens.kt",
+      "line": "334",
+      "message": "Use the KTX extension function `Bitmap.scale` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SettingsScreens.kt",
+      "line": "338",
+      "message": "Use the KTX function `createBitmap` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SettingsStorage.kt",
+      "line": "45",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SettingsStorage.kt",
+      "line": "101",
+      "message": "Use the KTX extension function `String.toUri` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    },
+    {
+      "id": "UseKtx",
+      "severity": "Warning",
+      "file": "android/app/src/main/kotlin/app/onklav/home/SpamPolicy.kt",
+      "line": "35",
+      "message": "Use the KTX extension function `SharedPreferences.edit` instead?",
+      "decision": "reviewed_optional",
+      "reason": "Framework calls remain valid. Preserve explicit checked commit return values and current URI/bitmap/menu semantics; bulk KTX conversion adds no required behavior."
+    }
+  ]
+}

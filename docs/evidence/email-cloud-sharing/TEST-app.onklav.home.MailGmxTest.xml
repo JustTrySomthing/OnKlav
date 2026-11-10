@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.MailGmxTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-11-02T17:08:16" hostname="13575fdd974e" time="4.804">
+  <properties/>
+  <testcase name="fourChoicesAndExistingProvidersStillParse" classname="app.onklav.home.MailGmxTest" time="4.646"/>
+  <testcase name="typingAnAddressUpdatesDefaultsWithoutOverwritingCustomServerOrUser" classname="app.onklav.home.MailGmxTest" time="0.091"/>
+  <testcase name="presetsUseSecureGmxHostsAndRoundTrip" classname="app.onklav.home.MailGmxTest" time="0.067"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,35 @@
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.04s
+     Running unittests src/lib.rs (core/target/debug/deps/onklav_core-c99782d6e97d4a6f)
+
+running 22 tests
+test group_wire::tests::strict_parse_preserves_unknown_text ... ok
+test group_wire::tests::missing_ambiguous_or_media_targets_never_hide_events ... ok
+test group_wire::tests::reactions_are_actor_scoped_idempotent_and_removable ... ok
+test messaging::group_tests::binding_transfers_controls_and_delete_preserves_messages ... ok
+test mms::tests::compose_wire_and_multipart_unicode ... ok
+test mms::tests::every_truncation_is_bounded ... ok
+test mms::tests::independent_notification_fixture ... ok
+test mms::tests::unsafe_identity_cannot_write ... ok
+test tests::archive_paths ... ok
+test tests::broken_document_is_reported ... ok
+test tests::inspect_valid_archive_never_grants_execution ... ok
+test messaging::tests::drafts_folders_and_flags_survive_reload ... ok
+test tests::invalid_archives_reject_paths_missing_entry_and_metadata ... ok
+test tests::storage_lifecycle_and_search ... ok
+test tests::unicode_limits ... ok
+test messaging::tests::invalid_updates_preserve_previous_state ... ok
+test messaging::group_tests::membership_change_keeps_old_conversation_flags ... ok
+test tests::traversal_and_invalid_data_do_not_replace_notes ... ok
+test messaging::group_tests::groups_reload_and_rename_keep_thread ... ok
+test messaging::tests::delivery_and_unknown_result_never_imply_success ... ok
+test messaging::group_tests::invalid_group_changes_are_atomic ... ok
+test messaging::tests::multipart_callbacks_are_idempotent_and_failures_stick ... ok
+
+test result: ok. 22 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.03s
+
+   Doc-tests onklav_core
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

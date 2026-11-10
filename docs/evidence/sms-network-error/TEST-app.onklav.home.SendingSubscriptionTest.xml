@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.SendingSubscriptionTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-11-02T15:45:49" hostname="13575fdd974e" time="0.026">
+  <properties/>
+  <testcase name="noSimFailsBeforeStaging" classname="app.onklav.home.SendingSubscriptionTest" time="0.01"/>
+  <testcase name="respectsActiveSavedChoice" classname="app.onklav.home.SendingSubscriptionTest" time="0.012"/>
+  <testcase name="resolvesSoleSimWhenAndroidDefaultIsUnset" classname="app.onklav.home.SendingSubscriptionTest" time="0.001"/>
+  <testcase name="followsCurrentSystemDefault" classname="app.onklav.home.SendingSubscriptionTest" time="0.0"/>
+  <testcase name="missingPhoneStatePermissionStillUsesValidDefault" classname="app.onklav.home.SendingSubscriptionTest" time="0.0"/>
+  <testcase name="explicitTransferCannotSwitchSims" classname="app.onklav.home.SendingSubscriptionTest" time="0.001"/>
+  <testcase name="doesNotGuessBetweenTwoSims" classname="app.onklav.home.SendingSubscriptionTest" time="0.0"/>
+  <testcase name="recoversStaleChoiceOnSingleSimPhone" classname="app.onklav.home.SendingSubscriptionTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

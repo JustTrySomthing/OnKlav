@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "seconds": 349.07,
+  "variant": "debug",
+  "abis": [
+    "arm64-v8a"
+  ],
+  "lint_passed": true,
+  "source_inputs_match": true,
+  "signed_apps_current": 25,
+  "physical_device_acceptance": false
+}

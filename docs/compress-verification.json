@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-30",
+  "production_compilation": "passed",
+  "unique_focused_host_checks": {
+    "mediaEstimatesFollowQualityAndResolutionWithoutUpscaling": "passed",
+    "largeTextKeepsCategoriesAndControlsReachable": "passed",
+    "cancelledCompressionAndOpenFailureKeepThePreviousSourceUsable": "passed",
+    "imageReencodingProducesSmallerPlayableCopiesAndKeepsOriginal": "passed",
+    "landscapeCanReachFilesAndFolderChoice": "passed",
+    "completeImageFlowShowsMeasuredSizeSavesOriginalUnchangedAndHasDone": "passed",
+    "zipPreservesBytesPathsEmptyFoldersAndDetectsUnsafeOrDuplicatePaths": "passed",
+    "selectedFolderUsesSignedFilesTraversalPreservesHierarchyAndHonorsRevocation": "passed"
+  },
+  "visual_review": [
+    "themed portrait category cards",
+    "sticky size estimate and Compress action",
+    "actual before-after result",
+    "landscape file-folder selection",
+    "1.5x text category cards"
+  ],
+  "checks_use": [
+    "real JPEG/WebP encoding and decoding",
+    "same-encoder preview and output length comparison",
+    "real ZIP readback, bytes, nested and empty folders",
+    "signed Files controller, actual staged folder traversal and revoked permission rejection",
+    "real source-preserving file save stream and explicit Done"
+  ],
+  "not_physically_verified": [
+    "Media3/MediaCodec video encoding, actual output bitrate and phone playback",
+    "MP3 output playback at each quality on the phone (existing shared codec reused)",
+    "HEIC/HDR and large/long media",
+    "screen-off/process death and connected phone-folder save/share acceptance"
+  ],
+  "apk_built": false,
+  "new_native_dependencies": false
+}

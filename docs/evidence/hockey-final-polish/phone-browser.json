@@ -1,0 +1,32 @@
+[
+  {
+    "viewport": [
+      320,
+      640
+    ],
+    "actual_audio_settings_resume_restores_motion": true,
+    "host_probe_does_not_break_done": true,
+    "existing_pause_preserved": true,
+    "touch_responsiveness_and_primary_pointer": true,
+    "real_collision_rebound": true,
+    "unboxed_goal_rival_and_match_results": true,
+    "saved_playing_rally_restores_velocity": true,
+    "music_rms": 0.009870897703155659,
+    "errors": []
+  },
+  {
+    "viewport": [
+      432,
+      800
+    ],
+    "actual_audio_settings_resume_restores_motion": true,
+    "host_probe_does_not_break_done": true,
+    "existing_pause_preserved": true,
+    "touch_responsiveness_and_primary_pointer": true,
+    "real_collision_rebound": true,
+    "unboxed_goal_rival_and_match_results": true,
+    "saved_playing_rally_restores_velocity": true,
+    "music_rms": 0.0030182528055006483,
+    "errors": []
+  }
+]

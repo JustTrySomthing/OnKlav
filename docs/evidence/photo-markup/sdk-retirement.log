@@ -1,0 +1,37 @@
+{
+  "build": [],
+  "restore_bundles": [],
+  "remove_bundles": [
+    "Annotation"
+  ],
+  "reuse": [
+    "Clock",
+    "Flashlight",
+    "Camera",
+    "Email",
+    "VideoEditor",
+    "Maps",
+    "Audio",
+    "Write",
+    "Photo",
+    "Calc",
+    "Convert",
+    "Weather",
+    "eBooks",
+    "AudioBooks",
+    "Podcasts",
+    "Radio",
+    "Files",
+    "Notes",
+    "Counter",
+    "RSS",
+    "ReadAloud",
+    "Browser",
+    "YouTube",
+    "Annotation",
+    "Social",
+    "WalkieTalkie"
+  ],
+  "unselected_stale": []
+}
+{"built": [], "bundles_restored": [], "all_packages_current": true}

@@ -1,0 +1,31 @@
+{
+  "status": "implemented",
+  "production_and_test_compilation": "passed",
+  "focused_ui_checks_passed": 10,
+  "test_suites": {
+    "app.onklav.home.VideoPhoneWorkflowTest": {
+      "tests": 9,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "app.onklav.home.VideoEditorUiTest": {
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt": "8f30e3ecfb81b8a6c7c44458d0c51cb0c29add1917db7f43e4350f9042cd92d1",
+    "android/app/src/main/kotlin/app/onklav/home/VideoEditorLayout.kt": "b2c6e4b938e5f21302e38dfe3c5599b0653c841c5e0eef3ff92bc309ad7605c5",
+    "android/app/src/main/kotlin/app/onklav/home/VideoProWorkspace.kt": "34af98fa77f6e53ff5b58c28149267c8f1af8a6eca79bccdcc90073793198a75",
+    "android/app/src/main/kotlin/app/onklav/home/VideoPhonePanels.kt": "81b22d00189d5c6e5e88f33ce07953df502111b909a6c38e1cfcb85f5475e22d"
+  },
+  "source_unchanged_during_verification": true,
+  "native_sdk_or_media_engine_changed": false,
+  "apk_built": false,
+  "physical_phone_qualification": "pending",
+  "evidence": "docs/video-ui-polish-checks and docs/evidence/video-phone",
+  "render_fixture": "generated blue photo; not physical-phone footage"
+}

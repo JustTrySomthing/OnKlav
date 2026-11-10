@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.DriveSharingTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-24T08:54:11" hostname="ac5668fae30d" time="0.42">
+  <properties/>
+  <testcase name="overlappingUploadsCannotOverwriteTheUnfinishedFileRecord" classname="app.onklav.home.DriveSharingTest" time="0.228"/>
+  <testcase name="rejectsForeignCredentialDestinationsAndUnsafeIdentities" classname="app.onklav.home.DriveSharingTest" time="0.026"/>
+  <testcase name="confirmedUploadStreamsBytesAndPublishesOnlyAfterUpload" classname="app.onklav.home.DriveSharingTest" time="0.046"/>
+  <testcase name="cancellingUploadKeepsRecoveryRecordAndNeverPublishesPermission" classname="app.onklav.home.DriveSharingTest" time="0.04"/>
+  <testcase name="nonJsonErrorResponsesPreserveHttpStatusButSuccessfulGarbageFails" classname="app.onklav.home.DriveSharingTest" time="0.045"/>
+  <testcase name="failedUploadRetainsIdentityAndCleanupRequiresOriginalAccount" classname="app.onklav.home.DriveSharingTest" time="0.033"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[System.logW: A resource was acquired at attached stack trace but never released. See java.io.Closeable for information on avoiding resource leaks.
+java.lang.Throwable: Explicit termination method 'close' not called
+	at dalvik.system.CloseGuard.$$robo$$dalvik_system_CloseGuard$open(CloseGuard.java:237)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.robolectric.shadows.ShadowCloseGuard$CloseGuardReflector$$Reflector39.open(Unknown Source)
+	at org.robolectric.shadows.ShadowCloseGuard.open(ShadowCloseGuard.java:38)
+	at dalvik.system.CloseGuard.open(CloseGuard.java)
+	at android.os.ParcelFileDescriptor.$$robo$$android_os_ParcelFileDescriptor$__constructor__(ParcelFileDescriptor.java:201)
+	at android.os.ParcelFileDescriptor.<init>(ParcelFileDescriptor.java:188)
+	at android.os.ParcelFileDescriptor.<init>(ParcelFileDescriptor.java:184)
+	at org.robolectric.shadows.ShadowParcelFileDescriptor.newParcelFileDescriptor(ShadowParcelFileDescriptor.java:116)
+	at org.robolectric.shadows.ShadowParcelFileDescriptor.open(ShadowParcelFileDescriptor.java:121)
+	at android.os.ParcelFileDescriptor.open(ParcelFileDescriptor.java)
+	at app.onklav.home.DriveDocumentsTest$Storage.openFile(DriveDocumentsTest.kt:36)
+	at android.content.ContentProvider.$$robo$$android_content_ContentProvider$openAssetFile(ContentProvider.java:1712)
+	at android.content.ContentProvider.openAssetFile(ContentProvider.java)
+	at android.content.ContentProvider.$$robo$$android_content_ContentProvider$openTypedAssetFile(ContentProvider.java:1894)
+	at android.content.ContentProvider.openTypedAssetFile(ContentProvider.java)
+	at android.content.ContentProvider.$$robo$$android_content_ContentProvider$openTypedAssetFile(ContentProvider.java:1961)
+	at android.content.ContentProvider.openTypedAssetFile(ContentProvider.java)
+	at android.content.ContentProvider$Transport.$$robo$$android_content_ContentProvider_Transport$openTypedAssetFile(ContentProvider.java:511)
+	at android.content.ContentProvider$Transport.openTypedAssetFile(ContentProvider.java)
+	at android.content.ContentResolver.$$robo$$android_content_ContentResolver$openTypedAssetFileDescriptor(ContentResolver.java:1687)
+	at android.content.ContentResolver.openTypedAssetFileDescriptor(ContentResolver.java)
+	at android.content.ContentResolver.$$robo$$android_content_ContentResolver$openAssetFileDescriptor(ContentResolver.java:1503)
+	at android.content.ContentResolver.openAssetFileDescriptor(ContentResolver.java)
+	at android.content.ContentResolver.$$robo$$android_content_ContentResolver$openInputStream(ContentResolver.java:1187)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.robolectric.shadows.ShadowContentResolver$ContentResolverReflector$$Reflector38.openInputStream(Unknown Source)
+	at org.robolectric.shadows.ShadowContentResolver.openInputStream(ShadowContentResolver.java:197)
+	at android.content.ContentResolver.openInputStream(ContentResolver.java)
+	at app.onklav.home.DriveDocuments$copy$2.invokeSuspend(DriveBackup.kt:34)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:124)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:89)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:820)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+
+]]></system-err>
+</testsuite>

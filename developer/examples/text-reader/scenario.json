@@ -1,0 +1,13 @@
+{"grants":["storage.private"],"steps":[
+ {"action":"reading.next","expect":{"offset":5500,"dirty":false}},
+ {"reopen":true,"expect":{"offset":5500}},
+ {"action":"reading.query","value":"😀"},
+ {"action":"reading.find","expect":{"results.0":[6,10],"results.1":[17,21]}},
+ {"action":"reading.hit.1","expect":{"offset":17,"dirty":false,"show_results":false}},
+ {"reopen":true,"expect":{"offset":17}},
+ {"action":"reading.previous","expect":{"offset":0,"dirty":false}},
+ {"reopen":true,"expect":{"offset":0}},
+ {"action":"reading.query","value":"ALPHA"},
+ {"action":"reading.find","expect":{"results":[]}},
+ {"action":"reading.back","frame_expect":{"close_requested":true}}
+]}

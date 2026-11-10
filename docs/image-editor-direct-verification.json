@@ -1,0 +1,48 @@
+{
+  "status": "source complete; no new APK assembled",
+  "latest_delivered_apk": "0.100.5/code114",
+  "validation": {
+    "suites": [
+      {
+        "class": "PhotoEditorHostTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "class": "PhotoEditorUiTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    ],
+    "runtime_classes_match_compilation": 2839,
+    "native_signed_apps_games_current": true,
+    "visual_review": [
+      "docs/evidence/image-editor-direct/photo-geometry.png",
+      "docs/evidence/image-editor-direct/photo-color.png"
+    ],
+    "physical_phone": "not performed",
+    "lint": "not rerun; earlier release full lint remains incomplete"
+  },
+  "features": [
+    "Direct geometry frame with eight control points and separate rotation handle",
+    "Linked and independent scaling, quarter turns, flips and two perspective axes",
+    "Shared export/preview mapping and color/effect-before-geometry pass",
+    "Open/Save moved into actual SDK host top bar; save left of open",
+    "Undo/Redo/Compare/Fit/Reset merged below image; Fit immediately left of Reset",
+    "Filled left tool button and anchored menu; no secondary effects/transform buttons",
+    "Warm Film removed; Black & White and Sepia in Color",
+    "Adjustable single-image HDR effect in Effects",
+    "Default ticks, snapping, neutral/default color and individual slider reset including JPEG quality",
+    "Slider reset/all-reset/history value synchronization and geometry Fit framing"
+  ],
+  "scope_notes": [
+    "HDR is a bounded SDR tone/detail effect, not HDR-format export or sensor-data recovery",
+    "Original app ID, signed shell version3/publisher, permissions, private image/draft paths retained",
+    "Core/JNI unchanged",
+    "First test compile used an unavailable test matcher; corrected to explicit SemanticsMatcher. Final selected compile/test run passed."
+  ]
+}

@@ -1,0 +1,7 @@
+# OnKlav0.100.54-rc1 / code163
+
+Quick ARM64 development update with the original package and signing identity. Includes the refined Neon Dominos game: all-visible wrapping hand without scrolling, larger adaptive table, one-tap unambiguous play, direct drag-and-drop and cancel, distinct-end choice, gold new-draw highlights, compact scoreboard, smooth rack/chain reflow and durable save/resume. Uses the canonical toolbar/dialogs, purple loader and audio settings. The native entry is single-player-only and preserves game ordering/current-game ownership. All earlier game/app updates from0.100.53 remain included.
+
+Assembly and APK signature/identity/version/content/ZIP/16KB checks pass. Initial assembly encountered a disappearing temporary compressed-asset JAR during Gradle output snapshotting. Only that generated task output was removed before one bounded retry; source and user data were untouched. Source-matched native, voices, signed SDK app and shared game outputs were reused. Neon Dominos passed60,324 geometry assertions and4,628 model assertions, plus320x640/432x800 touch, drag, saved resume, pause and reduced-motion checks during refinement; no broad test loop was repeated for this quick build. Physical Samsung/audio/carrier/performance/store qualification remains separate.
+
+See NEON-DOMINOS.md, apk54-verification.json and evidence/v0.100.54. Earlier no-APK notes are historical;54 includes the completed Neon Dominos refinement.

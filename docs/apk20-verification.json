@@ -1,0 +1,20 @@
+{
+  "status": "original-signer ARM64 RC assembled and verified",
+  "version": "0.100.20-rc1",
+  "version_code": 129,
+  "apk_sha256": "6b72eeee5c201e09f1c3b386b5e27156b2efde96c39b76ce98c9ad54dc39f966",
+  "apk_bytes": 106737983,
+  "hdr_labels_in_dex": [
+    "HDR Natural",
+    "HDR Surreal",
+    "HDR Shiny",
+    "HDR Gritty Grunge",
+    "HDR Painterly Glow",
+    "HDR B & W"
+  ],
+  "feature_checks": "19 unique HDR/legacy/crop/layers/UI checks passed; portrait/landscape sheets reviewed",
+  "verification_report": "docs/apk-verification-debug.json",
+  "build": "Source-current native/SDK/games reused; fresh generated resources/DEX/package outputs; no broad test repetition",
+  "native_sdk_signer_identity_changed": false,
+  "physical_device_performance_qualified": false
+}

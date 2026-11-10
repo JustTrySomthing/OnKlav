@@ -1,0 +1,1 @@
+{"grants":["storage.private","network.http","accounts.connect"],"steps":[{"action":"fixture.sync","expect":{"status":"Fixture snapshot saved","snapshot.items.0.id":"e1"}},{"reopen":true,"expect":{"status":"Saved fixture headers"}},{"action":"account.connect","pending":"accounts.connect"}]}

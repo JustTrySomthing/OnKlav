@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.CloudFilesTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-11-02T17:07:37" hostname="13575fdd974e" time="11.938">
+  <properties/>
+  <testcase name="unsafeOrOversizedXmlIsRejected" classname="app.onklav.home.CloudFilesTest" time="10.795"/>
+  <testcase name="uploadsStreamWithCreateOnlyPreconditionAndNeverRetryConflict" classname="app.onklav.home.CloudFilesTest" time="0.216"/>
+  <testcase name="providerPresetsHaveRegionsAndAppPasswordHelp" classname="app.onklav.home.CloudFilesTest" time="0.243"/>
+  <testcase name="credentialsAndPathsStayOnHttpsAccountRoot" classname="app.onklav.home.CloudFilesTest" time="0.063"/>
+  <testcase name="downloadChecksRevisionAndDeletesFailedTemporaryCopies" classname="app.onklav.home.CloudFilesTest" time="0.111"/>
+  <testcase name="cloudAndBackupsAreRegisteredWithoutGoogleDriveUi" classname="app.onklav.home.CloudFilesTest" time="0.09"/>
+  <testcase name="listingsHonorPropstatStatusDirectChildrenNamespacesAndFolders" classname="app.onklav.home.CloudFilesTest" time="0.082"/>
+  <testcase name="redirectDoesNotTriggerAnotherRequestOrExposePassword" classname="app.onklav.home.CloudFilesTest" time="0.131"/>
+  <testcase name="credentialsAreEncryptedAndCorruptionCannotOverwriteExistingAccounts" classname="app.onklav.home.CloudFilesTest" time="0.2"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

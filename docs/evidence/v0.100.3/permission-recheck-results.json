@@ -1,0 +1,7 @@
+[
+  {
+    "class": "app.onklav.home.SetupPlaybackRepairTest",
+    "name": "setupRequestsFeaturePermissionsAndRechecksAndroidApprovals",
+    "passed": true
+  }
+]

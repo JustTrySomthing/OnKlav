@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.RadioStreamRepairTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2026-10-31T01:33:46" hostname="fa7478106f85" time="28.745">
+  <properties/>
+  <testcase name="closingDuringResponseArrivalClosesLateBodyAndCannotResurrectAConnection" classname="app.onklav.home.RadioStreamRepairTest" time="3.065"/>
+  <testcase name="offlineWaitDoesNotExhaustRetriesAndFallbackRecoversWithoutCallback" classname="app.onklav.home.RadioStreamRepairTest" time="2.637"/>
+  <testcase name="stationProbeCancelsTheLiveSocketBeforeClosingTheResponseBody" classname="app.onklav.home.RadioStreamRepairTest" time="0.039"/>
+  <testcase name="screenOffDoesNotStopServiceAndExplicitStopAndRevocationCancelRecovery" classname="app.onklav.home.RadioStreamRepairTest" time="1.848"/>
+  <testcase name="longPauseAndRepeatedRouteChangesNeverRequireAppRestart" classname="app.onklav.home.RadioStreamRepairTest" time="4.277"/>
+  <testcase name="extensionlessHlsKeepsItsContentType" classname="app.onklav.home.RadioStreamRepairTest" time="0.094"/>
+  <testcase name="playlistsResolveRelativeAudioAndPublicHttpButNeverPrivateSchemes" classname="app.onklav.home.RadioStreamRepairTest" time="0.1"/>
+  <testcase name="replacedStationCannotAuthorizeOldReadsOrReceiveOldCallbacks" classname="app.onklav.home.RadioStreamRepairTest" time="1.963"/>
+  <testcase name="frozenPlaybackClockIsRecoveredEvenWhenEngineClaimsPlaying" classname="app.onklav.home.RadioStreamRepairTest" time="3.262"/>
+  <testcase name="abandonedAudioFocusCallbackCannotPauseNewStation" classname="app.onklav.home.RadioStreamRepairTest" time="1.859"/>
+  <testcase name="resumeCreatesFreshLiveConnectionAndNeverStaysReady" classname="app.onklav.home.RadioStreamRepairTest" time="1.921"/>
+  <testcase name="streamingSourcePreservesIcyHeadersAndChecksPermissionOnEachRead" classname="app.onklav.home.RadioStreamRepairTest" time="0.026"/>
+  <testcase name="readyWithoutAudioAndLongBufferingCannotRemainStuck" classname="app.onklav.home.RadioStreamRepairTest" time="1.816"/>
+  <testcase name="newRadioSessionRestoresQueryAndLoadsCachedResultsWithoutAUserSearch" classname="app.onklav.home.RadioStreamRepairTest" time="5.837"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Intent = Intent { act=android.intent.action.SCREEN_OFF }; Matching wrappers: []
+]]></system-err>
+</testsuite>

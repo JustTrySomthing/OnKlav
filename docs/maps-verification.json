@@ -1,0 +1,86 @@
+{
+  "chunk": 31,
+  "status": "private raster renderer/provider/attribution source implemented; full-host/device qualification pending",
+  "production_path": "Public maps helper -> map_viewer frame validator -> signed visible owner/private tile broker -> canonical readonly raster decode -> native Compose Mercator viewport -> fixed native provider/OSM credit footer and marker details",
+  "android_host_cases_passed": 4,
+  "android_graphics_mode": "Robolectric native graphics; production BitmapFactory raster decode, projection/antimeridian, OSM credits, source path denial and pre/post-decode revocation",
+  "android_evidence_limits": "Actual tile decoder and Compose viewer sources compiled against real shared components. Compile-only model/JNI adapters refuse execution; full integrated viewer/JNI and device gestures/layout/lifecycle were not run.",
+  "rust_map_cases_passed": 4,
+  "rust_filter_total_passed": 6,
+  "rust_filter_note": "maps_ also selected two existing unrelated history-map tests; four map-widget/schema/owner cases counted as feature coverage.",
+  "public_helper_cases_passed": 2,
+  "developer_contract_cases_passed": 5,
+  "signed_guest_scenario_steps_passed": 8,
+  "signed_guest_evidence": "Production signed Rust broker; four bounded tile-create/save gestures, map widget open/back/reopen/open. Disposable key/package discarded; no Android image output fabricated.",
+  "bounds": {
+    "tiles_per_frame": 25,
+    "tile_bytes": 524288,
+    "total_encoded_tile_bytes": 8388608,
+    "tile_pixels": [
+      256,
+      256
+    ],
+    "markers": 32,
+    "xyz_zoom": [
+      0,
+      19
+    ],
+    "raster_magnification": [
+      0.5,
+      4
+    ],
+    "pan_screen_pixels_per_axis": 2048,
+    "mercator_latitude_limit": 85.05112878
+  },
+  "provider": "Explicit keyless HTTPS XYZ template and copyright/attribution metadata, true data-source declaration and offline-policy flag. No networking/location request or provider fallback. OSM data adds fixed host OSM credits; public OSM tile metadata forbids offline-area downloads.",
+  "sample": "Four generated labelled DEMO test rasters, not geographic data. No third-party tile requests.",
+  "diagnosed_issues": [
+    "Legacy Robolectric graphics mode did not populate decoder MIME bounds; changed test configuration to native graphics without relaxing production validation. All four passed.",
+    "SDK host cache contained one zero-byte core object; narrow onklav-core/runner cleanup repaired the runner. Cargo replayed prior linker diagnostic text, but final command exited successfully and eight signed scenario steps passed.",
+    "Synthetic four-tile creation exceeded the existing six-invoke service budget. Split creation/save into one bounded tile per gesture; retained broker limit."
+  ],
+  "native": {
+    "linux_jni_sha256": "748b13a87ef9973305a5bcbfdbdb61e72ceb4416854faa9e00c6ba4a72eda5cf",
+    "arm64_jni_sha256": "4dbfb0aa16c0da40540fd0769352eff63bc29ac21985d7afddd6d7ebdf89a838",
+    "arm64_load_alignment": 16384
+  },
+  "native_source_hashes_verified": true,
+  "released_main_jni_matches_original_handoff": true,
+  "remaining": [
+    "Chunk32 tile transport, HTTP cache/storage eviction and offline-data policy",
+    "Full-host integration remains blocked by recorded unavailable dependency artifacts",
+    "Physical phone raster viewport, TalkBack/layout/gesture/lifecycle/process recovery",
+    "Sustained memory/performance and provider acceptance"
+  ],
+  "unsupported": [
+    "Vector PBF/terrain/rotation/pitch",
+    "Additional XYZ detail on native raster zoom",
+    "Geocoding/routing/turn-by-turn navigation (separate chunk33)"
+  ],
+  "logs": [
+    "docs/evidence/v0.70.0/maps-core-final.log",
+    "docs/evidence/v0.70.0/maps-components.log",
+    "docs/evidence/v0.70.0/maps-contract.log",
+    "docs/evidence/v0.70.0/maps-android-native-decode.log",
+    "docs/evidence/v0.70.0/maps-broker-final.log",
+    "docs/evidence/v0.70.0/maps-native.log"
+  ],
+  "apk_created": false,
+  "sdk_release_created": false,
+  "shipping_package_created": false,
+  "next_feature": 32,
+  "source_sha256": {
+    "core/src/sdk_maps.rs": "82d73a17a2a1dca5ace8406493ffd3e1d6ab535ae7c5ba6e2ddce90ce1d0f81c",
+    "core/src/sdk.rs": "f25712238e331794f86701e525660e70c072bda05373b8636ba5dd8e8ad44461",
+    "core/src/lib.rs": "e5f4433a16e57cb2c7133613db8c6b61bb23633daa8fe70d338a5dbe7e6fedad",
+    "android/app/src/main/kotlin/app/onklav/home/SdkMapTiles.kt": "df1259bf309f7927745c0cab970e27e57c4d3471cd6aad0b32e7f45730fb75e0",
+    "android/app/src/main/kotlin/app/onklav/home/SdkMapViewer.kt": "919781b8b77bbcd188b9d5bcbe8eafdb1a639c29c0d191f804116f708cf16092",
+    "developer/components/src/maps.rs": "0ffded43fc1246cdb98f3898c5e37e66162b29dc751e94f2cbe01eca5e5d425e",
+    "developer/examples/map-viewer/src/lib.rs": "fb1d0c755a737217ec99acd6d535a33b0f3c672e9b49921858e851d6fb863694"
+  },
+  "references": [
+    "https://wiki.openstreetmap.org/wiki/Slippy_map_tilenames",
+    "https://operations.osmfoundation.org/policies/tiles/",
+    "https://osmfoundation.org/wiki/Attribution_Guidelines"
+  ]
+}

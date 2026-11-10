@@ -1,0 +1,11 @@
+test_added_and_changed_rust_sources_invalidate_reuse (test_build_inputs.ArtifactReuseTest.test_added_and_changed_rust_sources_invalidate_reuse) ... ok
+test_android_snapshot_excludes_test_and_other_variant_outputs (test_build_inputs.ArtifactReuseTest.test_android_snapshot_excludes_test_and_other_variant_outputs) ... ok
+test_android_snapshot_tracks_code_resources_and_configuration (test_build_inputs.ArtifactReuseTest.test_android_snapshot_tracks_code_resources_and_configuration) ... ok
+test_game_pack_and_source_must_both_match (test_build_inputs.ArtifactReuseTest.test_game_pack_and_source_must_both_match) ... ok
+test_missing_and_malformed_proofs_never_count_as_current (test_build_inputs.ArtifactReuseTest.test_missing_and_malformed_proofs_never_count_as_current) ... ok
+test_requested_architecture_requires_its_own_proof_and_bytes (test_build_inputs.ArtifactReuseTest.test_requested_architecture_requires_its_own_proof_and_bytes) ... ok
+
+----------------------------------------------------------------------
+Ran 6 tests in 0.025s
+
+OK

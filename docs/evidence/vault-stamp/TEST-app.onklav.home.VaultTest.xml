@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.VaultTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-31T23:44:01" hostname="a174a9bf0ea4" time="23.525">
+  <properties/>
+  <testcase name="realEncryptedVaultRoundTripsThroughNativeAppDocumentsBackup" classname="app.onklav.home.VaultTest" time="5.971"/>
+  <testcase name="passwordsEncryptionFormattingReopenAndChangePassword" classname="app.onklav.home.VaultTest" time="7.078"/>
+  <testcase name="encryptedDocumentIsPortableWithoutDeviceKeysAndKeepsImageAndLinkMarks" classname="app.onklav.home.VaultTest" time="5.168"/>
+  <testcase name="tamperAndTruncationDoNotPublishAnyPlaintext" classname="app.onklav.home.VaultTest" time="3.412"/>
+  <testcase name="lockedStoreRejectsSavesAndFailedOversizeSaveKeepsLastGoodDocument" classname="app.onklav.home.VaultTest" time="1.896"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

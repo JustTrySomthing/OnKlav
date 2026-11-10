@@ -1,0 +1,13 @@
+{
+  "grants": [
+    "storage.private",
+    "network.http",
+    "accounts.connect"
+  ],
+  "steps": [
+    {
+      "reopen": true,
+      "pending": "accounts.list"
+    }
+  ]
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.PhoneDetailsUiTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-11-02T02:56:04" hostname="0df0e3b6efb4" time="6.214">
+  <properties/>
+  <testcase name="padHasTallerKeysAndSpacingAndDisabledCallStaysInactive" classname="app.onklav.home.PhoneDetailsUiTest" time="6.214"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

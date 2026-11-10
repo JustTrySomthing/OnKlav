@@ -1,0 +1,15 @@
+   Compiling onklav-core v0.8.0 (/workspace/scratch/75acf774e3b8/work/OnKlav/core)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 4.08s
+     Running unittests src/lib.rs (core/target/debug/deps/onklav_core-8a579202944a8eae)
+
+running 7 tests
+test sdk_http::tests::http_accounts_are_optional_and_cannot_widen_signed_origins ... ok
+test sdk_http::tests::http_signed_origin_scope_rejects_paths_credentials_ports_and_wildcards ... ok
+test sdk_http::tests::http_accounts_reject_duplicate_scopes_secrets_and_mutable_endpoints ... ok
+test sdk_http::tests::http_requests_cannot_escape_origins_or_smuggle_credentials ... ok
+test sdk_http::tests::http_response_bounds_exclude_cookies_and_unbounded_text ... ok
+test sdk_http::tests::http_binary_responses_are_bounded_and_remain_signed_origin_scoped ... ok
+test sdk::tests::http_manifest_and_live_authorization_bind_signed_origins ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 249 filtered out; finished in 0.17s
+

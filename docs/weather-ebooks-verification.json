@@ -1,0 +1,59 @@
+{
+  "version": "0.88.0-weather-ebooks1",
+  "android_version_code": 96,
+  "sdk_host_build": 95,
+  "status": "Completed; signed ARM64 APK assembled and verified",
+  "implemented": [
+    "Offline US ZIP and ZIP+4 search; 41,488 ZIP centroids with leading zeroes",
+    "First-use default-location prompt; save before forecast request; default pinned above search; Change and Cancel controls",
+    "Launch restores default; migration retains existing selected location; browsing other places preserves default",
+    "Removed toolbar F/C, provider footer and settings provider buttons; units in Settings and credits in About",
+    "Download EPUBs up to library file allowance instead of20MiB",
+    "Disk-backed ZIP reader; eBooks default library1GiB while preserving explicit user storage limits; other apps unchanged",
+    "Large illustrated resources no longer fail old20/32MiB archive thresholds; active content/path/DRM/XML limits retained"
+  ],
+  "core_checks": 283,
+  "controller_checks": 132,
+  "selected_android_cases": {
+    "SdkEbooksTest > largeIllustratedDownloadCommitsAndOpensWithoutTheOld20MbLimit": "PASSED",
+    "SdkEbooksTest > signedAcquisitionUsesScopedBlobThenResumesChapterAndBookmarks": "PASSED",
+    "SdkEbooksTest > failedDownloadAbortsOnlyItsOwnNewStagingFile": "PASSED",
+    "SdkEbooksTest > catalogSummaryIsShortAndDoesNotIncludeSourceFluff": "PASSED",
+    "SdkEbooksTest > closingSessionCleansUnfinishedAcquisition": "PASSED",
+    "SdkEbooksTest > opdsProjectsOnlyBooksAndKeepsOpaquePaging": "PASSED",
+    "UtilityAppsHostTest > cachedRealWeatherRendersAndCitySearchNeedsNoNetwork": "PASSED",
+    "WeatherLocationsTest > zipDefaultSurvivesForecastFailureAndIsPinnedAboveSearch": "PASSED"
+  },
+  "large_epub_evidence": [
+    "65MiB illustrated archive committed and chapter read through Rust disk reader",
+    "21MiB acquisition through signed eBooks, blob commit and reader; cancellation/failure/scoped handles/resume preserved"
+  ],
+  "lint": {
+    "errors": 0,
+    "warnings": 181,
+    "log": "docs/evidence/v0.88.0/final-checks.log"
+  },
+  "native": "Source-matched Linux/main/diagnostic ARM64 JNI, actual LOAD alignment >=16KiB",
+  "included_apps": "All16 signed included packages current; original publisher preserved",
+  "build_plan": "docs/evidence/v0.88.0/build-plan.log",
+  "limits": [
+    "US ZIP data is a public offline snapshot; ZIP+4 maps to five-digit centroid",
+    "ZIP timezone uses nearest city in same state, approximate near timezone borders",
+    "EPUB text profile remains bounded; unsupported DRM/active/fixed-layout books still rejected",
+    "Optional live Gutenberg byte-compatibility test skipped; no physical phone acceptance"
+  ],
+  "apk": {
+    "name": "OnKlav-0.88.0-ARM64.apk",
+    "bytes": 77927949,
+    "sha256": "5417e0c6750563695ad8df18f220cde29cef98c176526e357bcf809915400ed3",
+    "package": "app.onklav.home.prototype.rewrite",
+    "version_code": 96,
+    "version_name": "0.88.0-weather-ebooks1",
+    "signer_sha256": "6ed975c5fc27d19f6291f751a8bb00fa8a2c2e7d268bffc7b6ddf7e1b1a7a69d",
+    "signature_v2_verified": true,
+    "zipalign_16kb": "pass",
+    "abis": [
+      "arm64-v8a"
+    ]
+  }
+}

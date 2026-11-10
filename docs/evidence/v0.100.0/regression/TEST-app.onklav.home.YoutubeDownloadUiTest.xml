@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.YoutubeDownloadUiTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-27T16:46:14" hostname="b1839471ed1a" time="13.566">
+  <properties/>
+  <testcase name="disabledDownloadsCanBeEnabledInsideDialogAndReopenAWorkingSession" classname="app.onklav.home.YoutubeDownloadUiTest" time="10.36"/>
+  <testcase name="downloadDialogChoosesAudioAndRealVideoSizes" classname="app.onklav.home.YoutubeDownloadUiTest" time="3.206"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

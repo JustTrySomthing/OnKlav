@@ -1,0 +1,9 @@
+{
+  "version": "0.100.37-rc1",
+  "checks": "3 focused Phone UI checks passed: default-key height/spacing/long press, root layout/input and bottom-menu gap, 320x568 large-text layout/header shortcuts/delete.",
+  "initial_observation": "First compact check reproduced clipped call controls; fixed by budgeting the whole keypad/control group against workspace height.",
+  "lint": "Full production/test lint completed with zero errors before the final short-key label-only adjustment. Final adjustment receives compilation and repeated compact UI check during APK assembly.",
+  "final_check": "See docs/evidence/v0.100.37/assemble-debug.log and build-debug.json.",
+  "evidence": "docs/evidence/phone-keypad37",
+  "scope": "Host synthetic fixtures. Physical device/carrier/landscape qualification remains separate."
+}

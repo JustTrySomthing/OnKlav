@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.VideoProTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-11-04T20:45:54" hostname="1bb679a568a0" time="7.951">
+  <properties/>
+  <testcase name="variableSpeedTimingSplitsAndAudioProviderAgree" classname="app.onklav.home.VideoProTest" time="2.159"/>
+  <testcase name="oldProjectJsonRetainsCompatibilityAndNewFieldsRoundTrip" classname="app.onklav.home.VideoProTest" time="0.058"/>
+  <testcase name="realOverlaySequencesCarryTimingScaleAlphaAndCutoutEffects" classname="app.onklav.home.VideoProTest" time="0.109"/>
+  <testcase name="shorteningMainTrackClampsOverlaysAndProjectStoreChecksTheirFiles" classname="app.onklav.home.VideoProTest" time="0.081"/>
+  <testcase name="captionsUseOneBoundedTextureAndInactiveCuesStayTransparent" classname="app.onklav.home.VideoProTest" time="2.413"/>
+  <testcase name="keyframeInterpolationAndSplitBoundaryStayContinuous" classname="app.onklav.home.VideoProTest" time="0.037"/>
+  <testcase name="includedVideoDefaultsMicrophoneCapability" classname="app.onklav.home.VideoProTest" time="3.039"/>
+  <testcase name="subtitlesCrossClipBoundariesAndExportWithoutLosingText" classname="app.onklav.home.VideoProTest" time="0.052"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

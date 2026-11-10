@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.SettingsServicesTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-22T19:45:18" hostname="2383b52a5fc7" time="0.253">
+  <properties/>
+  <testcase name="metadataBackupRoundTripIsValidatedAndNeverRestoresCapabilitiesOrSends" classname="app.onklav.home.SettingsServicesTest" time="0.061"/>
+  <testcase name="spamWarningNeedsALinkAndRiskWordingAndHonorsDisabledPreference" classname="app.onklav.home.SettingsServicesTest" time="0.068"/>
+  <testcase name="temporaryCleanupWorksThroughAnAndroidStyleCacheDirectoryAlias" classname="app.onklav.home.SettingsServicesTest" time="0.053"/>
+  <testcase name="temporaryCleanupKeepsRecentExportsSymlinksAndAllOtherPrivateData" classname="app.onklav.home.SettingsServicesTest" time="0.07"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

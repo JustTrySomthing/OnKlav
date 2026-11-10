@@ -1,0 +1,28 @@
+{
+  "schema": "onklav.app.v1",
+  "runtime": "rust-wasm-ui.v1",
+  "id": "app.onklav.email",
+  "name": "Email",
+  "version": 4,
+  "min_host": 95,
+  "icon": {
+    "symbol": "notes"
+  },
+  "capabilities": [
+    "storage.private",
+    "storage.secrets",
+    "network.http",
+    "files.export",
+    "clipboard.read",
+    "clipboard.write",
+    "links.external",
+    "notifications.post",
+    "background.tasks"
+  ],
+  "network": {
+    "origins": [
+      "https://mail.google.com",
+      "https://mail.yahoo.com"
+    ]
+  }
+}

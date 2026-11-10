@@ -1,0 +1,339 @@
+{
+  "date": "2026-10-23",
+  "source_version": "0.43.0-dev",
+  "source_version_code": 50,
+  "scope": "Original ah2 solo Godot game: rules, physics, UI, lifecycle and one current match; friend play pending",
+  "social_placeholder_complete": true,
+  "walkie_conversion_complete": false,
+  "full_rewrite_complete": false,
+  "full_sdk_complete": false,
+  "apk_built": false,
+  "mobile_native_rebuilt": false,
+  "installed_on_handset": false,
+  "last_verified_apk_version": "0.42.0-dev",
+  "last_verified_apk_sha256": "b41de192ad311e5a608e46746b2b4454349adefbe41db4dc7f2933babd6c315a",
+  "internal_packages": [],
+  "tests": {
+    "godot_air_hockey_checks_passed": 72,
+    "godot_existing_rule_checks_passed": 12,
+    "total_passed": 84,
+    "failed": 0,
+    "exported_production_pack_boot": "pass",
+    "android_rust_sdk_rerun": false,
+    "previous_0_42_baseline": {
+      "kotlin_passed": 148,
+      "rust_passed": 145,
+      "total_passed": 293,
+      "failed": 0,
+      "broad_run_initial_failures": 2,
+      "full_host_run_passed": false,
+      "focused_corrective_checks_passed": true,
+      "count_method": "unique tests across broad and focused runs; transient recovery UI timeout retained",
+      "kotlin_suites": [
+        {
+          "name": "app.onklav.home.SdkSpeechTest",
+          "tests": 2
+        },
+        {
+          "name": "app.onklav.home.HistoryBackupTest",
+          "tests": 8
+        },
+        {
+          "name": "app.onklav.home.MessageIdentityTest",
+          "tests": 3
+        },
+        {
+          "name": "app.onklav.home.SdkLifecycleTest",
+          "tests": 4
+        },
+        {
+          "name": "app.onklav.home.SdkFeedServiceTest",
+          "tests": 2
+        },
+        {
+          "name": "app.onklav.home.HistoryRecoveryUiTest",
+          "tests": 10
+        },
+        {
+          "name": "app.onklav.home.GroupsFlowHostTest",
+          "tests": 1
+        },
+        {
+          "name": "app.onklav.home.SdkWebPolicyTest",
+          "tests": 3
+        },
+        {
+          "name": "app.onklav.home.ReminderTimesTest",
+          "tests": 2
+        },
+        {
+          "name": "app.onklav.home.GroupProtocolHostTest",
+          "tests": 3
+        },
+        {
+          "name": "app.onklav.home.UiPolishHostTest",
+          "tests": 5
+        },
+        {
+          "name": "app.onklav.home.RssAppsHostTest",
+          "tests": 1
+        },
+        {
+          "name": "app.onklav.home.SdkVideoPolicyTest",
+          "tests": 3
+        },
+        {
+          "name": "app.onklav.home.ChromeLayoutHostTest",
+          "tests": 2
+        },
+        {
+          "name": "app.onklav.home.YouTubeSdkHostTest",
+          "tests": 1
+        },
+        {
+          "name": "app.onklav.home.SdkDrawingTest",
+          "tests": 4
+        },
+        {
+          "name": "app.onklav.home.SdkContactsTest",
+          "tests": 2
+        },
+        {
+          "name": "app.onklav.home.MessageVideoPreviewsTest",
+          "tests": 3
+        },
+        {
+          "name": "app.onklav.home.BrowserSdkHostTest",
+          "tests": 1
+        },
+        {
+          "name": "app.onklav.home.SdkAppsHostTest",
+          "tests": 1
+        },
+        {
+          "name": "app.onklav.home.SdkVoiceTest",
+          "tests": 7
+        },
+        {
+          "name": "app.onklav.home.SettingsServicesTest",
+          "tests": 4
+        },
+        {
+          "name": "app.onklav.home.MessageFocusTest",
+          "tests": 1
+        },
+        {
+          "name": "app.onklav.shared.ThemePackageTest",
+          "tests": 4
+        },
+        {
+          "name": "app.onklav.home.HistoryApplyTest",
+          "tests": 25
+        },
+        {
+          "name": "app.onklav.home.PhoneNumbersTest",
+          "tests": 3
+        },
+        {
+          "name": "app.onklav.home.ReaderSdkHostTest",
+          "tests": 1
+        },
+        {
+          "name": "app.onklav.home.TransportRecoveryTest",
+          "tests": 7
+        },
+        {
+          "name": "app.onklav.home.HistoryRestoreTest",
+          "tests": 14
+        },
+        {
+          "name": "app.onklav.shared.LauncherLayoutTest",
+          "tests": 5
+        },
+        {
+          "name": "app.onklav.home.ReminderFlowHostTest",
+          "tests": 1
+        },
+        {
+          "name": "app.onklav.home.SettingsUiHostTest",
+          "tests": 8
+        },
+        {
+          "name": "app.onklav.home.WalkieSdkHostTest",
+          "tests": 1
+        },
+        {
+          "name": "app.onklav.home.MessageVideoUiHostTest",
+          "tests": 1
+        },
+        {
+          "name": "app.onklav.home.SocialSdkHostTest",
+          "tests": 1
+        },
+        {
+          "name": "app.onklav.home.AnnotationSdkHostTest",
+          "tests": 1
+        },
+        {
+          "name": "app.onklav.shared.NativeBridgeTest",
+          "tests": 3
+        }
+      ]
+    },
+    "count_method": "Godot assertions this run, not 84 distinct Android/Rust test cases"
+  },
+  "source_counts": {
+    "java": 0,
+    "kotlin": 129,
+    "rust": 33,
+    "gdscript": 4
+  },
+  "native_provenance": "host-native-provenance.json; current Linux JNI only",
+  "sdk_provenance": "app-sdk-provenance.json; all signed internal package hashes and retained publishers unchanged from .25. YouTube v2, Walkie v7.",
+  "production_paths": {
+    "social": "AppsDesktop original Social entry -> AppSdk -> signed Social.onklav-a Rust/Wasm -> standard label/header/Back; no capabilities or effects",
+    "walkie_rules": "Typed control/floor/capture rules are invoked by trusted carrier and host voice production paths; fixture success paths only while transport closed.",
+    "walkie": "AppsDesktop -> signed WalkieTalkie v7 Rust/Wasm -> generic SDK components -> trusted Kotlin carrier confirmation and Rust carrier/session/archive; actual traffic blocked by MMS_READY=false.",
+    "walkie_archive_host": "NativeCore op=sdk/action=walkie_archive -> installed app.onklav.walkie/storage grant checks under SDK mutex -> scoped archive ingest/audio/attempt/carrier.result/receipt/played; trusted host only, no guest service and no device transport effect",
+    "voice": "Signed live voice component -> SdkVoiceController -> Rust floor request/grant and current lease authorization -> 180 ms warmup/beeps -> host Android recorder -> validated bounded AMR -> private archive -> Auto Send or explicit review -> carrier bridge. Player/foreground Auto Play -> host voice_played -> unheard selection and H receipt. Fixture backend and signed-Wasm/JNI tests only.",
+    "contacts": "Contacts provider phone rows are grouped by contact ID, then displayed with alphabetical headings/dividers, photo or initials, number/multiple/no-number labels, original Message/Walkie artwork and explicit number selection. Walkie shortcut opens the same signed internal app and chooses a recipient through its existing guest actions; it does not silently start a live call.",
+    "walkie_session": "Direct guest begin/accept/retry -> pending host-owned service/confirmation -> live SDK/canonical peer/sub/grant authorization -> SdkWalkieTransport -> Rust walkie_carrier -> session and archive -> final claim and permissions check serialized with grant/update/removal -> SmsManager. MMS_READY=false blocks all real sends/receives.",
+    "walkie_receive": "Protected SMS/MMS receivers -> setup/SIM/blocked policy -> trusted Rust control or voice validator -> private session/archive and receipts -> foreground polling/notification. No guest raw SMS service. Real receive is gated and unverified.",
+    "settings": "OnKlav Settings -> dedicated Kotlin/Compose routes -> staged SharedPreferences, Android provider/channel/SAF integration, or Rust SDK/chat operations. Submenus return to parent; per-action errors and explicit unavailable service states.",
+    "walkie_preferences": "Settings Walkie -> AppSdk.sync under carrier lock -> fixed installed Walkie identity + storage.private grant -> Rust walkie_store preferences; no communications/audio grant or carrier effect.",
+    "settings_backup": "Settings SAF -> bounded JSON -> Kotlin envelope/origin + Rust typed metadata validation -> explicit confirmation -> atomic Rust merge; existing entries kept, cross-install provider IDs skipped, reminder timestamps not scheduled, no SDK grants/sends/media restored. Export strips reminder excerpts.",
+    "settings_storage": "Kotlin IO/cancellable bounded MMS-part scan -> largest 20/provider size reporting/open conversation. Confirmed cleanup restricts deletion to non-symlink export copies older than two days, preserving all filesDir data and voice caches.",
+    "settings_spam": "Persisted local warning policy -> MessageRepository IO sender/contact lookup only with READ_CONTACTS -> Messages warning UI -> explicit Trust/Block; no uploads/automatic hiding/deletion.",
+    "appearance": "Settings -> staged AppearanceSpec/Background draft -> existing bounded data-only .onklav-t store/import/export -> Apply persists; Cancel leaves active spec unchanged. Shared dialog viewport/keyboard sizing, large-text reachable footer, missing-picker error and busy navigation guards.",
+    "message_previews": "Settings Privacy -> committed default-off host preference -> shared Messages/Groups Compose MessageVideoCards -> strict bounded ID/start extraction -> generation/foreground/permission checked Kotlin HTTP fixed-CDN request -> bounded image decode -> 2 MiB memory-only cache. Off cancels calls, clears cache and rejects stale results. No message-provided fetch URL.",
+    "message_video_play": "Explicit Play -> private Compose callback -> OnKlav internal YouTube SDK screen -> SdkAppModel.openMessageVideo -> Rust session-bound video_open with current app/grants/ID/start validation -> signed YouTube v2 host-only event -> new epoch/canonical URL -> existing isolated signed-out web component. No exported intent extra or Android YouTube app required.",
+    "included_update": "Settings Apps -> installed app context menu -> newer signed bundled version -> stage and inspect -> existing author/version/capability review -> user Install/Update confirmation; only existing grants preselected. No silent update or automatic permission expansion.",
+    "history_backup": "Settings Storage > Backups > Messages and Media Backup > Kotlin HistoryBackup IO ContentResolver SMS/MMS/addresses/parts with observation/cancellation > private UUID staging > trusted NativeCore history_backup pack > Rust bounded record/identity/parent/path checks, streamed ZIP and SHA-256 index, reopen full CRC/hash/index verification > cancellable SAF save > close and private cleanup. No guest SDK service, provider writes or role changes.",
+    "history_import": "Host Settings -> OpenDocument -> bounded private SAF copy -> strict Rust history_import inspect -> counts-only Review, no SMS access required for inspection. Actual restore unavailable.",
+    "history_comparison": "Review Compare with phone -> explicit host READ_SMS -> HistoryImport fresh SAF copy with expected archive SHA -> shared HistoryBackup.reading/capture under read-operation lock, permission/change/cancel guards -> trusted NativeCore history_import compare -> strict source/current validation -> Rust history_plan fingerprints of SMS and MMS recipient/part content -> private existing-ID/flag/thread candidate map -> counts-only summary after full private cleanup. No guest SDK action or provider writes, default-role request, metadata merge or grants.",
+    "history_restore_journal": "Settings BackupSettingsDialog LaunchedEffect -> HistoryRestore.recoverState/status -> NativeCore history_journal pending/recover/status -> fsync-backed private per-message outcome files. No provider effects on Settings entry.",
+    "history_restore_executor": "Internal HistoryRestore.insertChecked -> immutable MMS_READY/default-role/READ_SMS guards (currently blocks before journal begin) -> validated typed payload -> Rust begin/insert_intent -> fixed Android parent insert/new thread -> durable returned-ID/proof -> MMS address/part stream -> read-back -> commit, or guarded compensating cleanup/held uncertain outcome. HistoryApply now calls this executor for freshly prepared candidates; real/UI writes remain disabled.",
+    "history_archive_coordinator": "Host-only HistoryApply.applyChecked -> immutable production MMS/role/READ_SMS gate before SAF -> HistoryImport.withPrepared fresh copy and observed snapshot -> Rust history_import prepare + history_plan + history_apply -> reviewed archive/plan SHA equality and all-payload preflight + configured local MMS identities -> HistoryRestore.execute + fsync journal -> history_import finish actual committed-ID/partial maps -> full temporary cleanup. No enabled UI/SDK operation. Six current controlled write-provider integration tests exercise the real pipeline.",
+    "history_post_merge": "HistoryApply after successful executor/journal/map handoff -> HistoryBackup.reading(cancelOnChange=true) observed second capture -> guarded NativeCore history_import merge -> history_apply preparation/outcome checks + strict source/post validators + history_plan compare_to -> exact expected row-ID and content match -> dated flags/whole-thread bindings -> messaging.merge_history under state mutex and final native cancel guard -> atomic current-entry-preserving state plus completion receipt -> atomic map acknowledgement. No Restore UI/guest API or real phone writes enabled.",
+    "history_recovery_ui": "Settings Backups > Messages/media > Restore settings/recovery (or pending warning shortcut) -> HistoryRecovery -> NativeCore history_recovery config/overview/map_detail/repair_ack. Rust atomic host identity settings feed gated HistoryApply.applyChecked. Journal recovery classifies interrupted inserts without effects. Saved record repair validates body/receipt and only acknowledges map; no messenger state/provider mutation or metadata replay. Known cleanup uses explicit confirmation and the existing guarded ownership broker, disabled while MMS_READY=false.",
+    "history_journal_compaction": "Settings Backups > Restore settings and recovery > Compact completed journal records > explicit Cancel/Compact > HistoryRecovery.compact under HistoryRestore.exclusive > NativeCore history_recovery/compact_journal > history_journal compact mutex > validate/reconcile raw and archived receipts > fsync temp archive, rename, fsync directory > prune only terminal raw files, fsync directory. All begin/get/receipt/recovery readers retain committed replay protection; uncertain records remain active. No provider access.",
+    "history_completed_compaction": "Settings recovery > Compact completed restore records > Cancel/Compact > Kotlin HistoryRecovery.compactCompleted under HistoryRestore.exclusive > NativeCore history_recovery/compact_completed > Rust history_completed validates raw maps, acknowledged metadata receipts and inserted journal transactions > fsync/rename/fsync completed archive > messenger mutex reload/validate/atomic receipt prune > validate matching map SHA, unlink completed maps and fsync directory. Receipt lookup/merge replay checks consult both stores; review includes archived summaries. No phone/guest API or permission effects.",
+    "history_confirmation": "Settings message backup > checked Review > Compare with phone > Review restoration > HistoryConfirmation.prepare immutable URI/archive/plan/root/local identities > ReferenceDialog reviewed counts/identities with Cancel and disabled Restore > gate-closed HistoryApply.applyChecked > runReviewed under operation lock, validate configuration, one-use consume > existing fresh SAF/strict archive/phone compare/exact reviewed plan/preflight/executor/partial map/post-merge pipeline. Provider checks revalidate configuration. Cancel/reuse/changed configuration fail before SAF; changed plan before insert. No SDK API or role request.",
+    "history_metadata_resume": "Saved record > Reopen original backup > HistoryResume.binding/NativeCore history_recovery resume_info validates SHA, no pending rows/journal and inserted proofs > explicit Files/READ_SMS > HistoryImport.inspectResume strict fresh copy/archive/provider compare + Rust exact old targets/coverage > one-use identity/plan/map review > gate-closed HistoryResume.applyChecked > fresh withResume plan equality > second observed capture > native resume_merge validates original record/proofs, fresh post content/IDs and map SHA > existing metadata merger/atomic receipt under ORIGINAL job + original map acknowledgement. No message insert/delete executor or guest service. Generic insert coordinator refuses resume tickets.",
+    "history_recorded_absence_review": "Settings recovery > recorded needs_review > Check already removed message > ReferenceDialog Cancel/Check with immutable MMS gate > HistoryRecovery.confirmRemovedChecked live role/access gate > HistoryRestore.confirmRemoved under shared operation lock > journal get and known-target/proof guard > two exact-parent ABSENT + parent/MMS-child removal checks with Stop/access guards > final guard > native history_journal reviewed_absent validates original target/proof and phase, fsyncs rolled_back + verified_absent marker. All original evidence retained and compactable; unknown/committed outcomes excluded. No delete/insert/retry/guest service.",
+    "history_partial_resume": "Saved record > Reopen original backup > Rust resume_info effective pending source list from original SHA-bound map and matching committed journal receipts > Files/READ_SMS > strict original archive fresh comparison with exact committed targets and pending=new > one-use pending/plan/identity/map review > MMS-gated HistoryResume.applyChecked > fresh withResume exact plan/pending check > HistoryApply.preparedInputs selects/preflights pending only > guarded HistoryRestore.execute > finally history_recovery resume_checkpoint fsyncs original map from committed receipts without clearing unknowns > updated map binding with no pending > second observed capture > resume_merge metadata under original job. No new outcome map, automatic retry or guest service.",
+    "home_chrome": "MainActivity explicitly uses edge-to-edge layout; OnKlavScreen paints status/navigation inset backplates over wallpaper, removes outer gutter/bottom gap, and keeps content padding inside headers/navigation/lists. HomeHeader and HomeNavigation backgrounds span root width. Theme disables Android contrast scrims while retaining appearance-aware system icon contrast.",
+    "branding": "User purple #5E3D76 O/K speech-bubble reference recreated as editable SVG and Android VectorDrawable. Legacy, adaptive and themed launcher resources referenced by application manifest. Startup theme supplies legacy window background and Android 12+ system splash icon; MainActivity waits for initial SDK setup before first draw with 350ms minimum/2s maximum hold.",
+    "motion": "RightSlideRoute retains app/settings/contact/group screens through 420ms eased right entry and 360ms right exit. Messenger uses directional AnimatedContent for its list/chat pages. SDK and transitional Notes drawers align right and retain their contents through exit. Shared dialog dismissal/footer actions await horizontal closing motion. Reopening uses a new launch key and current model lifecycle.",
+    "desktop": "The dragged grid tile has zero alpha while one floating tile tracks the finger; other slots retain placement animation.",
+    "messenger": "Inbox/Archive/Trash use the existing Rust thread folder metadata, with selected tab styling, folder title and empty states. Restore all targets all trashed conversations, independent of search. Empty trash confirms then rechecks folder/lock metadata and existing phone-write permission gates.",
+    "phone_entry": "Shared phone presentation and cursor offset mapping format NANP numbers, preserve country prefixes, international dialable numbers and short codes. Dialpad supports digits, +, backspace, paste/typing, Cancel and Start Message/Forward Message; profile and Walkie recipient fields share formatting."
+  },
+  "remaining": "Air Hockey friend protocol/bridge/invitations/status and live carrier play, handset/reference/fairness/audio acceptance, other original games, existing communications/speech/security/wider migration gaps. MMS/default role remain disabled.",
+  "default_sms_role_changed": false,
+  "MMS_READY": false,
+  "real_external_messages_sent": false,
+  "recording_or_playback_verified": false,
+  "completed_todo_items": [
+    1,
+    2
+  ],
+  "foreground_voice_broker_implemented": true,
+  "real_device_audio_verified": false,
+  "joint_audio_fixture_jni_verified": true,
+  "contact_picker_implemented": true,
+  "real_device_contact_picker_verified": false,
+  "walkie_session_foundation_implemented": true,
+  "walkie_live_session_verified": false,
+  "session_protocol": "Carrier-correlated !OKW1 control/floor and !OKV1 AMR metadata; peer/SIM/session/attempt correlation, explicit consent, bounded replies and receipts. No cryptographic peer identity or end-to-end encryption. Actual transport gate remains closed.",
+  "incoming_session_foundation_implemented": true,
+  "communications_walkie_default_off": true,
+  "carrier_bridge_implemented": true,
+  "carrier_bridge_enabled": false,
+  "real_test_phones_available": false,
+  "connected_audio_controls_implemented": true,
+  "offline_send_and_explicit_retry_implemented": true,
+  "background_recovery_complete": false,
+  "walkie_ui_parity_accepted": false,
+  "settings_ui_implementation_pass_complete": true,
+  "settings_all_services_complete": false,
+  "settings_handset_accepted": false,
+  "settings_visual_pixel_parity_verified": false,
+  "settings_reference": "Inner Circle 2.2.85 read-only source/design; no legacy implementation included",
+  "settings_screenshot_limit": "Robolectric PixelCopy capture timed out; removed from functional suite, no rendered parity claim.",
+  "completed_todo_subitems": [
+    "3a",
+    "14a"
+  ],
+  "message_youtube_previews_implemented": true,
+  "message_previews_default_off": true,
+  "message_previews_real_provider_verified": false,
+  "message_video_handset_verified": false,
+  "youtube_package_version": 2,
+  "included_package_update_review_implemented": true,
+  "history_backup_export_implemented": true,
+  "history_backup_restore_implemented": false,
+  "history_backup_real_provider_verified": false,
+  "history_backup_encrypted": false,
+  "history_backup_provider_transactional": false,
+  "history_backup_format": "onklav-message-history v1; restore_supported=false",
+  "history_backup_import_inspection_implemented": true,
+  "history_backup_review_implemented": true,
+  "history_backup_import_read_only": true,
+  "history_backup_import_needs_read_sms": false,
+  "history_backup_import_authenticates_author": false,
+  "history_backup_zip64_preallocation_guard": true,
+  "history_duplicate_comparison_implemented": true,
+  "history_mapping_candidates_implemented": true,
+  "history_comparison_needs_read_sms": true,
+  "history_new_provider_ids_recorded": true,
+  "history_provider_transactions_implemented": false,
+  "history_comparison_durable_authorization": false,
+  "history_per_message_executor_implemented": true,
+  "history_durable_outcome_journal_implemented": true,
+  "history_compensating_cleanup_implemented": true,
+  "history_transaction_backend_real_provider_verified": false,
+  "history_archive_apply_coordinator_implemented": true,
+  "history_final_metadata_merge_implemented": true,
+  "history_journal_compaction_implemented": true,
+  "history_durable_message_outcome_maps_implemented": true,
+  "history_reviewed_plan_binding_implemented": true,
+  "history_post_write_provider_revalidation": true,
+  "history_metadata_merge_receipt_implemented": true,
+  "history_local_identities_configuration_implemented": true,
+  "history_recovery_review_ui_implemented": true,
+  "history_saved_ack_repair_implemented": true,
+  "history_apply_resume_ui_implemented": true,
+  "host_toolchain": {
+    "rustc": "1.99.1 (58cf8f9c3 2026-10-13)",
+    "cargo": "1.99.1 (5f94df478 2026-08-27)",
+    "dependencies": "Cargo.lock --locked; unchanged SDK programs"
+  },
+  "history_outcome_map_compaction_implemented": true,
+  "history_metadata_receipt_compaction_implemented": true,
+  "history_journal_compaction_limits": {
+    "active_records": 1000,
+    "archived_terminal_records": 10000,
+    "archive_bytes": 8388608,
+    "overflow": "refuse without deleting evidence"
+  },
+  "history_completed_compaction_limits": {
+    "active_maps": 100,
+    "active_metadata_receipts": 100,
+    "completed_restores": 1000,
+    "archive_bytes": 2097152,
+    "overflow": "refuse without pruning evidence"
+  },
+  "history_apply_confirmation_implemented": true,
+  "history_identity_review_binding_implemented": true,
+  "history_confirmation_one_use": true,
+  "history_record_reopen_implemented": true,
+  "history_metadata_only_resume_implemented": true,
+  "history_partial_message_resume_implemented": true,
+  "history_recorded_absence_review_implemented": true,
+  "history_unknown_insert_resolution_implemented": false,
+  "history_resume_commit_reconciliation_implemented": true,
+  "air_hockey_solo_implemented": true,
+  "air_hockey_friend_play_implemented": false,
+  "air_hockey_handset_verified": false
+}

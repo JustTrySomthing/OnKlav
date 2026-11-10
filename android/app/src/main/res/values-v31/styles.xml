@@ -1,0 +1,1 @@
+<resources><style name="OnKlavTheme" parent="Base.OnKlavTheme"><item name="android:windowSplashScreenBackground">@color/onklav_brand</item><item name="android:windowSplashScreenAnimatedIcon">@drawable/ic_onklav_splash</item><item name="android:windowSplashScreenAnimationDuration">300</item></style></resources>

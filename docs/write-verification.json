@@ -1,0 +1,62 @@
+{
+  "version": "0.93.0-write1",
+  "android_code": 101,
+  "status": "APK assembled and verified",
+  "features": [
+    "Native rich text with selection/insertion formatting",
+    "Text/highlight palettes and custom hex, bold/italic/underline/strike",
+    "Font families/sizes/title presets, links and clear style",
+    "Alignment/indentation, bullets and numbering with double-Enter exit",
+    "Undo/redo, wraparound find/replace and replace all, counts",
+    "Atomic private autosave and backup recovery; New/Rename/Duplicate/Delete/Import",
+    "Native Write/TXT/HTML/basic DOCX exports and A4 PDF rendering path",
+    "Storage/clipboard grants and app-data cleanup"
+  ],
+  "validation": {
+    "android_unique_passed": 5,
+    "classes": [
+      {
+        "name": "WriteHostTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "name": "WriteUiTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    ],
+    "lint": {
+      "Warning": 192
+    },
+    "lint_errors": 0,
+    "signed_included_apps": 18,
+    "native": "unchanged; source-matched JNI reused",
+    "ui": "Signed shell launch plus isolated themed native editor/selection/styles/highlight/lists/undo/export dialog and access revocation passed; screenshot inspected",
+    "docx": "Actual OOXML ZIP output imported back with supported formatting",
+    "pdf": "Native text layout and contiguous pagination checked; Robolectric lacks a PdfDocument backend, so actual PDF bytes remain handset/provider acceptance",
+    "phone_acceptance": "not performed",
+    "apk": "0.93.0-write1/code101 ARM64 debug assembled; original signer, current native/18 signed included apps, ZIP integrity and16KiB alignment verified"
+  },
+  "test_notes": [
+    "Initial syntax issue corrected before successful production compilation",
+    "Initial PDF-byte check replaced with native layout/pagination coverage because the host runtime returns an unsupported native PDF handle",
+    "Initial UI runs stopped after automated performScrollTo hung with the paused host; bounded ScrollBy plus explicit layout/pump passed",
+    "No repeated broad suites; final focused core selection4 and isolated UI selection1 passed"
+  ],
+  "limits": {
+    "characters": 500000,
+    "marks": 50000,
+    "native_json_bytes": 8000000,
+    "import_bytes": 12000000,
+    "docx_inflated_bytes": 24000000,
+    "zip_items": 512,
+    "pdf_pages": 500,
+    "word_layout": "Basic text/explicit formatting; no images/tables/tracked changes or full Word layout/style inheritance"
+  },
+  "evidence": "docs/evidence/v0.93.0"
+}

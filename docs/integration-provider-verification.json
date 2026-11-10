@@ -1,0 +1,154 @@
+{
+  "status": "Complete host and48 scoped tests passed; real OSM raster passed; full lint now PASSED; live OAuth/mail/search/routes require configuration",
+  "date": "2026-10-26",
+  "dependencies_restored": [
+    "com.squareup.okhttp3:okhttp:4.12.0",
+    "androidx.webkit:webkit:1.13.0",
+    "com.google.android.gms:play-services-auth:22.0.0"
+  ],
+  "dependency_cache_supplement": "OnKlav-Android-Dependencies.zip; official new/transitive files plus Gradle module metadata, separate from source; no keys",
+  "compile_fix": "Alias android.os.Message as OsMessage in SdkPdfClient/SdkPdfService; full app chat Message type shadowed Android IPC Message under wildcard imports. Isolated checks had no chat model and missed this.",
+  "complete_source_compile": true,
+  "refusing_stubs_used": false,
+  "host_cases_passed": 48,
+  "host_scope": "35 selected app account/HTTP/upload/map/PDF/JNI cases plus12 shared cases and1 live OSM signed app test. No full-suite or emulator loop. Initial live test had two test-harness issues (Unit return and scalar cleanup replies), fixed and only live selector rerun.",
+  "live_provider_results": {
+    "OSM_raster": "PASSED: one zoom0 tile requested from configured origin through signed reference Map/JNI/production HTTPS; native-graphics decode256x256, cache second load no pending HTTP, revoke blocks component",
+    "OAuth_login_refresh_revocation": "BLOCKED: Mail endpoints and public client ID are placeholders; no registered provider/test account/browser consent session. Synthetic account callbacks pass but are not live acceptance.",
+    "mail_attachment_send_recovery": "BLOCKED: no actual configured JMAP account or designated test recipient",
+    "geocoding_routing": "BLOCKED: geo.example.org/routes.example.org placeholders; no real configured endpoints"
+  },
+  "lint": "PASSED; full current app/host-test/instrumented/dependency analysis; see docs/full-lint-verification.json",
+  "apk_created": false,
+  "actual_email_sent": false,
+  "core_changed": false,
+  "native": "Existing exact source-matched working Linux/ARM64 reused; released main artifacts untouched",
+  "provider_setup_guide": "docs/LIVE-PROVIDER-TESTING.md",
+  "tests": [
+    {
+      "module": "app",
+      "name": "app.onklav.home.SdkNativeBridgeTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "app",
+      "name": "app.onklav.home.SdkHttpServiceTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "app",
+      "name": "app.onklav.home.SdkHttpBridgeTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "app",
+      "name": "app.onklav.home.SdkAccountsTest",
+      "tests": 12,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "app",
+      "name": "app.onklav.home.SdkPdfTest",
+      "tests": 7,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "app",
+      "name": "app.onklav.home.SdkHttpUploadTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "app",
+      "name": "app.onklav.home.SdkMapTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "shared",
+      "name": "app.onklav.shared.NativeBridgeTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "shared",
+      "name": "app.onklav.shared.ThemePackageTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "shared",
+      "name": "app.onklav.shared.LauncherLayoutTest",
+      "tests": 5,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "module": "app",
+      "name": "app.onklav.home.SdkLiveMapProviderTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  ],
+  "dependency_cache_supplement_library_id": "libfile_0721f01c08388191a5a99ef0e4cff0a0",
+  "additional_cleanup": "Removed duplicate ACCESS_NETWORK_STATE manifest declaration; permission remains declared once",
+  "contract_cases_passed": 5,
+  "live_harness": "scripts/check_live_map.py; opt-in, disposable signer/package, no shipping package overwritten",
+  "remaining": [
+    "Real JMAP OAuth client/provider/test account/designated recipient and running Android sign-in session for live login/refresh/revocation and mail attachment/send/recovery tests",
+    "Real configured geocoder/router endpoints/profile/terms/credits instead of example.org",
+    "Phone/two-phone and sustained Android performance/heap/security acceptance remain outside these host checks"
+  ],
+  "cache_supplement_sha256": "85f69fc562521cf5bcde5afd8222cad9ee8bc889dec9c9d9c1cce9e57c7e882e",
+  "affected_source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/SdkPdfClient.kt": "f273d5982e482c361fae3f47ecea3d205e84d14542a6b1311033dfaf0058faeb",
+    "android/app/src/main/kotlin/app/onklav/home/SdkPdfService.kt": "36553aec9a4ac7149802befd5a3d948230c9288b8be65db2e8df490da07684cf",
+    "android/app/src/main/AndroidManifest.xml": "a70e299b61cf9cc91d4cfbc06a1bbead7752976c8ffb937f97280ccd072dd20a",
+    "android/app/src/test/kotlin/app/onklav/home/SdkLiveMapProviderTest.kt": "5cc2c9fdd4a3735efc989bc24756a423ac652a037cdf90623fc6005dec7ad112",
+    "scripts/check_live_map.py": "dfbac6f4c9241edf7e55c063929670d0c2c061ead4bbf5eb329793e849ffddc5"
+  },
+  "evidence_sha256": {
+    "docs/evidence/v0.70.0/integration-final-test-results.json": "9e378011b8df8e9e356dfa8574b4991db4bd23c0fc35684f952890586a5437b0",
+    "docs/evidence/v0.70.0/integration-live-map-final-run.log": "62c51eb319132ab4e91af192d98f61f5362900e1295dee63738b08d68a033e2f",
+    "docs/evidence/v0.70.0/integration-restored-dependencies.json": "d77042914afcbf4aa6b37af531c63eb8de32b019f9fca82aa4c766f4345b69b5",
+    "docs/evidence/v0.70.0/integration-contract.log": "bee22b1f38806c19e9471239242757852e724eb7ed6bb50bddc77752c90c5ca0",
+    "docs/evidence/v0.70.0/integration-live-map-final.log": "f4329bd7b441ad0fde697c447cca508063944314d41c1f5a474e4adb20f08b51",
+    "docs/evidence/v0.70.0/integration-live-map-cleanup-failure.log": "6a63af549a5867dfd9120bb8fd3abac48a3533a7d2518f7205c3302feaa6da32",
+    "docs/evidence/v0.70.0/integration-lint-online-run.log": "d7c74f7c20207e51820703963e4604b8e693d0dd7efef76cd322c1ffcda0fde0",
+    "docs/evidence/v0.70.0/integration-full-host-fixed-run.log": "e7ec130e7ffb2f99ea5071598bcb8a0e6c6f6b1700b10f461d22d746818b8aeb",
+    "docs/evidence/v0.70.0/integration-full-host-run.log": "5fb6fc847f85b4fbde86e38c2b08f66ce3f33f3eed0915b4939cdb52838efa1d",
+    "docs/evidence/v0.70.0/integration-dependency-probe.json": "911401f62320bba9dd4584b1e533bb49f1b6587feb7d37897c908db6c01feec6",
+    "docs/evidence/v0.70.0/integration-compile-initial.log": "c5bf3ac9bb618e5c13e63e6d8df07aa5294d38dab957b5414dd71b7b46667a43",
+    "docs/evidence/v0.70.0/integration-full-lint.log": "c35b8acfab5cac54aa676892e97303ebf6e76b731d9de587ae0a9827fa6ed795",
+    "docs/evidence/v0.70.0/integration-full-host-fixed.log": "36f3d4f2cfa96df8cc8a1ab7051a0eacd1ac39a1ef7b591ef9d60a6f1abee3d6",
+    "docs/evidence/v0.70.0/integration-lint-run.log": "861b062dc843e74186a8cf6edf7945263bdabfe5cda578311eb0ceeb34bdf871",
+    "docs/evidence/v0.70.0/integration-lint-offline-missing.log": "ff63f384f6cf568c087b1a44b8a9a6e578591ef3fb742a97f19f2ee232d9fa05",
+    "docs/evidence/v0.70.0/integration-initial-test-results.json": "31a4cb82c0a4e63064a2c8e80fd6d5957e46cf10f49328f2312f51d74a6a505b",
+    "docs/evidence/v0.70.0/integration-live-map-run.log": "fd0d5fe5bdb1b1fdce31370863bb0bbd401ffd8c7a1843a3adb1b92f595c3d82",
+    "docs/evidence/v0.70.0/integration-live-map-package.log": "c9968d7baeb85eec69a01001d82e9fe1d987195fca2e9cb187b138944ed63d1e"
+  }
+}

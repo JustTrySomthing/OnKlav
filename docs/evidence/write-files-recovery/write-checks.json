@@ -1,0 +1,18 @@
+{
+  "date": "2026-10-29",
+  "result": "passed",
+  "tests": 6,
+  "classes": [
+    "WriteHostTest",
+    "WriteUiTest"
+  ],
+  "scope": [
+    "formatting",
+    "DOCX and PDF export",
+    "document persistence and permission revocation",
+    "proofreading offsets",
+    "document browser search",
+    "save and settings icons"
+  ],
+  "native_changes": false
+}

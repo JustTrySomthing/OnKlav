@@ -1,0 +1,12 @@
+{
+  "schema": "onklav.app.v1",
+  "runtime": "rust-wasm-ui.v1",
+  "id": "app.onklav.reader",
+  "name": "Read Aloud",
+  "version": 40,
+  "capabilities": [
+    "storage.private",
+    "clipboard.read",
+    "speech.output"
+  ]
+}

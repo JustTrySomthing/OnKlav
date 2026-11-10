@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.NotesBackupTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-23T23:43:39" hostname="41aed82b0335" time="6.117">
+  <properties/>
+  <testcase name="invalidOrChangedReviewCannotWriteAndActiveAppMustCloseBeforeRestore" classname="app.onklav.home.NotesBackupTest" time="5.97"/>
+  <testcase name="providerWriteFailureRemovesIncompleteDocumentAndPrivateStaging" classname="app.onklav.home.NotesBackupTest" time="0.082"/>
+  <testcase name="realProviderJniRoundTripKeepsCurrentNotesAndNeverExportsGrants" classname="app.onklav.home.NotesBackupTest" time="0.065"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

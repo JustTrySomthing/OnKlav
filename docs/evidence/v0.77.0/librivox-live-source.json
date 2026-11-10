@@ -1,0 +1,25 @@
+{
+  "scope": "Public LibriVox API and one chapter via build-environment HTTPS proxy; not Android decoder acceptance",
+  "title": "Letters of Two Brides",
+  "sections_type": "list",
+  "sections_count": 57,
+  "initial": {
+    "status": 200,
+    "host": "dn710107.ca.archive.org",
+    "headers": {
+      "Content-Type": "audio/mpeg",
+      "Content-Length": "14115653",
+      "ETag": "\"46e1d2cf-d76345\"",
+      "Last-Modified": "Fri, 07 Sep 2007 22:38:07 GMT",
+      "Accept-Ranges": "bytes"
+    },
+    "prefix_bytes": 32768
+  },
+  "seek": {
+    "status": 206,
+    "content_range": "bytes 65536-65567/14115653",
+    "bytes_read": 32,
+    "etag": "\"46e1d2cf-d76345\"",
+    "modified": "Fri, 07 Sep 2007 22:38:07 GMT"
+  }
+}

@@ -1,0 +1,18 @@
+   Compiling onklav-core v0.8.0 (/workspace/scratch/ed752e8a1957/current/OnKlav/core)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 4.56s
+     Running unittests src/lib.rs (core/target/debug/deps/onklav_core-8a579202944a8eae)
+
+running 4 tests
+test sdk_http::tests::http_response_bounds_exclude_cookies_and_unbounded_text ... ok
+test sdk_http::tests::http_signed_origin_scope_rejects_paths_credentials_ports_and_wildcards ... ok
+test sdk_http::tests::http_requests_cannot_escape_origins_or_smuggle_credentials ... ok
+test sdk::tests::http_manifest_and_live_authorization_bind_signed_origins ... ok
+
+test result: ok. 4 passed; 0 failed; 0 ignored; 0 measured; 211 filtered out; finished in 0.17s
+
+     Running unittests src/bin/onklav-pack.rs (core/target/debug/deps/onklav_pack-ee23dc4255ec4a6b)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

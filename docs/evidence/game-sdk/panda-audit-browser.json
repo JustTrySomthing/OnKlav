@@ -1,0 +1,34 @@
+[
+  {
+    "viewport": [
+      360,
+      780
+    ],
+    "real_touch_full_pull": true,
+    "resize_cancels_pull_without_shot": true,
+    "direct_start_and_resume": true,
+    "complete_player_then_rival_volley": true,
+    "center_shot_scores": true,
+    "sound_pause_preserves_flight": true,
+    "saved_towers_and_scores_preserved": true,
+    "round_continues_without_building": true,
+    "profile_write_failure_retry": true,
+    "idle_session_writes_in_4_4s": 2
+  },
+  {
+    "viewport": [
+      640,
+      360
+    ],
+    "real_touch_full_pull": true,
+    "resize_cancels_pull_without_shot": true,
+    "direct_start_and_resume": true,
+    "complete_player_then_rival_volley": true,
+    "center_shot_scores": true,
+    "sound_pause_preserves_flight": true,
+    "saved_towers_and_scores_preserved": true,
+    "round_continues_without_building": true,
+    "profile_write_failure_retry": true,
+    "idle_session_writes_in_4_4s": 2
+  }
+]

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.MailProtocolTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-11-01T05:29:11" hostname="94c67010e592" time="7.977">
+  <properties/>
+  <testcase name="secureImapAndSmtpUseRealProtocolAndKeepBccOutOfMessage" classname="app.onklav.home.MailProtocolTest" time="5.583"/>
+  <testcase name="lostSmtpAcknowledgementIsUncertainAndNeverAutomaticallyRetried" classname="app.onklav.home.MailProtocolTest" time="1.279"/>
+  <testcase name="certificateHostnameMismatchIsRejected" classname="app.onklav.home.MailProtocolTest" time="1.115"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

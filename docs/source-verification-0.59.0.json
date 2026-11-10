@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-23",
+  "source_version": "0.59.0-dev",
+  "source_version_code": 67,
+  "scope": "Settings active Notes backup, full validation/review and missing-document restore merge",
+  "apk_built": true,
+  "tests": {
+    "passed": 177,
+    "failed": 0,
+    "unexpected_failures": 0,
+    "known_failures": [],
+    "rust_broad": {
+      "passed": 173,
+      "failed": 0,
+      "fresh_run": true,
+      "evidence": "docs/evidence/v0.59.0/rust-tests.log"
+    },
+    "fresh_framework_host": [
+      {
+        "class": "app.onklav.home.NotesBackupTest",
+        "passed": 3,
+        "failed": 0,
+        "skipped": 0,
+        "evidence": "docs/evidence/v0.59.0/TEST-app.onklav.home.NotesBackupTest.xml"
+      },
+      {
+        "class": "app.onklav.home.SettingsUiHostTest.notesBackupIsReachableAndReturnsToTheMetadataDialog",
+        "passed": 1,
+        "failed": 0,
+        "skipped": 0,
+        "evidence": "docs/evidence/v0.59.0/TEST-app.onklav.home.SettingsUiHostTest.xml"
+      }
+    ]
+  },
+  "build_evidence": "docs/evidence/v0.59.0/build-debug.json",
+  "apk_evidence": "docs/apk-verification-debug.json",
+  "native_proof": "docs/native-provenance.json",
+  "sdk_proof": "docs/app-sdk-provenance.json",
+  "full_rewrite_complete": false,
+  "handset_acceptance": false,
+  "carrier_acceptance": false,
+  "next_work": "docs/FINISH-NON-GAME.md",
+  "note": "Fresh full Rust and source-matched Linux/ARM64 native rebuild; existing signed SDK packages and Godot pack reused. Three real provider/JNI checks and one focused Settings navigation check pass. Initial compile and interrupted new-failure run are retained, followed by focused correction and final full pass. Notes-only backup is not full SDK data backup; Files/Annotation/other app stores remain open. No real provider, account, phone or carrier acceptance claimed. First assembly hit a disappearing generated native temporary entry; one retry after clearing generated native outputs assembled in 40.17s and APK verification passed in 3.38s."
+}

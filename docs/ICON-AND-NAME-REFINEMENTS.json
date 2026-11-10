@@ -1,0 +1,53 @@
+{
+  "status": "icons and host display labels updated; native-vector renders visually inspected at36/24px in light/dark",
+  "date": "2026-10-31",
+  "names": {
+    "Video Editor": "Video Edit",
+    "Audio Editor": "Audio Edit",
+    "Image Editor": "Image Edit",
+    "Voice Recorder": "Voice Record",
+    "Screen Recorder": "Screen Record"
+  },
+  "validation": [
+    "All9 updated vector XML resources parse",
+    "Eight rendered glyph designs fit32x32 viewport with stroke bounds",
+    "Desktop IDs/routing unchanged",
+    "Recorder folders and storage roots unchanged",
+    "Core source/JNI and signed SDK package bytes unchanged",
+    "Host display aliases reviewed in desktop, Apps settings/review/remove/export, storage headings, frames and notifications"
+  ],
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/AppSdk.kt": "52d92388bfa1f47b5539a0eb4cc0428e95b73312f0ff1b5edc17fb5798173532",
+    "android/app/src/main/kotlin/app/onklav/home/AudioEditor.kt": "29510208036d68f3086d9b39a0779df61bd434f83a78fe5e6482897bfdf5b7ac",
+    "android/app/src/main/kotlin/app/onklav/home/AudioEditorModel.kt": "d64e9c92a1007afa664f8dcef8223e2a0ea052d366ab58b805f4b8737b84357f",
+    "android/app/src/main/kotlin/app/onklav/home/Catalog.kt": "0c5932698dcb838a025a16dd99c590ddc9dc687d54278e465108ec517fa65e70",
+    "android/app/src/main/kotlin/app/onklav/home/PhotoEditor.kt": "78864407eac5b8dff4452f91b183491720ff8bedfbc2c024b5399b544bd54062",
+    "android/app/src/main/kotlin/app/onklav/home/RecorderData.kt": "cee316886aa94967298ef797aa35d1c8d2673575f9ab3440ac56089817de0f71",
+    "android/app/src/main/kotlin/app/onklav/home/RecorderEngine.kt": "32da968bc997d5d5ad916628b7e31f27b9b28ed4c2427d6e08afdb307396a774",
+    "android/app/src/main/kotlin/app/onklav/home/SdkAppScreen.kt": "f5b284a5cb2fa008c22468c1e5d2c2eef75ddecfaceafa0ed0843cbf55987851",
+    "android/app/src/main/kotlin/app/onklav/home/SdkAppsCenter.kt": "39d2a4f2125d9aa616e28d77b3a539df20547cd1fcb393e85fb5b5ca350110cd",
+    "android/app/src/main/kotlin/app/onklav/home/SdkDesktopIcons.kt": "855f42e01a4a9000adf1a79b7c2c522e0b5ace0cfc81ef322f023bcaa7d0e10a",
+    "android/app/src/main/kotlin/app/onklav/home/SdkNotifications.kt": "630fae064250ef41e030fc9d8457adaf21ee845c0e713c0f6b017d4e50c6da5f",
+    "android/app/src/main/kotlin/app/onklav/home/SdkStorageSettings.kt": "9e34a4146433dfb13de4e381c11918e0126d24adb8c92df1fb447ba936ffe5bd",
+    "android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt": "b5cf3cc8b93527e0ea82244778b4921356bba49156fd9919f6908794b8bfe94f",
+    "android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt": "0b93df85761ab40df511009b4b6385fbdcbdb103f4f46bbbc64541253c0baca1",
+    "android/app/src/main/kotlin/app/onklav/home/VideoProjectArchive.kt": "3bfd214145d74c6a962fd34b84739cf145935144b59b00cf91e80b1768ef44a9",
+    "android/app/src/test/kotlin/app/onklav/home/AudioAppRenameTest.kt": "6fd407e9ca159acf860d4716ced1f56d93bd84cdab3732b2ebf2f8ebc349be7d",
+    "android/app/src/test/kotlin/app/onklav/home/AudioEditorUiTest.kt": "3f62b6efc508c3bb8d97c9d6dcc12fb55d0506134297734da9d953499f7f690b",
+    "android/app/src/test/kotlin/app/onklav/home/VideoEditorUiTest.kt": "6b1e9948a35756ef19f35f4b42b7e9384a329ef8e57d2375fde0b738c51a092a",
+    "android/shared/src/main/res/drawable/maps_folder.xml": "6983f468267f4202b6d1dfc4e9d20d8f8ed85bc932bb918a20eb2acd90846261",
+    "android/shared/src/main/res/drawable/ref_app_compress.xml": "0500ed4a5eafd21a969fb28b5e5c4ef3a4478b07f562361d17759312426294e5",
+    "android/shared/src/main/res/drawable/ref_app_convert.xml": "9ad601036c114bf625e759d5c43402f53fc97b7f3c525681054248ee3905b2d1",
+    "android/shared/src/main/res/drawable/ref_app_docu_view.xml": "410ee84b901d416a9cec06d41e25c9e5fe2ef6c6de395f80082a678294f3d20c",
+    "android/shared/src/main/res/drawable/ref_app_files.xml": "6983f468267f4202b6d1dfc4e9d20d8f8ed85bc932bb918a20eb2acd90846261",
+    "android/shared/src/main/res/drawable/ref_app_format_swap.xml": "e7ea0200205c2b96a940c49e49764b77597ccd2b4dddb415e36bdcd6735e8efe",
+    "android/shared/src/main/res/drawable/ref_app_vault.xml": "47a6e0ba8d001f75500f0204019389deec9517d434111276dc4d8741f08f23b6",
+    "android/shared/src/main/res/drawable/ref_app_voice_recorder.xml": "11dd909cce7ce00a5beef1abcaa637c669fafb6fc1ce7e0c4458a68edcfd6cb1",
+    "android/shared/src/main/res/drawable/ref_folder_add.xml": "d611fd639c1ed0f4318845741c1e8031abfc378eef8f9744e67f6042d03efdfa"
+  },
+  "preview": "docs/evidence/icon-refinements/icon-refinements-preview.png",
+  "android_compile_performed": false,
+  "new_tests_written": false,
+  "apk_built": false,
+  "latest_apk": "0.100.28-rc1/code137 predates Vault recovery and this refinement"
+}

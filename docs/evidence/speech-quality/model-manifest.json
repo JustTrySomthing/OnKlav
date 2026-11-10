@@ -1,0 +1,71 @@
+{
+  "kitten-mini-en-v0_8": {
+    "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/kitten-mini-en-v0_8.tar.bz2",
+    "archive_sha256": "518f9b130320f690d5b5476df77bde4215fca67773cda16710318e5081234b9d",
+    "archive_bytes": 67547594,
+    "files": {
+      "LICENSE": {
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "bytes": 11358
+      },
+      "voices.bin": {
+        "sha256": "0e4965b46333db53ce09c73842623bf7055ea62c67f78803cb7ea9c16da6ac2b",
+        "bytes": 3276800
+      },
+      "model.onnx": {
+        "sha256": "d2ba2913a135bf255840c053f6c77d23f735337992f3258cc238caf404e1949c",
+        "bytes": 78268913
+      },
+      "tokens.txt": {
+        "sha256": "934a4188addc7665dd3410256bb622169242357fbb99d840d9351209b486dabb",
+        "bytes": 1064
+      }
+    }
+  },
+  "kitten-mini-en-v0_1-fp16": {
+    "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/kitten-mini-en-v0_1-fp16.tar.bz2",
+    "archive_sha256": "a12bdf4f68a509527802c01b258d63a99e2c86550d7960726f23a7ad21bdbcb8",
+    "archive_bytes": 156630103,
+    "files": {
+      "LICENSE": {
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "bytes": 11358
+      },
+      "model.fp16.onnx": {
+        "sha256": "78c8dee1d945a334924c280cbe85af846fa0421808f0f760cb5c8d258be9ec86",
+        "bytes": 166061300
+      },
+      "voices.bin": {
+        "sha256": "42a40a24a352a38657d6cb86ceee51bbc2b7780b29e04fb60bcdf959adccea01",
+        "bytes": 8192
+      },
+      "tokens.txt": {
+        "sha256": "934a4188addc7665dd3410256bb622169242357fbb99d840d9351209b486dabb",
+        "bytes": 1064
+      }
+    }
+  },
+  "kokoro-en-v0_19": {
+    "url": "https://github.com/k2-fsa/sherpa-onnx/releases/download/tts-models/kokoro-en-v0_19.tar.bz2",
+    "archive_sha256": "912804855a04745fa77a30be545b3f9a5d15c4d66db00b88cbcd4921df605ac7",
+    "archive_bytes": 319625534,
+    "files": {
+      "model.onnx": {
+        "sha256": "10ff414106a038ce7e9e0126c6461e4dc8a86efaa89dc91d2009d69fe635e339",
+        "bytes": 345555491
+      },
+      "tokens.txt": {
+        "sha256": "4f31c71282d14af4e926cd12462078fe9d20d00c589e63fe2750a8f56d6d7f7b",
+        "bytes": 1078
+      },
+      "LICENSE": {
+        "sha256": "cfc7749b96f63bd31c3c42b5c471bf756814053e847c10f3eb003417bc523d30",
+        "bytes": 11358
+      },
+      "voices.bin": {
+        "sha256": "a372c67b056ef0b695c375d39b99630d23fb07ad4c8d87aa32a19a62fca523ad",
+        "bytes": 5755904
+      }
+    }
+  }
+}

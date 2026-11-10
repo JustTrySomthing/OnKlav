@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.SdkWebPolicyTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-24T14:05:12" hostname="41b9fb140d3c" time="2.837">
+  <properties/>
+  <testcase name="rendererReplacementRejectsLateErrorsProgressAndClearCallbacks" classname="app.onklav.home.SdkWebPolicyTest" time="2.526"/>
+  <testcase name="systemBackUsesCurrentWebHistoryAndLiveGrant" classname="app.onklav.home.SdkWebPolicyTest" time="0.056"/>
+  <testcase name="historyMemoryIsBounded" classname="app.onklav.home.SdkWebPolicyTest" time="0.059"/>
+  <testcase name="nativeClipboardEntryPointsCheckLiveGrants" classname="app.onklav.home.SdkWebPolicyTest" time="0.068"/>
+  <testcase name="clearCompletionIsBoundToCurrentCommandGrantAndNewPageFinish" classname="app.onklav.home.SdkWebPolicyTest" time="0.048"/>
+  <testcase name="addressesAndProfilesStayWithinTheirBoundary" classname="app.onklav.home.SdkWebPolicyTest" time="0.079"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

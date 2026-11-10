@@ -1,0 +1,4 @@
+Baseline reproduced app backup rejection: Invalid saved message flag
+Compatible app backup: validation and exact metadata restore PASS
+Metadata counts: {"blocked":1,"groups":1,"messages":13,"threads":11}
+Original Notes backup: inspected and restored 2 notes with exact titles, text, IDs and timestamps PASS

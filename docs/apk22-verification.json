@@ -1,0 +1,13 @@
+{
+  "status": "original-signer ARM64 APK assembled and verified",
+  "version": "0.100.22-rc1",
+  "version_code": 131,
+  "apk_sha256": "11cc997ba8b27ae96c9c8440b4963c944c502f43031cd1ffc1ba8e0685359409",
+  "apk_bytes": 107337783,
+  "feature_checks": "13 focused Write checks retained; six reviewed layouts, actual160% text and spelling correction; all prior HDR/platform work retained",
+  "write_dictionary_bytes_and_metadata_verified": true,
+  "post_test_count_caption_confirmed_in_dex": true,
+  "verification_report": "docs/apk-verification-debug.json",
+  "build": "Current native/SDK/games reused, generated resource/DEX/package outputs refreshed; assembly300.89s, verification5.6s. No broad test repeat.",
+  "physical_device_performance_qualified": false
+}

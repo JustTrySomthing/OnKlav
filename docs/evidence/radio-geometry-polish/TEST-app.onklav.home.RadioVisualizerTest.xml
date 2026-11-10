@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.RadioVisualizerTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-28T21:08:06" hostname="1b65f1fab707" time="8.864">
+  <properties/>
+  <testcase name="packedFftIgnoresDcAndNyquistAndMapsComplexToneToLogFrequency" classname="app.onklav.home.RadioVisualizerTest" time="4.052"/>
+  <testcase name="actualLandscapeFillsWindowControlsHideRevealAndBackRestores" classname="app.onklav.home.RadioVisualizerTest" time="3.012"/>
+  <testcase name="portraitWindowAndUnitBasedOrbitRemainReadableAtEitherAspect" classname="app.onklav.home.RadioVisualizerTest" time="0.057"/>
+  <testcase name="captureRejectsGlobalSessionAndCloseClearsWaveform" classname="app.onklav.home.RadioVisualizerTest" time="0.049"/>
+  <testcase name="narrowPortraitReservesFullTransportTouchTarget" classname="app.onklav.home.RadioVisualizerTest" time="0.107"/>
+  <testcase name="visualizerModesLandscapeBackAndOrientationRestore" classname="app.onklav.home.RadioVisualizerTest" time="1.586"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

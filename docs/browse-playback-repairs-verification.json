@@ -1,0 +1,48 @@
+{
+  "version": "0.80.0-browse-playback-fixes1",
+  "version_code": 88,
+  "status": "Completed; signed ARM64 APK assembled and verified",
+  "changes": {
+    "audiobooks": [
+      "LibriVox recordings are browsed through Internet Archive first, with the LibriVox API as fallback and cached results during source outages. Categories now launch their search immediately.",
+      "Book clicks open a visible detail/loading page immediately. Existing catalog chapters are reused; Archive metadata builds one ordered chapter list without duplicate MP3 encodings. Stored previews open without another catalog request.",
+      "Preview state remains visible during library reload, with retry/back on missing chapters; existing books/progress are preserved."
+    ],
+    "podcasts": [
+      "Tabs renamed Browse / Recent / Podcasts.",
+      "Public Apple podcast search replaces the small bundled-only catalog.100 popular public-feed entries are bundled for immediate browsing; live keyword/topic search returns up to200 results with20-row pages and15-minute query caching.",
+      "Publisher RSS feeds are cached for5minutes to avoid repeated fetches when reopening a show. Existing subscriptions and added RSS sources are preserved."
+    ],
+    "youtube": [
+      "Removed the channel/subscription button from Bookmarks; it remains in Channels.",
+      "Refreshes channel metadata after delayed page rendering and prefers the current player response; preserves valid owner metadata across incomplete updates and clears it on navigation.",
+      "Ad handling selects the actual player instead of its outer wrapper, supports more mobile Skip controls and still attempts skipping when playback-rate changes are unsupported."
+    ],
+    "messages_media": [
+      "Earlier history prefetch starts while scrolling within12 rows of the beginning, in40-message batches. The normal manual Load Earlier Messages stop is removed; a compact spinner and failure-only retry preserve recovery.",
+      "Attachment autoplay begins from prepared/surface/foreground readiness. Initial clip setup cannot pause the newly started player; dialog lifecycle readiness and later user pauses remain respected."
+    ]
+  },
+  "checks": {
+    "android_focused": 36,
+    "rust_podcast_controller": 4,
+    "rust_channel_controller": 1,
+    "rust_youtube_broker": 3,
+    "fixed_javascript": "Passed ad/unsupported-rate, metadata/current-owner, autoplay and viewport scenarios",
+    "lint": {
+      "Warning": 172
+    },
+    "apk": "Original Android signing certificate, SDK publisher/source provenance and16KiB native alignment verified",
+    "live_sources": "Apple search/chart/lookup HTTP200. Archive Mystery query returned878 recordings and a real12-chapter MP3 recording. LibriVox id52 returned200; other API requests returned403/500."
+  },
+  "limits": [
+    "Actual Samsung playback, scroll frame timing and live YouTube advertising/channel markup remain unverified. Automatic ad skipping is best effort.",
+    "The exact phone LibriVox error was not reproduced.",
+    "Podcast browsing includes a build-time popular snapshot; live keyword/topic results use the public directory. Public providers can be unavailable or rate limit requests."
+  ],
+  "apk": {
+    "name": "OnKlav-0.80.0-ARM64.apk",
+    "bytes": 71353362,
+    "sha256": "831fcc610a77a0ac87c03b03eb572d7310a8a475aee61aa76de4003450bcf843"
+  }
+}

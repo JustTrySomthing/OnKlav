@@ -1,0 +1,27 @@
+{
+  "plan": {
+    "sdk_apps": "reuse",
+    "mobile_rust": "reuse",
+    "games": "reuse",
+    "android_tests": "not requested",
+    "variant": "optimized",
+    "abis": [
+      "arm64-v8a"
+    ]
+  },
+  "phases": [
+    {
+      "phase": "assemble-optimized",
+      "seconds": 286.92,
+      "returncode": 0,
+      "log": "docs/evidence/v0.44.0/assemble-optimized.log"
+    },
+    {
+      "phase": "verify-optimized",
+      "seconds": 3.34,
+      "returncode": 0,
+      "log": "docs/evidence/v0.44.0/verify-optimized.log"
+    }
+  ],
+  "status": "passed"
+}

@@ -1,0 +1,5 @@
+{
+  "rss_feeds": "The Daily, Up First, Crime Junkie and The Builders returned HTTP200 and passed the actual Android RSS parser; public publisher fixtures were used only in scratch.",
+  "audio": "All four episode enclosures followed to audio/mpeg HTTP206 responses. The Daily, NPR and Crime Junkie returned Last-Modified without ETag. The Builders returned neither validator.32-byte audio samples were read.",
+  "device_tested": false
+}

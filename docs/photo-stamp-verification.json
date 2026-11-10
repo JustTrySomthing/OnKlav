@@ -1,0 +1,44 @@
+{
+  "verification_runs": "First run: 22 of 23 passed; persistence fixture used Activity filesDir instead of model.source.parentFile. Final four UI checks rerun after test-path correction; production source unchanged. Pixel/Layers/markup results retained from first run.",
+  "status": "implemented",
+  "production_and_test_compilation": "passed",
+  "focused_checks_passed": 23,
+  "suites": {
+    "PhotoRetouchTest": {
+      "tests": 10,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "PhotoRetouchUiTest": {
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "PhotoLayersTest": {
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    "PhotoMarkupTest": {
+      "tests": 6,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  },
+  "runtime_classes_matched": 89,
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/PhotoRetouch.kt": "20231d90d4f594741d46f3a33a2653164a91f4623fc430eed297c3970c6a12ca",
+    "android/app/src/main/kotlin/app/onklav/home/PhotoRetouchCanvas.kt": "7e31e6b9bd4cc88c11482799e17f16da977f7a03334075aee3823657e5d1463d",
+    "android/app/src/main/kotlin/app/onklav/home/PhotoEditor.kt": "925bccea9c1a1bcfcd3c090692c6a39f9d2dad3711b12d8b95aa4c2309e75fa4",
+    "android/app/src/main/kotlin/app/onklav/home/PhotoMarkupControls.kt": "22251a28222ff34cb739d02bf084b34f63590c3253025f79362f58a3cecf036e"
+  },
+  "native_sdk_or_dependency_changed": false,
+  "apk_built": false,
+  "physical_phone_portrait_and_large_image_qualification": "pending",
+  "evidence": "docs/photo-stamp-checks and docs/evidence/photo-retouch",
+  "render_fixture": "generated skin/red-pupil image; not a physical-phone portrait"
+}

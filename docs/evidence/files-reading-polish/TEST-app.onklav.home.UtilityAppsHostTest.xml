@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.UtilityAppsHostTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-28T13:55:55" hostname="1b65f1fab707" time="9.453">
+  <properties/>
+  <testcase name="converterEditsEitherSideAndUsesTheme" classname="app.onklav.home.UtilityAppsHostTest" time="9.453"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

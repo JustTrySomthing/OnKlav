@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.EssentialsUiTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-28T12:23:01" hostname="1b65f1fab707" time="9.161">
+  <properties/>
+  <testcase name="clockTabsTimerDialogAndStopwatchControlsAreReachable" classname="app.onklav.home.EssentialsUiTest" time="9.161"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

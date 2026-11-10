@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.CodeEditUiTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-31T17:33:00" hostname="83231ba1f14b" time="22.06">
+  <properties/>
+  <testcase name="smallPhoneKeepsActionsAndCodeVisible" classname="app.onklav.home.CodeEditUiTest" time="13.113"/>
+  <testcase name="draftsAndNativeTextSelectionRecover" classname="app.onklav.home.CodeEditUiTest" time="3.045"/>
+  <testcase name="tabsSearchReplaceUndoAndLanguageAreReachable" classname="app.onklav.home.CodeEditUiTest" time="3.325"/>
+  <testcase name="nativeNewlineAddsIndentWithoutLosingTheCursor" classname="app.onklav.home.CodeEditUiTest" time="2.577"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

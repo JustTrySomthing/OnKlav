@@ -1,0 +1,157 @@
+{
+  "status": "Test APK built and verified; default bundled capabilities and separate Podcasts implementation complete within recorded profile",
+  "host_build": 80,
+  "version": "0.72.0-podcasts1",
+  "directory": {
+    "records": 484,
+    "source": "Podcastindex-org/database MIT sample export",
+    "offline_search": true,
+    "complete_live_index": false
+  },
+  "requirements": [
+    "Separate Podcasts app bundled inside OnKlav, independent from Radio",
+    "No accounts, API keys/fees, paid plans or app listening quotas",
+    "Bundled apps receive declared OnKlav capabilities by default, one-time upgrade migration, preserve subsequent revocation"
+  ],
+  "core_focused_cases": 3,
+  "controller_cases": 2,
+  "apk_created": true,
+  "phone_tested": false,
+  "full_core_tests": 268,
+  "contract_cases": 5,
+  "checkpoint_cases": 6,
+  "sdk_bundles": "Original publisher retained;11 changed bundles built, Counter reused; all inputs current",
+  "native": "Fresh Linux/ARM64 with16KiB alignment and current source proofs",
+  "compile": "Full Android app and host-test source compilation passed",
+  "build_recovery": "NDK symbolic links restored correctly after ZIP extraction; incomplete generated Gradle transform removed; passed core phases preserved",
+  "live_provider": "This environment denied a direct unauthenticated publisher feed GET; no live stream or phone playback acceptance claimed",
+  "android_host_checks": [
+    {
+      "class": "SdkBootstrapTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "class": "SdkPodcastsTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "class": "SdkPodcastsUiTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "class": "SdkRadioTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "class": "SdkRadioUiTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    },
+    {
+      "class": "SdkMediaLifecycleTest",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0,
+      "skipped": 0
+    }
+  ],
+  "visual_check": "Real signed app rendered at411x891dp; offline484-record catalog loaded and docked controls/My library passed without permission setup",
+  "lint": {
+    "task": ":android:app:lintDebug",
+    "result": "passed",
+    "errors": 0,
+    "warnings": 160
+  },
+  "apk_file": "OnKlav-0.72.0-ARM64.apk",
+  "apk_verification": {
+    "name": "host",
+    "variant": "debug",
+    "package": "app.onklav.home.prototype.rewrite",
+    "version_name": "0.72.0-podcasts1",
+    "version_code": 80,
+    "target_sdk": 36,
+    "bytes": 70580097,
+    "sha256": "7b0eb7f52b38e83fb567badea9132b433b2678efbbfbe89be09dc64a8f28d959",
+    "signer_sha256": "6ed975c5fc27d19f6291f751a8bb00fa8a2c2e7d268bffc7b6ddf7e1b1a7a69d",
+    "signature_v2_verified": true,
+    "zip_integrity": "pass",
+    "zipalign_16kb": "pass",
+    "abis": [
+      "arm64-v8a"
+    ],
+    "elf_minimum_load_alignment": {
+      "lib/arm64-v8a/libandroidx.graphics.path.so": 16384,
+      "lib/arm64-v8a/libc++_shared.so": 16384,
+      "lib/arm64-v8a/libgodot_android.so": 16384,
+      "lib/arm64-v8a/libonklav_core.so": 16384
+    },
+    "native_library_sha256": {
+      "lib/arm64-v8a/libandroidx.graphics.path.so": "41e9a793c43a0f4fddb19e33f346bace464f30f888ba7b9eaf96294ea115bfb6",
+      "lib/arm64-v8a/libc++_shared.so": "ad74bf43eb1fd576518168f664ad16a74e00eeda9595875c33dd87f6dd197869",
+      "lib/arm64-v8a/libgodot_android.so": "9e10c5ebda9bb629c671929441cdde3b4a8ab0e5542fc7e88de8d71f2b9840db",
+      "lib/arm64-v8a/libonklav_core.so": "2ef4d85a0c1dc07afbba62bd9256b0faf32780d35bb0113f565dc29620cc9203"
+    },
+    "legacy_defined_classes": 0,
+    "defined_class_count": 18627,
+    "permissions": [
+      "android.permission.INTERNET",
+      "android.permission.ACCESS_NETWORK_STATE",
+      "android.permission.VIBRATE",
+      "android.permission.READ_SMS",
+      "android.permission.READ_CONTACTS",
+      "android.permission.SEND_SMS",
+      "android.permission.RECEIVE_SMS",
+      "android.permission.RECEIVE_MMS",
+      "android.permission.RECEIVE_WAP_PUSH",
+      "android.permission.READ_PHONE_STATE",
+      "android.permission.READ_PHONE_NUMBERS",
+      "android.permission.POST_NOTIFICATIONS",
+      "android.permission.RECORD_AUDIO",
+      "android.permission.RECEIVE_BOOT_COMPLETED",
+      "android.permission.WAKE_LOCK",
+      "android.permission.FOREGROUND_SERVICE",
+      "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+      "android.permission.ACCESS_WIFI_STATE",
+      "android.permission.CHANGE_WIFI_STATE",
+      "android.permission.CHANGE_NETWORK_STATE",
+      "android.permission.ACCESS_COARSE_LOCATION",
+      "android.permission.ACCESS_FINE_LOCATION",
+      "android.permission.CAMERA",
+      "android.permission.BLUETOOTH",
+      "android.permission.BLUETOOTH_ADMIN",
+      "android.permission.BLUETOOTH_SCAN",
+      "android.permission.BLUETOOTH_CONNECT",
+      "android.permission.NEARBY_WIFI_DEVICES",
+      "app.onklav.home.prototype.rewrite.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+    ],
+    "rust_libraries": {
+      "arm64-v8a": "2ef4d85a0c1dc07afbba62bd9256b0faf32780d35bb0113f565dc29620cc9203"
+    }
+  },
+  "apk_catalog_and_default_permission_code_verified": true,
+  "remaining": [
+    "Physical phone audible playback, seek/speed/sleep and interruption acceptance",
+    "Phone background/notification/headset behavior and publisher availability",
+    "Starter snapshot is484 HTTPS feeds, not the complete/live Podcast Index; add another public HTTPS RSS feed under My library"
+  ],
+  "logs": [
+    "docs/evidence/v0.72.0/podcasts-host-tests-final.log",
+    "docs/evidence/v0.72.0/podcasts-lint-main.log",
+    "docs/evidence/v0.72.0/podcasts-lint-full.log",
+    "docs/evidence/v0.72.0/apk-build.log"
+  ]
+}

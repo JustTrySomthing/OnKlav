@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.SdkWebPolicyTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-22T15:18:55" hostname="2383b52a5fc7" time="0.641">
+  <properties/>
+  <testcase name="historyMemoryIsBounded" classname="app.onklav.home.SdkWebPolicyTest" time="0.213"/>
+  <testcase name="nativeClipboardEntryPointsCheckLiveGrants" classname="app.onklav.home.SdkWebPolicyTest" time="0.394"/>
+  <testcase name="addressesAndProfilesStayWithinTheirBoundary" classname="app.onklav.home.SdkWebPolicyTest" time="0.033"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

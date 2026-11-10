@@ -1,0 +1,71 @@
+{
+  "date": "2026-10-30",
+  "status": "source changes implemented; bounded host checks passed",
+  "apk_built": false,
+  "unique_host_checks": 37,
+  "checks": {
+    "app.onklav.home.VideoRefinementsTest.realMp3ImportsNormalizeToProbeablePcmWithoutChangingTheSource": "passed",
+    "app.onklav.home.VideoRefinementsTest.corruptedProjectReopensThePreviousDurableRevision": "passed",
+    "app.onklav.home.VideoRefinementsTest.frameSteppingDoesNotAccumulateRoundingError": "passed",
+    "app.onklav.home.VideoRefinementsTest.m4aProbeFallsBackWhenExtractorDurationIsZero": "passed",
+    "app.onklav.home.VideoRefinementsTest.missingMediaKeepsTheProjectVisibleAndItsEditsIntact": "passed",
+    "app.onklav.home.VideoRefinementsTest.snappingFindsOverlapsTitlesLayersAudioAndBeatsWithinTolerance": "passed",
+    "app.onklav.home.VideoRefinementsTest.exactPositionsRejectInvalidAndOutOfRangeInput": "passed",
+    "app.onklav.home.VideoRefinementsTest.mixedAudioUsesOriginalSourceTrimSpeedAndTimelineOffset": "passed",
+    "app.onklav.home.VideoRefinementsTest.wavProbeUsesPcmSamplesAndRejectsTruncation": "passed",
+    "app.onklav.home.VideoRefinementsTest.failedSaveNeverRedirectsTheCurrentProjectPointer": "passed",
+    "app.onklav.home.VideoRefinementsTest.proxyCacheInvalidatesWhenOriginalChangesAndNeverReplacesExport": "passed",
+    "app.onklav.home.VideoEditorHostTest.compositionCarriesClipsTextSpeedAndMixedSound": "passed",
+    "app.onklav.home.VideoEditorHostTest.splitKeepsSourceTimingAndDividesCaptionRanges": "passed",
+    "app.onklav.home.VideoEditorHostTest.pcmGainAndFadesUseRealSamplesAndProtectPeaks": "passed",
+    "app.onklav.home.VideoEditorHostTest.bundledSignedAppLaunchesAndHonorsRevocation": "passed",
+    "app.onklav.home.VideoEditorHostTest.projectStoreRestoresOriginalCopiesAndRejectsUnsafePaths": "passed",
+    "app.onklav.home.VideoEditorHostTest.longCaptionsWrapInsideBoundedBitmapTextures": "passed",
+    "app.onklav.home.VideoProTest.variableSpeedTimingSplitsAndAudioProviderAgree": "passed",
+    "app.onklav.home.VideoProTest.oldProjectJsonRetainsCompatibilityAndNewFieldsRoundTrip": "passed",
+    "app.onklav.home.VideoProTest.realOverlaySequencesCarryTimingScaleAlphaAndCutoutEffects": "passed",
+    "app.onklav.home.VideoProTest.shorteningMainTrackClampsOverlaysAndProjectStoreChecksTheirFiles": "passed",
+    "app.onklav.home.VideoProTest.captionsUseOneBoundedTextureAndInactiveCuesStayTransparent": "passed",
+    "app.onklav.home.VideoProTest.keyframeInterpolationAndSplitBoundaryStayContinuous": "passed",
+    "app.onklav.home.VideoProTest.includedVideoDefaultsMicrophoneCapability": "passed",
+    "app.onklav.home.VideoProTest.subtitlesCrossClipBoundariesAndExportWithoutLosingText": "passed",
+    "app.onklav.home.VideoDailyReviewTest.portraitCanvasHasTheActualProjectAspectAndInspectorCanClose": "passed",
+    "app.onklav.home.VideoDailyReviewTest.outputSettingsKeepCanvasAndEditTimelineUnchanged": "passed",
+    "app.onklav.home.VideoDailyReviewTest.narrowLandscapeKeepsPreviewAndToolSettingsUsable": "passed",
+    "app.onklav.home.VideoDailyReviewTest.textLaneTapSelectsTheClipAtThatTime": "passed",
+    "app.onklav.home.VideoDailyReviewTest.trimAcrossSpeedChangesUsesTheIntegratedSourceTimeAndAllowsExtension": "passed",
+    "app.onklav.home.VideoDailyReviewTest.exportDialogHasVisibleChoicesAndCancellingLeavesProjectIntact": "passed",
+    "app.onklav.home.VideoDailyReviewTest.largeProjectBackupExplainsTheHostLimitBeforeWriting": "passed",
+    "app.onklav.home.VideoDailyReviewTest.shortLargeTextUsesTheAvailableSpaceForTheInspector": "passed",
+    "app.onklav.home.VideoDailyReviewTest.draggingDefersPreviewAndUndoPreservesUncommittedChanges": "passed",
+    "app.onklav.home.VideoDailyReviewTest.cancellingCanvasSettingsDoesNotChangeTheProject": "passed",
+    "app.onklav.home.VideoDailyReviewTest.trimmingKeepsMotionAtTheCutAndAudioFadesStayWithinTheNewDuration": "passed",
+    "app.onklav.home.VideoDailyReviewTest.failedSaveKeepsEditsVisibleBlocksExportAndSwitchAndRetries": "passed"
+  },
+  "verification_method": "Staged verification: initial26 passed; second pass added motion/audio/text-lane checks, with one thumbnail-fixture race subsequently corrected. Final functional20 passed, including VideoPro regressions and backup preflight. Supporting17 persistence/composition/refinement checks passed in prior stage. After paint-only theme correction, final full production/test Kotlin compilation and portrait dark/light UI check passed. No repeated broad emulator loops.",
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt": "4b6285b74ad7198a338f5a8274d40d2fc8631e8030212bc056329a06a1be667d",
+    "android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt": "ea8412a9725b5662f94f0c7fab3c6c394eee6c68b4db07199da431436962b63c",
+    "android/app/src/main/kotlin/app/onklav/home/VideoEditorLayout.kt": "3f85e4b302416a8930c60efb7eba6648eac4b6ff34ee16d039469d84733395a0",
+    "android/app/src/main/kotlin/app/onklav/home/VideoProWorkspace.kt": "241cc491795e8212c63de3868eaee7d56d23b0845670d5c0a65f7dfc7d9fba7e",
+    "android/app/src/main/kotlin/app/onklav/home/VideoEditData.kt": "81e5ede8aa9a76880c3af0f73fe2399fd259dea30b0f1e8f75370aa1733c83f8",
+    "android/app/src/main/kotlin/app/onklav/home/VideoReview.kt": "061bd5b7b61e051aaade715f159c076b46427a384e3e9eb95eaf7a407ef2f8f0"
+  },
+  "visual_review": [
+    "portrait project-aspect preview and timeline",
+    "540dp narrow landscape",
+    "360x320 at1.5x text, inspector-first layout",
+    "light theme ruler and playhead"
+  ],
+  "not_physically_verified": [
+    "Samsung MediaCodec/Media3 GPU export and compatibility paths",
+    "audio/video synchronization and timing/quality at different export settings",
+    "long projects, HEIC/HDR, thermal/memory/latency performance",
+    "rotation, IME, accessibility and connected-folder filing on the phone"
+  ],
+  "retained_limits": [
+    "long operations cancel when the editor stops",
+    "atomic project JSON writes remain synchronous",
+    "reverse video, linked/ripple tracks and waveforms are future work"
+  ]
+}

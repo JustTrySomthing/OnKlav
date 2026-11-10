@@ -1,0 +1,1 @@
+{"grants":["storage.private","network.http"],"steps":[{"action":"demo.seed","expect":{"status":"Weather saved","data.temperature_c":0.0}},{"action":"weather.units","value":"imperial","expect":{"imperial":true}},{"reopen":true,"expect":{"data.observed":10000}},{"action":"weather.refresh","pending":"clock.read"}]}

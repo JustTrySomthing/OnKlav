@@ -1,0 +1,39 @@
+{
+  "original_files_changed": false,
+  "original_notes": {
+    "count": 2,
+    "baseline_jni_inspect_restore": "passed",
+    "exact_fields_compared": [
+      "id",
+      "title",
+      "text",
+      "updated"
+    ],
+    "reported_phone_rejection": "not reproduced"
+  },
+  "original_app_backup": {
+    "baseline_rejection_reproduced": "Invalid saved message flag",
+    "cause": "two picker-supported reactions absent from legacy restore validator"
+  },
+  "compatible_copy": {
+    "reaction_fields_cleared": 2,
+    "all_other_json_values": "unchanged",
+    "baseline_jni_inspect_restore": "passed",
+    "restore_normalization": "group/message thread references and reminder timestamps reset per existing policy",
+    "metadata_counts": {
+      "groups": 1,
+      "blocked": 1,
+      "threads": 11,
+      "messages": 13
+    }
+  },
+  "regression": {
+    "passed": 1,
+    "log": "docs/evidence/backup-reaction-regression.log",
+    "covers": "supported complex emoji round-trip; malformed reaction rejection and no mutation"
+  },
+  "baseline_jni": "retained Linux binary from last delivered checkpoint; intentionally used to reproduce existing restore behavior, not to qualify changed core",
+  "actual_file_log": "docs/evidence/backup-user-file-baseline-check.log",
+  "native_rebuild": "required; existing toolchain blockers remain",
+  "apk_built": false
+}

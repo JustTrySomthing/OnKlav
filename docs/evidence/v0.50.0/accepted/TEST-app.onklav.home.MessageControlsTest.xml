@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.MessageControlsTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-23T17:16:01" hostname="41aed82b0335" time="5.7">
+  <properties/>
+  <testcase name="historySearchIsThreadScopedAndOpeningAResultLoadsTheRequestedDateWindow" classname="app.onklav.home.MessageControlsTest" time="5.068"/>
+  <testcase name="firstTapWaitsForVoiceAndEachMessageStartsAtTheBeginningUsingReaderPreferences" classname="app.onklav.home.MessageControlsTest" time="0.464"/>
+  <testcase name="pendingMessageSpeechCannotStartAfterStop" classname="app.onklav.home.MessageControlsTest" time="0.051"/>
+  <testcase name="inboxTimestampsMatchTodayMonthDayAndOlderYear" classname="app.onklav.home.MessageControlsTest" time="0.042"/>
+  <testcase name="pinAndMutePersistAndTransferWhenANewGroupGetsItsPhoneThread" classname="app.onklav.home.MessageControlsTest" time="0.075"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

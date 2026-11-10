@@ -1,0 +1,40 @@
+{
+  "status": "source complete; production compile passed; no APK built",
+  "focused_passed": 21,
+  "checks": [
+    "NeuralSpeechTest > approvedReferenceIsUnsplitAndLongTextHasSafeNaturalBoundaries",
+    "NeuralSpeechTest > screenOffKeepsSharedSpeechWarmButRealPressureUnloadsIt",
+    "SdkSpeechTest > chunkedPlaybackPauseSeekRevocationAndLateCallbacks",
+    "SdkSpeechTest > defaultRateAndInvalidStoredRateStayUsable",
+    "SdkSpeechTest > ebooksShareMessageVoiceSettingsAndCompletionIsRevocable",
+    "SdkSpeechTest > queuedSpeechCannotInterruptNewerReaderOrSurviveRevocation",
+    "SdkSpeechTest > retryIgnoresOldInitializationAndCloseCancelsQueue",
+    "SdkSpeechTest > uppercaseTitlesAreWordsAndKeepRangeOffsets",
+    "SdkSpeechTest > utf16BoundariesAndPreviewRestoresPosition",
+    "SpeechReadingTest > abbreviationAndInitialRulesNeverJoinSeparateLines",
+    "SpeechReadingTest > allSpeechClientsReceiveCleanupAndCallbacksStillUseOriginalText",
+    "SpeechReadingTest > approvedProseAndExpandedMaximumRequestsRemainBounded",
+    "SpeechReadingTest > commonInitialsNumbersAndInvisibleBookCharactersHaveConservativeRules",
+    "SpeechReadingTest > emojiAndMarkerOnlyMessagesCompleteSilentlyWithoutAPlaybackError",
+    "SpeechReadingTest > emojiSequencesAreSilentButNumbersAndMeaningfulSymbolsRemain",
+    "SpeechReadingTest > expandedAndRemovedTextMapsBackToOriginalUtf16Positions",
+    "SpeechReadingTest > markerCleanupPreservesStandaloneUnitsInitialsAndRomanLookingWords",
+    "SpeechReadingTest > onlyStandaloneStructuralMarkersAreSilent",
+    "SpeechReadingTest > titlesExpandWithoutTurningTheirDotsIntoSentenceBreaks",
+    "SpeechServiceTest > lockingDuringColdVoicePreparationKeepsTheUserStartedSession",
+    "SpeechServiceTest > notificationPauseResumeNoisyRouteAndDestroyReleaseReading"
+  ],
+  "source_limit_utf16": 50000,
+  "projected_limit_utf16": 200000,
+  "native_piece_limit_utf16": 220,
+  "model_or_voice_pack_changed": false,
+  "limits": [
+    "Host behavior checks, not physical Samsung listening acceptance or new acoustic/prosody measurements.",
+    "No claim of universal disambiguation of plain-text section markers, names or abbreviations."
+  ],
+  "resolved_checks": [
+    "Non-breaking spaces recognized around honorifics.",
+    "Long all-capitals test expectation aligned with the retained all-capitals reading rule."
+  ],
+  "safety_followup": "Preserve standalone units/initials/Roman-looking words; constrain expansion to horizontal whitespace."
+}

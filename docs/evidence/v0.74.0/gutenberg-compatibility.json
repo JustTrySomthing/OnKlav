@@ -1,0 +1,9 @@
+{
+  "status": "passed",
+  "scope": "Actual Gutenberg EPUB bytes through signed acquire\/blob\/Rust EPUB\/reader path; HTTP transport supplied from actual downloaded file",
+  "title": "Alice's Adventures in Wonderland",
+  "chapters": 15,
+  "bytes": 189249,
+  "sha256": "4f81245d31380ac1d6eafb9a321e3691369bc70985736ae4bccf849a4f784036",
+  "default_android_network_qualified": false
+}

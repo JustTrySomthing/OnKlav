@@ -1,0 +1,38 @@
+[
+  {
+    "game": "four",
+    "viewport": [
+      320,
+      640
+    ],
+    "passed": true,
+    "errors": []
+  },
+  {
+    "game": "panda",
+    "viewport": [
+      320,
+      640
+    ],
+    "passed": true,
+    "errors": []
+  },
+  {
+    "game": "four",
+    "viewport": [
+      432,
+      800
+    ],
+    "passed": true,
+    "errors": []
+  },
+  {
+    "game": "panda",
+    "viewport": [
+      432,
+      800
+    ],
+    "passed": true,
+    "errors": []
+  }
+]

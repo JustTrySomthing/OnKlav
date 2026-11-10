@@ -1,0 +1,6 @@
+{
+  "default_export_new_loader": true,
+  "custom_png_export_preserves_image_and_color": true,
+  "custom_meta_only_for_studio": true,
+  "shared_binary_contract_verified_by_gamekit": true
+}

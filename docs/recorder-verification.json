@@ -1,0 +1,70 @@
+{
+  "status": "source implemented, compilation and focused checks passed; no APK built",
+  "report": "docs/RECORDERS.md",
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/RecorderData.kt": "a90c55d1bdff5249f253b38ea7672916bde840c00aa3d3d4826b998fad48cec9",
+    "android/app/src/main/kotlin/app/onklav/home/RecorderAudio.kt": "7e7eaa24fdc39f6c7420bc45d7a6a37b88738769192b595509cb1bbf820aa839",
+    "android/app/src/main/kotlin/app/onklav/home/RecorderEngine.kt": "594492176e8e157c260409fe3cb263b93909ad0af95d1ebf09e70088e2ad9376",
+    "android/app/src/main/kotlin/app/onklav/home/RecorderService.kt": "187fce088275704514214a1ffd578aaeb5e23dcb1a3b020baa1bfd53104d0dd9",
+    "android/app/src/main/kotlin/app/onklav/home/RecorderLibraryUi.kt": "7a718bf80a808ac1c4d5c1984e36c915c52e5affbf3d8699549d9eb1cdff9adc",
+    "android/app/src/main/kotlin/app/onklav/home/Recorders.kt": "a07a35041cadf1c0a019ebd850ad6917d0d6a709977f06fed0b22fc7ded58445",
+    "android/app/src/main/kotlin/app/onklav/home/Catalog.kt": "68455a62a01ad95a4584a9c96ecc3369d385bb192a7a28de4d15d5640dc6c042",
+    "android/app/src/main/kotlin/app/onklav/home/MainActivity.kt": "f74b0c20a2f3d776241cac1bdba6ac2651bb3594805ac9dbbf71b91a57af136a",
+    "android/app/src/main/kotlin/app/onklav/home/SdkAppsCenter.kt": "59fe2b64c8c7c54b775d0c582e42fc559353c5c368b360ddba9d12fc2d02ea4f",
+    "android/app/src/main/AndroidManifest.xml": "52c4a90906789aa475aae2a12f272d6374a2c7a0b638b83a0bf61b9ff4af6453",
+    "core/src/content_backup.rs": "cdca720882d4e98105f53d68c7dce11a4454b9818906293bf4d59076755ba688",
+    "core/src/library_backup.rs": "3e8f02106230c11f560484c295d59f86c36def82b954881517fb4cd834bba4da",
+    "android/app/src/test/kotlin/app/onklav/home/RecorderTest.kt": "637ca6eb461b5f6fb49d4836babe892099ac21cef3560933d42b2dc825a59b66",
+    "android/app/src/test/kotlin/app/onklav/home/RecorderServiceTest.kt": "9c869fa059b804b6f4beefec1f7bc6925991e02917a2211b2d0a63b6f9d02890",
+    "android/app/src/test/kotlin/app/onklav/home/RecorderUiTest.kt": "96c3d84647b215a144b450ab5dad96d3963311a6b5ca67cc933c270e55d0d512",
+    "android/shared/src/main/res/drawable/recorder_screen.xml": "a58ba94063a6c98f1629634ebc4d050e6070bd03e855b5e31bbc74de73ae67ac",
+    "android/shared/src/main/res/drawable/ref_app_screen_recorder.xml": "cac91b59159f9574f4445f99b3c83f744d2d967aa2ad9b2d2478b77a4eceda9d",
+    "android/shared/src/main/res/drawable/recorder_pause.xml": "eda0a64edab788e8e416e6ac4435047a37ad075b41a3b25e67f1a93a1cd38f4b",
+    "android/shared/src/main/res/drawable/ref_app_voice_recorder.xml": "0dd02f6b0f4c6a4bfe978f6e04a5da28d6bbfba32056a4171344d24a928151ed",
+    "android/shared/src/main/res/drawable/recorder_mic.xml": "251c40cfbeeb02a36be2edb63db081fe95a1205c465ce9c457b9c44bf71e51d6",
+    "android/shared/src/main/res/drawable/recorder_play.xml": "8a7934f47157324b75cc47da42a68746db5d70eab550ba8df278d53332315991",
+    "android/shared/src/main/res/drawable/recorder_stop.xml": "5d0f2800d9785458881a1e6804b590a3ac61c958669260063a39462f0d803d3d"
+  },
+  "native_proof": "docs/working-native-verification.json",
+  "checks": {
+    "rust_backup_checks": 11,
+    "host_value_files_and_wav_recovery": 8,
+    "host_recording_service_with_injected_capture_backend": 3,
+    "host_mobile_ui_and_permission_intent": 4,
+    "host_existing_encrypted_vault_backup_regression": 1,
+    "unique_host_checks": 16,
+    "production_kotlin_compile": "passed with final service changes",
+    "native_working_jni": "host and ARM64 rebuilt; 16 KiB alignment verified"
+  },
+  "evidence": [
+    "docs/recorder-checks",
+    "docs/evidence/recorders"
+  ],
+  "features": [
+    "Voice: AAC/M4A and PCM/WAV, measured waveform, pause-aware timer, background capture",
+    "Screen: immediate/3/5/10-second start, 720p/1080p presets, silent/device/microphone/both",
+    "Persistent bottom recording controls, notification pause/resume/stop/return route",
+    "Search, voice seek/speed, video preview, rename, read-only sharing, copy export and recoverable Files Trash",
+    "Signed Files auto-filing, receipt/hash-based retry, revoked Files access retains original",
+    "Interrupted WAV repair and validated recovery of playable media",
+    "Explicit countdown/startup cancellation does not publish a phantom recording",
+    "Start remains disabled until old service destruction; back-to-back service sessions tested",
+    "257 MiB media fits existing 512 MiB Files backup after validator limit correction"
+  ],
+  "physical_device_tested": false,
+  "not_run": [
+    "Actual microphone/Bluetooth hardware and AudioRecord behavior",
+    "MediaProjection system approval/lock/revocation and protected app audio policies on a phone",
+    "Real AAC/H.264 encoding, device/mixed A/V sync, rotation/thermal/performance acceptance",
+    "Long physical recordings and storage-pressure capture",
+    "New APK packaging/signing"
+  ],
+  "known_limits": [
+    "Android approval is required for each screen session; protected content/audio may be unavailable.",
+    "Starting video dimensions remain fixed; rotation/app resizing can add borders.",
+    "Six-hour duration and storage-based per-file limits; no seamless segmentation.",
+    "Only completed/filed recordings participate in current Files/App Documents backups, which remain limited to 512 MiB.",
+    "An unfinalized MP4/M4A after process death may not be recoverable; interrupted originals remain for explicit user handling.",
+    "Saved duration/date metadata is a local cache; media remains available in Files if its folder is moved or metadata is absent."
+  ]
+}

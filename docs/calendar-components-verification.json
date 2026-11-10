@@ -1,0 +1,47 @@
+{
+  "status": "Tasks15\u201316 source complete; physical-device qualification remains separate",
+  "chunks": [
+    15,
+    16
+  ],
+  "rust_calendar_checks_passed": 7,
+  "rust_calendar_ui_checks_passed": 9,
+  "android_host_checks_passed": 4,
+  "android_cases": [
+    "concurrentStorageChangeKeepsTheEditorDraftAndDoesNotOverwriteSavedData",
+    "signedAllDayEditorSavesThroughJniAndReloadsTheSameExclusiveDateInterval",
+    "ungrantedStorageCreatesNoCollectionAndRevocationPreservesTheSavedEvent",
+    "invalidDatesAndCancelledEditsDoNotWriteAndUseTheStandardCenteredConfirmation"
+  ],
+  "developer_contract_checks_passed": 5,
+  "native_reused": "Core and Android production sources unchanged; existing source-matched Linux/ARM64 JNI and runtime classes reused",
+  "native_proof": "docs/evidence/v0.70.0/clock-native-proof.json",
+  "logs": [
+    "docs/evidence/v0.70.0/calendar-components-final.log",
+    "docs/evidence/v0.70.0/calendar-contract.log",
+    "docs/evidence/v0.70.0/calendar-android-final.log"
+  ],
+  "source_sha256": {
+    "developer/components/src/calendar.rs": "b5e9cf7332c9f3b8db4adcaadfec25c55049e38a3a98d32fda1f49f87e2c079b",
+    "developer/components/src/calendar_ui.rs": "b0634201e2fbff1159514cdad826b6effbf4b0bdd442304da586fa7ff3019053",
+    "developer/components/src/lib.rs": "8dac17eda9770813963d4e56630b33a53d24361651671e59bfcee9450e7ceb45",
+    "developer/tests/make_calendar_fixture.py": "e4b16fd22915d73615a16512425bdd577cb15e3bc7a1fd81819935a56b60c913",
+    "developer/tests/fixtures/calendar_ui_app.rs": "e59b64534b59c0c9ca23466b8ed2ec804e119fe5f9f90529f7c50f236e3a232f",
+    "docs/fixtures/calendar-wip.onklav-a": "c437b226d0b7237be282fd1929b0e33896e7e738e6fe2b8a06fdbbfe2f6c6f00",
+    "android/app/src/test/kotlin/app/onklav/home/SdkCalendarUiTest.kt": "8c5f53305e4630159ae43b57c91063415e50fe9d0de9d71c2ca7bd4b1337cad0"
+  },
+  "hardware_tested": false,
+  "apk_built": false,
+  "sdk_release_built": false,
+  "scope": [
+    "Atomic bounded mixed UTC/DATE ICS import/export, exclusive all-day ends, existing UTC-only API preserved",
+    "Chronological20-row agenda and host-themed event editor with validated draft, explicit Save outcome and centered discard confirmation",
+    "Components make no implicit writes; signed fixture demonstrates revision-checked collection persistence, permission denials and conflict preservation"
+  ],
+  "remaining": [
+    "Named-timezone editing and recurrence/DST expansion (chunk17)",
+    "Absolute/status/snooze/repeating reminders (chunks18\u201319)",
+    "User-selected Android calendar integration (chunk20)",
+    "Physical-device and accessibility qualification"
+  ]
+}

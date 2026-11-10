@@ -1,0 +1,20 @@
+[
+  {
+    "url": "https://repo.maven.apache.org/maven2/com/squareup/okhttp3/okhttp/4.12.0/okhttp-4.12.0.pom",
+    "status": 200,
+    "bytes": 1816,
+    "content_type": "text/xml"
+  },
+  {
+    "url": "https://dl.google.com/dl/android/maven2/androidx/webkit/webkit/1.13.0/webkit-1.13.0.pom",
+    "status": 200,
+    "bytes": 2534,
+    "content_type": "application/octet-stream"
+  },
+  {
+    "url": "https://dl.google.com/dl/android/maven2/com/google/android/gms/play-services-auth/22.0.0/play-services-auth-22.0.0.pom",
+    "status": 200,
+    "bytes": 3332,
+    "content_type": "application/octet-stream"
+  }
+]

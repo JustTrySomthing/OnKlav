@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.AuthenticRecoveryUiTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-31T20:52:44" hostname="83231ba1f14b" time="14.52">
+  <properties/>
+  <testcase name="passwordOnlyLegacySetupCannotExposeAccountsBeforeRecovery" classname="app.onklav.home.AuthenticRecoveryUiTest" time="11.238"/>
+  <testcase name="incompleteSetupCreatesNoFileAndCompleteRequiresAllAnswersThenPassword" classname="app.onklav.home.AuthenticRecoveryUiTest" time="3.28"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

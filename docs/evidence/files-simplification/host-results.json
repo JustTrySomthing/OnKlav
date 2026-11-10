@@ -1,0 +1,326 @@
+{
+  "final_file_selection_phase": [
+    {
+      "class": "AndroidFilesTest",
+      "tests": 7,
+      "failures": 0,
+      "cases": [
+        {
+          "name": "attachmentAndSaveTypesOpenTheirMatchingFolders",
+          "passed": true
+        },
+        {
+          "name": "androidFilesCannotEscapeSharedStorageOrEnterPrivateAppDirectories",
+          "passed": true
+        },
+        {
+          "name": "thumbnailReadsDoNotOverwriteAConcurrentDirectoryListing",
+          "passed": true
+        },
+        {
+          "name": "revokingAndroidAccessBlocksEvenKnownFiles",
+          "passed": true
+        },
+        {
+          "name": "categoryHomeIsDirectAndContainsNoConnectionChoice",
+          "passed": true
+        },
+        {
+          "name": "directAndroidFilesCanBeRenamedCopiedCompressedAndNeverOverwrite",
+          "passed": true
+        },
+        {
+          "name": "supportedEmailProvidersHaveNoRetiredPlatformPresets",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "class": "FilesPresentationUiTest",
+      "tests": 3,
+      "failures": 0,
+      "cases": [
+        {
+          "name": "thumbnailAndListViewsKeepPencilsOnlyOnEditableItems",
+          "passed": true
+        },
+        {
+          "name": "filesHomeAndAndroidCategoriesUseTheSameModernBrowser",
+          "passed": true
+        },
+        {
+          "name": "imageAttachmentPickerStartsInImagesWithViewSwitch",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "class": "FileSelectionTest",
+      "tests": 6,
+      "failures": 0,
+      "cases": [
+        {
+          "name": "revokedAccessKeepsUnfiledSaveAndFolderSelectionUsesTheSharedBrowser",
+          "passed": true
+        },
+        {
+          "name": "actualSignedFilesControllerSelectsOneReadableFileWithoutCopyingOrExposingPaths",
+          "passed": true
+        },
+        {
+          "name": "defaultContractsLaunchOnlyOurNonExportedHostPickerAndPreserveResults",
+          "passed": true
+        },
+        {
+          "name": "directAndroidDownloadsUseTheSharedBrowserAndRespectRemovedAndroidAccess",
+          "passed": true
+        },
+        {
+          "name": "saveCommitUsesRustImportAndUpdatesRealListingSizeWhileKeepingNamesUnique",
+          "passed": true
+        },
+        {
+          "name": "filtersAndNamesRejectUnsupportedTypesWithoutHidingFolders",
+          "passed": true
+        }
+      ]
+    }
+  ],
+  "latest_results_across_focused_phases": [
+    {
+      "class": "AndroidFilesTest",
+      "tests": 7,
+      "failures": 0,
+      "cases": [
+        {
+          "name": "attachmentAndSaveTypesOpenTheirMatchingFolders",
+          "passed": true
+        },
+        {
+          "name": "androidFilesCannotEscapeSharedStorageOrEnterPrivateAppDirectories",
+          "passed": true
+        },
+        {
+          "name": "thumbnailReadsDoNotOverwriteAConcurrentDirectoryListing",
+          "passed": true
+        },
+        {
+          "name": "revokingAndroidAccessBlocksEvenKnownFiles",
+          "passed": true
+        },
+        {
+          "name": "categoryHomeIsDirectAndContainsNoConnectionChoice",
+          "passed": true
+        },
+        {
+          "name": "directAndroidFilesCanBeRenamedCopiedCompressedAndNeverOverwrite",
+          "passed": true
+        },
+        {
+          "name": "supportedEmailProvidersHaveNoRetiredPlatformPresets",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "class": "FilesPresentationUiTest",
+      "tests": 3,
+      "failures": 0,
+      "cases": [
+        {
+          "name": "thumbnailAndListViewsKeepPencilsOnlyOnEditableItems",
+          "passed": true
+        },
+        {
+          "name": "filesHomeAndAndroidCategoriesUseTheSameModernBrowser",
+          "passed": true
+        },
+        {
+          "name": "imageAttachmentPickerStartsInImagesWithViewSwitch",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "class": "FilesBrokerHostTest",
+      "tests": 6,
+      "failures": 0,
+      "cases": [
+        {
+          "name": "fileExportsAreReadOnlyAndCannotExposeArbitraryPrivatePaths",
+          "passed": true
+        },
+        {
+          "name": "deletingPrivateDataClearsOnlyThatAppsFolderConnections",
+          "passed": true
+        },
+        {
+          "name": "sharingAnAndroidFolderCreatesAReadableZipAndPreservesOriginals",
+          "passed": true
+        },
+        {
+          "name": "revokedSdkAuthorizationAndUnknownTokensCannotQueryAndroidFiles",
+          "passed": true
+        },
+        {
+          "name": "androidFoldersExposeOpaqueTokensAndSupportRenameAndExplicitDelete",
+          "passed": true
+        },
+        {
+          "name": "selectedImportsStreamAndStopWhenAuthorizationIsRevoked",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "class": "FileSelectionTest",
+      "tests": 6,
+      "failures": 0,
+      "cases": [
+        {
+          "name": "revokedAccessKeepsUnfiledSaveAndFolderSelectionUsesTheSharedBrowser",
+          "passed": true
+        },
+        {
+          "name": "actualSignedFilesControllerSelectsOneReadableFileWithoutCopyingOrExposingPaths",
+          "passed": true
+        },
+        {
+          "name": "defaultContractsLaunchOnlyOurNonExportedHostPickerAndPreserveResults",
+          "passed": true
+        },
+        {
+          "name": "directAndroidDownloadsUseTheSharedBrowserAndRespectRemovedAndroidAccess",
+          "passed": true
+        },
+        {
+          "name": "saveCommitUsesRustImportAndUpdatesRealListingSizeWhileKeepingNamesUnique",
+          "passed": true
+        },
+        {
+          "name": "filtersAndNamesRejectUnsupportedTypesWithoutHidingFolders",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "class": "BackupFilesTest",
+      "tests": 3,
+      "failures": 0,
+      "cases": [
+        {
+          "name": "partialCopyFailureRetainsTheSourceAndNeverDeletesProviderDocuments",
+          "passed": true
+        },
+        {
+          "name": "sameDocumentAliasesRejectBeforeOpeningOrDeletingAnyFile",
+          "passed": true
+        },
+        {
+          "name": "unreadableSourceDoesNotDeleteOrTruncateTheChosenDestination",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "class": "MailHostTest",
+      "tests": 6,
+      "failures": 0,
+      "cases": [
+        {
+          "name": "htmlReaderNeverLoadsRemoteContentAndDropsUnsafeLinks",
+          "passed": true
+        },
+        {
+          "name": "richMimeContainsAlternativesListsAttachmentsAndSafeRecipientHandling",
+          "passed": true
+        },
+        {
+          "name": "filtersAndProviderCredentialsStayBoundToTheirAccount",
+          "passed": true
+        },
+        {
+          "name": "signedEmailAppLaunchesAndGrantsAreRevocable",
+          "passed": true
+        },
+        {
+          "name": "nativeWorkspaceUsesTheAndroidViewModelFactory",
+          "passed": true
+        },
+        {
+          "name": "encryptedAccountsDraftsAndLargeAttachmentsRoundTripAndFailClosed",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "class": "MailProtocolTest",
+      "tests": 3,
+      "failures": 0,
+      "cases": [
+        {
+          "name": "secureImapAndSmtpUseRealProtocolAndKeepBccOutOfMessage",
+          "passed": true
+        },
+        {
+          "name": "lostSmtpAcknowledgementIsUncertainAndNeverAutomaticallyRetried",
+          "passed": true
+        },
+        {
+          "name": "certificateHostnameMismatchIsRejected",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "class": "MailUiTest",
+      "tests": 1,
+      "failures": 0,
+      "cases": [
+        {
+          "name": "yahooAndGoogleFormsUseOnlyAppPasswords",
+          "passed": true
+        }
+      ]
+    },
+    {
+      "class": "CloudSharingTest",
+      "tests": 8,
+      "failures": 0,
+      "cases": [
+        {
+          "name": "pcloudUsesRegionalApiAndPostBodyCredentialsWithDecodedFilePath",
+          "passed": true
+        },
+        {
+          "name": "cancellationDoesNotReturnALink",
+          "passed": true
+        },
+        {
+          "name": "enrollmentOffersOnlyPcloudAndKoofr",
+          "passed": true
+        },
+        {
+          "name": "koofrUsesPrimaryStorageAndPreservesLinkPassword",
+          "passed": true
+        },
+        {
+          "name": "rejectsCredentialBearingInsecureAndForeignSharingLinks",
+          "passed": true
+        },
+        {
+          "name": "foreignAccountFolderAndEscapedEntryNeverSendCredentials",
+          "passed": true
+        },
+        {
+          "name": "failedAndRedirectedCreationDoesNotRetryOrRevealResponse",
+          "passed": true
+        },
+        {
+          "name": "koofrRefusesAmbiguousMountAndMissingSharingPassword",
+          "passed": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,57 @@
+{
+  "status": "shared neural speech source integration complete; no APK built",
+  "approved_model": "kitten-nano-en-v0_8-fp32",
+  "default_male_speaker": 2,
+  "female_option": 5,
+  "native": "official Rust/C API1.13.8, original native pronunciation frontend",
+  "audio": "AAudio24kHz mono float,10second SPSC ring, bounded lookahead, endpoint drain",
+  "unique_android_app_checks": 13,
+  "native_checks": 3,
+  "shared_mp3_checks": 2,
+  "retained_checks": [
+    {
+      "file": "docs/evidence/speech-integration/retained-first-run/TEST-app.onklav.home.SdkSpeechTest.xml",
+      "tests": 7,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "file": "docs/evidence/speech-integration/retained-first-run/TEST-app.onklav.home.NeuralSpeechTest.xml",
+      "tests": 4,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "file": "docs/evidence/speech-integration/TEST-app.onklav.home.SpeechServiceTest.xml",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "file": "docs/evidence/speech-integration/TEST-reference-final.xml",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "file": "docs/evidence/speech-integration/TEST-service-final.xml",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0,
+      "supersedes": "earlier one-case service result"
+    }
+  ],
+  "model_variation": "Model has random sampling operations.5 bounded generations showed3-7ms timing differences;45ms envelope smoothing with20ms alignment retains >.99 match without time warping. Former manual frontend remains rejected at0.542. Initial overly strict check diagnostic retained.",
+  "android_abi": "arm64-v8a",
+  "minimum_native_alignment": 16384,
+  "runtime_matches_compiled_kotlin": true,
+  "physical_device_tested": false,
+  "apk_built": false,
+  "limits": [
+    "Exact word timestamps are not provided; position feedback is estimated",
+    "Built-in Read Aloud/eBooks have foreground-service background sessions; other SDK apps remain foreground-scoped",
+    "Real Samsung/Bluetooth/screen-off/thermal/latency endurance needs device qualification",
+    "No claim of within-sentence streaming or zero latency; one bounded synthesis call can finish after cancellation, while its PCM is discarded and output is silenced"
+  ],
+  "background_preparing_and_paused_screen_off": "verified with two service/lifecycle cases; explicit foreground lease is attached while a user-started request is still queued and keeps preparation awake"
+}

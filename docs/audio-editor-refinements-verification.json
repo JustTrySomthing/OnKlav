@@ -1,0 +1,58 @@
+{
+  "status": "source complete; focused verification passed",
+  "base_source_version": 228,
+  "latest_delivered_apk": "0.100.25-rc1/code134",
+  "apk_built": false,
+  "unique_focused_checks_passed": 8,
+  "ui_unique": 5,
+  "numeric_contract_unique": 3,
+  "retained_cases": [
+    "shortLandscapeUsesSeparateToolPane",
+    "largeTextAndNarrowWidthKeepSlidersAndActionsInBounds",
+    "longPressExplainsIconsAndLongErrorsHaveReadableDetails",
+    "smallPhoneKeepsToolsAndPlaybackReachable",
+    "tinyPhoneCanExpandWaveformAndEnterExactValues",
+    "displayedUnitsRoundTripWithoutChangingTheirMeaning",
+    "decimalPrefillIsLocaleStableAndIncludesFineAdjustments",
+    "invalidNumbersNeverBecomeEdits"
+  ],
+  "last_rerun_cases": [
+    "longPressExplainsIconsAndLongErrorsHaveReadableDetails",
+    "tinyPhoneCanExpandWaveformAndEnterExactValues"
+  ],
+  "layout_dp": [
+    "360x640",
+    "640x360 landscape",
+    "320x640 160% workspace text",
+    "320x480 160% workspace text"
+  ],
+  "native_sdk_audio_engine_changed": false,
+  "runtime_matches_compiled": true,
+  "physical_device_tested": false,
+  "reviewed_images": [
+    "compare-label.png",
+    "exact-pitch.png",
+    "full-error-details.png",
+    "landscape-pitch.png",
+    "large-type-pitch-initial.png",
+    "large-type-pitch.png",
+    "large-type-save.png",
+    "phone-pitch.png",
+    "phone-selection.png",
+    "phone-trim.png",
+    "tiny-expanded-waveform.png",
+    "tiny-precise-tools.png"
+  ],
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/AudioEditor.kt": "14ebce308daefad0c3155bd8b16d3e0d409164c63fd328c07e5c4c5dc89334d6",
+    "android/app/src/main/kotlin/app/onklav/home/AudioEditorRefinements.kt": "dc7db38cba621c7229a4b1812f959defd0ae222f7973397dc470ab71036e03cb",
+    "android/app/src/test/kotlin/app/onklav/home/AudioEditorUiTest.kt": "450571e182aa286b4aa5adc78300a33572db89da595d9915af8f0888d60e8ecb",
+    "android/app/src/test/kotlin/app/onklav/home/AudioPrecisionTest.kt": "cc20c845a121a7a077b91e07d4697631741272b62c832f87bb89a3168348e6d7"
+  },
+  "limitations": [
+    "no connected physical Galaxy S21+",
+    "API29 host checks do not qualify Samsung API35 or actual IME/rotation",
+    "no new APK or listening/performance qualification"
+  ],
+  "evidence": "docs/evidence/audio-editor-refinements"
+}

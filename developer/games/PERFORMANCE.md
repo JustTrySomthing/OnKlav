@@ -1,0 +1,9 @@
+# Mobile performance checklist
+
+The platform supplies one Godot4.7.2 single-threaded Compatibility/WebGL2 engine. Reuse it; packages carry game content only. No downloaded native libraries or additional engines are loaded. Web performance differs from native Android and requires real-device measurement.
+
+Start with a600x1000 logical canvas (or a smaller3D viewport), stretch to available size, use touch targets at least48dp equivalent, reserve the shared GameChrome row and host cutout/gesture safe space, and test portrait/landscape. The3D example deliberately uses a simple scene. Set explicit quality settings for the web_android feature tag. Batch geometry, share materials, reduce translucent overdraw, avoid synchronous loops/heavy per-frame allocation, and bound particles/trails/audio voices. Use Godot's profiler and mobile-size texture/audio budgets. Pause physics and audio while backgrounded.
+
+Measure cold/warm start, repeated launch/close, sustained frame time, input latency, battery/thermal behavior, interrupted audio, rotation, background/resume, low memory, force stop/reopen and update during a match on the target Samsung/Android WebView. Target60fps for action games only after measuring; reduce effects or frame targets on slower devices. Template/rule tests and a desktop browser smoke test do not establish handset smoothness. No phone performance qualification is claimed for this SDK.
+
+The runtime blocks network. Package all required art/audio locally, stay within package limits and do not preload arbitrarily large assets. Browser storage can be limited; report save problems instead of presenting false success. Runaway code is confined to a game renderer and can be closed, but CPU/GPU/RAM pressure can still affect the device. Containment is not a resource-performance guarantee.

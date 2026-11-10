@@ -1,0 +1,29 @@
+Publisher key created. Keep it private and backed up.
+Publisher key created. Keep it private and backed up.
+   Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling serde_json v1.0.154
+   Compiling memchr v2.8.3
+   Compiling itoa v1.0.18
+   Compiling onklav-app v0.1.0 (/tmp/onklav-author-714vbt5k/project/vendor/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/tmp/onklav-author-714vbt5k/project/vendor/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-author-714vbt5k/project)
+    Finished `release` profile [optimized] target(s) in 3.91s
+Created /tmp/onklav-author-714vbt5k/project/dist/org.example.notebook-v1.onklav-a
+Created /tmp/onklav-author-714vbt5k/v2.onklav-a
+Created /tmp/onklav-author-714vbt5k/other-publisher.onklav-a
+Created /tmp/onklav-author-714vbt5k/other-app.onklav-a
+test_01_generated_project_builds_signed_package_and_runs_its_scenario (__main__.DeveloperWorkflow.test_01_generated_project_builds_signed_package_and_runs_its_scenario) ... ok
+test_02_denial_and_grant_revocation_are_live (__main__.DeveloperWorkflow.test_02_denial_and_grant_revocation_are_live) ... ok
+test_03_signed_update_preserves_data_invalidates_session_and_rejects_downgrade (__main__.DeveloperWorkflow.test_03_signed_update_preserves_data_invalidates_session_and_rejects_downgrade) ... ok
+test_04_different_publisher_cannot_take_over_identity (__main__.DeveloperWorkflow.test_04_different_publisher_cannot_take_over_identity) ... ok
+test_05_same_author_other_id_cannot_read_private_documents (__main__.DeveloperWorkflow.test_05_same_author_other_id_cannot_read_private_documents) ... ok
+test_06_remove_reinstall_retains_or_deletes_only_as_requested (__main__.DeveloperWorkflow.test_06_remove_reinstall_retains_or_deletes_only_as_requested) ... ok
+test_07_tampered_wasm_and_stale_review_do_not_install (__main__.DeveloperWorkflow.test_07_tampered_wasm_and_stale_review_do_not_install) ... ok
+test_08_tools_preserve_projects_outputs_and_private_keys (__main__.DeveloperWorkflow.test_08_tools_preserve_projects_outputs_and_private_keys) ... ok
+test_09_saved_data_survives_a_fresh_runtime_process (__main__.DeveloperWorkflow.test_09_saved_data_survives_a_fresh_runtime_process) ... ok
+
+----------------------------------------------------------------------
+Ran 9 tests in 19.143s
+
+OK

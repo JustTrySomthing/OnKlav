@@ -1,0 +1,53 @@
+{
+  "status": "source complete; focused verification passed",
+  "base_source_version": 226,
+  "base_apk": "0.100.25-rc1/code134",
+  "apk_built": false,
+  "unique_focused_checks_passed": 8,
+  "retained_engine_host_checks": 5,
+  "final_ui_checks": 3,
+  "final_ui_cases": [
+    "shortLandscapeUsesSeparateToolPane",
+    "largeTextAndNarrowWidthKeepSlidersAndActionsInBounds",
+    "smallPhoneKeepsToolsAndPlaybackReachable"
+  ],
+  "layouts": [
+    "360x640 reserved host chrome",
+    "640x360 landscape reserved host chrome",
+    "320x640 160% Compose workspace text reserved host chrome"
+  ],
+  "checks": [
+    "raw/unclipped slider bounds within tool viewport",
+    "pinned transport bounds and 48dp icon targets",
+    "all nine tool groups and scroll reset",
+    "slider reset value sync",
+    "whole-row switch toggle changes",
+    "zoom/pan and exact selection dialog",
+    "save format choices, Help and access revocation",
+    "resource ID entry names match the intended icons",
+    "runtime classes match compilation"
+  ],
+  "reviewed_images": [
+    "landscape-pitch.png",
+    "large-type-pitch-initial.png",
+    "large-type-pitch.png",
+    "large-type-save.png",
+    "phone-pitch.png",
+    "phone-selection.png",
+    "phone-trim.png"
+  ],
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/AudioEditor.kt": "634f289c12a2a093802e5e9551839c167e87e23fc15c455469a5c11ff85eb826",
+    "android/app/src/test/kotlin/app/onklav/home/AudioEditorUiTest.kt": "fd9de527c0801cb00fc4c6c2e95894f74917ad62032c758ca2b9f0b5cf7c9065",
+    "android/shared/src/main/res/drawable/audio_edit_selectall.xml": "510a64015ba093b60c96c5534e6e3d95b4fa922432bc1423ffd911bddb8298b0"
+  },
+  "native_sdk_speech_games_changed": false,
+  "physical_device_acceptance": false,
+  "limits": [
+    "single-track editor features retained",
+    "160% workspace text uses local Compose density override; actual phone/dialog IME scaling unqualified",
+    "very short viewports may require scrolling within each pane",
+    "no new audio DSP/performance change or claim"
+  ],
+  "prior_runs": "See AUDIO-EDITOR-LAYOUT.md and retained evidence; failed/interrupted runs are not passes"
+}

@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-22",
+  "scope": "0.8.3 complete Appearance reference audit and restoration",
+  "current_host_android_runtime": {
+    "appearance": "FAILED / incomplete: Compose-Espresso idle timeout; cause unresolved",
+    "notes": "passed on exact same APK in first invocation",
+    "apk_sha256": "867469fccc5f80a1cde9c709823d04067ecefa23b9b7cf9523e68b7c6c56bd4d",
+    "exact_apk_installed": true,
+    "device": "Software-only Android 10 x86_64 emulator; no concurrent Gradle build",
+    "rendered_screens": [
+      "settings-dark",
+      "appearance-default"
+    ],
+    "manual_checks_remaining": [
+      "Complete expanded Appearance regression after idle-timeout diagnosis",
+      "External Files picker/receiver interactions",
+      "Physical handset visual and accessibility acceptance"
+    ],
+    "evidence": "evidence/v0.8.3/final-runtime-diagnosis.txt"
+  },
+  "current_host_apk_sha256": "867469fccc5f80a1cde9c709823d04067ecefa23b9b7cf9523e68b7c6c56bd4d"
+}

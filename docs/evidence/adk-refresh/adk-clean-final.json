@@ -1,0 +1,30 @@
+{
+  "doctor": {
+    "ready": true,
+    "sdk_tools": "0.4.1",
+    "reference_apk": {
+      "version": "0.100.42-quick",
+      "version_code": 151,
+      "package": "app.onklav.home.prototype.rewrite",
+      "sha256": "699e01383805935ebe65193056bc72fcf225ac6ddf739a8b7ca22a6cbbd1af0b"
+    },
+    "host_protocol_build": 96,
+    "rust": "rustc 1.90.0 (1159e78c4 2025-09-14)",
+    "python": "3.12.14",
+    "target": "wasm32-unknown-unknown",
+    "note": "First build downloads Cargo dependencies and needs a native linker. Android UI/media still require a phone."
+  },
+  "portable_form": {
+    "project": "/tmp/onklav-adk-smoke-c5_f1q15/moved app",
+    "signature_install_startup": "passed",
+    "scenario": {
+      "passed": 4,
+      "runtime": "production Rust app broker",
+      "android_ui_tested": false
+    },
+    "signer": "disposable local test author; key and package discarded",
+    "shipping_package_created": false,
+    "native_phone_acceptance_required": true
+  },
+  "phone_verified": false
+}

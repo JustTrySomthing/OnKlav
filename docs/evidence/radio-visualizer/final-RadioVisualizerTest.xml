@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.RadioVisualizerTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-28T03:34:56" hostname="666c98ec4593" time="10.294">
+  <properties/>
+  <testcase name="actualLandscapeFillsWindowControlsHideRevealAndBackRestores" classname="app.onklav.home.RadioVisualizerTest" time="10.188"/>
+  <testcase name="captureRejectsGlobalSessionAndCloseClearsWaveform" classname="app.onklav.home.RadioVisualizerTest" time="0.106"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

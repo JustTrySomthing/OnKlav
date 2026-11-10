@@ -1,0 +1,20 @@
+{
+  "status": "source_complete_for_migration_not_full_request",
+  "date": "2026-10-29",
+  "android_checks": [
+    "app.onklav.home.WriteHostTest.documentsAreAtomicPrivateAndRespectRevocation",
+    "app.onklav.home.WriteMigrationHostTest.conflictingWriteDocumentDoesNotRemoveNotesOrOverwriteEitherOriginal",
+    "app.onklav.home.WriteMigrationHostTest.startupConvertsLegacyNotesRetiresThePackageAndKeepsLinkedSaves"
+  ],
+  "rust_content_checks": 35,
+  "additional_restore_check": "core/tests/notes_write_restore.rs passed against final source",
+  "native_proof": "docs/working-native-verification.json",
+  "runtime_classes_match": true,
+  "originals_kept": true,
+  "notes_active_bundle_removed": true,
+  "remaining": [
+    "folder encryption",
+    "physical phone acceptance"
+  ],
+  "apk_built": false
+}

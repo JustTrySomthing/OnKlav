@@ -1,0 +1,60 @@
+{
+  "scope": "Email enrollment: GMX and Private domain",
+  "status": "implemented",
+  "focused_checks": 14,
+  "verification_sequence": "Initial run: 12 host/protocol checks plus small-screen choice test passed; dialog test hit Robolectric idle-clock timeout. Dialog fixture moved to the existing bounded native-frame harness; final two UI checks and full lint passed.",
+  "suites": [
+    {
+      "suite": "MailGmxTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "suite": "MailSetupUiTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "suite": "MailHostTest",
+      "tests": 6,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "suite": "MailProtocolTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "suite": "MailUiTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0
+    }
+  ],
+  "production_and_test_compilation": "PASS",
+  "lint": {
+    "status": "PASS",
+    "errors": 0,
+    "check_test_sources": true
+  },
+  "new_dependencies": false,
+  "native_or_sdk_changes": false,
+  "apk_built": false,
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/MailSetup.kt": "a8902b9a825dcfeeaf186d88d1bee3baa450df95a584392c83a7a06a2b4e877d",
+    "android/app/src/main/kotlin/app/onklav/home/MailData.kt": "7806c6fc283b0c2a8804fd7defb61823f6144e5b840b9f81a26b7a0cdf8af69c",
+    "android/app/src/main/kotlin/app/onklav/home/MailDialogs.kt": "b0e7a0299bb77142146189703c53c3613fbccdad77379515de140e61e8df4dee",
+    "android/app/src/main/kotlin/app/onklav/home/EmailScreen.kt": "cde711507bfeb70847e20cc02854abc3ef709b64871e7ad493ea1a6c2e176350",
+    "android/app/src/test/kotlin/app/onklav/home/MailGmxTest.kt": "bbeea36de59ff8209fe5dddcd2be337105de6200754e711e53b96d08c77cbf2c",
+    "android/app/src/test/kotlin/app/onklav/home/MailSetupUiTest.kt": "6c94963ab690c3be0fb3c66e19a2274c818115eaa0f9c1160bb8372e7d982332",
+    "android/app/src/test/kotlin/app/onklav/home/MailUiTest.kt": "9677fde8b8beff8c28754c574b4ff6bad5aa20517f8fe1ab7c100a284503b3c4"
+  },
+  "limits": [
+    "No live GMX or customer-domain credentials used; real-provider/handset acceptance remains separate.",
+    "Private-domain accounts need an existing secure IMAP/SMTP mailbox."
+  ]
+}

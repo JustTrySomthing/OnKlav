@@ -1,0 +1,1 @@
+{"schema":1,"levels":[{"id":"foyer","data":{"text":"A locked door blocks the stairs.","choices":[{"label":"Look in the study","next":"study"}]}},{"id":"study","data":{"text":"A brass key rests on the desk.","choices":[{"label":"Return to the foyer","next":"foyer"}]}}]}

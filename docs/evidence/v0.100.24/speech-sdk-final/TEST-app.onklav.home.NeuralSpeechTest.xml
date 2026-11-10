@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.NeuralSpeechTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-29T22:50:29" hostname="b623e8e1265a" time="5.514">
+  <properties/>
+  <testcase name="approvedReferenceIsUnsplitAndLongTextHasSafeNaturalBoundaries" classname="app.onklav.home.NeuralSpeechTest" time="2.05"/>
+  <testcase name="backgroundReadingRetainsAuthorizationAndNewAudioOwnerStopsIt" classname="app.onklav.home.NeuralSpeechTest" time="0.26"/>
+  <testcase name="bundledNativeJniPreservesApprovedVoiceAndRejectsInvalidRequests" classname="app.onklav.home.NeuralSpeechTest" time="3.175"/>
+  <testcase name="onePageCompletionCallbackAndPausedReaderCannotStealNewAudio" classname="app.onklav.home.NeuralSpeechTest" time="0.029"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

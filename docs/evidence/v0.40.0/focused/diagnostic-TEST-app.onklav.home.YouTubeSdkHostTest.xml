@@ -1,0 +1,234 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.YouTubeSdkHostTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2026-10-23T01:25:40" hostname="276516236850" time="22.585">
+  <properties/>
+  <testcase name="youtubePackageOpensOwnViewerLibraryAndResetDialog" classname="app.onklav.home.YouTubeSdkHostTest" time="22.585">
+    <failure message="java.lang.AssertionError: YouTube action unavailable: missing&#10;model busy=false pending=null error=The coroutine scope left the composition frame={&quot;actions&quot;:[{&quot;icon&quot;:&quot;home&quot;,&quot;id&quot;:&quot;home&quot;,&quot;kind&quot;:&quot;button&quot;,&quot;long_action&quot;:&quot;viewer.reset&quot;,&quot;long_label&quot;:&quot;Reset YouTube Viewer&quot;,&quot;text&quot;:&quot;YouTube Home&quot;},{&quot;icon&quot;:&quot;history&quot;,&quot;id&quot;:&quot;history&quot;,&quot;kind&quot;:&quot;button&quot;,&quot;text&quot;:&quot;YouTube History&quot;},{&quot;icon&quot;:&quot;bookmark&quot;,&quot;id&quot;:&quot;bookmarks&quot;,&quot;kind&quot;:&quot;button&quot;,&quot;text&quot;:&quot;YouTube Bookmarks&quot;}],&quot;body&quot;:[{&quot;command&quot;:&quot;load&quot;,&quot;epoch&quot;:0,&quot;id&quot;:&quot;youtube.page&quot;,&quot;javascript&quot;:true,&quot;kind&quot;:&quot;web&quot;,&quot;metadata&quot;:true,&quot;on_change&quot;:&quot;web.changed&quot;,&quot;on_notice&quot;:&quot;web.notice&quot;,&quot;progress_inline&quot;:false,&quot;provider&quot;:&quot;youtube&quot;,&quot;seq&quot;:1,&quot;tab&quot;:&quot;9c5d84d1bf10449eb9e28a5ca6107dd6&quot;,&quot;url&quot;:&quot;https:\/\/www.youtube.com\/&quot;}],&quot;close_requested&quot;:false,&quot;drawer&quot;:[{&quot;id&quot;:&quot;bookmark.add&quot;,&quot;kind&quot;:&quot;button&quot;,&quot;text&quot;:&quot;Bookmark This Page&quot;},{&quot;id&quot;:&quot;empty.library&quot;,&quot;kind&quot;:&quot;label&quot;,&quot;text&quot;:&quot;No Bookmarks Yet&quot;}],&quot;drawer_close&quot;:&quot;drawer.close&quot;,&quot;drawer_max_width&quot;:420,&quot;drawer_open&quot;:false,&quot;drawer_title&quot;:&quot;YouTube Bookmarks&quot;,&quot;drawer_width&quot;:0.92,&quot;effect&quot;:null,&quot;full_bleed&quot;:true,&quot;header_loading&quot;:true,&quot;hide_header_landscape&quot;:true,&quot;menu&quot;:[],&quot;menu_close&quot;:&quot;menu.close&quot;,&quot;menu_open&quot;:false,&quot;menu_title&quot;:&quot;YouTube&quot;,&quot;state&quot;:{&quot;back&quot;:false,&quot;cache_epoch&quot;:0,&quot;command&quot;:&quot;load&quot;,&quot;confirm&quot;:null,&quot;drawer&quot;:&quot;&quot;,&quot;epoch&quot;:0,&quot;exit&quot;:false,&quot;listing&quot;:{&quot;items&quot;:[],&quot;offset&quot;:0,&quot;total&quot;:0},&quot;menu&quot;:&quot;&quot;,&quot;meta&quot;:{&quot;bookmarks&quot;:1,&quot;history&quot;:0,&quot;now&quot;:1792718746762,&quot;viewer&quot;:&quot;9c5d84d1bf10449eb9e28a5ca6107dd6&quot;},&quot;page&quot;:0,&quot;seq&quot;:1,&quot;status&quot;:&quot;&quot;,&quot;suppressed&quot;:&quot;&quot;,&quot;title&quot;:&quot;&quot;,&quot;url&quot;:&quot;https:\/\/www.youtube.com\/&quot;,&quot;video&quot;:&quot;&quot;},&quot;title&quot;:&quot;YouTube&quot;}&#10;Printing with useUnmergedTree = 'true'&#10;Node #1 at (l=0.0, t=0.0, r=432.0, b=936.0)px&#10; |-Node #67 at (l=0.0, t=0.0, r=432.0, b=936.0)px&#10;   IsContainer = 'true'&#10;    |-Node #132 at (l=0.0, t=0.0, r=432.0, b=48.0)px, Tag: 'home-header'&#10;    |  |-Node #133 at (l=8.0, t=11.0, r=424.0, b=37.0)px&#10;    |    Text = '[Apps]'&#10;    |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;    |-Node #134 at (l=12.0, t=54.0, r=420.0, b=864.0)px, Tag: 'apps-desktop'&#10;    |  |-Node #136 at (l=12.0, t=54.0, r=420.0, b=832.0)px, Tag: 'apps-grid-viewport'&#10;    |  |  |-Node #142 at (l=12.0, t=54.0, r=420.0, b=832.0)px&#10;    |  |    IsTraversalGroup = 'true'&#10;    |  |    VerticalScrollAxisRange = 'ScrollAxisRange(value=0.0, maxValue=0.0, reverseScrolling=false)'&#10;    |  |    Actions = [ScrollBy, ScrollByOffset]&#10;    |  |     |-Node #143 at (l=12.0, t=54.0, r=420.0, b=832.0)px&#10;    |  |       CollectionInfo = 'androidx.compose.ui.semantics.CollectionInfo@1339e2e8'&#10;    |  |       HorizontalScrollAxisRange = 'ScrollAxisRange(value=0.0, maxValue=0.0, reverseScrolling=false)'&#10;    |  |       IsTraversalGroup = 'true'&#10;    |  |       Actions = [GetScrollViewportLength, IndexForKey, PageLeft, PageRight, ScrollBy, ScrollByOffset, ScrollToIndex]&#10;    |  |        |-Node #145 at (l=12.0, t=54.0, r=420.0, b=832.0)px, Tag: 'apps-page-0'&#10;    |  |          CollectionInfo = 'androidx.compose.ui.semantics.CollectionInfo@2af930f3'&#10;    |  |          IsTraversalGroup = 'true'&#10;    |  |          VerticalScrollAxisRange = 'ScrollAxisRange(value=0.0, maxValue=100.0, reverseScrolling=false)'&#10;    |  |          Actions = [GetScrollViewportLength, IndexForKey]&#10;    |  |           |-Node #177 at (l=12.0, t=54.0, r=148.0, b=210.0)px, Tag: 'app-cell-0'&#10;    |  |           |  |-Node #178 at (l=12.0, t=54.0, r=148.0, b=210.0)px, Tag: 'app-icon-walkie'&#10;    |  |           |    ContentDescription = '[Walkie-Talkie]'&#10;    |  |           |    CustomActions = '[CustomAccessibilityAction(label=Move Earlier, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$399/0x00007fc264ae5108@768bb9e6), CustomAccessibilityAction(label=Move Later, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$400/0x00007fc264ae5330@421d51e5), CustomAccessibilityAction(label=Move to Previous Page, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$401/0x00007fc264ae5558@79bbf87e), CustomAccessibilityAction(label=Move to Next Page, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$402/0x00007fc264ae5780@1a263112)]'&#10;    |  |           |    Focused = 'false'&#10;    |  |           |    Role = 'Button'&#10;    |  |           |    Actions = [OnClick, RequestFocus]&#10;    |  |           |    MergeDescendants = 'true'&#10;    |  |           |     |-Node #181 at (l=16.0, t=118.0, r=144.0, b=133.0)px&#10;    |  |           |       Text = '[Walkie-Talkie]'&#10;    |  |           |       Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;    |  |           |-Node #183 at (l=148.0, t=54.0, r=284.0, b=210.0)px, Tag: 'app-cell-1'&#10;    |  |           |  |-Node #184 at (l=148.0, t=54.0, r=284.0, b=210.0)px, Tag: 'app-icon-social'&#10;    |  |           |    ContentDescription = '[Social]'&#10;    |  |           |    CustomActions = '[CustomAccessibilityAction(label=Move Earlier, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$399/0x00007fc264ae5108@3149ff39), CustomAccessibilityAction(label=Move Later, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$400/0x00007fc264ae5330@19f3128c), CustomAccessibilityAction(label=Move to Previous Page, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$401/0x00007fc264ae5558@3fad61c4), CustomAccessibilityAction(label=Move to Next Page, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$402/0x00007fc264ae5780@14286982)]'&#10;    |  |           |    Focused = 'false'&#10;    |  |           |    Role = 'Button'&#10;    |  |           |    Actions = [OnClick, RequestFocus]&#10;    |  |           |    MergeDescendants = 'true'&#10;    |  |           |     |-Node #187 at (l=152.0, t=118.0, r=280.0, b=133.0)px&#10;    |  |           |       Text = '[Social]'&#10;    |  |           |       Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;    |  |           |-Node #189 at (l=284.0, t=54.0, r=420.0, b=210.0)px, Tag: 'app-cell-2'&#10;    |  |           |  |-Node #190 at (l=284.0, t=54.0, r=420.0, b=210.0)px, Tag: 'app-icon-browser'&#10;    |  |           |    ContentDescription = '[Browser]'&#10;    |  |           |    CustomActions = '[CustomAccessibilityAction(label=Move Earlier, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$399/0x00007fc264ae5108@6ae6ec09), CustomAccessibilityAction(label=Move Later, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$400/0x00007fc264ae5330@6b00f4ab), CustomAccessibilityAction(label=Move to Previous Page, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$401/0x00007fc264ae5558@3ff70b4e), CustomAccessibilityAction(label=Move to Next Page, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$402/0x00007fc264ae5780@68c4014b)]'&#10;    |  |           |    Focused = 'false'&#10;    |  |           |    Role = 'Button'&#10;    |  |           |    Actions = [OnClick, RequestFocus]&#10;    |  |           |    MergeDescendants = 'true'&#10;    |  |           |     |-Node #193 at (l=288.0, t=118.0, r=416.0, b=133.0)px&#10;    |  |           |       Text = '[Browser]'&#10;    |  |           |       Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;    |  |           |-Node #195 at (l=12.0, t=210.0, r=148.0, b=366.0)px, Tag: 'app-cell-3'&#10;    |  |           |  |-Node #196 at (l=12.0, t=210.0, r=148.0, b=366.0)px, Tag: 'app-icon-youtube'&#10;    |  |           |    ContentDescription = '[YouTube]'&#10;    |  |           |    CustomActions = '[CustomAccessibilityAction(label=Move Earlier, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$399/0x00007fc264ae5108@18756ea4), CustomAccessibilityAction(label=Move Later, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$400/0x00007fc264ae5330@19e2c8bf), CustomAccessibilityAction(label=Move to Previous Page, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$401/0x00007fc264ae5558@393085be), CustomAccessibilityAction(label=Move to Next Page, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$402/0x00007fc264ae5780@46a1d915)]'&#10;    |  |           |    Focused = 'false'&#10;    |  |           |    Role = 'Button'&#10;    |  |           |    Actions = [OnClick, RequestFocus]&#10;    |  |           |    MergeDescendants = 'true'&#10;    |  |           |     |-Node #199 at (l=16.0, t=274.0, r=144.0, b=289.0)px&#10;    |  |           |       Text = '[YouTube]'&#10;    |  |           |       Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;    |  |           |-Node #201 at (l=148.0, t=210.0, r=284.0, b=366.0)px, Tag: 'app-cell-4'&#10;    |  |           |  |-Node #202 at (l=148.0, t=210.0, r=284.0, b=366.0)px, Tag: 'app-icon-reader'&#10;    |  |           |    ContentDescription = '[Read Aloud]'&#10;    |  |           |    CustomActions = '[CustomAccessibilityAction(label=Move Earlier, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$399/0x00007fc264ae5108@351f3efe), CustomAccessibilityAction(label=Move Later, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$400/0x00007fc264ae5330@5956215a), CustomAccessibilityAction(label=Move to Previous Page, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$401/0x00007fc264ae5558@5efcfc45), CustomAccessibilityAction(label=Move to Next Page, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$402/0x00007fc264ae5780@16fa6088)]'&#10;    |  |           |    Focused = 'false'&#10;    |  |           |    Role = 'Button'&#10;    |  |           |    Actions = [OnClick, RequestFocus]&#10;    |  |           |    MergeDescendants = 'true'&#10;    |  |           |     |-Node #205 at (l=152.0, t=274.0, r=280.0, b=289.0)px&#10;    |  |           |       Text = '[Read Aloud]'&#10;    |  |           |       Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;    |  |           |-Node #207 at (l=284.0, t=210.0, r=420.0, b=366.0)px, Tag: 'app-cell-5'&#10;    |  |           |  |-Node #208 at (l=284.0, t=210.0, r=420.0, b=366.0)px, Tag: 'app-icon-notes'&#10;    |  |           |    ContentDescription = '[Notes]'&#10;    |  |           |    CustomActions = '[CustomAccessibilityAction(label=Move Earlier, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$399/0x00007fc264ae5108@5a5e5467), CustomAccessibilityAction(label=Move Later, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$400/0x00007fc264ae5330@32eae287), CustomAccessibilityAction(label=Move to Previous Page, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$401/0x00007fc264ae5558@b4d2e4b), CustomAccessibilityAction(label=Move to Next Page, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$402/0x00007fc264ae5780@4ef6e18a)]'&#10;    |  |           |    Focused = 'false'&#10;    |  |           |    Role = 'Button'&#10;    |  |           |    Actions = [OnClick, RequestFocus]&#10;    |  |           |    MergeDescendants = 'true'&#10;    |  |           |     |-Node #211 at (l=288.0, t=274.0, r=416.0, b=289.0)px&#10;    |  |           |       Text = '[Notes]'&#10;    |  |           |       Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;    |  |           |-Node #213 at (l=12.0, t=366.0, r=148.0, b=522.0)px, Tag: 'app-cell-6'&#10;    |  |           |  |-Node #214 at (l=12.0, t=366.0, r=148.0, b=522.0)px, Tag: 'app-icon-annotation'&#10;    |  |           |    ContentDescription = '[Annotation]'&#10;    |  |           |    CustomActions = '[CustomAccessibilityAction(label=Move Earlier, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$399/0x00007fc264ae5108@6623695f), CustomAccessibilityAction(label=Move Later, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$400/0x00007fc264ae5330@3b851c6), CustomAccessibilityAction(label=Move to Previous Page, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$401/0x00007fc264ae5558@6165088c), CustomAccessibilityAction(label=Move to Next Page, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$402/0x00007fc264ae5780@18e64f9b)]'&#10;    |  |           |    Focused = 'false'&#10;    |  |           |    Role = 'Button'&#10;    |  |           |    Actions = [OnClick, RequestFocus]&#10;    |  |           |    MergeDescendants = 'true'&#10;    |  |           |     |-Node #217 at (l=16.0, t=430.0, r=144.0, b=445.0)px&#10;    |  |           |       Text = '[Annotation]'&#10;    |  |           |       Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;    |  |           |-Node #219 at (l=148.0, t=366.0, r=284.0, b=522.0)px, Tag: 'app-cell-7'&#10;    |  |           |  |-Node #220 at (l=148.0, t=366.0, r=284.0, b=522.0)px, Tag: 'app-icon-rss'&#10;    |  |           |    ContentDescription = '[RSS Reader]'&#10;    |  |           |    CustomActions = '[CustomAccessibilityAction(label=Move Earlier, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$399/0x00007fc264ae5108@6572b449), CustomAccessibilityAction(label=Move Later, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$400/0x00007fc264ae5330@2405ff40), CustomAccessibilityAction(label=Move to Previous Page, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$401/0x00007fc264ae5558@6d6da224), CustomAccessibilityAction(label=Move to Next Page, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$402/0x00007fc264ae5780@47ddb285)]'&#10;    |  |           |    Focused = 'false'&#10;    |  |           |    Role = 'Button'&#10;    |  |           |    Actions = [OnClick, RequestFocus]&#10;    |  |           |    MergeDescendants = 'true'&#10;    |  |           |     |-Node #223 at (l=152.0, t=430.0, r=280.0, b=445.0)px&#10;    |  |           |       Text = '[RSS Reader]'&#10;    |  |           |       Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;    |  |           |-Node #163 at (l=284.0, t=366.0, r=420.0, b=522.0)px, Tag: 'app-cell-8'&#10;    |  |           |-Node #165 at (l=12.0, t=522.0, r=148.0, b=678.0)px, Tag: 'app-cell-9'&#10;    |  |           |-Node #167 at (l=148.0, t=522.0, r=284.0, b=678.0)px, Tag: 'app-cell-10'&#10;    |  |           |-Node #169 at (l=284.0, t=522.0, r=420.0, b=678.0)px, Tag: 'app-cell-11'&#10;    |  |           |-Node #171 at (l=12.0, t=678.0, r=148.0, b=834.0)px, Tag: 'app-cell-12'&#10;    |  |           |-Node #173 at (l=148.0, t=678.0, r=284.0, b=834.0)px, Tag: 'app-cell-13'&#10;    |  |           |-Node #175 at (l=284.0, t=678.0, r=420.0, b=834.0)px, Tag: 'app-cell-14'&#10;    |  |-Node #137 at (l=12.0, t=832.0, r=420.0, b=864.0)px, Tag: 'apps-page-dots'&#10;    |    ContentDescription = '[Apps Page 1 of 1]'&#10;    |    Focused = 'false'&#10;    |    StateDescription = '1 pages'&#10;    |    Actions = [OnClick, RequestFocus]&#10;    |    MergeDescendants = 'true'&#10;    |     |-Node #139 at (l=210.0, t=842.0, r=222.0, b=854.0)px&#10;    |       ContentDescription = '[Go to Apps Page 1]'&#10;    |       Focused = 'false'&#10;    |       Actions = [OnClick, RequestFocus]&#10;    |       MergeDescendants = 'true'&#10;    |-Node #105 at (l=0.0, t=864.0, r=432.0, b=936.0)px, Tag: 'home-navigation'&#10;    |  |-Node #106 at (l=8.0, t=868.0, r=92.0, b=936.0)px, Tag: 'tab-Messages'&#10;    |  | Focused = 'false'&#10;    |  | Role = 'Tab'&#10;    |  | Selected = 'false'&#10;    |  | Actions = [OnClick, RequestFocus]&#10;    |  | MergeDescendants = 'true'&#10;    |  |  |-Node #109 at (l=24.0, t=908.0, r=76.0, b=922.0)px&#10;    |  |    Text = '[Messages]'&#10;    |  |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;    |  |-Node #110 at (l=92.0, t=868.0, r=175.0, b=936.0)px, Tag: 'tab-Groups'&#10;    |  | Focused = 'false'&#10;    |  | Role = 'Tab'&#10;    |  | Selected = 'false'&#10;    |  | Actions = [OnClick, RequestFocus]&#10;    |  | MergeDescendants = 'true'&#10;    |  |  |-Node #113 at (l=116.0, t=908.0, r=152.0, b=922.0)px&#10;    |  |    Text = '[Groups]'&#10;    |  |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;    |  |-Node #114 at (l=175.0, t=868.0, r=258.0, b=936.0)px, Tag: 'tab-Apps'&#10;    |  | Focused = 'false'&#10;    |  | Role = 'Tab'&#10;    |  | Selected = 'true'&#10;    |  | Actions = [OnClick, RequestFocus]&#10;    |  | MergeDescendants = 'true'&#10;    |  |  |-Node #117 at (l=204.0, t=908.0, r=229.0, b=922.0)px&#10;    |  |    Text = '[Apps]'&#10;    |  |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;    |  |-Node #118 at (l=258.0, t=868.0, r=341.0, b=936.0)px, Tag: 'tab-Games'&#10;    |  | Focused = 'false'&#10;    |  | Role = 'Tab'&#10;    |  | Selected = 'false'&#10;    |  | Actions = [OnClick, RequestFocus]&#10;    |  | MergeDescendants = 'true'&#10;    |  |  |-Node #121 at (l=282.0, t=908.0, r=318.0, b=922.0)px&#10;    |  |    Text = '[Games]'&#10;    |  |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;    |  |-Node #122 at (l=341.0, t=868.0, r=424.0, b=936.0)px, Tag: 'tab-Settings'&#10;    |    Focused = 'false'&#10;    |    Role = 'Tab'&#10;    |    Selected = 'false'&#10;    |    Actions = [OnClick, RequestFocus]&#10;    |    MergeDescendants = 'true'&#10;    |     |-Node #125 at (l=362.0, t=908.0, r=404.0, b=922.0)px&#10;    |       Text = '[Settings]'&#10;    |       Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;    |-Node #70 at (l=216.0, t=0.0, r=216.0, b=0.0)px, Tag: 'status-bar-backplate'&#10;    |-Node #71 at (l=216.0, t=936.0, r=216.0, b=936.0)px, Tag: 'navigation-bar-backplate'" type="java.lang.AssertionError">java.lang.AssertionError: YouTube action unavailable: missing
+model busy=false pending=null error=The coroutine scope left the composition frame={&quot;actions&quot;:[{&quot;icon&quot;:&quot;home&quot;,&quot;id&quot;:&quot;home&quot;,&quot;kind&quot;:&quot;button&quot;,&quot;long_action&quot;:&quot;viewer.reset&quot;,&quot;long_label&quot;:&quot;Reset YouTube Viewer&quot;,&quot;text&quot;:&quot;YouTube Home&quot;},{&quot;icon&quot;:&quot;history&quot;,&quot;id&quot;:&quot;history&quot;,&quot;kind&quot;:&quot;button&quot;,&quot;text&quot;:&quot;YouTube History&quot;},{&quot;icon&quot;:&quot;bookmark&quot;,&quot;id&quot;:&quot;bookmarks&quot;,&quot;kind&quot;:&quot;button&quot;,&quot;text&quot;:&quot;YouTube Bookmarks&quot;}],&quot;body&quot;:[{&quot;command&quot;:&quot;load&quot;,&quot;epoch&quot;:0,&quot;id&quot;:&quot;youtube.page&quot;,&quot;javascript&quot;:true,&quot;kind&quot;:&quot;web&quot;,&quot;metadata&quot;:true,&quot;on_change&quot;:&quot;web.changed&quot;,&quot;on_notice&quot;:&quot;web.notice&quot;,&quot;progress_inline&quot;:false,&quot;provider&quot;:&quot;youtube&quot;,&quot;seq&quot;:1,&quot;tab&quot;:&quot;9c5d84d1bf10449eb9e28a5ca6107dd6&quot;,&quot;url&quot;:&quot;https:\/\/www.youtube.com\/&quot;}],&quot;close_requested&quot;:false,&quot;drawer&quot;:[{&quot;id&quot;:&quot;bookmark.add&quot;,&quot;kind&quot;:&quot;button&quot;,&quot;text&quot;:&quot;Bookmark This Page&quot;},{&quot;id&quot;:&quot;empty.library&quot;,&quot;kind&quot;:&quot;label&quot;,&quot;text&quot;:&quot;No Bookmarks Yet&quot;}],&quot;drawer_close&quot;:&quot;drawer.close&quot;,&quot;drawer_max_width&quot;:420,&quot;drawer_open&quot;:false,&quot;drawer_title&quot;:&quot;YouTube Bookmarks&quot;,&quot;drawer_width&quot;:0.92,&quot;effect&quot;:null,&quot;full_bleed&quot;:true,&quot;header_loading&quot;:true,&quot;hide_header_landscape&quot;:true,&quot;menu&quot;:[],&quot;menu_close&quot;:&quot;menu.close&quot;,&quot;menu_open&quot;:false,&quot;menu_title&quot;:&quot;YouTube&quot;,&quot;state&quot;:{&quot;back&quot;:false,&quot;cache_epoch&quot;:0,&quot;command&quot;:&quot;load&quot;,&quot;confirm&quot;:null,&quot;drawer&quot;:&quot;&quot;,&quot;epoch&quot;:0,&quot;exit&quot;:false,&quot;listing&quot;:{&quot;items&quot;:[],&quot;offset&quot;:0,&quot;total&quot;:0},&quot;menu&quot;:&quot;&quot;,&quot;meta&quot;:{&quot;bookmarks&quot;:1,&quot;history&quot;:0,&quot;now&quot;:1792718746762,&quot;viewer&quot;:&quot;9c5d84d1bf10449eb9e28a5ca6107dd6&quot;},&quot;page&quot;:0,&quot;seq&quot;:1,&quot;status&quot;:&quot;&quot;,&quot;suppressed&quot;:&quot;&quot;,&quot;title&quot;:&quot;&quot;,&quot;url&quot;:&quot;https:\/\/www.youtube.com\/&quot;,&quot;video&quot;:&quot;&quot;},&quot;title&quot;:&quot;YouTube&quot;}
+Printing with useUnmergedTree = 'true'
+Node #1 at (l=0.0, t=0.0, r=432.0, b=936.0)px
+ |-Node #67 at (l=0.0, t=0.0, r=432.0, b=936.0)px
+   IsContainer = 'true'
+    |-Node #132 at (l=0.0, t=0.0, r=432.0, b=48.0)px, Tag: 'home-header'
+    |  |-Node #133 at (l=8.0, t=11.0, r=424.0, b=37.0)px
+    |    Text = '[Apps]'
+    |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |-Node #134 at (l=12.0, t=54.0, r=420.0, b=864.0)px, Tag: 'apps-desktop'
+    |  |-Node #136 at (l=12.0, t=54.0, r=420.0, b=832.0)px, Tag: 'apps-grid-viewport'
+    |  |  |-Node #142 at (l=12.0, t=54.0, r=420.0, b=832.0)px
+    |  |    IsTraversalGroup = 'true'
+    |  |    VerticalScrollAxisRange = 'ScrollAxisRange(value=0.0, maxValue=0.0, reverseScrolling=false)'
+    |  |    Actions = [ScrollBy, ScrollByOffset]
+    |  |     |-Node #143 at (l=12.0, t=54.0, r=420.0, b=832.0)px
+    |  |       CollectionInfo = 'androidx.compose.ui.semantics.CollectionInfo@1339e2e8'
+    |  |       HorizontalScrollAxisRange = 'ScrollAxisRange(value=0.0, maxValue=0.0, reverseScrolling=false)'
+    |  |       IsTraversalGroup = 'true'
+    |  |       Actions = [GetScrollViewportLength, IndexForKey, PageLeft, PageRight, ScrollBy, ScrollByOffset, ScrollToIndex]
+    |  |        |-Node #145 at (l=12.0, t=54.0, r=420.0, b=832.0)px, Tag: 'apps-page-0'
+    |  |          CollectionInfo = 'androidx.compose.ui.semantics.CollectionInfo@2af930f3'
+    |  |          IsTraversalGroup = 'true'
+    |  |          VerticalScrollAxisRange = 'ScrollAxisRange(value=0.0, maxValue=100.0, reverseScrolling=false)'
+    |  |          Actions = [GetScrollViewportLength, IndexForKey]
+    |  |           |-Node #177 at (l=12.0, t=54.0, r=148.0, b=210.0)px, Tag: 'app-cell-0'
+    |  |           |  |-Node #178 at (l=12.0, t=54.0, r=148.0, b=210.0)px, Tag: 'app-icon-walkie'
+    |  |           |    ContentDescription = '[Walkie-Talkie]'
+    |  |           |    CustomActions = '[CustomAccessibilityAction(label=Move Earlier, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$399/0x00007fc264ae5108@768bb9e6), CustomAccessibilityAction(label=Move Later, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$400/0x00007fc264ae5330@421d51e5), CustomAccessibilityAction(label=Move to Previous Page, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$401/0x00007fc264ae5558@79bbf87e), CustomAccessibilityAction(label=Move to Next Page, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$402/0x00007fc264ae5780@1a263112)]'
+    |  |           |    Focused = 'false'
+    |  |           |    Role = 'Button'
+    |  |           |    Actions = [OnClick, RequestFocus]
+    |  |           |    MergeDescendants = 'true'
+    |  |           |     |-Node #181 at (l=16.0, t=118.0, r=144.0, b=133.0)px
+    |  |           |       Text = '[Walkie-Talkie]'
+    |  |           |       Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |  |           |-Node #183 at (l=148.0, t=54.0, r=284.0, b=210.0)px, Tag: 'app-cell-1'
+    |  |           |  |-Node #184 at (l=148.0, t=54.0, r=284.0, b=210.0)px, Tag: 'app-icon-social'
+    |  |           |    ContentDescription = '[Social]'
+    |  |           |    CustomActions = '[CustomAccessibilityAction(label=Move Earlier, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$399/0x00007fc264ae5108@3149ff39), CustomAccessibilityAction(label=Move Later, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$400/0x00007fc264ae5330@19f3128c), CustomAccessibilityAction(label=Move to Previous Page, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$401/0x00007fc264ae5558@3fad61c4), CustomAccessibilityAction(label=Move to Next Page, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$402/0x00007fc264ae5780@14286982)]'
+    |  |           |    Focused = 'false'
+    |  |           |    Role = 'Button'
+    |  |           |    Actions = [OnClick, RequestFocus]
+    |  |           |    MergeDescendants = 'true'
+    |  |           |     |-Node #187 at (l=152.0, t=118.0, r=280.0, b=133.0)px
+    |  |           |       Text = '[Social]'
+    |  |           |       Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |  |           |-Node #189 at (l=284.0, t=54.0, r=420.0, b=210.0)px, Tag: 'app-cell-2'
+    |  |           |  |-Node #190 at (l=284.0, t=54.0, r=420.0, b=210.0)px, Tag: 'app-icon-browser'
+    |  |           |    ContentDescription = '[Browser]'
+    |  |           |    CustomActions = '[CustomAccessibilityAction(label=Move Earlier, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$399/0x00007fc264ae5108@6ae6ec09), CustomAccessibilityAction(label=Move Later, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$400/0x00007fc264ae5330@6b00f4ab), CustomAccessibilityAction(label=Move to Previous Page, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$401/0x00007fc264ae5558@3ff70b4e), CustomAccessibilityAction(label=Move to Next Page, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$402/0x00007fc264ae5780@68c4014b)]'
+    |  |           |    Focused = 'false'
+    |  |           |    Role = 'Button'
+    |  |           |    Actions = [OnClick, RequestFocus]
+    |  |           |    MergeDescendants = 'true'
+    |  |           |     |-Node #193 at (l=288.0, t=118.0, r=416.0, b=133.0)px
+    |  |           |       Text = '[Browser]'
+    |  |           |       Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |  |           |-Node #195 at (l=12.0, t=210.0, r=148.0, b=366.0)px, Tag: 'app-cell-3'
+    |  |           |  |-Node #196 at (l=12.0, t=210.0, r=148.0, b=366.0)px, Tag: 'app-icon-youtube'
+    |  |           |    ContentDescription = '[YouTube]'
+    |  |           |    CustomActions = '[CustomAccessibilityAction(label=Move Earlier, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$399/0x00007fc264ae5108@18756ea4), CustomAccessibilityAction(label=Move Later, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$400/0x00007fc264ae5330@19e2c8bf), CustomAccessibilityAction(label=Move to Previous Page, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$401/0x00007fc264ae5558@393085be), CustomAccessibilityAction(label=Move to Next Page, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$402/0x00007fc264ae5780@46a1d915)]'
+    |  |           |    Focused = 'false'
+    |  |           |    Role = 'Button'
+    |  |           |    Actions = [OnClick, RequestFocus]
+    |  |           |    MergeDescendants = 'true'
+    |  |           |     |-Node #199 at (l=16.0, t=274.0, r=144.0, b=289.0)px
+    |  |           |       Text = '[YouTube]'
+    |  |           |       Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |  |           |-Node #201 at (l=148.0, t=210.0, r=284.0, b=366.0)px, Tag: 'app-cell-4'
+    |  |           |  |-Node #202 at (l=148.0, t=210.0, r=284.0, b=366.0)px, Tag: 'app-icon-reader'
+    |  |           |    ContentDescription = '[Read Aloud]'
+    |  |           |    CustomActions = '[CustomAccessibilityAction(label=Move Earlier, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$399/0x00007fc264ae5108@351f3efe), CustomAccessibilityAction(label=Move Later, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$400/0x00007fc264ae5330@5956215a), CustomAccessibilityAction(label=Move to Previous Page, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$401/0x00007fc264ae5558@5efcfc45), CustomAccessibilityAction(label=Move to Next Page, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$402/0x00007fc264ae5780@16fa6088)]'
+    |  |           |    Focused = 'false'
+    |  |           |    Role = 'Button'
+    |  |           |    Actions = [OnClick, RequestFocus]
+    |  |           |    MergeDescendants = 'true'
+    |  |           |     |-Node #205 at (l=152.0, t=274.0, r=280.0, b=289.0)px
+    |  |           |       Text = '[Read Aloud]'
+    |  |           |       Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |  |           |-Node #207 at (l=284.0, t=210.0, r=420.0, b=366.0)px, Tag: 'app-cell-5'
+    |  |           |  |-Node #208 at (l=284.0, t=210.0, r=420.0, b=366.0)px, Tag: 'app-icon-notes'
+    |  |           |    ContentDescription = '[Notes]'
+    |  |           |    CustomActions = '[CustomAccessibilityAction(label=Move Earlier, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$399/0x00007fc264ae5108@5a5e5467), CustomAccessibilityAction(label=Move Later, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$400/0x00007fc264ae5330@32eae287), CustomAccessibilityAction(label=Move to Previous Page, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$401/0x00007fc264ae5558@b4d2e4b), CustomAccessibilityAction(label=Move to Next Page, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$402/0x00007fc264ae5780@4ef6e18a)]'
+    |  |           |    Focused = 'false'
+    |  |           |    Role = 'Button'
+    |  |           |    Actions = [OnClick, RequestFocus]
+    |  |           |    MergeDescendants = 'true'
+    |  |           |     |-Node #211 at (l=288.0, t=274.0, r=416.0, b=289.0)px
+    |  |           |       Text = '[Notes]'
+    |  |           |       Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |  |           |-Node #213 at (l=12.0, t=366.0, r=148.0, b=522.0)px, Tag: 'app-cell-6'
+    |  |           |  |-Node #214 at (l=12.0, t=366.0, r=148.0, b=522.0)px, Tag: 'app-icon-annotation'
+    |  |           |    ContentDescription = '[Annotation]'
+    |  |           |    CustomActions = '[CustomAccessibilityAction(label=Move Earlier, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$399/0x00007fc264ae5108@6623695f), CustomAccessibilityAction(label=Move Later, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$400/0x00007fc264ae5330@3b851c6), CustomAccessibilityAction(label=Move to Previous Page, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$401/0x00007fc264ae5558@6165088c), CustomAccessibilityAction(label=Move to Next Page, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$402/0x00007fc264ae5780@18e64f9b)]'
+    |  |           |    Focused = 'false'
+    |  |           |    Role = 'Button'
+    |  |           |    Actions = [OnClick, RequestFocus]
+    |  |           |    MergeDescendants = 'true'
+    |  |           |     |-Node #217 at (l=16.0, t=430.0, r=144.0, b=445.0)px
+    |  |           |       Text = '[Annotation]'
+    |  |           |       Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |  |           |-Node #219 at (l=148.0, t=366.0, r=284.0, b=522.0)px, Tag: 'app-cell-7'
+    |  |           |  |-Node #220 at (l=148.0, t=366.0, r=284.0, b=522.0)px, Tag: 'app-icon-rss'
+    |  |           |    ContentDescription = '[RSS Reader]'
+    |  |           |    CustomActions = '[CustomAccessibilityAction(label=Move Earlier, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$399/0x00007fc264ae5108@6572b449), CustomAccessibilityAction(label=Move Later, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$400/0x00007fc264ae5330@2405ff40), CustomAccessibilityAction(label=Move to Previous Page, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$401/0x00007fc264ae5558@6d6da224), CustomAccessibilityAction(label=Move to Next Page, action=app.onklav.home.AppsDesktopKt$AppsDesktop$7$4$2$2$1$1$2$$Lambda$402/0x00007fc264ae5780@47ddb285)]'
+    |  |           |    Focused = 'false'
+    |  |           |    Role = 'Button'
+    |  |           |    Actions = [OnClick, RequestFocus]
+    |  |           |    MergeDescendants = 'true'
+    |  |           |     |-Node #223 at (l=152.0, t=430.0, r=280.0, b=445.0)px
+    |  |           |       Text = '[RSS Reader]'
+    |  |           |       Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |  |           |-Node #163 at (l=284.0, t=366.0, r=420.0, b=522.0)px, Tag: 'app-cell-8'
+    |  |           |-Node #165 at (l=12.0, t=522.0, r=148.0, b=678.0)px, Tag: 'app-cell-9'
+    |  |           |-Node #167 at (l=148.0, t=522.0, r=284.0, b=678.0)px, Tag: 'app-cell-10'
+    |  |           |-Node #169 at (l=284.0, t=522.0, r=420.0, b=678.0)px, Tag: 'app-cell-11'
+    |  |           |-Node #171 at (l=12.0, t=678.0, r=148.0, b=834.0)px, Tag: 'app-cell-12'
+    |  |           |-Node #173 at (l=148.0, t=678.0, r=284.0, b=834.0)px, Tag: 'app-cell-13'
+    |  |           |-Node #175 at (l=284.0, t=678.0, r=420.0, b=834.0)px, Tag: 'app-cell-14'
+    |  |-Node #137 at (l=12.0, t=832.0, r=420.0, b=864.0)px, Tag: 'apps-page-dots'
+    |    ContentDescription = '[Apps Page 1 of 1]'
+    |    Focused = 'false'
+    |    StateDescription = '1 pages'
+    |    Actions = [OnClick, RequestFocus]
+    |    MergeDescendants = 'true'
+    |     |-Node #139 at (l=210.0, t=842.0, r=222.0, b=854.0)px
+    |       ContentDescription = '[Go to Apps Page 1]'
+    |       Focused = 'false'
+    |       Actions = [OnClick, RequestFocus]
+    |       MergeDescendants = 'true'
+    |-Node #105 at (l=0.0, t=864.0, r=432.0, b=936.0)px, Tag: 'home-navigation'
+    |  |-Node #106 at (l=8.0, t=868.0, r=92.0, b=936.0)px, Tag: 'tab-Messages'
+    |  | Focused = 'false'
+    |  | Role = 'Tab'
+    |  | Selected = 'false'
+    |  | Actions = [OnClick, RequestFocus]
+    |  | MergeDescendants = 'true'
+    |  |  |-Node #109 at (l=24.0, t=908.0, r=76.0, b=922.0)px
+    |  |    Text = '[Messages]'
+    |  |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |  |-Node #110 at (l=92.0, t=868.0, r=175.0, b=936.0)px, Tag: 'tab-Groups'
+    |  | Focused = 'false'
+    |  | Role = 'Tab'
+    |  | Selected = 'false'
+    |  | Actions = [OnClick, RequestFocus]
+    |  | MergeDescendants = 'true'
+    |  |  |-Node #113 at (l=116.0, t=908.0, r=152.0, b=922.0)px
+    |  |    Text = '[Groups]'
+    |  |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |  |-Node #114 at (l=175.0, t=868.0, r=258.0, b=936.0)px, Tag: 'tab-Apps'
+    |  | Focused = 'false'
+    |  | Role = 'Tab'
+    |  | Selected = 'true'
+    |  | Actions = [OnClick, RequestFocus]
+    |  | MergeDescendants = 'true'
+    |  |  |-Node #117 at (l=204.0, t=908.0, r=229.0, b=922.0)px
+    |  |    Text = '[Apps]'
+    |  |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |  |-Node #118 at (l=258.0, t=868.0, r=341.0, b=936.0)px, Tag: 'tab-Games'
+    |  | Focused = 'false'
+    |  | Role = 'Tab'
+    |  | Selected = 'false'
+    |  | Actions = [OnClick, RequestFocus]
+    |  | MergeDescendants = 'true'
+    |  |  |-Node #121 at (l=282.0, t=908.0, r=318.0, b=922.0)px
+    |  |    Text = '[Games]'
+    |  |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |  |-Node #122 at (l=341.0, t=868.0, r=424.0, b=936.0)px, Tag: 'tab-Settings'
+    |    Focused = 'false'
+    |    Role = 'Tab'
+    |    Selected = 'false'
+    |    Actions = [OnClick, RequestFocus]
+    |    MergeDescendants = 'true'
+    |     |-Node #125 at (l=362.0, t=908.0, r=404.0, b=922.0)px
+    |       Text = '[Settings]'
+    |       Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |-Node #70 at (l=216.0, t=0.0, r=216.0, b=0.0)px, Tag: 'status-bar-backplate'
+    |-Node #71 at (l=216.0, t=936.0, r=216.0, b=936.0)px, Tag: 'navigation-bar-backplate'
+	at app.onklav.home.YouTubeSdkHostTest.readyClick(YouTubeSdkHostTest.kt:33)
+	at app.onklav.home.YouTubeSdkHostTest.youtubePackageOpensOwnViewerLibraryAndResetDialog(YouTubeSdkHostTest.kt:103)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.robolectric.internal.TimeLimitedStatement.evaluate(TimeLimitedStatement.java:38)
+	at org.junit.rules.ExternalResource$1.evaluate(ExternalResource.java:54)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1$evaluate$1.invoke(AndroidComposeTestRule.android.kt:295)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1$evaluate$1.invoke(AndroidComposeTestRule.android.kt:295)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.withDisposableContent(ComposeUiTest.android.kt:565)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1$1$1$1.invoke(ComposeUiTest.android.kt:370)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.withComposeIdlingResource(ComposeUiTest.android.kt:439)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.access$withComposeIdlingResource(ComposeUiTest.android.kt:235)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1$1$1.invoke(ComposeUiTest.android.kt:369)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.withWindowRecomposer(ComposeUiTest.android.kt:413)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.access$withWindowRecomposer(ComposeUiTest.android.kt:235)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1$1.invoke(ComposeUiTest.android.kt:368)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.withTestCoroutines(ComposeUiTest.android.kt:426)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.access$withTestCoroutines(ComposeUiTest.android.kt:235)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1.invoke(ComposeUiTest.android.kt:367)
+	at androidx.compose.ui.test.IdlingStrategy.withStrategy(IdlingStrategy.android.kt:55)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1.invoke(ComposeUiTest.android.kt:366)
+	at androidx.compose.ui.test.IdlingResourceRegistry.withRegistry(IdlingResourceRegistry.jvm.kt:148)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1.invoke(ComposeUiTest.android.kt:365)
+	at androidx.compose.ui.test.ComposeRootRegistry.withRegistry(ComposeRootRegistry.android.kt:139)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.runTest(ComposeUiTest.android.kt:364)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1.evaluate(AndroidComposeTestRule.android.kt:295)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.robolectric.RobolectricTestRunner$HelperTestRunner$1.evaluate(RobolectricTestRunner.java:502)
+	at org.robolectric.internal.SandboxTestRunner$2.lambda$evaluate$2(SandboxTestRunner.java:285)
+	at org.robolectric.internal.bytecode.Sandbox.lambda$runOnMainThread$0(Sandbox.java:104)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 15000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:504)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:339)
+	at app.onklav.home.YouTubeSdkHostTest.readyClick(YouTubeSdkHostTest.kt:29)
+	... 39 more
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

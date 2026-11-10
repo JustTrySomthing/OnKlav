@@ -1,0 +1,33 @@
+{
+  "plan": {
+    "sdk_apps": "build",
+    "mobile_rust": "reuse",
+    "games": "reuse",
+    "android_tests": [
+      "app.onklav.home.CarrierMediaPlanTest",
+      "app.onklav.home.SdkBootstrapTest",
+      "app.onklav.home.SwipeConversationTest",
+      "app.onklav.home.FilesRoutingTest",
+      "app.onklav.home.WalkiePresentationTest"
+    ],
+    "variant": "debug",
+    "abis": [
+      "arm64-v8a"
+    ]
+  },
+  "phases": [
+    {
+      "phase": "sdk-build",
+      "seconds": 2.63,
+      "returncode": 0,
+      "log": "docs/evidence/v0.53.0/sdk-build.log"
+    },
+    {
+      "phase": "assemble-debug",
+      "seconds": 276.22,
+      "returncode": 1,
+      "log": "docs/evidence/v0.53.0/assemble-debug.log"
+    }
+  ],
+  "status": "failed"
+}

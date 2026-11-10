@@ -1,0 +1,17 @@
+{
+  "schema": "onklav.app.v1",
+  "runtime": "rust-wasm-ui.v1",
+  "id": "app.onklav.youtube",
+  "name": "YouTube",
+  "version": 42,
+  "capabilities": [
+    "storage.private",
+    "network.web",
+    "network.thumbnails",
+    "clipboard.read",
+    "clipboard.write",
+    "links.external",
+    "files.manage"
+  ],
+  "min_host": 95
+}

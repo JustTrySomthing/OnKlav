@@ -1,0 +1,31 @@
+[
+  {
+    "viewport": [
+      320,
+      560
+    ],
+    "all_requested_flows": true,
+    "persistent_nonzero_score_restored": true,
+    "javascript_errors": [],
+    "engine_errors": []
+  },
+  {
+    "viewport": [
+      432,
+      740
+    ],
+    "all_requested_flows": true,
+    "persistent_nonzero_score_restored": true,
+    "javascript_errors": [],
+    "engine_errors": []
+  },
+  {
+    "viewport": [
+      320,
+      560
+    ],
+    "unused_start_menu_routes_requested_game": true,
+    "javascript_errors": [],
+    "engine_errors": []
+  }
+]

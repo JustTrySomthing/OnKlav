@@ -1,0 +1,237 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Started Project initialization (5 steps)[39m[0m
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Scanning file structure...[39m[0m
+[  16% ] [90m[1mfirst_scan_filesystem[22m | Loading global class names...[39m[0m
+[  33% ] [90m[1mfirst_scan_filesystem[22m | Verifying GDExtensions...[39m[0m
+[  50% ] [90m[1mfirst_scan_filesystem[22m | Creating autoload scripts...[39m[0m
+[  66% ] [90m[1mfirst_scan_filesystem[22m | Initializing plugins...[39m[0m
+[  83% ] [90m[1mfirst_scan_filesystem[22m | Starting file scan...[39m[0m
+[92m[ DONE ][39m [1mfirst_scan_filesystem[22m
+[0m
+[   0% ] [90m[1mloading_editor_layout[22m | Started Loading editor (5 steps)[39m[0m
+[   0% ] [90m[1mloading_editor_layout[22m | Loading editor layout...[39m[0m
+[  16% ] [90m[1mloading_editor_layout[22m | Loading docks...[39m[0m
+[92m[ DONE ][39m [1mloading_editor_layout[22m
+[0m
+
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Started Project initialization (5 steps)[39m[0m
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Scanning file structure...[39m[0m
+[  16% ] [90m[1mfirst_scan_filesystem[22m | Loading global class names...[39m[0m
+[  33% ] [90m[1mfirst_scan_filesystem[22m | Verifying GDExtensions...[39m[0m
+[  50% ] [90m[1mfirst_scan_filesystem[22m | Creating autoload scripts...[39m[0m
+[  66% ] [90m[1mfirst_scan_filesystem[22m | Initializing plugins...[39m[0m
+[  83% ] [90m[1mfirst_scan_filesystem[22m | Starting file scan...[39m[0m
+[92m[ DONE ][39m [1mfirst_scan_filesystem[22m
+[0m
+[   0% ] [90m[1m_update_scan_actions[22m | Started Scanning actions... (40 steps)[39m[0m
+[   0% ] [90m[1m_update_scan_actions[22m | paddle-blue.svg[39m[0m
+[   2% ] [90m[1m_update_scan_actions[22m | paddle-coral.svg[39m[0m
+[   4% ] [90m[1m_update_scan_actions[22m | puck.svg[39m[0m
+[   7% ] [90m[1m_update_scan_actions[22m | table.svg[39m[0m
+[   9% ] [90m[1m_update_scan_actions[22m | neon-rally.ogg[39m[0m
+[  12% ] [90m[1m_update_scan_actions[22m | deal.wav[39m[0m
+[  14% ] [90m[1m_update_scan_actions[22m | draw.wav[39m[0m
+[  17% ] [90m[1m_update_scan_actions[22m | land.wav[39m[0m
+[  19% ] [90m[1m_update_scan_actions[22m | lose.wav[39m[0m
+[  21% ] [90m[1m_update_scan_actions[22m | round.wav[39m[0m
+[  24% ] [90m[1m_update_scan_actions[22m | stand.wav[39m[0m
+[  26% ] [90m[1m_update_scan_actions[22m | win.wav[39m[0m
+[  29% ] [90m[1m_update_scan_actions[22m | cat.webp[39m[0m
+[  31% ] [90m[1m_update_scan_actions[22m | dog.webp[39m[0m
+[  34% ] [90m[1m_update_scan_actions[22m | draw.wav[39m[0m
+[  36% ] [90m[1m_update_scan_actions[22m | land.wav[39m[0m
+[  39% ] [90m[1m_update_scan_actions[22m | lose.wav[39m[0m
+[  41% ] [90m[1m_update_scan_actions[22m | pet_swish.wav[39m[0m
+[  43% ] [90m[1m_update_scan_actions[22m | win.wav[39m[0m
+[  46% ] [90m[1m_update_scan_actions[22m | fire.wav[39m[0m
+[  48% ] [90m[1m_update_scan_actions[22m | fleet-command.ogg[39m[0m
+[  51% ] [90m[1m_update_scan_actions[22m | flight.wav[39m[0m
+[  53% ] [90m[1m_update_scan_actions[22m | hit.wav[39m[0m
+[  56% ] [90m[1m_update_scan_actions[22m | miss.wav[39m[0m
+[  58% ] [90m[1m_update_scan_actions[22m | sink.wav[39m[0m
+[  60% ] [90m[1m_update_scan_actions[22m | background2.webp[39m[0m
+[  63% ] [90m[1m_update_scan_actions[22m | background3.webp[39m[0m
+[  65% ] [90m[1m_update_scan_actions[22m | background.webp[39m[0m
+[  68% ] [90m[1m_update_scan_actions[22m | icon.webp[39m[0m
+[  70% ] [90m[1m_update_scan_actions[22m | piece1.webp[39m[0m
+[  73% ] [90m[1m_update_scan_actions[22m | piece2.webp[39m[0m
+[  75% ] [90m[1m_update_scan_actions[22m | music0.ogg[39m[0m
+[  78% ] [90m[1m_update_scan_actions[22m | music1.ogg[39m[0m
+[  80% ] [90m[1m_update_scan_actions[22m | music2.ogg[39m[0m
+[  82% ] [90m[1m_update_scan_actions[22m | panda_block.wav[39m[0m
+[  85% ] [90m[1m_update_scan_actions[22m | panda_hit.wav[39m[0m
+[  87% ] [90m[1m_update_scan_actions[22m | panda_launch.wav[39m[0m
+[  90% ] [90m[1m_update_scan_actions[22m | panda_pull.wav[39m[0m
+[  92% ] [90m[1m_update_scan_actions[22m | onklav-splash.png[39m[0m
+[  95% ] [90m[1m_update_scan_actions[22m | onklav-splash.svg[39m[0m
+[92m[ DONE ][39m [1m_update_scan_actions[22m
+[0m
+[   0% ] [90m[1msavepack[22m | Started Packing (102 steps)[39m[0m
+[   1% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/paddle-blue.svg-44a3f8f39cec20752ac463d0fc5fcfc3.ctex[39m[0m
+[   1% ] [90m[1msavepack[22m | Storing File: res://air_hockey/art/paddle-blue.svg.import[39m[0m
+[   2% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/paddle-coral.svg-497b21fac0e484b3520327b679277c96.ctex[39m[0m
+[   2% ] [90m[1msavepack[22m | Storing File: res://air_hockey/art/paddle-coral.svg.import[39m[0m
+[   3% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/puck.svg-7a47284e1334c10c561f5ebc86468018.ctex[39m[0m
+[   3% ] [90m[1msavepack[22m | Storing File: res://air_hockey/art/puck.svg.import[39m[0m
+[   4% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/table.svg-adaeaaa8b24e306af4d0ca75a51e67af.ctex[39m[0m
+[   4% ] [90m[1msavepack[22m | Storing File: res://air_hockey/art/table.svg.import[39m[0m
+[   6% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/neon-rally.ogg-e4640f027500704a9078e2e2cbeb301c.oggvorbisstr[39m[0m
+[   6% ] [90m[1msavepack[22m | Storing File: res://air_hockey/audio/neon-rally.ogg.import[39m[0m
+[   7% ] [90m[1msavepack[22m | Storing File: res://air_hockey/audio.gdc[39m[0m
+[   8% ] [90m[1msavepack[22m | Storing File: res://air_hockey/main.gdc[39m[0m
+[   9% ] [90m[1msavepack[22m | Storing File: res://air_hockey/match.gdc[39m[0m
+[  11% ] [90m[1msavepack[22m | Storing File: res://air_hockey/puck.gdc[39m[0m
+[  12% ] [90m[1msavepack[22m | Storing File: res://air_hockey/rink.gdc[39m[0m
+[  13% ] [90m[1msavepack[22m | Storing File: res://air_hockey/store.gdc[39m[0m
+[  14% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/onklav-splash.svg-4bc9303c57d900ef099905258d40951b.ctex[39m[0m
+[  14% ] [90m[1msavepack[22m | Storing File: res://onklav-splash.svg.import[39m[0m
+[  16% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/deal.wav-f922f5b9d3a7e7d8503a0390ea20b019.sample[39m[0m
+[  16% ] [90m[1msavepack[22m | Storing File: res://blackjack/audio/deal.wav.import[39m[0m
+[  17% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/draw.wav-07221192dd60ef1f80385de313dd2fdc.sample[39m[0m
+[  17% ] [90m[1msavepack[22m | Storing File: res://blackjack/audio/draw.wav.import[39m[0m
+[  18% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/land.wav-79b69754fab0668971e182f2bb254c67.sample[39m[0m
+[  18% ] [90m[1msavepack[22m | Storing File: res://blackjack/audio/land.wav.import[39m[0m
+[  19% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/lose.wav-4fe9210eafc3ebd6fc224f973c7109a5.sample[39m[0m
+[  19% ] [90m[1msavepack[22m | Storing File: res://blackjack/audio/lose.wav.import[39m[0m
+[  21% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/round.wav-67fbd9e50503896f4284779c2da8854c.sample[39m[0m
+[  21% ] [90m[1msavepack[22m | Storing File: res://blackjack/audio/round.wav.import[39m[0m
+[  22% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/stand.wav-a314b0d1210ef8db2dd5322854f7c5e7.sample[39m[0m
+[  22% ] [90m[1msavepack[22m | Storing File: res://blackjack/audio/stand.wav.import[39m[0m
+[  23% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/win.wav-01b87c54029f3eeafc1a5bd572302265.sample[39m[0m
+[  23% ] [90m[1msavepack[22m | Storing File: res://blackjack/audio/win.wav.import[39m[0m
+[  25% ] [90m[1msavepack[22m | Storing File: res://blackjack/audio.gdc[39m[0m
+[  26% ] [90m[1msavepack[22m | Storing File: res://blackjack/card_art.gdc[39m[0m
+[  27% ] [90m[1msavepack[22m | Storing File: res://blackjack/main.gdc[39m[0m
+[  28% ] [90m[1msavepack[22m | Storing File: res://blackjack/scoreboard.gdc[39m[0m
+[  30% ] [90m[1msavepack[22m | Storing File: res://blackjack/solo.gdc[39m[0m
+[  31% ] [90m[1msavepack[22m | Storing File: res://blackjack/table.gdc[39m[0m
+[  32% ] [90m[1msavepack[22m | Storing File: res://onklav_game.gdc[39m[0m
+[  33% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/cat.webp-26a6d86c4dd7a0ba148b748947a51da7.ctex[39m[0m
+[  33% ] [90m[1msavepack[22m | Storing File: res://cat_dog/art/cat.webp.import[39m[0m
+[  34% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/dog.webp-767b0ee6a46e0bdca731fcd2e3322a0f.ctex[39m[0m
+[  34% ] [90m[1msavepack[22m | Storing File: res://cat_dog/art/dog.webp.import[39m[0m
+[  35% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/draw.wav-04ff8eecaa75e30bdc9a935becaf2393.sample[39m[0m
+[  35% ] [90m[1msavepack[22m | Storing File: res://cat_dog/audio/draw.wav.import[39m[0m
+[  36% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/land.wav-ec285ceb05f0497206a673a14c2eddee.sample[39m[0m
+[  36% ] [90m[1msavepack[22m | Storing File: res://cat_dog/audio/land.wav.import[39m[0m
+[  37% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/lose.wav-f25b8cffb4a3974c16600625091587b4.sample[39m[0m
+[  37% ] [90m[1msavepack[22m | Storing File: res://cat_dog/audio/lose.wav.import[39m[0m
+[  39% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/pet_swish.wav-92ffcf0670d726de0bf443029b23391d.sample[39m[0m
+[  39% ] [90m[1msavepack[22m | Storing File: res://cat_dog/audio/pet_swish.wav.import[39m[0m
+[  40% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/win.wav-071f120bf4e089728347c26a27b54fba.sample[39m[0m
+[  40% ] [90m[1msavepack[22m | Storing File: res://cat_dog/audio/win.wav.import[39m[0m
+[  41% ] [90m[1msavepack[22m | Storing File: res://cat_dog/art.gdc[39m[0m
+[  43% ] [90m[1msavepack[22m | Storing File: res://cat_dog/audio.gdc[39m[0m
+[  44% ] [90m[1msavepack[22m | Storing File: res://cat_dog/board.gdc[39m[0m
+[  45% ] [90m[1msavepack[22m | Storing File: res://cat_dog/main.gdc[39m[0m
+[  46% ] [90m[1msavepack[22m | Storing File: res://cat_dog/model.gdc[39m[0m
+[  48% ] [90m[1msavepack[22m | Storing File: res://cat_dog/scoreboard.gdc[39m[0m
+[  49% ] [90m[1msavepack[22m | Storing File: res://rules.gdc[39m[0m
+[  50% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/fire.wav-a50deacd5f6718f9caee558767642b71.sample[39m[0m
+[  50% ] [90m[1msavepack[22m | Storing File: res://naval_battle/audio/fire.wav.import[39m[0m
+[  51% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/fleet-command.ogg-3a1e0ccedee7c32b136983c60db88fcd.oggvorbisstr[39m[0m
+[  51% ] [90m[1msavepack[22m | Storing File: res://naval_battle/audio/fleet-command.ogg.import[39m[0m
+[  53% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/flight.wav-a2c88b56fe81c15574be9214a4e0f7f1.sample[39m[0m
+[  53% ] [90m[1msavepack[22m | Storing File: res://naval_battle/audio/flight.wav.import[39m[0m
+[  54% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/hit.wav-79ec51d45e331c02d022b2c0a47f8064.sample[39m[0m
+[  54% ] [90m[1msavepack[22m | Storing File: res://naval_battle/audio/hit.wav.import[39m[0m
+[  55% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/miss.wav-dbb6a3ab5929691ee3bd0b8b55903c5e.sample[39m[0m
+[  55% ] [90m[1msavepack[22m | Storing File: res://naval_battle/audio/miss.wav.import[39m[0m
+[  56% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/sink.wav-bc2de5aaa9a85537e44cd03dc46365c7.sample[39m[0m
+[  56% ] [90m[1msavepack[22m | Storing File: res://naval_battle/audio/sink.wav.import[39m[0m
+[  58% ] [90m[1msavepack[22m | Storing File: res://naval_battle/audio.gdc[39m[0m
+[  59% ] [90m[1msavepack[22m | Storing File: res://naval_battle/board.gdc[39m[0m
+[  60% ] [90m[1msavepack[22m | Storing File: res://naval_battle/dock.gdc[39m[0m
+[  62% ] [90m[1msavepack[22m | Storing File: res://naval_battle/main.gdc[39m[0m
+[  63% ] [90m[1msavepack[22m | Storing File: res://naval_battle/model.gdc[39m[0m
+[  64% ] [90m[1msavepack[22m | Storing File: res://naval_battle/scoreboard.gdc[39m[0m
+[  65% ] [90m[1msavepack[22m | Storing File: res://naval_battle/ship_art.gdc[39m[0m
+[  66% ] [90m[1msavepack[22m | Storing File: res://turn_channel.gdc[39m[0m
+[  67% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/background2.webp-a52e8c07bf2d56eb1b23a2f615d03ded.ctex[39m[0m
+[  67% ] [90m[1msavepack[22m | Storing File: res://panda/art/background2.webp.import[39m[0m
+[  68% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/background3.webp-db35c05f0798b3f9396f726fc4fb098d.ctex[39m[0m
+[  68% ] [90m[1msavepack[22m | Storing File: res://panda/art/background3.webp.import[39m[0m
+[  69% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/background.webp-e6141b79e5fb6697b4b85c95af664e73.ctex[39m[0m
+[  69% ] [90m[1msavepack[22m | Storing File: res://panda/art/background.webp.import[39m[0m
+[  71% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/icon.webp-64b0d515c42089d68ec9c91d9a752211.ctex[39m[0m
+[  71% ] [90m[1msavepack[22m | Storing File: res://panda/art/icon.webp.import[39m[0m
+[  72% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/piece1.webp-0ee762d20bdc198e47d41bd60fada061.ctex[39m[0m
+[  72% ] [90m[1msavepack[22m | Storing File: res://panda/art/piece1.webp.import[39m[0m
+[  73% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/piece2.webp-3e744bdad20cd6de1be00b30e17589cd.ctex[39m[0m
+[  73% ] [90m[1msavepack[22m | Storing File: res://panda/art/piece2.webp.import[39m[0m
+[  74% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/music0.ogg-c91060ac818d9fe6b905634ab1e7fcd7.oggvorbisstr[39m[0m
+[  74% ] [90m[1msavepack[22m | Storing File: res://panda/audio/music0.ogg.import[39m[0m
+[  76% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/music1.ogg-07b97a3b1d3e7c0bec3ffced80fcac1a.oggvorbisstr[39m[0m
+[  76% ] [90m[1msavepack[22m | Storing File: res://panda/audio/music1.ogg.import[39m[0m
+[  77% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/music2.ogg-99448a5122590e823eaf3c3e13c7b77f.oggvorbisstr[39m[0m
+[  77% ] [90m[1msavepack[22m | Storing File: res://panda/audio/music2.ogg.import[39m[0m
+[  78% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/panda_block.wav-b43bce63b4ecc80b9b4212cf4163095b.sample[39m[0m
+[  78% ] [90m[1msavepack[22m | Storing File: res://panda/audio/panda_block.wav.import[39m[0m
+[  80% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/panda_hit.wav-20c69d7e44e8152b0e65694bcdca052f.sample[39m[0m
+[  80% ] [90m[1msavepack[22m | Storing File: res://panda/audio/panda_hit.wav.import[39m[0m
+[  81% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/panda_launch.wav-68ff2c28ed3218f9961d946276e648f9.sample[39m[0m
+[  81% ] [90m[1msavepack[22m | Storing File: res://panda/audio/panda_launch.wav.import[39m[0m
+[  82% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/panda_pull.wav-05280105011736788e7be9f8db4174bb.sample[39m[0m
+[  82% ] [90m[1msavepack[22m | Storing File: res://panda/audio/panda_pull.wav.import[39m[0m
+[  83% ] [90m[1msavepack[22m | Storing File: res://panda/arena.gdc[39m[0m
+[  85% ] [90m[1msavepack[22m | Storing File: res://panda/audio.gdc[39m[0m
+[  86% ] [90m[1msavepack[22m | Storing File: res://panda/hud.gdc[39m[0m
+[  87% ] [90m[1msavepack[22m | Storing File: res://panda/main.gdc[39m[0m
+[  88% ] [90m[1msavepack[22m | Storing File: res://panda/model.gdc[39m[0m
+[  90% ] [90m[1msavepack[22m | Storing File: res://panda/physics.gdc[39m[0m
+[  91% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/onklav-splash.png-109a9f1023c7fc600d5038c0ecb9c881.ctex[39m[0m
+[  91% ] [90m[1msavepack[22m | Storing File: res://onklav-splash.png.import[39m[0m
+[  92% ] [90m[1msavepack[22m | Storing File: res://friend_table.gdc[39m[0m
+[  93% ] [90m[1msavepack[22m | Storing File: res://friend_table_model.gdc[39m[0m
+[  95% ] [90m[1msavepack[22m | Storing File: res://game_chrome.gdc[39m[0m
+[  96% ] [90m[1msavepack[22m | Storing File: res://main.gdc[39m[0m
+[  97% ] [90m[1msavepack[22m | Storing File: res://.godot/exported/133200997/export-3070c538c03ee49b7677ff960a3f5195-main.scn[39m[0m
+[  97% ] [90m[1msavepack[22m | Storing File: res://air_hockey/audio.gd.remap[39m[0m
+[  97% ] [90m[1msavepack[22m | Storing File: res://air_hockey/main.gd.remap[39m[0m
+[  97% ] [90m[1msavepack[22m | Storing File: res://air_hockey/match.gd.remap[39m[0m
+[  97% ] [90m[1msavepack[22m | Storing File: res://air_hockey/puck.gd.remap[39m[0m
+[  97% ] [90m[1msavepack[22m | Storing File: res://air_hockey/rink.gd.remap[39m[0m
+[  97% ] [90m[1msavepack[22m | Storing File: res://air_hockey/store.gd.remap[39m[0m
+[  97% ] [90m[1msavepack[22m | Storing File: res://blackjack/audio.gd.remap[39m[0m
+[  97% ] [90m[1msavepack[22m | Storing File: res://blackjack/card_art.gd.remap[39m[0m
+[  97% ] [90m[1msavepack[22m | Storing File: res://blackjack/main.gd.remap[39m[0m
+[  97% ] [90m[1msavepack[22m | Storing File: res://blackjack/scoreboard.gd.remap[39m[0m
+[  97% ] [90m[1msavepack[22m | Storing File: res://blackjack/solo.gd.remap[39m[0m
+[  97% ] [90m[1msavepack[22m | Storing File: res://blackjack/table.gd.remap[39m[0m
+[  97% ] [90m[1msavepack[22m | Storing File: res://onklav_game.gd.remap[39m[0m
+[  97% ] [90m[1msavepack[22m | Storing File: res://cat_dog/art.gd.remap[39m[0m
+[  97% ] [90m[1msavepack[22m | Storing File: res://cat_dog/audio.gd.remap[39m[0m
+[  97% ] [90m[1msavepack[22m | Storing File: res://cat_dog/board.gd.remap[39m[0m
+[  97% ] [90m[1msavepack[22m | Storing File: res://cat_dog/main.gd.remap[39m[0m
+[  97% ] [90m[1msavepack[22m | Storing File: res://cat_dog/model.gd.remap[39m[0m
+[  97% ] [90m[1msavepack[22m | Storing File: res://cat_dog/scoreboard.gd.remap[39m[0m
+[  97% ] [90m[1msavepack[22m | Storing File: res://rules.gd.remap[39m[0m
+[  97% ] [90m[1msavepack[22m | Storing File: res://naval_battle/audio.gd.remap[39m[0m
+[  97% ] [90m[1msavepack[22m | Storing File: res://naval_battle/board.gd.remap[39m[0m
+[  97% ] [90m[1msavepack[22m | Storing File: res://naval_battle/dock.gd.remap[39m[0m
+[  97% ] [90m[1msavepack[22m | Storing File: res://naval_battle/main.gd.remap[39m[0m
+[  97% ] [90m[1msavepack[22m | Storing File: res://naval_battle/model.gd.remap[39m[0m
+[  97% ] [90m[1msavepack[22m | Storing File: res://naval_battle/scoreboard.gd.remap[39m[0m
+[  97% ] [90m[1msavepack[22m | Storing File: res://naval_battle/ship_art.gd.remap[39m[0m
+[  97% ] [90m[1msavepack[22m | Storing File: res://turn_channel.gd.remap[39m[0m
+[  97% ] [90m[1msavepack[22m | Storing File: res://panda/arena.gd.remap[39m[0m
+[  97% ] [90m[1msavepack[22m | Storing File: res://panda/audio.gd.remap[39m[0m
+[  97% ] [90m[1msavepack[22m | Storing File: res://panda/hud.gd.remap[39m[0m
+[  97% ] [90m[1msavepack[22m | Storing File: res://panda/main.gd.remap[39m[0m
+[  97% ] [90m[1msavepack[22m | Storing File: res://panda/model.gd.remap[39m[0m
+[  97% ] [90m[1msavepack[22m | Storing File: res://panda/physics.gd.remap[39m[0m
+[  97% ] [90m[1msavepack[22m | Storing File: res://friend_table.gd.remap[39m[0m
+[  97% ] [90m[1msavepack[22m | Storing File: res://friend_table_model.gd.remap[39m[0m
+[  97% ] [90m[1msavepack[22m | Storing File: res://game_chrome.gd.remap[39m[0m
+[  97% ] [90m[1msavepack[22m | Storing File: res://main.gd.remap[39m[0m
+[  97% ] [90m[1msavepack[22m | Storing File: res://main.tscn.remap[39m[0m
+[  97% ] [90m[1msavepack[22m | Storing File: res://.godot/global_script_class_cache.cfg[39m[0m
+[  97% ] [90m[1msavepack[22m | Storing File: res://onklav-splash.png[39m[0m
+[  97% ] [90m[1msavepack[22m | Storing File: res://.godot/uid_cache.bin[39m[0m
+[  97% ] [90m[1msavepack[22m | Storing File: res://project.binary[39m[0m
+[92m[ DONE ][39m [1msavepack[22m
+[0m
+

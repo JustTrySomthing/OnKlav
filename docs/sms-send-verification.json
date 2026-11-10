@@ -1,0 +1,52 @@
+{
+  "status": "source implementation; Android compile/device verification incomplete",
+  "isolated_subscription_regressions": {
+    "passed": 8,
+    "log": "docs/evidence/sms-subscription-tests.log"
+  },
+  "android_host_check": {
+    "status": "timed_out",
+    "limit_seconds": 180,
+    "kotlin_compilation_completed": false,
+    "log": "docs/evidence/v0.100.3/android-host-check.log"
+  },
+  "sms_failure_tests": "source added; not executed",
+  "apk_built": false,
+  "physical_carrier_sending": "not verified",
+  "lint": {
+    "status": "timed_out",
+    "limit_seconds": 60,
+    "log": "docs/evidence/sms-send-lint.log"
+  },
+  "delayed_outcome_followup": {
+    "user_report": "Failed bubble, retry did not send, delivery around five minutes later",
+    "cause_of_delay": "unknown without handset/carrier trace",
+    "source_changes": [
+      "positive per-part outcomes reconcile prior failures",
+      "stale failures cannot undo positive per-part receipts",
+      "legacy contradictory saved state reconciles on load",
+      "confirmed Retry Text submits one new copy after latest-state recheck; no automatic resend"
+    ],
+    "final_state_tests": {
+      "passed": 10,
+      "command": "cargo test --lib --offline --locked --manifest-path core/Cargo.toml messaging::tests -- --nocapture",
+      "log": "docs/evidence/sms-delayed-outcome-final-tests.log"
+    },
+    "earlier_attempts": [
+      "offline missing errno",
+      "online regular-library archive failed on zero-length object; produced test executable separately passed 9 cases"
+    ],
+    "kotlin_compile": {
+      "status": "timed_out",
+      "limit_seconds": 120,
+      "log": "docs/evidence/sms-retry-kotlin-compile.log"
+    },
+    "native_rebuild": {
+      "status": "blocked_missing_NDK_and_Android_Rust_target",
+      "log": "docs/evidence/sms-native-rebuild-attempt.log"
+    },
+    "native_proofs": "stale; rebuild required",
+    "apk_built": false,
+    "retry_phone_acceptance": "not verified"
+  }
+}

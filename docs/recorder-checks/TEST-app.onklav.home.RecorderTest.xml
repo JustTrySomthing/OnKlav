@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.RecorderTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-10-30T18:57:35" hostname="e89dc6ba27f3" time="30.481">
+  <properties/>
+  <testcase name="filingRetryKeepsOneCopyAndRevocationKeepsTheUnfiledOriginal" classname="app.onklav.home.RecorderTest" time="9.627"/>
+  <testcase name="screenStartRequiresApprovalAndConcurrentRecordersCannotStart" classname="app.onklav.home.RecorderTest" time="0.049"/>
+  <testcase name="interruptedWavRecoversThroughTheAppAndKeepsEveryCompleteSample" classname="app.onklav.home.RecorderTest" time="7.793"/>
+  <testcase name="interruptedWavCanBeFinalizedWithoutChangingItsAudio" classname="app.onklav.home.RecorderTest" time="0.044"/>
+  <testcase name="clockExcludesPauseAndNeverGoesBackwards" classname="app.onklav.home.RecorderTest" time="0.038"/>
+  <testcase name="videoDimensionsKeepAspectWithinPresetAndNeverUpscale" classname="app.onklav.home.RecorderTest" time="0.033"/>
+  <testcase name="audioMixRetainsStereoAndDoesNotOverflow" classname="app.onklav.home.RecorderTest" time="0.047"/>
+  <testcase name="completedRecordingsUseSignedFilesAndStayReadableAfterRename" classname="app.onklav.home.RecorderTest" time="12.85"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

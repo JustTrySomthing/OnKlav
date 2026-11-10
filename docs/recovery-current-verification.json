@@ -1,0 +1,33 @@
+{
+  "status": "completed source verified intact; recovery tooling and stale handoff status corrected",
+  "saved_checkpoint_verified": 27,
+  "saved_source_members_verified": 3711,
+  "missing_source_members": [],
+  "source_or_evidence_hash_mismatches": [],
+  "native_linux_arm64_source_matched": true,
+  "lost_work_found": false,
+  "application_sources_changed_this_pass": false,
+  "observed_problems": [
+    "scripts/checkpoint_working.py unconditionally read checkpoint.json, but the saved complete archive uses OnKlav/HANDOFF-MANIFEST.json and has no checkpoint.json",
+    "Older current progress/recovery lists still described recovered or completed source as missing",
+    "Historical qualification text implied its timing sample matched later modified source"
+  ],
+  "cause_of_previous_conversation_stall": "Not established from available evidence; no new product failure inferred",
+  "fixes": [
+    "Accept and verify complete handoff archives as bases, preserving delta support, inventory/hash checks, atomic output, and previous archive",
+    "Regenerate both manifest hash tables when creating the next checkpoint",
+    "Five focused recovery tests pass, including full-handoff -> delta -> next-delta roundtrip and rejection of omitted manifest inventory",
+    "Current status points to completed workflow evidence and actual unclosed qualification; historical recovery records explicitly superseded"
+  ],
+  "checks_log": "docs/evidence/v0.70.0/recovery-checkpoint-format.log",
+  "checks_log_sha256": "b8b419e8c386008e8e10553b5339c0f494ba1b4d104be6f92b8bcac4a70cf8b3",
+  "remaining": [
+    "Restore missing Android dependency bytes; run one focused full Android integrated check",
+    "Real configured provider OAuth/refresh/revocation, mail attachments/submission/reconciliation and map/geocoder/router HTTP testing",
+    "39: phone media/layout/TalkBack/IME/process recovery;40: two-phone delivery/receipt/reconnect/removal",
+    "41: sustained Android performance/heap and comprehensive security qualification; historical short host sample is partial",
+    "42: release packaging/SDK/docs/APK deferred until requested"
+  ],
+  "no_apk": true,
+  "no_email_sent": true
+}

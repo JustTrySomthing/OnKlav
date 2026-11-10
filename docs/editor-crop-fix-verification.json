@@ -1,0 +1,63 @@
+{
+  "status": "Audio Editor rename and crop preview fix source complete; no new APK built",
+  "latest_delivered_apk": "0.100.9-rc1/code118 predates these changes",
+  "changes": [
+    "Audio Editor signed manifest/screen/help/permission labels; same identity/publisher/capabilities/drafts; shell4",
+    "Crop preview shows geometry, color and effects; exact export-graded selected patch with editable outside context",
+    "Shared crop-pixel rounding and geometry matrix; projected eight handles and thirds; inverse drag mapping, fixed mapping during drag, one undo step",
+    "Extreme projective horizons excluded from fit; export pipeline and draft crop coordinates preserved"
+  ],
+  "tests": {
+    "cases": {
+      "PhotoCropConsistencyTest": 3,
+      "PhotoEditorHostTest": 4,
+      "PhotoCropUiTest": 1,
+      "AudioAppRenameTest": 1
+    },
+    "unique_passed": 9,
+    "runtime_classes_matching_compilation": 2985,
+    "pixel_contract": "Selected region matches actual export byte-for-byte after color/looks/HDR/sharpen/vignette, rotation/flip/scale/perspective; source and alpha preserved",
+    "ui": "Native workspace changes rotation, Sepia and HDR, returns to Crop, validates rendered pixels, drags transformed edge and checks Undo; synthetic fixture screenshot reviewed",
+    "audio": "Actual signed manifest/frame/default declared grants checked through host JNI"
+  },
+  "lint": {
+    "Fatal": 0,
+    "Error": 0,
+    "Warning": 269,
+    "Information": 1
+  },
+  "recovery": "Restored source146/checksummed build cache and dependencies; original publisher key restored privately; Rust1.90.0/wasm toolchain and Audio-only guest rebuilt. Restored verified original Linux JNI after building pack tool. Offline lint lacked cached fragment1.5.7; pinned dependency fetched, then full lint passed. No new runtime dependencies or core/JNI changes.",
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/PhotoEditor.kt": "9d8e5c713d7a7da93ce1f15aa9d6d2f761d490eb47f23b59ed1f80a0ebc63bf8",
+    "android/app/src/main/kotlin/app/onklav/home/PhotoCropFrame.kt": "bc1aa37dc8898135ed86b9f625668c521209ed69a83f105c6929e121c1e6ea57",
+    "android/app/src/main/kotlin/app/onklav/home/AudioEditor.kt": "2e48611cc4046e132fdea7e03382823168ce16898bf18bfff6ea4480602c647d",
+    "sdk/apps/audio/manifest.json": "70d71b029a4649a2ca7de3311e55b55b702ce1f84cb92620b33a9b9edf886f34",
+    "sdk/apps/audio/src/lib.rs": "08991c73c49da41779a140c1aede2b99e0e83ba86430e77e7c1a4873857e5c2c",
+    "sdk/packages/Audio.onklav-a": "eaec9799524ef185ed752679a1175149622a6ebcd7096208c5340abb1a476a65",
+    "android/app/src/main/assets/sdk/Audio.onklav-a": "eaec9799524ef185ed752679a1175149622a6ebcd7096208c5340abb1a476a65"
+  },
+  "audio_manifest": {
+    "capabilities": [
+      "storage.private",
+      "audio.playback"
+    ],
+    "icon": {
+      "symbol": "edit"
+    },
+    "id": "app.onklav.audioeditor",
+    "min_host": 95,
+    "name": "Audio Editor",
+    "publisher": "4dabb2d88e13dfc4e5f3410abf85819aa92a528cb945f869fcf3033d95f82fad",
+    "runtime": "rust-wasm-ui.v1",
+    "schema": "onklav.app.v1",
+    "version": 4
+  },
+  "original_publisher_identity_preserved": true,
+  "native_sdk_game_inputs": "See input-checks.json; all current",
+  "phone_acceptance_pending": [
+    "Actual image gestures/perspective/context on Samsung GPU",
+    "Large-image memory/performance and document providers",
+    "Audio Editor installed upgrade/draft preservation on phone"
+  ],
+  "evidence": "docs/evidence/editor-crop-fix/"
+}

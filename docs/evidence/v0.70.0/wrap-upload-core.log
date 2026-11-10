@@ -1,0 +1,10 @@
+   Compiling onklav-core v0.8.0 (/workspace/scratch/75acf774e3b8/work/OnKlav/core)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 10.37s
+     Running unittests src/lib.rs (core/target/debug/deps/onklav_core-8a579202944a8eae)
+
+running 2 tests
+test sdk_http::tests::upload_request_rejects_paths_mixed_bodies_and_non_post ... ok
+test sdk::tests::upload_live_authorization_resolves_only_owned_private_files ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 258 filtered out; finished in 0.22s
+

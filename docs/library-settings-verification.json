@@ -1,0 +1,43 @@
+{
+  "version": "0.89.0-library-settings1",
+  "android_version_code": 97,
+  "sdk_host_build": 95,
+  "status": "Completed source update; no APK requested or assembled",
+  "implemented": [
+    "Search results compare Gutenberg IDs with entire committed caller library, including legacy saved Gutenberg-ID.epub names",
+    "Owned rows dimmed, labeled Already in your library, disabled in UI and rejected by guest preview/acquire actions",
+    "Acquisition checks before network/staging and before finish; new library entries retain catalog ID; current search updates on completion",
+    "Nested XHTML and plain-text summaries; short description below author and above Download; versioned cache bypasses old empty summaries",
+    "Separate Help/About/Advanced; guides and Android Help link; About OnKlav, Privacy Policy and licenses under About; troubleshooting controls under Advanced",
+    "Normal settings, privacy controls, theme integration, large-text scrolling and parent navigation retained"
+  ],
+  "controller_checks": 134,
+  "selected_android_checks": [
+    "EbookLibraryPolishTest > savedBookIsInertAndNewBookShowsDescriptionAboveDownload",
+    "SdkEbooksTest > largeIllustratedDownloadCommitsAndOpensWithoutTheOld20MbLimit",
+    "SdkEbooksTest > libraryOwnershipIncludesLegacyBooksBeyondFirstPageAndStaysScoped",
+    "SdkEbooksTest > signedAcquisitionUsesScopedBlobThenResumesChapterAndBookmarks",
+    "SdkEbooksTest > failedDownloadAbortsOnlyItsOwnNewStagingFile",
+    "SdkEbooksTest > catalogSummaryIsShortAndDoesNotIncludeSourceFluff",
+    "SdkEbooksTest > providerXhtmlSummaryIncludesOnlyShortDescription",
+    "SdkEbooksTest > closingSessionCleansUnfinishedAcquisition",
+    "SdkEbooksTest > opdsProjectsOnlyBooksAndKeepsOpaquePaging",
+    "SettingsUiHostTest > settingsRemainReachableWithLargeText",
+    "SettingsUiHostTest > helpAboutAndAdvancedHaveSeparateWorkingMenus"
+  ],
+  "optional_live_gutenberg_compatibility_test": "SKIPPED; opt-in live EPUB environment path not provided",
+  "lint": {
+    "errors": 0,
+    "warnings": 182,
+    "log": "docs/evidence/v0.89.0/lint.log"
+  },
+  "native": "Core source unchanged; verified 0.88 source-matched Linux/main/diagnostic JNI reused; prior283core checks not rerun",
+  "included_apps": "All16 signed included apps rebuilt with existing publisher; no new signing identities",
+  "build_plan": "docs/evidence/v0.89.0/build-plan.log",
+  "limits": [
+    "Existing duplicate copies are not silently removed",
+    "Recognition uses saved Gutenberg ID or original Gutenberg download filename; arbitrary imported files without provenance are not assigned a guessed catalog ID",
+    "No new APK assembled; retain delivered0.88APK",
+    "Physical phone acceptance remains separate"
+  ]
+}

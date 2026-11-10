@@ -1,0 +1,104 @@
+{
+  "application_findings_fixed": [
+    "D01",
+    "D02",
+    "D03",
+    "D04",
+    "D05"
+  ],
+  "android_host_checks": 48,
+  "android_suites": [
+    {
+      "name": "app.onklav.home.CalendarModelTest",
+      "tests": "7",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "app.onklav.home.CalendarRemindersTest",
+      "tests": "6",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "app.onklav.home.CalendarScheduleRepairTest",
+      "tests": "1",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "app.onklav.home.CloudAccountRepairTest",
+      "tests": "5",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "app.onklav.home.CloudExportRepairTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "app.onklav.home.CloudFilesTest",
+      "tests": "9",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "app.onklav.shared.LauncherLayoutTest",
+      "tests": "8",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "app.onklav.shared.Mp3CodecTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "app.onklav.shared.NativeBridgeTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    },
+    {
+      "name": "app.onklav.shared.ThemePackageTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0",
+      "skipped": "0"
+    }
+  ],
+  "new_android_regressions": 10,
+  "production_and_all_test_compilation": "passed",
+  "runtime_bundle_matches_compiled_Kotlin": true,
+  "shared_tests": "17 checks reused by Gradle UP-TO-DATE with unchanged inputs; app 31 checks executed in final run. Counted once.",
+  "initial_issues_resolved": [
+    "First run reached 600s limit after production/test compilation and partial selected test execution.",
+    "Replay test incorrectly advanced uptime while production uses RTC; fixture corrected to set persisted snooze deadline due, fire it, and assert delivery receipt before replay.",
+    "Next attempt and its automatic retry failed on the same missing generated Gradle transform metadata. Exact named generated transform quarantined separately; final focused run passed in 149.8s. Initial logs preserved."
+  ],
+  "physical_phone_testing": false,
+  "apk_built": false,
+  "native_rust_sdk_game_changes": false,
+  "remaining": "Physical Samsung/provider/hardware-key/Calendar notification qualification remains separate. Underlying carrier SMS17/modem2 cause unconfirmed.",
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/CloudData.kt": "ce9b9f16d7464e88dc2a21d08fda787f98dada1f5fdba63e3a90360a5b418542",
+    "android/app/src/main/kotlin/app/onklav/home/CloudModel.kt": "219f4c9e0048da3d6b040bd0a3a6872f69016716280e39a331475e7567bfb8e6",
+    "android/app/src/main/kotlin/app/onklav/home/CalendarModel.kt": "0cb3809cedaf24527deca63dfe3013e5b2087f9d06191ba96ce53577a29e5f7b",
+    "android/app/src/main/kotlin/app/onklav/home/CalendarReminders.kt": "eee256e3b0d90625da0c36cafcab96bf6708887896aa1a114a7abebd1bbd72df",
+    "android/app/src/test/kotlin/app/onklav/home/CloudAccountRepairTest.kt": "f05bc0598a0595e656811b677d8345b8f0c4d7f10851c3ea9f9cef2b6ae249d4",
+    "android/app/src/test/kotlin/app/onklav/home/CalendarModelTest.kt": "8c4344257010cabd50bf2925ab3b3a3bcafcfd2cc2f68775c55128b57056efb2",
+    "android/app/src/test/kotlin/app/onklav/home/CalendarRemindersTest.kt": "a08d945683f3ee36db4bb108893645920c86c07686943e7ed2e6a6611e3ae937"
+  }
+}

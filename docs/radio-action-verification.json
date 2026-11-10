@@ -1,0 +1,254 @@
+{
+  "version": "0.100.15-rc1",
+  "version_code": 124,
+  "focused_checks_passed": 41,
+  "checks": {
+    "RadioActionRecoveryTest.rejectedSuccessReplyIsAcknowledgedAsFailureInsteadOfOrphaningTheSdkToken": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.15/final-radio-pass.log"
+    },
+    "RadioActionRecoveryTest.cancellingACompletionStillCommitsItsFailureAndBusyActionsCannotCrossPendingBarrier": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.15/final-radio-pass.log"
+    },
+    "RadioActionRecoveryTest.repeatedStationStartsPassStrictSdkValidationAndEverySubsequentClickWorks": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.15/final-radio-pass.log"
+    },
+    "RadioActionRecoveryTest.radioPreparationReleasesOldStreamBeforeProbeAndRepairsOnlyTheSelectedAddress": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.15/final-radio-pass.log"
+    },
+    "RadioContinuityTest.sleepDeadlineAndRevocationCannotBeBypassedByReconnect": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.15/first-functional.log"
+    },
+    "RadioContinuityTest.rapidEofAndIoErrorsAreBoundedAndManualPlayCanRetry": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.15/first-functional.log"
+    },
+    "RadioContinuityTest.pauseStopAndReplacementCancelQueuedReconnection": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.15/first-functional.log"
+    },
+    "RadioContinuityTest.trackBoundaryReconnectsLiveEdgeAndKeepsChangingAudioSession": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.15/first-functional.log"
+    },
+    "RadioSceneRenderTest.featuredScenesMoveWithNewAudioAndIntensityChangesTheirOutput": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.15/first-functional.log"
+    },
+    "RadioSceneRenderTest.removedPrismFallsBackAndMandalaLayersUseSeparateFrequencyEnvelopes": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.15/first-functional.log"
+    },
+    "RadioSceneRenderTest.allSevenScenesReactToAudioAndPausedFramesRemainStill": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.15/first-functional.log"
+    },
+    "RadioSceneRenderTest.frequencyLayersAreIndependentAndWaveComponentsKeepActualSound": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.15/first-functional.log"
+    },
+    "RadioSceneRenderTest.radialScenesExpandPastFormerBoundsAndAllLayersReact": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.15/first-functional.log"
+    },
+    "RadioStreamRepairTest.closingDuringResponseArrivalClosesLateBodyAndCannotResurrectAConnection": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.15/first-functional.log"
+    },
+    "RadioStreamRepairTest.offlineWaitDoesNotExhaustRetriesAndFallbackRecoversWithoutCallback": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.15/first-functional.log"
+    },
+    "RadioStreamRepairTest.screenOffDoesNotStopServiceAndExplicitStopAndRevocationCancelRecovery": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.15/first-functional.log"
+    },
+    "RadioStreamRepairTest.longPauseAndRepeatedRouteChangesNeverRequireAppRestart": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.15/first-functional.log"
+    },
+    "RadioStreamRepairTest.extensionlessHlsKeepsItsContentType": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.15/first-functional.log"
+    },
+    "RadioStreamRepairTest.playlistsResolveRelativeAudioAndPublicHttpButNeverPrivateSchemes": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.15/first-functional.log"
+    },
+    "RadioStreamRepairTest.replacedStationCannotAuthorizeOldReadsOrReceiveOldCallbacks": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.15/first-functional.log"
+    },
+    "RadioStreamRepairTest.frozenPlaybackClockIsRecoveredEvenWhenEngineClaimsPlaying": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.15/first-functional.log"
+    },
+    "RadioStreamRepairTest.abandonedAudioFocusCallbackCannotPauseNewStation": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.15/first-functional.log"
+    },
+    "RadioStreamRepairTest.resumeCreatesFreshLiveConnectionAndNeverStaysReady": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.15/first-functional.log"
+    },
+    "RadioStreamRepairTest.streamingSourcePreservesIcyHeadersAndChecksPermissionOnEachRead": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.15/first-functional.log"
+    },
+    "RadioStreamRepairTest.readyWithoutAudioAndLongBufferingCannotRemainStuck": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.15/first-functional.log"
+    },
+    "RadioStreamRepairTest.newRadioSessionRestoresQueryAndLoadsCachedResultsWithoutAUserSearch": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.15/first-functional.log"
+    },
+    "RadioVisualizerTest.packedFftIgnoresDcAndNyquistAndMapsComplexToneToLogFrequency": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.15/final-radio-pass.log"
+    },
+    "RadioVisualizerTest.actualLandscapeFillsWindowControlsHideRevealAndBackRestores": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.15/final-radio-pass.log"
+    },
+    "RadioVisualizerTest.portraitWindowAndUnitBasedOrbitRemainReadableAtEitherAspect": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.15/final-radio-pass.log"
+    },
+    "RadioVisualizerTest.captureRejectsGlobalSessionAndCloseClearsWaveform": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.15/final-radio-pass.log"
+    },
+    "RadioVisualizerTest.visualizerModesLandscapeBackAndOrientationRestore": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.15/final-radio-pass.log"
+    },
+    "SdkRadioTest.signInPagesDowngradesPrivateTargetsAndRevocationFailClosed": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.15/first-functional.log"
+    },
+    "SdkRadioTest.directoryProjectionIsBoundedAndNeverReturnsCredentialsArtworkOrStreamUrls": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.15/first-functional.log"
+    },
+    "SdkRadioTest.redirectResolutionValidatesEveryTargetAndDoesNotAddCredentials": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.15/first-functional.log"
+    },
+    "SdkLifecycleTest.audioOwnerInterruptsOnlyThePreviousOwnerAndOldReleaseCannotStopNewAudio": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.15/shared-session-first.log"
+    },
+    "SdkSessionIsolationTest.closedYouTubeModelReopensWithFreshScreenAndWorkingHome": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.15/shared-session-first.log"
+    },
+    "SdkSessionIsolationTest.clearingTheOwnerClosesItsCoreSessionAndReleasesNativeCallbacks": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.15/shared-session-first.log"
+    },
+    "SdkSessionIsolationTest.pendingLaunchesRejectForeignTokensAndNeverRepeatTheCurrentOperation": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.15/shared-session-first.log"
+    },
+    "SdkSessionIsolationTest.recreatedOwnerReloadsSavedDataWithoutOldPendingTokens": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.15/shared-session-first.log"
+    },
+    "SdkSessionIsolationTest.aModelCannotMoveItsDraftOrPendingOperationIntoAnotherApp": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.15/shared-session-first.log"
+    },
+    "SdkReplyEditorRegressionTest.notesDirtyFlushClipboardRepliesAndReopenRemainUsable": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.15/shared-editor-pass.log"
+    }
+  },
+  "compiled_kotlin_runtime_classes": 3170,
+  "runtime_mismatches": 0,
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/AppSdk.kt": "02319f0720819c457ee3334aba7ff28ccdd7307dcb631f9ef74878519dce56f2",
+    "android/app/src/main/kotlin/app/onklav/home/SdkAppScreen.kt": "8a69d6a097a7821d12556b210f0429b5517d3cbd4906d4512857f67dc3990994",
+    "android/app/src/main/kotlin/app/onklav/home/SdkRadio.kt": "f05e06f04f845b1b027f0a455c230de9fc9e42c030d028e4b127978b5c5ccc6e",
+    "android/app/src/main/kotlin/app/onklav/home/SdkRadioPlayer.kt": "da57483c73acefc511e5cdb73b0041fe4fe605eef856f9b6281900dc483e0fba",
+    "android/app/src/main/kotlin/app/onklav/home/SdkMedia.kt": "6531057e179fc33a4cb76d63d1b54c71bfc584015ebc55f5889f8ca7aa1341bb",
+    "android/app/src/main/kotlin/app/onklav/home/RadioStreamEngine.kt": "b889b999d3af43318fffa69df4a9976510ba4bbe7f725cb06758ba79994dd79e",
+    "android/app/src/main/kotlin/app/onklav/home/RadioVisualScene.kt": "844613f5d87d72102564d448c7d870212a867b3f34d89d3494f3fa037de304a7",
+    "android/app/src/main/kotlin/app/onklav/home/RadioVisualizer.kt": "831372ec82eaae25bd9e0400e62c76cc831f81821133c1cac59a22fc4b1d4903"
+  },
+  "root_cause": "UI-only connection field violated strict SDK media reply schema, and failed reply erased only host pending state",
+  "fixes": [
+    "Project broker media replies to existing schema",
+    "Acknowledge token-matched failure before accepting another event",
+    "Complete reply/host-state commit without caller cancellation interruption",
+    "Pause/release matching uncommitted stream on rejected radio success",
+    "Pause old radio before new stream probe",
+    "Repair failed cached Radio Browser address per selected UUID",
+    "Close response arriving after stream cancellation",
+    "Main and visualizer Play resolve selection again after pause/error",
+    "Centered dual Spectrum with beat-accented vibrant trace",
+    "Co-centered Wave components; gentle Mandala rotation with four independent envelopes",
+    "Remove Prism with saved-mode fallback"
+  ],
+  "native_ui_images": [
+    "docs/evidence/v0.100.15/radio-visualizer-landscape.png",
+    "docs/evidence/v0.100.15/radio-visualizer-portrait-1.png",
+    "docs/evidence/v0.100.15/radio-visualizer-landscape-1.png",
+    "docs/evidence/v0.100.15/radio-visualizer-portrait-2.png",
+    "docs/evidence/v0.100.15/radio-visualizer-landscape-3.png",
+    "docs/evidence/v0.100.15/radio-visualizer-portrait-4.png",
+    "docs/evidence/v0.100.15/radio-visualizer-portrait-0.png",
+    "docs/evidence/v0.100.15/radio-visualizer-portrait.png",
+    "docs/evidence/v0.100.15/radio-visualizer-landscape-5.png",
+    "docs/evidence/v0.100.15/radio-visualizer-portrait-5.png",
+    "docs/evidence/v0.100.15/radio-visualizer-landscape-4.png",
+    "docs/evidence/v0.100.15/radio-visualizer-portrait-3.png",
+    "docs/evidence/v0.100.15/radio-visualizer-landscape-0.png",
+    "docs/evidence/v0.100.15/radio-visualizer-landscape-2.png"
+  ],
+  "diagnostic_check_outside_release_set": {
+    "test": "SdkAppsHostTest.sdkNotesSaveReopenClipboardRemoveReinstallAndDeveloperApp",
+    "status": "failed_before_sdk_app_entry",
+    "reason": "Legacy launcher fixture assumes no initial setup and Notes on first desktop page; it never reaches the changed SDK transaction code. Original fixture retained. Focused signed Notes dirty-edit/clipboard/close/reopen check passes.",
+    "evidence": [
+      "docs/evidence/v0.100.15/shared-session-first.log",
+      "docs/evidence/v0.100.15/legacy-launcher-fixture.log"
+    ]
+  },
+  "lint": {
+    "status": "passed",
+    "severity_counts": {
+      "Warning": 287,
+      "Information": 1
+    },
+    "evidence": "docs/evidence/v0.100.15/final-source-lint.log"
+  },
+  "apk": {
+    "status": "passed",
+    "version": "0.100.15-rc1",
+    "version_code": 124,
+    "sha256": "972f4370ef7bd28ec8dee9efaadeb97d0cfedee6564741f87a6a8c5b9ec3d6f9",
+    "bytes": 102411762,
+    "signer_sha256": "6ed975c5fc27d19f6291f751a8bb00fa8a2c2e7d268bffc7b6ddf7e1b1a7a69d",
+    "defined_classes_verified": [
+      "app/onklav/home/SdkAppModel",
+      "app/onklav/home/RadioHttpSource",
+      "app/onklav/home/RadioVisualSceneKt",
+      "app/onklav/home/ExoRadioStream",
+      "app/onklav/home/PhotoArtEffects",
+      "app/onklav/home/PhotoOptionsWheelKt",
+      "app/onklav/home/MmsDownloadRecovery",
+      "app/onklav/shared/Mp3Codec"
+    ],
+    "standard_proof": "docs/apk-verification-debug.json"
+  },
+  "scope": "Signed host/JNI/controller transactions, simulated transport and native headless UI; not live phone acceptance",
+  "remaining_acceptance": [
+    "Real handset/network/station availability, audio routes, screen-off/Doze/OEM behavior",
+    "Previously documented MMS/provider and full application qualification"
+  ]
+}

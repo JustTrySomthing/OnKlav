@@ -1,0 +1,1714 @@
+{
+  "cases": [
+    {
+      "class": "app.onklav.home.ReminderFlowHostTest",
+      "name": "choosePersistRescheduleAndRemove",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkLocalizationTest",
+      "name": "oversizedResourcesFallBackAndRtlFollowsLocale",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkLocalizationTest",
+      "name": "exactLocaleWinsAndNestedLabelsTranslate",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkLocalizationTest",
+      "name": "languageFallbackDoesNotChangeDataOrActions",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.FilesBrokerHostTest",
+      "name": "fileExportsAreReadOnlyAndCannotExposeArbitraryPrivatePaths",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.FilesBrokerHostTest",
+      "name": "deletingPrivateDataClearsOnlyThatAppsFolderConnections",
+      "status": "failed"
+    },
+    {
+      "class": "app.onklav.home.FilesBrokerHostTest",
+      "name": "revokedSdkAuthorizationAndUnknownTokensCannotQueryAndroidFiles",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.FilesBrokerHostTest",
+      "name": "androidFoldersExposeOpaqueTokensAndSupportRenameAndExplicitDelete",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.FilesBrokerHostTest",
+      "name": "selectedImportsStreamAndStopWhenAuthorizationIsRevoked",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.NotesBackupTest",
+      "name": "invalidOrChangedReviewCannotWriteAndActiveAppMustCloseBeforeRestore",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.NotesBackupTest",
+      "name": "providerWriteFailureRemovesIncompleteDocumentAndPrivateStaging",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.NotesBackupTest",
+      "name": "realProviderJniRoundTripKeepsCurrentNotesAndNeverExportsGrants",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkFieldInputsTest",
+      "name": "timePickerFollowsUserClockWhileReturningIsoText",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkFieldInputsTest",
+      "name": "datePickerReturnsIsoAndCancellationPreservesTheDraft",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkFieldInputsTest",
+      "name": "timePickerReturnsStableTwentyFourHourText",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkFieldInputsTest",
+      "name": "supportedInputsChooseTheirNativeKeyboard",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.LibraryBackupTest",
+      "name": "annotatedImageUsesRealSdkImportAndLiveSessionsBlockRestoration",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.LibraryBackupTest",
+      "name": "oneAppDocumentsBackupRestoresAcrossStoresAndRepeatsSafely",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.LibraryBackupTest",
+      "name": "cancellationAndProviderFailureCleanStagingAndIncompleteOutput",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.LibraryBackupTest",
+      "name": "youtubeBackupReopensBookmarksAndHistoryWithALocalViewerIdentity",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.LibraryBackupTest",
+      "name": "rssProviderBackupReopensOfflineArticlesAndBookmarksInTheSignedApp",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.LibraryBackupTest",
+      "name": "filesProviderToJniRoundTripKeepsBytesAndRejectsChangedReview",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.LibraryBackupTest",
+      "name": "readerBackupRestoresAnAccessibleDraftAndKeepsAnExistingClearedDraft",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.LibraryBackupTest",
+      "name": "browserBackupReopensTabsAndBookmarksAndPreservesLocalChanges",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SocialSdkHostTest",
+      "name": "socialIsOnlyHelloWorldInsideSdkHost",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.DriveSharingTest",
+      "name": "overlappingUploadsCannotOverwriteTheUnfinishedFileRecord",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.DriveSharingTest",
+      "name": "rejectsForeignCredentialDestinationsAndUnsafeIdentities",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.DriveSharingTest",
+      "name": "confirmedUploadStreamsBytesAndPublishesOnlyAfterUpload",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.DriveSharingTest",
+      "name": "cancellingUploadKeepsRecoveryRecordAndNeverPublishesPermission",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.DriveSharingTest",
+      "name": "nonJsonErrorResponsesPreserveHttpStatusButSuccessfulGarbageFails",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.DriveSharingTest",
+      "name": "failedUploadRetainsIdentityAndCleanupRequiresOriginalAccount",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.ReminderTimesTest",
+      "name": "calendarMorningSurvivesSpringClockChange",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.ReminderTimesTest",
+      "name": "lateEveningCapsTonightWithoutSchedulingPastTime",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.MessageVisualCorrectionsHostTest",
+      "name": "setupNextActionAndEmptyTrashLabelsRemainVisibleAndContactsHasOnlyBackNavigation",
+      "status": "failed"
+    },
+    {
+      "class": "app.onklav.home.MessageVisualCorrectionsHostTest",
+      "name": "arrowStaysVisibleAtPhoneDensityWhilePortraitPreviewPreservesItsFullHeight",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.AppearancePolishTest",
+      "name": "exportedFilesAndMessageFilesRejectLinkedTargets",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.AppearancePolishTest",
+      "name": "nativePickersUseCurrentPaletteAndFontOnAndroid15",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.AppearancePolishTest",
+      "name": "memoryPressureDropsBackgroundCacheWithoutRecyclingDisplayedImages",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.AppearancePolishTest",
+      "name": "everyPaletteHasReadableControlsAndNoDefaultSecondaryAccent",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.AppearancePolishTest",
+      "name": "annotationChecksHeaderDimensionsBeforeFullDecode",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.AppearancePolishTest",
+      "name": "grayscaleNeutralSurfacesStayNeutral",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkLifecycleTest",
+      "name": "messagesAndReaderShareVoicePreferencesAndOneCurrentReader",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkLifecycleTest",
+      "name": "audioOwnerInterruptsOnlyThePreviousOwnerAndOldReleaseCannotStopNewAudio",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkLifecycleTest",
+      "name": "partialNativeCleanupKeepsItsJournalAndRetriesWithoutRotatingAgain",
+      "status": "failed"
+    },
+    {
+      "class": "app.onklav.home.SdkLifecycleTest",
+      "name": "deletedNativeProfileIsImmediatelyIsolatedAndOnlyItsOldProfileIsPurged",
+      "status": "failed"
+    },
+    {
+      "class": "app.onklav.home.HistoryRestoreTest",
+      "name": "cancellationDuringChildrenRollsBackButCleanupFailureBlocksContinuation",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryRestoreTest",
+      "name": "lostInsertAcknowledgementNeverRetriesOrGuessesWhichRowToDelete",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryRestoreTest",
+      "name": "explicitAbsentReviewRetainsEvidenceAndDoesNotRetryOrDelete",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryRestoreTest",
+      "name": "unsafeInputsAndClosedProductionGateHaveNoInsertEffects",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryRestoreTest",
+      "name": "permissionLossRetainsReceiptUntilExplicitCleanup",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryRestoreTest",
+      "name": "changedOwnershipOrFailedReadbackCannotCommit",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryRestoreTest",
+      "name": "processInterruptionAfterParentReceiptCanBeCleanedAfterRestart",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryRestoreTest",
+      "name": "childrenReappearanceCancellationAndAccessLossRetainPendingEvidence",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryRestoreTest",
+      "name": "successfulMessagesRetainActualIdsAcrossRecoveryAndBlockReplay",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryRestoreTest",
+      "name": "incompleteMmsDeletesOnlyNewParentAndChildren",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryRestoreTest",
+      "name": "presentOwnedOrChangedMessageCannotBeAcknowledgedAbsent",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryRestoreTest",
+      "name": "unknownAndCommittedOutcomesNeverQueryOrResolveGuessedIds",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryRestoreTest",
+      "name": "explicitAbsentReviewProductionEntryStaysGateClosed",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryRestoreTest",
+      "name": "processInterruptionBeforeReceiptStaysUncertain",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkFeedServiceTest",
+      "name": "hostileXmlAndNonPublicSourcesAreRejected",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkFeedServiceTest",
+      "name": "boundedReadsStopEmptyProvidersOversizedBodiesAndRevocation",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkFeedServiceTest",
+      "name": "rssAndAtomKeepPlainTextAndResolveArticleLinks",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryBackupTest",
+      "name": "providerFailureAndChangesNeverPublishSuccessOrLeavePrivateHistory",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryBackupTest",
+      "name": "comparisonIsBoundToThePreviouslyCheckedArchiveAndRejectsChangedFiles",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryBackupTest",
+      "name": "historyReviewUsesExportedZipWithoutSmsAccessOrProviderMutationAndRemovesCopies",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryBackupTest",
+      "name": "realProviderToJniToZipPreservesTextAddressesMediaAndUnits",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryBackupTest",
+      "name": "failedAndCancelledImportClearCopiesKeepOriginalAndCannotEnableRestore",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryBackupTest",
+      "name": "comparisonPermissionChangeAndCancellationInvalidateResultsAndRemoveSnapshots",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryBackupTest",
+      "name": "cancellationAndRevocationAreCheckedAgainBeforeDocumentWrite",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryBackupTest",
+      "name": "comparisonMatchesSmsAndMmsAcrossChangedIdsWithoutMutatingProviderOrAppMetadata",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkAppActionsTest",
+      "name": "permissionRowsHaveOneLabeledTargetAndWrapAtLargeText",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkAppActionsTest",
+      "name": "pendingOrBusyPanelsDisableEveryGuestAction",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkAppActionsTest",
+      "name": "applyingPermissionsDisablesTheWholeRow",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkAppActionsTest",
+      "name": "toolbarOverflowIncludesPrimaryLongActionsInLightTheme",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkAppActionsTest",
+      "name": "floatingPanelsRespectDisabledActionsAndExposeSecondaryActions",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.MessageIdentityTest",
+      "name": "differentInternationalRecipientsKeepSeparateDrafts",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.MessageIdentityTest",
+      "name": "contactFormattingAndUsPrefixShareDraft",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.MessageIdentityTest",
+      "name": "groupOrderingAndDuplicateRecipientsDoNotForkDraft",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.MessageVideoPreviewsTest",
+      "name": "invalidImagesAreNotCachedAndCannotStopThePlayControl",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.MessageVideoPreviewsTest",
+      "name": "linksAreCanonicalDeduplicatedBoundedAndKeepStartTimes",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.MessageVideoPreviewsTest",
+      "name": "offMeansNoFetchOrCacheUseAndRevokeDropsStaleResults",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkDevicePreviewTest",
+      "name": "invalidOrMissingTicketsFailBeforeAnyAppInstall",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkDevicePreviewTest",
+      "name": "signedPackageCanBeReviewedOpenedAndInteractedWithThroughTheRealHost",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkForegroundPollingTest",
+      "name": "pollingAndWatchersStopWhileHiddenAndRestartOnce",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.DriveDocumentsTest",
+      "name": "sameDocumentAliasesRejectBeforeOpeningOrDeletingAnyFile",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.DriveDocumentsTest",
+      "name": "partialCopyFailureCleansOnlyTheOpenedDestination",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.DriveDocumentsTest",
+      "name": "unreadableSourceDoesNotDeleteOrTruncateTheChosenDestination",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.GroupsFlowHostTest",
+      "name": "failedContactLoadOffersRetryWithoutPretendingTheAddressBookIsEmpty",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.GroupsFlowHostTest",
+      "name": "createEditMembersFoldersSearchAndDelete",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.MessagingFeatureTest",
+      "name": "olderPhonesUseTheSupportedTelephonyFeature",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.MessagingFeatureTest",
+      "name": "voiceHardwareAloneDoesNotEnableMessagingOnNewerPhones",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkBootstrapTest",
+      "name": "warmSetupPreservesRemovalAndLivePermissionRevocation",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkBootstrapTest",
+      "name": "setupRecoversWhenRegistryIsMissingWithinSameProcess",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkBootstrapTest",
+      "name": "apkUpgradeUpdatesExistingBundledPackageAndKeepsPermissionsAndData",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.MessagePlaybackTest",
+      "name": "normalPlaybackNeverRequiresRateControl",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.MessagePlaybackTest",
+      "name": "unsupportedRateKeepsTheActualSpeed",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.MessagePlaybackTest",
+      "name": "supportedRateAndReturnToNormalApplyExplicitly",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.MessagePlaybackTest",
+      "name": "invalidPlayerStateIsNotDisguisedAsAnUnsupportedRate",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SwipeConversationTest",
+      "name": "smallMovementClosesAndLargeMovementRevealsOnEitherSide",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SwipeConversationTest",
+      "name": "swipingEitherWayRevealsActionsWithoutArchivingDeletingOrBlocking",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkSpeechTest",
+      "name": "chunkedPlaybackPauseSeekRevocationAndLateCallbacks",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkSpeechTest",
+      "name": "defaultRateAndInvalidStoredRateStayUsable",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkSpeechTest",
+      "name": "queuedSpeechCannotInterruptNewerReaderOrSurviveRevocation",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkSpeechTest",
+      "name": "utf16BoundariesAndPreviewRestoresPosition",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkSpeechTest",
+      "name": "retryIgnoresOldInitializationAndCloseCancelsQueue",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.WalkiePresentationTest",
+      "name": "selectedRecipientShowsCompactDialAndOfflineRecordingIsStillAvailable",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkSessionIsolationTest",
+      "name": "clearingTheOwnerClosesItsCoreSessionAndReleasesNativeCallbacks",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkSessionIsolationTest",
+      "name": "pendingLaunchesRejectForeignTokensAndNeverRepeatTheCurrentOperation",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkSessionIsolationTest",
+      "name": "recreatedOwnerReloadsSavedDataWithoutOldPendingTokens",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkSessionIsolationTest",
+      "name": "aModelCannotMoveItsDraftOrPendingOperationIntoAnotherApp",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.TransportRecoveryTest",
+      "name": "walkieCallbackIsRetainedWhenPermissionGatePreventsReconciliation",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.TransportRecoveryTest",
+      "name": "callbacksRequireMatchingActionUriKindAndPart",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.TransportRecoveryTest",
+      "name": "failedAttemptJournalStopsBeforeCallingTheCarrier",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.TransportRecoveryTest",
+      "name": "receiptsSurviveRestartUntilCoreAcceptsTheOutcomeWithoutResending",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.TransportRecoveryTest",
+      "name": "internalBrowserHandoffUsesTheSignedGuestNavigationAndRejectsUnsafeSchemes",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.TransportRecoveryTest",
+      "name": "failedMmsAddressInsertRollsBackOnlyTheNewParent",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.TransportRecoveryTest",
+      "name": "committedCoreRemovalWithBlockedPrivateCleanupResumesBeforeAnotherLaunch",
+      "status": "failed"
+    },
+    {
+      "class": "app.onklav.home.TransportRecoveryTest",
+      "name": "failedDownloadErrorJournalRetainsTheDurableCallback",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.TransportRecoveryTest",
+      "name": "completedCallbackIsRetainedWhenDurabilityCannotBeConfirmed",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.TransportRecoveryTest",
+      "name": "recoverySchedulingCoalescesAndDoesNotEnableTransport",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.ReaderSdkHostTest",
+      "name": "readerSdkDraftControlsSettingsClearAndReopen",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkVoiceTest",
+      "name": "controllerUsesRealSignedSdkAndRustArchiveWithFixtureDeviceOnly",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkVoiceTest",
+      "name": "focusDenialBackendErrorAndOtherOwnerLeaveNoDraft",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkVoiceTest",
+      "name": "twelveSecondLimitReviewQueueAndDiscard",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkVoiceTest",
+      "name": "playbackMarksHeardOnlyOnAuthorizedCompletion",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkVoiceTest",
+      "name": "liveRecordingWaitsForOwnershipAndWarmupAndCancelsBeforeStart",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkVoiceTest",
+      "name": "revocationBackgroundAndStaleCallbacksDiscardWithoutQueueing",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkVoiceTest",
+      "name": "unverifiedCarrierCannotStartOrConsumeTrafficOrChangeRole",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.WalkieSdkHostTest",
+      "name": "walkieSettingsOfflineDialAndRecipientStorageUseSignedSdk",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.PagingAndReactionsTest",
+      "name": "galleryReadsOneBoundedPageAndUsesIdToAdvanceThroughEqualTimestamps",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.PagingAndReactionsTest",
+      "name": "knownAndArbitraryEmojiReactionsAndRemovalParseWithoutEatingOrdinaryMessages",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.PagingAndReactionsTest",
+      "name": "viewerKeepsItsSnapshotWhenGalleryRefreshesOrShrinks",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.PagingAndReactionsTest",
+      "name": "newestRefreshPreservesOlderRowsAndUpdatesChangedStatusWithoutDuplicates",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.PagingAndReactionsTest",
+      "name": "tabViewModelRetainsLoadedRowsAndWindows",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.PagingAndReactionsTest",
+      "name": "reactionsOnBothSidesBecomeCornerBadgesAndTransportRowsAreHidden",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.RssContinuationTest",
+      "name": "anExistingSdkListWinsOverPreviousPreferences",
+      "status": "failed"
+    },
+    {
+      "class": "app.onklav.home.RssContinuationTest",
+      "name": "scrollPositionsAreSeparateBoundedAndRefreshRecentlyUsedSlots",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.RssContinuationTest",
+      "name": "ownSourcesAreAdoptedOnceWithoutChangingPreviousPreferences",
+      "status": "failed"
+    },
+    {
+      "class": "app.onklav.home.RssContinuationTest",
+      "name": "malformedPreferencesRemainIntactAndEmptyListCanBeRetried",
+      "status": "failed"
+    },
+    {
+      "class": "app.onklav.home.SdkCarrierIsolationTest",
+      "name": "confirmationRejectsExternalOwnersWrongServicesAndRawCarrierOperations",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkCarrierIsolationTest",
+      "name": "carrierUiEligibilityRequiresAnExplicitLiveGrant",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkCarrierIsolationTest",
+      "name": "executionUsesFreshlyAuthorizedArgumentsAndDoesNotProceedAfterRevocation",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkCarrierIsolationTest",
+      "name": "genericModelsCannotReachBuiltInCarrierStateBeforeAuthorization",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkCarrierIsolationTest",
+      "name": "grantOrPackageChangesCannotInterleaveWithConfirmedExecution",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.ResponsiveAppearanceHostTest",
+      "name": "tabletContentStaysBounded",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.ResponsiveAppearanceHostTest",
+      "name": "normalPhoneDark",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.ResponsiveAppearanceHostTest",
+      "name": "landscapeSettingsAndAlertActionsStayReachable",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.ResponsiveAppearanceHostTest",
+      "name": "narrowPhoneLargeTextLight",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkSecretsTest",
+      "name": "publisherAndAppNamespacesStayIsolatedAndSwappedCiphertextFailsClosed",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkSecretsTest",
+      "name": "boundsAndLateRevocationKeepThePreviousCiphertext",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkSecretsTest",
+      "name": "encryptedRoundTripUsesFreshNoncesAndDoesNotCreateDataOnMissingReads",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkSecretsTest",
+      "name": "corruptDataAndLostKeysNeverResetOrOverwriteExistingSecrets",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkSecretsTest",
+      "name": "deletionRemovesOnlyThatAppsCiphertextAndKeys",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkSecretsTest",
+      "name": "deletionAlsoRemovesKeysAfterCiphertextWasLost",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkScheduledNotificationsTest",
+      "name": "schedulesPersistedBoundedJobsAndReplacementRejectsOldTokens",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkScheduledNotificationsTest",
+      "name": "deliveryRechecksOwnerAndConsumesOnlyOnce",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkScheduledNotificationsTest",
+      "name": "failedAuthorizationAndInvalidDelaysDoNotCreateJobs",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkScheduledNotificationsTest",
+      "name": "queuesHavePerAppAndHostLimitsAndCancelOnlyTheirOwner",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkScheduledNotificationsTest",
+      "name": "transientOwnerFailuresHaveBoundedRetriesAndLateRevocationNeverPosts",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkScheduledNotificationsTest",
+      "name": "revokedOrChangedPublisherNeverPostsAndStoppedWorkKeepsQueue",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkScheduledNotificationsTest",
+      "name": "recoveryRestoresMissingJobsAndRejectsMalformedRows",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.CarrierMediaPlanTest",
+      "name": "invalidRangesAndUnavailableBudgetsCannotProduceAClip",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.CarrierMediaPlanTest",
+      "name": "trimRecommendationsHonorAudioVideoAndActualCarrierBudgets",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.CarrierMediaPlanTest",
+      "name": "floatingReactionMotionFadesInAndOutWithoutChangingItsMessage",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.FilesRoutingTest",
+      "name": "tappingNoteResolvesNotesAndClosedFilesModelReopensWithoutBusyOverlay",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkAccessibilityTest",
+      "name": "insertingAnEarlierControlKeepsExistingControlIdentity",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkAccessibilityTest",
+      "name": "rtlHeaderKeepsBackAndActionsInsideScreen",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkAccessibilityTest",
+      "name": "sharedStatusAnnouncesUpdates",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkAccessibilityTest",
+      "name": "dateTimeActionsAreDistinctAndStayInsideNarrowLargeTextFields",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkAccessibilityTest",
+      "name": "audioControlsLabelTheirPositionAndAllowClipsWithoutDeleteActions",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkAccessibilityTest",
+      "name": "mediaAndImageRowsAllowMissingOptionalActionsAndTimestamps",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkAccessibilityTest",
+      "name": "sharedHeaderExposesLoadingWithoutHidingBack",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkAccessibilityTest",
+      "name": "storageControlsStayReachableAndApplyOnlyAfterATap",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkAccessibilityTest",
+      "name": "populatedFieldsKeepLabelsErrorsAndKeyboardFocus",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkAccessibilityTest",
+      "name": "drawingToolbarScrollsWithoutCoveringToolsAtLargeText",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkAccessibilityTest",
+      "name": "sharedDialogsAnnounceTheirPaneAndHeadingAtLargeText",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkAccessibilityTest",
+      "name": "togglesExposeOneLabeledCheckboxAndDisabledState",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkAccessibilityTest",
+      "name": "paletteTargetsKeepTheirSizeAndSelectedStateWhenNarrow",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.PhoneNumbersTest",
+      "name": "formatsNationalCountryCodeShortCodesAndInternationalWithoutLosingDigits",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.PhoneNumbersTest",
+      "name": "contactRowsHaveAlphabetInitialsAndNoInventedNumbers",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.PhoneNumbersTest",
+      "name": "partialInputFormatsWhilePreservingDialableNumbers",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.PhoneNumbersTest",
+      "name": "cursorMapsAcrossEveryPartialInputAndFormattedPaste",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.ExternalAppIntegrationTest",
+      "name": "unknownReservedIdentityIsRejected",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.ExternalAppIntegrationTest",
+      "name": "longFormsScrollAtLargeFontAndSaveThroughSharedController",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.ExternalAppIntegrationTest",
+      "name": "customIconDecodeIsBoundedAndTrimKeepsDisplayedBitmapValid",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.ExternalAppIntegrationTest",
+      "name": "newerHostRequirementIsRejected",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.ExternalAppIntegrationTest",
+      "name": "hostChromeOverflowModalDrawerAndCloseRemainUsable",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SettingsUiHostTest",
+      "name": "nestedSettingsSaveAndCancelAreRealAndReturnToParent",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SettingsUiHostTest",
+      "name": "appearanceDraftCancelAndApplyAndNestedBackgroundCancel",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SettingsUiHostTest",
+      "name": "walkieSettingsChangeTheSignedAppsPrivateStoreWithoutAddingPermissions",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SettingsUiHostTest",
+      "name": "settingsRemainReachableWithLargeText",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SettingsUiHostTest",
+      "name": "checkedHistoryReviewShowsCountsAndKeepsProviderRestoreDisabled",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SettingsUiHostTest",
+      "name": "quietHoursUsesStagedRepeatChoicesAndPersistsOnlyOnSave",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SettingsUiHostTest",
+      "name": "historyExportAndImportCheckAreReachable",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SettingsUiHostTest",
+      "name": "notesBackupIsReachableAndReturnsToTheMetadataDialog",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SettingsUiHostTest",
+      "name": "comparisonShowsReadOnlyCandidatesAndKeepsRestoreDisabled",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SettingsUiHostTest",
+      "name": "sdkDocumentBackupsAreReachableAndReturnToSettings",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SettingsUiHostTest",
+      "name": "combinedAppDocumentsBackupIsReachable",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SettingsUiHostTest",
+      "name": "walkiePreferencesCanRecoverAfterPrivateStoragePermissionIsRestored",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.MediaAndCarrierTest",
+      "name": "animatedImagesDefaultOnAndPreferencePersists",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.MediaAndCarrierTest",
+      "name": "galleryIncludesAllMediaKindsAndPreservesIdentityWithoutDuplicates",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.MediaAndCarrierTest",
+      "name": "driveProviderCopyStreamsSelectedFileAndRejectsSameDestination",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.MediaAndCarrierTest",
+      "name": "carrierTrialRequiresExplicitChoiceAndDoesNotClaimReleaseAcceptance",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkContactsTest",
+      "name": "missingInvalidAndOversizedSelectionsFailWithoutLeakingContacts",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkContactsTest",
+      "name": "selectedRowOnlyAndPermissionChecksSurroundProviderRead",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.MessageControlsTest",
+      "name": "historySearchIsThreadScopedAndOpeningAResultLoadsTheRequestedDateWindow",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.MessageControlsTest",
+      "name": "firstTapWaitsForVoiceAndEachMessageStartsAtTheBeginningUsingReaderPreferences",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.MessageControlsTest",
+      "name": "pendingMessageSpeechCannotStartAfterStop",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.MessageControlsTest",
+      "name": "inboxTimestampsMatchTodayMonthDayAndOlderYear",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.MessageControlsTest",
+      "name": "pinAndMutePersistAndTransferWhenANewGroupGetsItsPhoneThread",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkCollectionsTest",
+      "name": "signedGuestCommitsThroughTheAndroidJniBroker",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkCollectionsTest",
+      "name": "ungrantedStorageDoesNotCreateCollectionFiles",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.BrowserSdkHostTest",
+      "name": "browserPackageBookmarksTabsSettingsAndReopen",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.RecoveryNotificationTest",
+      "name": "collidingThreadsKeepIndependentNotificationsAndAllActionTargets",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.RecoveryNotificationTest",
+      "name": "queuedReplyIsNotReportedAsFailedWhenReadAccessDisappears",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.RecoveryNotificationTest",
+      "name": "markReadRechecksRoleAndPermissionBeforeProviderWritesAndLocalState",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.RecoveryNotificationTest",
+      "name": "remindersAttentionAndThreadsCannotOverwriteOrCancelEachOther",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.RecoveryNotificationTest",
+      "name": "removalRecoveryKeepsWorkEnqueuedDuringProfileDeletionAndRetriesFailures",
+      "status": "failed"
+    },
+    {
+      "class": "app.onklav.home.RecoveryNotificationTest",
+      "name": "conversationReadDoesNotCommitLocalSuccessAfterPermissionLoss",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.RecoveryNotificationTest",
+      "name": "profileCleanupAcceptsAlreadyMissingProfilesButRetainsRejectedExistingOnes",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkDeviceServicesTest",
+      "name": "notificationTapsUseOpaqueTokensAndCheckLiveOwnerAccess",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkDeviceServicesTest",
+      "name": "notificationDenialAndLateRevocationDoNotPost",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkDeviceServicesTest",
+      "name": "cameraStagingCleansUpEvenWhenAuthorizationOrCommitFails",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkDeviceServicesTest",
+      "name": "notificationOwnersLimitsAndCancellationStaySeparate",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkDeviceServicesTest",
+      "name": "cameraOutputIsBoundedNormalizedAndTemporaryGrantsAreCleaned",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkDeviceServicesTest",
+      "name": "androidNotificationPermissionIsRequiredSeparately",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.RssAppsHostTest",
+      "name": "rssPackageRunsOfflineArticlesBookmarksDrawersAndSettings",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkWebPolicyTest",
+      "name": "rendererReplacementRejectsLateErrorsProgressAndClearCallbacks",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkWebPolicyTest",
+      "name": "systemBackUsesCurrentWebHistoryAndLiveGrant",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkWebPolicyTest",
+      "name": "historyMemoryIsBounded",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkWebPolicyTest",
+      "name": "nativeClipboardEntryPointsCheckLiveGrants",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkWebPolicyTest",
+      "name": "clearCompletionIsBoundToCurrentCommandGrantAndNewPageFinish",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkWebPolicyTest",
+      "name": "addressesAndProfilesStayWithinTheirBoundary",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.MessageVideoUiHostTest",
+      "name": "privacySwitchDrivesMessageCardsAndPlayStaysExplicit",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkHttpServiceTest",
+      "name": "oversizedResponsesAndAuthorizationChangesNeverReturnPayloads",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkHttpServiceTest",
+      "name": "perAppConcurrentRequestsAreBounded",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkHttpServiceTest",
+      "name": "requestPolicyRejectsOtherOriginsCredentialsAndUnsafeUrls",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkHttpServiceTest",
+      "name": "transportFailuresDoNotExposeRequestUrlsOrProviderMessages",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkHttpServiceTest",
+      "name": "boundedResponsesKeepHttpErrorsButStripCookiesAndCrossOriginRedirects",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryRecoveryUiTest",
+      "name": "partialSavedRecordOffersExplicitReopenAndShowsRemainingCount",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryRecoveryUiTest",
+      "name": "completedRestoreCompactionCancelsThenRetainsReviewAndMetadata",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryRecoveryUiTest",
+      "name": "changedInsertionReviewExplainsAbsenceCheckWithoutEnablingPhoneAccess",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryRecoveryUiTest",
+      "name": "knownIncompleteCleanupRemainsGateClosed",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryRecoveryUiTest",
+      "name": "savedRecordReopenRouteDoesNotWriteOrRequestAnAutomaticRetry",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryRecoveryUiTest",
+      "name": "unknownInsertReviewStaysPausedWithoutClearOrRetry",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryRecoveryUiTest",
+      "name": "compactConfirmationRetainsReplayProtectionAndPendingRecords",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryRecoveryUiTest",
+      "name": "finishSavedRecordOnlyAcknowledgesExistingMetadata",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryRecoveryUiTest",
+      "name": "recoveryRouteAndStagedIdentitySaveCancelAndValidation",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryRecoveryUiTest",
+      "name": "finalConfirmationShowsReviewedIdentitiesAndRemainsGateClosed",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.FilesFlowHostTest",
+      "name": "fileIconFoldersRenameMoveTrashAndRestoreUseTheRealNotesStore",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.FilesFlowHostTest",
+      "name": "openingANoteUsesNotesAndBackReturnsToFiles",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkCarrierReceiptsTest",
+      "name": "aConflictingDuplicateCannotChangeAnAlreadySavedPart",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkCarrierReceiptsTest",
+      "name": "multipartCallbacksRemainDurableAndSeparateWhenCarrierAccessIsOff",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkCarrierReceiptsTest",
+      "name": "removingOneAppDeletesOnlyItsJobsAndResponseFiles",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkCarrierReceiptsTest",
+      "name": "completePartResultsSurviveACrashBeforeTheAggregateWasSaved",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkDrawingTest",
+      "name": "exportRendersImageCoordinatesAndTextBounds",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkDrawingTest",
+      "name": "importsAreBoundedAndPreserveOrientedDimensions",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkDrawingTest",
+      "name": "keyboardAndAccessibilityViewportActionsNeverCommitDrawingEdits",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkDrawingTest",
+      "name": "drawingGestureUsesImageSpaceAndCancellationDoesNotCommit",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkDrawingTest",
+      "name": "switchingDocumentsRestoresTheNewViewportAndDiscardsTheOldGesture",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkDrawingTest",
+      "name": "interruptedGesturesRequireANewDownAndOldCompletionsCannotCancelNewStrokes",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkDrawingTest",
+      "name": "viewportSurvivesResizeAndARecreatedCanvasWithoutSavingAnUnfinishedGesture",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.MessageFocusTest",
+      "name": "exactMessageAndDateAreRequired",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkHttpBridgeTest",
+      "name": "declaringHttpAccessDoesNotGrantIt",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkHttpBridgeTest",
+      "name": "signedOriginsReachJniAuthorizationAndHostPacketTamperingCannotWidenThem",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SettingsServicesTest",
+      "name": "metadataBackupRoundTripIsValidatedAndNeverRestoresCapabilitiesOrSends",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SettingsServicesTest",
+      "name": "spamWarningNeedsALinkAndRiskWordingAndHonorsDisabledPreference",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SettingsServicesTest",
+      "name": "temporaryCleanupWorksThroughAnAndroidStyleCacheDirectoryAlias",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SettingsServicesTest",
+      "name": "cleanupNeverFollowsARedirectedExportsDirectory",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SettingsServicesTest",
+      "name": "temporaryCleanupKeepsRecentExportsSymlinksAndAllOtherPrivateData",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryApplyTest",
+      "name": "stoppingContinuationRetainsNewCommitAndNextReviewDoesNotInsertAgain",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryApplyTest",
+      "name": "confirmationNeedsComparisonMmsIdentitiesAndExplicitUncancelledReview",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryApplyTest",
+      "name": "pendingMessageAppearingOrChangedCompletedTargetRequiresReviewBeforeInsertion",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryApplyTest",
+      "name": "partialBatchFinishesOnlyMissingMessageUnderOriginalRecord",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryApplyTest",
+      "name": "providerChangeDuringPostCaptureStopsMetadataMerge",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryApplyTest",
+      "name": "reviewedApplyUsesFreshPlanAndCannotReuseConfirmation",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryApplyTest",
+      "name": "changedSavedRecordOrWrongOriginalArchiveCannotContinue",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryApplyTest",
+      "name": "secondMessageFailureKeepsFirstAndCleansOnlyIncompleteInsert",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryApplyTest",
+      "name": "stopAfterCommitPreservesPartialOutcomeMapAndReceipt",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryApplyTest",
+      "name": "pendingBatchesHaveExplicitSourcesAndProductionGatePrecedesSnapshot",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryApplyTest",
+      "name": "wrongRecordedPhoneIdsAndProviderChangesLeaveResumeMetadataUntouched",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryApplyTest",
+      "name": "lostInsertAcknowledgementBlocksContinuationWithoutDiscardingPartialMap",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryApplyTest",
+      "name": "freshPhoneComparisonSkipsExistingRowsAndAbsentCommittedRowsBlockReplay",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryApplyTest",
+      "name": "changedContentOrWrongPostIdsLeaveMetadataUntouchedAndReceiptsIntact",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryApplyTest",
+      "name": "productionGateBlocksBeforeSafAndProviderSnapshot",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryApplyTest",
+      "name": "postSnapshotRemapsFlagsAndFoldersAndDisarmsOldReminders",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryApplyTest",
+      "name": "changedIdentityConfigurationRejectsReviewBeforeSafOrProviderReads",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryApplyTest",
+      "name": "changedArchiveAndMissingMmsIdentitiesFailBeforeFirstInsert",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryApplyTest",
+      "name": "identityChangeAtProviderBoundaryPausesWithKnownReceiptAndNoAutomaticRetry",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryApplyTest",
+      "name": "recoveredCommitBeforeMapAcknowledgementRequiresNoNewInsert",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryApplyTest",
+      "name": "checkedArchiveFeedsTypedExecutorAndPersistsActualIdsWithoutOldIds",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryApplyTest",
+      "name": "metadataEditedDuringInsertsWinsOverArchiveEntries",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryApplyTest",
+      "name": "changedPhonePlanRequiresAnotherReviewBeforeAnyInsertion",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryApplyTest",
+      "name": "resumeTicketCannotStartAnotherInsertBatchAndChangedIdentitiesNeedReview",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.HistoryApplyTest",
+      "name": "savedRecordMetadataResumesOriginalJobWithoutInsertingOrReplayingMessages",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkNativeBridgeTest",
+      "name": "revocationBlocksPendingNativeEffectsThroughTheRealBridge",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkNativeBridgeTest",
+      "name": "cameraAndNotificationsRoundTripThroughFreshJniAndActualNativeHandlers",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkNativeBridgeTest",
+      "name": "secureReadUsesSignedOwnerAndMissingDeviceKeystoreFailsWithoutPlaintextFallback",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkCarrierRoutesTest",
+      "name": "legacyMessagesOnlyAddressTheBuiltInAppAndVoiceMetadataRoundTrips",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkCarrierRoutesTest",
+      "name": "oversizedLegacyAndRoutedMetadataAreRejectedBeforeOwnerRouting",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkCarrierRoutesTest",
+      "name": "appAndPublisherAddressesSeparateIdenticalSessionPayloads",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkPermissionRecoveryTest",
+      "name": "revokedSessionKeepsVisibleFrameAndPendingEditsUntilExplicitReopen",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.UiPolishHostTest",
+      "name": "messageLongPressUsesReadUnreadDraftAndSaveCancel",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.UiPolishHostTest",
+      "name": "contactsGroupLettersShowNoNumberAndChooseMessageOrWalkieRecipient",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.UiPolishHostTest",
+      "name": "contactsUnavailableCanRetryAndSearchHasAnExplicitEmptyResult",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.UiPolishHostTest",
+      "name": "keypadAddsDigitsFormatsAndBackspacesWithoutChangingDialableTarget",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.UiPolishHostTest",
+      "name": "pageSlidesFromRightAndRetainsContentUntilExitCompletes",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.UiPolishHostTest",
+      "name": "mailboxTabsSelectAndExposeBothTrashActions",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.UiPolishHostTest",
+      "name": "contactsRefreshAfterEditorReturnAndHideRevokedContacts",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.UiPolishHostTest",
+      "name": "messageFoldersFilterProviderRowsAndRestoreAllUpdatesRustState",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.GroupProtocolHostTest",
+      "name": "activityPickerOffersOneOtherPeerForCanonicalDuplicatesAndExcludesSelf",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.GroupProtocolHostTest",
+      "name": "productionJniProjectsPostAndReaction",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.GroupProtocolHostTest",
+      "name": "initialsMatchReference",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.YouTubeSdkHostTest",
+      "name": "youtubePackageOpensOwnViewerLibraryAndResetDialog",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.AnnotationSdkHostTest",
+      "name": "annotationPackageLibraryToolsRenameAndTextController",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.ChromeLayoutHostTest",
+      "name": "headersAndBottomBarReachBothEdgesAcrossEveryHomeTab",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.ChromeLayoutHostTest",
+      "name": "sharedPopupGrowsSubtlyAtCenterWithoutSidewaysTravel",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.MessageLoadingTest",
+      "name": "localMetadataChangesReuseProviderRowsAndApplyFreshUnreadState",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.MessageCorrectionsTest",
+      "name": "selectedThemeFillAlwaysGetsReadableButtonText",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.MessageCorrectionsTest",
+      "name": "completePickerIsAcceptedByWireAndRepresentativeChoicesSurviveNativeReload",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.MessageCorrectionsTest",
+      "name": "mediaOnlyMessagesHaveNoSpeechButCaptionsAndTextDo",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkNativePreviewTest",
+      "name": "previewHeaderRetainsProductionCounterAndDisabledActions",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkNativePreviewTest",
+      "name": "drawerUsesSharedLayoutAtNarrowWidthAndLargeText",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkNativePreviewTest",
+      "name": "renderRequestedFrameOrCheckNativeFixture",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkAppsHostTest",
+      "name": "sdkNotesSaveReopenClipboardRemoveReinstallAndDeveloperApp",
+      "status": "failed"
+    },
+    {
+      "class": "app.onklav.home.SdkVideoPolicyTest",
+      "name": "historySectionsUseLocalCalendarDays",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkVideoPolicyTest",
+      "name": "providerNavigationAndAdDomains",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkVideoPolicyTest",
+      "name": "thumbnailInputIsBoundedAndChecksPermissionWhileReading",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkStorageServicesTest",
+      "name": "hostQuotaControlsDoNotGrantGuestPermissions",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.home.SdkStorageServicesTest",
+      "name": "cacheClearAndInvalidQuotaKeepExistingCollectionData",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.shared.NativeBridgeTest",
+      "name": "oversizedDocumentReturnsFailureAcrossJni",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.shared.NativeBridgeTest",
+      "name": "kotlinCallsRealRustAndReloadsUnicodeDocument",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.shared.NativeBridgeTest",
+      "name": "walkieRulesCrossJniWithoutAnyTransport",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.shared.ThemePackageTest",
+      "name": "rejectsInvalidUtf8AndCompressedExpansion",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.shared.ThemePackageTest",
+      "name": "unicodeAndAllPresetsRoundTripWithoutExecutablePayload",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.shared.ThemePackageTest",
+      "name": "rejectsPathsUnknownFieldsDuplicateFieldsAndInvalidValues",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.shared.ThemePackageTest",
+      "name": "customImageIsEmbeddedAndPrivatePathCannotBeExported",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.shared.LauncherLayoutTest",
+      "name": "hitTestingIncludesLastRowAndScrollOffset",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.shared.LauncherLayoutTest",
+      "name": "sparseBottomRowAndNewPageSurviveReload",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.shared.LauncherLayoutTest",
+      "name": "occupiedDropReordersWithoutLosingHolesOrIds",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.shared.LauncherLayoutTest",
+      "name": "catalogReconciliationRejectsUnknownAndDuplicateIds",
+      "status": "passed"
+    },
+    {
+      "class": "app.onklav.shared.LauncherLayoutTest",
+      "name": "cancelSnapshotAndEmptyTrailingPageAreSafe",
+      "status": "passed"
+    }
+  ]
+}

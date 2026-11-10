@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.AudioEditorUiTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-27T09:47:26" hostname="b1839471ed1a" time="8.287">
+  <properties/>
+  <testcase name="trimSoundCleanupAndSaveAreReachable" classname="app.onklav.home.AudioEditorUiTest" time="8.287"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,10 @@
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/work/OnKlav/developer/components)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.84s
+     Running unittests src/lib.rs (developer/components/target/debug/deps/onklav_ui-b9729a29e05b7074)
+
+running 2 tests
+test epub_ui::tests::epub_ui_unavailable_book_back_closes_and_retry_is_explicit ... ok
+test epub_ui::tests::epub_bookmark_conflict_keeps_current_chapter_and_requires_confirmation ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 59 filtered out; finished in 0.00s
+

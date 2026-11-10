@@ -1,0 +1,6 @@
+Verified unreleased Linux/ARM64 source checkpoint. Included signed app packages are retained; no SDK or APK release is implied.
+android-host-check: starting (maximum 600s)
+android-host-check: running, 30s elapsed
+android-host-check: quarantined unreadable generated cache; retrying once within the same time limit
+android-host-check: running, 68s elapsed
+android-host-check failed (1); inspect /workspace/scratch/b5e698131b7f/source/OnKlav/docs/evidence/v0.100.38/android-host-check.log.

@@ -1,0 +1,67 @@
+{
+  "scope": "Rounded X dismissal controls and protected file/folder edit policy",
+  "production_compile": "passed",
+  "runtime_class_check": "changed app runtime classes match compiled Kotlin",
+  "passing_checks": 14,
+  "cases": [
+    {
+      "class": "app.onklav.home.AndroidSharedFilesTest",
+      "name": "androidTrashRestoresWithoutOverwritingAndImagesIncludeCameraPhotos"
+    },
+    {
+      "class": "app.onklav.home.AndroidSharedFilesTest",
+      "name": "androidWorkflowPreservesBytesAcrossCopyMoveRenameZipAndTrashRecovery"
+    },
+    {
+      "class": "app.onklav.home.AndroidSharedFilesTest",
+      "name": "failedCopyKeepsAnUnrelatedFileCreatedAtTheDestination"
+    },
+    {
+      "class": "app.onklav.home.AndroidSharedFilesTest",
+      "name": "protectedAndroidMetadataCanBeReadButCannotBeWrittenOrDeletedThroughTheProvider"
+    },
+    {
+      "class": "app.onklav.home.AndroidSharedFilesTest",
+      "name": "purgeRejectsLinksBeforeDeletingAnyFolderContents"
+    },
+    {
+      "class": "app.onklav.home.AndroidSharedFilesTest",
+      "name": "standardAndAppManagedFoldersAreProtectedWhilePersonalFilesRemainEditable"
+    },
+    {
+      "class": "app.onklav.home.FilesPresentationUiTest",
+      "name": "androidBackNavigatesParentsBeforeReturningToOnKlav"
+    },
+    {
+      "class": "app.onklav.home.FilesPresentationUiTest",
+      "name": "filesHomeAndAndroidCategoriesUseTheSameModernBrowser"
+    },
+    {
+      "class": "app.onklav.home.FilesPresentationUiTest",
+      "name": "imageAttachmentPickerStartsInImagesWithViewSwitch"
+    },
+    {
+      "class": "app.onklav.home.FilesPresentationUiTest",
+      "name": "readableAndroidAudioCanBeChosenAsAFolderButNotAsASaveDestination"
+    },
+    {
+      "class": "app.onklav.home.FilesPresentationUiTest",
+      "name": "slideoutCloseUsesXAndDismissesInsteadOfNavigatingToTheParent"
+    },
+    {
+      "class": "app.onklav.home.FilesPresentationUiTest",
+      "name": "thumbnailAndListViewsKeepPencilsOnlyOnEditableItems"
+    },
+    {
+      "class": "app.onklav.home.SdkAccessibilityTest",
+      "name": "rtlHeaderKeepsBackAndActionsInsideScreen"
+    },
+    {
+      "class": "app.onklav.home.SdkAccessibilityTest",
+      "name": "sharedHeaderExposesLoadingWithoutHidingBack"
+    }
+  ],
+  "visual_review": "Files header rendered and inspected",
+  "apk_built": false,
+  "device_verification": false
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "viewport": [
+      320,
+      640
+    ],
+    "real_touch_rack_scroll_select_and_play": true,
+    "sound_pause_freezes_committed_motion": true,
+    "prior_pause_preserved_in_settings": true,
+    "draw_reveals_one_new_tile": true,
+    "zoom_and_round_advance": true,
+    "saved_resume_exact": true,
+    "race_to100_result": true,
+    "music_rms": 0.062615420312596,
+    "errors": []
+  },
+  {
+    "viewport": [
+      432,
+      800
+    ],
+    "real_touch_rack_scroll_select_and_play": true,
+    "sound_pause_freezes_committed_motion": true,
+    "prior_pause_preserved_in_settings": true,
+    "draw_reveals_one_new_tile": true,
+    "zoom_and_round_advance": true,
+    "saved_resume_exact": true,
+    "race_to100_result": true,
+    "music_rms": 0.05690362639702932,
+    "errors": []
+  }
+]

@@ -1,0 +1,102 @@
+{
+  "status": "Implemented practical offline RC features; handset qualification pending",
+  "apk": "No new APK requested or assembled in this preparation pass; latest delivered0.100.7/code116",
+  "proposed_next_apk": "0.100.8-rc1/code117 with original signer and package",
+  "validation": {
+    "android_passed": 33,
+    "suites": [
+      {
+        "class": "VideoRcTest",
+        "tests": 10,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "class": "VideoOfflineTest",
+        "tests": 8,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "class": "VideoProTest",
+        "tests": 8,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "class": "VideoEditorHostTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "class": "VideoEditorUiTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    ],
+    "runtime_classes_match": 2964,
+    "transition_shader_pixel_cases": 10,
+    "cutout_shader_pixel_cases": 6,
+    "shader_renderer": "llvmpipe software GLES, not handset GPU",
+    "lint": {
+      "exit_code": 0,
+      "timed_out": false,
+      "elapsed_seconds": 261.0,
+      "issues": {
+        "Fatal": 0,
+        "Error": 0,
+        "Warning": 260,
+        "Information": 1
+      },
+      "prior_attempts": "Two 240-second attempts timed out and are retained in evidence; the final bounded 480-second attempt passed in261seconds."
+    },
+    "native_sdk_games_current": true
+  },
+  "check_stages": "22 unchanged backend checks passed in the intermediate run; final affected RC10 and UI1 checks passed after the overlap API/onset correction; RC10 rerun again after the bounded LUT-file read guard. Runtime classes match the final compile.",
+  "initial_check": "Intermediate run exposed incompatible explicit-track/force-audio builder options and an onset rise threshold that missed gradual-leading pulses. Both corrected and affected checks rerun. A final pre-read LUT size guard also rejects oversized project-backed LUTs before text allocation, covered by the RC LUT regression. New UI harness initially referenced the wrong CustomActions namespace and did not compile. Corrected to SemanticsActions.CustomActions; initial failed log retained. The earlier premultiplied-alpha pixel run is preliminary only; installed compositor inspection led to straight-alpha shader correction and final pixel checks.",
+  "implemented": [
+    "Two alternating main video sequences with real overlapping crossfade and four directional wipes, including audio",
+    "Unified overlap-adjusted timing for captions/split/trim/timeline/preview/export",
+    "Imported normalized SDR3D .cube LUTs with strength, source persistence and portable backup",
+    "Editable cubic Bezier easing with split-preserved intervals/handles",
+    "Sonic audio pitch, adaptive multiband noise expansion and rumble filter",
+    "Bounded decoded-audio onset analysis with approximate project-time beat markers",
+    "360p source editing proxies and360/540/720pcompositor preview; exports and backups use originals"
+  ],
+  "deferred": [
+    "Reverse video/audio rendering",
+    "Advanced destination-dependent overlay blend modes"
+  ],
+  "qualification_gates": [
+    "Samsung multidecoder/GPU/codec performance and transition exports",
+    "Actual decoded-audio analysis, pitch/noise A-V synchronization and provider operations",
+    "Proxy create/cancel/timing/cache-fallback on real sources, HDR tone mapping",
+    "Voiceover/long-project/landscape/accessibility acceptance"
+  ],
+  "new_runtime_dependencies": false,
+  "core_jni_sdk_identity_changes": false,
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/VideoNoise.kt": "ef65e41dd4c1603c91cd4fd0d61b9c6514f2497a8b5a18a30f8142adf552f36c",
+    "android/app/src/main/kotlin/app/onklav/home/VideoLut.kt": "6f01e9240220ccec9e93c69e95380186d44c45bdad6d8a241bc5c15ab83599e7",
+    "android/app/src/main/kotlin/app/onklav/home/VideoOfflineAudio.kt": "bd721a6ecfaaa0c6edc3b51cefe9d20a05eeb1684f28c1b7e6f1588e5c7f41da",
+    "android/app/src/main/kotlin/app/onklav/home/VideoTitleOverlay.kt": "837d4f61c46a1f3a2e64551ffbf5edfc0aef9675ea0baf7ad26a3d0138afd08b",
+    "android/app/src/main/kotlin/app/onklav/home/VideoEditEngine.kt": "c8691dcb0a50309891bb3843d64d82eed937666c52cebb7702bb106ae592d62c",
+    "android/app/src/main/kotlin/app/onklav/home/VideoProData.kt": "4e9441e57e6d753fd4bed654c4f8549d7911755f7eacdc3940b9e621eb8011b8",
+    "android/app/src/main/kotlin/app/onklav/home/VideoProjectArchive.kt": "a4c059c3c5dbcf873e87c576e19dcf000b4e678b50f66e4d5b492ad9e6d33f42",
+    "android/app/src/main/kotlin/app/onklav/home/VideoCutoutEffect.kt": "19508b0819d2262b28f43f654fc7f67f40f8fb27e42623ff9502fb957cb6239e",
+    "android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt": "b93f443e8557fab00f5dd7e96a3a9d36234291d858aaa3ec7bd7f933e1c6b9f5",
+    "android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt": "6b61329a8195372918fa6de520ea9cde0291df15b32414f4d2a5e0d345c2487b",
+    "android/app/src/main/kotlin/app/onklav/home/VideoTransitionEffect.kt": "8d3455e119a44886a9254d1f92df0b75e3a411d744150ab2a4d8a45538961951",
+    "android/app/src/main/kotlin/app/onklav/home/VideoProxy.kt": "ee5574ea541940883857cf16a24d07636944bc44f6218d85f9ccb99488baf60f",
+    "android/app/src/main/kotlin/app/onklav/home/VideoBeatAnalysis.kt": "c8f74ce11d9498931b9d65de5259a3b09ff147cf830d9fe94ff4ebc0864e3fad",
+    "android/app/src/main/kotlin/app/onklav/home/VideoProWorkspace.kt": "3d5b7d048a04ff1c5d3a08e301fcc2cb6b4f2a366738179ffffd3a81622f5018",
+    "android/app/src/main/kotlin/app/onklav/home/VideoEditData.kt": "a89137663d3ddd40cdcb7345f8180438de178cbb0b21c5a2cc573053ca617424"
+  }
+}

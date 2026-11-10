@@ -1,0 +1,411 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.GroupsFlowHostTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2026-10-23T11:12:55" hostname="41aed82b0335" time="12.184">
+  <properties/>
+  <testcase name="createEditMembersFoldersSearchAndDelete" classname="app.onklav.home.GroupsFlowHostTest" time="12.184">
+    <failure message="java.lang.AssertionError: Contact 'Alice' absent after fixture query; screen state:&#10;Printing with useUnmergedTree = 'true'&#10;Node #451 at (l=0.0, t=0.0, r=432.0, b=936.0)px&#10; |-Node #519 at (l=0.0, t=0.0, r=432.0, b=936.0)px&#10;   IsContainer = 'true'&#10;    |-Node #589 at (l=0.0, t=0.0, r=432.0, b=864.0)px, Tag: 'groups-screen'&#10;    |  |-Node #590 at (l=0.0, t=0.0, r=432.0, b=48.0)px, Tag: 'home-header'&#10;    |  |  |-Node #591 at (l=8.0, t=11.0, r=376.0, b=37.0)px&#10;    |  |  | Text = '[Groups]'&#10;    |  |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;    |  |  |-Node #592 at (l=376.0, t=0.0, r=424.0, b=48.0)px, Tag: 'action-Create Group'&#10;    |  |    Focused = 'false'&#10;    |  |    Role = 'Button'&#10;    |  |    Actions = [OnClick, RequestFocus]&#10;    |  |    MergeDescendants = 'true'&#10;    |  |     |-Node #593 at (l=388.0, t=12.0, r=412.0, b=36.0)px&#10;    |  |       ContentDescription = '[Create Group]'&#10;    |  |       Role = 'Image'&#10;    |  |-Node #596 at (l=8.0, t=54.0, r=146.0, b=102.0)px, Tag: 'folder-Inbox'&#10;    |  | Focused = 'false'&#10;    |  | Role = 'Tab'&#10;    |  | Selected = 'true'&#10;    |  | Actions = [OnClick, RequestFocus]&#10;    |  | MergeDescendants = 'true'&#10;    |  |  |-Node #597 at (l=56.0, t=66.0, r=98.0, b=90.0)px&#10;    |  |    Text = '[Inbox]'&#10;    |  |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;    |  |-Node #598 at (l=146.0, t=54.0, r=285.0, b=102.0)px, Tag: 'folder-Archive'&#10;    |  | Focused = 'false'&#10;    |  | Role = 'Tab'&#10;    |  | Selected = 'false'&#10;    |  | Actions = [OnClick, RequestFocus]&#10;    |  | MergeDescendants = 'true'&#10;    |  |  |-Node #599 at (l=188.0, t=66.0, r=244.0, b=90.0)px&#10;    |  |    Text = '[Archive]'&#10;    |  |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;    |  |-Node #600 at (l=285.0, t=54.0, r=424.0, b=102.0)px, Tag: 'folder-Trash'&#10;    |  | Focused = 'false'&#10;    |  | Role = 'Tab'&#10;    |  | Selected = 'false'&#10;    |  | Actions = [OnClick, RequestFocus]&#10;    |  | MergeDescendants = 'true'&#10;    |  |  |-Node #601 at (l=333.0, t=66.0, r=376.0, b=90.0)px&#10;    |  |    Text = '[Trash]'&#10;    |  |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;    |  |-Node #603 at (l=24.0, t=118.0, r=356.0, b=146.0)px, Tag: 'mailbox-search'&#10;    |  | ContentDataType = 'AndroidContentDataType(androidAutofillType=1)'&#10;    |  | EditableText = ''&#10;    |  | Focused = 'false'&#10;    |  | ImeAction = 'Default'&#10;    |  | InputText = ''&#10;    |  | IsEditable = 'true'&#10;    |  | TextSelectionRange = 'TextRange(0, 0)'&#10;    |  | Actions = [GetTextLayoutResult, InsertTextAtCursor, OnAutofillText, OnClick, OnLongClick, PasteText, PerformImeAction, RequestFocus, SetSelection, SetText]&#10;    |  | MergeDescendants = 'true'&#10;    |  |  |-Node #606 at (l=24.0, t=118.0, r=288.0, b=142.0)px&#10;    |  |    Text = '[Search names, numbers or messages]'&#10;    |  |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;    |  |-Node #609 at (l=376.0, t=108.0, r=424.0, b=156.0)px&#10;    |  | ContentDescription = '[Select multiple conversations]'&#10;    |  | Focused = 'false'&#10;    |  | Role = 'Checkbox'&#10;    |  | ToggleableState = 'Off'&#10;    |  | Actions = [OnClick, RequestFocus]&#10;    |  | MergeDescendants = 'true'&#10;    |  |-Node #691 at (l=0.0, t=168.0, r=432.0, b=864.0)px&#10;    |    CollectionInfo = 'androidx.compose.ui.semantics.CollectionInfo@4d732310'&#10;    |    IsTraversalGroup = 'true'&#10;    |    VerticalScrollAxisRange = 'ScrollAxisRange(value=0.0, maxValue=0.0, reverseScrolling=false)'&#10;    |    Actions = [GetScrollViewportLength, IndexForKey, ScrollBy, ScrollByOffset, ScrollToIndex]&#10;    |     |-Node #743 at (l=8.0, t=174.0, r=424.0, b=251.0)px, Tag: 'group-68faf0222bda423f88e64acf9b06e14f'&#10;    |       Focused = 'false'&#10;    |       Actions = [OnClick, OnLongClick, RequestFocus]&#10;    |       MergeDescendants = 'true'&#10;    |        |-Node #745 at (l=39.0, t=201.0, r=50.0, b=225.0)px&#10;    |        | Text = '[F]'&#10;    |        | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;    |        |-Node #747 at (l=80.0, t=186.0, r=129.0, b=210.0)px&#10;    |        | Text = '[Family]'&#10;    |        | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;    |        |-Node #748 at (l=80.0, t=215.0, r=151.0, b=239.0)px&#10;    |        | Text = '[2 recipients]'&#10;    |        | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;    |        |-Node #749 at (l=316.0, t=189.0, r=364.0, b=237.0)px, Tag: 'action-Edit Family'&#10;    |        | Focused = 'false'&#10;    |        | Role = 'Button'&#10;    |        | Actions = [OnClick, RequestFocus]&#10;    |        | MergeDescendants = 'true'&#10;    |        |  |-Node #750 at (l=328.0, t=201.0, r=352.0, b=225.0)px&#10;    |        |    ContentDescription = '[Edit Family]'&#10;    |        |    Role = 'Image'&#10;    |        |-Node #751 at (l=364.0, t=189.0, r=412.0, b=237.0)px, Tag: 'action-Pin Family'&#10;    |          Focused = 'false'&#10;    |          Role = 'Button'&#10;    |          Actions = [OnClick, RequestFocus]&#10;    |          MergeDescendants = 'true'&#10;    |           |-Node #752 at (l=376.0, t=201.0, r=400.0, b=225.0)px&#10;    |             ContentDescription = '[Pin Family]'&#10;    |             Role = 'Image'&#10;    |-Node #693 at (l=0.0, t=0.0, r=432.0, b=864.0)px&#10;    | IsContainer = 'true'&#10;    |  |-Node #700 at (l=0.0, t=0.0, r=432.0, b=864.0)px, Tag: 'messenger-screen'&#10;    |     |-Node #701 at (l=0.0, t=0.0, r=432.0, b=48.0)px, Tag: 'home-header'&#10;    |     |  |-Node #702 at (l=8.0, t=0.0, r=56.0, b=48.0)px, Tag: 'action-Back'&#10;    |     |  | Focused = 'false'&#10;    |     |  | Role = 'Button'&#10;    |     |  | Actions = [OnClick, RequestFocus]&#10;    |     |  | MergeDescendants = 'true'&#10;    |     |  |  |-Node #703 at (l=20.0, t=12.0, r=44.0, b=36.0)px&#10;    |     |  |    ContentDescription = '[Back]'&#10;    |     |  |    Role = 'Image'&#10;    |     |  |-Node #704 at (l=56.0, t=0.0, r=280.0, b=48.0)px&#10;    |     |  | ContentDescription = '[Family. View group members]'&#10;    |     |  | Focused = 'false'&#10;    |     |  | Role = 'Button'&#10;    |     |  | Actions = [OnClick, RequestFocus]&#10;    |     |  | MergeDescendants = 'true'&#10;    |     |  |  |-Node #705 at (l=66.0, t=11.0, r=258.0, b=37.0)px&#10;    |     |  |    Text = '[Family]'&#10;    |     |  |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;    |     |  |-Node #707 at (l=280.0, t=0.0, r=328.0, b=48.0)px, Tag: 'action-Mute Conversation'&#10;    |     |  | Focused = 'false'&#10;    |     |  | Role = 'Button'&#10;    |     |  | Actions = [OnClick, RequestFocus]&#10;    |     |  | MergeDescendants = 'true'&#10;    |     |  |  |-Node #708 at (l=292.0, t=12.0, r=316.0, b=36.0)px&#10;    |     |  |    ContentDescription = '[Mute Conversation]'&#10;    |     |  |    Role = 'Image'&#10;    |     |  |-Node #709 at (l=328.0, t=0.0, r=376.0, b=48.0)px, Tag: 'action-Search Conversation'&#10;    |     |  | Focused = 'false'&#10;    |     |  | Role = 'Button'&#10;    |     |  | Actions = [OnClick, RequestFocus]&#10;    |     |  | MergeDescendants = 'true'&#10;    |     |  |  |-Node #710 at (l=340.0, t=12.0, r=364.0, b=36.0)px&#10;    |     |  |    ContentDescription = '[Search Conversation]'&#10;    |     |  |    Role = 'Image'&#10;    |     |  |-Node #711 at (l=376.0, t=0.0, r=424.0, b=48.0)px, Tag: 'action-Pin Conversation'&#10;    |     |    Focused = 'false'&#10;    |     |    Role = 'Button'&#10;    |     |    Actions = [OnClick, RequestFocus]&#10;    |     |    MergeDescendants = 'true'&#10;    |     |     |-Node #712 at (l=388.0, t=12.0, r=412.0, b=36.0)px&#10;    |     |       ContentDescription = '[Pin Conversation]'&#10;    |     |       Role = 'Image'&#10;    |     |-Node #713 at (l=12.0, t=52.0, r=391.0, b=76.0)px&#10;    |     | Text = '[Group sending needs verified MMS support. Your draft stays saved.]'&#10;    |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;    |     |-Node #715 at (l=8.0, t=86.0, r=142.0, b=134.0)px, Tag: 'conversation-tab-Feed'&#10;    |     | Focused = 'false'&#10;    |     | Actions = [OnClick, RequestFocus]&#10;    |     | MergeDescendants = 'true'&#10;    |     |  |-Node #717 at (l=57.0, t=98.0, r=94.0, b=122.0)px&#10;    |     |    Text = '[Feed]'&#10;    |     |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;    |     |-Node #718 at (l=150.0, t=86.0, r=283.0, b=134.0)px, Tag: 'conversation-tab-Gallery'&#10;    |     | Focused = 'false'&#10;    |     | Actions = [OnClick, RequestFocus]&#10;    |     | MergeDescendants = 'true'&#10;    |     |  |-Node #720 at (l=190.0, t=98.0, r=243.0, b=122.0)px&#10;    |     |    Text = '[Gallery]'&#10;    |     |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;    |     |-Node #721 at (l=291.0, t=86.0, r=424.0, b=134.0)px, Tag: 'conversation-tab-Starred'&#10;    |     | Focused = 'false'&#10;    |     | Actions = [OnClick, RequestFocus]&#10;    |     | MergeDescendants = 'true'&#10;    |     |  |-Node #723 at (l=330.0, t=98.0, r=386.0, b=122.0)px&#10;    |     |    Text = '[Starred]'&#10;    |     |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;    |     |-Node #725 at (l=0.0, t=140.0, r=432.0, b=802.0)px&#10;    |     | CollectionInfo = 'androidx.compose.ui.semantics.CollectionInfo@1a442dfd'&#10;    |     | IsTraversalGroup = 'true'&#10;    |     | VerticalScrollAxisRange = 'ScrollAxisRange(value=0.0, maxValue=0.0, reverseScrolling=false)'&#10;    |     | Actions = [GetScrollViewportLength, IndexForKey, ScrollBy, ScrollByOffset, ScrollToIndex]&#10;    |     |  |-Node #755 at (l=24.0, t=164.0, r=210.0, b=188.0)px&#10;    |     |    Text = '[No messages to display.]'&#10;    |     |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;    |     |-Node #726 at (l=372.0, t=742.0, r=420.0, b=790.0)px&#10;    |     | IsContainer = 'true'&#10;    |     |  |-Node #727 at (l=372.0, t=742.0, r=420.0, b=790.0)px, Tag: 'chat-activities'&#10;    |     |    Focused = 'false'&#10;    |     |    Role = 'Button'&#10;    |     |    Actions = [OnClick, RequestFocus]&#10;    |     |    MergeDescendants = 'true'&#10;    |     |     |-Node #728 at (l=382.0, t=752.0, r=410.0, b=780.0)px&#10;    |     |       ContentDescription = '[Play or Talk]'&#10;    |     |       Role = 'Image'&#10;    |     |-Node #730 at (l=0.0, t=816.0, r=40.0, b=856.0)px&#10;    |     | Focused = 'false'&#10;    |     | Role = 'Button'&#10;    |     | Actions = [OnClick, RequestFocus]&#10;    |     | MergeDescendants = 'true'&#10;    |     |  |-Node #731 at (l=8.0, t=824.0, r=32.0, b=848.0)px&#10;    |     |    ContentDescription = '[Attach File]'&#10;    |     |    Role = 'Image'&#10;    |     |-Node #732 at (l=40.0, t=816.0, r=80.0, b=856.0)px&#10;    |     | Focused = 'false'&#10;    |     | Role = 'Button'&#10;    |     | Actions = [OnClick, RequestFocus]&#10;    |     | MergeDescendants = 'true'&#10;    |     |  |-Node #733 at (l=48.0, t=824.0, r=72.0, b=848.0)px&#10;    |     |    ContentDescription = '[Emoji]'&#10;    |     |    Role = 'Image'&#10;    |     |-Node #734 at (l=80.0, t=810.0, r=388.0, b=856.0)px&#10;    |     | IsContainer = 'true'&#10;    |     |  |-Node #735 at (l=90.0, t=818.0, r=378.0, b=848.0)px&#10;    |     |    ContentDataType = 'AndroidContentDataType(androidAutofillType=1)'&#10;    |     |    EditableText = ''&#10;    |     |    Focused = 'false'&#10;    |     |    ImeAction = 'Default'&#10;    |     |    InputText = ''&#10;    |     |    IsEditable = 'true'&#10;    |     |    TextSelectionRange = 'TextRange(0, 0)'&#10;    |     |    Actions = [GetTextLayoutResult, InsertTextAtCursor, OnAutofillText, OnClick, OnLongClick, PasteText, PerformImeAction, RequestFocus, SetSelection, SetText]&#10;    |     |    MergeDescendants = 'true'&#10;    |     |     |-Node #737 at (l=90.0, t=818.0, r=378.0, b=848.0)px&#10;    |     |       Text = '[Message]'&#10;    |     |       Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;    |     |-Node #740 at (l=388.0, t=812.0, r=432.0, b=856.0)px&#10;    |       Role = 'Button'&#10;    |       [Disabled]&#10;    |       Actions = [OnClick]&#10;    |       MergeDescendants = 'true'&#10;    |        |-Node #741 at (l=398.0, t=822.0, r=422.0, b=846.0)px&#10;    |          ContentDescription = '[Send Message]'&#10;    |          Role = 'Image'&#10;    |-Node #559 at (l=0.0, t=864.0, r=432.0, b=936.0)px, Tag: 'home-navigation'&#10;    |  |-Node #560 at (l=8.0, t=868.0, r=92.0, b=936.0)px, Tag: 'tab-Messages'&#10;    |  | Focused = 'false'&#10;    |  | Role = 'Tab'&#10;    |  | Selected = 'false'&#10;    |  | Actions = [OnClick, RequestFocus]&#10;    |  | MergeDescendants = 'true'&#10;    |  |  |-Node #563 at (l=24.0, t=908.0, r=76.0, b=922.0)px&#10;    |  |    Text = '[Messages]'&#10;    |  |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;    |  |-Node #564 at (l=92.0, t=868.0, r=175.0, b=936.0)px, Tag: 'tab-Groups'&#10;    |  | Focused = 'false'&#10;    |  | Role = 'Tab'&#10;    |  | Selected = 'true'&#10;    |  | Actions = [OnClick, RequestFocus]&#10;    |  | MergeDescendants = 'true'&#10;    |  |  |-Node #567 at (l=116.0, t=908.0, r=152.0, b=922.0)px&#10;    |  |    Text = '[Groups]'&#10;    |  |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;    |  |-Node #568 at (l=175.0, t=868.0, r=258.0, b=936.0)px, Tag: 'tab-Apps'&#10;    |  | Focused = 'false'&#10;    |  | Role = 'Tab'&#10;    |  | Selected = 'false'&#10;    |  | Actions = [OnClick, RequestFocus]&#10;    |  | MergeDescendants = 'true'&#10;    |  |  |-Node #571 at (l=204.0, t=908.0, r=229.0, b=922.0)px&#10;    |  |    Text = '[Apps]'&#10;    |  |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;    |  |-Node #572 at (l=258.0, t=868.0, r=341.0, b=936.0)px, Tag: 'tab-Games'&#10;    |  | Focused = 'false'&#10;    |  | Role = 'Tab'&#10;    |  | Selected = 'false'&#10;    |  | Actions = [OnClick, RequestFocus]&#10;    |  | MergeDescendants = 'true'&#10;    |  |  |-Node #575 at (l=282.0, t=908.0, r=318.0, b=922.0)px&#10;    |  |    Text = '[Games]'&#10;    |  |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;    |  |-Node #576 at (l=341.0, t=868.0, r=424.0, b=936.0)px, Tag: 'tab-Settings'&#10;    |    Focused = 'false'&#10;    |    Role = 'Tab'&#10;    |    Selected = 'false'&#10;    |    Actions = [OnClick, RequestFocus]&#10;    |    MergeDescendants = 'true'&#10;    |     |-Node #579 at (l=362.0, t=908.0, r=404.0, b=922.0)px&#10;    |       Text = '[Settings]'&#10;    |       Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;    |-Node #522 at (l=216.0, t=0.0, r=216.0, b=0.0)px, Tag: 'status-bar-backplate'&#10;    |-Node #523 at (l=216.0, t=936.0, r=216.0, b=936.0)px, Tag: 'navigation-bar-backplate'&#10;Printing with useUnmergedTree = 'true'&#10;Node #760 at (l=0.0, t=0.0, r=432.0, b=166.0)px&#10; |-Node #761 at (l=0.0, t=0.0, r=432.0, b=166.0)px&#10;   [IsDialog]&#10;    |-Node #764 at (l=0.0, t=0.0, r=432.0, b=166.0)px, Tag: 'dialog-Could Not Complete'&#10;      IsContainer = 'true'&#10;       |-Node #767 at (l=28.0, t=24.0, r=404.0, b=50.0)px&#10;       | Text = '[Could Not Complete]'&#10;       | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;       |-Node #768 at (l=4.0, t=58.0, r=340.0, b=106.0)px&#10;       | IsTraversalGroup = 'true'&#10;       | VerticalScrollAxisRange = 'ScrollAxisRange(value=0.0, maxValue=0.0, reverseScrolling=false)'&#10;       | Actions = [ScrollBy, ScrollByOffset]&#10;       |  |-Node #769 at (l=28.0, t=70.0, r=316.0, b=94.0)px&#10;       |    Text = '[The coroutine scope left the composition]'&#10;       |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;       |-Node #770 at (l=4.0, t=106.0, r=428.0, b=162.0)px&#10;         HorizontalScrollAxisRange = 'ScrollAxisRange(value=0.0, maxValue=0.0, reverseScrolling=false)'&#10;         IsTraversalGroup = 'true'&#10;         Actions = [ScrollBy, ScrollByOffset]&#10;          |-Node #771 at (l=356.0, t=110.0, r=420.0, b=158.0)px&#10;            Focused = 'false'&#10;            Role = 'Button'&#10;            Actions = [OnClick, RequestFocus]&#10;            MergeDescendants = 'true'&#10;             |-Node #773 at (l=379.0, t=126.0, r=398.0, b=143.0)px&#10;               Text = '[OK]'&#10;               Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;Printing with useUnmergedTree = 'true'&#10;Node #774 at (l=0.0, t=0.0, r=432.0, b=936.0)px&#10; |-Node #775 at (l=0.0, t=0.0, r=432.0, b=936.0)px&#10;   [IsDialog]&#10;    |-Node #776 at (l=0.0, t=0.0, r=432.0, b=936.0)px&#10;      IsTraversalGroup = 'true'&#10;       |-Node #777 at (l=0.0, t=0.0, r=432.0, b=936.0)px&#10;       | ContentDescription = '[Close sheet]'&#10;       | TraversalIndex = '1.0'&#10;       | Actions = [OnClick]&#10;       | MergeDescendants = 'true'&#10;       |-Node #778 at (l=0.0, t=682.0, r=432.0, b=936.0)px&#10;         IsContainer = 'true'&#10;         PaneTitle = 'Bottom Sheet'&#10;         TraversalIndex = '0.0'&#10;          |-Node #780 at (l=200.0, t=682.0, r=232.0, b=730.0)px&#10;          | Actions = [Dismiss]&#10;          | MergeDescendants = 'true'&#10;          |  |-Node #781 at (l=200.0, t=704.0, r=232.0, b=708.0)px&#10;          |    ContentDescription = '[Drag handle]'&#10;          |    IsContainer = 'true'&#10;          |-Node #783 at (l=24.0, t=730.0, r=408.0, b=936.0)px&#10;            IsTraversalGroup = 'true'&#10;            VerticalScrollAxisRange = 'ScrollAxisRange(value=0.0, maxValue=0.0, reverseScrolling=false)'&#10;            Actions = [ScrollBy, ScrollByOffset]&#10;             |-Node #785 at (l=24.0, t=742.0, r=360.0, b=767.0)px&#10;             | Text = '[Members]'&#10;             | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;             |-Node #786 at (l=360.0, t=730.0, r=408.0, b=778.0)px, Tag: 'action-Close members'&#10;             | Focused = 'false'&#10;             | Role = 'Button'&#10;             | Actions = [OnClick, RequestFocus]&#10;             | MergeDescendants = 'true'&#10;             |  |-Node #787 at (l=372.0, t=742.0, r=396.0, b=766.0)px&#10;             |    ContentDescription = '[Close members]'&#10;             |    Role = 'Image'&#10;             |-Node #788 at (l=24.0, t=778.0, r=72.0, b=802.0)px&#10;             | Text = '[Family]'&#10;             | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;             |-Node #789 at (l=24.0, t=802.0, r=145.0, b=826.0)px&#10;             | Text = '[Loading members…]'&#10;             | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;             |-Node #792 at (l=32.0, t=858.0, r=72.0, b=898.0)px&#10;             | IsContainer = 'true'&#10;             |  |-Node #794 at (l=46.0, t=866.0, r=58.0, b=890.0)px&#10;             |    Text = '[Y]'&#10;             |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;             |-Node #796 at (l=84.0, t=854.0, r=112.0, b=878.0)px&#10;             | Text = '[You]'&#10;             | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;             |-Node #797 at (l=84.0, t=878.0, r=152.0, b=902.0)px&#10;               Focused = 'false'&#10;               Actions = [RequestFocus]&#10;                |-Node #799 at (l=84.0, t=878.0, r=152.0, b=902.0)px&#10;                  Text = '[This phone]'&#10;                  Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]" type="java.lang.AssertionError">java.lang.AssertionError: Contact 'Alice' absent after fixture query; screen state:
+Printing with useUnmergedTree = 'true'
+Node #451 at (l=0.0, t=0.0, r=432.0, b=936.0)px
+ |-Node #519 at (l=0.0, t=0.0, r=432.0, b=936.0)px
+   IsContainer = 'true'
+    |-Node #589 at (l=0.0, t=0.0, r=432.0, b=864.0)px, Tag: 'groups-screen'
+    |  |-Node #590 at (l=0.0, t=0.0, r=432.0, b=48.0)px, Tag: 'home-header'
+    |  |  |-Node #591 at (l=8.0, t=11.0, r=376.0, b=37.0)px
+    |  |  | Text = '[Groups]'
+    |  |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |  |  |-Node #592 at (l=376.0, t=0.0, r=424.0, b=48.0)px, Tag: 'action-Create Group'
+    |  |    Focused = 'false'
+    |  |    Role = 'Button'
+    |  |    Actions = [OnClick, RequestFocus]
+    |  |    MergeDescendants = 'true'
+    |  |     |-Node #593 at (l=388.0, t=12.0, r=412.0, b=36.0)px
+    |  |       ContentDescription = '[Create Group]'
+    |  |       Role = 'Image'
+    |  |-Node #596 at (l=8.0, t=54.0, r=146.0, b=102.0)px, Tag: 'folder-Inbox'
+    |  | Focused = 'false'
+    |  | Role = 'Tab'
+    |  | Selected = 'true'
+    |  | Actions = [OnClick, RequestFocus]
+    |  | MergeDescendants = 'true'
+    |  |  |-Node #597 at (l=56.0, t=66.0, r=98.0, b=90.0)px
+    |  |    Text = '[Inbox]'
+    |  |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |  |-Node #598 at (l=146.0, t=54.0, r=285.0, b=102.0)px, Tag: 'folder-Archive'
+    |  | Focused = 'false'
+    |  | Role = 'Tab'
+    |  | Selected = 'false'
+    |  | Actions = [OnClick, RequestFocus]
+    |  | MergeDescendants = 'true'
+    |  |  |-Node #599 at (l=188.0, t=66.0, r=244.0, b=90.0)px
+    |  |    Text = '[Archive]'
+    |  |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |  |-Node #600 at (l=285.0, t=54.0, r=424.0, b=102.0)px, Tag: 'folder-Trash'
+    |  | Focused = 'false'
+    |  | Role = 'Tab'
+    |  | Selected = 'false'
+    |  | Actions = [OnClick, RequestFocus]
+    |  | MergeDescendants = 'true'
+    |  |  |-Node #601 at (l=333.0, t=66.0, r=376.0, b=90.0)px
+    |  |    Text = '[Trash]'
+    |  |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |  |-Node #603 at (l=24.0, t=118.0, r=356.0, b=146.0)px, Tag: 'mailbox-search'
+    |  | ContentDataType = 'AndroidContentDataType(androidAutofillType=1)'
+    |  | EditableText = ''
+    |  | Focused = 'false'
+    |  | ImeAction = 'Default'
+    |  | InputText = ''
+    |  | IsEditable = 'true'
+    |  | TextSelectionRange = 'TextRange(0, 0)'
+    |  | Actions = [GetTextLayoutResult, InsertTextAtCursor, OnAutofillText, OnClick, OnLongClick, PasteText, PerformImeAction, RequestFocus, SetSelection, SetText]
+    |  | MergeDescendants = 'true'
+    |  |  |-Node #606 at (l=24.0, t=118.0, r=288.0, b=142.0)px
+    |  |    Text = '[Search names, numbers or messages]'
+    |  |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |  |-Node #609 at (l=376.0, t=108.0, r=424.0, b=156.0)px
+    |  | ContentDescription = '[Select multiple conversations]'
+    |  | Focused = 'false'
+    |  | Role = 'Checkbox'
+    |  | ToggleableState = 'Off'
+    |  | Actions = [OnClick, RequestFocus]
+    |  | MergeDescendants = 'true'
+    |  |-Node #691 at (l=0.0, t=168.0, r=432.0, b=864.0)px
+    |    CollectionInfo = 'androidx.compose.ui.semantics.CollectionInfo@4d732310'
+    |    IsTraversalGroup = 'true'
+    |    VerticalScrollAxisRange = 'ScrollAxisRange(value=0.0, maxValue=0.0, reverseScrolling=false)'
+    |    Actions = [GetScrollViewportLength, IndexForKey, ScrollBy, ScrollByOffset, ScrollToIndex]
+    |     |-Node #743 at (l=8.0, t=174.0, r=424.0, b=251.0)px, Tag: 'group-68faf0222bda423f88e64acf9b06e14f'
+    |       Focused = 'false'
+    |       Actions = [OnClick, OnLongClick, RequestFocus]
+    |       MergeDescendants = 'true'
+    |        |-Node #745 at (l=39.0, t=201.0, r=50.0, b=225.0)px
+    |        | Text = '[F]'
+    |        | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |        |-Node #747 at (l=80.0, t=186.0, r=129.0, b=210.0)px
+    |        | Text = '[Family]'
+    |        | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |        |-Node #748 at (l=80.0, t=215.0, r=151.0, b=239.0)px
+    |        | Text = '[2 recipients]'
+    |        | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |        |-Node #749 at (l=316.0, t=189.0, r=364.0, b=237.0)px, Tag: 'action-Edit Family'
+    |        | Focused = 'false'
+    |        | Role = 'Button'
+    |        | Actions = [OnClick, RequestFocus]
+    |        | MergeDescendants = 'true'
+    |        |  |-Node #750 at (l=328.0, t=201.0, r=352.0, b=225.0)px
+    |        |    ContentDescription = '[Edit Family]'
+    |        |    Role = 'Image'
+    |        |-Node #751 at (l=364.0, t=189.0, r=412.0, b=237.0)px, Tag: 'action-Pin Family'
+    |          Focused = 'false'
+    |          Role = 'Button'
+    |          Actions = [OnClick, RequestFocus]
+    |          MergeDescendants = 'true'
+    |           |-Node #752 at (l=376.0, t=201.0, r=400.0, b=225.0)px
+    |             ContentDescription = '[Pin Family]'
+    |             Role = 'Image'
+    |-Node #693 at (l=0.0, t=0.0, r=432.0, b=864.0)px
+    | IsContainer = 'true'
+    |  |-Node #700 at (l=0.0, t=0.0, r=432.0, b=864.0)px, Tag: 'messenger-screen'
+    |     |-Node #701 at (l=0.0, t=0.0, r=432.0, b=48.0)px, Tag: 'home-header'
+    |     |  |-Node #702 at (l=8.0, t=0.0, r=56.0, b=48.0)px, Tag: 'action-Back'
+    |     |  | Focused = 'false'
+    |     |  | Role = 'Button'
+    |     |  | Actions = [OnClick, RequestFocus]
+    |     |  | MergeDescendants = 'true'
+    |     |  |  |-Node #703 at (l=20.0, t=12.0, r=44.0, b=36.0)px
+    |     |  |    ContentDescription = '[Back]'
+    |     |  |    Role = 'Image'
+    |     |  |-Node #704 at (l=56.0, t=0.0, r=280.0, b=48.0)px
+    |     |  | ContentDescription = '[Family. View group members]'
+    |     |  | Focused = 'false'
+    |     |  | Role = 'Button'
+    |     |  | Actions = [OnClick, RequestFocus]
+    |     |  | MergeDescendants = 'true'
+    |     |  |  |-Node #705 at (l=66.0, t=11.0, r=258.0, b=37.0)px
+    |     |  |    Text = '[Family]'
+    |     |  |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |     |  |-Node #707 at (l=280.0, t=0.0, r=328.0, b=48.0)px, Tag: 'action-Mute Conversation'
+    |     |  | Focused = 'false'
+    |     |  | Role = 'Button'
+    |     |  | Actions = [OnClick, RequestFocus]
+    |     |  | MergeDescendants = 'true'
+    |     |  |  |-Node #708 at (l=292.0, t=12.0, r=316.0, b=36.0)px
+    |     |  |    ContentDescription = '[Mute Conversation]'
+    |     |  |    Role = 'Image'
+    |     |  |-Node #709 at (l=328.0, t=0.0, r=376.0, b=48.0)px, Tag: 'action-Search Conversation'
+    |     |  | Focused = 'false'
+    |     |  | Role = 'Button'
+    |     |  | Actions = [OnClick, RequestFocus]
+    |     |  | MergeDescendants = 'true'
+    |     |  |  |-Node #710 at (l=340.0, t=12.0, r=364.0, b=36.0)px
+    |     |  |    ContentDescription = '[Search Conversation]'
+    |     |  |    Role = 'Image'
+    |     |  |-Node #711 at (l=376.0, t=0.0, r=424.0, b=48.0)px, Tag: 'action-Pin Conversation'
+    |     |    Focused = 'false'
+    |     |    Role = 'Button'
+    |     |    Actions = [OnClick, RequestFocus]
+    |     |    MergeDescendants = 'true'
+    |     |     |-Node #712 at (l=388.0, t=12.0, r=412.0, b=36.0)px
+    |     |       ContentDescription = '[Pin Conversation]'
+    |     |       Role = 'Image'
+    |     |-Node #713 at (l=12.0, t=52.0, r=391.0, b=76.0)px
+    |     | Text = '[Group sending needs verified MMS support. Your draft stays saved.]'
+    |     | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |     |-Node #715 at (l=8.0, t=86.0, r=142.0, b=134.0)px, Tag: 'conversation-tab-Feed'
+    |     | Focused = 'false'
+    |     | Actions = [OnClick, RequestFocus]
+    |     | MergeDescendants = 'true'
+    |     |  |-Node #717 at (l=57.0, t=98.0, r=94.0, b=122.0)px
+    |     |    Text = '[Feed]'
+    |     |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |     |-Node #718 at (l=150.0, t=86.0, r=283.0, b=134.0)px, Tag: 'conversation-tab-Gallery'
+    |     | Focused = 'false'
+    |     | Actions = [OnClick, RequestFocus]
+    |     | MergeDescendants = 'true'
+    |     |  |-Node #720 at (l=190.0, t=98.0, r=243.0, b=122.0)px
+    |     |    Text = '[Gallery]'
+    |     |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |     |-Node #721 at (l=291.0, t=86.0, r=424.0, b=134.0)px, Tag: 'conversation-tab-Starred'
+    |     | Focused = 'false'
+    |     | Actions = [OnClick, RequestFocus]
+    |     | MergeDescendants = 'true'
+    |     |  |-Node #723 at (l=330.0, t=98.0, r=386.0, b=122.0)px
+    |     |    Text = '[Starred]'
+    |     |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |     |-Node #725 at (l=0.0, t=140.0, r=432.0, b=802.0)px
+    |     | CollectionInfo = 'androidx.compose.ui.semantics.CollectionInfo@1a442dfd'
+    |     | IsTraversalGroup = 'true'
+    |     | VerticalScrollAxisRange = 'ScrollAxisRange(value=0.0, maxValue=0.0, reverseScrolling=false)'
+    |     | Actions = [GetScrollViewportLength, IndexForKey, ScrollBy, ScrollByOffset, ScrollToIndex]
+    |     |  |-Node #755 at (l=24.0, t=164.0, r=210.0, b=188.0)px
+    |     |    Text = '[No messages to display.]'
+    |     |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |     |-Node #726 at (l=372.0, t=742.0, r=420.0, b=790.0)px
+    |     | IsContainer = 'true'
+    |     |  |-Node #727 at (l=372.0, t=742.0, r=420.0, b=790.0)px, Tag: 'chat-activities'
+    |     |    Focused = 'false'
+    |     |    Role = 'Button'
+    |     |    Actions = [OnClick, RequestFocus]
+    |     |    MergeDescendants = 'true'
+    |     |     |-Node #728 at (l=382.0, t=752.0, r=410.0, b=780.0)px
+    |     |       ContentDescription = '[Play or Talk]'
+    |     |       Role = 'Image'
+    |     |-Node #730 at (l=0.0, t=816.0, r=40.0, b=856.0)px
+    |     | Focused = 'false'
+    |     | Role = 'Button'
+    |     | Actions = [OnClick, RequestFocus]
+    |     | MergeDescendants = 'true'
+    |     |  |-Node #731 at (l=8.0, t=824.0, r=32.0, b=848.0)px
+    |     |    ContentDescription = '[Attach File]'
+    |     |    Role = 'Image'
+    |     |-Node #732 at (l=40.0, t=816.0, r=80.0, b=856.0)px
+    |     | Focused = 'false'
+    |     | Role = 'Button'
+    |     | Actions = [OnClick, RequestFocus]
+    |     | MergeDescendants = 'true'
+    |     |  |-Node #733 at (l=48.0, t=824.0, r=72.0, b=848.0)px
+    |     |    ContentDescription = '[Emoji]'
+    |     |    Role = 'Image'
+    |     |-Node #734 at (l=80.0, t=810.0, r=388.0, b=856.0)px
+    |     | IsContainer = 'true'
+    |     |  |-Node #735 at (l=90.0, t=818.0, r=378.0, b=848.0)px
+    |     |    ContentDataType = 'AndroidContentDataType(androidAutofillType=1)'
+    |     |    EditableText = ''
+    |     |    Focused = 'false'
+    |     |    ImeAction = 'Default'
+    |     |    InputText = ''
+    |     |    IsEditable = 'true'
+    |     |    TextSelectionRange = 'TextRange(0, 0)'
+    |     |    Actions = [GetTextLayoutResult, InsertTextAtCursor, OnAutofillText, OnClick, OnLongClick, PasteText, PerformImeAction, RequestFocus, SetSelection, SetText]
+    |     |    MergeDescendants = 'true'
+    |     |     |-Node #737 at (l=90.0, t=818.0, r=378.0, b=848.0)px
+    |     |       Text = '[Message]'
+    |     |       Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |     |-Node #740 at (l=388.0, t=812.0, r=432.0, b=856.0)px
+    |       Role = 'Button'
+    |       [Disabled]
+    |       Actions = [OnClick]
+    |       MergeDescendants = 'true'
+    |        |-Node #741 at (l=398.0, t=822.0, r=422.0, b=846.0)px
+    |          ContentDescription = '[Send Message]'
+    |          Role = 'Image'
+    |-Node #559 at (l=0.0, t=864.0, r=432.0, b=936.0)px, Tag: 'home-navigation'
+    |  |-Node #560 at (l=8.0, t=868.0, r=92.0, b=936.0)px, Tag: 'tab-Messages'
+    |  | Focused = 'false'
+    |  | Role = 'Tab'
+    |  | Selected = 'false'
+    |  | Actions = [OnClick, RequestFocus]
+    |  | MergeDescendants = 'true'
+    |  |  |-Node #563 at (l=24.0, t=908.0, r=76.0, b=922.0)px
+    |  |    Text = '[Messages]'
+    |  |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |  |-Node #564 at (l=92.0, t=868.0, r=175.0, b=936.0)px, Tag: 'tab-Groups'
+    |  | Focused = 'false'
+    |  | Role = 'Tab'
+    |  | Selected = 'true'
+    |  | Actions = [OnClick, RequestFocus]
+    |  | MergeDescendants = 'true'
+    |  |  |-Node #567 at (l=116.0, t=908.0, r=152.0, b=922.0)px
+    |  |    Text = '[Groups]'
+    |  |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |  |-Node #568 at (l=175.0, t=868.0, r=258.0, b=936.0)px, Tag: 'tab-Apps'
+    |  | Focused = 'false'
+    |  | Role = 'Tab'
+    |  | Selected = 'false'
+    |  | Actions = [OnClick, RequestFocus]
+    |  | MergeDescendants = 'true'
+    |  |  |-Node #571 at (l=204.0, t=908.0, r=229.0, b=922.0)px
+    |  |    Text = '[Apps]'
+    |  |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |  |-Node #572 at (l=258.0, t=868.0, r=341.0, b=936.0)px, Tag: 'tab-Games'
+    |  | Focused = 'false'
+    |  | Role = 'Tab'
+    |  | Selected = 'false'
+    |  | Actions = [OnClick, RequestFocus]
+    |  | MergeDescendants = 'true'
+    |  |  |-Node #575 at (l=282.0, t=908.0, r=318.0, b=922.0)px
+    |  |    Text = '[Games]'
+    |  |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |  |-Node #576 at (l=341.0, t=868.0, r=424.0, b=936.0)px, Tag: 'tab-Settings'
+    |    Focused = 'false'
+    |    Role = 'Tab'
+    |    Selected = 'false'
+    |    Actions = [OnClick, RequestFocus]
+    |    MergeDescendants = 'true'
+    |     |-Node #579 at (l=362.0, t=908.0, r=404.0, b=922.0)px
+    |       Text = '[Settings]'
+    |       Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |-Node #522 at (l=216.0, t=0.0, r=216.0, b=0.0)px, Tag: 'status-bar-backplate'
+    |-Node #523 at (l=216.0, t=936.0, r=216.0, b=936.0)px, Tag: 'navigation-bar-backplate'
+Printing with useUnmergedTree = 'true'
+Node #760 at (l=0.0, t=0.0, r=432.0, b=166.0)px
+ |-Node #761 at (l=0.0, t=0.0, r=432.0, b=166.0)px
+   [IsDialog]
+    |-Node #764 at (l=0.0, t=0.0, r=432.0, b=166.0)px, Tag: 'dialog-Could Not Complete'
+      IsContainer = 'true'
+       |-Node #767 at (l=28.0, t=24.0, r=404.0, b=50.0)px
+       | Text = '[Could Not Complete]'
+       | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+       |-Node #768 at (l=4.0, t=58.0, r=340.0, b=106.0)px
+       | IsTraversalGroup = 'true'
+       | VerticalScrollAxisRange = 'ScrollAxisRange(value=0.0, maxValue=0.0, reverseScrolling=false)'
+       | Actions = [ScrollBy, ScrollByOffset]
+       |  |-Node #769 at (l=28.0, t=70.0, r=316.0, b=94.0)px
+       |    Text = '[The coroutine scope left the composition]'
+       |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+       |-Node #770 at (l=4.0, t=106.0, r=428.0, b=162.0)px
+         HorizontalScrollAxisRange = 'ScrollAxisRange(value=0.0, maxValue=0.0, reverseScrolling=false)'
+         IsTraversalGroup = 'true'
+         Actions = [ScrollBy, ScrollByOffset]
+          |-Node #771 at (l=356.0, t=110.0, r=420.0, b=158.0)px
+            Focused = 'false'
+            Role = 'Button'
+            Actions = [OnClick, RequestFocus]
+            MergeDescendants = 'true'
+             |-Node #773 at (l=379.0, t=126.0, r=398.0, b=143.0)px
+               Text = '[OK]'
+               Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+Printing with useUnmergedTree = 'true'
+Node #774 at (l=0.0, t=0.0, r=432.0, b=936.0)px
+ |-Node #775 at (l=0.0, t=0.0, r=432.0, b=936.0)px
+   [IsDialog]
+    |-Node #776 at (l=0.0, t=0.0, r=432.0, b=936.0)px
+      IsTraversalGroup = 'true'
+       |-Node #777 at (l=0.0, t=0.0, r=432.0, b=936.0)px
+       | ContentDescription = '[Close sheet]'
+       | TraversalIndex = '1.0'
+       | Actions = [OnClick]
+       | MergeDescendants = 'true'
+       |-Node #778 at (l=0.0, t=682.0, r=432.0, b=936.0)px
+         IsContainer = 'true'
+         PaneTitle = 'Bottom Sheet'
+         TraversalIndex = '0.0'
+          |-Node #780 at (l=200.0, t=682.0, r=232.0, b=730.0)px
+          | Actions = [Dismiss]
+          | MergeDescendants = 'true'
+          |  |-Node #781 at (l=200.0, t=704.0, r=232.0, b=708.0)px
+          |    ContentDescription = '[Drag handle]'
+          |    IsContainer = 'true'
+          |-Node #783 at (l=24.0, t=730.0, r=408.0, b=936.0)px
+            IsTraversalGroup = 'true'
+            VerticalScrollAxisRange = 'ScrollAxisRange(value=0.0, maxValue=0.0, reverseScrolling=false)'
+            Actions = [ScrollBy, ScrollByOffset]
+             |-Node #785 at (l=24.0, t=742.0, r=360.0, b=767.0)px
+             | Text = '[Members]'
+             | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+             |-Node #786 at (l=360.0, t=730.0, r=408.0, b=778.0)px, Tag: 'action-Close members'
+             | Focused = 'false'
+             | Role = 'Button'
+             | Actions = [OnClick, RequestFocus]
+             | MergeDescendants = 'true'
+             |  |-Node #787 at (l=372.0, t=742.0, r=396.0, b=766.0)px
+             |    ContentDescription = '[Close members]'
+             |    Role = 'Image'
+             |-Node #788 at (l=24.0, t=778.0, r=72.0, b=802.0)px
+             | Text = '[Family]'
+             | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+             |-Node #789 at (l=24.0, t=802.0, r=145.0, b=826.0)px
+             | Text = '[Loading members…]'
+             | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+             |-Node #792 at (l=32.0, t=858.0, r=72.0, b=898.0)px
+             | IsContainer = 'true'
+             |  |-Node #794 at (l=46.0, t=866.0, r=58.0, b=890.0)px
+             |    Text = '[Y]'
+             |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+             |-Node #796 at (l=84.0, t=854.0, r=112.0, b=878.0)px
+             | Text = '[You]'
+             | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+             |-Node #797 at (l=84.0, t=878.0, r=152.0, b=902.0)px
+               Focused = 'false'
+               Actions = [RequestFocus]
+                |-Node #799 at (l=84.0, t=878.0, r=152.0, b=902.0)px
+                  Text = '[This phone]'
+                  Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+	at app.onklav.home.GroupsFlowHostTest.waitForContact(GroupsFlowHostTest.kt:67)
+	at app.onklav.home.GroupsFlowHostTest.createEditMembersFoldersSearchAndDelete(GroupsFlowHostTest.kt:113)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.robolectric.internal.TimeLimitedStatement.evaluate(TimeLimitedStatement.java:38)
+	at org.junit.rules.ExternalResource$1.evaluate(ExternalResource.java:54)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1$evaluate$1.invoke(AndroidComposeTestRule.android.kt:295)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1$evaluate$1.invoke(AndroidComposeTestRule.android.kt:295)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.withDisposableContent(ComposeUiTest.android.kt:565)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1$1$1$1.invoke(ComposeUiTest.android.kt:370)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.withComposeIdlingResource(ComposeUiTest.android.kt:439)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.access$withComposeIdlingResource(ComposeUiTest.android.kt:235)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1$1$1.invoke(ComposeUiTest.android.kt:369)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.withWindowRecomposer(ComposeUiTest.android.kt:413)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.access$withWindowRecomposer(ComposeUiTest.android.kt:235)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1$1.invoke(ComposeUiTest.android.kt:368)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.withTestCoroutines(ComposeUiTest.android.kt:426)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.access$withTestCoroutines(ComposeUiTest.android.kt:235)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1.invoke(ComposeUiTest.android.kt:367)
+	at androidx.compose.ui.test.IdlingStrategy.withStrategy(IdlingStrategy.android.kt:55)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1.invoke(ComposeUiTest.android.kt:366)
+	at androidx.compose.ui.test.IdlingResourceRegistry.withRegistry(IdlingResourceRegistry.jvm.kt:148)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1.invoke(ComposeUiTest.android.kt:365)
+	at androidx.compose.ui.test.ComposeRootRegistry.withRegistry(ComposeRootRegistry.android.kt:139)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.runTest(ComposeUiTest.android.kt:364)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1.evaluate(AndroidComposeTestRule.android.kt:295)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.robolectric.RobolectricTestRunner$HelperTestRunner$1.evaluate(RobolectricTestRunner.java:502)
+	at org.robolectric.internal.SandboxTestRunner$2.lambda$evaluate$2(SandboxTestRunner.java:285)
+	at org.robolectric.internal.bytecode.Sandbox.lambda$runOnMainThread$0(Sandbox.java:104)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 10000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:504)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:339)
+	at app.onklav.home.GroupsFlowHostTest.waitForContact(GroupsFlowHostTest.kt:64)
+	... 39 more
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

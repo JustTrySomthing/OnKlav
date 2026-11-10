@@ -1,0 +1,30 @@
+Publisher key created. Keep it private and backed up.
+   Compiling zmij v1.0.23
+   Compiling serde_core v1.0.229
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/tmp/onklav-authoring-p6w6fhpz/form/vendor/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/tmp/onklav-authoring-p6w6fhpz/form/vendor/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-authoring-p6w6fhpz/form)
+    Finished `release` profile [optimized] target(s) in 7.76s
+Created /tmp/onklav-authoring-p6w6fhpz/form/dist/org.example.authoring-v1.onklav-a
+....Publisher key created. Keep it private and backed up.
+    Finished `release` profile [optimized] target(s) in 0.00s
+Created /tmp/onklav-run-_qn9vo5f/update-1-m8m9r5k6/run.onklav-a
+..Publisher key created. Keep it private and backed up.
+   Compiling zmij v1.0.23
+   Compiling serde_core v1.0.229
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/tmp/onklav-authoring-p6w6fhpz/typed/vendor/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/tmp/onklav-authoring-p6w6fhpz/typed/vendor/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-authoring-p6w6fhpz/typed)
+    Finished `release` profile [optimized] target(s) in 7.90s
+Created /tmp/onklav-verify-xpku3du6/check.onklav-a
+..
+----------------------------------------------------------------------
+Ran 8 tests in 20.531s
+
+OK

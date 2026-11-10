@@ -1,0 +1,44 @@
+{
+  "date": "2026-10-23",
+  "source_version": "0.57.0-dev",
+  "source_version_code": 65,
+  "scope": "RSS own-source adoption, separate article/bookmark pages, keyed active scroll retention and article Back",
+  "apk_built": true,
+  "tests": {
+    "passed": 176,
+    "failed": 0,
+    "unexpected_failures": 0,
+    "known_failures": [],
+    "rust_broad": {
+      "passed": 171,
+      "failed": 0,
+      "fresh_run": true,
+      "evidence": "docs/evidence/v0.57.0/rust-tests.log"
+    },
+    "fresh_framework_host": [
+      {
+        "class": "app.onklav.home.RssAppsHostTest",
+        "passed": 1,
+        "failed": 0,
+        "skipped": 0,
+        "evidence": "docs/evidence/v0.57.0/TEST-app.onklav.home.RssAppsHostTest.xml"
+      },
+      {
+        "class": "app.onklav.home.RssContinuationTest",
+        "passed": 4,
+        "failed": 0,
+        "skipped": 0,
+        "evidence": "docs/evidence/v0.57.0/TEST-app.onklav.home.RssContinuationTest.xml"
+      }
+    ]
+  },
+  "build_evidence": "docs/evidence/v0.57.0/build-debug.json",
+  "apk_evidence": "docs/apk-verification-debug.json",
+  "native_proof": "docs/native-provenance.json",
+  "sdk_proof": "docs/app-sdk-provenance.json",
+  "full_rewrite_complete": false,
+  "handset_acceptance": false,
+  "carrier_acceptance": false,
+  "next_work": "docs/FINISH-NON-GAME.md",
+  "note": "One Rust/native rebuild and signed RSS v3 build. Final screen test proves article starts at zero, Back restores the exact list offset, bookmarks/settings/reopen work. Earlier test attempts are retained: corrected error-state assertion, replaced blocked automatic scrolling, waited for a unique article widget, then fixed real late offset capture with active snapshotFlow and retained outgoing drawer keys. No timeout increase or repeated broad suite. Final APK was assembled after the production fix and verified. No real publisher/provider/phone acceptance claimed."
+}

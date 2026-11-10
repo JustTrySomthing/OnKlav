@@ -1,0 +1,28 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/ee30099c8ed7/project/OnKlav/scripts/build_games.py", line 48, in <module>
+    if __name__=='__main__':print(json.dumps(build(),indent=2))
+                                             ^^^^^^^
+  File "/workspace/scratch/ee30099c8ed7/project/OnKlav/scripts/build_games.py", line 21, in build
+    run('import',['--editor','--import']);run('rules',['--script','rules_tests.gd']);run('session',['--script','session_tests.gd']);run('game-repair',['--script','game_repair_tests.gd']);run('dominos',['--script','res://dominos/tests.gd']);run('dominos-layout',['--script','res://dominos/layout_tests.gd']);run('cats-dogs',['--script','res://cat_dog/tests.gd']);run('blackjack',['--script','res://blackjack/tests.gd']);run('panda',['--script','res://panda/tests.gd']);run('panda-duel',['--script','res://panda/duel_tests.gd']);run('panda-audit',['--script','res://panda/audit_tests.gd']);run('panda-volley',['--script','res://panda/volley_tests.gd']);run('panda-courses',['--script','res://panda/course_tests.gd']);run('panda-performance',['--script','res://panda/performance_tests.gd']);run('naval',['--script','res://naval_battle/tests.gd']);run('hockey',['--fixed-fps','120','--script','res://air_hockey/tests.gd'])
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/ee30099c8ed7/project/OnKlav/scripts/build_games.py", line 18, in run
+    if p.returncode or 'SCRIPT ERROR:'in p.stdout or 'ERROR:'in p.stdout:raise RuntimeError(name+': '+p.stdout[-4000:])
+                                                                         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+RuntimeError: panda-duel: Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+DUEL_COURSE 1
+DUEL_COURSE 2
+DUEL_COURSE 3
+DUEL_COURSE 4
+DUEL_COURSE 5
+DUEL_COURSE 6
+DUEL_COURSE 7
+DUEL_COURSE 8
+DUEL_COURSE 9
+DUEL_COURSE 10
+DUEL_COURSE 11
+DUEL_COURSE 12
+FAIL exact deterministic continuation with damage/materials
+FAIL exact deterministic continuation with damage/materials
+PANDA_DUEL_RESULT checks=48521 failures=2 birds=585
+

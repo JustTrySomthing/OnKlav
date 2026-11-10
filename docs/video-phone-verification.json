@@ -1,0 +1,26 @@
+{
+  "status": "implemented",
+  "production_compilation": "passed",
+  "unique_focused_checks_passed": 28,
+  "test_suites": {
+    "VideoProTest": 8,
+    "VideoRefinementsTest": 11,
+    "VideoPhoneWorkflowTest": 8,
+    "VideoEditorUiTest": 1
+  },
+  "production_hashes_match_final_compilation": true,
+  "production_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt": "1cf796ff2b556f79bffc8bee0e91d59617d76741d4b89923b7304770e310cb24",
+    "android/app/src/main/kotlin/app/onklav/home/VideoEditorLayout.kt": "940c8ae4e256a32884893a04a0cd3ac0e71150d65bec1ceeb84c2c1c6ecc9f8e",
+    "android/app/src/main/kotlin/app/onklav/home/VideoProWorkspace.kt": "d377b0fc50744e3cc7b93be53f3bb0f4cef696403aa7a68b3e2b999722d5cc49",
+    "android/app/src/main/kotlin/app/onklav/home/VideoPhonePanels.kt": "3688b17cf6747ca88668fb60be4cc0c4a028c15869083f63815b7f168d5832b3",
+    "android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt": "2baeeeb9053f41e439fd2c286901f739ec9c93b0fe8b852b6b77a16fce80cb8a"
+  },
+  "scope": "Android Kotlin/Compose UI and model safeguards; no native or SDK source changes",
+  "apk_built": false,
+  "limitations": [
+    "Host Compose renders use generated photo fixture, not physical-phone footage",
+    "Physical-phone keyboard, playback, export, audio/video and performance qualification remains pending"
+  ],
+  "evidence": "docs/video-phone-checks and docs/evidence/video-phone"
+}

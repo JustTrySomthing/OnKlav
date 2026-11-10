@@ -1,0 +1,93 @@
+{
+  "version": "0.100.3-permissions-playback",
+  "version_code": 112,
+  "status": "implemented, host-checked and APK verified",
+  "focused_android_checks": 24,
+  "radio_controller_checks": 10,
+  "final_probe_rechecks": 10,
+  "lint": {
+    "errors": 0,
+    "warnings": 269,
+    "information": 1
+  },
+  "apk": {
+    "name": "host",
+    "variant": "debug",
+    "package": "app.onklav.home.prototype.rewrite",
+    "version_name": "0.100.3-permissions-playback",
+    "version_code": 112,
+    "target_sdk": 36,
+    "bytes": 100237736,
+    "sha256": "389c1c6716645533cc9b7c08aa93209f9f91e7cf07e0065cc1ef154b1a75d155",
+    "signer_sha256": "6ed975c5fc27d19f6291f751a8bb00fa8a2c2e7d268bffc7b6ddf7e1b1a7a69d",
+    "signature_v2_verified": true,
+    "zip_integrity": "pass",
+    "zipalign_16kb": "pass",
+    "abis": [
+      "arm64-v8a"
+    ],
+    "elf_minimum_load_alignment": {
+      "lib/arm64-v8a/libandroidx.graphics.path.so": 16384,
+      "lib/arm64-v8a/libc++_shared.so": 16384,
+      "lib/arm64-v8a/libgodot_android.so": 16384,
+      "lib/arm64-v8a/libimage_processing_util_jni.so": 16384,
+      "lib/arm64-v8a/libonklav_core.so": 16384,
+      "lib/arm64-v8a/libsurface_util_jni.so": 16384
+    },
+    "native_library_sha256": {
+      "lib/arm64-v8a/libandroidx.graphics.path.so": "41e9a793c43a0f4fddb19e33f346bace464f30f888ba7b9eaf96294ea115bfb6",
+      "lib/arm64-v8a/libc++_shared.so": "ad74bf43eb1fd576518168f664ad16a74e00eeda9595875c33dd87f6dd197869",
+      "lib/arm64-v8a/libgodot_android.so": "9e10c5ebda9bb629c671929441cdde3b4a8ab0e5542fc7e88de8d71f2b9840db",
+      "lib/arm64-v8a/libimage_processing_util_jni.so": "f0e4611db0d6b68942d8ba6977519f3dd1cdbffa87b7fc16d8006696ba954af4",
+      "lib/arm64-v8a/libonklav_core.so": "c55530bfdc3c4e98c475a01467e0d72ac868cc31e170da3ea3aa782c63bdc236",
+      "lib/arm64-v8a/libsurface_util_jni.so": "6cb2eac3c68e6a82ce2a5ea5aba86749eb8c609914392e125f6cdfbc208992f8"
+    },
+    "legacy_defined_classes": 0,
+    "defined_class_count": 32936,
+    "permissions": [
+      "android.permission.INTERNET",
+      "android.permission.ACCESS_NETWORK_STATE",
+      "android.permission.VIBRATE",
+      "android.permission.READ_SMS",
+      "android.permission.READ_CONTACTS",
+      "android.permission.SEND_SMS",
+      "android.permission.RECEIVE_SMS",
+      "android.permission.RECEIVE_MMS",
+      "android.permission.RECEIVE_WAP_PUSH",
+      "android.permission.READ_PHONE_STATE",
+      "android.permission.READ_PHONE_NUMBERS",
+      "android.permission.POST_NOTIFICATIONS",
+      "android.permission.RECORD_AUDIO",
+      "android.permission.MODIFY_AUDIO_SETTINGS",
+      "android.permission.RECEIVE_BOOT_COMPLETED",
+      "android.permission.WAKE_LOCK",
+      "android.permission.FOREGROUND_SERVICE",
+      "android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK",
+      "android.permission.ACCESS_WIFI_STATE",
+      "android.permission.CHANGE_WIFI_STATE",
+      "android.permission.CHANGE_NETWORK_STATE",
+      "android.permission.ACCESS_COARSE_LOCATION",
+      "android.permission.ACCESS_FINE_LOCATION",
+      "android.permission.CAMERA",
+      "android.permission.BLUETOOTH",
+      "android.permission.BLUETOOTH_ADMIN",
+      "android.permission.BLUETOOTH_SCAN",
+      "android.permission.BLUETOOTH_CONNECT",
+      "android.permission.NEARBY_WIFI_DEVICES",
+      "android.permission.FOREGROUND_SERVICE_DATA_SYNC",
+      "android.permission.SCHEDULE_EXACT_ALARM",
+      "android.permission.USE_FULL_SCREEN_INTENT",
+      "android.permission.FOREGROUND_SERVICE_CAMERA",
+      "app.onklav.home.prototype.rewrite.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+    ],
+    "rust_libraries": {
+      "arm64-v8a": "c55530bfdc3c4e98c475a01467e0d72ac868cc31e170da3ea3aa782c63bdc236"
+    }
+  },
+  "native_sources_unchanged": true,
+  "signed_included_apps_current": 25,
+  "physical_phone_acceptance": false,
+  "crash_stack_available": false,
+  "initial_check_limitation": "Android33 fixture SSL download failed once; downloaded bytes verified and only affected method passed on recheck",
+  "implementation": "docs/PERMISSIONS-PLAYBACK-REPAIR.md"
+}

@@ -1,0 +1,139 @@
+{
+  "status": "Source complete;14unique focused checks and full lint passed; actual phone acceptance pending",
+  "latest_delivered_apk": "0.100.9-rc1/code118 predates this work and the saved Audio Editor/crop fix; no APK built for this turn",
+  "changes": {
+    "video": [
+      "Touch/pinch slop prevents accidental tiny transforms and graph resets; intentional transforms suspend auto rebuild until commit",
+      "CompositionPlayer runtime-check/frame-processing/decoder errors use existing H264/AAC/SDR compatible-render recovery; revision cache reuses successful output; source/network errors stay errors",
+      "User source screenshot identifies error category, not exact underlying codec cause; original clip/phone stack not available"
+    ],
+    "clock": [
+      "Themed live digital/analog hero and next alarm hint",
+      "Rounded mode bar, enabled alarm cards, countdown and stopwatch dials, larger primary actions and refined empty states",
+      "Existing clock backend, scheduling approvals, DST/reboot recovery, timers/laps and ringing unchanged"
+    ],
+    "camera": [
+      "Preview physical rectangle fits chosen ratio/orientation and bound capture shares actual PreviewView ViewPort",
+      "Original two curved arrows, left pointing down and right up",
+      "One bottom gallery button; duplicate next to top Settings removed",
+      "Preloaded shutter sound at capture-start callback; persisted toggle; device-required sound respected; scope rotation restored on exit"
+    ],
+    "messages": [
+      "State-based Compose input/contentReceiver advertises IME media support",
+      "Actual InputConnection accepted Unicode complex emoji, byte-identical animated GIF and PNG sticker import into private JPEG media",
+      "Temporary IME metadata held during asynchronous copying; serialized imports,10attachment cap,current carrier budgets rechecked, Send waits for import",
+      "Switching conversations targets original draft; no automatic send; GIF/carrier/provider phone acceptance remains open"
+    ]
+  },
+  "tests": {
+    "unique_passed": 14,
+    "case_results": {
+      "app.onklav.home.CameraDownloadRecoveryTest.cameraRejectsRedirectedCaptureFolderButKeepsExternalData": true,
+      "app.onklav.home.CameraDownloadRecoveryTest.cameraProviderInitializationFailureBecomesRetryFeedback": true,
+      "app.onklav.home.CameraDownloadRecoveryTest.cameraAcceptsTrustedAndroidDataDirectoryAlias": true,
+      "app.onklav.home.ClockPolishUiTest.polishedTabsKeepAlarmTimerAndStopwatchActionsFunctional": true,
+      "app.onklav.home.DevicePolishTest.runtimeAndFrameGraphFailuresUseCompatibilityButNetworkErrorsDoNot": true,
+      "app.onklav.home.DevicePolishTest.cameraFrameFitsWholeChosenRatioInEitherOrientation": true,
+      "app.onklav.home.DevicePolishTest.previewTapJitterDoesNotBecomeAnEditButIntentionalDragAndPinchDo": true,
+      "app.onklav.home.EssentialsTest.localAlarmsHandleWeeklyDaysDstGapAndBothOverlapOccurrences": true,
+      "app.onklav.home.EssentialsTest.timerUsesMonotonicTimeAndRebootFallsBackToSavedWallDeadline": true,
+      "app.onklav.home.EssentialsTest.staleEventsCannotRingAndSnoozeAndTimerRecoveryPersist": true,
+      "app.onklav.home.EssentialsUiTest.clockTabsTimerDialogAndStopwatchControlsAreReachable": true,
+      "app.onklav.home.EssentialsUiTest.cameraSettingsCapturesAndPermissionControlsHaveNoDeadEnds": true,
+      "app.onklav.home.KeyboardContentTest.realInputConnectionAcceptsUnicodeAndAnimatedGifIntoDraftMedia": true,
+      "app.onklav.home.VideoEditorUiTest.timelineTextCanvasAndProjectLibraryAreReachable": true
+    },
+    "stages": [
+      {
+        "evidence": "TEST-app.onklav.home.CameraDownloadRecoveryTest.xml",
+        "tests": 3,
+        "failures": 0
+      },
+      {
+        "evidence": "TEST-app.onklav.home.ClockPolishUiTest.xml",
+        "tests": 1,
+        "failures": 0
+      },
+      {
+        "evidence": "TEST-app.onklav.home.DevicePolishTest.xml",
+        "tests": 3,
+        "failures": 0
+      },
+      {
+        "evidence": "TEST-app.onklav.home.EssentialsTest.xml",
+        "tests": 3,
+        "failures": 0
+      },
+      {
+        "evidence": "TEST-app.onklav.home.EssentialsUiTest.xml",
+        "tests": 2,
+        "failures": 0
+      },
+      {
+        "evidence": "TEST-app.onklav.home.KeyboardContentTest.xml",
+        "tests": 1,
+        "failures": 0
+      },
+      {
+        "evidence": "TEST-app.onklav.home.VideoEditorUiTest.xml",
+        "tests": 1,
+        "failures": 1
+      },
+      {
+        "evidence": "final-ClockPolishUiTest.xml",
+        "tests": 1,
+        "failures": 0
+      },
+      {
+        "evidence": "final-VideoEditorUiTest.xml",
+        "tests": 1,
+        "failures": 0
+      },
+      {
+        "evidence": "final-EssentialsUiTest.xml",
+        "tests": 1,
+        "failures": 0
+      }
+    ],
+    "runtime_classes_match": 2995,
+    "notes": [
+      "Initial Kotlin compile brace/icon-reference errors fixed; new R classpath was regenerated",
+      "First extended Video UI test used a Compose touch API against an explicitly paused root and exhausted the host trace queue; replaced by native MotionEvent dispatch, final video tap/tiny-jitter/intentional-drag/Undo check passed",
+      "First batch13passed and1harness failure; final3affected UI cases passed. Unchanged backend/Gboard/Camera cases were not redundantly rerun",
+      "Keyboard test uses an actual input connection and content URIs; no physical keyboard or MMS delivery was tested",
+      "Clock and Camera native UI screenshots reviewed; earlier historical screenshots restored after collecting current evidence"
+    ]
+  },
+  "lint": {
+    "Fatal": 0,
+    "Error": 0,
+    "Warning": 272,
+    "Information": 1
+  },
+  "input_checks": {
+    "native_current": true,
+    "sdk_current": true,
+    "games_current": true,
+    "new_runtime_dependencies": false,
+    "new_permissions_or_capabilities": false
+  },
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt": "698d1a3d41fef7171b4e9d6221269b34279e25cfce98ceaa9cc9665716ca252d",
+    "android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt": "96ea21887f821243155bf9530e23654aae5299dc1987081d921355360399d861",
+    "android/app/src/main/kotlin/app/onklav/home/VideoProWorkspace.kt": "bfad91c80667bc205799748823b1c1e778babbbadab0098ed45fe611282d39ee",
+    "android/app/src/main/kotlin/app/onklav/home/CameraEngine.kt": "9bde93f6e4279765fd3539bf64813897953700ddeca42601d29963567f823ce8",
+    "android/app/src/main/kotlin/app/onklav/home/CameraScreen.kt": "9cdc7774637bc1165080c2688e62d411979bb2f35f304d66bcf1733d797a7a53",
+    "android/app/src/main/kotlin/app/onklav/home/ClockScreen.kt": "b63dfeddd7a7eccc002a8c8db9db85ae6f0ff782cd49999039a6d54c3a336324",
+    "android/app/src/main/kotlin/app/onklav/home/MessageComposer.kt": "1172b26b03ee3bb3dfacf94e3cf35e87d120fbf801d13342c970b1f186ca3377",
+    "android/app/src/main/kotlin/app/onklav/home/MessengerPane.kt": "26b8f5da2cfbb8e059c32e41c8a4cf8a32c8cb487e7232690562b135455e0ca7",
+    "android/shared/src/main/res/drawable/camera_switch_arrows.xml": "70002c1de477d0151ad0e632c13570a38e4bf393775f1cf24551429f5aa9591b"
+  },
+  "remaining_phone_checks": [
+    "Reported clip/codec and edit/preview/export A-V path on Samsung",
+    "Camera sensor FOV/ratio/EXIF/orientation/mirroring and actual shutter timing/quiet mode",
+    "Gboard grants/temporary providers, actual MMS/carrier GIF delivery and limits",
+    "Clock long-duration/OEM/lockscreen and small/landscape/large-font usability"
+  ],
+  "evidence": "docs/evidence/device-polish/",
+  "no_core_sdk_or_permission_changes": true
+}

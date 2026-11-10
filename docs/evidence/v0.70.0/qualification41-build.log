@@ -1,0 +1,4 @@
+     Locking 13 packages to latest compatible versions
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/work/OnKlav/developer/components)
+   Compiling onklav-host-qualification v0.1.0 (/tmp/onklav-host-qualification-w95u7eb_)
+    Finished `release` profile [optimized] target(s) in 7.10s

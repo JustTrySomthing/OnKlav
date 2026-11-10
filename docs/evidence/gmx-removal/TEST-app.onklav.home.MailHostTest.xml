@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.MailHostTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-11-02T17:41:51" hostname="13575fdd974e" time="52.878">
+  <properties/>
+  <testcase name="htmlReaderNeverLoadsRemoteContentAndDropsUnsafeLinks" classname="app.onklav.home.MailHostTest" time="6.82"/>
+  <testcase name="richMimeContainsAlternativesListsAttachmentsAndSafeRecipientHandling" classname="app.onklav.home.MailHostTest" time="0.785"/>
+  <testcase name="filtersAndProviderCredentialsStayBoundToTheirAccount" classname="app.onklav.home.MailHostTest" time="0.173"/>
+  <testcase name="signedEmailAppLaunchesAndGrantsAreRevocable" classname="app.onklav.home.MailHostTest" time="7.221"/>
+  <testcase name="nativeWorkspaceUsesTheAndroidViewModelFactory" classname="app.onklav.home.MailHostTest" time="0.098"/>
+  <testcase name="encryptedAccountsDraftsAndLargeAttachmentsRoundTripAndFailClosed" classname="app.onklav.home.MailHostTest" time="37.779"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

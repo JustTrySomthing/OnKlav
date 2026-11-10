@@ -1,0 +1,138 @@
+{
+  "date": "2026-10-23",
+  "source_version": "0.47.0-dev",
+  "source_version_code": 54,
+  "status": "development checkpoint; one UI workflow check incomplete",
+  "scope": "SDK Files app, shared OnKlav content, canonical Notes, scoped Android file management and export/download integration",
+  "apk_built": true,
+  "apk_variant": "optimized",
+  "apk_bytes": 38452516,
+  "apk_sha256": "8dcdb5df1ad3c09cf9e0833526a5f6448d8a0ad194e197a8f243c9037e6496b9",
+  "mobile_native_rebuilt": true,
+  "sdk_apps_rebuilt": [
+    "Files"
+  ],
+  "godot_pack_reused_source_matched": true,
+  "games_changed": false,
+  "games_deferred_by_user": true,
+  "installed_on_handset": false,
+  "phone_performance_measured": false,
+  "full_rewrite_complete": false,
+  "full_sdk_complete": false,
+  "internal_packages": [
+    "Files"
+  ],
+  "tests": {
+    "app_host_passed": 14,
+    "rust_passed": 166,
+    "python_passed": 20,
+    "shared_passed": 12,
+    "failed": 0,
+    "skipped": 0,
+    "incomplete_checks": 1,
+    "full_host_suite_rerun": false,
+    "case_results": [
+      {
+        "class": "app.onklav.home.SdkBootstrapTest",
+        "name": "warmSetupPreservesRemovalAndLivePermissionRevocation",
+        "passed": true,
+        "evidence": "docs/evidence/v0.47.0/batch-1/TEST-app.onklav.home.SdkBootstrapTest.xml"
+      },
+      {
+        "class": "app.onklav.home.SdkBootstrapTest",
+        "name": "setupRecoversWhenRegistryIsMissingWithinSameProcess",
+        "passed": true,
+        "evidence": "docs/evidence/v0.47.0/batch-1/TEST-app.onklav.home.SdkBootstrapTest.xml"
+      },
+      {
+        "class": "app.onklav.home.ReaderSdkHostTest",
+        "name": "readerSdkDraftControlsSettingsClearAndReopen",
+        "passed": true,
+        "evidence": "docs/evidence/v0.47.0/batch-1/TEST-app.onklav.home.ReaderSdkHostTest.xml"
+      },
+      {
+        "class": "app.onklav.home.SdkLifecycleTest",
+        "name": "messagesAndReaderShareVoicePreferencesAndOneCurrentReader",
+        "passed": true,
+        "evidence": "docs/evidence/v0.47.0/batch-1/TEST-app.onklav.home.SdkLifecycleTest.xml"
+      },
+      {
+        "class": "app.onklav.home.SdkLifecycleTest",
+        "name": "audioOwnerInterruptsOnlyThePreviousOwnerAndOldReleaseCannotStopNewAudio",
+        "passed": true,
+        "evidence": "docs/evidence/v0.47.0/batch-1/TEST-app.onklav.home.SdkLifecycleTest.xml"
+      },
+      {
+        "class": "app.onklav.home.SdkLifecycleTest",
+        "name": "partialNativeCleanupKeepsItsJournalAndRetriesWithoutRotatingAgain",
+        "passed": true,
+        "evidence": "docs/evidence/v0.47.0/batch-1/TEST-app.onklav.home.SdkLifecycleTest.xml"
+      },
+      {
+        "class": "app.onklav.home.SdkLifecycleTest",
+        "name": "deletedNativeProfileIsImmediatelyIsolatedAndOnlyItsOldProfileIsPurged",
+        "passed": true,
+        "evidence": "docs/evidence/v0.47.0/batch-1/TEST-app.onklav.home.SdkLifecycleTest.xml"
+      },
+      {
+        "class": "app.onklav.home.SdkAppsHostTest",
+        "name": "sdkNotesSaveReopenClipboardRemoveReinstallAndDeveloperApp",
+        "passed": true,
+        "evidence": "docs/evidence/v0.47.0/batch-1/TEST-app.onklav.home.SdkAppsHostTest.xml"
+      },
+      {
+        "class": "app.onklav.home.AnnotationSdkHostTest",
+        "name": "annotationPackageLibraryToolsRenameAndTextController",
+        "passed": true,
+        "evidence": "docs/evidence/v0.47.0/batch-1/TEST-app.onklav.home.AnnotationSdkHostTest.xml"
+      },
+      {
+        "class": "app.onklav.home.FilesBrokerHostTest",
+        "name": "fileExportsAreReadOnlyAndCannotExposeArbitraryPrivatePaths",
+        "passed": true,
+        "evidence": "docs/evidence/v0.47.0/batch-1/TEST-app.onklav.home.FilesBrokerHostTest.xml"
+      },
+      {
+        "class": "app.onklav.home.FilesBrokerHostTest",
+        "name": "deletingPrivateDataClearsOnlyThatAppsFolderConnections",
+        "passed": true,
+        "evidence": "docs/evidence/v0.47.0/batch-1/TEST-app.onklav.home.FilesBrokerHostTest.xml"
+      },
+      {
+        "class": "app.onklav.home.FilesBrokerHostTest",
+        "name": "revokedSdkAuthorizationAndUnknownTokensCannotQueryAndroidFiles",
+        "passed": true,
+        "evidence": "docs/evidence/v0.47.0/batch-1/TEST-app.onklav.home.FilesBrokerHostTest.xml"
+      },
+      {
+        "class": "app.onklav.home.FilesBrokerHostTest",
+        "name": "androidFoldersExposeOpaqueTokensAndSupportRenameAndExplicitDelete",
+        "passed": true,
+        "evidence": "docs/evidence/v0.47.0/batch-1/TEST-app.onklav.home.FilesBrokerHostTest.xml"
+      },
+      {
+        "class": "app.onklav.home.FilesBrokerHostTest",
+        "name": "selectedImportsStreamAndStopWhenAuthorizationIsRevoked",
+        "passed": true,
+        "evidence": "docs/evidence/v0.47.0/batch-1/TEST-app.onklav.home.FilesBrokerHostTest.xml"
+      }
+    ],
+    "qualification": "Counts include completed accepted cases only. The latest Files UI invocation timed out; it is not counted as passed. Earlier corrective failures and timeouts are not acceptance evidence."
+  },
+  "incomplete": [
+    {
+      "name": "FilesFlowHostTest.openingANoteUsesNotesAndBackReturnsToFiles",
+      "status": "Opens Notes successfully; return-to-Files framework-host check stalls",
+      "evidence": "docs/evidence/v0.47.0/files-ui-partial.log",
+      "phone_acceptance": false
+    }
+  ],
+  "observed_ui_flow": "Latest partial invocation reached all create/rename/move/trash/restore steps and canonical-note assertions before starting the separate handoff test. Not included in accepted XML case count.",
+  "build_evidence": "docs/evidence/v0.47.0/build-optimized.json",
+  "remaining": [
+    "Resolve and accept Notes return navigation",
+    "Android handset picker/provider/open-handler/accessibility/large-media acceptance",
+    "Physical phone startup/responsiveness/memory measurements",
+    "Existing carrier, settings-service, Walkie and migration gaps; games deferred"
+  ]
+}

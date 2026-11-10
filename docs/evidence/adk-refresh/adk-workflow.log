@@ -1,0 +1,20 @@
+Publisher key created. Keep it private and backed up.
+Publisher key created. Keep it private and backed up.
+   Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling serde_json v1.0.154
+   Compiling memchr v2.8.3
+   Compiling itoa v1.0.18
+   Compiling onklav-app v0.1.0 (/tmp/onklav-author-18kvqpil/project/vendor/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/tmp/onklav-author-18kvqpil/project/vendor/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-author-18kvqpil/project)
+    Finished `release` profile [optimized] target(s) in 7.04s
+Created /tmp/onklav-author-18kvqpil/project/dist/org.example.notebook-v1.onklav-a
+Created /tmp/onklav-author-18kvqpil/v2.onklav-a
+Created /tmp/onklav-author-18kvqpil/other-publisher.onklav-a
+Created /tmp/onklav-author-18kvqpil/other-app.onklav-a
+.........
+----------------------------------------------------------------------
+Ran 9 tests in 10.982s
+
+OK

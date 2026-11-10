@@ -1,0 +1,10 @@
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/recovered/source/OnKlav/developer/components)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 15.99s
+     Running unittests src/lib.rs (developer/components/target/debug/deps/onklav_ui-c7ab262140a76435)
+
+running 2 tests
+test reference_apps::podcasts_app::tests::podcast_follow_uses_fresh_revision_and_failed_save_keeps_library ... ok
+test reference_apps::podcasts_app::tests::podcast_start_loads_local_library_then_searches_without_accounts ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 104 filtered out; finished in 0.03s
+

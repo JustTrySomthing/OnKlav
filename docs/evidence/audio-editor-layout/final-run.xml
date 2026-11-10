@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.AudioEditorUiTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-30T00:45:30" hostname="b623e8e1265a" time="14.332">
+  <properties/>
+  <testcase name="shortLandscapeUsesSeparateToolPane" classname="app.onklav.home.AudioEditorUiTest" time="8.435"/>
+  <testcase name="largeTextAndNarrowWidthKeepSlidersAndActionsInBounds" classname="app.onklav.home.AudioEditorUiTest" time="2.756"/>
+  <testcase name="smallPhoneKeepsToolsAndPlaybackReachable" classname="app.onklav.home.AudioEditorUiTest" time="3.141"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

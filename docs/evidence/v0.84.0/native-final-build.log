@@ -1,0 +1,7 @@
+rust-tests: starting
+rust-tests: passed in 56.6s
+host-native: starting
+host-native: passed in 3.7s
+android-native: starting
+android-native: passed in 83.2s
+Native provenance saved

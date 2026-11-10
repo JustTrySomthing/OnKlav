@@ -1,0 +1,10 @@
+   Compiling onklav-core v0.8.0 (/workspace/scratch/75acf774e3b8/work/OnKlav/core)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 7.54s
+     Running unittests src/lib.rs (core/target/debug/deps/onklav_core-8a579202944a8eae)
+
+running 2 tests
+test sdk_mime::tests::mime_rejects_ambiguous_paths_padding_and_depth ... ok
+test sdk_mime::tests::mime_decodes_multipart_and_never_renders_html ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 256 filtered out; finished in 0.02s
+

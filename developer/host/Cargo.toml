@@ -1,0 +1,8 @@
+[package]
+name = "onklav-sdk-host"
+version = "0.2.0"
+edition = "2021"
+[dependencies]
+onklav-core = { path = "../../core" }
+serde_json = "1.0"
+onklav-ui = { path = "../components" }

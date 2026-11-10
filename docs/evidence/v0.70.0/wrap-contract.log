@@ -1,0 +1,10 @@
+test_build_icon_and_catalog_inventory_match_the_runtime (test_contract.PublishedContract.test_build_icon_and_catalog_inventory_match_the_runtime) ... ok
+test_capabilities_and_widgets_match_production_validation (test_contract.PublishedContract.test_capabilities_and_widgets_match_production_validation) ... ok
+test_developer_links_and_required_sources_exist (test_contract.PublishedContract.test_developer_links_and_required_sources_exist) ... ok
+test_harness_uses_the_same_locked_runtime_dependency_versions (test_contract.PublishedContract.test_harness_uses_the_same_locked_runtime_dependency_versions) ... ok
+test_included_apps_use_the_public_controller_crate (test_contract.PublishedContract.test_included_apps_use_the_public_controller_crate) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.036s
+
+OK

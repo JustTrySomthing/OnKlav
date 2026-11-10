@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.FilesBrokerHostTest" tests="5" skipped="0" failures="3" errors="0" timestamp="2026-10-23T14:06:41" hostname="41aed82b0335" time="2.233">
+  <properties/>
+  <testcase name="fileExportsAreReadOnlyAndCannotExposeArbitraryPrivatePaths" classname="app.onklav.home.FilesBrokerHostTest" time="1.797"/>
+  <testcase name="deletingPrivateDataClearsOnlyThatAppsFolderConnections" classname="app.onklav.home.FilesBrokerHostTest" time="0.188"/>
+  <testcase name="revokedSdkAuthorizationAndUnknownTokensCannotQueryAndroidFiles" classname="app.onklav.home.FilesBrokerHostTest" time="0.078">
+    <failure message="java.lang.UnsupportedOperationException: Pre-Android-O query format not supported." type="java.lang.UnsupportedOperationException">java.lang.UnsupportedOperationException: Pre-Android-O query format not supported.
+	at android.provider.DocumentsProvider.query(DocumentsProvider.java:868)
+	at org.robolectric.shadows.ShadowContentResolver.query(ShadowContentResolver.java:314)
+	at android.content.ContentResolver.query(ContentResolver.java)
+	at app.onklav.home.ExternalFiles.connect(FilesBroker.kt:84)
+	at app.onklav.home.FilesBrokerHostTest.revokedSdkAuthorizationAndUnknownTokensCannotQueryAndroidFiles(FilesBrokerHostTest.kt:47)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.robolectric.RobolectricTestRunner$HelperTestRunner$1.evaluate(RobolectricTestRunner.java:502)
+	at org.robolectric.internal.SandboxTestRunner$2.lambda$evaluate$2(SandboxTestRunner.java:285)
+	at org.robolectric.internal.bytecode.Sandbox.lambda$runOnMainThread$0(Sandbox.java:104)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+</failure>
+  </testcase>
+  <testcase name="androidFoldersExposeOpaqueTokensAndSupportRenameAndExplicitDelete" classname="app.onklav.home.FilesBrokerHostTest" time="0.041">
+    <failure message="java.lang.UnsupportedOperationException: Pre-Android-O query format not supported." type="java.lang.UnsupportedOperationException">java.lang.UnsupportedOperationException: Pre-Android-O query format not supported.
+	at android.provider.DocumentsProvider.query(DocumentsProvider.java:868)
+	at org.robolectric.shadows.ShadowContentResolver.query(ShadowContentResolver.java:314)
+	at android.content.ContentResolver.query(ContentResolver.java)
+	at app.onklav.home.ExternalFiles.connect(FilesBroker.kt:84)
+	at app.onklav.home.FilesBrokerHostTest.androidFoldersExposeOpaqueTokensAndSupportRenameAndExplicitDelete(FilesBrokerHostTest.kt:39)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.robolectric.RobolectricTestRunner$HelperTestRunner$1.evaluate(RobolectricTestRunner.java:502)
+	at org.robolectric.internal.SandboxTestRunner$2.lambda$evaluate$2(SandboxTestRunner.java:285)
+	at org.robolectric.internal.bytecode.Sandbox.lambda$runOnMainThread$0(Sandbox.java:104)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+</failure>
+  </testcase>
+  <testcase name="selectedImportsStreamAndStopWhenAuthorizationIsRevoked" classname="app.onklav.home.FilesBrokerHostTest" time="0.128">
+    <failure message="java.lang.UnsupportedOperationException: Pre-Android-O query format not supported." type="java.lang.UnsupportedOperationException">java.lang.UnsupportedOperationException: Pre-Android-O query format not supported.
+	at android.provider.DocumentsProvider.query(DocumentsProvider.java:868)
+	at org.robolectric.shadows.ShadowContentResolver.query(ShadowContentResolver.java:314)
+	at android.content.ContentResolver.query(ContentResolver.java)
+	at app.onklav.home.FilesBroker$stage$2.invokeSuspend(FilesBroker.kt:28)
+	at _COROUTINE._BOUNDARY._(CoroutineDebugging.kt:42)
+	at app.onklav.home.FilesBroker.stage(FilesBroker.kt:25)
+	at app.onklav.home.FilesBrokerHostTest$selectedImportsStreamAndStopWhenAuthorizationIsRevoked$1.invokeSuspend(FilesBrokerHostTest.kt:72)
+Caused by: java.lang.UnsupportedOperationException: Pre-Android-O query format not supported.
+	at android.provider.DocumentsProvider.query(DocumentsProvider.java:868)
+	at org.robolectric.shadows.ShadowContentResolver.query(ShadowContentResolver.java:314)
+	at android.content.ContentResolver.query(ContentResolver.java)
+	at app.onklav.home.FilesBroker$stage$2.invokeSuspend(FilesBroker.kt:28)
+	at kotlin.coroutines.jvm.internal.BaseContinuationImpl.resumeWith(ContinuationImpl.kt:33)
+	at kotlinx.coroutines.DispatchedTask.run(DispatchedTask.kt:100)
+	at kotlinx.coroutines.internal.LimitedDispatcher$Worker.run(LimitedDispatcher.kt:124)
+	at kotlinx.coroutines.scheduling.TaskImpl.run(Tasks.kt:89)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler.runSafely(CoroutineScheduler.kt:586)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.executeTask(CoroutineScheduler.kt:820)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.runWorker(CoroutineScheduler.kt:717)
+	at kotlinx.coroutines.scheduling.CoroutineScheduler$Worker.run(CoroutineScheduler.kt:704)
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

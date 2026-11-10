@@ -1,0 +1,12 @@
+Publisher key created. Keep it private and backed up.
+   Compiling zmij v1.0.23
+   Compiling serde_core v1.0.229
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/workspace/scratch/ed752e8a1957/current/OnKlav/sdk/rust)
+   Compiling onklav-ui v0.3.0 (/workspace/scratch/ed752e8a1957/current/OnKlav/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-host-fixture-xd7kz2y5/fixture)
+    Finished `release` profile [optimized] target(s) in 4.53s
+Created /workspace/scratch/ed752e8a1957/current/OnKlav/developer/tests/fixtures/HostContainment.onklav-a
+Created /workspace/scratch/ed752e8a1957/current/OnKlav/developer/tests/fixtures/ReservedNamespace.onklav-a

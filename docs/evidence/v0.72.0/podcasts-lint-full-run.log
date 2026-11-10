@@ -1,0 +1,5 @@
+podcasts-lint-full: 20s
+podcasts-lint-full: 40s
+podcasts-lint-full: 60s
+podcasts-lint-full: 80s
+podcasts-lint-full: exit 0 in 82.5s

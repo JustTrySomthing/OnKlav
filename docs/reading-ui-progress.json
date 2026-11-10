@@ -1,0 +1,10 @@
+{
+  "status": "Chunk28 source complete; full Android/UI/device qualification remains open",
+  "source_complete": [
+    28
+  ],
+  "prior_1_through_27_preserved": true,
+  "next": 29,
+  "verification": "docs/reading-ui-verification.json",
+  "apk_created": false
+}

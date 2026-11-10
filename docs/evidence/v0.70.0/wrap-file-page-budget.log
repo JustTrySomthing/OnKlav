@@ -1,0 +1,10 @@
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/work/OnKlav/developer/components)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.52s
+     Running unittests src/lib.rs (developer/components/target/debug/deps/onklav_ui-b9729a29e05b7074)
+
+running 2 tests
+test reference_apps::service_tests::wrap_mail_private_files_delete_requires_confirmation_and_retains_failed_file ... ok
+test reference_apps::service_tests::wrap_mail_private_file_page_stays_within_native_widget_budget ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 99 filtered out; finished in 0.00s
+

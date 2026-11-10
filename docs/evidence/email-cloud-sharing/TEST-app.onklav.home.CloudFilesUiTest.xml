@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.CloudFilesUiTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-11-02T17:07:51" hostname="13575fdd974e" time="17.831">
+  <properties/>
+  <testcase name="firstLaunchMakesSignInAndSignupClearAndHasProviderInstructions" classname="app.onklav.home.CloudFilesUiTest" time="13.889"/>
+  <testcase name="disconnectRemovesLocalCredentialsWithoutDeletingCloudFiles" classname="app.onklav.home.CloudFilesUiTest" time="1.42"/>
+  <testcase name="smallLargeTextSignInKeepsConnectAndHelpReachable" classname="app.onklav.home.CloudFilesUiTest" time="0.488"/>
+  <testcase name="connectedBrowserSearchFolderUpAndCreationWork" classname="app.onklav.home.CloudFilesUiTest" time="1.699"/>
+  <testcase name="successfulUploadIsNotRetriedWhenFolderRefreshFails" classname="app.onklav.home.CloudFilesUiTest" time="0.335"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,11 @@
+{
+  "finding": "A00",
+  "existing_completed_outgoing": 1000,
+  "next_stage": {
+    "error": "Messenger state limit reached",
+    "ok": false
+  },
+  "retained_after_rejected_stage": 1000,
+  "carrier_sends_performed": 0,
+  "scope": "Actual source-matched Rust JNI, isolated synthetic messenger state"
+}

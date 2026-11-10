@@ -1,0 +1,9 @@
+radio-compile-main: 20s
+radio-compile-main: 40s
+radio-compile-main: 60s
+radio-compile-main: 80s
+radio-compile-main: 100s
+radio-compile-main: 120s
+radio-compile-main: 140s
+radio-compile-main: 160s
+radio-compile-main: exit 0 in 179.0s

@@ -1,0 +1,1 @@
+{"grants":["storage.private","files.export"],"steps":[{"action":"fixture.parse","expect":{"mime.attachments.0.size":3}},{"action":"fixture.export","pending":"blobs.export"}]}

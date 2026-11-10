@@ -1,0 +1,11 @@
+rust-tests: starting
+rust-tests: passed in 40.0s
+host-native: starting
+host-native: passed in 1.6s
+android-native: starting
+Traceback (most recent call last):
+  File "/workspace/scratch/75acf774e3b8/recovered/OnKlav/scripts/build_native.py", line 47, in <module>
+    subprocess.run(command,cwd=ROOT,env=process_env,stdout=f,stderr=subprocess.STDOUT,check=True,timeout=240)
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['cargo', 'build', '--lib', '--locked', '--release', '--manifest-path', 'core/Cargo.toml', '--target', 'aarch64-linux-android']' returned non-zero exit status 101.

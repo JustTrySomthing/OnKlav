@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.PendingPicturesUiTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-28T22:07:37" hostname="1b65f1fab707" time="8.094">
+  <properties/>
+  <testcase name="disabledDownloadsOfferAnActionAndExpiredStatusDoesNotPretendToBeDownloading" classname="app.onklav.home.PendingPicturesUiTest" time="8.094"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

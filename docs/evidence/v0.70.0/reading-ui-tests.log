@@ -1,0 +1,17 @@
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/work/OnKlav/developer/components)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.73s
+     Running unittests src/lib.rs (developer/components/target/debug/deps/onklav_ui-b9729a29e05b7074)
+
+running 9 tests
+test reading::tests::unicode_pages_reassemble_without_splitting_codepoints ... ok
+test reading::tests::bookmarks_require_matching_content_and_revision ... ok
+test reading::tests::literal_search_pages_use_valid_unicode_offsets ... ok
+test files::tests::completed_import_refreshes_the_destination_without_reading_automatically ... ok
+test reading_ui::tests::reopen_requires_exact_revision_and_valid_unicode_boundary ... ok
+test reading_ui::tests::unicode_search_selects_exact_match_and_saves_page_offset ... ok
+test reading_ui::tests::failed_save_retains_page_and_requires_review_before_overwriting_conflict ... ok
+test reading_ui::tests::page_turns_are_bounded_and_reversible_without_storing_full_text ... ok
+test reading_ui::tests::search_continuation_is_bounded_and_stale_query_results_are_discarded ... ok
+
+test result: ok. 9 passed; 0 failed; 0 ignored; 0 measured; 49 filtered out; finished in 0.00s
+

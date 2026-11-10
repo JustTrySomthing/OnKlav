@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.shared.ThemePackageTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-23T22:23:33" hostname="41aed82b0335" time="0.327">
+  <properties/>
+  <testcase name="rejectsInvalidUtf8AndCompressedExpansion" classname="app.onklav.shared.ThemePackageTest" time="0.272"/>
+  <testcase name="unicodeAndAllPresetsRoundTripWithoutExecutablePayload" classname="app.onklav.shared.ThemePackageTest" time="0.028"/>
+  <testcase name="rejectsPathsUnknownFieldsDuplicateFieldsAndInvalidValues" classname="app.onklav.shared.ThemePackageTest" time="0.018"/>
+  <testcase name="customImageIsEmbeddedAndPrivatePathCannotBeExported" classname="app.onklav.shared.ThemePackageTest" time="0.008"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

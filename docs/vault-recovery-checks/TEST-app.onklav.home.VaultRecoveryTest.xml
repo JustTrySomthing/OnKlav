@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.VaultRecoveryTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-31T14:37:56" hostname="ac9e6af65788" time="34.792">
+  <properties/>
+  <testcase name="invalidAnswersAndCorruptionCannotReplaceTheEncryptedVault" classname="app.onklav.home.VaultRecoveryTest" time="7.475"/>
+  <testcase name="recoveryTravelsInTheExistingOpaqueBackupPayload" classname="app.onklav.home.VaultRecoveryTest" time="6.126"/>
+  <testcase name="legacyVaultRequiresPasswordBeforeRecoveryCanBeAddedAndPasswordChangesKeepRecovery" classname="app.onklav.home.VaultRecoveryTest" time="7.902"/>
+  <testcase name="allThreeAnswersResetPasswordWithoutLosingDataAndOldPasswordStopsWorking" classname="app.onklav.home.VaultRecoveryTest" time="7.364"/>
+  <testcase name="incompleteOrInvalidSetupNeverCreatesAVaultAndCompleteRelocks" classname="app.onklav.home.VaultRecoveryTest" time="5.925"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

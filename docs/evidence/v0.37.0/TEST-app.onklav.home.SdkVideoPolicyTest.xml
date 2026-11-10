@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.SdkVideoPolicyTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-22T23:04:42" hostname="276516236850" time="0.109">
+  <properties/>
+  <testcase name="historySectionsUseLocalCalendarDays" classname="app.onklav.home.SdkVideoPolicyTest" time="0.025"/>
+  <testcase name="providerNavigationAndAdDomains" classname="app.onklav.home.SdkVideoPolicyTest" time="0.035"/>
+  <testcase name="thumbnailInputIsBoundedAndChecksPermissionWhileReading" classname="app.onklav.home.SdkVideoPolicyTest" time="0.049"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

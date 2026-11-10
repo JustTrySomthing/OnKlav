@@ -1,0 +1,60 @@
+{
+  "status": "source_complete",
+  "passing_tests": [
+    "CarrierReceiverRegressionTest.picturesDefaultOnAndSetupIncludesAllMessagingApprovals",
+    "CarrierReceiverRegressionTest.realReceiverPreservesSuccessfulCarrierResultAcrossAsyncHandoff",
+    "MessagingPolishRegressionTest.browserMenuButtonsHaveGapsAndLongTextKeepsItsWidth",
+    "MessagingPolishRegressionTest.bulkActionsWrapAtLargeTypeAndRemainUsable",
+    "MessagingPolishRegressionTest.converterCategoryNamesFitAndSelectTemperature",
+    "SmsSettlementTest.transientNegativeThenSuccessNeverFlashesAFailureAndNeverResends",
+    "SmsSettlementTest.actionableSimRadioPermissionErrorsAndClockChangesDoNotWait",
+    "SmsSettlementTest.genuineFailuresStillAppearAfterTheBoundedDurableWindow",
+    "MmsDownloadRecoveryTest.cancelledCodeAndLegacyStatusesRemainRetryableAndTruthful",
+    "MmsDownloadRecoveryTest.temporaryDownloadFailureStaysVisibleAndSchedulesBoundedIncomingRetries",
+    "MmsDownloadRecoveryTest.realPlatformRequestUsesOriginalSimUniqueOutputAndMatchingCallback",
+    "MmsDownloadRecoveryTest.carrierErrorsExplainConfigurationAndDoNotRetryPermanentFailures",
+    "MmsDownloadRecoveryTest.stalledDownloadSchedulesBoundedRecoveryWithoutResendingAnything",
+    "MmsDownloadRecoveryTest.acknowledgementFailureCannotReportAnAlreadyFiledPictureAsDownloadFailure",
+    "MmsDownloadRecoveryTest.oldAttemptCallbackCannotClearOrFailCurrentDownload",
+    "MmsDownloadRecoveryTest.scheduledDownloadNeverRunsWhenRoleWasRevokedAndMessagesRemainRecoverable",
+    "MmsDownloadRecoveryTest.unrecognizedCallbackCannotCreateAnIncomingMessageOrError",
+    "MmsDownloadRecoveryTest.inFlightDownloadCannotBeTruncatedByDuplicateRetryAndRevokedRolePreventsDownload",
+    "MmsDownloadRecoveryTest.independentPictureNotificationsCannotOverwriteEachOtherAndCompletionClearsOnlyItsOwn",
+    "SetupPlaybackRepairTest.setupRequestsFeaturePermissionsAndRechecksAndroidApprovals",
+    "SetupPlaybackRepairTest.nativeSizeCallbackNeverOpensTheNetworkEvenWhenLengthIsUnknown",
+    "SetupPlaybackRepairTest.upgradeRepairsShippedDefaultsOnceAndLaterExplicitRevocationsStayEffective"
+  ],
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt": "4b338d6c39bea3efa7d3b48cd3570a40cb88f7a83224bcbdcf60a268f2112f2f",
+    "android/app/src/main/kotlin/app/onklav/home/SdkWalkieTransport.kt": "d34f24e244a45235e9a5b545fde35be7788a1ad0bb87ea9ae0749381e2c20fdf",
+    "android/app/src/main/kotlin/app/onklav/home/MessengerSetup.kt": "7d66856fb2bc9edafb5c5984f0afcc9db24f9af51d5084d38d7b8685a7bccb9e",
+    "android/app/src/main/kotlin/app/onklav/home/OnKlavPermissions.kt": "9e39219e8a2d343107ae4fe583e723c2410626cf47248090765f14edfcc170d4",
+    "android/app/src/main/kotlin/app/onklav/home/SdkAppScreen.kt": "4a7b16e4b03c58dfb403195e8a86405cfeda00117ffe26b846d23b08595f5521",
+    "android/app/src/main/kotlin/app/onklav/home/ConvertWorkspace.kt": "2ef1f7ff62d8a6453921f1765fab847f0a389429ed4c4f5992c3d1ca1ddc8058",
+    "android/app/src/main/kotlin/app/onklav/home/BulkConversationActions.kt": "fdd7b84d647b922c3b50a5cf63258fa3293a7c3e210fa9b009a9fc12bf563c4a",
+    "android/app/src/main/kotlin/app/onklav/home/MessengerPane.kt": "d231c49f98b38da5421c18697e935612e5ea5504ec948152abfb6492de832eb8",
+    "android/app/src/main/kotlin/app/onklav/home/GroupsPane.kt": "f2fa3a2da772e3d06d7f5813a0f315bd568d41467b906428a766d9b2b7a464bc",
+    "android/app/src/test/kotlin/app/onklav/home/CarrierReceiverRegressionTest.kt": "f85d933868e93a02b9500448dd41a7f775465f0a5022d50c49757fc3fcaa91b7",
+    "android/app/src/test/kotlin/app/onklav/home/MessagingPolishRegressionTest.kt": "bc640293ff1b62bb8d8aa0eda87c262d7223b6b78007a8e1b24b74597631842c",
+    "android/app/src/test/kotlin/app/onklav/home/MessageVisualCorrectionsHostTest.kt": "7e4c3b9e993df706435a57d56c844a551df1d51d52eb4d18cc3fb3b879a4d05a"
+  },
+  "runtime_bundle_matches_compiled_classes": true,
+  "carrier_result_fixture": "Real MessageResultReceiver with Android PendingResult seeded RESULT_OK, then asynchronous worker completion. Success remains Sent.",
+  "diagnostics": [
+    "Initial ordered-broadcast fixture observed Sending without a deterministic supplied PendingResult; corrected receiver fixture passed.",
+    "Initial UI fixture required the established paused-clock/root-measure harness.",
+    "Offscreen performScrollTo on Browser Cancel looped; replaced with bounded direct semantic action. Initial runs hit 420/480 second process bounds; diagnostics retained.",
+    "Redundant inner scrolling removed from shared-scroll Convert popup before final compilation.",
+    "Platform setup now records completion before messaging navigation; final compiled branch inspected."
+  ],
+  "visual_review": [
+    "bulk-large-type.png",
+    "convert-measurement.png",
+    "browser-settings.png",
+    "browser-tabs.png"
+  ],
+  "physical_carrier_qualified": false,
+  "MMS_READY": false,
+  "apk_built": false,
+  "native_sdk_signing_identity_changed": false
+}

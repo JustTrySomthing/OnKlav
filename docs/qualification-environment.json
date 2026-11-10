@@ -1,0 +1,10 @@
+{
+  "adb_in_path": false,
+  "adb_at_saved_sdk_path": false,
+  "usb_bus_directory_present": false,
+  "cargo_audit_available": false,
+  "device_checks_run": false,
+  "two_phone_checks_run": false,
+  "full_android_host_integration": "still blocked by prior unavailable dependency artifacts; not retried",
+  "apk_created": false
+}

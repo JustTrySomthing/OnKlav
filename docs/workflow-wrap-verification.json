@@ -1,0 +1,83 @@
+{
+  "status": "source_complete_for_documented_bounded_profiles; qualification_pending",
+  "date": "2026-10-25",
+  "user_request": "Wrap up Map/mail workflow and MIME/upload/recovery gaps",
+  "preserved": "Existing shipping SDK apps, identities, released main JNI and prior completed source; working native overlay rebuilt",
+  "production_paths": {
+    "map": "SdkMapViewer measured non-gestural callback -> AppSdk -> sdk map_event -> public tile_map controller -> maps.cache.viewport -> signed binary HTTP/store -> private renderer; Controls drawer search/routes",
+    "mail": "public Mail -> host accounts/Session -> mailbox/identity selection -> private header sync -> body/download/private MIME/files -> per-slot compose -> exact review/native confirm -> durable attempt/lock -> authenticated JMAP -> explicit reconcile/Sent move",
+    "mime": "own immutable file -> mail.mime.parse -> bounded RFC822 decode -> disposable own attachment cache; HTML never rendered",
+    "upload": "opaque own ID -> extra private grant/live authorization -> native-only resolved metadata -> SdkHttpUpload stream -> account-bound signed HTTPS; no redirect/retry"
+  },
+  "checks": {
+    "core_wrap": 6,
+    "sdk_unique_relevant_cases": 25,
+    "sdk_unique_count_note": "16 email +7 reference (including2 map/mail wrap)+2 added private-file cases; repeated selectors not added",
+    "android_isolated_upload_cases": 2,
+    "android_scope": "Actual private-file stream helper tests and production MapViewer compilation with refusing controller/JNI stubs; not complete SdkHttpService/AppSdk integration",
+    "contract_cases": 5,
+    "signed_scenario_steps": {
+      "mime_upload": 2,
+      "mime_export": 2,
+      "compose_save_review_cancel_confirm_restart": 9,
+      "reference_map": 5,
+      "reference_mail": 1
+    },
+    "signed_scope": "Production verifier/interpreter/storage/MIME/broker. HTTP/export/account work stops at actual native pending. No fake provider success. Callback unit data synthetic.",
+    "native": "Source-matched working Linux and ARM64 rebuilt/verified;16KiB mobile alignment. Native build reran current6 core cases."
+  },
+  "limits": {
+    "map": "1024logical pixels/axis,25visible tiles,64cache entries/16MiB,256KiB downloaded tile; explicit load only; configured geocoder/router",
+    "mime": "16MiB input,16KiB headers/100headers/1000-byte lines,depth8/32parts,8KiB text,3attachments/10MiB; UTF8/ASCII/Latin1/Windows1252; no encrypted/signature verification or universal MIME",
+    "upload": "immutable own file,POST,no body,10MiB,64KiB streamed chunks with authorization",
+    "mail": "100headers/15KiB snapshot,20headers/page,8server accounts/identities,40mailboxes; multiple private drafts filtered by binding/identity,10ASCII recipients/8000body bytes/13KiB serialized draft; private-file pages20 stay below100-widget cap",
+    "recovery": "Exact Message-ID and submission lookup. Missing/ambiguous does not mean unsent. No automatic unlock/resend. Explicit duplicate-risk unlock starts a separately reviewed new attempt; Sent movement never resubmits."
+  },
+  "remaining": [
+    "Full Android integrated compile/check blocked by absent cached okhttp4.12/webkit1.13/play-services-auth22 dependency bytes; isolated checks are not that integration",
+    "Configured provider OAuth/refresh/revocation, Session/mailbox/identity/attachments/submission/reconciliation and actual tile/geocoder/router HTTP qualification",
+    "Phone layout/TalkBack/IME/process recovery and sustained Android performance/heap/comprehensive security review",
+    "39/40 require physical-device/two-phone environment; no adb/platform-tools/USB.41 partial.42 deferred until requested",
+    "Manual provider cleanup may be required for orphan server drafts/uploads; no automatic server deletion or recall; no universal MIME/IMAP/SMTP/bulk offline/turn-by-turn"
+  ],
+  "apk_created": false,
+  "actual_email_sent": false,
+  "shipping_package_created": false,
+  "evidence_sha256": {
+    "docs/evidence/v0.70.0/wrap-native.log": "50e05b1854067f2f3593ff3f7da41a8fe894116c1b53ecd4cb631e720ba0dea1",
+    "docs/evidence/v0.70.0/wrap-email-final.log": "265cccb29319b88b6336fc952208931722107c9783a58a1bed53641963c99d8a",
+    "docs/evidence/v0.70.0/wrap-reference-final2.log": "aa6eb5eb7d6d73dcb2c89761e30d8f37f0d57af690c54f30067c2b9d31b47027",
+    "docs/evidence/v0.70.0/wrap-sdk-files.log": "c8a32507234763cc3d9acc28672854902b42c61184bed2dd58d78c5522da6b7d",
+    "docs/evidence/v0.70.0/wrap-file-page-budget.log": "d421d50d8ceb4bab2a355c0da89d8d7a532ce4a58d296994fb4f595f8a367f2f",
+    "docs/evidence/v0.70.0/wrap-navigation-upload-android.log": "a79f176f24c16e35d666197e9d7c3c3ab911425b46f6fc9558264c47bc1be325",
+    "docs/evidence/v0.70.0/wrap-contract.log": "875fcb015110ed70c508875fb2a18e10398c24b0d56fab5523ebec719f04a90c",
+    "docs/evidence/v0.70.0/wrap-signed-mime-upload.log": "fd99ec47adbf20a258fe37ac67dd4e3dd42ae35715fe171887f08584f7dec96b",
+    "docs/evidence/v0.70.0/wrap-signed-mime-export.log": "7887ae21f38f26018d10432692032f2e46e5c20b01911e6173f38f889987203a",
+    "docs/evidence/v0.70.0/wrap-signed-compose.log": "c01d3e9ede1e2b5c6514a7d19268d2f8e098af0aeb66ea4c55317d4ead27d079",
+    "docs/evidence/v0.70.0/wrap-signed-map.log": "99aa2664c879e5975b1dcb0c6914b4bbc8359d91cc2d48b9f80cafd9b3c09716",
+    "docs/evidence/v0.70.0/wrap-signed-mail.log": "5cdb7c775360b79aabb3798eab5e68e74e76c5d856aabb86653594b2676c105e"
+  },
+  "affected_source_sha256": {
+    "core/src/sdk.rs": "a7f97638e164ece193c558bea5ba5101be4253d0680bcb33d6c1fae430cb05e3",
+    "core/src/sdk_http.rs": "15d66bb8d1fcf099a080101edcf1bdaf9458b2e676938ffc964c4877ef6c95ff",
+    "core/src/sdk_mime.rs": "9066964ff28e3f1575e9a1e535ad1745fbd169a2b3e4637cc771986039979606",
+    "core/src/sdk_map_cache.rs": "cb16b6854130baf26a479180e25c2c440412384eef6565adc6c4bc61fd9b3434",
+    "core/src/sdk_maps.rs": "7a77d16c27cceb593f55f353b6bbff2fdeeb57e598b7121db6d8c0c6fdb977f9",
+    "developer/components/src/email_transfer.rs": "229fc15db464915233d733d3d62bd0d58e8ec4534645397b96c10ebe90263c0c",
+    "developer/components/src/email.rs": "3f81d894f65b29e73995bcd7e05ffc0181712228cbc58ae0891feb42c5661cac",
+    "developer/components/src/email_content.rs": "2f62b54461695750fe0b0fe4edab5213c94eb1133aa62659e31ef379946e24a4",
+    "developer/components/src/email_session.rs": "27733f025b57bdda9ce03802f8147e0263c35b4304648852a93f98ec78ca5d29",
+    "developer/components/src/email_compose.rs": "220b2f5acbd5851fc8b408a48748057c69ba6c6066067be10115582014c78c5f",
+    "developer/components/src/email_recovery.rs": "60f5fbca8b93f4e915db31006e9c292a2c07a3b6e00d864e8a3808cfaf52196d",
+    "developer/components/src/reference_apps/mail.rs": "3b3e93e8b24376bfe48d706f3d50009f344e68e27ba34ac26effd07622c479bf",
+    "developer/components/src/reference_apps/tile_map.rs": "9ee91cb98b62fb1fc961981bc9964bd8a8b9d8b27981658bc6da62b1c367cb8e",
+    "developer/components/src/reference_apps/service_tests.rs": "781566bf4cbecb04eb6ade68b9508340b90691a78dcafed056069b8c61226fe5",
+    "developer/components/src/maps.rs": "05740718d339f8f42a2cdacee082eb1427a81b9a10c46f3d8c175411e17b0310",
+    "developer/components/src/http.rs": "c72f107ca65ace04b3f944fbc20351dc4d62ff40680d8cabf1368fd5d398927b",
+    "android/app/src/main/kotlin/app/onklav/home/SdkHttpPayload.kt": "8b44e2f562cbeb188012a6b89e33714c3bcbbed21e64af3343bd080888c4dfa5",
+    "android/app/src/main/kotlin/app/onklav/home/SdkHttpService.kt": "bfaa4cfac4f59af2ea8be9a4b1b663d50c2fe1fc5facedcb107d05147245d8d0",
+    "android/app/src/main/kotlin/app/onklav/home/SdkHttpUpload.kt": "ef3c7d9f0989d033f6511db9fe6f73857da6dacfd6d84792bf2df67b4fa973a4",
+    "android/app/src/main/kotlin/app/onklav/home/SdkMapViewer.kt": "e0b8327918662b2f5ac6c7a41cd4c7480f5381c66a43c20124bb54eea7b478a8",
+    "android/app/src/main/kotlin/app/onklav/home/AppSdk.kt": "5642d7625d6fefc06b905322c1c3d71f37a323a037196a5eca10fef6584ac2f5"
+  }
+}

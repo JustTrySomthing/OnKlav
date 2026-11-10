@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.SmsFailureTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-11-02T15:45:49" hostname="13575fdd974e" time="9.591">
+  <properties/>
+  <testcase name="oldSinglePartFailureIsCorrectedForDisplayWithoutChangingItsReceipt" classname="app.onklav.home.SmsFailureTest" time="9.284"/>
+  <testcase name="shortNetworkFailureDoesNotClaimOtherPartsOrALengthProblem" classname="app.onklav.home.SmsFailureTest" time="0.058"/>
+  <testcase name="unknownCodesRemainVisible" classname="app.onklav.home.SmsFailureTest" time="0.056"/>
+  <testcase name="missingDefaultSimHasSpecificRecovery" classname="app.onklav.home.SmsFailureTest" time="0.05"/>
+  <testcase name="modemAndRadioNetworkErrorsAreNamedAccurately" classname="app.onklav.home.SmsFailureTest" time="0.049"/>
+  <testcase name="distinguishesRadioAndServiceFailures" classname="app.onklav.home.SmsFailureTest" time="0.044"/>
+  <testcase name="retainsModemDetailsAndPartialSendCaution" classname="app.onklav.home.SmsFailureTest" time="0.047"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

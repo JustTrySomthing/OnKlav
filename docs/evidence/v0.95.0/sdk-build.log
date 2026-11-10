@@ -1,0 +1,21 @@
+{
+  "build": [
+    "Maps"
+  ],
+  "restore_bundles": [],
+  "reuse": [],
+  "unselected_stale": []
+}
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.22s
+Maps: compiling changed app
+   Compiling zmij v1.0.23
+   Compiling serde_core v1.0.229
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/developer/components)
+   Compiling onklav-maps v0.1.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/apps/maps)
+    Finished `release` profile [optimized] target(s) in 8.78s
+Created /workspace/scratch/75acf774e3b8/recovered/OnKlav/sdk/packages/.sdk-build-aos2xzw6/Maps.onklav-a
+{"built": ["Maps"], "bundles_restored": [], "all_packages_current": true}

@@ -1,0 +1,416 @@
+--- before/core/src/content.rs
++++ after/core/src/content.rs
+@@ -24,7 +24,8 @@
+ fn folder<'a>(index:&'a Index,id:&str)->Result<&'a Entry>{let e=index.entries.get(id).filter(|e|e.folder).ok_or("Choose a folder")?;if id=="system"||trashed(index,id)?{return Err("Choose an active content folder".into())}Ok(e)}
+ fn note_name(n:&Note)->String{let raw=crate::plain(n.title.trim(),80).chars().map(|c|if c.is_control()||"/\\:".contains(c){'_'}else{c}).collect::<String>();let title=raw.trim_start_matches('.').trim();format!("{}.txt",if title.is_empty(){"Untitled Note"}else{title})}
+ fn unique(index:&Index,parent:&str,name:&str,exclude:&str)->String{
+- let available=|name:&str|!index.entries.values().any(|e|e.id!=exclude&&e.parent==parent&&e.name.to_lowercase()==name.to_lowercase());
++ let occupied:std::collections::HashSet<String>=index.entries.values().filter(|e|e.id!=exclude&&e.parent==parent).map(|e|e.name.to_lowercase()).collect();
++ let available=|name:&str|!occupied.contains(&name.to_lowercase());
+  if available(name){return name.into()}
+  // Count UTF-16 units like Android and never split a surrogate pair. Reserve
+  // suffix space before shortening either part, including unusually long extensions.
+@@ -32,7 +33,11 @@
+  let (stem,ext)=name.rsplit_once('.').filter(|(s,_)|!s.is_empty()).map(|(s,e)|(s,format!(".{e}"))).unwrap_or((name,String::new()));
+  for n in 2..=MAX_ENTRIES+2{
+   let suffix=format!(" ({n})");let budget=180-suffix.len();
+-  let ext=prefix(&ext,budget-1);let stem=prefix(stem,budget-ext.encode_utf16().count());
++  // The first scalar can need two UTF-16 units. Truncating an extension
++  // must not leave a trailing space that the next index load would reject.
++  let first=stem.chars().next().map_or(1,char::len_utf16);
++  let ext=prefix(&ext,budget-first).trim_end().to_string();
++  let stem=prefix(stem,budget-ext.encode_utf16().count());
+   let candidate=format!("{stem}{suffix}{ext}");
+   if available(&candidate){return candidate}
+  }
+@@ -119,7 +124,7 @@
+  fn put(root:&Path,parent:&str,name:&str,text:&str)->String{let mut i=load(root).unwrap();insert(root,&mut i,parent,name,"text/plain","test.app",text.as_bytes()).unwrap()["id"].as_str().unwrap().into()}
+  #[test] fn duplicate_maximum_length_names_remain_readable_after_copy_import_and_restore(){
+   let d=tempfile::tempdir().unwrap();let r=d.path();
+-  for name in [format!("{}.txt","a".repeat(176)),format!("a.{}","x".repeat(178)),format!("{}.txt","🐈".repeat(88))]{
++  for name in [format!("{}.txt","a".repeat(176)),format!("a.{}","x".repeat(178)),format!("{}.txt","🐈".repeat(88)),format!("🐈.{}","x".repeat(177)),format!("a.{} z", "x".repeat(175))]{
+    let id=put(r,"downloads",&name,"original");
+    service(r,"library.copy",&json!({"id":id,"parent":"downloads"})).unwrap();
+    fs::write(r.join("content-import.tmp"),b"imported").unwrap();
+@@ -132,6 +137,11 @@
+     let bytes=fs::read(object(r,&e.id).unwrap()).unwrap();assert!(bytes==b"original"||bytes==b"imported");
+    }
+   }
++ }
++ #[test] fn many_case_insensitive_collisions_find_the_next_name_without_a_full_scan_per_candidate(){
++  let mut index=Index::default();
++  for n in 1..=9_000{let id=format!("{n:032x}");let name=if n==1{"FILE.txt".into()}else{format!("FILE ({n}).txt")};index.entries.insert(id.clone(),Entry{id,parent:"downloads".into(),name,mime:"text/plain".into(),owner:"test".into(),folder:false,note:false,bytes:0,from:None});}
++  assert_eq!(unique(&index,"downloads","file.txt",""),"file (9001).txt");
+  }
+  #[test] fn roots_and_notes_live_in_the_shared_library(){let d=tempfile::tempdir().unwrap();let r=d.path();assert_eq!(list(r,"")["items"].as_array().unwrap().len(),8);note_save(r,&note(1,"Hello","Actual note")).unwrap();let rows=list(r,"notes");assert_eq!(rows["items"][0]["name"],"Hello.txt");assert_eq!(note_read(r,&format!("{:032x}",1)).unwrap().text,"Actual note");assert!(crate::location(&base(r).unwrap(),&format!("{:032x}",1)).unwrap().is_file());}
+  #[test] fn existing_notes_are_verified_migrated_once_and_originals_remain(){let d=tempfile::tempdir().unwrap();let r=d.path();let old=r.join("app-sdk/data/app.onklav.notes");crate::save_note(&old,&note(1,"Existing","Keep me")).unwrap();assert_eq!(note_list(r).unwrap().len(),1);let mut changed=note_read(r,&format!("{:032x}",1)).unwrap();changed.text="Edited in the shared store".into();note_save(r,&changed).unwrap();assert_eq!(note_read(r,&changed.id).unwrap().text,changed.text);assert_eq!(crate::read_note(&old,&changed.id).unwrap().text,"Keep me");service(r,"library.trash",&json!({"id":changed.id})).unwrap();assert!(note_list(r).unwrap().is_empty());assert!(note_list(r).unwrap().is_empty());}
+--- before/android/app/build.gradle.kts
++++ after/android/app/build.gradle.kts
+@@ -5,7 +5,7 @@
+     namespace="app.onklav.home"
+     ndkVersion="27.2.12479018"
+     compileSdk=36
+-    defaultConfig { applicationId="app.onklav.home.prototype";minSdk=29;targetSdk=35;versionCode=73;versionName="0.65.0-dev";testInstrumentationRunner="androidx.test.runner.AndroidJUnitRunner";ndk {abiFilters+=onklavAbis} }
++    defaultConfig { applicationId="app.onklav.home.prototype";minSdk=29;targetSdk=35;versionCode=74;versionName="0.66.0-dev";testInstrumentationRunner="androidx.test.runner.AndroidJUnitRunner";ndk {abiFilters+=onklavAbis} }
+     buildFeatures {compose=true}
+     compileOptions {sourceCompatibility=JavaVersion.VERSION_17;targetCompatibility=JavaVersion.VERSION_17}
+     kotlinOptions {jvmTarget="17"}
+--- before/android/app/src/main/kotlin/app/onklav/home/DriveBackup.kt
++++ after/android/app/src/main/kotlin/app/onklav/home/DriveBackup.kt
+@@ -20,10 +20,28 @@
+ 
+ /** Cloud authentication and destination selection belong to Android's document provider. */
+ internal object DriveDocuments {
++ internal fun sameDocument(source:Uri,destination:Uri):Boolean {
++  if(source.buildUpon().clearQuery().fragment(null).build()==destination.buildUpon().clearQuery().fragment(null).build())return true
++  if(source.authority!=destination.authority)return false
++  val first=runCatching{DocumentsContract.getDocumentId(source)}.getOrNull()
++  return first!=null&&first==runCatching{DocumentsContract.getDocumentId(destination)}.getOrNull()
++ }
+  suspend fun copy(c:Context,source:Uri,destination:Uri)=withContext(Dispatchers.IO){
+-  require(source.scheme=="content"&&destination.scheme=="content"&&source!=destination){"Choose a new destination file"}
+-  val job=currentCoroutineContext()
+-  c.contentResolver.openInputStream(source)?.use{input->c.contentResolver.openOutputStream(destination,"wt")?.use{output->FilesBroker.copyBounded(input,output){job.ensureActive()}}?:error("The destination could not be opened") }?:error("The selected file could not be opened")
++  // Validate before opening or deleting anything, including tree/document aliases.
++  require(source.scheme=="content"&&destination.scheme=="content"&&!sameDocument(source,destination)){"Choose a new destination file"}
++  val job=currentCoroutineContext();var opened=false
++  try {
++   c.contentResolver.openInputStream(source)?.use { input ->
++    c.contentResolver.openOutputStream(destination,"wt")?.use { output ->
++     opened=true;FilesBroker.copyBounded(input,output){job.ensureActive()}
++    }?:error("The destination could not be opened")
++   }?:error("The selected file could not be opened")
++  }catch(e:Exception){
++   // Only a destination actually opened for this copy is eligible for cleanup.
++   // A rejected same-file request or inaccessible source must never delete it.
++   if(opened)withContext(NonCancellable){runCatching{DocumentsContract.deleteDocument(c.contentResolver,destination)}}
++   throw e
++  }
+  }
+ }
+ 
+@@ -35,15 +53,15 @@
+  val destination=rememberLauncherForActivityResult(FileExportContract()){uri->
+   val source=selected;selected=null
+   if(uri!=null&&source!=null){busy=true;status="Saving $name…";job=scope.launch{
+-   try{DriveDocuments.copy(c,Uri.parse(source),uri);runCatching{c.contentResolver.takePersistableUriPermission(uri,Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION)};check(prefs.edit().putString("last_uri",uri.toString()).putString("last_mime",mime).putString("last_name",name).commit());latest=uri.toString();status="Saved through Android Files. If you chose Google Drive, Drive manages cloud syncing."}
+-   catch(e:CancellationException){withContext(NonCancellable+Dispatchers.IO){runCatching{DocumentsContract.deleteDocument(c.contentResolver,uri)}};status="Upload stopped. Check the destination for a partial file.";throw e}
+-   catch(e:Exception){runCatching{withContext(Dispatchers.IO){DocumentsContract.deleteDocument(c.contentResolver,uri)}};status="Copy did not complete. Check the destination before retrying.";error=e.message}
++   try{DriveDocuments.copy(c,Uri.parse(source),uri);runCatching{c.contentResolver.takePersistableUriPermission(uri,Intent.FLAG_GRANT_READ_URI_PERMISSION or Intent.FLAG_GRANT_WRITE_URI_PERMISSION)};val remembered=withContext(Dispatchers.IO){prefs.edit().putString("last_uri",uri.toString()).putString("last_mime",mime).putString("last_name",name).commit()};latest=uri.toString();status=if(remembered)"Saved through Android Files. If you chose Google Drive, Drive manages cloud syncing."else"File saved, but the last-saved shortcut could not be remembered."}
++   catch(e:CancellationException){status="Copy stopped. Check the destination for a partial file.";throw e}
++   catch(e:Exception){status="Copy did not complete. Check the destination before retrying.";error=e.message}
+    finally{busy=false;job=null}
+   }}
+  }
+  val picker=rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()){uri->if(uri!=null){
+   selected=uri.toString();runCatching{c.contentResolver.takePersistableUriPermission(uri,Intent.FLAG_GRANT_READ_URI_PERMISSION)}
+-  scope.launch{try{name=withContext(Dispatchers.IO){MessageMedia.name(c,uri)};mime=c.contentResolver.getType(uri)?:"application/octet-stream";destination.launch(FileExportRequest(name,mime))}catch(e:Exception){selected=null;error=e.message}}
++  busy=true;job=scope.launch{try{val info=withContext(Dispatchers.IO){MessageMedia.name(c,uri) to (c.contentResolver.getType(uri)?:"application/octet-stream")};name=info.first;mime=info.second;destination.launch(FileExportRequest(name,mime))}catch(e:CancellationException){selected=null;throw e}catch(e:Exception){selected=null;error=e.message}finally{busy=false;job=null}}
+  }}
+  BackHandler{if(busy)job?.cancel()else exit()}
+  Surface(Modifier.fillMaxSize(),color=MaterialTheme.colorScheme.background){Column(Modifier.fillMaxSize().windowInsetsPadding(WindowInsets.safeDrawing)){
+--- before/android/app/src/main/kotlin/app/onklav/home/DriveSharing.kt
++++ after/android/app/src/main/kotlin/app/onklav/home/DriveSharing.kt
+@@ -18,6 +18,8 @@
+ import com.google.android.gms.auth.api.identity.*
+ import com.google.android.gms.common.api.Scope
+ import kotlinx.coroutines.*
++import kotlinx.coroutines.sync.Mutex
++import kotlinx.coroutines.sync.withLock
+ import okhttp3.*
+ import okhttp3.MediaType.Companion.toMediaType
+ import okhttp3.RequestBody.Companion.toRequestBody
+@@ -38,6 +40,8 @@
+         const val SCOPE="https://www.googleapis.com/auth/drive.file"
+         const val MAX=100L*1024*1024
+         private const val API="https://www.googleapis.com/drive/v3"
++        // One process-wide operation protects the single durable pending-file journal.
++        private val operations=Mutex()
+         private val http=OkHttpClient.Builder().followRedirects(false).followSslRedirects(false)
+             .retryOnConnectionFailure(false).connectTimeout(20,TimeUnit.SECONDS)
+             .readTimeout(45,TimeUnit.SECONDS).writeTimeout(45,TimeUnit.SECONDS).callTimeout(180,TimeUnit.SECONDS).build()
+@@ -49,6 +53,16 @@
+         internal fun fileId(value:String):String {
+             require(value.matches(Regex("[A-Za-z0-9_-]{1,200}"))) { "Drive returned an invalid file identity" };return value
+         }
++        internal fun decodeResponse(response:Response):DriveResponse=response.use { r ->
++            val bytes=r.body?.byteStream()?.use { stream ->
++                val output=java.io.ByteArrayOutputStream();val buffer=ByteArray(8192)
++                while(output.size()<=1024*1024){val n=stream.read(buffer);if(n<0)break;if(n==0)continue;output.write(buffer,0,n)}
++                output.toByteArray()
++            }?:byteArrayOf()
++            check(bytes.size<=1024*1024) { "Drive returned too much data" }
++            val json=if(bytes.isEmpty())JSONObject()else runCatching{JSONObject(String(bytes,Charsets.UTF_8))}.getOrElse{if(r.isSuccessful)throw it else JSONObject()}
++            DriveResponse(r.code,json,r.header("Location"))
++        }
+         private suspend fun execute(request:Request):DriveResponse = suspendCancellableCoroutine { continuation ->
+             val call=http.newCall(request)
+             continuation.invokeOnCancellation { call.cancel() }
+@@ -56,15 +70,7 @@
+                 override fun onFailure(call:Call,e:IOException) { if(continuation.isActive)continuation.resumeWithException(IOException("Drive could not complete the request. Check your connection.")) }
+                 override fun onResponse(call:Call,response:Response) {
+                     try {
+-                        val result=response.use { r ->
+-                            val bytes=r.body?.byteStream()?.use { stream ->
+-                                val output=java.io.ByteArrayOutputStream();val buffer=ByteArray(8192)
+-                                while(output.size()<=1024*1024){val n=stream.read(buffer);if(n<0)break;if(n==0)continue;output.write(buffer,0,n)}
+-                                output.toByteArray()
+-                            }?:byteArrayOf()
+-                            check(bytes.size<=1024*1024) { "Drive returned too much data" }
+-                            DriveResponse(r.code,if(bytes.isEmpty())JSONObject()else JSONObject(String(bytes,Charsets.UTF_8)),r.header("Location"))
+-                        }
++                        val result=decodeResponse(response)
+                         if(continuation.isActive)continuation.resume(result)
+                     } catch(e:Exception) { if(continuation.isActive)continuation.resumeWithException(IOException("Drive returned an unreadable response")) }
+                 }
+@@ -85,7 +91,9 @@
+         }
+     }
+     private suspend fun request(token:String,method:String,url:String,body:RequestBody?=null):DriveResponse {
++        currentCoroutineContext().ensureActive()
+         val response=exchange(Request.Builder().url(url).header("Authorization","Bearer $token").method(method,body).build())
++        currentCoroutineContext().ensureActive()
+         check(response.code in 200..299) { when(response.code) {
+             401->"Drive access expired. Connect again."
+             403->"Drive did not allow this action. Check your account's storage and sharing policy."
+@@ -94,7 +102,7 @@
+     }
+     private fun json(value:JSONObject)=value.toString().toRequestBody("application/json; charset=utf-8".toMediaType())
+     suspend fun account(token:String)=request(token,"GET","$API/about?fields=user(emailAddress)").body.getJSONObject("user").getString("emailAddress").also { require(it.isNotBlank()&&it.length<=320) }
+-    suspend fun upload(c:Context,token:String,account:String,file:File,name:String,mime:String,progress:(Float)->Unit):String {
++    suspend fun upload(c:Context,token:String,account:String,file:File,name:String,mime:String,progress:(Float)->Unit):String = withContext(Dispatchers.IO) { operations.withLock {
+         require(file.length() in 1..MAX)
+         val prefs=c.getSharedPreferences("drive-sharing",0)
+         check(!prefs.contains("pending")) { "Review the unfinished upload before uploading another file" }
+@@ -104,14 +112,14 @@
+         val metadata=JSONObject().put("id",id).put("name",name).put("mimeType",mime)
+         val init=request(token,"POST","https://www.googleapis.com/upload/drive/v3/files?uploadType=resumable&fields=id",json(metadata))
+         val destination=uploadLocation(init.location?:error("Drive did not provide an upload destination"))
+-        val job=currentCoroutineContext();val size=file.length()
++        val job=currentCoroutineContext();val size=file.length();var reported=-1
+         val body=object:RequestBody() {
+             override fun contentType()=mime.toMediaType()
+             override fun contentLength()=size
+             override fun isOneShot()=true
+             override fun writeTo(sink:BufferedSink) { file.inputStream().use { input ->
+                 val buffer=ByteArray(64*1024);var copied=0L
+-                while(true) { job.ensureActive();val n=input.read(buffer);if(n<0)break;if(n==0)continue;sink.write(buffer,0,n);copied+=n;progress(copied.toFloat()/size) }
++                while(true) { job.ensureActive();val n=input.read(buffer);if(n<0)break;if(n==0)continue;sink.write(buffer,0,n);copied+=n;val percent=(100*copied/size).toInt();if(percent!=reported){reported=percent;progress(copied.toFloat()/size)} }
+                 check(copied==size) { "The upload file changed" }
+             } }
+         }
+@@ -120,16 +128,17 @@
+         val link=request(token,"GET","$API/files/$id?fields=webViewLink").body.getString("webViewLink")
+         val uri=Uri.parse(link);check(uri.scheme=="https"&&uri.host=="drive.google.com"&&uri.userInfo==null&&uri.port in setOf(-1,443)) { "Drive returned an invalid sharing link" }
+         check(prefs.edit().putString("last_link",link).remove("pending").commit()) { "Uploaded; recovery information could not be cleared. Review the saved file in Drive." }
+-        return link
+-    }
+-    suspend fun removePending(c:Context,token:String,account:String) {
+-        val prefs=c.getSharedPreferences("drive-sharing",0);val row=prefs.getString("pending",null)?:return
++        link
++    } }
++    suspend fun removePending(c:Context,token:String,account:String) = withContext(Dispatchers.IO) { operations.withLock {
++        val prefs=c.getSharedPreferences("drive-sharing",0);val row=prefs.getString("pending",null)?:return@withLock
+         val pending=JSONObject(row);check(pending.getString("account")==account) { "Connect the account used for the unfinished upload" }
+         val id=fileId(pending.getString("id"))
+         val response=exchange(Request.Builder().url("$API/files/$id").header("Authorization","Bearer $token").delete().build())
+         check(response.code in setOf(204,404)) { "Drive could not confirm removal. The unfinished upload remains saved for retry." }
++        currentCoroutineContext().ensureActive()
+         check(prefs.edit().remove("pending").commit()) { "File removed; could not clear the saved recovery record" }
+-    }
++    } }
+ }
+ 
+ @Composable internal fun DriveShareDialog(close:()->Unit,onLink:(String)->Unit) {
+@@ -149,7 +158,7 @@
+     fun authorized(result:AuthorizationResult) {
+         val value=result.accessToken
+         if(value.isNullOrBlank()||!result.grantedScopes.contains(DriveSharing.SCOPE)) { busy=false;error="Drive permission was not granted";return }
+-        job=scope.launch { try { val email=api.account(value);check(prefs.edit().putString("account",email).commit());account=email;token=value;status="Connected" }
++        job=scope.launch { try { val email=api.account(value);check(withContext(Dispatchers.IO){prefs.edit().putString("account",email).commit()});account=email;token=value;status="Connected" }
+             catch(e:CancellationException){throw e}catch(e:Exception){token=null;error=e.message}finally{busy=false;job=null} }
+     }
+     val resolution=rememberLauncherForActivityResult(ActivityResultContracts.StartIntentSenderForResult()) { result ->
+@@ -158,17 +167,19 @@
+         if(result.resultCode==android.app.Activity.RESULT_OK&&result.data!=null)runCatching { authorized(auth.getAuthorizationResultFromIntent(result.data!!)) }.onFailure {busy=false;error="Drive permission was not granted"}
+         else {busy=false;status="Connection cancelled"}
+     }
+-    fun connect() {
+-        busy=true;status="Connecting…";val attempt=++generation
+-        val request=AuthorizationRequest.builder().setRequestedScopes(listOf(Scope(DriveSharing.SCOPE))).apply { if(account.isNotBlank())setAccount(Account(account,"com.google")) }.build()
++    fun connect(useSavedAccount:Boolean=true) {
++        busy=true;status="Connecting…";waitingResolution=false;val attempt=++generation
++        try {
++        val request=AuthorizationRequest.builder().setRequestedScopes(listOf(Scope(DriveSharing.SCOPE))).apply { if(useSavedAccount&&account.isNotBlank())setAccount(Account(account,"com.google")) }.build()
+         auth.authorize(request).addOnSuccessListener { result -> if(active&&attempt==generation) {
+             try { if(result.hasResolution()){waitingResolution=true;resolution.launch(IntentSenderRequest.Builder(requireNotNull(result.pendingIntent)).build())}else authorized(result) }
+             catch(e:Exception){busy=false;error="Google account selection could not open"}
+         } }.addOnFailureListener { if(active&&attempt==generation){busy=false;error="Could not connect Google Drive. Check Google Play services and the app's Google account configuration."} }
++        }catch(e:Exception){busy=false;error="Google account selection could not open. Check Google Play services."}
+     }
+     val picker=rememberLauncherForActivityResult(ActivityResultContracts.OpenDocument()) { uri -> if(uri!=null) {
+         runCatching { c.contentResolver.takePersistableUriPermission(uri,android.content.Intent.FLAG_GRANT_READ_URI_PERMISSION) }
+-        selected=uri.toString();name="Selected file";job=scope.launch { try { name=withContext(Dispatchers.IO){FilesBroker.cleanName(MessageMedia.name(c,uri))} }catch(e:CancellationException){throw e}catch(e:Exception){error=e.message} }
++        selected=uri.toString();name="Selected file";busy=true;job=scope.launch { try { name=withContext(Dispatchers.IO){FilesBroker.cleanName(MessageMedia.name(c,uri))} }catch(e:CancellationException){selected=null;throw e}catch(e:Exception){selected=null;error=e.message}finally{busy=false;job=null} }
+     } }
+     DisposableEffect(Unit) { onDispose { active=false;generation++;job?.cancel() } }
+     Column(verticalArrangement=Arrangement.spacedBy(8.dp)) {
+@@ -176,6 +187,7 @@
+         Text(if(account.isBlank())"Connect Google Drive to share files up to 100 MB."else "Connected: $account",fontSize=15.sp)
+         Text("Uploads use your Drive storage. Anyone with the link can view or download the file and may see your Google account name and email. Deleting the file from Drive stops access.",fontSize=14.sp)
+         ChoiceButton(if(token==null)"Connect Google Drive"else"Refresh Drive access",outlined=false,enabled=!busy) {connect()}
++        if(account.isNotBlank())ChoiceButton("Choose a different account",outlined=false,enabled=!busy){connect(false)}
+         if(token!=null) {
+             ChoiceButton("Disconnect Google Drive",outlined=false,enabled=!busy) {
+                 busy=true;val attempt=++generation
+@@ -194,7 +206,7 @@
+                         val access=token?:return@ChoiceButton;busy=true;status="Uploading…";link=null;progress=0f
+                         job=scope.launch { var staged:File?=null
+                             try { withTimeout(240000) { val uri=Uri.parse(source);staged=File(c.cacheDir,"drive-${UUID.randomUUID()}.tmp");DriveSharing.stage(c,uri,staged!!)
+-                                val mime=c.contentResolver.getType(uri)?.takeIf{it.matches(Regex("[A-Za-z0-9!#$&^_.+-]+/[A-Za-z0-9!#$&^_.+-]+"))}?:"application/octet-stream"
++                                val mime=withContext(Dispatchers.IO){c.contentResolver.getType(uri)?.takeIf{it.matches(Regex("[A-Za-z0-9!#$&^_.+-]+/[A-Za-z0-9!#$&^_.+-]+"))}?:"application/octet-stream"}
+                                 val result=api.upload(c,access,account,staged!!,name,mime){progress=it}
+                                 selected=null;link=result;status="Link ready";onLink?.invoke(result)
+                             } }catch(e:CancellationException){status="Upload stopped. Review any unfinished file before retrying.";throw e}
+--- before/android/app/src/test/kotlin/app/onklav/home/DriveSharingTest.kt
++++ after/android/app/src/test/kotlin/app/onklav/home/DriveSharingTest.kt
+@@ -2,8 +2,11 @@
+ 
+ import android.content.Context
+ import androidx.test.core.app.ApplicationProvider
+-import kotlinx.coroutines.runBlocking
++import kotlinx.coroutines.*
+ import okhttp3.Request
++import okhttp3.Response
++import okhttp3.Protocol
++import okhttp3.ResponseBody.Companion.toResponseBody
+ import okio.Buffer
+ import org.json.JSONObject
+ import org.junit.Assert.*
+@@ -52,6 +55,55 @@
+             api.removePending(c,"token","owner@example.org");assertEquals(3,calls);assertFalse(prefs.contains("pending"))
+         }finally{file.delete();prefs.edit().clear().commit()}
+     }
++    @Test fun overlappingUploadsCannotOverwriteTheUnfinishedFileRecord()=runBlocking {
++        withTimeout(5000) {
++            val prefs=c.getSharedPreferences("drive-sharing",0);prefs.edit().clear().commit()
++            val file=File(c.cacheDir,"drive-concurrent-test").apply{writeText("keep")}
++            val started=CompletableDeferred<Unit>();val release=CompletableDeferred<Unit>()
++            val ids=java.util.concurrent.atomic.AtomicInteger()
++            val api=DriveSharing { request ->
++                if(request.url.encodedPath.endsWith("generateIds")){
++                    val number=ids.incrementAndGet()
++                    if(number==1){started.complete(Unit);release.await()}
++                    DriveResponse(200,JSONObject().put("ids",org.json.JSONArray().put("file-$number")))
++                }else DriveResponse(403,JSONObject())
++            }
++            try {
++                val first=async{runCatching{api.upload(c,"token","owner@example.org",file,"Test","text/plain") {}}}
++                started.await()
++                val second=async{runCatching{api.upload(c,"token","owner@example.org",file,"Test","text/plain") {}}}
++                // Let the competing caller reach the operation while the first ID request is suspended.
++                yield();delay(50);release.complete(Unit)
++                assertTrue(first.await().isFailure);assertTrue(second.await().isFailure)
++                assertEquals(1,ids.get());assertEquals("file-1",JSONObject(prefs.getString("pending",null)!!).getString("id"))
++            }finally{release.complete(Unit);file.delete();prefs.edit().clear().commit()}
++        }
++    }
++    @Test fun cancellingUploadKeepsRecoveryRecordAndNeverPublishesPermission()=runBlocking {
++        withTimeout(5000) {
++            val prefs=c.getSharedPreferences("drive-sharing",0);prefs.edit().clear().commit()
++            val file=File(c.cacheDir,"drive-cancel-test").apply{writeText("keep")}
++            val uploading=CompletableDeferred<Unit>();var published=false
++            val api=DriveSharing { request ->when {
++                request.url.encodedPath.endsWith("generateIds")->DriveResponse(200,JSONObject("{\"ids\":[\"cancel-file\"]}"))
++                request.method=="PUT"->{uploading.complete(Unit);awaitCancellation()}
++                request.url.encodedPath.endsWith("permissions")->{published=true;DriveResponse(200,JSONObject())}
++                else->DriveResponse(200,JSONObject(),"https://www.googleapis.com/upload/drive/v3/files?upload_id=cancel")
++            } }
++            try {
++                val task=launch{api.upload(c,"token","owner@example.org",file,"Test","text/plain") {}}
++                uploading.await();task.cancelAndJoin()
++                assertFalse(published);assertEquals("cancel-file",JSONObject(prefs.getString("pending",null)!!).getString("id"))
++            }finally{file.delete();prefs.edit().clear().commit()}
++        }
++    }
++    @Test fun nonJsonErrorResponsesPreserveHttpStatusButSuccessfulGarbageFails() {
++        fun response(code:Int,body:String)=Response.Builder().request(Request.Builder().url("https://www.googleapis.com/drive/v3/files/test").build())
++            .protocol(Protocol.HTTP_1_1).code(code).message("fixture").body(body.toResponseBody()).build()
++        assertEquals(404,DriveSharing.decodeResponse(response(404,"<html>Not found</html>")).code)
++        assertThrows(Exception::class.java){DriveSharing.decodeResponse(response(200,"broken JSON"))}
++        assertThrows(IllegalStateException::class.java){DriveSharing.decodeResponse(response(200,"x".repeat(1024*1024+1)))}
++    }
+     @Test fun rejectsForeignCredentialDestinationsAndUnsafeIdentities() {
+         for(url in listOf("http://www.googleapis.com/upload/drive/v3/files","https://www.googleapis.com.evil.test/upload/drive/v3/files","https://evil.test/upload/drive/v3/files","https://user@www.googleapis.com/upload/drive/v3/files","https://www.googleapis.com/drive/v3/files")) {
+             try{DriveSharing.uploadLocation(url);fail(url)}catch(_:IllegalArgumentException){}
+--- before/android/app/src/test/kotlin/app/onklav/home/DriveDocumentsTest.kt
++++ after/android/app/src/test/kotlin/app/onklav/home/DriveDocumentsTest.kt
+@@ -0,0 +1,68 @@
++package app.onklav.home
++
++import android.content.*
++import android.content.pm.ProviderInfo
++import android.database.Cursor
++import android.net.Uri
++import android.os.Bundle
++import android.os.ParcelFileDescriptor
++import androidx.test.core.app.ApplicationProvider
++import kotlinx.coroutines.runBlocking
++import org.junit.Assert.*
++import org.junit.Test
++import org.junit.runner.RunWith
++import org.robolectric.RobolectricTestRunner
++import org.robolectric.Shadows
++import org.robolectric.annotation.Config
++import org.robolectric.shadows.ShadowContentResolver
++import java.io.File
++import java.io.IOException
++import java.io.InputStream
++
++@RunWith(RobolectricTestRunner::class)
++@Config(sdk=[29])
++class DriveDocumentsTest {
++    private val c:Context get()=ApplicationProvider.getApplicationContext()
++    class Storage:ContentProvider() {
++        var opens=0;var deletes=0
++        override fun onCreate()=true
++        override fun query(u:Uri,p:Array<out String>?,s:String?,a:Array<out String>?,o:String?):Cursor?=null
++        override fun getType(u:Uri)="application/octet-stream"
++        override fun insert(u:Uri,v:ContentValues?):Uri?=null
++        override fun update(u:Uri,v:ContentValues?,s:String?,a:Array<out String>?)=0
++        override fun delete(u:Uri,s:String?,a:Array<out String>?)=0
++        override fun openFile(uri:Uri,mode:String):ParcelFileDescriptor {
++            opens++;val f=File(context!!.cacheDir,"copy-${uri.lastPathSegment}")
++            return ParcelFileDescriptor.open(f,if(mode=="r")ParcelFileDescriptor.MODE_READ_ONLY else ParcelFileDescriptor.MODE_WRITE_ONLY or ParcelFileDescriptor.MODE_CREATE or ParcelFileDescriptor.MODE_TRUNCATE)
++        }
++        override fun call(method:String,arg:String?,extras:Bundle?):Bundle? {
++            if(method=="android:deleteDocument") {deletes++;File(context!!.cacheDir,"copy-destination").delete();return Bundle()}
++            return super.call(method,arg,extras)
++        }
++    }
++    private fun provider()=Storage().also { p->p.attachInfo(c,ProviderInfo().apply{authority="copy-fixture"});ShadowContentResolver.registerProviderInternal("copy-fixture",p) }
++    private val source=Uri.parse("content://copy-fixture/document/source")
++    private val destination=Uri.parse("content://copy-fixture/document/destination")
++    @Test fun sameDocumentAliasesRejectBeforeOpeningOrDeletingAnyFile()=runBlocking {
++        val p=provider();val original=File(c.cacheDir,"copy-source").apply{writeText("valuable original")}
++        for(alias in listOf(source,Uri.parse("content://copy-fixture/tree/root/document/source"),source.buildUpon().appendQueryParameter("display","different").build())) {
++            try{DriveDocuments.copy(c,source,alias);fail("Same document accepted")}catch(_:IllegalArgumentException){}
++            assertEquals("valuable original",original.readText());assertEquals(0,p.opens);assertEquals(0,p.deletes)
++        }
++    }
++    @Test fun unreadableSourceDoesNotDeleteOrTruncateTheChosenDestination()=runBlocking {
++        val p=provider();val target=File(c.cacheDir,"copy-destination").apply{writeText("keep target")}
++        File(c.cacheDir,"copy-source").delete()
++        try{DriveDocuments.copy(c,source,destination);fail("Missing source accepted")}catch(_:java.io.FileNotFoundException){}
++        assertEquals("keep target",target.readText());assertEquals(0,p.deletes)
++    }
++    @Test fun partialCopyFailureCleansOnlyTheOpenedDestination()=runBlocking {
++        val p=provider();File(c.cacheDir,"copy-source").writeText("source remains")
++        Shadows.shadowOf(c.contentResolver).registerInputStream(source,object:InputStream(){var sent=false
++            override fun read():Int=throw IOException("fixture read failed")
++            override fun read(bytes:ByteArray,offset:Int,length:Int):Int {if(sent)throw IOException("fixture read failed");sent=true;bytes[offset]=1;return 1}
++        })
++        try{DriveDocuments.copy(c,source,destination);fail("Read failure hidden")}catch(_:IOException){}
++        assertEquals(1,p.deletes);assertFalse(File(c.cacheDir,"copy-destination").exists());assertEquals("source remains",File(c.cacheDir,"copy-source").readText())
++    }
++}

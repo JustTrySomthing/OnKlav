@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.GameWindowHostTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-11-03T13:19:49" hostname="d82446dcc971" time="3.265">
+  <properties/>
+  <testcase name="returnReordersOnKlavWithoutDestroyingTheGame" classname="app.onklav.home.GameWindowHostTest" time="3.034"/>
+  <testcase name="resumedWebViewAlwaysRestartsTimersAndIgnoresLatePauseCallback" classname="app.onklav.home.GameWindowHostTest" time="0.121"/>
+  <testcase name="immersiveWindowHasNoExtraHeaderAndRespectsCutout" classname="app.onklav.home.GameWindowHostTest" time="0.11"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

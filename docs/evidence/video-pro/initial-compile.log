@@ -1,0 +1,487 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.11.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :android:app
+WARNING: The option setting 'android.aapt2FromMavenOverride=/workspace/scratch/ee2d13f02de6/android-env/sdk/build-tools/35.0.0/aapt2' is experimental.
+WARNING: platform-tools package is not installed.
+
+> Task :android:app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:app:preBuild UP-TO-DATE
+> Task :android:app:preDebugBuild UP-TO-DATE
+> Task :android:games:preBuild UP-TO-DATE
+> Task :android:games:preDebugBuild UP-TO-DATE
+> Task :android:games:writeDebugAarMetadata UP-TO-DATE
+> Task :android:shared:preBuild UP-TO-DATE
+> Task :android:shared:preDebugBuild UP-TO-DATE
+> Task :android:shared:writeDebugAarMetadata UP-TO-DATE
+> Task :android:tools:preBuild UP-TO-DATE
+> Task :android:tools:preDebugBuild UP-TO-DATE
+> Task :android:tools:writeDebugAarMetadata UP-TO-DATE
+> Task :android:app:checkDebugAarMetadata UP-TO-DATE
+> Task :android:app:generateDebugResValues UP-TO-DATE
+> Task :android:games:generateDebugResValues UP-TO-DATE
+> Task :android:games:generateDebugResources UP-TO-DATE
+> Task :android:games:packageDebugResources UP-TO-DATE
+> Task :android:shared:generateDebugResValues UP-TO-DATE
+> Task :android:shared:generateDebugResources
+> Task :android:shared:packageDebugResources
+> Task :android:tools:generateDebugResValues UP-TO-DATE
+> Task :android:tools:generateDebugResources UP-TO-DATE
+> Task :android:tools:packageDebugResources UP-TO-DATE
+> Task :android:app:mapDebugSourceSetPaths
+> Task :android:app:generateDebugResources UP-TO-DATE
+> Task :android:app:mergeDebugResources
+> Task :android:app:packageDebugResources UP-TO-DATE
+> Task :android:app:parseDebugLocalResources UP-TO-DATE
+> Task :android:app:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :android:app:extractDeepLinksDebug UP-TO-DATE
+> Task :android:games:extractDeepLinksDebug UP-TO-DATE
+> Task :android:games:processDebugManifest UP-TO-DATE
+> Task :android:shared:extractDeepLinksDebug UP-TO-DATE
+> Task :android:shared:processDebugManifest UP-TO-DATE
+> Task :android:tools:extractDeepLinksDebug UP-TO-DATE
+> Task :android:tools:processDebugManifest UP-TO-DATE
+> Task :android:app:processDebugMainManifest UP-TO-DATE
+> Task :android:app:processDebugManifest UP-TO-DATE
+> Task :android:app:processDebugManifestForPackage UP-TO-DATE
+> Task :android:games:compileDebugLibraryResources UP-TO-DATE
+> Task :android:games:parseDebugLocalResources UP-TO-DATE
+> Task :android:games:generateDebugRFile UP-TO-DATE
+> Task :android:shared:parseDebugLocalResources
+> Task :android:shared:compileDebugLibraryResources
+> Task :android:tools:compileDebugLibraryResources UP-TO-DATE
+> Task :android:tools:parseDebugLocalResources UP-TO-DATE
+> Task :android:tools:generateDebugRFile UP-TO-DATE
+> Task :android:games:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:shared:generateDebugRFile
+> Task :android:games:compileDebugKotlin UP-TO-DATE
+> Task :android:games:javaPreCompileDebug UP-TO-DATE
+> Task :android:games:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:games:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :android:shared:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:app:processDebugResources
+> Task :android:shared:javaPreCompileDebug UP-TO-DATE
+> Task :android:tools:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:tools:javaPreCompileDebug UP-TO-DATE
+> Task :android:app:javaPreCompileDebug UP-TO-DATE
+> Task :android:app:preDebugUnitTestBuild UP-TO-DATE
+> Task :android:app:javaPreCompileDebugUnitTest UP-TO-DATE
+> Task :android:app:mergeDebugShaders UP-TO-DATE
+> Task :android:app:compileDebugShaders NO-SOURCE
+> Task :android:app:generateDebugAssets UP-TO-DATE
+> Task :android:games:mergeDebugShaders UP-TO-DATE
+> Task :android:games:compileDebugShaders NO-SOURCE
+> Task :android:games:generateDebugAssets UP-TO-DATE
+> Task :android:games:mergeDebugAssets UP-TO-DATE
+> Task :android:shared:mergeDebugShaders UP-TO-DATE
+> Task :android:shared:compileDebugShaders NO-SOURCE
+> Task :android:shared:generateDebugAssets UP-TO-DATE
+> Task :android:shared:mergeDebugAssets UP-TO-DATE
+> Task :android:tools:mergeDebugShaders UP-TO-DATE
+> Task :android:tools:compileDebugShaders NO-SOURCE
+> Task :android:tools:generateDebugAssets UP-TO-DATE
+> Task :android:tools:mergeDebugAssets UP-TO-DATE
+> Task :android:app:mergeDebugAssets
+> Task :android:app:packageDebugUnitTestForUnitTest
+> Task :android:app:generateDebugUnitTestConfig
+> Task :android:games:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :android:games:processDebugJavaRes UP-TO-DATE
+
+> Task :android:shared:compileDebugKotlin
+w: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/Chrome.kt:266:24 'var statusBarColor: Int' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/Chrome.kt:267:24 'var navigationBarColor: Int' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/Chrome.kt:268:65 'var isStatusBarContrastEnforced: Boolean' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/LauncherLayout.kt:4:27 Non-public primary constructor is exposed via the generated 'copy()' method of the 'data' class.
+
+The generated 'copy()' will change its visibility in future releases.
+
+To suppress the warning do one of the following:
+- Annotate the data class with the '@ConsistentCopyVisibility' annotation.
+- Use the '-Xconsistent-data-class-copy-visibility' compiler flag.
+- Annotate the data class with the '@ExposedCopyVisibility' annotation 
+  (Discouraged, but can be used to keep binary compatibility).
+
+To learn more, see the documentation of the '@ConsistentCopyVisibility' and '@ExposedCopyVisibility' annotations.
+
+This will become an error in Kotlin 2.2.
+
+> Task :android:shared:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:shared:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :android:shared:processDebugJavaRes UP-TO-DATE
+> Task :android:shared:bundleLibCompileToJarDebug
+> Task :android:tools:compileDebugKotlin
+> Task :android:tools:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:tools:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :android:tools:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :android:tools:processDebugJavaRes UP-TO-DATE
+> Task :android:app:compileDebugKotlin
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:188:6 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:189:5 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:189:7 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:189:8 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:189:9 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:189:10 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:189:14 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:189:16 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:189:17 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:189:18 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:189:24 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:189:26 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:189:27 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:189:45 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:189:46 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:189:47 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:189:58 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:189:59 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:189:75 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:189:76 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:189:76 Function declaration must have a name.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:189:78 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:189:79 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:189:84 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:189:85 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:189:85 Functions which invoke @Composable functions must be marked with the @Composable annotation
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:189:85 Function declaration must have a name.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:189:86 @Composable invocations can only happen from the context of a @Composable function
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:189:107 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:189:108 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:189:112 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:189:113 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:189:113 Functions which invoke @Composable functions must be marked with the @Composable annotation
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:189:113 Function declaration must have a name.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:189:114 @Composable invocations can only happen from the context of a @Composable function
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:189:175 Unresolved reference 'm'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:189:241 Unresolved reference 'm'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:189:341 Unresolved reference 'm'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:189:388 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:189:389 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:189:402 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:189:403 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:189:403 Functions which invoke @Composable functions must be marked with the @Composable annotation
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:189:403 Function declaration must have a name.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:189:404 @Composable invocations can only happen from the context of a @Composable function
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:189:423 Unresolved reference 'm'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:189:450 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:190:5 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:190:7 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:190:8 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:190:15 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:190:16 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:190:27 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:190:28 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:190:44 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:190:45 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:190:45 Function declaration must have a name.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:190:46 Unresolved reference 'library'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:190:60 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:190:61 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:190:66 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:190:67 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:190:67 Functions which invoke @Composable functions must be marked with the @Composable annotation
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:190:67 Function declaration must have a name.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:190:68 @Composable invocations can only happen from the context of a @Composable function
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:190:85 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:190:86 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:190:90 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:190:91 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:190:91 Functions which invoke @Composable functions must be marked with the @Composable annotation
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:190:91 Function declaration must have a name.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:190:92 @Composable invocations can only happen from the context of a @Composable function
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:190:144 @Composable invocations can only happen from the context of a @Composable function
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:190:231 Unresolved reference 'library'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:190:245 Unresolved reference 'm'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:190:313 Unresolved reference 'm'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:190:332 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:190:337 @Composable invocations can only happen from the context of a @Composable function
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:190:431 Unresolved reference 'library'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:190:445 Unresolved reference 'm'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:190:463 Unresolved reference 'id'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:190:539 Unresolved reference 'name'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:190:599 Unresolved reference 'clips'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:190:635 Unresolved reference 'duration'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:190:745 Unresolved reference 'name'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:190:753 Unresolved reference 'm'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:190:761 Unresolved reference 'deleteProject'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:190:779 Unresolved reference 'id'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:190:786 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:190:787 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:190:800 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:190:801 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:190:801 Functions which invoke @Composable functions must be marked with the @Composable annotation
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:190:801 Function declaration must have a name.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:190:802 @Composable invocations can only happen from the context of a @Composable function
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:190:822 Unresolved reference 'library'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:190:852 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:191:5 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:191:18 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:191:20 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:191:23 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:191:23 Function declaration must have a name.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:191:24 Unresolved reference 'id'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:191:26 Syntax error: Unexpected tokens (use ';' to separate expressions on the same line).
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:191:58 Unresolved reference 'deleteProject'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:191:77 Syntax error: Unexpected tokens (use ';' to separate expressions on the same line).
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:191:85 @Composable invocations can only happen from the context of a @Composable function
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:191:109 Syntax error: Unexpected tokens (use ';' to separate expressions on the same line).
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:191:116 @Composable invocations can only happen from the context of a @Composable function
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:191:224 Syntax error: Unexpected tokens (use ';' to separate expressions on the same line).
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:191:240 @Composable invocations can only happen from the context of a @Composable function
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:191:260 Unresolved reference 'm'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:191:276 Unresolved reference 'id'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:191:280 Unresolved reference 'deleteProject'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:191:317 Syntax error: Unexpected tokens (use ';' to separate expressions on the same line).
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:191:333 @Composable invocations can only happen from the context of a @Composable function
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:191:353 Unresolved reference 'deleteProject'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:191:390 Syntax error: Unexpected tokens (use ';' to separate expressions on the same line).
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:192:5 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:192:7 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:192:8 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:192:14 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:192:15 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:192:15 Functions which invoke @Composable functions must be marked with the @Composable annotation
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:192:15 Function declaration must have a name.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:192:28 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:192:28 @Composable invocations can only happen from the context of a @Composable function
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:192:28 Not enough information to infer type argument for 'T'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:192:28 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:192:28 Not enough information to infer type argument for 'T'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:192:37 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:192:37 Not enough information to infer type argument for 'T'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:192:52 Unresolved reference 'p'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:192:61 @Composable invocations can only happen from the context of a @Composable function
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:192:91 Unresolved reference 'rename'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:192:189 Unresolved reference 'it'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:192:226 @Composable invocations can only happen from the context of a @Composable function
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:192:277 Unresolved reference 'm'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:192:292 Unresolved reference 'rename'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:192:390 Unresolved reference 'rename'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:193:5 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:193:7 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:193:8 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:193:14 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:193:16 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:193:22 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:193:23 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:193:34 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:193:35 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:193:51 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:193:52 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:193:52 Function declaration must have a name.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:193:53 Unresolved reference 'canvas'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:193:66 Unresolved reference 'export'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:193:79 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:193:80 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:193:85 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:193:86 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:193:86 Functions which invoke @Composable functions must be marked with the @Composable annotation
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:193:86 Function declaration must have a name.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:193:87 @Composable invocations can only happen from the context of a @Composable function
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:193:95 Unresolved reference 'export'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:193:132 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:193:133 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:193:137 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:193:138 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:193:138 Functions which invoke @Composable functions must be marked with the @Composable annotation
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:193:138 Function declaration must have a name.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:193:139 @Composable invocations can only happen from the context of a @Composable function
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:193:191 @Composable invocations can only happen from the context of a @Composable function
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:194:226 Unresolved reference 'p'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:194:246 Unresolved reference 'm'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:194:248 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:194:254 Unresolved reference 'p'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:195:47 Unresolved reference 'p'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:195:60 Unresolved reference 'm'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:195:62 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:195:68 Unresolved reference 'p'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:196:230 Unresolved reference 'p'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:196:251 Unresolved reference 'm'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:196:253 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:196:259 Unresolved reference 'p'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:197:235 Unresolved reference 'p'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:197:255 Unresolved reference 'm'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:197:257 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:197:263 Unresolved reference 'p'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:199:164 Unresolved reference 'p'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:199:197 Unresolved reference 'm'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:199:199 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:199:205 Unresolved reference 'p'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:201:12 Unresolved reference 'export'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:201:57 Unresolved reference 'p'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:201:130 Unresolved reference 'p'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:202:7 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:202:8 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:202:21 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:202:22 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:202:22 Functions which invoke @Composable functions must be marked with the @Composable annotation
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:202:22 Function declaration must have a name.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:202:23 @Composable invocations can only happen from the context of a @Composable function
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:202:43 Unresolved reference 'canvas'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:202:59 Unresolved reference 'export'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:202:67 Unresolved reference 'export'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:202:80 Unresolved reference 'save'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:202:92 Unresolved reference 'p'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:202:160 Unresolved reference 'export'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:202:194 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:202:195 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:202:208 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:202:209 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:202:209 Functions which invoke @Composable functions must be marked with the @Composable annotation
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:202:209 Function declaration must have a name.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:202:213 Unresolved reference 'export'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:202:220 @Composable invocations can only happen from the context of a @Composable function
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:202:240 Unresolved reference 'export'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:202:271 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:203:5 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:203:7 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:203:8 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:203:15 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:203:17 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:203:18 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:203:20 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:203:24 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:203:25 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:203:25 Functions which invoke @Composable functions must be marked with the @Composable annotation
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:203:25 Function declaration must have a name.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:203:39 @Composable invocations can only happen from the context of a @Composable function
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:203:64 Unresolved reference 'c'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:203:71 Unresolved reference 'div' for operator '/'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:203:104 @Composable invocations can only happen from the context of a @Composable function
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:203:129 Unresolved reference 'c'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:203:134 Unresolved reference 'div' for operator '/'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:203:341 Unresolved reference 'c'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:204:9 @Composable invocations can only happen from the context of a @Composable function
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:204:39 Unresolved reference 'precise'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:204:438 Unresolved reference 'c'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:204:531 Unresolved reference 'm'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:204:553 Unresolved reference 'c'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:204:581 Unresolved reference 'm'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:204:592 Unresolved reference 'precise'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:204:673 Unresolved reference 'precise'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:205:5 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:205:12 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:205:14 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:205:17 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:205:17 Function declaration must have a name.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:205:18 Unresolved reference 'id'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:205:20 Syntax error: Unexpected tokens (use ';' to separate expressions on the same line).
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:205:55 Unresolved reference 'it'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:205:62 Unresolved reference 'id'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:205:67 Unresolved reference 'pendingTitle'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:205:67 Argument type mismatch: actual type is 'T? (of fun <T> T.takeIf)', but 'K (of fun <K> ELVIS_CALL)' was expected.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:205:81 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:205:87 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:205:91 Unresolved reference 'id'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:205:95 Unresolved reference 'id'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:205:98 Syntax error: Unexpected tokens (use ';' to separate expressions on the same line).
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:205:105 An explicit type is required on a value parameter.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:205:112 @Composable invocations can only happen from the context of a @Composable function
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:205:135 Unresolved reference 'c'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:205:153 Unresolved reference 'm'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:205:160 Unresolved reference 'c'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:205:177 Unresolved reference 'c'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:205:190 Unresolved reference 'it'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:205:197 Unresolved reference 'id'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:205:201 Unresolved reference 'c'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:205:217 Unresolved reference 'it'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:205:224 Unresolved reference 'id'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:205:237 Unresolved reference 'it'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:205:245 Unresolved reference 'c'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:205:261 Unresolved reference 'm'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:205:272 Unresolved reference 'titleId'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:205:285 Unresolved reference 'pendingTitle'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:205:305 Unresolved reference 'm'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:205:312 Unresolved reference 'c'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:205:326 Unresolved reference 'c'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:205:342 Unresolved reference 'it'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:205:349 Unresolved reference 'id'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:205:355 Unresolved reference 'm'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:205:366 Unresolved reference 'titleId'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:205:379 Unresolved reference 'pendingTitle'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:205:399 Unresolved reference 'titleId'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:205:412 Unresolved reference 'pendingTitle'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:206:5 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:206:7 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:206:8 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:206:18 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:206:19 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:206:25 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:206:26 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:206:42 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:206:43 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:206:43 Function declaration must have a name.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:206:44 Unresolved reference 'fullscreen'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:206:61 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:206:62 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:206:72 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:206:73 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:206:89 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:206:90 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:206:113 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:206:114 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:206:119 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:206:120 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:206:121 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:206:121 Functions which invoke @Composable functions must be marked with the @Composable annotation
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:206:121 Function declaration must have a name.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:206:122 @Composable invocations can only happen from the context of a @Composable function
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:206:192 Unresolved reference 'm'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:206:238 Unresolved reference 'fullscreen'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:206:409 Unresolved reference 'm'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:206:510 Unresolved reference 'm'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:206:589 Unresolved reference 'm'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:207:5 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:207:7 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:207:8 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:207:12 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:207:13 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:207:24 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:207:25 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:207:41 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:207:42 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:207:42 Function declaration must have a name.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:207:43 Unresolved reference 'help'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:207:54 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:207:55 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:207:60 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:207:61 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:207:61 Functions which invoke @Composable functions must be marked with the @Composable annotation
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:207:61 Function declaration must have a name.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:207:62 @Composable invocations can only happen from the context of a @Composable function
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:207:83 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:207:84 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:207:88 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:207:89 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:207:89 Functions which invoke @Composable functions must be marked with the @Composable annotation
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:207:89 Function declaration must have a name.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:207:90 @Composable invocations can only happen from the context of a @Composable function
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:207:142 @Composable invocations can only happen from the context of a @Composable function
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:207:1436 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:207:1437 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:207:1450 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:207:1451 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:207:1451 Functions which invoke @Composable functions must be marked with the @Composable annotation
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:207:1451 Function declaration must have a name.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:207:1452 @Composable invocations can only happen from the context of a @Composable function
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:207:1472 Unresolved reference 'help'.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:207:1499 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt:208:1 Syntax error: Expecting a top level declaration.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoProWorkspace.kt:67:59 'val' cannot be reassigned.
+e: file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoProWorkspace.kt:67:65 Assignment type mismatch: actual type is 'Int', but 'ColorScheme' was expected.
+
+> Task :android:app:compileDebugKotlin FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':android:app:compileDebugKotlin'.
+> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+   > Compilation error. See log for more details
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 1m 41s
+68 actionable tasks: 15 executed, 53 up-to-date

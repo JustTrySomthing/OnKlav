@@ -1,0 +1,228 @@
+
+Welcome to Gradle 8.11.1!
+
+Here are the highlights of this release:
+ - Parallel load and store for Configuration Cache
+ - Java compilation errors at the end of the build output
+ - Consolidated report for warnings and deprecations
+
+For more details see https://docs.gradle.org/8.11.1/release-notes.html
+
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.11.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :android:app
+WARNING: The option setting 'android.aapt2FromMavenOverride=/workspace/scratch/ee30099c8ed7/android-env/sdk/build-tools/35.0.0/aapt2' is experimental.
+
+> Configure project :android:games
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/games/build.gradle.kts:4:30: 'targetSdk: Int?' is deprecated. Will be removed from library DSL in v9.0. Use testOptions.targetSdk or/and lint.targetSdk instead
+Checking the license for package Android SDK Platform-Tools in /workspace/scratch/ee30099c8ed7/android-env/sdk/licenses
+Warning: License for package Android SDK Platform-Tools not accepted.
+WARNING: platform-tools package is not installed. Please accept the installation licence to continue
+
+> Task :android:app:preBuild UP-TO-DATE
+> Task :android:app:preDebugBuild UP-TO-DATE
+> Task :android:app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :android:app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:app:generateDebugBuildConfig
+> Task :android:games:preBuild UP-TO-DATE
+> Task :android:games:preDebugBuild UP-TO-DATE
+> Task :android:shared:preBuild UP-TO-DATE
+> Task :android:shared:preDebugBuild UP-TO-DATE
+> Task :android:games:writeDebugAarMetadata
+> Task :android:shared:writeDebugAarMetadata
+> Task :android:tools:preBuild UP-TO-DATE
+> Task :android:tools:preDebugBuild UP-TO-DATE
+> Task :android:tools:writeDebugAarMetadata
+> Task :android:app:generateDebugResValues
+> Task :android:games:generateDebugResValues
+> Task :android:games:generateDebugResources
+> Task :android:app:checkDebugAarMetadata
+> Task :android:games:packageDebugResources
+> Task :android:shared:generateDebugResValues
+> Task :android:shared:generateDebugResources
+> Task :android:shared:packageDebugResources
+> Task :android:tools:generateDebugResValues
+> Task :android:tools:generateDebugResources
+> Task :android:tools:packageDebugResources
+> Task :android:app:mapDebugSourceSetPaths
+> Task :android:app:generateDebugResources
+> Task :android:app:packageDebugResources
+> Task :android:app:parseDebugLocalResources
+> Task :android:app:createDebugCompatibleScreenManifests
+> Task :android:app:extractDeepLinksDebug
+> Task :android:games:extractDeepLinksDebug
+> Task :android:app:mergeDebugResources
+> Task :android:shared:extractDeepLinksDebug
+> Task :android:games:processDebugManifest
+> Task :android:shared:processDebugManifest
+> Task :android:tools:extractDeepLinksDebug
+> Task :android:tools:processDebugManifest
+> Task :android:games:compileDebugLibraryResources
+> Task :android:app:processDebugMainManifest
+> Task :android:app:processDebugManifest
+> Task :android:app:processDebugManifestForPackage
+> Task :android:games:parseDebugLocalResources
+> Task :android:shared:compileDebugLibraryResources
+> Task :android:games:generateDebugRFile
+> Task :android:tools:compileDebugLibraryResources
+> Task :android:tools:parseDebugLocalResources
+> Task :android:tools:generateDebugRFile
+> Task :android:games:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:shared:parseDebugLocalResources
+> Task :android:games:compileDebugKotlin NO-SOURCE
+> Task :android:games:javaPreCompileDebug
+> Task :android:shared:generateDebugRFile
+> Task :android:games:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:games:bundleLibCompileToJarDebug
+> Task :android:shared:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:app:processDebugResources
+> Task :android:shared:javaPreCompileDebug
+> Task :android:tools:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:tools:javaPreCompileDebug
+> Task :android:app:javaPreCompileDebug
+> Task :android:app:mergeDebugShaders
+> Task :android:app:compileDebugShaders NO-SOURCE
+> Task :android:app:generateDebugAssets UP-TO-DATE
+> Task :android:games:mergeDebugShaders
+> Task :android:games:compileDebugShaders NO-SOURCE
+> Task :android:games:generateDebugAssets UP-TO-DATE
+> Task :android:games:mergeDebugAssets
+> Task :android:shared:mergeDebugShaders
+> Task :android:shared:compileDebugShaders NO-SOURCE
+> Task :android:shared:generateDebugAssets UP-TO-DATE
+> Task :android:shared:mergeDebugAssets
+> Task :android:tools:mergeDebugShaders
+> Task :android:tools:compileDebugShaders NO-SOURCE
+> Task :android:tools:generateDebugAssets UP-TO-DATE
+> Task :android:tools:mergeDebugAssets
+> Task :android:app:mergeDebugAssets
+> Task :android:app:compressDebugAssets
+> Task :android:games:bundleLibRuntimeToJarDebug
+
+> Task :android:shared:compileDebugKotlin
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/Chrome.kt:267:24 'var statusBarColor: Int' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/Chrome.kt:268:24 'var navigationBarColor: Int' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/Chrome.kt:269:65 'var isStatusBarContrastEnforced: Boolean' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/LauncherLayout.kt:4:27 Non-public primary constructor is exposed via the generated 'copy()' method of the 'data' class.
+
+The generated 'copy()' will change its visibility in future releases.
+
+To suppress the warning do one of the following:
+- Annotate the data class with the '@ConsistentCopyVisibility' annotation.
+- Use the '-Xconsistent-data-class-copy-visibility' compiler flag.
+- Annotate the data class with the '@ExposedCopyVisibility' annotation 
+  (Discouraged, but can be used to keep binary compatibility).
+
+To learn more, see the documentation of the '@ConsistentCopyVisibility' and '@ExposedCopyVisibility' annotations.
+
+This will become an error in Kotlin 2.2.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/OnKlavFileContracts.kt:17:29 The corresponding parameter in the supertype 'OpenDocument' is named 'context'. This may cause problems when calling this function with named arguments.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/OnKlavFileContracts.kt:18:28 The corresponding parameter in the supertype 'OpenDocument' is named 'resultCode'. This may cause problems when calling this function with named arguments.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/OnKlavFileContracts.kt:18:37 The corresponding parameter in the supertype 'OpenDocument' is named 'intent'. This may cause problems when calling this function with named arguments.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/OnKlavFileContracts.kt:21:29 The corresponding parameter in the supertype 'OpenMultipleDocuments' is named 'context'. This may cause problems when calling this function with named arguments.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/OnKlavFileContracts.kt:22:28 The corresponding parameter in the supertype 'OpenMultipleDocuments' is named 'resultCode'. This may cause problems when calling this function with named arguments.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/OnKlavFileContracts.kt:22:37 The corresponding parameter in the supertype 'OpenMultipleDocuments' is named 'intent'. This may cause problems when calling this function with named arguments.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/OnKlavFileContracts.kt:25:29 The corresponding parameter in the supertype 'CreateDocument' is named 'context'. This may cause problems when calling this function with named arguments.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/OnKlavFileContracts.kt:26:28 The corresponding parameter in the supertype 'CreateDocument' is named 'resultCode'. This may cause problems when calling this function with named arguments.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/OnKlavFileContracts.kt:26:37 The corresponding parameter in the supertype 'CreateDocument' is named 'intent'. This may cause problems when calling this function with named arguments.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/OnKlavFileContracts.kt:29:29 The corresponding parameter in the supertype 'OpenDocumentTree' is named 'context'. This may cause problems when calling this function with named arguments.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/OnKlavFileContracts.kt:30:28 The corresponding parameter in the supertype 'OpenDocumentTree' is named 'resultCode'. This may cause problems when calling this function with named arguments.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/OnKlavFileContracts.kt:30:37 The corresponding parameter in the supertype 'OpenDocumentTree' is named 'intent'. This may cause problems when calling this function with named arguments.
+
+> Task :android:shared:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:shared:bundleLibCompileToJarDebug
+> Task :android:app:desugarDebugFileDependencies
+> Task :android:shared:bundleLibRuntimeToJarDebug
+> Task :android:games:processDebugJavaRes NO-SOURCE
+> Task :android:shared:processDebugJavaRes
+> Task :android:app:checkDebugDuplicateClasses
+> Task :android:tools:compileDebugKotlin
+> Task :android:app:mergeExtDexDebug
+> Task :android:tools:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:tools:bundleLibCompileToJarDebug
+> Task :android:tools:bundleLibRuntimeToJarDebug
+> Task :android:tools:processDebugJavaRes
+> Task :android:tools:bundleLibRuntimeToDirDebug
+> Task :android:shared:bundleLibRuntimeToDirDebug
+> Task :android:games:bundleLibRuntimeToDirDebug
+> Task :android:app:mergeLibDexDebug
+> Task :android:app:mergeDebugJniLibFolders
+> Task :android:games:mergeDebugJniLibFolders
+> Task :android:games:mergeDebugNativeLibs NO-SOURCE
+> Task :android:games:copyDebugJniLibsProjectOnly
+> Task :android:shared:mergeDebugJniLibFolders
+> Task :android:shared:mergeDebugNativeLibs
+> Task :android:shared:copyDebugJniLibsProjectOnly
+> Task :android:tools:mergeDebugJniLibFolders
+> Task :android:tools:mergeDebugNativeLibs NO-SOURCE
+> Task :android:tools:copyDebugJniLibsProjectOnly
+> Task :android:app:mergeDebugNativeLibs
+
+> Task :android:app:stripDebugDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libandroidx.graphics.path.so, libimage_processing_util_jni.so, libsurface_util_jni.so.
+
+> Task :android:app:validateSigningDebug
+> Task :android:app:writeDebugAppMetadata
+> Task :android:app:writeDebugSigningConfigVersions
+> Task :android:app:compileDebugKotlin
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/app/src/main/kotlin/app/onklav/home/Authentic.kt:33:375 'constructor(capitalization: KeyboardCapitalization = ..., autoCorrect: Boolean, keyboardType: KeyboardType = ..., imeAction: ImeAction = ..., platformImeOptions: PlatformImeOptions? = ..., showKeyboardOnFocus: Boolean? = ..., hintLocales: LocaleList? = ...): KeyboardOptions' is deprecated. Please use the new constructor that takes optional autoCorrectEnabled parameter.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/app/src/main/kotlin/app/onklav/home/CalendarEditor.kt:63:131 'val Icons.Outlined.VolumeUp: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Outlined.VolumeUp.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/app/src/main/kotlin/app/onklav/home/CalendarEditor.kt:80:1225 'val Icons.Outlined.VolumeUp: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Outlined.VolumeUp.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/app/src/main/kotlin/app/onklav/home/CameraScreen.kt:106:84 'val Icons.Outlined.ArrowBack: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Outlined.ArrowBack.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/app/src/main/kotlin/app/onklav/home/ClockEngine.kt:109:84 'fun vibrate(p0: VibrationEffect!, p1: AudioAttributes!): Unit' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/app/src/main/kotlin/app/onklav/home/ClockScreen.kt:140:68 The corresponding parameter in the supertype 'ComponentActivity' is named 'savedInstanceState'. This may cause problems when calling this function with named arguments.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/app/src/main/kotlin/app/onklav/home/CloudScreen.kt:30:533 'val LocalClipboardManager: ProvidableCompositionLocal<ClipboardManager>' is deprecated. Use LocalClipboard instead which supports suspend functions.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/app/src/main/kotlin/app/onklav/home/CodeEditView.kt:62:46 'field scaledDensity: Float' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/app/src/main/kotlin/app/onklav/home/CompressEngine.kt:100:69 'constructor(vararg p0: EditedMediaItem): EditedMediaItemSequence.Builder' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/app/src/main/kotlin/app/onklav/home/FolderVaultCrypto.kt:35:32 'static fun parseKeyset(serializedKeyset: ByteArray!, access: SecretKeyAccess!): KeysetHandle!' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/app/src/main/kotlin/app/onklav/home/FolderVaultCrypto.kt:39:33 'static fun serializeKeyset(keysetHandle: KeysetHandle!, access: SecretKeyAccess!): ByteArray!' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/app/src/main/kotlin/app/onklav/home/FolderVaultCrypto.kt:39:62 'static fun generateNew(parameters: Parameters!): KeysetHandle!' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/app/src/main/kotlin/app/onklav/home/MailCompose.kt:21:700 'val Icons.Outlined.Send: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Outlined.Send.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/app/src/main/kotlin/app/onklav/home/MailDialogs.kt:29:307 'constructor(capitalization: KeyboardCapitalization = ..., autoCorrect: Boolean, keyboardType: KeyboardType = ..., imeAction: ImeAction = ..., platformImeOptions: PlatformImeOptions? = ..., showKeyboardOnFocus: Boolean? = ..., hintLocales: LocaleList? = ...): KeyboardOptions' is deprecated. Please use the new constructor that takes optional autoCorrectEnabled parameter.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/app/src/main/kotlin/app/onklav/home/MailDialogs.kt:32:897 'constructor(capitalization: KeyboardCapitalization = ..., autoCorrect: Boolean, keyboardType: KeyboardType = ..., imeAction: ImeAction = ..., platformImeOptions: PlatformImeOptions? = ..., showKeyboardOnFocus: Boolean? = ..., hintLocales: LocaleList? = ...): KeyboardOptions' is deprecated. Please use the new constructor that takes optional autoCorrectEnabled parameter.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/app/src/main/kotlin/app/onklav/home/MainActivity.kt:53:55 'static field TRIM_MEMORY_RUNNING_LOW: Int' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessageAttachments.kt:71:9 'constructor(): MediaRecorder' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt:212:29 'fun get(p0: String!): Any?' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/app/src/main/kotlin/app/onklav/home/MessengerPane.kt:145:21 'val LocalClipboardManager: ProvidableCompositionLocal<ClipboardManager>' is deprecated. Use LocalClipboard instead which supports suspend functions.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/app/src/main/kotlin/app/onklav/home/NeuralSpeech.kt:72:41 'static field TRIM_MEMORY_RUNNING_LOW: Int' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/app/src/main/kotlin/app/onklav/home/NeuralSpeech.kt:73:41 'static field TRIM_MEMORY_RUNNING_CRITICAL: Int' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/app/src/main/kotlin/app/onklav/home/NeuralSpeech.kt:75:41 'static field TRIM_MEMORY_MODERATE: Int' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/app/src/main/kotlin/app/onklav/home/NeuralSpeech.kt:76:41 'static field TRIM_MEMORY_COMPLETE: Int' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/app/src/main/kotlin/app/onklav/home/PhoneCallUi.kt:72:47 'val Icons.Outlined.VolumeUp: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Outlined.VolumeUp.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/app/src/main/kotlin/app/onklav/home/PhoneData.kt:31:93 'constructor(p0: String!): PhoneNumberFormattingTextWatcher' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/app/src/main/kotlin/app/onklav/home/PhoneData.kt:31:135 'fun afterTextChanged(p0: Editable!): Unit' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/app/src/main/kotlin/app/onklav/home/PhoneTelecom.kt:65:15 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/app/src/main/kotlin/app/onklav/home/RecorderEngine.kt:49:187 Only safe (?.) or non-null asserted (!!.) calls are allowed on a nullable receiver of type 'MediaCodecInfo.VideoCapabilities?'.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkAppScreen.kt:593:179 'val Icons.Outlined.ArrowForward: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Outlined.ArrowForward.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkMedia.kt:250:260 'constructor(p0: Int, p1: CharSequence!, p2: PendingIntent?): Notification.Action.Builder' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkPdfViewer.kt:83:319 'fun <T : Parcelable!> getParcelableArrayList(p0: String?): ArrayList<T!>?' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/app/src/main/kotlin/app/onklav/home/SdkPdfViewer.kt:88:190 'fun <T : Parcelable!> getParcelableArrayList(p0: String?): ArrayList<T!>?' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditEngine.kt:20:18 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditEngine.kt:33:83 'static fun createExperimentalSpeedChangingEffect(p0: SpeedProvider): Pair<AudioProcessor, Effect>' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditEngine.kt:61:120 'static fun createExperimentalSpeedChangingEffect(p0: SpeedProvider): Pair<AudioProcessor, Effect>' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:127:905 'constructor(p0: (Mutable)List<EditedMediaItem>): EditedMediaItemSequence.Builder' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt:165:224 'constructor(): MediaRecorder' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoNoise.kt:14:18 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/app/src/main/kotlin/app/onklav/home/VideoOfflineAudio.kt:23:18 This declaration overrides a deprecated member but is not marked as deprecated itself. Add the '@Deprecated' annotation or suppress the diagnostic.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/app/src/main/kotlin/app/onklav/home/WebGameActivity.kt:53:27 The corresponding parameter in the supertype 'ComponentActivity' is named 'savedInstanceState'. This may cause problems when calling this function with named arguments.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/app/src/main/kotlin/app/onklav/home/WebGameActivity.kt:58:16 'var statusBarColor: Int' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/app/src/main/kotlin/app/onklav/home/WebGameActivity.kt:59:16 'var navigationBarColor: Int' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/app/src/main/kotlin/app/onklav/home/WebGameActivity.kt:109:30 The corresponding parameter in the supertype 'ComponentActivity' is named 'intent'. This may cause problems when calling this function with named arguments.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/app/src/main/kotlin/app/onklav/home/YoutubeDownloads.kt:71:1112 'constructor(vararg p0: EditedMediaItem): EditedMediaItemSequence.Builder' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/app/src/main/kotlin/app/onklav/home/YoutubeDownloads.kt:71:1192 'constructor(vararg p0: EditedMediaItem): EditedMediaItemSequence.Builder' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/app/src/main/kotlin/app/onklav/home/YoutubeResolver.kt:48:107 'field resolution: String!' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/ee30099c8ed7/project/OnKlav/android/app/src/main/kotlin/app/onklav/home/YoutubeResolver.kt:48:223 'field resolution: String!' is deprecated. Deprecated in Java.
+
+> Task :android:app:compileDebugJavaWithJavac
+> Task :android:app:dexBuilderDebug
+> Task :android:app:mergeDebugGlobalSynthetics
+> Task :android:app:processDebugJavaRes
+> Task :android:app:mergeDebugJavaResource
+> Task :android:app:mergeProjectDexDebug
+> Task :android:app:packageDebug
+> Task :android:app:createDebugApkListingFileRedirect
+> Task :android:app:assembleDebug
+
+BUILD SUCCESSFUL in 6m 41s
+93 actionable tasks: 93 executed

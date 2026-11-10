@@ -1,0 +1,186 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.11.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :android:app
+WARNING: The option setting 'android.aapt2FromMavenOverride=/workspace/scratch/d853f89e99b7/android-env/sdk/build-tools/35.0.0/aapt2' is experimental.
+WARNING: platform-tools package is not installed.
+
+> Task :android:shared:preBuild UP-TO-DATE
+> Task :android:shared:preDebugBuild UP-TO-DATE
+> Task :android:shared:mergeDebugJniLibFolders UP-TO-DATE
+> Task :android:shared:mergeDebugNativeLibs UP-TO-DATE
+> Task :android:shared:stripDebugDebugSymbols UP-TO-DATE
+> Task :android:shared:copyDebugJniLibsProjectAndLocalJars UP-TO-DATE
+> Task :android:shared:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:shared:generateDebugResValues UP-TO-DATE
+> Task :android:shared:generateDebugResources UP-TO-DATE
+> Task :android:shared:packageDebugResources UP-TO-DATE
+> Task :android:shared:parseDebugLocalResources UP-TO-DATE
+> Task :android:shared:generateDebugRFile UP-TO-DATE
+> Task :android:shared:compileDebugKotlin UP-TO-DATE
+> Task :android:shared:extractDebugAnnotations UP-TO-DATE
+> Task :android:shared:extractDeepLinksForAarDebug UP-TO-DATE
+> Task :android:shared:mergeDebugShaders UP-TO-DATE
+> Task :android:shared:compileDebugShaders NO-SOURCE
+> Task :android:shared:generateDebugAssets UP-TO-DATE
+> Task :android:shared:mergeDebugAssets UP-TO-DATE
+> Task :android:shared:javaPreCompileDebug UP-TO-DATE
+> Task :android:shared:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:shared:mergeDebugGeneratedProguardFiles UP-TO-DATE
+> Task :android:shared:mergeDebugConsumerProguardFiles UP-TO-DATE
+> Task :android:shared:prepareDebugArtProfile UP-TO-DATE
+> Task :android:shared:prepareLintJarForPublish UP-TO-DATE
+> Task :android:shared:processDebugManifest UP-TO-DATE
+> Task :android:shared:processDebugJavaRes UP-TO-DATE
+> Task :android:shared:mergeDebugJavaResource UP-TO-DATE
+> Task :android:shared:syncDebugLibJars UP-TO-DATE
+> Task :android:shared:writeDebugAarMetadata UP-TO-DATE
+> Task :android:shared:bundleDebugLocalLintAar UP-TO-DATE
+> Task :android:tools:preBuild UP-TO-DATE
+> Task :android:tools:preDebugBuild UP-TO-DATE
+> Task :android:tools:mergeDebugJniLibFolders UP-TO-DATE
+> Task :android:tools:mergeDebugNativeLibs NO-SOURCE
+> Task :android:tools:stripDebugDebugSymbols NO-SOURCE
+> Task :android:tools:copyDebugJniLibsProjectAndLocalJars UP-TO-DATE
+> Task :android:shared:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :android:tools:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:tools:generateDebugResValues UP-TO-DATE
+> Task :android:tools:generateDebugResources UP-TO-DATE
+> Task :android:tools:packageDebugResources UP-TO-DATE
+> Task :android:tools:parseDebugLocalResources UP-TO-DATE
+> Task :android:tools:generateDebugRFile UP-TO-DATE
+> Task :android:tools:compileDebugKotlin UP-TO-DATE
+> Task :android:tools:extractDebugAnnotations UP-TO-DATE
+> Task :android:tools:extractDeepLinksForAarDebug UP-TO-DATE
+> Task :android:tools:mergeDebugShaders UP-TO-DATE
+> Task :android:tools:compileDebugShaders NO-SOURCE
+> Task :android:tools:generateDebugAssets UP-TO-DATE
+> Task :android:tools:mergeDebugAssets UP-TO-DATE
+> Task :android:tools:javaPreCompileDebug UP-TO-DATE
+> Task :android:tools:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:tools:mergeDebugGeneratedProguardFiles UP-TO-DATE
+> Task :android:tools:mergeDebugConsumerProguardFiles UP-TO-DATE
+> Task :android:tools:prepareDebugArtProfile UP-TO-DATE
+> Task :android:tools:prepareLintJarForPublish UP-TO-DATE
+> Task :android:tools:processDebugManifest UP-TO-DATE
+> Task :android:tools:processDebugJavaRes UP-TO-DATE
+> Task :android:tools:mergeDebugJavaResource UP-TO-DATE
+> Task :android:tools:syncDebugLibJars UP-TO-DATE
+> Task :android:tools:writeDebugAarMetadata UP-TO-DATE
+> Task :android:tools:bundleDebugLocalLintAar UP-TO-DATE
+> Task :android:games:preBuild UP-TO-DATE
+> Task :android:games:preDebugBuild UP-TO-DATE
+> Task :android:games:mergeDebugJniLibFolders UP-TO-DATE
+> Task :android:games:mergeDebugNativeLibs NO-SOURCE
+> Task :android:games:stripDebugDebugSymbols NO-SOURCE
+> Task :android:games:copyDebugJniLibsProjectAndLocalJars UP-TO-DATE
+> Task :android:games:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:games:generateDebugResValues UP-TO-DATE
+> Task :android:games:generateDebugResources UP-TO-DATE
+> Task :android:games:packageDebugResources UP-TO-DATE
+> Task :android:games:parseDebugLocalResources UP-TO-DATE
+> Task :android:games:generateDebugRFile UP-TO-DATE
+> Task :android:games:compileDebugKotlin UP-TO-DATE
+> Task :android:games:extractDebugAnnotations UP-TO-DATE
+> Task :android:games:extractDeepLinksForAarDebug UP-TO-DATE
+> Task :android:games:mergeDebugShaders UP-TO-DATE
+> Task :android:games:compileDebugShaders NO-SOURCE
+> Task :android:games:generateDebugAssets UP-TO-DATE
+> Task :android:games:mergeDebugAssets UP-TO-DATE
+> Task :android:games:javaPreCompileDebug UP-TO-DATE
+> Task :android:games:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:games:mergeDebugGeneratedProguardFiles UP-TO-DATE
+> Task :android:games:mergeDebugConsumerProguardFiles UP-TO-DATE
+> Task :android:games:prepareDebugArtProfile UP-TO-DATE
+> Task :android:games:prepareLintJarForPublish UP-TO-DATE
+> Task :android:games:processDebugManifest UP-TO-DATE
+> Task :android:games:processDebugJavaRes UP-TO-DATE
+> Task :android:games:mergeDebugJavaResource UP-TO-DATE
+> Task :android:games:syncDebugLibJars UP-TO-DATE
+> Task :android:games:writeDebugAarMetadata UP-TO-DATE
+> Task :android:games:bundleDebugLocalLintAar UP-TO-DATE
+> Task :android:app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:app:preBuild UP-TO-DATE
+> Task :android:app:preDebugBuild UP-TO-DATE
+> Task :android:app:checkDebugAarMetadata UP-TO-DATE
+> Task :android:app:generateDebugResValues UP-TO-DATE
+> Task :android:app:mapDebugSourceSetPaths UP-TO-DATE
+> Task :android:app:generateDebugResources UP-TO-DATE
+> Task :android:app:mergeDebugResources UP-TO-DATE
+> Task :android:app:packageDebugResources UP-TO-DATE
+> Task :android:app:parseDebugLocalResources UP-TO-DATE
+> Task :android:app:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :android:app:extractDeepLinksDebug UP-TO-DATE
+> Task :android:games:extractDeepLinksDebug UP-TO-DATE
+> Task :android:shared:extractDeepLinksDebug UP-TO-DATE
+> Task :android:tools:extractDeepLinksDebug UP-TO-DATE
+> Task :android:app:processDebugMainManifest UP-TO-DATE
+> Task :android:app:processDebugManifest UP-TO-DATE
+> Task :android:app:processDebugManifestForPackage UP-TO-DATE
+> Task :android:games:compileDebugLibraryResources UP-TO-DATE
+> Task :android:shared:compileDebugLibraryResources UP-TO-DATE
+> Task :android:tools:compileDebugLibraryResources UP-TO-DATE
+> Task :android:app:processDebugResources UP-TO-DATE
+> Task :android:games:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :android:tools:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :android:app:compileDebugKotlin UP-TO-DATE
+> Task :android:app:javaPreCompileDebug UP-TO-DATE
+> Task :android:app:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:app:bundleDebugClassesToCompileJar UP-TO-DATE
+> Task :android:app:preDebugAndroidTestBuild SKIPPED
+> Task :android:app:generateDebugAndroidTestResValues UP-TO-DATE
+> Task :android:games:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :android:games:createFullJarDebug UP-TO-DATE
+> Task :android:games:writeDebugLintModelMetadata UP-TO-DATE
+> Task :android:shared:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :android:shared:createFullJarDebug UP-TO-DATE
+> Task :android:shared:writeDebugLintModelMetadata UP-TO-DATE
+> Task :android:tools:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :android:tools:createFullJarDebug UP-TO-DATE
+> Task :android:tools:writeDebugLintModelMetadata UP-TO-DATE
+> Task :android:app:generateDebugAndroidTestLintModel
+> Task :android:app:extractProguardFiles UP-TO-DATE
+> Task :android:games:extractProguardFiles UP-TO-DATE
+> Task :android:games:generateDebugLintModel UP-TO-DATE
+> Task :android:shared:extractProguardFiles UP-TO-DATE
+> Task :android:shared:generateDebugLintModel UP-TO-DATE
+> Task :android:tools:extractProguardFiles UP-TO-DATE
+> Task :android:tools:generateDebugLintModel UP-TO-DATE
+> Task :android:app:generateDebugLintReportModel
+> Task :android:app:preDebugUnitTestBuild UP-TO-DATE
+> Task :android:app:generateDebugUnitTestLintModel
+> Task :android:games:lintAnalyzeDebug UP-TO-DATE
+> Task :android:shared:lintAnalyzeDebug UP-TO-DATE
+> Task :android:tools:lintAnalyzeDebug UP-TO-DATE
+> Task :android:app:lintAnalyzeDebugAndroidTest
+> Task :android:app:lintAnalyzeDebug
+> Task :android:app:lintAnalyzeDebugUnitTest
+> Task :android:games:preDebugAndroidTestBuild UP-TO-DATE
+> Task :android:games:generateDebugAndroidTestResValues UP-TO-DATE
+> Task :android:games:generateDebugAndroidTestLintModel UP-TO-DATE
+> Task :android:games:preDebugUnitTestBuild UP-TO-DATE
+> Task :android:games:generateDebugUnitTestLintModel UP-TO-DATE
+> Task :android:games:lintAnalyzeDebugAndroidTest UP-TO-DATE
+> Task :android:games:lintAnalyzeDebugUnitTest UP-TO-DATE
+> Task :android:shared:preDebugAndroidTestBuild UP-TO-DATE
+> Task :android:shared:generateDebugAndroidTestResValues UP-TO-DATE
+> Task :android:shared:generateDebugAndroidTestLintModel UP-TO-DATE
+> Task :android:shared:preDebugUnitTestBuild UP-TO-DATE
+> Task :android:shared:generateDebugUnitTestLintModel UP-TO-DATE
+> Task :android:shared:lintAnalyzeDebugAndroidTest UP-TO-DATE
+> Task :android:shared:lintAnalyzeDebugUnitTest UP-TO-DATE
+> Task :android:tools:preDebugAndroidTestBuild UP-TO-DATE
+> Task :android:tools:generateDebugAndroidTestResValues UP-TO-DATE
+> Task :android:tools:generateDebugAndroidTestLintModel UP-TO-DATE
+> Task :android:tools:preDebugUnitTestBuild UP-TO-DATE
+> Task :android:tools:generateDebugUnitTestLintModel UP-TO-DATE
+> Task :android:tools:lintAnalyzeDebugAndroidTest UP-TO-DATE
+> Task :android:tools:lintAnalyzeDebugUnitTest UP-TO-DATE
+
+> Task :android:app:lintReportDebug
+Wrote HTML report to file:///workspace/scratch/d853f89e99b7/onklav/OnKlav/android/app/build/reports/lint-results-debug.html
+
+> Task :android:app:lintDebug
+
+BUILD SUCCESSFUL in 2m 11s
+139 actionable tasks: 8 executed, 131 up-to-date

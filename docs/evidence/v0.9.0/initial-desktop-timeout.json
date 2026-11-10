@@ -1,0 +1,19 @@
+{
+  "apk_sha256": "d96dce6bd36506cffc1ed2218bf0575142cd2fdfcbf410e4eba96463e079fa9b",
+  "device": "Android 10 x86_64 software emulator; 2 GiB, 4 cores, no KVM",
+  "phone_carrier_acceptance": false,
+  "default_role_changed": false,
+  "tests": {
+    "DesktopChromeDeviceTest": "fail"
+  },
+  "captures": [],
+  "boot": "pass",
+  "install": "pass",
+  "grant_READ_SMS": true,
+  "grant_SEND_SMS": true,
+  "grant_READ_CONTACTS": true,
+  "grant_READ_PHONE_STATE": true,
+  "installed_sha256": "d96dce6bd36506cffc1ed2218bf0575142cd2fdfcbf410e4eba96463e079fa9b",
+  "exact_apk_installed": true,
+  "error": "Command '['/workspace/scratch/39f240a7e5bd/android-sdk/platform-tools/adb', '-s', 'emulator-5586', 'exec-out', 'run-as', 'app.onklav.home.prototype.rewrite', 'cat', 'cache/qa-messages-header.png']' timed out after 10 seconds"
+}

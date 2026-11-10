@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.AndroidSharedFilesTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-11-03T02:22:40" hostname="3bfb1ef11171" time="2.405">
+  <properties/>
+  <testcase name="purgeRejectsLinksBeforeDeletingAnyFolderContents" classname="app.onklav.home.AndroidSharedFilesTest" time="2.279"/>
+  <testcase name="androidTrashRestoresWithoutOverwritingAndImagesIncludeCameraPhotos" classname="app.onklav.home.AndroidSharedFilesTest" time="0.088"/>
+  <testcase name="failedCopyKeepsAnUnrelatedFileCreatedAtTheDestination" classname="app.onklav.home.AndroidSharedFilesTest" time="0.037"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

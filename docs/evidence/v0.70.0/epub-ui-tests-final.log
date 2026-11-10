@@ -1,0 +1,25 @@
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/work/OnKlav/developer/components)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.22s
+     Running unittests src/lib.rs (developer/components/target/debug/deps/onklav_ui-b9729a29e05b7074)
+
+running 2 tests
+test epub_ui::tests::epub_ui_unavailable_book_back_closes_and_retry_is_explicit ... ok
+test epub_ui::tests::epub_bookmark_conflict_keeps_current_chapter_and_requires_confirmation ... FAILED
+
+failures:
+
+---- epub_ui::tests::epub_bookmark_conflict_keeps_current_chapter_and_requires_confirmation stdout ----
+
+thread 'epub_ui::tests::epub_bookmark_conflict_keeps_current_chapter_and_requires_confirmation' panicked at src/epub_ui.rs:63:957:
+assertion `left != right` failed
+  left: Bool(true)
+ right: true
+note: run with `RUST_BACKTRACE=1` environment variable to display a backtrace
+
+
+failures:
+    epub_ui::tests::epub_bookmark_conflict_keeps_current_chapter_and_requires_confirmation
+
+test result: FAILED. 1 passed; 1 failed; 0 ignored; 0 measured; 59 filtered out; finished in 0.00s
+
+error: test failed, to rerun pass `--lib`

@@ -1,0 +1,61 @@
+{
+  "version": "0.94.0-audio1",
+  "android_code": 102,
+  "status": "source complete",
+  "features": [
+    "Themed source waveform, selection handles, exact times, zoom and scrub",
+    "Keep/trim, cut, silence, duplicate, reverse, fades, undo/redo",
+    "Independent pitch/tempo, decibel gain, bass/mid/treble",
+    "Learned spectral noise reduction, gate, rumble and DC removal",
+    "Compression, peak normalization and clipping prevention",
+    "Original/edited preview with audio focus, cancel/progress and draft restoration",
+    "Whole-track WAV/M4A copy export; external original preserved"
+  ],
+  "validation": {
+    "unique_focused_passed": 6,
+    "dsp_cases": [
+      "pitchAndTempoAreIndependentAndStereoRemainsLinked",
+      "learnedSpectralNoiseReductionReducesNoiseAndKeepsTone",
+      "editsKeepSourceAndRoundTripWithStereoSilence",
+      "gainToneFadesNormalizationAndOverloadProtectionWork"
+    ],
+    "final_launch_and_ui_passed": 2,
+    "lint_errors": 0,
+    "lint_severities": {
+      "Warning": 197
+    },
+    "screen_review": "Native themed screenshot inspected; no screenshot included in deliverable",
+    "runtime_classes": "63 Audio classes in runtime bundle match compiled Kotlin bytes",
+    "signed_included_apps": 19,
+    "sdk_audio_version": 2,
+    "native": "unchanged; source-matched Linux/main/diagnostic JNI retained",
+    "apk": "Included in user-requested OnKlav0.95.0-maps1/code103 ARM64 debug APK; original signer, source-matched native/20included apps, ZIP integrity and16KiB alignment verified",
+    "phone_acceptance": "Not performed; actual compressed decoding, AAC encoding, output providers, focus/preview listening, long-file performance and touch acceptance remain handset checks",
+    "apk_sha256": "0e9a0bde198f62db37b777464832cf66963486812acd25ac930726b4e8d08fc3"
+  },
+  "test_notes": [
+    "Initial stock icon name was rejected by runtime validation; corrected to supported edit symbol and repackaged with original publisher as version2; signed launch and UI passed",
+    "New resource fields required regeneration of stale application R.jar outputs",
+    "An interrupted generated test cache was cleared after a Gradle binary-store failure; final selected launch/UI and full lint succeeded",
+    "Four passing DSP cases were retained from the initial focused run; only failed launch/UI were rerun after package/model fixes",
+    "Final source uses bounded asynchronous preview preparation and caches whole renders so selection preview shares export fades/normalization"
+  ],
+  "limits": {
+    "tracks": 1,
+    "channels": "mono/stereo",
+    "sample_rate_hz": "8000\u2013192000",
+    "timeline_hours": 2,
+    "encoded_import_bytes": 1000000000,
+    "export": "16-bit PCM WAV, or system AAC-LC M4A at128kbps mono/192kbps stereo; format support is phone-dependent",
+    "processing": "Offline file-backed; sufficient temporary disk space required",
+    "scope": "No multitrack mixing, recording, plugins or full Audacity project compatibility"
+  },
+  "evidence": "docs/evidence/v0.94.0",
+  "files_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/AudioEditEngine.kt": "4b3c27d76854cb302612316081ad10414823d230997978a61f1664c5297c5d18",
+    "android/app/src/main/kotlin/app/onklav/home/AudioEditMedia.kt": "a64032424f01e988bf2517b12c8608ba3cdd2ed2ea6a8d62ffce1442380e1249",
+    "android/app/src/main/kotlin/app/onklav/home/AudioEditorModel.kt": "36bc9f974241ea62600b589690d29dd8fb66333f3df9dff4b7c0fa3fc883cfde",
+    "android/app/src/main/kotlin/app/onklav/home/AudioEditor.kt": "36b99050eb37d8adaf26f81a3427093438b377f824b754d409b0c2ebd247e526",
+    "sdk/packages/Audio.onklav-a": "cbf956112732d4835107b5c8d392434bf59dba7eb2ee6b95991aaa88cd9e3a66"
+  }
+}

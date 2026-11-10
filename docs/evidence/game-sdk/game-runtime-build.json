@@ -1,0 +1,35 @@
+{
+  "scope": "shared Godot4.7.2 web engine for bundled and user-installed games; no owner approval",
+  "engine": "4.7.2.stable.official.ed1daf0bf",
+  "files_sha256": {
+    "developer/games/engine.json": "272f718936a6752ca9b73a794828e6938bf2b41c8d0db83a6c9e5b3276c3a30f",
+    "games/engine-checks/air_hockey/main.gd": "3583d9a5cb525e8282ba9174c73e26ac68496d6da8564a3abb6c21bf77260188",
+    "games/engine-checks/air_hockey/match.gd": "cd2f134952c5330cd58a950a2941a13bfb8a9cc4b0ccd9c0c7a90d6a3c6622aa",
+    "games/engine-checks/air_hockey/puck.gd": "46eb813a5bc8c82c4d61365dcc19bb1d7a90e7d1d586f1a793df7a22524018ba",
+    "games/engine-checks/air_hockey/rink.gd": "ef1a94794428d6fa402c60e9b4a36a4f4c5f4219dec80df3711df81b0040fc5c",
+    "games/engine-checks/air_hockey/store.gd": "41ebc34701e64db30cb1727a21d905277d58aab5271e11abf81e5cd2d21cfedd",
+    "games/engine-checks/air_hockey/tests.gd": "dbfdf6483171d2860b8c2364f23473868be5d2c435808ca2d2f226e7399b4726",
+    "games/engine-checks/export_presets.cfg": "a13a69403e40d2c60a5e4946314ebf771085a2343b06c68d75ae29c862b4195c",
+    "games/engine-checks/main.gd": "731bf77e7fbc61cde11d006b75ae017a38adde3ae909bc071cbd30c225b34267",
+    "games/engine-checks/main.tscn": "7cea485e6907568216969abcd37802a217dc48635ab123f2f6394043291a5040",
+    "games/engine-checks/project.godot": "0ad0ba728946a6d420cdfa753256a61c77071873f03896c09db513118139ee39",
+    "games/engine-checks/rules.gd": "7c69cd6ef932b13c081d53df6ed12e0891518d7572777545de56f1679547ce99",
+    "games/engine-checks/rules_tests.gd": "84988d3cb27eb78ae91eff884b777ae2dd7c559d20f924c572c2298d3ccaf22b",
+    "scripts/build_games.py": "b7031d490fb54f7616eb628998ac3a09ab59a84297573f9606043975a4dcddcd"
+  },
+  "assets_sha256": {
+    "android/games/src/main/assets/godot-web/index.audio.worklet.js": "5b476a9c9ce642c0ee4256436d1bc31d9c38f868aca0f9a8e2a57c18d2dec2a3",
+    "android/games/src/main/assets/godot-web/engine.json": "a87779f02401efdf707c610d3d4a7313974b0f83ff5844b4381ab3dec2e0ac5a",
+    "android/games/src/main/assets/godot-web/index.js": "33c94cb3175f3333b82e2a3be5e8e86f77986f0aa2042b1631f6367a4e5bb6ba",
+    "android/games/src/main/assets/godot-web/index.audio.position.worklet.js": "be33985bc7160d6bf9646f259cd86b259cd67b02ccb297ee5c44f8ac84327bc8",
+    "android/games/src/main/assets/godot-web/index.wasm": "fc74679e3b97f76878947fcd4fbe1268cbfa6188182a2e33bbc3f5dc9bfa57d0",
+    "android/games/src/main/assets/godot-builtin/index.html": "6e3609196218f6985c7349675b70fc99e98d3c6e46a6c87a8f52a43dc217cc9f",
+    "android/games/src/main/assets/godot-builtin/index.pck": "1fb79b9f40a71ac64fbd9a9fd59cb87413b2529175451d7931c1bfbeea792a77",
+    "android/games/src/main/assets/godot-builtin/index.png": "3cb4495c0b98dfbe4b663cbf2b6836473572339beb66d902367893162a70be0e",
+    "android/games/src/main/assets/godot-builtin/index.icon.png": "ad3c35ad0facf487c618204bd98db543034fc95224eadc7f08c7a9ff38d5b3b5",
+    "android/games/src/main/assets/godot-builtin/index.apple-touch-icon.png": "01d4f63e525941e06ce74f5187dad030d20a8d52a07ce365ae4e94af97a3b1f5"
+  },
+  "rules_checks": 12,
+  "hockey_checks": 72,
+  "physical_device_tested": false
+}

@@ -1,0 +1,19 @@
+...Publisher key created. Keep it private and backed up.
+   Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/tmp/onklav-portable-y6xunhhf/moved project 🐈/vendor/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/tmp/onklav-portable-y6xunhhf/moved project 🐈/vendor/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-portable-y6xunhhf/moved project 🐈)
+    Finished `release` profile [optimized] target(s) in 7.24s
+Created /tmp/onklav-verify-j0rh3jas/check.onklav-a
+.    Updating crates.io index
+     Locking 1 package to latest compatible version
+    Updating onklav-ui v0.3.0 (/tmp/tmp44s39mo7/project/vendor/developer/components) -> v0.4.0
+...
+----------------------------------------------------------------------
+Ran 7 tests in 12.933s
+
+OK

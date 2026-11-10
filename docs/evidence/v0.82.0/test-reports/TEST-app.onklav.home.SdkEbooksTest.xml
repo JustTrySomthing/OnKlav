@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.SdkEbooksTest" tests="6" skipped="1" failures="0" errors="0" timestamp="2026-10-26T19:04:44" hostname="844ebfe47829" time="10.284">
+  <properties/>
+  <testcase name="signedAcquisitionUsesScopedBlobThenResumesChapterAndBookmarks" classname="app.onklav.home.SdkEbooksTest" time="6.349"/>
+  <testcase name="failedDownloadAbortsOnlyItsOwnNewStagingFile" classname="app.onklav.home.SdkEbooksTest" time="2.04"/>
+  <testcase name="catalogSummaryIsShortAndDoesNotIncludeSourceFluff" classname="app.onklav.home.SdkEbooksTest" time="0.04"/>
+  <testcase name="downloadedGutenbergEpubPassesSignedRustReader" classname="app.onklav.home.SdkEbooksTest" time="0.04">
+    <skipped/>
+  </testcase>
+  <testcase name="closingSessionCleansUnfinishedAcquisition" classname="app.onklav.home.SdkEbooksTest" time="1.789"/>
+  <testcase name="opdsProjectsOnlyBooksAndKeepsOpaquePaging" classname="app.onklav.home.SdkEbooksTest" time="0.025"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

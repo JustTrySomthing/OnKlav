@@ -1,0 +1,50 @@
+{
+  "date": "2026-10-23",
+  "source_version": "0.56.0-dev",
+  "source_version_code": 64,
+  "scope": "Group 1 Browser Back and shared web error/renderer/reset lifecycle",
+  "apk_built": true,
+  "tests": {
+    "passed": 8,
+    "failed": 0,
+    "unexpected_failures": 0,
+    "known_failures": [],
+    "fresh_framework_host": [
+      {
+        "class": "app.onklav.home.BrowserSdkHostTest",
+        "passed": 1,
+        "failed": 0,
+        "skipped": 0,
+        "evidence": "docs/evidence/v0.56.0/TEST-app.onklav.home.BrowserSdkHostTest.xml"
+      },
+      {
+        "class": "app.onklav.home.SdkWebPolicyTest",
+        "passed": 6,
+        "failed": 0,
+        "skipped": 0,
+        "evidence": "docs/evidence/v0.56.0/TEST-app.onklav.home.SdkWebPolicyTest.xml"
+      },
+      {
+        "class": "app.onklav.home.YouTubeSdkHostTest",
+        "passed": 1,
+        "failed": 0,
+        "skipped": 0,
+        "evidence": "docs/evidence/v0.56.0/TEST-app.onklav.home.YouTubeSdkHostTest.xml"
+      }
+    ],
+    "rust_reused": {
+      "passed": 169,
+      "failed": 0,
+      "fresh_run": false,
+      "evidence": "docs/evidence/non-game-batch-1/rust-tests.log",
+      "source_and_jni_proof": "docs/host-native-provenance.json"
+    }
+  },
+  "build_evidence": "docs/evidence/v0.56.0/build-debug.json",
+  "apk_evidence": "docs/apk-verification-debug.json",
+  "full_rewrite_complete": false,
+  "handset_acceptance": false,
+  "carrier_acceptance": false,
+  "next_work": "docs/FINISH-NON-GAME.md",
+  "note": "Kotlin-only changes. SDK/mobile Rust/Godot reused by verified hashes. First compile caught a direct private view setter, corrected before final checks. Six controlled WebView policy/lifecycle tests and two real signed-app screen tests pass. Host provider lacks MULTI_PROFILE; no live website, profile, YouTube playback or phone acceptance claimed."
+}

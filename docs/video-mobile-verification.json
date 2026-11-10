@@ -1,0 +1,75 @@
+{
+  "status": "source complete for implemented mobile upgrade; full CapCut parity and handset professional qualification not complete",
+  "latest_delivered_apk": "0.100.7/code116; no new APK requested or built",
+  "validation": {
+    "android_unique_passed": 15,
+    "suites": [
+      {
+        "class": "VideoEditorHostTest",
+        "tests": 6,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "class": "VideoEditorUiTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      },
+      {
+        "class": "VideoProTest",
+        "tests": 8,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0
+      }
+    ],
+    "runtime_matches_compiled_classes": 2904,
+    "shader_pixel_cases_passed": 6,
+    "shader_renderer": "llvmpipe (LLVM 20.1.2, 256 bits)",
+    "visual_review": [
+      "docs/evidence/video-pro/video-editor-timeline.png",
+      "docs/evidence/video-pro/video-editor-text.png"
+    ],
+    "native_signed_apps_game_inputs_current": true,
+    "full_lint": "Not rerun; earlier release full lint remains incomplete"
+  },
+  "signed_shell": {
+    "id": "app.onklav.videoeditor",
+    "version": 4,
+    "original_publisher_preserved": true,
+    "new_capability": "audio.record",
+    "included_default_capability_check": "passed",
+    "android_approval": "existing setup plus contextual microphone request; cannot silently grant Android approval"
+  },
+  "implemented": [
+    "Fixed preview and visible-window time-scaled timeline, direct trim/scrub and accessible seeking",
+    "Labeled icon tool dock and bounded modeless inspectors; actual host header Projects/Resolution/Export",
+    "Four real video/photo overlay tracks, timing, transforms, opacity, trim/split/duplicate/delete",
+    "Green/blue chroma key and feathered geometric masks",
+    "Clip and overlay position/zoom/rotation/opacity keyframes",
+    "Source-timed speed curves and normal speed with synchronized extracted audio",
+    "Freeze frame capture and insertion",
+    "Timed text/emoji and manual/imported SRT/WebVTT captions with SRT export",
+    "Single cached active-caption texture above all video layers",
+    "Four mixed audio tracks, extraction and AAC voiceover with focus/permission/lifecycle handling",
+    "4K and expanded fps/bitrate export requests with device-dependent codec support",
+    "Optional schema1 fields preserve prior project JSON"
+  ],
+  "remaining": [
+    "Automatic ASR/transcription/translation and word-animated captions",
+    "AI subject segmentation, tracked masks, stabilization and motion tracking",
+    "Optical-flow interpolation, true overlapping crossfade/wipe transitions and wider timeline/track tooling",
+    "Advanced blend modes, easing graphs, LUTs, proxy/project packaging workflows and remote template/asset libraries",
+    "Advanced noise/voice isolation, beat detection and pitch tooling",
+    "Handset GPU/codec/A-V sync/voiceover/export-provider/long-file/performance and landscape/accessibility qualification"
+  ],
+  "notes": [
+    "Initial syntax errors corrected; first successful intermediate check retained as evidence. Final run validates new modeless panels and shared caption texture.",
+    "Shader pixel checks validate GLSL expressions on Mesa software GLES, not Android driver/codec integration.",
+    "No core/JNI or third-party runtime dependency changes; earlier Image Editor, messages, backups and permission/media work retained."
+  ],
+  "coverage_document": "docs/VIDEO-MOBILE-EDITOR.md"
+}

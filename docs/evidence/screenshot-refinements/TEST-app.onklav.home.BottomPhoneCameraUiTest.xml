@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.BottomPhoneCameraUiTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-11-02T11:18:15" hostname="6af3db93959e" time="10.233">
+  <properties/>
+  <testcase name="smallRootDialerKeepsCallAndTabsAboveTheMainMenu" classname="app.onklav.home.BottomPhoneCameraUiTest" time="5.894"/>
+  <testcase name="phoneIsARootDestinationWithNoBackArrowAndClearCallButtonSpacing" classname="app.onklav.home.BottomPhoneCameraUiTest" time="0.72"/>
+  <testcase name="cameraKeepsTheBottomMenuAndRootHeaderHasNoExitArrow" classname="app.onklav.home.BottomPhoneCameraUiTest" time="3.464"/>
+  <testcase name="defaultPhoneActionRequestsTheAndroidDialerRole" classname="app.onklav.home.BottomPhoneCameraUiTest" time="0.155"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

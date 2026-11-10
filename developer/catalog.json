@@ -1,0 +1,732 @@
+{
+  "sdk": "0.4.1",
+  "components": [
+    {
+      "id": "button",
+      "kind": "widget",
+      "rust": "onklav_ui::button / primary_button",
+      "guide": "docs/API.md",
+      "rendering": "host theme, font and constraints"
+    },
+    {
+      "id": "label",
+      "kind": "widget",
+      "rust": "onklav_ui::label / heading / empty_state",
+      "guide": "docs/API.md",
+      "rendering": "host theme, font and constraints"
+    },
+    {
+      "id": "field",
+      "kind": "widget",
+      "rust": "onklav_ui::field + NodeExt::limit",
+      "guide": "docs/API.md",
+      "rendering": "host theme, font and constraints"
+    },
+    {
+      "id": "editor",
+      "kind": "widget",
+      "rust": "onklav_ui::editor",
+      "guide": "docs/API.md",
+      "rendering": "host theme, font and constraints"
+    },
+    {
+      "id": "record",
+      "kind": "widget",
+      "rust": "onklav_ui::record + NodeExt::trailing",
+      "guide": "docs/API.md",
+      "rendering": "host theme, font and constraints"
+    },
+    {
+      "id": "toggle",
+      "kind": "widget",
+      "rust": "onklav_ui::toggle",
+      "guide": "docs/API.md",
+      "rendering": "host theme, font and constraints"
+    },
+    {
+      "id": "select",
+      "kind": "widget",
+      "rust": "onklav_ui::choices(\"select\",...)",
+      "guide": "docs/API.md",
+      "rendering": "host theme, font and constraints"
+    },
+    {
+      "id": "chips",
+      "kind": "widget",
+      "rust": "onklav_ui::choices(\"chips\",...)",
+      "guide": "docs/API.md",
+      "rendering": "host theme, font and constraints"
+    },
+    {
+      "id": "speech",
+      "kind": "widget",
+      "rust": "onklav_ui::speech",
+      "guide": "docs/API.md",
+      "rendering": "host theme, font and constraints"
+    },
+    {
+      "id": "speech_settings",
+      "kind": "widget",
+      "rust": "onklav_ui::speech_settings",
+      "guide": "docs/API.md",
+      "rendering": "host theme, font and constraints"
+    },
+    {
+      "id": "web",
+      "kind": "widget",
+      "rust": "onklav_ui::web",
+      "guide": "docs/API.md",
+      "rendering": "host theme, font and constraints"
+    },
+    {
+      "id": "icon",
+      "kind": "widget",
+      "rust": "onklav_ui::icon",
+      "guide": "docs/API.md",
+      "rendering": "host theme, font and constraints"
+    },
+    {
+      "id": "media_record",
+      "kind": "widget",
+      "rust": "onklav_ui::media_record",
+      "guide": "docs/API.md",
+      "rendering": "host theme, font and constraints"
+    },
+    {
+      "id": "canvas",
+      "kind": "widget",
+      "rust": "onklav_ui::canvas",
+      "guide": "docs/API.md",
+      "rendering": "host theme, font and constraints"
+    },
+    {
+      "id": "image_record",
+      "kind": "widget",
+      "rust": "onklav_ui::image_record",
+      "guide": "docs/API.md",
+      "rendering": "host theme, font and constraints"
+    },
+    {
+      "id": "slider",
+      "kind": "widget",
+      "rust": "onklav_ui::slider",
+      "guide": "docs/API.md",
+      "rendering": "host theme, font and constraints"
+    },
+    {
+      "id": "palette",
+      "kind": "widget",
+      "rust": "onklav_ui::palette",
+      "guide": "docs/API.md",
+      "rendering": "host theme, font and constraints"
+    },
+    {
+      "id": "voice_dial",
+      "kind": "widget",
+      "rust": "onklav_ui::voice_dial (offline)",
+      "guide": "docs/API.md",
+      "rendering": "host theme, font and constraints"
+    },
+    {
+      "id": "voice_capture",
+      "kind": "widget",
+      "rust": "onklav_ui::voice_capture",
+      "guide": "docs/API.md",
+      "rendering": "host theme, font and constraints"
+    },
+    {
+      "id": "voice_clip",
+      "kind": "widget",
+      "rust": "onklav_ui::voice_clip",
+      "guide": "docs/API.md",
+      "rendering": "host theme, font and constraints"
+    },
+    {
+      "id": "document",
+      "kind": "controller",
+      "rust": "onklav_ui::apps::document",
+      "description": "Private editor with save, reload and discard recovery",
+      "capabilities": [
+        "storage.private"
+      ],
+      "guide": "docs/COMPONENTS.md"
+    },
+    {
+      "id": "list",
+      "kind": "controller",
+      "rust": "onklav_ui::collection::documents",
+      "description": "Searchable paginated list/detail/editor/delete",
+      "capabilities": [
+        "storage.private"
+      ],
+      "guide": "docs/COMPONENTS.md"
+    },
+    {
+      "id": "form",
+      "kind": "controller",
+      "rust": "onklav_ui::forms::form",
+      "description": "Declarative text, multiline, checkbox and choice form; validation and persistence",
+      "capabilities": [
+        "storage.private"
+      ],
+      "guide": "docs/COMPONENTS.md"
+    },
+    {
+      "id": "settings",
+      "kind": "controller",
+      "rust": "onklav_ui::apps::settings",
+      "description": "Sample app-private preferences",
+      "capabilities": [
+        "storage.private"
+      ],
+      "guide": "docs/COMPONENTS.md"
+    },
+    {
+      "id": "files",
+      "kind": "controller",
+      "rust": "onklav_ui::files::manager",
+      "description": "Full included Files controller",
+      "capabilities": [
+        "files.manage",
+        "files.external",
+        "files.export"
+      ],
+      "guide": "docs/COMPONENTS.md"
+    },
+    {
+      "id": "file-picker",
+      "kind": "controller",
+      "rust": "onklav_ui::files::with_picker",
+      "description": "Folder action, search, Up, pages and cancel; opaque selection",
+      "capabilities": [
+        "files.manage"
+      ],
+      "guide": "docs/COMPONENTS.md"
+    },
+    {
+      "id": "media-viewer",
+      "kind": "controller",
+      "rust": "onklav_ui::files::with_viewer",
+      "description": "Shared image/video/audio playback via opaque file IDs",
+      "capabilities": [
+        "files.manage"
+      ],
+      "guide": "docs/COMPONENTS.md"
+    },
+    {
+      "id": "navigation",
+      "kind": "controller",
+      "rust": "onklav_ui::navigation::Navigation",
+      "description": "Bounded routes with Back and state restoration",
+      "capabilities": [],
+      "guide": "docs/COMPONENTS.md"
+    },
+    {
+      "id": "notes",
+      "kind": "included-app-controller",
+      "rust": "onklav_ui::reference_apps::notes::controller",
+      "capabilities": [
+        "storage.private",
+        "clipboard.read",
+        "clipboard.write",
+        "files.export",
+        "share.text"
+      ],
+      "guide": "docs/COMPONENTS.md",
+      "carrier_external": null
+    },
+    {
+      "id": "rss",
+      "kind": "included-app-controller",
+      "rust": "onklav_ui::reference_apps::rss::controller",
+      "capabilities": [
+        "storage.private",
+        "network.feeds",
+        "network.web",
+        "share.text",
+        "clipboard.write"
+      ],
+      "guide": "docs/COMPONENTS.md",
+      "carrier_external": null
+    },
+    {
+      "id": "reader",
+      "kind": "included-app-controller",
+      "rust": "onklav_ui::reference_apps::reader::controller",
+      "capabilities": [
+        "storage.private",
+        "clipboard.read",
+        "speech.output"
+      ],
+      "guide": "docs/COMPONENTS.md",
+      "carrier_external": null
+    },
+    {
+      "id": "browser",
+      "kind": "included-app-controller",
+      "rust": "onklav_ui::reference_apps::browser::controller",
+      "capabilities": [
+        "storage.private",
+        "network.web",
+        "share.text",
+        "links.external",
+        "clipboard.read",
+        "clipboard.write"
+      ],
+      "guide": "docs/COMPONENTS.md",
+      "carrier_external": null
+    },
+    {
+      "id": "youtube",
+      "kind": "included-app-controller",
+      "rust": "onklav_ui::reference_apps::youtube::controller",
+      "capabilities": [
+        "storage.private",
+        "network.web",
+        "network.thumbnails",
+        "clipboard.read",
+        "clipboard.write",
+        "links.external"
+      ],
+      "guide": "docs/COMPONENTS.md",
+      "carrier_external": null
+    },
+    {
+      "id": "annotation",
+      "kind": "included-app-controller",
+      "rust": "onklav_ui::reference_apps::annotation::controller",
+      "capabilities": [
+        "storage.private",
+        "images.edit",
+        "files.images",
+        "files.export",
+        "share.text",
+        "clipboard.write"
+      ],
+      "guide": "docs/COMPONENTS.md",
+      "carrier_external": null
+    },
+    {
+      "id": "social",
+      "kind": "included-app-controller",
+      "rust": "onklav_ui::reference_apps::social::controller",
+      "capabilities": [],
+      "guide": "docs/COMPONENTS.md",
+      "carrier_external": null
+    },
+    {
+      "id": "walkie",
+      "kind": "included-app-controller",
+      "rust": "onklav_ui::reference_apps::walkie::controller",
+      "capabilities": [
+        "storage.private",
+        "audio.record",
+        "audio.playback",
+        "contacts.pick",
+        "communications.walkie"
+      ],
+      "guide": "docs/COMPONENTS.md",
+      "carrier_external": false,
+      "working_external_routing": "implemented; two-phone acceptance pending"
+    },
+    {
+      "id": "current",
+      "kind": "service-helper",
+      "rust": "onklav_ui::services::current",
+      "guide": "docs/API.md"
+    },
+    {
+      "id": "new_document",
+      "kind": "service-helper",
+      "rust": "onklav_ui::services::new_document",
+      "guide": "docs/API.md"
+    },
+    {
+      "id": "save",
+      "kind": "service-helper",
+      "rust": "onklav_ui::services::save",
+      "guide": "docs/API.md"
+    },
+    {
+      "id": "load",
+      "kind": "service-helper",
+      "rust": "onklav_ui::services::load",
+      "guide": "docs/API.md"
+    },
+    {
+      "id": "page",
+      "kind": "service-helper",
+      "rust": "onklav_ui::services::page",
+      "guide": "docs/API.md"
+    },
+    {
+      "id": "delete",
+      "kind": "service-helper",
+      "rust": "onklav_ui::services::delete",
+      "guide": "docs/API.md"
+    },
+    {
+      "id": "clipboard_read",
+      "kind": "service-helper",
+      "rust": "onklav_ui::services::clipboard_read",
+      "guide": "docs/API.md"
+    },
+    {
+      "id": "clipboard_write",
+      "kind": "service-helper",
+      "rust": "onklav_ui::services::clipboard_write",
+      "guide": "docs/API.md"
+    },
+    {
+      "id": "share",
+      "kind": "service-helper",
+      "rust": "onklav_ui::services::share",
+      "guide": "docs/API.md"
+    },
+    {
+      "id": "export",
+      "kind": "service-helper",
+      "rust": "onklav_ui::services::export",
+      "guide": "docs/API.md"
+    },
+    {
+      "id": "contact",
+      "kind": "service-helper",
+      "rust": "onklav_ui::services::contact",
+      "guide": "docs/API.md"
+    },
+    {
+      "id": "camera-capture",
+      "kind": "service-helper",
+      "rust": "onklav_ui::camera::capture",
+      "capabilities": [
+        "camera.capture"
+      ],
+      "channel": "working",
+      "guide": "docs/EXTENSIONS.md"
+    },
+    {
+      "id": "secure-storage",
+      "kind": "service-helper",
+      "rust": "onklav_ui::secrets::{get,set,delete}",
+      "capabilities": [
+        "storage.secrets"
+      ],
+      "channel": "working",
+      "guide": "docs/EXTENSIONS.md"
+    },
+    {
+      "id": "notifications",
+      "kind": "service-helper",
+      "rust": "onklav_ui::notifications::{show,schedule,cancel}",
+      "capabilities": [
+        "notifications.post"
+      ],
+      "channel": "working",
+      "guide": "docs/EXTENSIONS.md"
+    },
+    {
+      "id": "localized-resources",
+      "kind": "service-helper",
+      "rust": "onklav_ui::localization::translated",
+      "guide": "docs/UI-RESOURCES.md",
+      "channel": "working",
+      "capabilities": []
+    },
+    {
+      "id": "status-and-pagination",
+      "kind": "service-helper",
+      "rust": "onklav_ui::status::{loading,error,empty,page_actions}",
+      "guide": "docs/UI-RESOURCES.md",
+      "channel": "working",
+      "capabilities": []
+    },
+    {
+      "id": "structured-collections",
+      "kind": "service-helper",
+      "rust": "onklav_ui::collections::{info,usage,get,page,query,transact,clear}",
+      "guide": "docs/STORAGE.md",
+      "capabilities": [
+        "storage.private"
+      ],
+      "channel": "working"
+    },
+    {
+      "id": "private-files-cache",
+      "kind": "service-helper",
+      "rust": "onklav_ui::blobs",
+      "capabilities": [
+        "storage.private"
+      ],
+      "guide": "docs/STORAGE.md",
+      "channel": "working",
+      "uses": "Large files, audiobook data, bounded chunks, resumable staging, FIFO cache and user-controlled quotas"
+    },
+    {
+      "id": "private-file-picker",
+      "kind": "service-helper",
+      "rust": "onklav_ui::blobs::{import,export}",
+      "capabilities": [
+        "storage.private",
+        "files.external",
+        "files.export"
+      ],
+      "guide": "docs/STORAGE.md",
+      "channel": "working"
+    },
+    {
+      "id": "collection-backup",
+      "kind": "service-helper",
+      "rust": "onklav_ui::collections::{backup,restore}",
+      "capabilities": [
+        "storage.private"
+      ],
+      "guide": "docs/STORAGE.md",
+      "channel": "working"
+    },
+    {
+      "id": "https-api",
+      "kind": "service-helper",
+      "rust": "onklav_ui::http::{get,request,post_json,parse_json}",
+      "guide": "docs/HTTP.md",
+      "capabilities": [
+        "network.http"
+      ],
+      "channel": "working",
+      "uses": "Bounded public HTTPS text/JSON APIs; signed exact-origin policy. Account authentication is pending."
+    },
+    {
+      "id": "text-reading",
+      "kind": "library",
+      "rust": "onklav_ui::reading::{page,bookmark,resume}",
+      "guide": "docs/READING-HELPERS.md",
+      "channel": "working",
+      "capabilities": [],
+      "uses": "Bounded Unicode text pages and revision-bound reading positions; not EPUB/PDF rendering"
+    },
+    {
+      "id": "radio-playlists",
+      "kind": "library",
+      "rust": "onklav_ui::playlists::parse",
+      "guide": "docs/READING-HELPERS.md",
+      "channel": "working",
+      "capabilities": [],
+      "uses": "Bounded M3U/PLS metadata only; not streaming playback or HLS"
+    },
+    {
+      "id": "utc-calendar-export",
+      "kind": "library",
+      "rust": "onklav_ui::calendar::{export_utc,import_utc}",
+      "guide": "docs/CALENDAR-HELPERS.md",
+      "channel": "working",
+      "capabilities": [],
+      "uses": "Bounded UTC-only ICS import/export; no recurrence or provider access"
+    },
+    {
+      "id": "accounts",
+      "kind": "service",
+      "rust": "onklav_ui::accounts::{connect,list}",
+      "guide": "docs/ACCOUNTS.md",
+      "rendering": "System-browser connection; host-only credentials"
+    },
+    {
+      "id": "jobs",
+      "kind": "service",
+      "rust": "onklav_ui::jobs",
+      "guide": "docs/JOBS-MEDIA.md",
+      "rendering": "Host-owned durable work"
+    },
+    {
+      "id": "downloads",
+      "kind": "service",
+      "rust": "onklav_ui::downloads::Download",
+      "guide": "docs/JOBS-MEDIA.md",
+      "rendering": "Private file staging and immutable completion"
+    },
+    {
+      "id": "media_player",
+      "kind": "widget",
+      "rust": "onklav_ui::media",
+      "guide": "docs/JOBS-MEDIA.md",
+      "rendering": "Shared themed controls and platform media session"
+    },
+    {
+      "id": "clock",
+      "kind": "service",
+      "rust": "onklav_ui::clock::read",
+      "guide": "docs/CLOCK.md",
+      "rendering": "Read-only device time and user display preferences; no permission required"
+    },
+    {
+      "id": "calendar",
+      "kind": "library",
+      "rust": "onklav_ui::calendar::{import_events,export_events,validate_event}",
+      "guide": "docs/CALENDAR.md"
+    },
+    {
+      "id": "calendar_ui",
+      "kind": "controller",
+      "rust": "onklav_ui::calendar_ui::{agenda,event_editor}",
+      "guide": "docs/CALENDAR.md",
+      "rendering": "Existing host-themed fields, records, toolbar and centered discard confirmation"
+    },
+    {
+      "id": "recurrence",
+      "kind": "service",
+      "rust": "onklav_ui::recurrence::Rule",
+      "guide": "docs/RECURRENCE-REMINDERS.md",
+      "rendering": "Bounded read-only Android timezone expansion; no permission required"
+    },
+    {
+      "id": "reminder_status",
+      "kind": "service",
+      "rust": "onklav_ui::notifications::{schedule_at,status,pending}",
+      "guide": "docs/RECURRENCE-REMINDERS.md",
+      "rendering": "App-owned host reminders and explicit inexact timing feedback"
+    },
+    {
+      "id": "scoped-device-services",
+      "kind": "service",
+      "rust": "onklav_ui::devices",
+      "capabilities": [
+        "device.connectivity",
+        "device.settings",
+        "location.foreground",
+        "device.torch",
+        "nearby.bluetooth",
+        "nearby.wifi",
+        "network.lan"
+      ],
+      "guide": "docs/DEVICE-SERVICES.md",
+      "description": "Foreground connectivity/settings, manual or approximate location, timed torch, selected BLE, temporary Wi-Fi and bounded local service transactions."
+    },
+    {
+      "id": "typed-handoff",
+      "kind": "service",
+      "rust": "onklav_ui::handoff::{handlers,open,share,text}",
+      "capabilities": [
+        "apps.handoff"
+      ],
+      "guide": "docs/HANDOFFS.md",
+      "description": "Typed handler availability and reviewed Android chooser handoff for private file handles or text."
+    },
+    {
+      "id": "shared-text-reader",
+      "kind": "controller",
+      "rust": "onklav_ui::reading_ui::reader",
+      "capabilities": [
+        "storage.private"
+      ],
+      "guide": "docs/READING-UI.md",
+      "description": "Bounded Unicode text pages, literal search/results, page-level position persistence and explicit conflict recovery."
+    },
+    {
+      "id": "epub-text-reader",
+      "kind": "controller",
+      "rust": "onklav_ui::epub_ui::reader; onklav_ui::epub::{info,chapter,search}",
+      "capabilities": [
+        "storage.private"
+      ],
+      "guide": "docs/EPUB.md",
+      "description": "Bounded offline EPUB2/3 spine/TOC, themed text reflow, whole-book search, fragment jumps and chapter/page positions. Text profile; no image/CSS/DRM/fixed-layout support."
+    },
+    {
+      "id": "pdf_viewer",
+      "kind": "widget",
+      "rust": "onklav_ui::pdf::{viewer,reader}",
+      "capabilities": [
+        "storage.private"
+      ],
+      "guide": "docs/PDF.md",
+      "description": "Isolated Android PDF pages, zoom, bounded search/highlights, selection/text view and pinned page positions. Advanced text tools need API35."
+    },
+    {
+      "id": "map_viewer",
+      "kind": "widget",
+      "rust": "onklav_ui::maps::{provider,tile,marker,viewer}",
+      "capabilities": [
+        "storage.private"
+      ],
+      "guide": "docs/MAPS.md",
+      "description": "Bounded private XYZ raster tiles, Mercator placement, native pan/magnification, markers and persistent visible provider/OSM attribution. No automatic tile fetch."
+    },
+    {
+      "id": "map-tile-cache",
+      "kind": "controller",
+      "rust": "onklav_ui::maps::{cached,fetch_cached_request,cache_response,clear_cache}",
+      "capabilities": [
+        "storage.private",
+        "network.http"
+      ],
+      "guide": "docs/MAPS.md",
+      "description": "Bounded owner-private tile cache, conditional binary HTTPS requests and explicit provider offline policy."
+    },
+    {
+      "id": "map-geocoding-routing",
+      "kind": "controller",
+      "rust": "onklav_ui::maps_geo::{Provider,search,places,route,route_result,with_route}",
+      "capabilities": [
+        "network.http"
+      ],
+      "guide": "docs/MAPS-GEO.md",
+      "description": "Explicit configured Nominatim-jsonv2 and OSRM-GeoJSON adapters, bounded normalized places/routes and attributed map overlays."
+    },
+    {
+      "id": "podcast-radio-adapters",
+      "kind": "controller",
+      "rust": "onklav_ui::{podcasts,radio}",
+      "capabilities": [
+        "storage.private",
+        "network.http",
+        "audio.playback"
+      ],
+      "guide": "docs/PODCASTS-RADIO.md",
+      "description": "Bounded RSS2 audio enclosures and selected Icecast JSON metadata, using shared signed-origin HTTP and media brokers."
+    },
+    {
+      "id": "email-header-sync",
+      "kind": "controller",
+      "rust": "onklav_ui::email",
+      "capabilities": [
+        "storage.private",
+        "network.http",
+        "accounts.connect"
+      ],
+      "guide": "docs/EMAIL.md",
+      "description": "Configured read-only JMAP account/transport, bounded correlated header pages and private snapshot commits."
+    },
+    {
+      "id": "email-content-compose",
+      "kind": "controller",
+      "rust": "onklav_ui::{email_content,email_compose}",
+      "capabilities": [
+        "storage.private",
+        "network.http",
+        "accounts.connect"
+      ],
+      "guide": "docs/EMAIL-CONTENT.md",
+      "description": "Bounded JMAP plain content and server-blob attachments, private draft and native confirmed submission with durable uncertain-outcome lock."
+    },
+    {
+      "id": "weather-current-cache",
+      "kind": "controller",
+      "rust": "onklav_ui::weather",
+      "capabilities": [
+        "storage.private",
+        "network.http"
+      ],
+      "guide": "docs/WEATHER.md",
+      "description": "Configured current model weather, metric/imperial units, visible attribution and private stale-cache/refresh UI."
+    },
+    {
+      "id": "service-reference-apps",
+      "kind": "controller",
+      "rust": "onklav_ui::reference_apps::{weather,listening,tile_map,mail}",
+      "capabilities": [],
+      "guide": "docs/SERVICE-REFERENCE-APPS.md",
+      "description": "Source-only reference projects for manual weather, podcast/radio listening, single-tile map and connected-mail headers; per-project manifests declare grants."
+    }
+  ],
+  "reference_host": "0.100.42-quick",
+  "host_protocol_build": 96
+}

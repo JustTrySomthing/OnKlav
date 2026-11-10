@@ -1,0 +1,115 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+ONKLAV_SESSION_READY
+LAST_LIGHT_RESULT checks=305 failures=0
+4.7.2.stable.official.ed1daf0bf
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Started Project initialization (5 steps)[39m[0m
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Scanning file structure...[39m[0m
+[  16% ] [90m[1mfirst_scan_filesystem[22m | Loading global class names...[39m[0m
+[  33% ] [90m[1mfirst_scan_filesystem[22m | Verifying GDExtensions...[39m[0m
+[  50% ] [90m[1mfirst_scan_filesystem[22m | Creating autoload scripts...[39m[0m
+[  66% ] [90m[1mfirst_scan_filesystem[22m | Initializing plugins...[39m[0m
+[  83% ] [90m[1mfirst_scan_filesystem[22m | Starting file scan...[39m[0m
+[92m[ DONE ][39m [1mfirst_scan_filesystem[22m
+[0m
+[   0% ] [90m[1mupdate_scripts_classes[22m | Started Registering global classes... (2 steps)[39m[0m
+[   0% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  33% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[92m[ DONE ][39m [1mupdate_scripts_classes[22m
+[0m
+[   0% ] [90m[1mloading_editor_layout[22m | Started Loading editor (5 steps)[39m[0m
+[   0% ] [90m[1mloading_editor_layout[22m | Loading editor layout...[39m[0m
+[  16% ] [90m[1mloading_editor_layout[22m | Loading docks...[39m[0m
+[92m[ DONE ][39m [1mloading_editor_layout[22m
+[0m
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+ONKLAV_SESSION_READY
+LAST_LIGHT_RESULT checks=305 failures=0
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+ONKLAV_SESSION_READY
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Started Project initialization (5 steps)[39m[0m
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Scanning file structure...[39m[0m
+[  16% ] [90m[1mfirst_scan_filesystem[22m | Loading global class names...[39m[0m
+[  33% ] [90m[1mfirst_scan_filesystem[22m | Verifying GDExtensions...[39m[0m
+[  50% ] [90m[1mfirst_scan_filesystem[22m | Creating autoload scripts...[39m[0m
+[  66% ] [90m[1mfirst_scan_filesystem[22m | Initializing plugins...[39m[0m
+[  83% ] [90m[1mfirst_scan_filesystem[22m | Starting file scan...[39m[0m
+[92m[ DONE ][39m [1mfirst_scan_filesystem[22m
+[0m
+[   0% ] [90m[1msavepack[22m | Started Packing (102 steps)[39m[0m
+[   1% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/armor.svg-2896967e42f7fa8b24424b7cf274751e.ctex[39m[0m
+[   1% ] [90m[1msavepack[22m | Storing File: res://art/armor.svg.import[39m[0m
+[   4% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/courier-coat.svg-903e4e924dbf5b5f5bf3109ca186ff07.ctex[39m[0m
+[   4% ] [90m[1msavepack[22m | Storing File: res://art/courier-coat.svg.import[39m[0m
+[   7% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/freight.svg-7cf88d40ad635badc428c5854a82be73.ctex[39m[0m
+[   7% ] [90m[1msavepack[22m | Storing File: res://art/freight.svg.import[39m[0m
+[  10% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/guard.svg-e54bae905486755c4165f763f16f1161.ctex[39m[0m
+[  10% ] [90m[1msavepack[22m | Storing File: res://art/guard.svg.import[39m[0m
+[  13% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/sleeper.svg-72a004530e98aa9cb58dcd6f278ca37c.ctex[39m[0m
+[  13% ] [90m[1msavepack[22m | Storing File: res://art/sleeper.svg.import[39m[0m
+[  16% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/blackout.wav-f9cd451e32c10e9975512930be8cacad.sample[39m[0m
+[  16% ] [90m[1msavepack[22m | Storing File: res://audio/blackout.wav.import[39m[0m
+[  19% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/block.wav-862e14aabfa854dd89f6e45e400ee640.sample[39m[0m
+[  19% ] [90m[1msavepack[22m | Storing File: res://audio/block.wav.import[39m[0m
+[  22% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/charge.wav-9ea0e7ab134da578b6f69151780ec24f.sample[39m[0m
+[  22% ] [90m[1msavepack[22m | Storing File: res://audio/charge.wav.import[39m[0m
+[  26% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/furnace.wav-f862a290a247e19a0ba7840dcefb0c2a.sample[39m[0m
+[  26% ] [90m[1msavepack[22m | Storing File: res://audio/furnace.wav.import[39m[0m
+[  29% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/groan.wav-86222a0182ae8a9e3d5609c730abaa10.sample[39m[0m
+[  29% ] [90m[1msavepack[22m | Storing File: res://audio/groan.wav.import[39m[0m
+[  32% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/gust.wav-c060d8d5e0e65b3cf0d57644cd3cd3d9.sample[39m[0m
+[  32% ] [90m[1msavepack[22m | Storing File: res://audio/gust.wav.import[39m[0m
+[  34% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/hit.wav-0ce77c86b567f5096583f88ec20be939.sample[39m[0m
+[  34% ] [90m[1msavepack[22m | Storing File: res://audio/hit.wav.import[39m[0m
+[  37% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/impact.wav-606f8b40b78eec03bfd2693747f9e1cb.sample[39m[0m
+[  37% ] [90m[1msavepack[22m | Storing File: res://audio/impact.wav.import[39m[0m
+[  40% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/jump.wav-caa262a56cc3712002c1b0d9d9015e3b.sample[39m[0m
+[  40% ] [90m[1msavepack[22m | Storing File: res://audio/jump.wav.import[39m[0m
+[  43% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/pickup.wav-50ccb85162b55cb36c5fcbb14a14a19a.sample[39m[0m
+[  43% ] [90m[1msavepack[22m | Storing File: res://audio/pickup.wav.import[39m[0m
+[  46% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/pressure.ogg-b32bc508e39e3fe83487431dd48ad0b7.oggvorbisstr[39m[0m
+[  46% ] [90m[1msavepack[22m | Storing File: res://audio/pressure.ogg.import[39m[0m
+[  50% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/rail.ogg-9e43c806a90311e288e7db14c8552dcf.oggvorbisstr[39m[0m
+[  50% ] [90m[1msavepack[22m | Storing File: res://audio/rail.ogg.import[39m[0m
+[  53% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/rail.wav-90ecc1745ef33995546b504d6c70887e.sample[39m[0m
+[  53% ] [90m[1msavepack[22m | Storing File: res://audio/rail.wav.import[39m[0m
+[  56% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/storm.wav-fd2dff2ef3bd9c3686e1e7e62ea533c7.sample[39m[0m
+[  56% ] [90m[1msavepack[22m | Storing File: res://audio/storm.wav.import[39m[0m
+[  59% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/strike.wav-7235959334873b22b657ec161c5add3b.sample[39m[0m
+[  59% ] [90m[1msavepack[22m | Storing File: res://audio/strike.wav.import[39m[0m
+[  62% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/sweep.wav-17d351f872a4b5808c475205462609c1.sample[39m[0m
+[  62% ] [90m[1msavepack[22m | Storing File: res://audio/sweep.wav.import[39m[0m
+[  65% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/switch.wav-3dc2d4cf0f159c12bedcd37aec20a013.sample[39m[0m
+[  65% ] [90m[1msavepack[22m | Storing File: res://audio/switch.wav.import[39m[0m
+[  67% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/tether.wav-956e749774559afbc967bf4c16f90a24.sample[39m[0m
+[  67% ] [90m[1msavepack[22m | Storing File: res://audio/tether.wav.import[39m[0m
+[  70% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/train-bed.wav-bbc0e1f307ade6b50d8814515d2133b6.sample[39m[0m
+[  70% ] [90m[1msavepack[22m | Storing File: res://audio/train-bed.wav.import[39m[0m
+[  74% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/warden.wav-4e96860e29ec5965f236e3c1deb220ca.sample[39m[0m
+[  74% ] [90m[1msavepack[22m | Storing File: res://audio/warden.wav.import[39m[0m
+[  77% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/warn.wav-6d6d687fa116fcb56031f2dc612f47e5.sample[39m[0m
+[  77% ] [90m[1msavepack[22m | Storing File: res://audio/warn.wav.import[39m[0m
+[  80% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/win.wav-a85682759b6fa412fcd878d8f1a6ea9d.sample[39m[0m
+[  80% ] [90m[1msavepack[22m | Storing File: res://audio/win.wav.import[39m[0m
+[  83% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/card.svg-8263b4440db2bee26d6d78d8179ef9db.ctex[39m[0m
+[  83% ] [90m[1msavepack[22m | Storing File: res://card.svg.import[39m[0m
+[  86% ] [90m[1msavepack[22m | Storing File: res://game_chrome.gdc[39m[0m
+[  89% ] [90m[1msavepack[22m | Storing File: res://.godot/exported/133200997/export-3070c538c03ee49b7677ff960a3f5195-main.scn[39m[0m
+[  92% ] [90m[1msavepack[22m | Storing File: res://route.gdc[39m[0m
+[  95% ] [90m[1msavepack[22m | Storing File: res://onklav_game.gdc[39m[0m
+[  95% ] [90m[1msavepack[22m | Storing File: res://game_chrome.gd.remap[39m[0m
+[  95% ] [90m[1msavepack[22m | Storing File: res://main.tscn.remap[39m[0m
+[  95% ] [90m[1msavepack[22m | Storing File: res://route.gd.remap[39m[0m
+[  95% ] [90m[1msavepack[22m | Storing File: res://onklav_game.gd.remap[39m[0m
+[  95% ] [90m[1msavepack[22m | Storing File: res://.godot/global_script_class_cache.cfg[39m[0m
+[  95% ] [90m[1msavepack[22m | Storing File: res://.godot/uid_cache.bin[39m[0m
+[  95% ] [90m[1msavepack[22m | Storing File: res://project.binary[39m[0m
+[92m[ DONE ][39m [1msavepack[22m
+[0m
+/workspace/scratch/a3048c8ff972/restored/OnKlav/android/games/src/main/assets/included-games/last-light.zip

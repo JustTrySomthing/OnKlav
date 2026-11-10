@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.RadioContinuityTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-28T13:08:31" hostname="1b65f1fab707" time="13.356">
+  <properties/>
+  <testcase name="sleepDeadlineAndRevocationCannotBeBypassedByReconnect" classname="app.onklav.home.RadioContinuityTest" time="5.071"/>
+  <testcase name="rapidEofAndIoErrorsAreBoundedAndManualPlayCanRetry" classname="app.onklav.home.RadioContinuityTest" time="2.659"/>
+  <testcase name="pauseStopAndReplacementCancelQueuedReconnection" classname="app.onklav.home.RadioContinuityTest" time="2.752"/>
+  <testcase name="trackBoundaryReconnectsLiveEdgeAndKeepsChangingAudioSession" classname="app.onklav.home.RadioContinuityTest" time="2.874"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

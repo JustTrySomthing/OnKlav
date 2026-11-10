@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.VideoRcTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-10-28T02:49:07" hostname="666c98ec4593" time="4.429">
+  <properties/>
+  <testcase name="cubeLutsUseRedFastestOrderAndBlendInLinearLight" classname="app.onklav.home.VideoRcTest" time="3.664"/>
+  <testcase name="wipeSettingsHandleBothAlternatingDirections" classname="app.onklav.home.VideoRcTest" time="0.075"/>
+  <testcase name="sonicPitchChangesFrequencyWhileKeepingDuration" classname="app.onklav.home.VideoRcTest" time="0.132"/>
+  <testcase name="customBezierInvertsTimeAndRetainsItsShapeAcrossSplits" classname="app.onklav.home.VideoRcTest" time="0.065"/>
+  <testcase name="previewProxyIsNeverUsedForExportOrPortableBackup" classname="app.onklav.home.VideoRcTest" time="0.106"/>
+  <testcase name="captionsFollowOverlapTimelineAndMarkersClampOnShortening" classname="app.onklav.home.VideoRcTest" time="0.066"/>
+  <testcase name="beatDetectorFindsRhythmicOnsetsAndRejectsQuietBackground" classname="app.onklav.home.VideoRcTest" time="0.068"/>
+  <testcase name="overlapsChangeTheTimelineWithoutTripleOverlap" classname="app.onklav.home.VideoRcTest" time="0.066"/>
+  <testcase name="crossfadeUsesTwoRealSequencesAndFillsTheirTimelineGaps" classname="app.onklav.home.VideoRcTest" time="0.064"/>
+  <testcase name="noiseCleanupIsChunkStableAndRumbleFilterReducesBass" classname="app.onklav.home.VideoRcTest" time="0.122"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

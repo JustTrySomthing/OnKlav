@@ -1,0 +1,17 @@
+{
+  "apple_search": "HTTP200, public request without credentials, search results contain publisher RSS feeds",
+  "apple_browse": "HTTP200 top100 chart + public lookup;100 podcast feed records bundled for immediate browse",
+  "librivox_api": "id52 returned HTTP200; category/title requests returned HTTP403/500 from this environment. The exact phone error was not reproduced.",
+  "archive_mystery": {
+    "http": 200,
+    "matches": 878,
+    "first_title": "The Adventures of Sherlock Holmes",
+    "chapter_metadata_bytes": 61140,
+    "preferred_mp3_chapters": 12
+  },
+  "phone_networking_tested": false,
+  "official_api_documentation": [
+    "https://performance-partners.apple.com/search-api",
+    "https://librivox.org/api/info"
+  ]
+}

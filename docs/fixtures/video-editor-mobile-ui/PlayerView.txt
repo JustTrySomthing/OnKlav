@@ -1,0 +1,2 @@
+package androidx.media3.ui
+class PlayerView(c:android.content.Context):android.widget.FrameLayout(c){var useController=false;var player:Any?=null;fun setShutterBackgroundColor(color:Int){setBackgroundColor(color)}}

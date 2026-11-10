@@ -1,0 +1,234 @@
+{
+  "sdk": "0.6.0",
+  "source_host": "0.100.56-rc1/code165",
+  "latest_built_apk": "0.100.55-rc1/code164 predates this source",
+  "apk_built_this_increment": false,
+  "save_contract": "SAVES.md",
+  "checks": {
+    "rules_checks": 12,
+    "session_checks": 30,
+    "hockey_checks": 95,
+    "naval_turn_checks": 247,
+    "cats_dogs_checks": 387,
+    "blackjack_checks": 179,
+    "panda_checks": 2102,
+    "dominos_checks": 4628,
+    "dominos_layout_checks": 60324
+  },
+  "host_case_count": 25,
+  "sdk_unit_methods": 11,
+  "template_import_tests_boot": [
+    "touch2d",
+    "scene3d",
+    "turn"
+  ],
+  "web_save_cases": 12,
+  "host_ack_and_failure_cases": true,
+  "prior_engine_and_signing_qualification": {
+    "sdk": "0.5.0",
+    "source_host": "0.100.48-rc1/code157",
+    "latest_built_apk": "0.100.47-rc1/code156 predates this work",
+    "apk_built_this_increment": false,
+    "checks": {
+      "naval_friend_models": 222,
+      "hockey": 80,
+      "shared_rules": 12,
+      "sdk_unit_methods": 11,
+      "template_export_sign_verify": [
+        {
+          "template": "touch2d",
+          "bytes": 117923,
+          "signature_verified": true,
+          "minimum_host": 157
+        },
+        {
+          "template": "scene3d",
+          "bytes": 118410,
+          "signature_verified": true,
+          "minimum_host": 157
+        },
+        {
+          "template": "turn",
+          "bytes": 120837,
+          "signature_verified": true,
+          "minimum_host": 157
+        },
+        {
+          "template": "sms",
+          "bytes": 120854,
+          "signature_verified": true,
+          "minimum_host": 157
+        }
+      ],
+      "phone_sized_browser_flows": [
+        {
+          "viewport": [
+            320,
+            560
+          ],
+          "solo_fleet_target_fire_ai_pause_saved_return": true,
+          "engine_errors": [],
+          "js_errors": []
+        },
+        {
+          "viewport": [
+            432,
+            740
+          ],
+          "solo_fleet_target_fire_ai_pause_saved_return": true,
+          "engine_errors": [],
+          "js_errors": []
+        }
+      ],
+      "friend_browser_relay": {
+        "two_isolated_browser_peers": true,
+        "private_fleets_and_readiness": true,
+        "four_alternating_sms_turns": true,
+        "duplicate_history_ignored": true,
+        "saved_return_prompt": true,
+        "physical_carrier": false,
+        "errors": []
+      },
+      "android_broker_session_tests": "FriendGamesTest 4 methods + GameSessionStatusTest 3 methods passed; production optimized Kotlin compiled",
+      "android_package_web_window_tests": "GamePackagesTest, GameWebPolicyTest and GameWindowHostTest passed"
+    },
+    "physical_device_tested": false,
+    "limits": [
+      "No157 APK built this increment;156 lacks these changes.",
+      "Native SMS tests use two isolated Robolectric contexts; browser tests use a simulated relay, not physical carrier SMS.",
+      "Two-phone/SIM, real speaker audio, Samsung gestures, process-loss and performance acceptance remain open.",
+      "Web storage synchronization is asynchronous.",
+      "SMS is not end-to-end encrypted or cryptographically authenticated.",
+      "Headless bounded boot may report ObjectDB shutdown instances; live browser flows report no engine errors."
+    ],
+    "scope": "Historical SDK verification retained; audio_continuity_update describes the latest shared helper/template changes.",
+    "loading_theme_update": {
+      "color": "#603D77",
+      "after_apk": "0.100.51-rc1/code160",
+      "sdk_unit_methods_passed": 11,
+      "browser_css_verified": true,
+      "template_theme_idempotent": true,
+      "js_wasm_worklets_unchanged": true,
+      "api_and_minimum_host_unchanged": true,
+      "export_template_sha256": "b6cf7cb0311210b93b0cf31aab8b7f1bf68a58eb3c900a153b575a9caa8f5564"
+    },
+    "controls_pause_update": {
+      "after_apk": "0.100.51-rc1/code160",
+      "hockey_checks": 95,
+      "template_motion_and_lifecycle_checks": 14,
+      "sdk_unit_methods_passed": 11,
+      "all_five_game_controls_browser_checked": true,
+      "game_chrome_sha256": "4ae3bd95ecf42fecf832cee8e65dc63d0bf4b489260fe900f44f9f12fe826d44",
+      "api_and_minimum_host_unchanged": true
+    },
+    "audio_continuity_update": {
+      "after_apk": "0.100.51-rc1/code160",
+      "template_audio_and_lifecycle_checks": 17,
+      "sdk_python_checks": 11,
+      "all_five_game_controls_browser_checked": true,
+      "game_chrome_sha256": "06b0b2bdbde37cbcb0ee2f029176bd64158e7d344a3a097d7038f608e3733dd7",
+      "api_engine_and_minimum_host_unchanged": true,
+      "handset_audio_static_not_certified": true
+    }
+  },
+  "physical_handset_acceptance": false,
+  "latest_loader_verification": {
+    "sdk_unit_methods": 14,
+    "default_and_custom_png_exports": true,
+    "phone_and_landscape_browser_cases": 3,
+    "all_six_real_games_start": true,
+    "mute_zero_volume_and_reduced_motion": true,
+    "sound_output_measured_in_browser": true,
+    "only_template_member_changed": "godot.html",
+    "source_host": "0.100.56-rc1/code165",
+    "apk_built": false
+  },
+  "latest_ui_refinements": {
+    "source_host": "0.100.56-rc1/code165",
+    "background_free_close": true,
+    "helper_upgrade_hash_registered": true,
+    "sdk_unit_methods": 14,
+    "apk_built": false
+  },
+  "entry_revision": {
+    "source_host": "0.100.57-rc1/code166",
+    "apk_built": false,
+    "latest_delivered_apk": "0.100.56-rc1/code165",
+    "catalog_is_list_only": true,
+    "native_entry_before_webview": true,
+    "one_loader_after_explicit_start_or_resume": true,
+    "no_foreground_entry_dialog": true,
+    "discard_blocks_late_session_writes": true,
+    "permanent_profiles_preserved": true,
+    "browser": [
+      {
+        "game": "panda",
+        "start_without_runtime_dialog": true,
+        "resume_without_second_dialog": true,
+        "return_waits_for_save": true,
+        "quit_waits_for_discard": true,
+        "focus_loss_cannot_resurrect": true,
+        "profile_preserved": true,
+        "foreground_without_entry_dialog": true
+      },
+      {
+        "game": "dominos",
+        "start_without_runtime_dialog": true,
+        "resume_without_second_dialog": true,
+        "return_waits_for_save": true,
+        "quit_waits_for_discard": true,
+        "focus_loss_cannot_resurrect": true,
+        "profile_preserved": true,
+        "foreground_without_entry_dialog": true
+      },
+      {
+        "game": "hockey",
+        "start_without_runtime_dialog": true,
+        "resume_without_second_dialog": true,
+        "return_waits_for_save": true,
+        "quit_waits_for_discard": true,
+        "focus_loss_cannot_resurrect": true,
+        "profile_preserved": true,
+        "foreground_without_entry_dialog": true
+      },
+      {
+        "game": "naval",
+        "start_without_runtime_dialog": true,
+        "resume_without_second_dialog": true,
+        "return_waits_for_save": true,
+        "quit_waits_for_discard": true,
+        "focus_loss_cannot_resurrect": true,
+        "profile_preserved": true,
+        "foreground_without_entry_dialog": true
+      },
+      {
+        "game": "four",
+        "start_without_runtime_dialog": true,
+        "resume_without_second_dialog": true,
+        "return_waits_for_save": true,
+        "quit_waits_for_discard": true,
+        "focus_loss_cannot_resurrect": true,
+        "profile_preserved": true,
+        "foreground_without_entry_dialog": true
+      },
+      {
+        "game": "blackjack",
+        "start_without_runtime_dialog": true,
+        "resume_without_second_dialog": true,
+        "return_waits_for_save": true,
+        "quit_waits_for_discard": true,
+        "focus_loss_cannot_resurrect": true,
+        "profile_preserved": true,
+        "foreground_without_entry_dialog": true
+      }
+    ],
+    "android_entry_tests": 8,
+    "android_catalog_tests": 3,
+    "android_window_tests": 3,
+    "android_friend_tests": 10,
+    "sdk_tests": 14,
+    "games_current": true,
+    "legacy_engine_fingerprints_retained": true,
+    "physical_device_tested": false
+  }
+}

@@ -1,0 +1,40 @@
+{
+  "status": "Chunks19\u201325 implemented in working source; full-host integration and hardware acceptance pending",
+  "source_implemented": [
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25
+  ],
+  "prior_completed_chunks_preserved": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18
+  ],
+  "next_feature_chunks": [
+    26,
+    27
+  ],
+  "verification": "docs/group12-verification.json",
+  "full_host_integration": "blocked by unavailable dependencies; not passed",
+  "physical_acceptance": "pending",
+  "apk_built": false
+}

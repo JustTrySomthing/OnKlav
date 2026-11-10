@@ -1,0 +1,68 @@
+{
+  "status": "Tasks17\u201318 complete in source; phone/OEM qualification remains separate",
+  "chunks": [
+    17,
+    18
+  ],
+  "android_cases": [
+    "SdkRecurrenceTest.localDailyTimeSurvivesDstAndTimedDurationStaysElapsed",
+    "SdkRecurrenceTest.windowLimitsAndWorkLimitsAreVisibleAndInvalidRulesFail",
+    "SdkRecurrenceTest.gapAndOverlapPoliciesAreExplicitAndCountOnlyRealOccurrences",
+    "SdkRecurrenceTest.monthAndLeapYearRecurrenceSkipInvalidDatesInsteadOfClamping",
+    "SdkRecurrenceTest.allDayIntervalsUseCivilDatesAcrossShortLongAndMissingDays",
+    "SdkScheduledNotificationsTest.schedulesPersistedBoundedJobsAndReplacementRejectsOldTokens",
+    "SdkScheduledNotificationsTest.absoluteSchedulingStatusPendingAndCancelExposeOnlyOwnedTiming",
+    "SdkScheduledNotificationsTest.deliveryRechecksOwnerAndConsumesOnlyOnce",
+    "SdkScheduledNotificationsTest.absoluteBoundsDenialAndStatusCannotLeakOtherPublishersOrClaimDelivery",
+    "SdkScheduledNotificationsTest.failedAuthorizationAndInvalidDelaysDoNotCreateJobs",
+    "SdkScheduledNotificationsTest.queuesHavePerAppAndHostLimitsAndCancelOnlyTheirOwner",
+    "SdkScheduledNotificationsTest.transientOwnerFailuresHaveBoundedRetriesAndLateRevocationNeverPosts",
+    "SdkScheduledNotificationsTest.revokedOrChangedPublisherNeverPostsAndStoppedWorkKeepsQueue",
+    "SdkScheduledNotificationsTest.recoveryRestoresMissingJobsAndRejectsMalformedRows",
+    "SdkScheduledNotificationsTest.absoluteRecoveryRecomputesLatencyAfterClockChangeAndReportsMissingRegistration",
+    "SdkScheduledNotificationsTest.disabledOwnerChannelIsVisibleInStatusAndBlocksScheduling",
+    "SdkRecurrenceBridgeTest.recurrenceNeedsNoGrantButRevokedReminderQueryCannotBeAuthorized",
+    "SdkRecurrenceBridgeTest.signedGuestUsesPermissionFreeTimezoneExpansionAndAbsoluteReminderStatus"
+  ],
+  "android_host_checks_passed": 18,
+  "rust_recurrence_contract_checks_passed": 2,
+  "rust_reminder_contract_checks_passed": 2,
+  "public_helper_selection_checks_passed": 3,
+  "developer_contract_checks_passed": 5,
+  "native_proof": "docs/evidence/v0.70.0/recurrence-native-proof.json",
+  "android_log": "docs/evidence/v0.70.0/recurrence-android-final.log",
+  "source_sha256": {
+    "core/src/lib.rs": "4c0033016cb45361df6d3a35d15135fba3bd18d6f016248a294839b474cd6d63",
+    "core/src/sdk.rs": "1ec0d1469b5f548ca93dd2319849d59bf48ef5578e9450a76403d168d5d9cdbd",
+    "core/src/sdk_calendar.rs": "0a3a95a667e29ba34400a320e9486dcf01bacdc275b0809f36505fac68e7c49d",
+    "android/app/src/main/kotlin/app/onklav/home/SdkRecurrence.kt": "31b16df97bd1c6b5ab26f1bc851d7da83a6f5cce9c226aa9ba4108588eb392f7",
+    "android/app/src/main/kotlin/app/onklav/home/SdkScheduledNotifications.kt": "367cb613630412bbb4f61924193c863c23df63b0a6a253eaabe883c19a0b6631",
+    "android/app/src/main/kotlin/app/onklav/home/SdkNotifications.kt": "4966b2fbc4345316b0ed48b1218765a08147c0c7de579c47bdad3630725a403e",
+    "android/app/src/main/kotlin/app/onklav/home/SdkReminderRecoveryReceiver.kt": "82f6876136fa2dfeab6c064bf6148d19fac5d763cc5ed7cb6f657e48bf0aee57",
+    "android/app/src/main/kotlin/app/onklav/home/SdkDeviceEffects.kt": "34a41fd6cf87922d1f488d98456ea89171d088b9b3117beb0902fd6e5e521f3f",
+    "android/app/src/main/kotlin/app/onklav/home/SdkAppScreen.kt": "64108fa651857ffaa9daa9fbab75164a97b938f52a351ee419fa2e612cc27058",
+    "android/app/src/main/kotlin/app/onklav/home/AppSdk.kt": "1546ab6230fd9ca48416ca5a02061072f695c12302a59cfb51a3e0dbbb1e1d18",
+    "android/app/src/main/AndroidManifest.xml": "045733fe6d456fb33017d8dec322b400e422faa31d863a8102869b7e3e165374",
+    "developer/components/src/recurrence.rs": "84af14813019959910def9f1df0d3cb0d8a4046e1335d402fe2637c19e733203",
+    "developer/components/src/notifications.rs": "a7ed819188a6777e19920e32a4543cc797fab84c376b38a293460d3ff763c51f",
+    "developer/tests/make_recurrence_fixture.py": "bc3db857b827d04e768e7075b372b59aeb8717e8a39b4c528a7fab2e97dc26e6",
+    "docs/fixtures/recurrence-wip.onklav-a": "24597398986b2123224f3ba4a9c995d3e386589d976f6ad4537b18546eae6943",
+    "android/app/src/test/kotlin/app/onklav/home/SdkRecurrenceTest.kt": "bb9c89f7a0400194a945938f70681af41c28a3f240dfcdf69cb790b48a9dbf54",
+    "android/app/src/test/kotlin/app/onklav/home/SdkRecurrenceBridgeTest.kt": "c9d8bae6c4a1f2f5a032de5df8587d03cfea9dac1e692b5ce938a48c13af1914",
+    "android/app/src/test/kotlin/app/onklav/home/SdkScheduledNotificationsTest.kt": "14df81e66d4e122c0ec80c079da0376d7d6c2d791604af226b4d2362cf4309c0"
+  },
+  "scope": [
+    "Read-only bounded daily/weekly/monthly/yearly local-time expansion using Android timezone rules, explicit gap/overlap and civil all-day duration",
+    "Count/window/result/work limits, invalid-date skips and visible truncation",
+    "Host-owned absolute inexact reminders, scoped pending/status timing and notification/channel feedback",
+    "Clock/reboot/bootstrap repair; live owner/grant checks, cancellation and legacy relative reminder regression coverage"
+  ],
+  "not_implemented": [
+    "Snooze/repeat actions and explicit missed-event policy (chunk19)",
+    "User-selected Android calendar integration (chunk20)",
+    "Named-timezone calendar editor UI and arbitrary RRULE/BYDAY/EXDATE import beyond bounded rule API"
+  ],
+  "hardware_tested": false,
+  "apk_built": false,
+  "sdk_release_built": false
+}

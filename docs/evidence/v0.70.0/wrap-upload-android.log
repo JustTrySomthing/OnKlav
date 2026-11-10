@@ -1,0 +1,91 @@
+Isolated harness: /tmp/onklav-device-checks-gm8tn_vy
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.11.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :checks
+WARNING: The option setting 'android.aapt2FromMavenOverride=/workspace/scratch/ed752e8a1957/group12-env/sdk/build-tools/35.0.0/aapt2' is experimental.
+WARNING: platform-tools package is not installed.
+
+> Task :checks:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :checks:preBuild UP-TO-DATE
+> Task :checks:preDebugBuild UP-TO-DATE
+> Task :checks:generateDebugResValues UP-TO-DATE
+> Task :checks:generateDebugResources UP-TO-DATE
+> Task :checks:packageDebugResources UP-TO-DATE
+> Task :checks:parseDebugLocalResources UP-TO-DATE
+> Task :checks:generateDebugRFile UP-TO-DATE
+> Task :android:shared:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:shared:preBuild UP-TO-DATE
+> Task :android:shared:preDebugBuild UP-TO-DATE
+> Task :android:shared:generateDebugResValues UP-TO-DATE
+> Task :android:shared:generateDebugResources UP-TO-DATE
+> Task :android:shared:packageDebugResources UP-TO-DATE
+> Task :android:shared:parseDebugLocalResources UP-TO-DATE
+> Task :android:shared:generateDebugRFile UP-TO-DATE
+> Task :android:shared:compileDebugKotlin UP-TO-DATE
+> Task :android:shared:javaPreCompileDebug UP-TO-DATE
+> Task :android:shared:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:shared:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :checks:javaPreCompileDebug UP-TO-DATE
+> Task :checks:preDebugUnitTestBuild UP-TO-DATE
+> Task :checks:writeDebugAarMetadata UP-TO-DATE
+> Task :android:shared:writeDebugAarMetadata UP-TO-DATE
+> Task :checks:checkDebugUnitTestAarMetadata UP-TO-DATE
+> Task :checks:compileDebugLibraryResources UP-TO-DATE
+> Task :checks:generateDebugUnitTestResValues UP-TO-DATE
+> Task :checks:mapDebugUnitTestSourceSetPaths UP-TO-DATE
+> Task :checks:generateDebugUnitTestResources UP-TO-DATE
+> Task :checks:mergeDebugUnitTestResources UP-TO-DATE
+> Task :checks:extractDeepLinksDebug UP-TO-DATE
+> Task :checks:processDebugManifest UP-TO-DATE
+> Task :android:shared:extractDeepLinksDebug UP-TO-DATE
+> Task :android:shared:processDebugManifest UP-TO-DATE
+> Task :checks:processDebugUnitTestManifest UP-TO-DATE
+> Task :android:shared:compileDebugLibraryResources UP-TO-DATE
+> Task :checks:processDebugUnitTestResources UP-TO-DATE
+> Task :checks:javaPreCompileDebugUnitTest UP-TO-DATE
+> Task :checks:generateDebugUnitTestAssets UP-TO-DATE
+> Task :checks:mergeDebugShaders UP-TO-DATE
+> Task :checks:compileDebugShaders NO-SOURCE
+> Task :checks:generateDebugAssets UP-TO-DATE
+> Task :checks:mergeDebugAssets UP-TO-DATE
+> Task :android:shared:mergeDebugShaders UP-TO-DATE
+> Task :android:shared:compileDebugShaders NO-SOURCE
+> Task :android:shared:generateDebugAssets UP-TO-DATE
+> Task :android:shared:mergeDebugAssets UP-TO-DATE
+> Task :checks:mergeDebugUnitTestAssets UP-TO-DATE
+> Task :checks:packageDebugUnitTestForUnitTest UP-TO-DATE
+> Task :checks:generateDebugUnitTestConfig UP-TO-DATE
+> Task :android:shared:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :android:shared:processDebugJavaRes UP-TO-DATE
+
+> Task :checks:compileDebugKotlin
+w: file:///tmp/onklav-device-checks-gm8tn_vy/checks/src/main/kotlin/app/onklav/home/SdkPdfViewer.kt:83:319 'fun <T : Parcelable!> getParcelableArrayList(p0: String?): ArrayList<T!>?' is deprecated. Deprecated in Java.
+w: file:///tmp/onklav-device-checks-gm8tn_vy/checks/src/main/kotlin/app/onklav/home/SdkPdfViewer.kt:88:190 'fun <T : Parcelable!> getParcelableArrayList(p0: String?): ArrayList<T!>?' is deprecated. Deprecated in Java.
+
+> Task :checks:compileDebugJavaWithJavac NO-SOURCE
+> Task :checks:bundleLibRuntimeToJarDebug
+> Task :checks:bundleLibCompileToJarDebug
+> Task :checks:processDebugJavaRes UP-TO-DATE
+
+> Task :checks:compileDebugUnitTestKotlin
+w: file:///tmp/onklav-device-checks-gm8tn_vy/checks/src/test/kotlin/app/onklav/home/SdkHandoffTest.kt:32:30 'fun addResolveInfoForIntent(p0: Intent!, p1: ResolveInfo!): Unit' is deprecated. Deprecated in Java.
+
+> Task :checks:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :checks:processDebugUnitTestJavaRes UP-TO-DATE
+
+> Task :checks:testDebugUnitTest
+
+SdkHttpUploadTest > privateUploadStreamsExactBytesAndRejectsForeignPath PASSED
+
+SdkHttpUploadTest > revocationStopsLaterChunksAndLengthMismatchFails PASSED
+[Incubating] Problems report is available at: file:///tmp/onklav-device-checks-gm8tn_vy/build/reports/problems/problems-report.html
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.11.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD SUCCESSFUL in 55s
+46 actionable tasks: 5 executed, 41 up-to-date

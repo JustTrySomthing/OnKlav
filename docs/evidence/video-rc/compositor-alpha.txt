@@ -1,0 +1,11 @@
+Installed API inspection: androidx.media3:media3-effect:1.9.3
+Inspected DefaultVideoCompositor$CompositorGlProgram.drawFrame with javap -c -p.
+The actual call is glBlendFuncSeparate(770,771,1,771), i.e. SRC_ALPHA,
+ONE_MINUS_SRC_ALPHA, ONE, ONE_MINUS_SRC_ALPHA.
+The installed fragment_shader_alpha_scale_es2.glsl copies src.rgb unchanged
+and multiplies src.a by uAlphaScale. Therefore single-input masks/transitions
+must output straight RGB with modified alpha, not pre-multiply RGB by alpha.
+The transition and cutout effects were corrected accordingly. Final pixel
+checks use that same blend convention, including red at25% over opaque blue.
+The initial transition pixel run used GL_ONE for the RGB source factor; it is
+retained as preliminary evidence, not counted as final compositor validation.

@@ -1,0 +1,3 @@
+# Crash Test Panda
+
+Original game, characters, environments and source project: Charles Soudé. Original character/environment artwork and four Panda effect recordings are preserved from the provided project. The original three Panda melodies are retained in a new offline stereo arrangement; composition and reproducible arrangement script are in docs/evidence/panda-remake. The rigid-body contact algorithm is adapted from the original Panda solver to GDScript. New renderer, power-ups, lifecycle, scoreboard and turn integration use the shared OnKlav Godot engine. No third-party music or downloaded asset dependency was introduced.

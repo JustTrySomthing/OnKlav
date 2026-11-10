@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-01",
+  "scope": "Shared Phone header, Phone/Messages key boundaries and list styling",
+  "tests": {
+    "app.onklav.home.BottomPhoneCameraUiTest": 2,
+    "app.onklav.home.DialPadContrastTest": 1,
+    "app.onklav.home.PhoneDetailsUiTest": 5,
+    "app.onklav.home.PhoneUiTest": 6
+  },
+  "passed": 14,
+  "lint_errors": 0,
+  "lint_warnings": 809,
+  "lint_includes_production_and_tests": true,
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/PhoneScreen.kt": "4e91c053c018f42396691ba4d169f2836642f2496fd61c58ff819b9ba766fb37",
+    "android/app/src/main/kotlin/app/onklav/home/DialPadStyle.kt": "a3df6c3b74f5f69c6182f5d6989b831b06399120379f502df13b7ba7c3d2fca8",
+    "android/app/src/main/kotlin/app/onklav/home/NumberEntryDialog.kt": "817598c65307fd9ac381a3b160093ad16cc335187fe4f2ff3037a5f4697e4b59"
+  },
+  "contrast": {
+    "palette_combinations": 30,
+    "key_outline_against_fill_dialog_and_page_minimum": 3.0,
+    "digit_and_letter_ink_minimum": 4.5,
+    "passed": true
+  },
+  "visual_review": [
+    "phone-root.png",
+    "phone-small-large-text.png",
+    "message-keypad.png"
+  ],
+  "apk_built": false,
+  "latest_apk": "0.100.35-rc1/code144, predates this refinement",
+  "qualification_pending": "Physical-device font/theme/touch acceptance remains separate from host fixtures."
+}

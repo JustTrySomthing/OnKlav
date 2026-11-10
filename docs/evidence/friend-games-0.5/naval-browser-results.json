@@ -1,0 +1,20 @@
+[
+  {
+    "viewport": [
+      320,
+      560
+    ],
+    "solo_fleet_target_fire_ai_pause_saved_return": true,
+    "engine_errors": [],
+    "js_errors": []
+  },
+  {
+    "viewport": [
+      432,
+      740
+    ],
+    "solo_fleet_target_fire_ai_pause_saved_return": true,
+    "engine_errors": [],
+    "js_errors": []
+  }
+]

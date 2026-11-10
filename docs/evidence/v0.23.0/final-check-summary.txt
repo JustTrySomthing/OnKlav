@@ -1,0 +1,6 @@
+Rust: 84 passed, 0 failed
+Android full host invocation: 52 passed, 0 failed
+Runtime classes match compiled Kotlin byte-for-byte
+APK/mobile ABI build: no
+Real handset/carrier/audio acceptance: no; user has no phones available
+MMS_READY=false; default role unchanged; no external messages sent

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.VideoDailyReviewTest" tests="12" skipped="0" failures="0" errors="0" timestamp="2026-10-30T16:47:53" hostname="e89dc6ba27f3" time="26.545">
+  <properties/>
+  <testcase name="outputSettingsKeepCanvasAndEditTimelineUnchanged" classname="app.onklav.home.VideoDailyReviewTest" time="4.836"/>
+  <testcase name="narrowLandscapeKeepsPreviewAndToolSettingsUsable" classname="app.onklav.home.VideoDailyReviewTest" time="4.861"/>
+  <testcase name="textLaneTapSelectsTheClipAtThatTime" classname="app.onklav.home.VideoDailyReviewTest" time="2.855"/>
+  <testcase name="trimAcrossSpeedChangesUsesTheIntegratedSourceTimeAndAllowsExtension" classname="app.onklav.home.VideoDailyReviewTest" time="0.069"/>
+  <testcase name="exportDialogHasVisibleChoicesAndCancellingLeavesProjectIntact" classname="app.onklav.home.VideoDailyReviewTest" time="0.566"/>
+  <testcase name="largeProjectBackupExplainsTheHostLimitBeforeWriting" classname="app.onklav.home.VideoDailyReviewTest" time="0.076"/>
+  <testcase name="shortLargeTextUsesTheAvailableSpaceForTheInspector" classname="app.onklav.home.VideoDailyReviewTest" time="2.745"/>
+  <testcase name="draggingDefersPreviewAndUndoPreservesUncommittedChanges" classname="app.onklav.home.VideoDailyReviewTest" time="2.53"/>
+  <testcase name="portraitCanvasHasTheActualProjectAspectAndInspectorCanClose" classname="app.onklav.home.VideoDailyReviewTest" time="2.725"/>
+  <testcase name="cancellingCanvasSettingsDoesNotChangeTheProject" classname="app.onklav.home.VideoDailyReviewTest" time="0.18"/>
+  <testcase name="trimmingKeepsMotionAtTheCutAndAudioFadesStayWithinTheNewDuration" classname="app.onklav.home.VideoDailyReviewTest" time="2.415"/>
+  <testcase name="failedSaveKeepsEditsVisibleBlocksExportAndSwitchAndRetries" classname="app.onklav.home.VideoDailyReviewTest" time="2.685"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

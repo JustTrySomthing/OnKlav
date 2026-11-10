@@ -1,0 +1,53 @@
+Godot Engine v4.5.1.stable.official.f62fdbde1 - https://godotengine.org
+
+ERROR: Parse JSON failed. Error at line 0: Expected '}'
+   at: parse_string (core/io/json.cpp:604)
+   GDScript backtrace (most recent call first):
+       [0] read_current (res://air_hockey/store.gd:13)
+       [1] run (res://air_hockey/tests.gd:79)
+       [2] frames (res://air_hockey/tests.gd:23)
+ERROR: FAIL: pause freezes real physics
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] check (res://air_hockey/tests.gd:15)
+       [1] run (res://air_hockey/tests.gd:92)
+       [2] frames (res://air_hockey/tests.gd:23)
+ERROR: FAIL: Godot side rail rebounds puck
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] check (res://air_hockey/tests.gd:15)
+       [1] run (res://air_hockey/tests.gd:99)
+       [2] frames (res://air_hockey/tests.gd:23)
+ERROR: FAIL: end rail outside mouth rebounds puck
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] check (res://air_hockey/tests.gd:15)
+       [1] run (res://air_hockey/tests.gd:103)
+       [2] frames (res://air_hockey/tests.gd:23)
+ERROR: FAIL: top goal scores player once
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] check (res://air_hockey/tests.gd:15)
+       [1] run (res://air_hockey/tests.gd:107)
+       [2] frames (res://air_hockey/tests.gd:23)
+ERROR: FAIL: frozen goal cannot score twice
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] check (res://air_hockey/tests.gd:15)
+       [1] run (res://air_hockey/tests.gd:109)
+       [2] frames (res://air_hockey/tests.gd:23)
+ERROR: FAIL: bottom goal scores opponent
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] check (res://air_hockey/tests.gd:15)
+       [1] run (res://air_hockey/tests.gd:114)
+       [2] frames (res://air_hockey/tests.gd:23)
+ERROR: FAIL: player collision steers upward by contact offset
+   at: push_error (core/variant/variant_utility.cpp:1024)
+   GDScript backtrace (most recent call first):
+       [0] check (res://air_hockey/tests.gd:15)
+       [1] run (res://air_hockey/tests.gd:119)
+       [2] frames (res://air_hockey/tests.gd:23)
+AIR_HOCKEY_RESULT checks=72 failures=7
+WARNING: ObjectDB instances leaked at exit (run with --verbose for details).
+     at: cleanup (core/object/object.cpp:2514)

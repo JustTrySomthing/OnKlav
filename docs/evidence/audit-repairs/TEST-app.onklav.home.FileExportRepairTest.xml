@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.FileExportRepairTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-11-01T23:50:07" hostname="0df0e3b6efb4" time="12.765">
+  <properties/>
+  <testcase name="backupAndCloudSizeChecksRejectBeforeOpeningAnInternalDestination" classname="app.onklav.home.FileExportRepairTest" time="5.704"/>
+  <testcase name="failedWriterCannotPublishThroughANormalCloseButOwnerRecoveryRemainsAvailable" classname="app.onklav.home.FileExportRepairTest" time="2.285"/>
+  <testcase name="backupFilingRunsAfterTheSharedStagingMutexIsReleased" classname="app.onklav.home.FileExportRepairTest" time="2.361"/>
+  <testcase name="actualFilesSaveWaitsForFilingAndKeepsFailedCopiesInRecovery" classname="app.onklav.home.FileExportRepairTest" time="2.415"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

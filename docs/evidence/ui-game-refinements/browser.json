@@ -1,0 +1,25 @@
+{
+  "results": {
+    "cats": {
+      "bottom_row_flight": 0.725,
+      "landing_hold": 0.65,
+      "ai_think_at_least": 0.9,
+      "checks": "fall, hold, delay, rival move"
+    },
+    "naval": {
+      "selected_disabled_tab_through_impact_and_hold": true,
+      "selection_changes_with_board_only": true
+    },
+    "dominos": {
+      "flight_and_impact": true,
+      "bounded_effects": true,
+      "decoration_does_not_mutate_model": true,
+      "reduced_motion_suppresses_burst": true,
+      "viewport_widths": [
+        432,
+        320
+      ]
+    }
+  },
+  "errors": []
+}

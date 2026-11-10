@@ -1,0 +1,15 @@
+{
+  "screen_checks": 9,
+  "runtime_classes_matched": 273,
+  "production_ui_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt": "bdcd0d2499b2dcafb3085e3fe3ebef5581515f4189ddc1cc0d48668969313a6f",
+    "android/app/src/main/kotlin/app/onklav/home/VideoProWorkspace.kt": "643b256bc5a1e45bc6ea4f770579c633889213cd11a7843c34b553aad4559393",
+    "android/app/src/main/kotlin/app/onklav/home/VideoEditorLayout.kt": "52ee6f7fb0d3c3f953637252c40ad28709d309b104ae553e4c9a46a80cb83d18",
+    "android/app/src/main/kotlin/app/onklav/home/VideoTimelinePrecision.kt": "508a353a6c4ecbbaf8744db8d3e75933df252d4755b44fde560d364dcf4b7825",
+    "android/app/src/main/kotlin/app/onklav/home/VideoEditData.kt": "598fddb95fd8529b01ff7a909605980f5182d6193f87361da0b2cab94c794ff6",
+    "android/app/src/main/kotlin/app/onklav/home/VideoProData.kt": "4e9441e57e6d753fd4bed654c4f8549d7911755f7eacdc3940b9e621eb8011b8",
+    "android/app/src/main/kotlin/app/onklav/home/AudioEditorRefinements.kt": "7a64634f2f0d8f120599fdcb1a9648e5dea194902f643bd7c7fdc83255d8f26e"
+  },
+  "apk_created": false,
+  "scope": "Isolated UI only; fixture model/permissions/player. Not real media/backend acceptance."
+}

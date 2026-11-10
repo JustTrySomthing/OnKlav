@@ -1,0 +1,42 @@
+{
+  "version": "0.76.0-media-podcasts1 / code84",
+  "status": "Completed: APK assembled and verified using original Android/publisher identities",
+  "playback_fix": "Only pause attachment MediaPlayer after playback has started; no pause during asynchronous preparation, Prepared initialization, or repeated background callbacks. Shared by Messages and Gallery audio/video.",
+  "podcasts": [
+    "Podcasts / Recent / Subscriptions pinned theme tabs",
+    "Search and topic keyword browsing in bundled directory; compact language selector",
+    "Episode lists, explicit play icons, optional Subscribe/Unsubscribe",
+    "Persistent recent episodes; replay without subscribing",
+    "Gear settings add/remove validated public HTTPS RSS sources",
+    "Preserve existing subscriptions and shared background player",
+    "Compact transport row, seeking, speed selection and sleep timer",
+    "Back, retry, empty states and request cancellation"
+  ],
+  "tests": {
+    "controller": "4 passed",
+    "android": {
+      "passed": 11,
+      "failures": 0,
+      "classes": [
+        "MessagePlaybackRegressionTest(2)",
+        "SdkPodcastsTest(3)",
+        "SdkPodcastsUiTest(2)",
+        "SdkMediaLifecycleTest(4)"
+      ]
+    },
+    "signed_workflows": {
+      "passed_steps": 27,
+      "provider_responses": "explicit fixtures"
+    },
+    "lint": {
+      "Warning": 172
+    },
+    "apk": "passed: source/artifact provenance, original signer and16KiB native alignment"
+  },
+  "limits": [
+    "Phone media decoding/playback and live publisher feed availability require phone acceptance.",
+    "Topics search titles/creators in bundled catalog; no new remote directory integration.",
+    "Headless dialog text-entry scenario timed out; dialog construction/open/close and signed source validation pass. Real-phone keyboard acceptance remains unverified."
+  ],
+  "apk": "OnKlav-0.76.0-ARM64.apk"
+}

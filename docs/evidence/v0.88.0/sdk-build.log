@@ -1,0 +1,64 @@
+{
+  "build": [
+    "Calc",
+    "Convert",
+    "Weather",
+    "eBooks",
+    "AudioBooks",
+    "Podcasts",
+    "Radio",
+    "Files",
+    "Notes",
+    "RSS",
+    "ReadAloud",
+    "Browser",
+    "YouTube",
+    "Annotation",
+    "Social",
+    "WalkieTalkie"
+  ],
+  "restore_bundles": [],
+  "reuse": [
+    "Counter"
+  ],
+  "unselected_stale": []
+}
+   Compiling jni-sys v0.3.1
+   Compiling jni v0.21.1
+   Compiling onklav-core v0.8.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/core)
+error[E0753]: expected outer doc comment
+ --> src/weather_us_postal.rs:1:1
+  |
+1 | //! GeoNames US ZIP centroids, CC BY 3.0. Compact offline extract; see docs/WEATHER-EBOOKS.md.
+  | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2 | pub const POSTAL:&str="00501\tHoltsville\t...3529\n99950\tKetchikan\tAK\t55.3422\t-131.6478\n";
+  | ------------------------------------------...-------------------------------------------------- the inner doc comment doesn't annotate this constant item
+  |
+help: to annotate the constant item, change the doc comment from inner to outer style
+  |
+1 - //! GeoNames US ZIP centroids, CC BY 3.0. Compact offline extract; see docs/WEATHER-EBOOKS.md.
+1 + /// GeoNames US ZIP centroids, CC BY 3.0. Compact offline extract; see docs/WEATHER-EBOOKS.md.
+  |
+
+warning: unused import: `Cursor`
+ --> src/sdk_epub.rs:4:59
+  |
+4 | use std::{collections::{BTreeMap,BTreeSet},io::{Read,Seek,Cursor},fs::File,path::Path};
+  |                                                           ^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` on by default
+
+For more information about this error, try `rustc --explain E0753`.
+warning: `onklav-core` (lib) generated 1 warning
+error: could not compile `onklav-core` (lib) due to 1 previous error; 1 warning emitted
+Traceback (most recent call last):
+  File "/workspace/scratch/75acf774e3b8/recovered/OnKlav/scripts/build_sdk_apps.py", line 95, in <module>
+    if __name__=='__main__':main()
+                            ^^^^^^
+  File "/workspace/scratch/75acf774e3b8/recovered/OnKlav/scripts/build_sdk_apps.py", line 54, in main
+    run(['cargo','build','--locked','--manifest-path','core/Cargo.toml','--bin','onklav-pack'])
+  File "/workspace/scratch/75acf774e3b8/recovered/OnKlav/scripts/build_sdk_apps.py", line 40, in run
+    subprocess.run(list(map(str,command)),cwd=ROOT,env=env,check=True,timeout=180)
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['cargo', 'build', '--locked', '--manifest-path', 'core/Cargo.toml', '--bin', 'onklav-pack']' returned non-zero exit status 101.

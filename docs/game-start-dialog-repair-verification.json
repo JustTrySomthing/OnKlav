@@ -1,0 +1,62 @@
+{
+  "status": "passed",
+  "date": "2026-11-03",
+  "source_fix_after_apk": {
+    "version": "0.100.48-rc1",
+    "code": 157
+  },
+  "new_apk_built": true,
+  "focused_tests": [
+    {
+      "class": "FriendGamesTest",
+      "tests": 8,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "class": "GameSessionStatusTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "class": "FriendGameUiTest",
+      "tests": 3,
+      "failures": 0,
+      "errors": 0
+    }
+  ],
+  "total_focused_tests": 14,
+  "production_and_all_test_sources_compiled": true,
+  "runtime_bundle_matches_kotlin": true,
+  "source_compared_to_tested_build": {
+    "android/app/src/main/kotlin/app/onklav/home/FriendGameUi.kt": "b4df5f41793833caaa1b19c48ba6f8cb62b9189e39a6c6bc9b688d43c3fa1025",
+    "android/app/src/main/kotlin/app/onklav/home/FriendGames.kt": "a0ac37ae2af4fd29b991c8e5001ac106114e4d3489ef24b19cccbe17c4a45904",
+    "android/app/src/main/kotlin/app/onklav/home/GamesCatalog.kt": "96892a828b8f853afe286ae946ef0a99a482effa84248a1905261c001a1de100",
+    "android/app/src/test/kotlin/app/onklav/home/FriendGameUiTest.kt": "767f18a6f1a413cd26abc20da35fc522f4e80d6043fe7270cef35362af0552c3",
+    "android/app/src/test/kotlin/app/onklav/home/FriendGamesTest.kt": "b4bfa2644584ca5505efffbc6347fc83ba6652d3cf437c4240c88723fdcfea77"
+  },
+  "original_reference": {
+    "library_source_version": 235,
+    "files": [
+      "GamesPane.java",
+      "ConnectionDialog.java",
+      "ConnectionState.java",
+      "ContactVerification.java",
+      "DialogUi.java"
+    ]
+  },
+  "rendered_dialogs_reviewed": [
+    "opponent.png",
+    "number.png",
+    "connection-failed.png"
+  ],
+  "native_sdk_games_provenance": "unchanged/source-current",
+  "physical_phone_and_carrier_acceptance": "not run",
+  "evidence": "docs/evidence/friend-dialog-repair",
+  "packaged_in": {
+    "version": "0.100.49-rc1",
+    "code": 158,
+    "evidence": "docs/apk49-verification.json"
+  }
+}

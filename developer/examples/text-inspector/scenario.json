@@ -1,0 +1,7 @@
+{
+  "grants": ["files.manage"],
+  "steps": [
+    {"action": "sdk.files.open", "expect": {"picker.folder": ""}},
+    {"action": "sdk.files.cancel", "expect": {"picker": null, "app.words": 0}}
+  ]
+}

@@ -1,0 +1,18 @@
+{
+  "schema": "onklav.app.v1",
+  "runtime": "rust-wasm-ui.v1",
+  "id": "app.onklav.clock",
+  "name": "Clock",
+  "version": 2,
+  "min_host": 96,
+  "icon": {
+    "symbol": "settings"
+  },
+  "capabilities": [
+    "storage.private",
+    "background.tasks",
+    "notifications.post",
+    "audio.playback",
+    "share.text"
+  ]
+}

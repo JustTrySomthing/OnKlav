@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.VideoEditorUiTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2026-10-28T12:16:23" hostname="1b65f1fab707" time="105.553">
+  <properties/>
+  <testcase name="timelineTextCanvasAndProjectLibraryAreReachable" classname="app.onklav.home.VideoEditorUiTest" time="105.553">
+    <failure message="java.lang.OutOfMemoryError: Java heap space" type="java.lang.OutOfMemoryError">java.lang.OutOfMemoryError: Java heap space
+	at java.base/java.util.Arrays.copyOf(Arrays.java:3481)
+	at java.base/java.util.ArrayDeque.grow(ArrayDeque.java:149)
+	at java.base/java.util.ArrayDeque.addLast(ArrayDeque.java:307)
+	at java.base/java.util.ArrayDeque.offerLast(ArrayDeque.java:352)
+	at java.base/java.util.ArrayDeque.offer(ArrayDeque.java:508)
+	at org.robolectric.shadows.ShadowTrace.endSection(ShadowTrace.java:75)
+	at java.base/java.lang.invoke.DirectMethodHandle$Holder.invokeStatic(DirectMethodHandle$Holder)
+	at java.base/java.lang.invoke.LambdaForm$MH/0x00007f5ec823c400.guardWithCatch(LambdaForm$MH)
+	at java.base/java.lang.invoke.DelegatingMethodHandle$Holder.delegate(DelegatingMethodHandle$Holder)
+	at java.base/java.lang.invoke.LambdaForm$MH/0x00007f5ec823d400.guard(LambdaForm$MH)
+	at java.base/java.lang.invoke.LambdaForm$MH/0x00007f5ec823d800.linkToCallSite(LambdaForm$MH)
+	at android.os.Trace.endSection(Trace.java)
+	at androidx.tracing.TraceApi18Impl.endSection(TraceApi18Impl.java:60)
+	at androidx.tracing.Trace.endSection(Trace.java:144)
+	at androidx.test.platform.tracing.AndroidXTracer$AndroidXTracerSpan.close(AndroidXTracer.java:99)
+	at androidx.test.platform.tracing.Tracing$TracerSpan.close(Tracing.java:158)
+	at androidx.test.espresso.Espresso.onIdle(Espresso.java:360)
+	at androidx.test.espresso.Espresso.onIdle(Espresso.java:378)
+	at androidx.compose.ui.test.EspressoLink_androidKt.runEspressoOnIdle(EspressoLink.android.kt:88)
+	at androidx.compose.ui.test.RobolectricIdlingStrategy$runUntilIdle$1.invoke(RobolectricIdlingStrategy.android.kt:83)
+	at androidx.compose.ui.test.RobolectricIdlingStrategy$runUntilIdle$1.invoke(RobolectricIdlingStrategy.android.kt:65)
+	at androidx.compose.ui.test.AndroidSynchronization_androidKt.runOnUiThread(AndroidSynchronization.android.kt:35)
+	at androidx.compose.ui.test.RobolectricIdlingStrategy.runUntilIdle(RobolectricIdlingStrategy.android.kt:65)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.waitForNextChoreographerFrame(ComposeUiTest.android.kt:402)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.waitForIdle(ComposeUiTest.android.kt:385)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.access$waitForIdle(ComposeUiTest.android.kt:235)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidTestOwner.getRoots(ComposeUiTest.android.kt:603)
+	at androidx.compose.ui.test.TestOwnerKt.getAllSemanticsNodes(TestOwner.kt:81)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNodes$ui_test_release(SemanticsNodeInteraction.kt:64)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow(SemanticsNodeInteraction.kt:157)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchOneOrThrow$default(SemanticsNodeInteraction.kt:150)
+	at androidx.compose.ui.test.SemanticsNodeInteraction.fetchSemanticsNode(SemanticsNodeInteraction.kt:84)
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

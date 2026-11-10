@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.HistoryBackupTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-22T20:25:00" hostname="2383b52a5fc7" time="0.317">
+  <properties/>
+  <testcase name="providerFailureAndChangesNeverPublishSuccessOrLeavePrivateHistory" classname="app.onklav.home.HistoryBackupTest" time="0.086"/>
+  <testcase name="historyReviewUsesExportedZipWithoutSmsAccessOrProviderMutationAndRemovesCopies" classname="app.onklav.home.HistoryBackupTest" time="0.066"/>
+  <testcase name="realProviderToJniToZipPreservesTextAddressesMediaAndUnits" classname="app.onklav.home.HistoryBackupTest" time="0.055"/>
+  <testcase name="failedAndCancelledImportClearCopiesKeepOriginalAndCannotEnableRestore" classname="app.onklav.home.HistoryBackupTest" time="0.05"/>
+  <testcase name="cancellationAndRevocationAreCheckedAgainBeforeDocumentWrite" classname="app.onklav.home.HistoryBackupTest" time="0.058"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,17 @@
+{
+  "passed": [
+    "PhotoCropConsistencyTest.extremePerspectiveDoesNotCollapseOrInvertTheVisibleSelection",
+    "PhotoCropConsistencyTest.cropContextIncludesAllEditsAndSelectedPixelsMatchExport",
+    "PhotoCropConsistencyTest.transformedHandlesUseInverseMappingAndPreserveEveryOtherEdit",
+    "PhotoEffectsTest.threeLooksHaveDistinctGradingAndRemovedLooksAreNeutral",
+    "PhotoEffectsTest.hdrAddsStructureWithoutLiftingBlacksOrWashingTonalRange",
+    "PhotoEffectsTest.hdrStrengthHasClearlyVisibleRangeWithoutGlobalBrightnessLift",
+    "PhotoEffectsTest.powerfulHdrDoesNotTurnFineGrainIntoTexture",
+    "PhotoEffectsTest.portraitAndScenicHdrStrengthContactSheet",
+    "PhotoEffectsTest.renderedLookContactSheet",
+    "PhotoEffectsTest.hdrDoesNotDrawHalosAroundHardEdges",
+    "PhotoEffectsTest.sharpeningHasVisibleStrengthWithoutChangingFlatAreasOrAlpha"
+  ],
+  "count": 11,
+  "diagnostic": "480-second first run completed compilation and these checks, then stopped at the configured limit before remaining checks. Remaining cases run separately without repeating these."
+}

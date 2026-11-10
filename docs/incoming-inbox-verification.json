@@ -1,0 +1,10 @@
+{
+  "status": "source complete",
+  "rule": "Every new unblocked SMS/MMS returns Archive or Trash to Inbox. Blocked arrivals in Inbox/default move to Archive; blocked Trash/Archive stay. No normal or picture-pending alerts for blocked sender.",
+  "functional_regressions": 21,
+  "runtime_classes_matched": 3516,
+  "apk_created": false,
+  "native_rebuild_required": false,
+  "evidence": "docs/evidence/app-audit",
+  "remaining_receiving_failure_window": "See A02 in APP-DEEP-REVIEW-2026-10-30.md"
+}

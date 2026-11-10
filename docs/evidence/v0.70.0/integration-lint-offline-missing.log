@@ -1,0 +1,45 @@
+Picked up JAVA_TOOL_OPTIONS:  -Dhttp.proxyHost=127.0.0.1 -Dhttp.proxyPort=36399 -Dhttps.proxyHost=127.0.0.1 -Dhttps.proxyPort=36399 -Djavax.net.ssl.trustStore=/etc/ssl/certs/java/cacerts
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.11.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :android:app
+WARNING: The option setting 'android.aapt2FromMavenOverride=/workspace/scratch/ed752e8a1957/group12-env/sdk/build-tools/35.0.0/aapt2' is experimental.
+WARNING: platform-tools package is not installed.
+
+> Task :android:shared:preBuild UP-TO-DATE
+> Task :android:shared:preDebugBuild UP-TO-DATE
+> Task :android:shared:mergeDebugJniLibFolders
+> Task :android:shared:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:shared:generateDebugResValues UP-TO-DATE
+> Task :android:shared:mergeDebugNativeLibs
+> Task :android:shared:generateDebugResources UP-TO-DATE
+> Task :android:shared:packageDebugResources UP-TO-DATE
+> Task :android:shared:parseDebugLocalResources UP-TO-DATE
+> Task :android:shared:generateDebugRFile UP-TO-DATE
+
+> Task :android:shared:stripDebugDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libonklav_core.so.
+
+> Task :android:shared:compileDebugKotlin UP-TO-DATE
+> Task :android:shared:copyDebugJniLibsProjectAndLocalJars
+> Task :android:shared:extractDebugAnnotations FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':android:shared:extractDebugAnnotations'.
+> Could not resolve all files for configuration ':android:shared:detachedConfiguration1'.
+   > Could not resolve com.android.tools.lint:lint-gradle:31.9.2.
+     Required by:
+         project :android:shared
+      > No cached version of com.android.tools.lint:lint-gradle:31.9.2 available for offline mode.
+      > No cached version of com.android.tools.lint:lint-gradle:31.9.2 available for offline mode.
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 19s
+11 actionable tasks: 5 executed, 6 up-to-date

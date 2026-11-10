@@ -1,0 +1,288 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.GroupsFlowHostTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2026-10-23T11:15:54" hostname="41aed82b0335" time="22.313">
+  <properties/>
+  <testcase name="createEditMembersFoldersSearchAndDelete" classname="app.onklav.home.GroupsFlowHostTest" time="22.313">
+    <failure message="java.lang.AssertionError: Contact 'Alice' absent after fixture query; screen state:&#10;Printing with useUnmergedTree = 'true'&#10;Node #1 at (l=0.0, t=0.0, r=432.0, b=936.0)px&#10; |-Node #69 at (l=0.0, t=0.0, r=432.0, b=936.0)px&#10;   IsContainer = 'true'&#10;    |-Node #139 at (l=0.0, t=0.0, r=432.0, b=864.0)px, Tag: 'groups-screen'&#10;    |  |-Node #140 at (l=0.0, t=0.0, r=432.0, b=48.0)px, Tag: 'home-header'&#10;    |  |  |-Node #141 at (l=8.0, t=11.0, r=376.0, b=37.0)px&#10;    |  |  | Text = '[Groups]'&#10;    |  |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;    |  |  |-Node #142 at (l=376.0, t=0.0, r=424.0, b=48.0)px, Tag: 'action-Create Group'&#10;    |  |    Focused = 'false'&#10;    |  |    Role = 'Button'&#10;    |  |    Actions = [OnClick, RequestFocus]&#10;    |  |    MergeDescendants = 'true'&#10;    |  |     |-Node #143 at (l=388.0, t=12.0, r=412.0, b=36.0)px&#10;    |  |       ContentDescription = '[Create Group]'&#10;    |  |       Role = 'Image'&#10;    |  |-Node #146 at (l=8.0, t=54.0, r=146.0, b=102.0)px, Tag: 'folder-Inbox'&#10;    |  | Focused = 'false'&#10;    |  | Role = 'Tab'&#10;    |  | Selected = 'true'&#10;    |  | Actions = [OnClick, RequestFocus]&#10;    |  | MergeDescendants = 'true'&#10;    |  |  |-Node #147 at (l=56.0, t=66.0, r=98.0, b=90.0)px&#10;    |  |    Text = '[Inbox]'&#10;    |  |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;    |  |-Node #148 at (l=146.0, t=54.0, r=285.0, b=102.0)px, Tag: 'folder-Archive'&#10;    |  | Focused = 'false'&#10;    |  | Role = 'Tab'&#10;    |  | Selected = 'false'&#10;    |  | Actions = [OnClick, RequestFocus]&#10;    |  | MergeDescendants = 'true'&#10;    |  |  |-Node #149 at (l=188.0, t=66.0, r=244.0, b=90.0)px&#10;    |  |    Text = '[Archive]'&#10;    |  |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;    |  |-Node #150 at (l=285.0, t=54.0, r=424.0, b=102.0)px, Tag: 'folder-Trash'&#10;    |  | Focused = 'false'&#10;    |  | Role = 'Tab'&#10;    |  | Selected = 'false'&#10;    |  | Actions = [OnClick, RequestFocus]&#10;    |  | MergeDescendants = 'true'&#10;    |  |  |-Node #151 at (l=333.0, t=66.0, r=376.0, b=90.0)px&#10;    |  |    Text = '[Trash]'&#10;    |  |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;    |  |-Node #153 at (l=24.0, t=118.0, r=356.0, b=146.0)px, Tag: 'mailbox-search'&#10;    |  | ContentDataType = 'AndroidContentDataType(androidAutofillType=1)'&#10;    |  | EditableText = ''&#10;    |  | Focused = 'false'&#10;    |  | ImeAction = 'Default'&#10;    |  | InputText = ''&#10;    |  | IsEditable = 'true'&#10;    |  | TextSelectionRange = 'TextRange(0, 0)'&#10;    |  | Actions = [GetTextLayoutResult, InsertTextAtCursor, OnAutofillText, OnClick, OnLongClick, PasteText, PerformImeAction, RequestFocus, SetSelection, SetText]&#10;    |  | MergeDescendants = 'true'&#10;    |  |  |-Node #156 at (l=24.0, t=118.0, r=288.0, b=142.0)px&#10;    |  |    Text = '[Search names, numbers or messages]'&#10;    |  |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;    |  |-Node #159 at (l=376.0, t=108.0, r=424.0, b=156.0)px&#10;    |  | ContentDescription = '[Select multiple conversations]'&#10;    |  | Focused = 'false'&#10;    |  | Role = 'Checkbox'&#10;    |  | ToggleableState = 'Off'&#10;    |  | Actions = [OnClick, RequestFocus]&#10;    |  | MergeDescendants = 'true'&#10;    |  |-Node #161 at (l=63.0, t=504.0, r=369.0, b=528.0)px&#10;    |    Text = '[No groups here. Use + to create a group.]'&#10;    |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;    |-Node #109 at (l=0.0, t=864.0, r=432.0, b=936.0)px, Tag: 'home-navigation'&#10;    |  |-Node #110 at (l=8.0, t=868.0, r=92.0, b=936.0)px, Tag: 'tab-Messages'&#10;    |  | Focused = 'false'&#10;    |  | Role = 'Tab'&#10;    |  | Selected = 'false'&#10;    |  | Actions = [OnClick, RequestFocus]&#10;    |  | MergeDescendants = 'true'&#10;    |  |  |-Node #113 at (l=24.0, t=908.0, r=76.0, b=922.0)px&#10;    |  |    Text = '[Messages]'&#10;    |  |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;    |  |-Node #114 at (l=92.0, t=868.0, r=175.0, b=936.0)px, Tag: 'tab-Groups'&#10;    |  | Focused = 'false'&#10;    |  | Role = 'Tab'&#10;    |  | Selected = 'true'&#10;    |  | Actions = [OnClick, RequestFocus]&#10;    |  | MergeDescendants = 'true'&#10;    |  |  |-Node #117 at (l=116.0, t=908.0, r=152.0, b=922.0)px&#10;    |  |    Text = '[Groups]'&#10;    |  |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;    |  |-Node #118 at (l=175.0, t=868.0, r=258.0, b=936.0)px, Tag: 'tab-Apps'&#10;    |  | Focused = 'false'&#10;    |  | Role = 'Tab'&#10;    |  | Selected = 'false'&#10;    |  | Actions = [OnClick, RequestFocus]&#10;    |  | MergeDescendants = 'true'&#10;    |  |  |-Node #121 at (l=204.0, t=908.0, r=229.0, b=922.0)px&#10;    |  |    Text = '[Apps]'&#10;    |  |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;    |  |-Node #122 at (l=258.0, t=868.0, r=341.0, b=936.0)px, Tag: 'tab-Games'&#10;    |  | Focused = 'false'&#10;    |  | Role = 'Tab'&#10;    |  | Selected = 'false'&#10;    |  | Actions = [OnClick, RequestFocus]&#10;    |  | MergeDescendants = 'true'&#10;    |  |  |-Node #125 at (l=282.0, t=908.0, r=318.0, b=922.0)px&#10;    |  |    Text = '[Games]'&#10;    |  |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;    |  |-Node #126 at (l=341.0, t=868.0, r=424.0, b=936.0)px, Tag: 'tab-Settings'&#10;    |    Focused = 'false'&#10;    |    Role = 'Tab'&#10;    |    Selected = 'false'&#10;    |    Actions = [OnClick, RequestFocus]&#10;    |    MergeDescendants = 'true'&#10;    |     |-Node #129 at (l=362.0, t=908.0, r=404.0, b=922.0)px&#10;    |       Text = '[Settings]'&#10;    |       Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;    |-Node #72 at (l=216.0, t=0.0, r=216.0, b=0.0)px, Tag: 'status-bar-backplate'&#10;    |-Node #73 at (l=216.0, t=936.0, r=216.0, b=936.0)px, Tag: 'navigation-bar-backplate'&#10;Printing with useUnmergedTree = 'true'&#10;Node #162 at (l=0.0, t=0.0, r=432.0, b=391.0)px&#10; |-Node #163 at (l=0.0, t=0.0, r=432.0, b=391.0)px&#10;   [IsDialog]&#10;    |-Node #166 at (l=0.0, t=0.0, r=432.0, b=391.0)px, Tag: 'dialog-Create Group'&#10;      ClearAndSetSemantics = 'true'&#10;       |-Node #169 at (l=28.0, t=24.0, r=404.0, b=50.0)px&#10;       | Text = '[Create Group]'&#10;       | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;       |-Node #170 at (l=4.0, t=58.0, r=428.0, b=331.0)px&#10;       | IsTraversalGroup = 'true'&#10;       | VerticalScrollAxisRange = 'ScrollAxisRange(value=0.0, maxValue=0.0, reverseScrolling=false)'&#10;       | Actions = [ScrollBy, ScrollByOffset]&#10;       |  |-Node #172 at (l=177.0, t=78.0, r=256.0, b=102.0)px&#10;       |  | Text = '[Group Name]'&#10;       |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;       |  |-Node #173 at (l=38.0, t=116.0, r=394.0, b=144.0)px, Tag: 'group-name'&#10;       |  | ContentDataType = 'AndroidContentDataType(androidAutofillType=1)'&#10;       |  | EditableText = 'Family'&#10;       |  | Focused = 'true'&#10;       |  | ImeAction = 'Default'&#10;       |  | InputText = 'Family'&#10;       |  | IsEditable = 'true'&#10;       |  | TextSelectionRange = 'TextRange(6, 6)'&#10;       |  | Actions = [GetTextLayoutResult, InsertTextAtCursor, OnAutofillText, OnClick, OnLongClick, PasteText, PerformImeAction, RequestFocus, SetSelection, SetText]&#10;       |  | MergeDescendants = 'true'&#10;       |  |-Node #180 at (l=143.0, t=187.0, r=289.0, b=211.0)px&#10;       |  | Text = '[0 People · Choose 2–10]'&#10;       |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;       |  |-Node #181 at (l=24.0, t=211.0, r=408.0, b=263.0)px&#10;       |  | Focused = 'false'&#10;       |  | Actions = [OnClick, RequestFocus]&#10;       |  | MergeDescendants = 'true'&#10;       |  |  |-Node #183 at (l=162.0, t=228.0, r=270.0, b=246.0)px&#10;       |  |    Text = '[Choose Members]'&#10;       |  |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;       |  |-Node #184 at (l=57.0, t=263.0, r=375.0, b=287.0)px&#10;       |  | Text = '[Adding or removing members starts a new conversation.]'&#10;       |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;       |  |-Node #192 at (l=125.0, t=287.0, r=308.0, b=311.0)px&#10;       |    Text = '[Choose 2–10 different people]'&#10;       |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;       |-Node #185 at (l=4.0, t=331.0, r=428.0, b=387.0)px&#10;         HorizontalScrollAxisRange = 'ScrollAxisRange(value=0.0, maxValue=0.0, reverseScrolling=false)'&#10;         IsTraversalGroup = 'true'&#10;         Actions = [ScrollBy, ScrollByOffset]&#10;          |-Node #186 at (l=268.0, t=335.0, r=350.0, b=383.0)px&#10;          | Focused = 'false'&#10;          | Role = 'Button'&#10;          | Actions = [OnClick, RequestFocus]&#10;          | MergeDescendants = 'true'&#10;          |  |-Node #188 at (l=288.0, t=351.0, r=330.0, b=368.0)px&#10;          |    Text = '[Cancel]'&#10;          |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;          |-Node #189 at (l=350.0, t=335.0, r=420.0, b=383.0)px&#10;            Focused = 'false'&#10;            Role = 'Button'&#10;            Actions = [OnClick, RequestFocus]&#10;            MergeDescendants = 'true'&#10;             |-Node #191 at (l=370.0, t=351.0, r=400.0, b=368.0)px&#10;               Text = '[Save]'&#10;               Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;Printing with useUnmergedTree = 'true'&#10;Node #193 at (l=0.0, t=0.0, r=432.0, b=294.0)px&#10; |-Node #194 at (l=0.0, t=0.0, r=432.0, b=294.0)px&#10;   [IsDialog]&#10;    |-Node #197 at (l=0.0, t=0.0, r=432.0, b=294.0)px, Tag: 'dialog-Choose people'&#10;      IsContainer = 'true'&#10;       |-Node #200 at (l=28.0, t=24.0, r=404.0, b=50.0)px&#10;       | Text = '[Choose people]'&#10;       | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;       |-Node #201 at (l=4.0, t=58.0, r=428.0, b=234.0)px&#10;       | IsTraversalGroup = 'true'&#10;       | VerticalScrollAxisRange = 'ScrollAxisRange(value=0.0, maxValue=0.0, reverseScrolling=false)'&#10;       | Actions = [ScrollBy, ScrollByOffset]&#10;       |  |-Node #203 at (l=38.0, t=92.0, r=394.0, b=120.0)px, Tag: 'group-contact-search'&#10;       |  | ContentDataType = 'AndroidContentDataType(androidAutofillType=1)'&#10;       |  | EditableText = ''&#10;       |  | Focused = 'false'&#10;       |  | ImeAction = 'Default'&#10;       |  | InputText = ''&#10;       |  | IsEditable = 'true'&#10;       |  | TextSelectionRange = 'TextRange(0, 0)'&#10;       |  | Actions = [GetTextLayoutResult, InsertTextAtCursor, OnAutofillText, OnClick, OnLongClick, PasteText, PerformImeAction, RequestFocus, SetSelection, SetText]&#10;       |  | MergeDescendants = 'true'&#10;       |  |  |-Node #206 at (l=38.0, t=94.0, r=138.0, b=118.0)px&#10;       |  |    Text = '[Search people]'&#10;       |  |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;       |  |-Node #209 at (l=24.0, t=134.0, r=86.0, b=158.0)px&#10;       |  | Text = '[0 selected]'&#10;       |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;       |  |-Node #210 at (l=24.0, t=158.0, r=212.0, b=214.0)px&#10;       |    IsTraversalGroup = 'true'&#10;       |    VerticalScrollAxisRange = 'ScrollAxisRange(value=0.0, maxValue=0.0, reverseScrolling=false)'&#10;       |    Actions = [ScrollBy, ScrollByOffset]&#10;       |     |-Node #211 at (l=40.0, t=174.0, r=196.0, b=198.0)px&#10;       |       Text = '[No matching contacts]'&#10;       |       Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;       |-Node #212 at (l=4.0, t=234.0, r=428.0, b=290.0)px&#10;         HorizontalScrollAxisRange = 'ScrollAxisRange(value=0.0, maxValue=0.0, reverseScrolling=false)'&#10;         IsTraversalGroup = 'true'&#10;         Actions = [ScrollBy, ScrollByOffset]&#10;          |-Node #213 at (l=266.0, t=238.0, r=348.0, b=286.0)px&#10;          | Focused = 'false'&#10;          | Role = 'Button'&#10;          | Actions = [OnClick, RequestFocus]&#10;          | MergeDescendants = 'true'&#10;          |  |-Node #215 at (l=286.0, t=254.0, r=328.0, b=271.0)px&#10;          |    Text = '[Cancel]'&#10;          |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]&#10;          |-Node #216 at (l=348.0, t=238.0, r=420.0, b=286.0)px&#10;            Focused = 'false'&#10;            Role = 'Button'&#10;            Actions = [OnClick, RequestFocus]&#10;            MergeDescendants = 'true'&#10;             |-Node #218 at (l=368.0, t=254.0, r=400.0, b=271.0)px&#10;               Text = '[Done]'&#10;               Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]" type="java.lang.AssertionError">java.lang.AssertionError: Contact 'Alice' absent after fixture query; screen state:
+Printing with useUnmergedTree = 'true'
+Node #1 at (l=0.0, t=0.0, r=432.0, b=936.0)px
+ |-Node #69 at (l=0.0, t=0.0, r=432.0, b=936.0)px
+   IsContainer = 'true'
+    |-Node #139 at (l=0.0, t=0.0, r=432.0, b=864.0)px, Tag: 'groups-screen'
+    |  |-Node #140 at (l=0.0, t=0.0, r=432.0, b=48.0)px, Tag: 'home-header'
+    |  |  |-Node #141 at (l=8.0, t=11.0, r=376.0, b=37.0)px
+    |  |  | Text = '[Groups]'
+    |  |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |  |  |-Node #142 at (l=376.0, t=0.0, r=424.0, b=48.0)px, Tag: 'action-Create Group'
+    |  |    Focused = 'false'
+    |  |    Role = 'Button'
+    |  |    Actions = [OnClick, RequestFocus]
+    |  |    MergeDescendants = 'true'
+    |  |     |-Node #143 at (l=388.0, t=12.0, r=412.0, b=36.0)px
+    |  |       ContentDescription = '[Create Group]'
+    |  |       Role = 'Image'
+    |  |-Node #146 at (l=8.0, t=54.0, r=146.0, b=102.0)px, Tag: 'folder-Inbox'
+    |  | Focused = 'false'
+    |  | Role = 'Tab'
+    |  | Selected = 'true'
+    |  | Actions = [OnClick, RequestFocus]
+    |  | MergeDescendants = 'true'
+    |  |  |-Node #147 at (l=56.0, t=66.0, r=98.0, b=90.0)px
+    |  |    Text = '[Inbox]'
+    |  |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |  |-Node #148 at (l=146.0, t=54.0, r=285.0, b=102.0)px, Tag: 'folder-Archive'
+    |  | Focused = 'false'
+    |  | Role = 'Tab'
+    |  | Selected = 'false'
+    |  | Actions = [OnClick, RequestFocus]
+    |  | MergeDescendants = 'true'
+    |  |  |-Node #149 at (l=188.0, t=66.0, r=244.0, b=90.0)px
+    |  |    Text = '[Archive]'
+    |  |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |  |-Node #150 at (l=285.0, t=54.0, r=424.0, b=102.0)px, Tag: 'folder-Trash'
+    |  | Focused = 'false'
+    |  | Role = 'Tab'
+    |  | Selected = 'false'
+    |  | Actions = [OnClick, RequestFocus]
+    |  | MergeDescendants = 'true'
+    |  |  |-Node #151 at (l=333.0, t=66.0, r=376.0, b=90.0)px
+    |  |    Text = '[Trash]'
+    |  |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |  |-Node #153 at (l=24.0, t=118.0, r=356.0, b=146.0)px, Tag: 'mailbox-search'
+    |  | ContentDataType = 'AndroidContentDataType(androidAutofillType=1)'
+    |  | EditableText = ''
+    |  | Focused = 'false'
+    |  | ImeAction = 'Default'
+    |  | InputText = ''
+    |  | IsEditable = 'true'
+    |  | TextSelectionRange = 'TextRange(0, 0)'
+    |  | Actions = [GetTextLayoutResult, InsertTextAtCursor, OnAutofillText, OnClick, OnLongClick, PasteText, PerformImeAction, RequestFocus, SetSelection, SetText]
+    |  | MergeDescendants = 'true'
+    |  |  |-Node #156 at (l=24.0, t=118.0, r=288.0, b=142.0)px
+    |  |    Text = '[Search names, numbers or messages]'
+    |  |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |  |-Node #159 at (l=376.0, t=108.0, r=424.0, b=156.0)px
+    |  | ContentDescription = '[Select multiple conversations]'
+    |  | Focused = 'false'
+    |  | Role = 'Checkbox'
+    |  | ToggleableState = 'Off'
+    |  | Actions = [OnClick, RequestFocus]
+    |  | MergeDescendants = 'true'
+    |  |-Node #161 at (l=63.0, t=504.0, r=369.0, b=528.0)px
+    |    Text = '[No groups here. Use + to create a group.]'
+    |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |-Node #109 at (l=0.0, t=864.0, r=432.0, b=936.0)px, Tag: 'home-navigation'
+    |  |-Node #110 at (l=8.0, t=868.0, r=92.0, b=936.0)px, Tag: 'tab-Messages'
+    |  | Focused = 'false'
+    |  | Role = 'Tab'
+    |  | Selected = 'false'
+    |  | Actions = [OnClick, RequestFocus]
+    |  | MergeDescendants = 'true'
+    |  |  |-Node #113 at (l=24.0, t=908.0, r=76.0, b=922.0)px
+    |  |    Text = '[Messages]'
+    |  |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |  |-Node #114 at (l=92.0, t=868.0, r=175.0, b=936.0)px, Tag: 'tab-Groups'
+    |  | Focused = 'false'
+    |  | Role = 'Tab'
+    |  | Selected = 'true'
+    |  | Actions = [OnClick, RequestFocus]
+    |  | MergeDescendants = 'true'
+    |  |  |-Node #117 at (l=116.0, t=908.0, r=152.0, b=922.0)px
+    |  |    Text = '[Groups]'
+    |  |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |  |-Node #118 at (l=175.0, t=868.0, r=258.0, b=936.0)px, Tag: 'tab-Apps'
+    |  | Focused = 'false'
+    |  | Role = 'Tab'
+    |  | Selected = 'false'
+    |  | Actions = [OnClick, RequestFocus]
+    |  | MergeDescendants = 'true'
+    |  |  |-Node #121 at (l=204.0, t=908.0, r=229.0, b=922.0)px
+    |  |    Text = '[Apps]'
+    |  |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |  |-Node #122 at (l=258.0, t=868.0, r=341.0, b=936.0)px, Tag: 'tab-Games'
+    |  | Focused = 'false'
+    |  | Role = 'Tab'
+    |  | Selected = 'false'
+    |  | Actions = [OnClick, RequestFocus]
+    |  | MergeDescendants = 'true'
+    |  |  |-Node #125 at (l=282.0, t=908.0, r=318.0, b=922.0)px
+    |  |    Text = '[Games]'
+    |  |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |  |-Node #126 at (l=341.0, t=868.0, r=424.0, b=936.0)px, Tag: 'tab-Settings'
+    |    Focused = 'false'
+    |    Role = 'Tab'
+    |    Selected = 'false'
+    |    Actions = [OnClick, RequestFocus]
+    |    MergeDescendants = 'true'
+    |     |-Node #129 at (l=362.0, t=908.0, r=404.0, b=922.0)px
+    |       Text = '[Settings]'
+    |       Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+    |-Node #72 at (l=216.0, t=0.0, r=216.0, b=0.0)px, Tag: 'status-bar-backplate'
+    |-Node #73 at (l=216.0, t=936.0, r=216.0, b=936.0)px, Tag: 'navigation-bar-backplate'
+Printing with useUnmergedTree = 'true'
+Node #162 at (l=0.0, t=0.0, r=432.0, b=391.0)px
+ |-Node #163 at (l=0.0, t=0.0, r=432.0, b=391.0)px
+   [IsDialog]
+    |-Node #166 at (l=0.0, t=0.0, r=432.0, b=391.0)px, Tag: 'dialog-Create Group'
+      ClearAndSetSemantics = 'true'
+       |-Node #169 at (l=28.0, t=24.0, r=404.0, b=50.0)px
+       | Text = '[Create Group]'
+       | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+       |-Node #170 at (l=4.0, t=58.0, r=428.0, b=331.0)px
+       | IsTraversalGroup = 'true'
+       | VerticalScrollAxisRange = 'ScrollAxisRange(value=0.0, maxValue=0.0, reverseScrolling=false)'
+       | Actions = [ScrollBy, ScrollByOffset]
+       |  |-Node #172 at (l=177.0, t=78.0, r=256.0, b=102.0)px
+       |  | Text = '[Group Name]'
+       |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+       |  |-Node #173 at (l=38.0, t=116.0, r=394.0, b=144.0)px, Tag: 'group-name'
+       |  | ContentDataType = 'AndroidContentDataType(androidAutofillType=1)'
+       |  | EditableText = 'Family'
+       |  | Focused = 'true'
+       |  | ImeAction = 'Default'
+       |  | InputText = 'Family'
+       |  | IsEditable = 'true'
+       |  | TextSelectionRange = 'TextRange(6, 6)'
+       |  | Actions = [GetTextLayoutResult, InsertTextAtCursor, OnAutofillText, OnClick, OnLongClick, PasteText, PerformImeAction, RequestFocus, SetSelection, SetText]
+       |  | MergeDescendants = 'true'
+       |  |-Node #180 at (l=143.0, t=187.0, r=289.0, b=211.0)px
+       |  | Text = '[0 People · Choose 2–10]'
+       |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+       |  |-Node #181 at (l=24.0, t=211.0, r=408.0, b=263.0)px
+       |  | Focused = 'false'
+       |  | Actions = [OnClick, RequestFocus]
+       |  | MergeDescendants = 'true'
+       |  |  |-Node #183 at (l=162.0, t=228.0, r=270.0, b=246.0)px
+       |  |    Text = '[Choose Members]'
+       |  |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+       |  |-Node #184 at (l=57.0, t=263.0, r=375.0, b=287.0)px
+       |  | Text = '[Adding or removing members starts a new conversation.]'
+       |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+       |  |-Node #192 at (l=125.0, t=287.0, r=308.0, b=311.0)px
+       |    Text = '[Choose 2–10 different people]'
+       |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+       |-Node #185 at (l=4.0, t=331.0, r=428.0, b=387.0)px
+         HorizontalScrollAxisRange = 'ScrollAxisRange(value=0.0, maxValue=0.0, reverseScrolling=false)'
+         IsTraversalGroup = 'true'
+         Actions = [ScrollBy, ScrollByOffset]
+          |-Node #186 at (l=268.0, t=335.0, r=350.0, b=383.0)px
+          | Focused = 'false'
+          | Role = 'Button'
+          | Actions = [OnClick, RequestFocus]
+          | MergeDescendants = 'true'
+          |  |-Node #188 at (l=288.0, t=351.0, r=330.0, b=368.0)px
+          |    Text = '[Cancel]'
+          |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |-Node #189 at (l=350.0, t=335.0, r=420.0, b=383.0)px
+            Focused = 'false'
+            Role = 'Button'
+            Actions = [OnClick, RequestFocus]
+            MergeDescendants = 'true'
+             |-Node #191 at (l=370.0, t=351.0, r=400.0, b=368.0)px
+               Text = '[Save]'
+               Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+Printing with useUnmergedTree = 'true'
+Node #193 at (l=0.0, t=0.0, r=432.0, b=294.0)px
+ |-Node #194 at (l=0.0, t=0.0, r=432.0, b=294.0)px
+   [IsDialog]
+    |-Node #197 at (l=0.0, t=0.0, r=432.0, b=294.0)px, Tag: 'dialog-Choose people'
+      IsContainer = 'true'
+       |-Node #200 at (l=28.0, t=24.0, r=404.0, b=50.0)px
+       | Text = '[Choose people]'
+       | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+       |-Node #201 at (l=4.0, t=58.0, r=428.0, b=234.0)px
+       | IsTraversalGroup = 'true'
+       | VerticalScrollAxisRange = 'ScrollAxisRange(value=0.0, maxValue=0.0, reverseScrolling=false)'
+       | Actions = [ScrollBy, ScrollByOffset]
+       |  |-Node #203 at (l=38.0, t=92.0, r=394.0, b=120.0)px, Tag: 'group-contact-search'
+       |  | ContentDataType = 'AndroidContentDataType(androidAutofillType=1)'
+       |  | EditableText = ''
+       |  | Focused = 'false'
+       |  | ImeAction = 'Default'
+       |  | InputText = ''
+       |  | IsEditable = 'true'
+       |  | TextSelectionRange = 'TextRange(0, 0)'
+       |  | Actions = [GetTextLayoutResult, InsertTextAtCursor, OnAutofillText, OnClick, OnLongClick, PasteText, PerformImeAction, RequestFocus, SetSelection, SetText]
+       |  | MergeDescendants = 'true'
+       |  |  |-Node #206 at (l=38.0, t=94.0, r=138.0, b=118.0)px
+       |  |    Text = '[Search people]'
+       |  |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+       |  |-Node #209 at (l=24.0, t=134.0, r=86.0, b=158.0)px
+       |  | Text = '[0 selected]'
+       |  | Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+       |  |-Node #210 at (l=24.0, t=158.0, r=212.0, b=214.0)px
+       |    IsTraversalGroup = 'true'
+       |    VerticalScrollAxisRange = 'ScrollAxisRange(value=0.0, maxValue=0.0, reverseScrolling=false)'
+       |    Actions = [ScrollBy, ScrollByOffset]
+       |     |-Node #211 at (l=40.0, t=174.0, r=196.0, b=198.0)px
+       |       Text = '[No matching contacts]'
+       |       Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+       |-Node #212 at (l=4.0, t=234.0, r=428.0, b=290.0)px
+         HorizontalScrollAxisRange = 'ScrollAxisRange(value=0.0, maxValue=0.0, reverseScrolling=false)'
+         IsTraversalGroup = 'true'
+         Actions = [ScrollBy, ScrollByOffset]
+          |-Node #213 at (l=266.0, t=238.0, r=348.0, b=286.0)px
+          | Focused = 'false'
+          | Role = 'Button'
+          | Actions = [OnClick, RequestFocus]
+          | MergeDescendants = 'true'
+          |  |-Node #215 at (l=286.0, t=254.0, r=328.0, b=271.0)px
+          |    Text = '[Cancel]'
+          |    Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+          |-Node #216 at (l=348.0, t=238.0, r=420.0, b=286.0)px
+            Focused = 'false'
+            Role = 'Button'
+            Actions = [OnClick, RequestFocus]
+            MergeDescendants = 'true'
+             |-Node #218 at (l=368.0, t=254.0, r=400.0, b=271.0)px
+               Text = '[Done]'
+               Actions = [ClearTextSubstitution, GetTextLayoutResult, SetTextSubstitution, ShowTextSubstitution]
+	at app.onklav.home.GroupsFlowHostTest.waitForContact(GroupsFlowHostTest.kt:67)
+	at app.onklav.home.GroupsFlowHostTest.createEditMembersFoldersSearchAndDelete(GroupsFlowHostTest.kt:102)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.robolectric.internal.TimeLimitedStatement.evaluate(TimeLimitedStatement.java:38)
+	at org.junit.rules.ExternalResource$1.evaluate(ExternalResource.java:54)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1$evaluate$1.invoke(AndroidComposeTestRule.android.kt:295)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1$evaluate$1.invoke(AndroidComposeTestRule.android.kt:295)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.withDisposableContent(ComposeUiTest.android.kt:565)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1$1$1$1.invoke(ComposeUiTest.android.kt:370)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.withComposeIdlingResource(ComposeUiTest.android.kt:439)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.access$withComposeIdlingResource(ComposeUiTest.android.kt:235)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1$1$1.invoke(ComposeUiTest.android.kt:369)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.withWindowRecomposer(ComposeUiTest.android.kt:413)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.access$withWindowRecomposer(ComposeUiTest.android.kt:235)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1$1.invoke(ComposeUiTest.android.kt:368)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.withTestCoroutines(ComposeUiTest.android.kt:426)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.access$withTestCoroutines(ComposeUiTest.android.kt:235)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1.invoke(ComposeUiTest.android.kt:367)
+	at androidx.compose.ui.test.IdlingStrategy.withStrategy(IdlingStrategy.android.kt:55)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1.invoke(ComposeUiTest.android.kt:366)
+	at androidx.compose.ui.test.IdlingResourceRegistry.withRegistry(IdlingResourceRegistry.jvm.kt:148)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1.invoke(ComposeUiTest.android.kt:365)
+	at androidx.compose.ui.test.ComposeRootRegistry.withRegistry(ComposeRootRegistry.android.kt:139)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.runTest(ComposeUiTest.android.kt:364)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1.evaluate(AndroidComposeTestRule.android.kt:295)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.robolectric.RobolectricTestRunner$HelperTestRunner$1.evaluate(RobolectricTestRunner.java:502)
+	at org.robolectric.internal.SandboxTestRunner$2.lambda$evaluate$2(SandboxTestRunner.java:285)
+	at org.robolectric.internal.bytecode.Sandbox.lambda$runOnMainThread$0(Sandbox.java:104)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+Caused by: androidx.compose.ui.test.ComposeTimeoutException: Condition still not satisfied after 10000 ms
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.waitUntil(ComposeUiTest.android.kt:504)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule.waitUntil(AndroidComposeTestRule.android.kt:339)
+	at app.onklav.home.GroupsFlowHostTest.waitForContact(GroupsFlowHostTest.kt:64)
+	... 39 more
+</failure>
+  </testcase>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

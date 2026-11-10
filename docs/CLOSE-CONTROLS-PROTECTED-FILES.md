@@ -1,0 +1,9 @@
+# Close controls and protected Files entries
+
+Shared HomeHeader and SDK app headers now use a theme-aware X in a rounded-square tonal button. Apps/settings, shared pickers, publisher pages, Calendar/event editor, camera/call panel, package center and mail dismissals use the shared close control. Existing callbacks, save prompts and the shell slide-out/slide-back animation remain in place. Phone call dismissal still minimizes the call; it does not hang up.
+
+The Files SDK header X closes its page rather than navigating up. Internal parent navigation remains explicit through Parent folder and Android system Back. The shared picker X cancels selection, with a separate Parent folder action for browsing. Embedded Phone/Camera root pages retain their existing header visibility. Browser history, previous/next controls and contextual Back to tools actions retain their navigation meaning.
+
+Android listing previously marked every writable directory editable. Standard phone containers, camera/screenshot containers, Android app-managed folders, package-named app containers and protected Android metadata now carry protected/read-only flags. Their grid/list pencils are hidden. Backend rename, move, trash and compress operations reject protected entries; protected metadata also rejects provider writes/deletes. Personal media files and user-created folders remain editable, and users can still browse protected containers.
+
+14 focused host checks and production compilation passed. Coverage includes X dismissal without parent navigation, explicit parent browsing, loading-state close access, RTL/large-font header layout, protected folder flags and blocked mutations, read-only metadata provider access, personal-media preservation and existing Files workflows. Rendered Files chrome was inspected. See close-protected-files-verification.json and evidence/close-protected-files. No new APK was requested/built; APK 0.100.41 predates this increment.

@@ -1,0 +1,16 @@
+{
+  "schema": "onklav.app.v1",
+  "runtime": "rust-wasm-ui.v1",
+  "id": "app.onklav.podcasts",
+  "name": "Podcasts",
+  "version": 37,
+  "min_host": 93,
+  "capabilities": [
+    "storage.private",
+    "podcasts.library",
+    "audio.playback"
+  ],
+  "icon": {
+    "symbol": "podcasts"
+  }
+}

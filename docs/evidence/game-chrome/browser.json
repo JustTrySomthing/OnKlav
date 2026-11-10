@@ -1,0 +1,30 @@
+[
+  {
+    "viewport": [
+      432,
+      740
+    ],
+    "audio_pause_return_reload_resume_new_game": true,
+    "return_ack": true,
+    "restored_scores": [
+      0,
+      0
+    ],
+    "javascript_errors": [],
+    "engine_errors": []
+  },
+  {
+    "viewport": [
+      320,
+      560
+    ],
+    "audio_pause_return_reload_resume_new_game": true,
+    "return_ack": true,
+    "restored_scores": [
+      0,
+      0
+    ],
+    "javascript_errors": [],
+    "engine_errors": []
+  }
+]

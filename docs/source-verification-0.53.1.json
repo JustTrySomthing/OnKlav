@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-23",
+  "source_version": "0.53.1-dev",
+  "source_version_code": 61,
+  "scope": "Established icon restoration; see ICON-RESTORATION-0.53.1.json",
+  "apk_built": true,
+  "apk_variant": "debug",
+  "apk_bytes": 67384670,
+  "apk_sha256": "94c714bb64ef4f66e22b069921a326455a7e2d10b0cf7749a8eaf9e20e743d6a",
+  "production_inputs_match_assembly": true,
+  "apk_verified_independently": true,
+  "tests": {
+    "passed": 0,
+    "failed": 0,
+    "status": "No new functional suite; artwork/mapping-only correction. Historical 0.53.0 checks retained separately."
+  },
+  "full_rewrite_complete": false,
+  "handset_acceptance": false
+}

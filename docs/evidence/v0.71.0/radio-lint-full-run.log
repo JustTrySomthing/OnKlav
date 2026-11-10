@@ -1,0 +1,7 @@
+radio-lint-full: 20s
+radio-lint-full: 40s
+radio-lint-full: 60s
+radio-lint-full: 80s
+radio-lint-full: 100s
+radio-lint-full: 120s
+radio-lint-full: exit 0 in 126.3s

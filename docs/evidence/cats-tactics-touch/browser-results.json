@@ -1,0 +1,28 @@
+[
+  {
+    "viewport": [
+      360,
+      780
+    ],
+    "single_release_commits_once": true,
+    "repeated_single_taps": true,
+    "no_idle_floating_preview": true,
+    "pause_cancels_held_preview": true,
+    "reported_fork_prevented": true,
+    "AI_completed_depth": 6,
+    "AI_nodes": 4096
+  },
+  {
+    "viewport": [
+      320,
+      640
+    ],
+    "single_release_commits_once": true,
+    "repeated_single_taps": true,
+    "no_idle_floating_preview": true,
+    "pause_cancels_held_preview": true,
+    "reported_fork_prevented": true,
+    "AI_completed_depth": 6,
+    "AI_nodes": 4096
+  }
+]

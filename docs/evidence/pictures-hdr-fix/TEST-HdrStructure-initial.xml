@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.PhotoEffectsTest" tests="8" skipped="0" failures="1" errors="0" timestamp="2026-10-28T22:14:38" hostname="1b65f1fab707" time="4.668">
+  <properties/>
+  <testcase name="threeLooksHaveDistinctGradingAndRemovedLooksAreNeutral" classname="app.onklav.home.PhotoEffectsTest" time="3.099"/>
+  <testcase name="hdrAddsStructureWithoutLiftingBlacksOrWashingTonalRange" classname="app.onklav.home.PhotoEffectsTest" time="0.17"/>
+  <testcase name="hdrStrengthHasClearlyVisibleRangeWithoutGlobalBrightnessLift" classname="app.onklav.home.PhotoEffectsTest" time="0.127"/>
+  <testcase name="powerfulHdrDoesNotTurnFineGrainIntoTexture" classname="app.onklav.home.PhotoEffectsTest" time="0.089"/>
+  <testcase name="portraitAndScenicHdrStrengthContactSheet" classname="app.onklav.home.PhotoEffectsTest" time="0.829"/>
+  <testcase name="renderedLookContactSheet" classname="app.onklav.home.PhotoEffectsTest" time="0.29"/>
+  <testcase name="hdrDoesNotDrawHalosAroundHardEdges" classname="app.onklav.home.PhotoEffectsTest" time="0.029">
+    <failure message="java.lang.AssertionError: Dark side of a hard edge must not acquire a halo" type="java.lang.AssertionError">java.lang.AssertionError: Dark side of a hard edge must not acquire a halo
+	at org.junit.Assert.fail(Assert.java:89)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at app.onklav.home.PhotoEffectsTest.hdrDoesNotDrawHalosAroundHardEdges(PhotoEffectsTest.kt:53)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.robolectric.RobolectricTestRunner$HelperTestRunner$1.evaluate(RobolectricTestRunner.java:502)
+	at org.robolectric.internal.SandboxTestRunner$2.lambda$evaluate$2(SandboxTestRunner.java:285)
+	at org.robolectric.internal.bytecode.Sandbox.lambda$runOnMainThread$0(Sandbox.java:104)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+</failure>
+  </testcase>
+  <testcase name="sharpeningHasVisibleStrengthWithoutChangingFlatAreasOrAlpha" classname="app.onklav.home.PhotoEffectsTest" time="0.034"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

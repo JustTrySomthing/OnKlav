@@ -1,0 +1,12 @@
+{
+  "verified": true,
+  "files": 634,
+  "sdk_tools": "0.4.1",
+  "reference_apk": {
+    "version": "0.100.42-quick",
+    "version_code": 151,
+    "package": "app.onklav.home.prototype.rewrite",
+    "sha256": "699e01383805935ebe65193056bc72fcf225ac6ddf739a8b7ca22a6cbbd1af0b"
+  },
+  "host_protocol_build": 96
+}

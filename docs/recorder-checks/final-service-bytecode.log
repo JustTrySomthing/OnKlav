@@ -1,0 +1,48 @@
+  public void onDestroy();
+    Code:
+       0: aload_0
+       1: iconst_1
+       2: putfield      #839                // Field destroyed:Z
+       5: aload_0
+       6: getfield      #23                 // Field main:Landroid/os/Handler;
+       9: aload_0
+      10: getfield      #57                 // Field tick:Lapp/onklav/home/RecorderService$tick$1;
+      13: checkcast     #301                // class java/lang/Runnable
+      16: invokevirtual #625                // Method android/os/Handler.removeCallbacks:(Ljava/lang/Runnable;)V
+      19: aload_0
+      20: getfield      #455                // Field ending:Z
+      23: ifne          61
+      26: aload_0
+      27: getfield      #39                 // Field token:Ljava/lang/String;
+      30: checkcast     #81                 // class java/lang/CharSequence
+      33: invokeinterface #129,  1          // InterfaceMethod java/lang/CharSequence.length:()I
+      38: ifle          45
+      41: iconst_1
+      42: goto          46
+      45: iconst_0
+      46: ifeq          61
+      49: aload_0
+      50: ldc_w         #841                // String Recording service stopped
+      53: iconst_0
+      54: iconst_0
+      55: bipush        6
+      57: aconst_null
+      58: invokestatic  #357                // Method finish$default:(Lapp/onklav/home/RecorderService;Ljava/lang/String;ZZILjava/lang/Object;)V
+      61: aload_0
+      62: invokespecial #843                // Method publishFinished:()V
+      65: aload_0
+      66: getfield      #33                 // Field worker:Ljava/util/concurrent/ExecutorService;
+      69: invokeinterface #846,  1          // InterfaceMethod java/util/concurrent/ExecutorService.shutdown:()V
+      74: aload_0
+      75: invokespecial #848                // Method android/app/Service.onDestroy:()V
+      78: return
+
+  public android.os.IBinder onBind(android.content.Intent);
+    Code:
+       0: aload_0
+       1: aload_1
+       2: invokevirtual #1219               // Method onBind:(Landroid/content/Intent;)Ljava/lang/Void;
+       5: checkcast     #1221               // class android/os/IBinder
+       8: areturn
+
+  public static final android.os.Handler access$getMain$p(app.onklav.home.RecorderService);

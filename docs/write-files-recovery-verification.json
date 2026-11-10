@@ -1,0 +1,38 @@
+{
+  "date": "2026-10-29",
+  "status": "partial_scope_verified_not_a_release",
+  "tests_passed": [
+    "app.onklav.home.WriteUiTest.signedWriterFormatsManagesAndExportsWithoutLosingSelection",
+    "app.onklav.home.FilesFlowHostTest.fileIconFoldersRenameMoveTrashAndRestoreUseTheRealNotesStore",
+    "app.onklav.home.FilesFlowHostTest.openingANoteUsesNotesAndBackReturnsToFiles",
+    "app.onklav.home.FilesFlowHostTest.modernCalculatorKeypadUsesSignedArithmetic",
+    "app.onklav.home.WriteHostTest.numberedListsContinueAndRemovingOneParagraphKeepsItsNeighbors",
+    "app.onklav.home.WriteHostTest.richDocumentsRoundTripDocxAndPdfPagination",
+    "app.onklav.home.WriteHostTest.partialAndCursorFormattingPreserveSurroundingText",
+    "app.onklav.home.WriteHostTest.documentsAreAtomicPrivateAndRespectRevocation",
+    "app.onklav.home.WriteHostTest.proofreadingPreservesOffsetsAndDoesNotRewriteText"
+  ],
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/WriteEditor.kt": "ea41fba79ed4adaeadd9f7f04a3ad476212f1dfc08d0eea41352577ddf322923",
+    "android/app/src/main/kotlin/app/onklav/home/WriteDocument.kt": "2f131ea95da3b9d16e081d07b945fcf9e553d3cdcfe8dad8dfe42d2ba264b493",
+    "android/app/src/main/kotlin/app/onklav/home/WriteDocumentsDrawer.kt": "148d75fcbdd1439335cfa132d3a2316800e3afdfbe58f55e1ea02a88fe50be5b",
+    "android/app/src/main/kotlin/app/onklav/home/WriteProofreading.kt": "a0663a5bb137ea10a906c70bd2c095eff44dcbf432cfd5a04718c267cfaf4f4a",
+    "android/app/src/main/kotlin/app/onklav/home/CalcWorkspace.kt": "c00d9c29d4ffd8e6911b627eb7aa04383660b7713596bff33a10663854111aef",
+    "android/app/src/main/kotlin/app/onklav/home/FilesCreateFolderDialog.kt": "903eb22ea198f0001c0921bd669bc67a1ab6ad3b5c1364fd8ccaead633119d49",
+    "android/app/src/main/kotlin/app/onklav/home/SdkAppScreen.kt": "39e6c7ad96d88efa027983473d43b2c6a5fc367f23be598619b2ca7a0462c7a7",
+    "android/shared/src/main/res/drawable/write_paragraph.xml": "3f77bb4f5f7582ae7e83414d5c9e96c15d42e24eef00da488963e57651d26340"
+  },
+  "native_core_changed": false,
+  "runtime_classes_match": true,
+  "apk_built": false,
+  "lint": "Prior evidence retained; not rerun for this bounded UI change",
+  "not_completed": [
+    "image insertion and export",
+    "verified Notes migration into Write and shared Write folder",
+    "Notes retirement and active-code/documentation cleanup",
+    "encrypted user folders and SDK access enforcement",
+    "password management and locked-folder mutation guards",
+    "Write drawer right-edge entrance/exit polish"
+  ],
+  "device_acceptance": "Not performed"
+}

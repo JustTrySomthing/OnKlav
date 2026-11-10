@@ -1,0 +1,122 @@
+[
+  {
+    "class": "app.onklav.home.SdkMediaSourceTest",
+    "name": "podcastWithoutValidatorsStillRejectsChangedLength",
+    "passed": true
+  },
+  {
+    "class": "app.onklav.home.SdkMediaSourceTest",
+    "name": "decoderCannotFollowRedirectsOrContinueAfterPermissionLoss",
+    "passed": true
+  },
+  {
+    "class": "app.onklav.home.SdkMediaSourceTest",
+    "name": "audiobookCanProbeTailFirstAndSeekUsingLastModified",
+    "passed": true
+  },
+  {
+    "class": "app.onklav.home.SdkMediaSourceTest",
+    "name": "dynamicPodcastDatesDoNotBreakValidRanges",
+    "passed": true
+  },
+  {
+    "class": "app.onklav.home.SdkMediaSourceTest",
+    "name": "audiobookRejectsChangedDateOrLengthAcrossSeek",
+    "passed": true
+  },
+  {
+    "class": "app.onklav.home.SdkMediaSourceTest",
+    "name": "readChunksAreBoundedAndClosedSourceCannotReopen",
+    "passed": true
+  },
+  {
+    "class": "app.onklav.home.SdkMediaSourceTest",
+    "name": "decoderLearnsLargeAudioLengthBeforeReadingWithoutDownloadingWholeFile",
+    "passed": true
+  },
+  {
+    "class": "app.onklav.home.SdkMediaSourceTest",
+    "name": "sourceReusesSequentialReadsAndRequiresMatchingRangeForSeeking",
+    "passed": true
+  },
+  {
+    "class": "app.onklav.home.SdkMediaSourceTest",
+    "name": "podcastTailProbeCanUseRangeWithoutEtag",
+    "passed": true
+  },
+  {
+    "class": "app.onklav.home.SetupPlaybackRepairTest",
+    "name": "setupRequestsFeaturePermissionsAndRechecksAndroidApprovals",
+    "passed": false
+  },
+  {
+    "class": "app.onklav.home.SetupPlaybackRepairTest",
+    "name": "nativeSizeCallbackNeverOpensTheNetworkEvenWhenLengthIsUnknown",
+    "passed": true
+  },
+  {
+    "class": "app.onklav.home.SetupPlaybackRepairTest",
+    "name": "upgradeRepairsShippedDefaultsOnceAndLaterExplicitRevocationsStayEffective",
+    "passed": true
+  },
+  {
+    "class": "app.onklav.home.SdkMediaLifecycleTest",
+    "name": "sleepStopsOnlyItsCurrentPlayerAndReplacementCancelsDeadline",
+    "passed": true
+  },
+  {
+    "class": "app.onklav.home.SdkMediaLifecycleTest",
+    "name": "signedPlayerOwnsSessionControlsAndStopsOnRevocation",
+    "passed": true
+  },
+  {
+    "class": "app.onklav.home.SdkMediaLifecycleTest",
+    "name": "deletingAppDataClearsPositionsWithoutALateStopRecreatingThem",
+    "passed": true
+  },
+  {
+    "class": "app.onklav.home.SdkMediaLifecycleTest",
+    "name": "pauseDuringPreparationAndReplacementNeverRestartOldPlayback",
+    "passed": true
+  },
+  {
+    "class": "app.onklav.home.EssentialsUiTest",
+    "name": "runningTimerCountsDownWhileItsLazyRowStaysVisible",
+    "passed": true
+  },
+  {
+    "class": "app.onklav.home.OfflineHandoffTest",
+    "name": "offlineShowListsDownloadsAndFileDescriptorReadsWithoutFeedLookup",
+    "passed": true
+  },
+  {
+    "class": "app.onklav.home.OfflineHandoffTest",
+    "name": "lostRouteCallbacksAreDiscardedAndCloseIsIdempotent",
+    "passed": true
+  },
+  {
+    "class": "app.onklav.home.OfflineHandoffTest",
+    "name": "aFailingSourceCloseCannotCrashStationReplacementOrStop",
+    "passed": true
+  },
+  {
+    "class": "app.onklav.home.OfflineHandoffTest",
+    "name": "remoteHandoffPreservesPositionAndDoesNotResumePausedPlayback",
+    "passed": true
+  },
+  {
+    "class": "app.onklav.home.OfflineHandoffTest",
+    "name": "initialValidatedRouteDoesNotRestartThePlayer",
+    "passed": true
+  },
+  {
+    "class": "app.onklav.home.OfflineHandoffTest",
+    "name": "failedHandoffGetsOneRetryAndRepeatedFailureDoesNotLoop",
+    "passed": true
+  },
+  {
+    "class": "app.onklav.home.OfflineHandoffTest",
+    "name": "streamedEpisodeProbeRunsOffMainAndFailureBecomesPlayerError",
+    "passed": true
+  }
+]

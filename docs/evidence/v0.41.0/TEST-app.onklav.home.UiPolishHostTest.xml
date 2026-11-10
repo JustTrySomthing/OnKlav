@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.UiPolishHostTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-23T02:38:36" hostname="276516236850" time="3.821">
+  <properties/>
+  <testcase name="contactsGroupLettersShowNoNumberAndChooseMessageOrWalkieRecipient" classname="app.onklav.home.UiPolishHostTest" time="0.772"/>
+  <testcase name="keypadAddsDigitsFormatsAndBackspacesWithoutChangingDialableTarget" classname="app.onklav.home.UiPolishHostTest" time="0.827"/>
+  <testcase name="pageSlidesFromRightAndRetainsContentUntilExitCompletes" classname="app.onklav.home.UiPolishHostTest" time="0.711"/>
+  <testcase name="mailboxTabsSelectAndExposeBothTrashActions" classname="app.onklav.home.UiPolishHostTest" time="0.725"/>
+  <testcase name="messageFoldersFilterProviderRowsAndRestoreAllUpdatesRustState" classname="app.onklav.home.UiPolishHostTest" time="0.785"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,1 @@
+{"schema":"onklav.app.v1","runtime":"rust-wasm-ui.v1","id":"org.example.mapservices","name":"Map services","version":1,"capabilities":["storage.private","network.http"],"network":{"origins":["https://geo.example.org","https://tiles.example.org"],"accounts":[]},"min_host":78,"icon":{"symbol":"reader"}}

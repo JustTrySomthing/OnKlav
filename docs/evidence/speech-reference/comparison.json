@@ -1,0 +1,18 @@
+{
+  "website": {
+    "duration": 8.784958333333334,
+    "sample_rate": 24000
+  },
+  "old_manual_frontend": {
+    "duration": 8.592041666666667,
+    "sample_rate": 24000,
+    "rms_envelope_correlation_with_website": 0.516040019266063,
+    "lag_ms": 25
+  },
+  "corrected_rust_frontend": {
+    "duration": 8.783458333333334,
+    "sample_rate": 24000,
+    "rms_envelope_correlation_with_website": 0.9998340791829801,
+    "lag_ms": 0
+  }
+}

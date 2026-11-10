@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.FilesBrokerHostTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2026-10-26T21:19:49" hostname="844ebfe47829" time="3.216">
+  <properties/>
+  <testcase name="fileExportsAreReadOnlyAndCannotExposeArbitraryPrivatePaths" classname="app.onklav.home.FilesBrokerHostTest" time="2.365"/>
+  <testcase name="deletingPrivateDataClearsOnlyThatAppsFolderConnections" classname="app.onklav.home.FilesBrokerHostTest" time="0.403"/>
+  <testcase name="sharingAnAndroidFolderCreatesAReadableZipAndPreservesOriginals" classname="app.onklav.home.FilesBrokerHostTest" time="0.102"/>
+  <testcase name="revokedSdkAuthorizationAndUnknownTokensCannotQueryAndroidFiles" classname="app.onklav.home.FilesBrokerHostTest" time="0.05"/>
+  <testcase name="androidFoldersExposeOpaqueTokensAndSupportRenameAndExplicitDelete" classname="app.onklav.home.FilesBrokerHostTest" time="0.23"/>
+  <testcase name="selectedImportsStreamAndStopWhenAuthorizationIsRevoked" classname="app.onklav.home.FilesBrokerHostTest" time="0.065"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

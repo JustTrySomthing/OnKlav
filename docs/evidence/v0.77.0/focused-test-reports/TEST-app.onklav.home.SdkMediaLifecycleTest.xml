@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.SdkMediaLifecycleTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-26T15:40:07" hostname="844ebfe47829" time="3.987">
+  <properties/>
+  <testcase name="sleepStopsOnlyItsCurrentPlayerAndReplacementCancelsDeadline" classname="app.onklav.home.SdkMediaLifecycleTest" time="3.135"/>
+  <testcase name="signedPlayerOwnsSessionControlsAndStopsOnRevocation" classname="app.onklav.home.SdkMediaLifecycleTest" time="0.281"/>
+  <testcase name="deletingAppDataClearsPositionsWithoutALateStopRecreatingThem" classname="app.onklav.home.SdkMediaLifecycleTest" time="0.349"/>
+  <testcase name="pauseDuringPreparationAndReplacementNeverRestartOldPlayback" classname="app.onklav.home.SdkMediaLifecycleTest" time="0.221"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

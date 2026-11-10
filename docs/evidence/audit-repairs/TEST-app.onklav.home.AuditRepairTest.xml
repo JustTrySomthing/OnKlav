@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.AuditRepairTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-11-01T23:50:25" hostname="0df0e3b6efb4" time="1.729">
+  <properties/>
+  <testcase name="exportHelperWritesTheWholeFileAndPropagatesCopyOrCancellationFailures" classname="app.onklav.home.AuditRepairTest" time="1.729"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

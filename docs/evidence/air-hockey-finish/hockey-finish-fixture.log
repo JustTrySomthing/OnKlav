@@ -1,0 +1,96 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Started Project initialization (5 steps)[39m[0m
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Scanning file structure...[39m[0m
+[  16% ] [90m[1mfirst_scan_filesystem[22m | Loading global class names...[39m[0m
+[  33% ] [90m[1mfirst_scan_filesystem[22m | Verifying GDExtensions...[39m[0m
+[  50% ] [90m[1mfirst_scan_filesystem[22m | Creating autoload scripts...[39m[0m
+[  66% ] [90m[1mfirst_scan_filesystem[22m | Initializing plugins...[39m[0m
+[  83% ] [90m[1mfirst_scan_filesystem[22m | Starting file scan...[39m[0m
+[92m[ DONE ][39m [1mfirst_scan_filesystem[22m
+[0m
+[   0% ] [90m[1mupdate_scripts_classes[22m | Started Registering global classes... (10 steps)[39m[0m
+[   0% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[   9% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  18% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  27% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  36% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  45% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  54% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  63% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  72% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  81% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[92m[ DONE ][39m [1mupdate_scripts_classes[22m
+[0m
+[   0% ] [90m[1m_update_scan_actions[22m | Started Scanning actions... (4 steps)[39m[0m
+[   0% ] [90m[1m_update_scan_actions[22m | paddle-blue.svg[39m[0m
+[  20% ] [90m[1m_update_scan_actions[22m | paddle-coral.svg[39m[0m
+[  40% ] [90m[1m_update_scan_actions[22m | puck.svg[39m[0m
+[  60% ] [90m[1m_update_scan_actions[22m | table.svg[39m[0m
+[92m[ DONE ][39m [1m_update_scan_actions[22m
+[0m
+[   0% ] [90m[1mreimport[22m | Started (Re)Importing Assets (4 steps)[39m[0m
+[   0% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  20% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  40% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[  60% ] [90m[1mreimport[22m | Preparing files to reimport...[39m[0m
+[   0% ] [90m[1mreimport[22m | Executing pre-reimport operations...[39m[0m
+[   0% ] [90m[1mreimport[22m | paddle-blue.svg[39m[0m
+[  20% ] [90m[1mreimport[22m | paddle-coral.svg[39m[0m
+[  40% ] [90m[1mreimport[22m | puck.svg[39m[0m
+[  60% ] [90m[1mreimport[22m | table.svg[39m[0m
+[  80% ] [90m[1mreimport[22m | Finalizing Asset Import...[39m[0m
+[92m[ DONE ][39m [1mreimport[22m
+[0m
+[   0% ] [90m[1mreimport[22m | Started (Re)Importing Assets (4 steps)[39m[0m
+[   0% ] [90m[1mreimport[22m | Executing post-reimport operations...[39m[0m
+[92m[ DONE ][39m [1mreimport[22m
+[0m
+[   0% ] [90m[1mloading_editor_layout[22m | Started Loading editor (5 steps)[39m[0m
+[   0% ] [90m[1mloading_editor_layout[22m | Loading editor layout...[39m[0m
+[  16% ] [90m[1mloading_editor_layout[22m | Loading docks...[39m[0m
+[92m[ DONE ][39m [1mloading_editor_layout[22m
+[0m
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Started Project initialization (5 steps)[39m[0m
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Scanning file structure...[39m[0m
+[  16% ] [90m[1mfirst_scan_filesystem[22m | Loading global class names...[39m[0m
+[  33% ] [90m[1mfirst_scan_filesystem[22m | Verifying GDExtensions...[39m[0m
+[  50% ] [90m[1mfirst_scan_filesystem[22m | Creating autoload scripts...[39m[0m
+[  66% ] [90m[1mfirst_scan_filesystem[22m | Initializing plugins...[39m[0m
+[  83% ] [90m[1mfirst_scan_filesystem[22m | Starting file scan...[39m[0m
+[92m[ DONE ][39m [1mfirst_scan_filesystem[22m
+[0m
+[   0% ] [90m[1msavepack[22m | Started Packing (102 steps)[39m[0m
+[   1% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/paddle-blue.svg-44a3f8f39cec20752ac463d0fc5fcfc3.ctex[39m[0m
+[   1% ] [90m[1msavepack[22m | Storing File: res://air_hockey/art/paddle-blue.svg.import[39m[0m
+[   8% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/paddle-coral.svg-497b21fac0e484b3520327b679277c96.ctex[39m[0m
+[   8% ] [90m[1msavepack[22m | Storing File: res://air_hockey/art/paddle-coral.svg.import[39m[0m
+[  16% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/puck.svg-7a47284e1334c10c561f5ebc86468018.ctex[39m[0m
+[  16% ] [90m[1msavepack[22m | Storing File: res://air_hockey/art/puck.svg.import[39m[0m
+[  24% ] [90m[1msavepack[22m | Storing File: res://.godot/imported/table.svg-adaeaaa8b24e306af4d0ca75a51e67af.ctex[39m[0m
+[  24% ] [90m[1msavepack[22m | Storing File: res://air_hockey/art/table.svg.import[39m[0m
+[  31% ] [90m[1msavepack[22m | Storing File: res://air_hockey/audio.gdc[39m[0m
+[  38% ] [90m[1msavepack[22m | Storing File: res://air_hockey/main.gdc[39m[0m
+[  46% ] [90m[1msavepack[22m | Storing File: res://air_hockey/match.gdc[39m[0m
+[  53% ] [90m[1msavepack[22m | Storing File: res://air_hockey/puck.gdc[39m[0m
+[  61% ] [90m[1msavepack[22m | Storing File: res://air_hockey/rink.gdc[39m[0m
+[  68% ] [90m[1msavepack[22m | Storing File: res://air_hockey/store.gdc[39m[0m
+[  75% ] [90m[1msavepack[22m | Storing File: res://rules.gdc[39m[0m
+[  83% ] [90m[1msavepack[22m | Storing File: res://main.gdc[39m[0m
+[  91% ] [90m[1msavepack[22m | Storing File: res://.godot/exported/133200997/export-3070c538c03ee49b7677ff960a3f5195-main.scn[39m[0m
+[  91% ] [90m[1msavepack[22m | Storing File: res://air_hockey/audio.gd.remap[39m[0m
+[  91% ] [90m[1msavepack[22m | Storing File: res://air_hockey/main.gd.remap[39m[0m
+[  91% ] [90m[1msavepack[22m | Storing File: res://air_hockey/match.gd.remap[39m[0m
+[  91% ] [90m[1msavepack[22m | Storing File: res://air_hockey/puck.gd.remap[39m[0m
+[  91% ] [90m[1msavepack[22m | Storing File: res://air_hockey/rink.gd.remap[39m[0m
+[  91% ] [90m[1msavepack[22m | Storing File: res://air_hockey/store.gd.remap[39m[0m
+[  91% ] [90m[1msavepack[22m | Storing File: res://rules.gd.remap[39m[0m
+[  91% ] [90m[1msavepack[22m | Storing File: res://main.gd.remap[39m[0m
+[  91% ] [90m[1msavepack[22m | Storing File: res://main.tscn.remap[39m[0m
+[  91% ] [90m[1msavepack[22m | Storing File: res://.godot/global_script_class_cache.cfg[39m[0m
+[  91% ] [90m[1msavepack[22m | Storing File: res://.godot/uid_cache.bin[39m[0m
+[  91% ] [90m[1msavepack[22m | Storing File: res://project.binary[39m[0m
+[92m[ DONE ][39m [1msavepack[22m
+[0m

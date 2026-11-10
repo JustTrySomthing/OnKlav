@@ -1,0 +1,11 @@
+{
+  "chunks": [
+    32,
+    33
+  ],
+  "status": "source implemented; live-provider, full-host HTTP/JNI and physical-device qualification pending",
+  "verification": "docs/maps32-33-verification.json",
+  "native_rebuilt": true,
+  "next_feature": 34,
+  "apk_created": false
+}

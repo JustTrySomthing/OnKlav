@@ -1,0 +1,62 @@
+   Compiling onklav-core v0.8.0 (/workspace/scratch/b5e698131b7f/source/OnKlav/core)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 9.32s
+     Running unittests src/lib.rs (core/target/debug/deps/onklav_core-8a579202944a8eae)
+
+running 42 tests
+test content::tests::corrupt_index_fails_closed_and_never_erases_file_bytes ... ok
+test content::notes_backup_tests::notes_backup_validates_every_record_before_import_and_rejects_symlinks ... ok
+test content::simple_media_tests::existing_automatic_media_is_flattened_but_user_folders_and_ids_survive ... ok
+test content::tests::a_corrupt_trashed_note_does_not_block_other_files_or_active_notes ... ok
+test content::tests::copied_files_are_independent_and_purge_leaves_other_content ... ok
+test content::tests::folders_reject_traversal_collisions_cycles_and_system_changes ... ok
+test content::tests::existing_notes_are_verified_migrated_once_and_originals_remain ... ok
+test content::notes_backup_tests::notes_backup_roundtrip_keeps_current_and_trashed_notes_and_is_repeatable ... ok
+test content::tests::note_move_rename_trash_restore_and_permanent_delete_share_one_record ... ok
+test content::tests::recursive_copy_and_compress_fail_without_partial_outputs_for_links ... ok
+test content::simple_media_tests::automatic_media_saves_go_directly_to_shared_roots_and_keep_duplicate_names ... ok
+test content::tests::many_case_insensitive_collisions_find_the_next_name_without_a_full_scan_per_candidate ... ok
+test content::tests::roots_and_notes_live_in_the_shared_library ... ok
+test content::tests::restore_handles_a_removed_parent_without_overwriting_names ... ok
+test content::tests::symlinks_cannot_redirect_content_reads_or_imports ... ok
+test content::tests::shared_index_metadata_does_not_consume_the_notes_private_quota ... ok
+test content::tests::staged_import_is_bounded_and_keeps_the_android_original ... ok
+test content::tests::text_api_edits_notes_without_losing_their_titles ... ok
+test content::tests::text_api_never_follows_a_link_out_of_content_storage ... ok
+test content::tests::recursive_copy_and_zip_preserve_nested_files_and_notes ... ok
+test content::tests::text_api_reads_full_utf8_and_preserves_bom_with_conflict_checks ... ok
+test content::tests::text_api_classifies_all_newline_styles ... ok
+test content::vault::tests::content_vault_rejects_system_nested_and_foreign_recovery ... ok
+test content::tests::duplicate_maximum_length_names_remain_readable_after_copy_import_and_restore ... ok
+test content::vault::tests::content_vault_closes_every_shared_path_and_hides_names ... ok
+test content::vault::tests::content_vault_trash_membership_and_write_autosave_are_guarded ... ok
+test content::write_migration::tests::conflict_keeps_index_and_originals_retryable ... ok
+test content::youtube_download_media_tests::youtube_download_large_media_is_streamed_into_shared_video_folder ... ok
+test content::youtube_download_media_tests::youtube_download_nonmedia_keeps_existing_import_limit ... ok
+test history_plan::tests::provider_ids_and_read_flags_are_not_identity_and_mapping_is_content_based ... ok
+test content::vault::tests::content_vault_backups_contain_only_ciphertext_and_reserve_member_ids ... ok
+test history_plan::tests::repeated_source_or_target_content_is_never_collapsed_or_arbitrarily_bound ... ok
+test sdk::reminder_contract_tests::reminder_replies_do_not_expose_content_or_imply_delivery ... ok
+test content::tests::unicode_and_unusual_note_titles_cannot_poison_the_index ... ok
+test sdk_epub::tests::epub_rejects_traversal_external_entities_and_active_content ... ok
+test content::tests::text_api_rejects_oversize_binary_trash_and_unread_revisions ... ok
+test history_plan::tests::unsent_pending_and_incomplete_content_are_not_new_candidates_and_order_is_deterministic ... ok
+test sdk_epub::additional_tests::epub_drm_and_archive_traversal_are_rejected_before_content_read ... ok
+test content::write_migration::tests::notes_conversion_is_repeatable_and_keeps_originals_and_trash ... ok
+test sdk::tests::content_file_previews_require_the_live_files_grant_and_only_resolve_media ... ok
+test content::tests::pagination_and_search_include_files_beyond_the_first_page ... ok
+test content::tests::excessive_nesting_is_rejected_before_it_can_damage_the_index ... ok
+
+test result: ok. 42 passed; 0 failed; 0 ignored; 0 measured; 268 filtered out; finished in 1.05s
+
+     Running unittests src/bin/onklav-pack.rs (core/target/debug/deps/onklav_pack-ee23dc4255ec4a6b)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+     Running tests/notes_write_restore.rs (core/target/debug/deps/notes_write_restore-72fd2a02028c55ea)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 1 filtered out; finished in 0.00s
+

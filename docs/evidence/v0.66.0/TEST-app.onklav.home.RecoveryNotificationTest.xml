@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.RecoveryNotificationTest" tests="7" skipped="0" failures="0" errors="0" timestamp="2026-10-24T08:54:12" hostname="ac5668fae30d" time="1.198">
+  <properties/>
+  <testcase name="collidingThreadsKeepIndependentNotificationsAndAllActionTargets" classname="app.onklav.home.RecoveryNotificationTest" time="0.893"/>
+  <testcase name="queuedReplyIsNotReportedAsFailedWhenReadAccessDisappears" classname="app.onklav.home.RecoveryNotificationTest" time="0.038"/>
+  <testcase name="markReadRechecksRoleAndPermissionBeforeProviderWritesAndLocalState" classname="app.onklav.home.RecoveryNotificationTest" time="0.066"/>
+  <testcase name="remindersAttentionAndThreadsCannotOverwriteOrCancelEachOther" classname="app.onklav.home.RecoveryNotificationTest" time="0.038"/>
+  <testcase name="removalRecoveryKeepsWorkEnqueuedDuringProfileDeletionAndRetriesFailures" classname="app.onklav.home.RecoveryNotificationTest" time="0.09"/>
+  <testcase name="conversationReadDoesNotCommitLocalSuccessAfterPermissionLoss" classname="app.onklav.home.RecoveryNotificationTest" time="0.052"/>
+  <testcase name="profileCleanupAcceptsAlreadyMissingProfilesButRetainsRejectedExistingOnes" classname="app.onklav.home.RecoveryNotificationTest" time="0.02"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

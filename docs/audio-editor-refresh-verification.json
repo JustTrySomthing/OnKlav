@@ -1,0 +1,59 @@
+{
+  "status": "Audio Editor source complete; 14 unique focused checks passed; no APK built",
+  "date": "2026-10-29",
+  "tests": [
+    "AudioEditorHostTest > editsKeepSourceAndRoundTripWithStereoSilence",
+    "AudioEditorHostTest > gainToneFadesNormalizationAndOverloadProtectionWork",
+    "AudioEditorHostTest > learnedSpectralNoiseReductionReducesNoiseAndKeepsTone",
+    "AudioEditorHostTest > pitchAndTempoAreIndependentAndStereoRemainsLinked",
+    "AudioEditorHostTest > signedAppLaunchAndRevocableStorageAreEnforced",
+    "AudioEditorUiTest > trimSoundCleanupAndSaveAreReachable",
+    "AudioPreviewModelTest > ownershipInterruptionDuringDecoderPreparationCancelsWithoutWaitingForTimeout",
+    "AudioPreviewModelTest > reverseTrimTargetsTheVisibleSectionAndTempoUpdatesTimelineTimes",
+    "AudioPreviewModelTest > seekingIsRelativeToTheAuditionWindowAndOutsideSeekingStopsIt",
+    "AudioPreviewTest > interpolationAcrossBlockBoundariesDoesNotRepeatedlyReadTheDisk",
+    "AudioPreviewTest > longEditedProjectAuditionsTwelveSecondsWithIndependentPitchAndTempo",
+    "AudioPreviewTest > midTrackPreviewDoesNotRestartBeginningOrEndFades",
+    "AudioPreviewTest > previewIsBoundedStartsAtPlayheadAndRespectsSelectionAndTempo",
+    "AudioPreviewTest > reversedPreviewUsesTheSameRegionOrderAsTheWaveform"
+  ],
+  "runtime_classes_match": true,
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/AudioEditor.kt": "52fbe5743b703c23358521b71bfa62ccff27b504179977b25461b1c3fafcf73e",
+    "android/app/src/main/kotlin/app/onklav/home/AudioEditorModel.kt": "2a45df75a542f5e8b299e69ea7dd676d718d93e5bd1044d5ba90076c75af1c23",
+    "android/app/src/main/kotlin/app/onklav/home/AudioEditEngine.kt": "b0d4ca46cdff6310a52de92a054452779abe6e728fc4ac7a69a8f744f35a0599",
+    "android/app/src/main/kotlin/app/onklav/home/AudioPreview.kt": "5d8bc9bf86db8283a9b3f950c8f8b73921b99a59f3c55004665c37c65ff1f285",
+    "android/shared/src/main/res/drawable/audio_edit_silence.xml": "c80df1594bba0ad82858da75b393028ef7d821436768e55a2dac071b2acaca36"
+  },
+  "preview_limit_seconds": 12,
+  "host_timing": {
+    "project_seconds": 7200,
+    "preview_frames": 575999,
+    "rate": 48000,
+    "channels": 2,
+    "host_render_seconds": 0.466198733,
+    "phone_timing_verified": false
+  },
+  "benchmark_fixture": "20-second 48 kHz stereo PCM repeated as 360 edit regions to form a two-hour timeline; +7 semitones and 140% tempo; audition window only",
+  "visual_review": [
+    "docs/evidence/audio-editor-refresh/audio-editor.png",
+    "docs/evidence/audio-editor-refresh/audio-editor-pitch.png"
+  ],
+  "superseded": "Unavailable icon names replaced with bundled assets; invalid JUnit assertion overload corrected; seek assertion now waits for asynchronous decoder seeking. Final focused selections passed.",
+  "scope": [
+    "Short offline auditions from playhead/selection; full edited-track export remains",
+    "Reusable pitch-analysis grain and four-block PCM cache; cached edit frame count; skip neutral EQ",
+    "Global timeline fades retained in excerpts; reversed waveform, preview and structural selection coordinates match",
+    "Preview-local seeks, preparation interruption and stale audio-focus callback protection",
+    "Consistent tempo-adjusted time labels, default-position markers/reset controls, revised layout/actions and large-font scrolling",
+    "Draft committed state advances only after a successful atomic save"
+  ],
+  "limits": [
+    "No real-time full-track DSP claim",
+    "Preview normalization/overload protection measures the excerpt; full export measures the full track",
+    "Host render timing is not phone timing; actual phone codec/audio route and performance acceptance remain",
+    "No APK; original signing identity must be preserved"
+  ],
+  "native_sdk_packages": "Unchanged; source-matched working JNI retained",
+  "apk_built": false
+}

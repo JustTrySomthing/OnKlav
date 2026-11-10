@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.PhotoRetouchTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2026-10-31T23:42:42" hostname="a174a9bf0ea4" time="10.817">
+  <properties/>
+  <testcase name="hardStampPreservesTextureExactlyAndOnlyFeathersItsOuterEdge" classname="app.onklav.home.PhotoRetouchTest" time="9.601"/>
+  <testcase name="stampCopiesFrozenSampleWithFeatheredEdgesAndRoundTrips" classname="app.onklav.home.PhotoRetouchTest" time="0.092"/>
+  <testcase name="correctionsRoundTripWithLayersAndLegacyEditsStillLoad" classname="app.onklav.home.PhotoRetouchTest" time="0.039"/>
+  <testcase name="retouchCoordinatesFollowRotationCropZoomAndPan" classname="app.onklav.home.PhotoRetouchTest" time="0.084"/>
+  <testcase name="healingReplacesDarkSpotWithNearbyTextureWithoutChangingOutsideOrAlpha" classname="app.onklav.home.PhotoRetouchTest" time="0.05"/>
+  <testcase name="smallAndTransparentImagesAndEdgesAreSafe" classname="app.onklav.home.PhotoRetouchTest" time="0.037"/>
+  <testcase name="invalidAndOversizedBrushWorkIsRejected" classname="app.onklav.home.PhotoRetouchTest" time="0.027"/>
+  <testcase name="pinkFlashPupilsAreCorrectedAndNoOpIsReportedHonestly" classname="app.onklav.home.PhotoRetouchTest" time="0.03"/>
+  <testcase name="previewAndExportUseSameNormalizedCorrectionAndNeverChangeSource" classname="app.onklav.home.PhotoRetouchTest" time="0.8"/>
+  <testcase name="redEyeRemovesRedButPreservesCatchlightSkinAndOutsideBrush" classname="app.onklav.home.PhotoRetouchTest" time="0.029"/>
+  <testcase name="stampRejectsInvalidSourceAndDoesNotWrapAtEdges" classname="app.onklav.home.PhotoRetouchTest" time="0.026"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

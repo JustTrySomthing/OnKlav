@@ -1,0 +1,58 @@
+{
+  "version": "0.86.0-media-feedback1",
+  "next_android_version_code": 94,
+  "sdk_host_build": 93,
+  "status": "Complete source update; no APK requested or produced",
+  "implemented": [
+    "Per-episode measured download bar/percent/bytes and completion/error/cancellation feedback",
+    "Disk-backed seek fallback for large podcasts on non-range servers",
+    "Continuation of bounded206segments instead of false end-of-episode",
+    "Safe audio TLS ports/explicit port80 upgrades and additional enclosure MIME aliases",
+    "Confirmed unavailable radio station suppression with24hour expiry and settings retry; favorites retained"
+  ],
+  "core_checks": 281,
+  "controller_checks": 127,
+  "selected_android_cases_across_focused_runs": {
+    "MediaReliabilityTest.largePodcastWithoutRangesUsesOneDiskCacheForRepeatedSeeks": "PASSED",
+    "MediaReliabilityTest.confirmedRadioFailureCanBeHiddenAndRetriedWithoutDeletingFavorites": "PASSED",
+    "MediaReliabilityTest.podcastTransportAcceptsPublicTlsPortsAndSafelyUpgradesExplicitHttpPort": "PASSED",
+    "PodcastDownloadsTest.incompleteOrCancelledDownloadsNeverBecomePlayable": "PASSED",
+    "PodcastDownloadsTest.largeEpisodeCommitsAndOfflinePreparationUsesDiskAfterFeedCacheCleared": "PASSED",
+    "SdkMediaSourceTest.podcastWithoutValidatorsStillRejectsChangedLength": "PASSED",
+    "SdkMediaSourceTest.decoderCannotFollowRedirectsOrContinueAfterPermissionLoss": "PASSED",
+    "SdkMediaSourceTest.audiobookCanProbeTailFirstAndSeekUsingLastModified": "PASSED",
+    "SdkMediaSourceTest.dynamicPodcastDatesDoNotBreakValidRanges": "PASSED",
+    "SdkMediaSourceTest.audiobookRejectsChangedDateOrLengthAcrossSeek": "PASSED",
+    "SdkMediaSourceTest.readChunksAreBoundedAndClosedSourceCannotReopen": "PASSED",
+    "SdkMediaSourceTest.decoderLearnsLargeAudioLengthBeforeReadingWithoutDownloadingWholeFile": "PASSED",
+    "SdkMediaSourceTest.sourceReusesSequentialReadsAndRequiresMatchingRangeForSeeking": "PASSED",
+    "SdkMediaSourceTest.podcastTailProbeCanUseRangeWithoutEtag": "PASSED",
+    "SdkPodcastsTest.longFeedsArePagedAndMissingEnclosureLengthsDoNotHideEpisodes": "PASSED",
+    "SdkPodcastsTest.localDirectoryHasNoNetworkCallOrSearchUsageCounter": "PASSED",
+    "SdkPodcastsTest.podcastAudioAllowsLongTrackingChainsButRejectsPrivateRedirects": "PASSED",
+    "SdkPodcastsTest.publicSearchUsesPublisherFeedsAndFiltersUnsafeResults": "PASSED",
+    "SdkPodcastsTest.unsafeFeedsAndEnclosuresAreRejectedWithoutMarkupOrDuplicates": "PASSED",
+    "MediaReliabilityTest.boundedHttpRangeSegmentsContinueInsteadOfEndingThePodcastEarly": "PASSED",
+    "PodcastTransferUiTest.episodeShowsMeasuredProgressCompletionAndFailure": "PASSED",
+    "FilesFlowHostTest.fileIconFoldersRenameMoveTrashAndRestoreUseTheRealNotesStore": "PASSED",
+    "FilesFlowHostTest.openingANoteUsesNotesAndBackReturnsToFiles": "PASSED",
+    "MediaReliabilityTest.validOggAndM4aEnclosuresAreNotDiscardedByMimeFiltering": "PASSED"
+  },
+  "final_compatibility_cases": 10,
+  "lint": {
+    "errors": 0,
+    "warnings": 179,
+    "log": "docs/evidence/v0.86.0/final-lint.log"
+  },
+  "live_source_checks": "docs/evidence/v0.86.0/live-podcast-checks.json",
+  "native": "Current host/main/diagnostic ARM64 source matched;16KiB alignment",
+  "sdk_packages": "All16included packages current with original publisher",
+  "phone_or_decoder_acceptance": false,
+  "limitations": [
+    "Does not claim every station was probed; only confirmed failures are suppressed. General connectivity loss does not blacklist stations.",
+    "Publisher removal, access restrictions and unsupported encoding can still prevent playback.",
+    "Downloads remain foreground;2GiB per episode,500downloads, available device storage.",
+    "No new APK; released0.84 is retained. Actual phone audio/network acceptance remains separate."
+  ],
+  "details": "docs/MEDIA-FEEDBACK.md"
+}

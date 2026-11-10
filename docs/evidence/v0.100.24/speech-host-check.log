@@ -1,0 +1,3 @@
+android-host-check: starting (maximum 600s)
+android-host-check: running, 30s elapsed
+android-host-check failed (1); inspect /workspace/scratch/f56bb877cb5d/onklav/OnKlav/docs/evidence/v0.100.24/android-host-check.log.

@@ -1,0 +1,51 @@
+{
+  "scope": "Background-free header close buttons, direct call Speaker toggle, Cats vs Dogs pacing, Neon Dominos visuals and rival wording, Naval Fleet selection and compact green solo Start",
+  "source_host": "0.100.56-rc1/code165",
+  "latest_apk": "0.100.55-rc1/code164 predates these source changes",
+  "apk_built": false,
+  "android_initial_focused_passes": 23,
+  "android_final_catalog_and_ui_passes": 6,
+  "sdk_unit_methods": 14,
+  "browser": {
+    "results": {
+      "cats": {
+        "bottom_row_flight": 0.725,
+        "landing_hold": 0.65,
+        "ai_think_at_least": 0.9,
+        "checks": "fall, hold, delay, rival move"
+      },
+      "naval": {
+        "selected_disabled_tab_through_impact_and_hold": true,
+        "selection_changes_with_board_only": true
+      },
+      "dominos": {
+        "flight_and_impact": true,
+        "bounded_effects": true,
+        "decoration_does_not_mutate_model": true,
+        "reduced_motion_suppresses_burst": true,
+        "viewport_widths": [
+          432,
+          320
+        ]
+      }
+    },
+    "errors": []
+  },
+  "games": {
+    "rules_checks": 12,
+    "session_checks": 30,
+    "hockey_checks": 95,
+    "naval_turn_checks": 247,
+    "cats_dogs_checks": 379,
+    "blackjack_checks": 179,
+    "panda_checks": 2102,
+    "dominos_checks": 4628,
+    "dominos_layout_checks": 60324
+  },
+  "shared_helpers_match": true,
+  "source_current": true,
+  "sdk_signed_apps_all_reused": true,
+  "save_schema_and_game_models_unchanged": true,
+  "physical_phone_call_audio_and_performance_tested": false,
+  "screenshots_reviewed_locally_not_packaged": true
+}

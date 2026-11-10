@@ -1,0 +1,14 @@
+{
+  "status": "passed",
+  "version": "0.101.39-rc1",
+  "version_code": 218,
+  "apk": "OnKlav-0.101.39-Air-Hockey.apk",
+  "base": "OnKlav-0.101.38-Air-Hockey.apk",
+  "changed_entries": [
+    "assets/godot-builtin/index.html",
+    "assets/godot-builtin/index.pck",
+    "AndroidManifest.xml"
+  ],
+  "sha256": "658a3e807904fb2bc298471612166eee6b1d4f9b573758883512ca91b6df0f56",
+  "physical_android_test": "pending"
+}

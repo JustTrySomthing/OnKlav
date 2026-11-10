@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.PhoneCallLifecycleTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-11-02T15:06:54" hostname="13575fdd974e" time="9.63">
+  <properties/>
+  <testcase name="incomingCallAddedBeforeRingingDoesNotLaunchASecondScreen" classname="app.onklav.home.PhoneCallLifecycleTest" time="3.717"/>
+  <testcase name="android15DisconnectAlsoClearsTheOngoingNotification" classname="app.onklav.home.PhoneCallLifecycleTest" time="5.461"/>
+  <testcase name="unbindClearsLiveStateAndLateCallbacksCannotRecreateTheNotification" classname="app.onklav.home.PhoneCallLifecycleTest" time="0.061"/>
+  <testcase name="destroyedCallIsRemovedEvenWithoutOnCallRemoved" classname="app.onklav.home.PhoneCallLifecycleTest" time="0.049"/>
+  <testcase name="remoteDisconnectClearsNotificationAndLiveIndicatorBeforeRemoval" classname="app.onklav.home.PhoneCallLifecycleTest" time="0.045"/>
+  <testcase name="answeredCallMovesToQuietChannelAndDoesNotCreateAnIconBadge" classname="app.onklav.home.PhoneCallLifecycleTest" time="0.044"/>
+  <testcase name="staleOngoingNotificationIsRemovedWithoutClearingMissedCallHistory" classname="app.onklav.home.PhoneCallLifecycleTest" time="0.042"/>
+  <testcase name="endingOneCallKeepsTheOtherCallAvailable" classname="app.onklav.home.PhoneCallLifecycleTest" time="0.135"/>
+  <testcase name="nonDefaultServiceDoesNotPostASecondDialerNotification" classname="app.onklav.home.PhoneCallLifecycleTest" time="0.038"/>
+  <testcase name="visibleIncomingScreenSuppressesTheDuplicateBannerAndRestoresItOnMinimize" classname="app.onklav.home.PhoneCallLifecycleTest" time="0.037"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

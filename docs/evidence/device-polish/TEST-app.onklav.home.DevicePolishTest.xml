@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.DevicePolishTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-28T12:15:54" hostname="1b65f1fab707" time="2.109">
+  <properties/>
+  <testcase name="runtimeAndFrameGraphFailuresUseCompatibilityButNetworkErrorsDoNot" classname="app.onklav.home.DevicePolishTest" time="2.003"/>
+  <testcase name="cameraFrameFitsWholeChosenRatioInEitherOrientation" classname="app.onklav.home.DevicePolishTest" time="0.047"/>
+  <testcase name="previewTapJitterDoesNotBecomeAnEditButIntentionalDragAndPinchDo" classname="app.onklav.home.DevicePolishTest" time="0.059"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

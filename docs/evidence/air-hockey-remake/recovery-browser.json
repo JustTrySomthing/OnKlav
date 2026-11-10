@@ -1,0 +1,56 @@
+[
+  {
+    "viewport": [
+      432,
+      740
+    ],
+    "javascript_errors": [],
+    "console": [
+      {
+        "type": "log",
+        "text": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      }
+    ],
+    "canvas": {
+      "x": 0,
+      "y": 0,
+      "width": 432,
+      "height": 740
+    }
+  },
+  {
+    "viewport": [
+      320,
+      560
+    ],
+    "javascript_errors": [],
+    "console": [
+      {
+        "type": "log",
+        "text": "Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org"
+      },
+      {
+        "type": "log",
+        "text": "OpenGL API OpenGL ES 3.0 (WebGL 2.0 (OpenGL ES 3.0 Chromium)) - Compatibility - Using Device: WebKit - WebKit WebGL"
+      },
+      {
+        "type": "log",
+        "text": "Build configuration: Emscripten 4.0.20, single-threaded, no GDExtension support."
+      }
+    ],
+    "canvas": {
+      "x": 0,
+      "y": 0,
+      "width": 320,
+      "height": 560
+    }
+  }
+]

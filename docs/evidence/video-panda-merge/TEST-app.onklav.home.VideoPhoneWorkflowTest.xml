@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.VideoPhoneWorkflowTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2026-11-04T20:45:12" hostname="1bb679a568a0" time="41.09">
+  <properties/>
+  <testcase name="smallPhoneLargeTextKeepsPreviewDoneAndSettingsReachable" classname="app.onklav.home.VideoPhoneWorkflowTest" time="9.327"/>
+  <testcase name="portraitCanvasGetsMorePreviewSpaceAndToolSelectionDoesNotShrinkIt" classname="app.onklav.home.VideoPhoneWorkflowTest" time="3.096"/>
+  <testcase name="audioAndColorPagesStayFocusedAndTextCancelIsNonDestructive" classname="app.onklav.home.VideoPhoneWorkflowTest" time="4.192"/>
+  <testcase name="allToolsKeepTheSameVisiblePreviewAndOpeningToolsDoesNotEditProject" classname="app.onklav.home.VideoPhoneWorkflowTest" time="4.205"/>
+  <testcase name="selectionFeedbackAndUnavailableSettingsHaveClearRoutes" classname="app.onklav.home.VideoPhoneWorkflowTest" time="2.98"/>
+  <testcase name="veryShortWindowKeepsToolsAndTimelineReachable" classname="app.onklav.home.VideoPhoneWorkflowTest" time="3.081"/>
+  <testcase name="landscapeUsesSideInspectorWithoutMovingTheVideo" classname="app.onklav.home.VideoPhoneWorkflowTest" time="2.91"/>
+  <testcase name="browsingPreviewCannotTransformAndDeleteRequiresConfirmationThenUndoWorks" classname="app.onklav.home.VideoPhoneWorkflowTest" time="2.6"/>
+  <testcase name="narrowLandscapeUsesSideInspectorAndKeepsControlsVisible" classname="app.onklav.home.VideoPhoneWorkflowTest" time="2.725"/>
+  <testcase name="sliderChangesAndTimelineBrowsingNeverResizeOrAccidentallyTrim" classname="app.onklav.home.VideoPhoneWorkflowTest" time="2.921"/>
+  <testcase name="addedAudioOverlayAndMotionSubpanelsAreReachableWithoutLosingThePreview" classname="app.onklav.home.VideoPhoneWorkflowTest" time="3.052"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,15 @@
+[package]
+name = "onklav-speech"
+version = "0.1.0"
+edition = "2021"
+publish = false
+[lib]
+name = "onklav_speech"
+crate-type = ["cdylib", "rlib"]
+[dependencies]
+sherpa-onnx = { version = "=1.13.8", default-features = false, features = ["shared"] }
+jni = "0.21.1"
+[profile.release]
+lto = true
+codegen-units = 1
+panic = "unwind"

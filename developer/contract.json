@@ -1,0 +1,805 @@
+{
+  "sdk_tools": "0.4.1",
+  "reference_host": "0.100.42-quick",
+  "schema": "onklav.app.v1",
+  "runtime": "rust-wasm-ui.v1",
+  "rust_helper": "0.1.0",
+  "capabilities": [
+    "storage.private",
+    "clipboard.read",
+    "clipboard.write",
+    "files.export",
+    "share.text",
+    "network.feeds",
+    "network.web",
+    "speech.output",
+    "links.external",
+    "network.thumbnails",
+    "files.images",
+    "images.edit",
+    "audio.record",
+    "audio.playback",
+    "contacts.pick",
+    "communications.walkie",
+    "files.manage",
+    "files.external",
+    "storage.secrets",
+    "camera.capture",
+    "notifications.post",
+    "network.http",
+    "accounts.connect",
+    "background.tasks",
+    "calendar.handoff",
+    "device.connectivity",
+    "device.settings",
+    "location.foreground",
+    "device.torch",
+    "nearby.bluetooth",
+    "nearby.wifi",
+    "network.lan",
+    "apps.handoff",
+    "radio.stations",
+    "podcasts.library",
+    "audiobooks.library",
+    "ebooks.library"
+  ],
+  "widgets": [
+    "button",
+    "label",
+    "field",
+    "editor",
+    "record",
+    "toggle",
+    "select",
+    "chips",
+    "speech",
+    "speech_settings",
+    "web",
+    "icon",
+    "media_record",
+    "canvas",
+    "image_record",
+    "slider",
+    "palette",
+    "voice_dial",
+    "voice_capture",
+    "voice_clip",
+    "media_player",
+    "pdf_viewer",
+    "map_viewer"
+  ],
+  "private_services": [
+    "records.current",
+    "records.new",
+    "records.load",
+    "records.save",
+    "records.list",
+    "records.page",
+    "records.delete",
+    "collections.info",
+    "collections.usage",
+    "collections.get",
+    "collections.query",
+    "collections.transact",
+    "collections.clear",
+    "blobs.begin",
+    "blobs.append",
+    "blobs.finish",
+    "blobs.info",
+    "blobs.read",
+    "blobs.list",
+    "blobs.delete",
+    "blobs.usage",
+    "blobs.clear_cache",
+    "collections.backup",
+    "collections.restore",
+    "maps.cache.lookup",
+    "maps.cache.store",
+    "maps.cache.clear",
+    "podcasts.parse",
+    "mail.mime.parse",
+    "mail.attempt.new",
+    "maps.cache.viewport"
+  ],
+  "host_effects": [
+    "clipboard.read",
+    "clipboard.write",
+    "files.export",
+    "share.text",
+    "contacts.pick",
+    "links.external",
+    "web.open",
+    "feeds.fetch",
+    "images.import",
+    "images.text",
+    "images.export",
+    "images.clear",
+    "communications.walkie",
+    "library.open",
+    "library.import",
+    "library.export",
+    "library.external",
+    "camera.capture",
+    "secrets.get",
+    "secrets.set",
+    "secrets.delete",
+    "notifications.show",
+    "notifications.schedule",
+    "notifications.cancel",
+    "blobs.import",
+    "blobs.export",
+    "http.request",
+    "accounts.connect",
+    "accounts.list",
+    "accounts.refresh",
+    "accounts.disconnect",
+    "jobs.schedule",
+    "jobs.status",
+    "jobs.cancel",
+    "jobs.list",
+    "downloads.start",
+    "media.play",
+    "media.status",
+    "media.control"
+  ],
+  "limits": {
+    "package_bytes": 700000,
+    "wasm_bytes": 512000,
+    "manifest_bytes": 16384,
+    "memory_bytes": 8388608,
+    "fuel": 120000000,
+    "input_output_bytes": 1000000,
+    "state_bytes": 450000,
+    "nodes": 100,
+    "ui_utf16_units": 150000,
+    "service_continuations": 6,
+    "private_bytes": 16777216,
+    "private_documents": 2000,
+    "icon_png_bytes": 6144,
+    "icon_width": 128,
+    "icon_height": 128
+  },
+  "status": "developer-preview; advanced native components require device acceptance",
+  "documentation": "docs/API.md",
+  "ui_components": "0.4.0",
+  "templates": [
+    "document",
+    "list",
+    "form",
+    "settings",
+    "files",
+    "viewer",
+    "notes",
+    "rss",
+    "reader",
+    "browser",
+    "youtube",
+    "annotation",
+    "social",
+    "walkie"
+  ],
+  "reserved_id_prefixes": [
+    "app.onklav."
+  ],
+  "external_cellular_walkie": false,
+  "external_chrome": {
+    "host_owned": true,
+    "visible_guest_actions": 2,
+    "overflow": true,
+    "protected_close": true,
+    "native_modal_cancel": true
+  },
+  "catalog": "catalog.json",
+  "portable_projects_default": true,
+  "reference_host_build": 96,
+  "desktop_symbols": [
+    "apps",
+    "notes",
+    "files",
+    "walkie",
+    "social",
+    "browser",
+    "youtube",
+    "reader",
+    "annotation",
+    "rss",
+    "tabs",
+    "contacts",
+    "folder",
+    "file",
+    "home",
+    "forward",
+    "back",
+    "go",
+    "bookmark",
+    "menu",
+    "refresh",
+    "history",
+    "settings",
+    "add",
+    "download",
+    "edit",
+    "radio",
+    "podcasts",
+    "audiobooks",
+    "ebooks",
+    "calc",
+    "convert",
+    "weather"
+  ],
+  "developer_commands": [
+    "doctor",
+    "catalog",
+    "new",
+    "verify",
+    "upgrade",
+    "keygen",
+    "build",
+    "inspect",
+    "check",
+    "test",
+    "host",
+    "validate",
+    "run",
+    "preview",
+    "device-preview",
+    "capabilities"
+  ],
+  "unreleased_capabilities": [
+    "storage.secrets",
+    "camera.capture",
+    "notifications.post",
+    "network.http",
+    "accounts.connect",
+    "background.tasks",
+    "calendar.handoff",
+    "device.connectivity",
+    "device.settings",
+    "location.foreground",
+    "device.torch",
+    "nearby.bluetooth",
+    "nearby.wifi",
+    "network.lan",
+    "apps.handoff"
+  ],
+  "contract_revision": 2,
+  "discovery": {
+    "scope": "current shipped host snapshot; not a live device or permission probe",
+    "channels": [
+      "current",
+      "released",
+      "working"
+    ],
+    "default_channel": "current",
+    "unknown_features": "unsupported; never infer from Android permissions",
+    "working_minimum_host_build": 96,
+    "working_build_note": "Current snapshot targets APK 0.100.42/code151 with guest protocol level96. Implemented preview services still require grants, Android prerequisites and phone/provider qualification. APK version codes are not min_host values."
+  },
+  "extension_policy": {
+    "wasm_libraries": "statically linked compatible Rust/Wasm dependencies; same guest limits and capability broker",
+    "native_extensions": "host-reviewed source integrations only; requires a host update",
+    "dynamic_native_plugins": false,
+    "arbitrary_wasm_imports": false,
+    "guest_android_context": false,
+    "guide": "docs/EXTENSIONS.md"
+  },
+  "capability_details": {
+    "storage.private": {
+      "channel": "released",
+      "platform_prerequisites": [],
+      "notes": "Private documents, not a general binary database; 16 MiB quota.",
+      "working_notes": "Working source adds indexed collections, atomic batches, private files/cache, usage and user-controlled quotas; see docs/STORAGE.md."
+    },
+    "clipboard.read": {
+      "channel": "released",
+      "platform_prerequisites": [],
+      "notes": "Explicit declaration and revocable app grant; service-specific bounds apply."
+    },
+    "clipboard.write": {
+      "channel": "released",
+      "platform_prerequisites": [],
+      "notes": "Explicit declaration and revocable app grant; service-specific bounds apply."
+    },
+    "files.export": {
+      "channel": "released",
+      "platform_prerequisites": [],
+      "notes": "Explicit declaration and revocable app grant; service-specific bounds apply."
+    },
+    "share.text": {
+      "channel": "released",
+      "platform_prerequisites": [],
+      "notes": "Explicit declaration and revocable app grant; service-specific bounds apply."
+    },
+    "network.feeds": {
+      "channel": "released",
+      "platform_prerequisites": [
+        "internet connection for uncached requests"
+      ],
+      "notes": "Bounded public HTTPS RSS/Atom fetch, not arbitrary HTTP APIs."
+    },
+    "network.web": {
+      "channel": "released",
+      "platform_prerequisites": [
+        "supported isolated Android WebView"
+      ],
+      "notes": "Constrained isolated web component; not arbitrary native networking."
+    },
+    "speech.output": {
+      "channel": "released",
+      "platform_prerequisites": [
+        "OnKlav host-bundled shared Nano speech engine and voices"
+      ],
+      "notes": "Explicit declaration and revocable app grant; service-specific bounds apply."
+    },
+    "links.external": {
+      "channel": "released",
+      "platform_prerequisites": [],
+      "notes": "Explicit declaration and revocable app grant; service-specific bounds apply."
+    },
+    "network.thumbnails": {
+      "channel": "released",
+      "platform_prerequisites": [
+        "internet connection for uncached requests"
+      ],
+      "notes": "Bounded host image downloads; not a general download manager."
+    },
+    "files.images": {
+      "channel": "released",
+      "platform_prerequisites": [],
+      "notes": "Explicit declaration and revocable app grant; service-specific bounds apply."
+    },
+    "images.edit": {
+      "channel": "released",
+      "platform_prerequisites": [],
+      "notes": "Explicit declaration and revocable app grant; service-specific bounds apply."
+    },
+    "audio.record": {
+      "channel": "released",
+      "platform_prerequisites": [
+        "Android microphone permission",
+        "microphone available"
+      ],
+      "notes": "Local voice capture widget; no unrestricted background microphone."
+    },
+    "audio.playback": {
+      "channel": "released",
+      "platform_prerequisites": [
+        "playback device/service available"
+      ],
+      "notes": "Released voice playback; the source-matched working host adds shared local/HTTPS media, queues, speed and background media-session controls. See docs/JOBS-MEDIA.md."
+    },
+    "contacts.pick": {
+      "channel": "released",
+      "platform_prerequisites": [
+        "contact picker/provider available"
+      ],
+      "notes": "One user-selected name/phone; not the full address book."
+    },
+    "communications.walkie": {
+      "channel": "released",
+      "platform_prerequisites": [
+        "explicit carrier-trial consent",
+        "default SMS role and applicable Android permissions",
+        "compatible peer and carrier acceptance"
+      ],
+      "notes": "Working source has external app/publisher routing; two-phone delivery and receipts remain unqualified."
+    },
+    "files.manage": {
+      "channel": "released",
+      "platform_prerequisites": [],
+      "notes": "OnKlav Files access through broker; not arbitrary filesystem access."
+    },
+    "files.external": {
+      "channel": "released",
+      "platform_prerequisites": [],
+      "notes": "Host-mediated Android shared-storage selection with legacy document-tree compatibility, setup permission and per-app grants; no guest filesystem paths or unrestricted disk access."
+    },
+    "storage.secrets": {
+      "channel": "working",
+      "platform_prerequisites": [
+        "Android Keystore"
+      ],
+      "notes": "App/publisher-isolated Android Keystore vault; tap-only operations, not unattended account sync."
+    },
+    "camera.capture": {
+      "channel": "working",
+      "platform_prerequisites": [
+        "camera activity/provider available"
+      ],
+      "notes": "Delegated still-photo capture returning opaque file metadata; not torch/live camera access."
+    },
+    "notifications.post": {
+      "channel": "working",
+      "platform_prerequisites": [
+        "Android notification access"
+      ],
+      "notes": "Show/cancel and inexact scheduling; 60 seconds\u201330 days, 8 per app/32 total. No guest background execution."
+    },
+    "network.http": {
+      "channel": "working",
+      "platform_prerequisites": [
+        "public HTTPS service",
+        "internet connection"
+      ],
+      "notes": "Signed exact-origin bounded HTTPS text/JSON requests; no cookies or credential headers. Account authentication remains pending."
+    },
+    "accounts.connect": {
+      "channel": "working",
+      "platform_prerequisites": [
+        "Registered public OAuth client",
+        "System browser",
+        "Android Keystore"
+      ],
+      "notes": "Host-owned account connect/list/refresh/disconnect and origin-bound authenticated resource requests are implemented preview APIs. Requires configured public clients, live grants and provider/device qualification; no credentials are returned to guests."
+    },
+    "background.tasks": {
+      "channel": "working",
+      "platform_prerequisites": [
+        "Android JobScheduler",
+        "Network connection"
+      ],
+      "notes": "Durable bounded host HTTPS jobs and downloads; no background guest execution. Explicit revocable grant."
+    },
+    "calendar.handoff": {
+      "channel": "working",
+      "platform_prerequisites": [
+        "Source-matched foreground Android host",
+        "Explicit app grant and any Android permission or system review"
+      ],
+      "notes": "Bounded user-selected operations; no background tracking, arbitrary radio toggle or public-network access."
+    },
+    "device.connectivity": {
+      "channel": "working",
+      "platform_prerequisites": [
+        "Source-matched foreground Android host",
+        "Explicit app grant and any Android permission or system review"
+      ],
+      "notes": "Bounded user-selected operations; no background tracking, arbitrary radio toggle or public-network access."
+    },
+    "device.settings": {
+      "channel": "working",
+      "platform_prerequisites": [
+        "Source-matched foreground Android host",
+        "Explicit app grant and any Android permission or system review"
+      ],
+      "notes": "Bounded user-selected operations; no background tracking, arbitrary radio toggle or public-network access."
+    },
+    "location.foreground": {
+      "channel": "working",
+      "platform_prerequisites": [
+        "Source-matched foreground Android host",
+        "Explicit app grant and any Android permission or system review"
+      ],
+      "notes": "Bounded user-selected operations; no background tracking, arbitrary radio toggle or public-network access."
+    },
+    "device.torch": {
+      "channel": "working",
+      "platform_prerequisites": [
+        "Source-matched foreground Android host",
+        "Explicit app grant and any Android permission or system review"
+      ],
+      "notes": "Bounded user-selected operations; no background tracking, arbitrary radio toggle or public-network access."
+    },
+    "nearby.bluetooth": {
+      "channel": "working",
+      "platform_prerequisites": [
+        "Source-matched foreground Android host",
+        "Explicit app grant and any Android permission or system review"
+      ],
+      "notes": "Bounded user-selected operations; no background tracking, arbitrary radio toggle or public-network access."
+    },
+    "nearby.wifi": {
+      "channel": "working",
+      "platform_prerequisites": [
+        "Source-matched foreground Android host",
+        "Explicit app grant and any Android permission or system review"
+      ],
+      "notes": "Bounded user-selected operations; no background tracking, arbitrary radio toggle or public-network access."
+    },
+    "network.lan": {
+      "channel": "working",
+      "platform_prerequisites": [
+        "Source-matched foreground Android host",
+        "Explicit app grant and any Android permission or system review"
+      ],
+      "notes": "Bounded user-selected operations; no background tracking, arbitrary radio toggle or public-network access."
+    },
+    "apps.handoff": {
+      "channel": "working",
+      "platform_prerequisites": [
+        "Source-matched Android host",
+        "Explicit handoff grant and user review",
+        "Compatible Android handler"
+      ],
+      "notes": "Typed MIME availability only; read-only private-file copies, revocable owner/hash lease; no installed package inventory or external completion claim."
+    },
+    "radio.stations": {
+      "channel": "released",
+      "platform_prerequisites": [
+        "Current OnKlav host",
+        "Explicit capability grant",
+        "Provider/network or selected-file availability as applicable"
+      ],
+      "notes": "Public station lookup and host-owned stream playback; requires separate audio.playback and user action; station/codec/network availability is not guaranteed.",
+      "guides": [
+        "docs/RADIO.md",
+        "docs/PODCASTS-RADIO.md"
+      ]
+    },
+    "podcasts.library": {
+      "channel": "released",
+      "platform_prerequisites": [
+        "Current OnKlav host",
+        "Explicit capability grant",
+        "Provider/network or selected-file availability as applicable"
+      ],
+      "notes": "Scoped podcast search/feed, download and playback library; public publisher availability and device decoder support still apply.",
+      "guides": [
+        "docs/PODCASTS.md"
+      ]
+    },
+    "audiobooks.library": {
+      "channel": "released",
+      "platform_prerequisites": [
+        "Current OnKlav host",
+        "Explicit capability grant",
+        "Provider/network or selected-file availability as applicable"
+      ],
+      "notes": "Scoped personal DRM-free audio-book imports and public catalog acquisition; original files retained, playback/storage grants and decoder support required.",
+      "guides": [
+        "docs/AUDIOBOOKS.md"
+      ]
+    },
+    "ebooks.library": {
+      "channel": "released",
+      "platform_prerequisites": [
+        "Current OnKlav host",
+        "Explicit capability grant",
+        "Provider/network or selected-file availability as applicable"
+      ],
+      "notes": "Scoped DRM-free EPUB catalog/import/acquisition; speech uses speech.output; no DRM unlocking or arbitrary document formats.",
+      "guides": [
+        "docs/EBOOKS.md"
+      ]
+    }
+  },
+  "ui_resources": {
+    "channel": "working",
+    "guide": "docs/UI-RESOURCES.md",
+    "locale_source": "Android configured locale list",
+    "display_only": true,
+    "locales_per_object": 32,
+    "rtl_guest_layout": true,
+    "recovery": "fresh broker session; reload saved records; do not replay pending effects",
+    "pending_tokens_in_saved_state": false
+  },
+  "unreleased_private_services": [
+    "collections.info",
+    "collections.usage",
+    "collections.get",
+    "collections.query",
+    "collections.transact",
+    "collections.clear",
+    "blobs.begin",
+    "blobs.append",
+    "blobs.finish",
+    "blobs.info",
+    "blobs.read",
+    "blobs.list",
+    "blobs.delete",
+    "blobs.usage",
+    "blobs.clear_cache",
+    "collections.backup",
+    "collections.restore",
+    "epub.info",
+    "epub.chapter",
+    "epub.search",
+    "maps.cache.lookup",
+    "maps.cache.store",
+    "maps.cache.clear",
+    "podcasts.parse",
+    "mail.mime.parse",
+    "mail.attempt.new",
+    "maps.cache.viewport"
+  ],
+  "structured_storage": {
+    "channel": "working",
+    "capability": "storage.private",
+    "guide": "docs/STORAGE.md",
+    "collections_per_app": 32,
+    "rows_per_collection": 2000,
+    "indexes_per_collection": 8,
+    "row_bytes": 16384,
+    "snapshot_bytes": 2097152,
+    "request_bytes": 262144,
+    "page_rows": 40,
+    "page_json_bytes": 200000,
+    "transaction_operations": 64,
+    "shared_private_bytes": "default16777216; user-selected up to134217728",
+    "transactions": "single collection; compare expected_revision",
+    "large_blobs": true,
+    "configurable_quotas": true
+  },
+  "unreleased_host_effects": [
+    "blobs.import",
+    "blobs.export",
+    "http.request",
+    "accounts.connect",
+    "accounts.list",
+    "accounts.refresh",
+    "accounts.disconnect",
+    "jobs.schedule",
+    "jobs.status",
+    "jobs.cancel",
+    "jobs.list",
+    "downloads.start",
+    "media.play",
+    "media.status",
+    "media.control",
+    "clock.read",
+    "calendar.expand",
+    "notifications.schedule_at",
+    "notifications.status",
+    "notifications.pending",
+    "calendar.localize",
+    "calendar.resolve",
+    "calendar.insert",
+    "connectivity.read",
+    "device.settings",
+    "location.current",
+    "location.manual",
+    "torch.set",
+    "ble.select",
+    "ble.connect",
+    "ble.read",
+    "ble.write",
+    "ble.notify",
+    "ble.disconnect",
+    "wifi.join",
+    "wifi.disconnect",
+    "lan.select",
+    "lan.exchange",
+    "lan.disconnect",
+    "handoff.handlers",
+    "handoff.file",
+    "handoff.text"
+  ],
+  "private_files": {
+    "channel": "working",
+    "guide": "docs/STORAGE.md",
+    "capability": "storage.private",
+    "android_import_capability": "files.external",
+    "android_export_capability": "files.export",
+    "chunk_bytes": 65536,
+    "file_bytes": 1073741824,
+    "handles_per_app": 1024,
+    "default_saved_bytes": 67108864,
+    "default_cache_bytes": 33554432,
+    "max_cache_bytes": 268435456,
+    "quota_changes": "host-owned user settings only",
+    "cache_eviction": "oldest completed cache first; no automatic saved-file deletion",
+    "unfinished_staging": "resumable; not readable/exportable until finish"
+  },
+  "http": {
+    "channel": "working",
+    "guide": "docs/HTTP.md",
+    "capability": "network.http",
+    "signed_origins": 8,
+    "request_body_bytes": 65536,
+    "encoded_argument_bytes": 140000,
+    "response_text_bytes": 131072,
+    "per_app_active": 2,
+    "global_active": 4,
+    "per_app_requests_per_minute": 60,
+    "automatic_redirects": false,
+    "credential_headers": false,
+    "host_account_authentication": true,
+    "account_provider_metadata": {
+      "channel": "working",
+      "providers": 4,
+      "scopes_per_provider": 32,
+      "account_access_granted": false,
+      "sign_in_available": true,
+      "fields": [
+        "id",
+        "label",
+        "authorization_endpoint",
+        "token_endpoint",
+        "client_id",
+        "scopes",
+        "api_origins"
+      ],
+      "optional_fields": [
+        "revocation_endpoint"
+      ]
+    }
+  },
+  "accounts": {
+    "channel": "working",
+    "guide": "docs/ACCOUNTS.md",
+    "capabilities": [
+      "accounts.connect",
+      "network.http"
+    ],
+    "methods": [
+      "connect",
+      "list",
+      "refresh",
+      "disconnect"
+    ],
+    "guest_token_export": false,
+    "accounts_per_app": 8,
+    "physical_provider_acceptance": false
+  },
+  "background_tasks": {
+    "channel": "working",
+    "guide": "docs/JOBS-MEDIA.md",
+    "capabilities": [
+      "background.tasks",
+      "storage.private",
+      "network.http"
+    ],
+    "per_app": 8,
+    "global": 32,
+    "max_attempts": 3,
+    "guest_code_in_background": false,
+    "download_max_bytes": 1073741824,
+    "resume": "strong ETag, exact Content-Range, identity encoding",
+    "optional_integrity": "sha256",
+    "result": "private immutable file handle"
+  },
+  "media": {
+    "channel": "working",
+    "guide": "docs/JOBS-MEDIA.md",
+    "capability": "audio.playback",
+    "queue_items": 64,
+    "speed": [
+      0.5,
+      3.0
+    ],
+    "background_service": true,
+    "remote_formats": "Android-supported progressive audio/video; live MP3/AAC where the decoder supports sequential input",
+    "remote_seek": "strong ETag and HTTP range support",
+    "hls_dash": false,
+    "hardware_qualified": false
+  },
+  "audiobooks": {
+    "widget": "media_player",
+    "flag": "audiobook",
+    "guide": "docs/AUDIOBOOKS.md",
+    "capabilities": [
+      "audiobooks.library",
+      "storage.private",
+      "audio.playback"
+    ],
+    "host_only_actions": [
+      "audiobook_authorize"
+    ],
+    "guest_paths_and_urls": false
+  },
+  "ebooks": {
+    "services": [
+      "ebooks.search",
+      "ebooks.acquire"
+    ],
+    "import": "blobs.import",
+    "reader": "epub.info/chapter/search and shared reading_ui",
+    "guide": "docs/EBOOKS.md",
+    "guest_urls_or_paths": false
+  },
+  "utilities": {
+    "places.search": {
+      "capabilities": [],
+      "args": {
+        "query": "city or latitude, longitude; up to100characters"
+      },
+      "returns": "up to15 public GeoNames city records; offline"
+    }
+  },
+  "reference_apk": {
+    "version": "0.100.42-quick",
+    "version_code": 151,
+    "package": "app.onklav.home.prototype.rewrite",
+    "sha256": "699e01383805935ebe65193056bc72fcf225ac6ddf739a8b7ca22a6cbbd1af0b"
+  }
+}

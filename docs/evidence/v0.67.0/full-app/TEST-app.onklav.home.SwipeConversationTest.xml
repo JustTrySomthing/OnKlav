@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.SwipeConversationTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-24T14:05:50" hostname="41b9fb140d3c" time="7.056">
+  <properties/>
+  <testcase name="smallMovementClosesAndLargeMovementRevealsOnEitherSide" classname="app.onklav.home.SwipeConversationTest" time="5.838"/>
+  <testcase name="swipingEitherWayRevealsActionsWithoutArchivingDeletingOrBlocking" classname="app.onklav.home.SwipeConversationTest" time="1.218"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

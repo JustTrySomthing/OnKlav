@@ -1,0 +1,31 @@
+{
+  "grants": [
+    "storage.private"
+  ],
+  "steps": [
+    {
+      "action": "new"
+    },
+    {
+      "action": "title",
+      "value": "My item"
+    },
+    {
+      "action": "body",
+      "value": "Item details"
+    },
+    {
+      "action": "save",
+      "expect": {
+        "status": "Saved"
+      }
+    },
+    {
+      "reopen": true,
+      "expect": {
+        "route": "list",
+        "total": 1
+      }
+    }
+  ]
+}

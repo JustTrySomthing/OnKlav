@@ -1,0 +1,104 @@
+{
+  "date": "2026-10-22",
+  "version": "0.9.0-dev",
+  "version_code": 13,
+  "scope": "Desktop gesture polish and authored messenger foundation; incomplete replacement",
+  "full_rewrite_complete": false,
+  "full_messenger_complete": false,
+  "sdk_complete": false,
+  "current_host_build": "pass; host and instrumentation APK; retained signer; both Android ABIs; one installable product APK",
+  "apk_sha256": "b256996da93c03c61eeb722de915691d88bdbb47fbffb68c1e05e8f87a86bbbd",
+  "source_counts": {
+    ".java": 0,
+    ".kt": 50,
+    ".rs": 3,
+    ".gd": 4
+  },
+  "application_delivery": "Only OnKlav is an APK. Built-in tools, messenger and Godot are host modules; external executables remain disabled.",
+  "authored_java_source_files": 0,
+  "legacy_app_module_included": false,
+  "production_call_paths": {
+    "messenger_state": "Compose -> Kotlin ChatStore -> NativeCore JNI -> Rust messaging state -> fsynced atomic messenger.json",
+    "sms": "Kotlin MessagingTransport -> Rust stage -> Android SmsManager -> per-part PendingIntents -> Rust outcome -> provider update only when default",
+    "mms": "Kotlin carrier integration -> private transfer provider -> Rust PDU codec; MMS_READY remains false",
+    "notes": "Kotlin NotesModel -> NativeCore JNI -> Rust document store"
+  },
+  "unit_tests": {
+    "rust": {
+      "passed": 15,
+      "failed": 0,
+      "source_and_native_libraries_unchanged_after_tests": true
+    },
+    "kotlin_suites": [
+      {
+        "suite": "app.onklav.home.MessageIdentityTest",
+        "tests": 3,
+        "failed": 0
+      },
+      {
+        "suite": "app.onklav.shared.ThemePackageTest",
+        "tests": 4,
+        "failed": 0
+      },
+      {
+        "suite": "app.onklav.shared.NativeBridgeTest",
+        "tests": 2,
+        "failed": 0
+      },
+      {
+        "suite": "app.onklav.shared.LauncherLayoutTest",
+        "tests": 5,
+        "failed": 0
+      }
+    ],
+    "total_passed": 29
+  },
+  "current_host_android_runtime": {
+    "apk_sha256": "b256996da93c03c61eeb722de915691d88bdbb47fbffb68c1e05e8f87a86bbbd",
+    "device": "Android 10 x86_64 software emulator; 2 GiB, 4 cores, no KVM",
+    "phone_carrier_acceptance": false,
+    "default_role_changed": false,
+    "tests": {
+      "MessengerDeviceTest": "pass"
+    },
+    "captures": [
+      "messenger-draft"
+    ],
+    "boot": "pass",
+    "install": "pass",
+    "grant_READ_SMS": true,
+    "grant_SEND_SMS": true,
+    "grant_READ_CONTACTS": true,
+    "grant_READ_PHONE_STATE": true,
+    "sms_fixture_injected": true,
+    "installed_sha256": "b256996da93c03c61eeb722de915691d88bdbb47fbffb68c1e05e8f87a86bbbd",
+    "exact_apk_installed": true
+  },
+  "unchanged_component_android_runtime_reused": {
+    "desktop": {
+      "apk_sha256": "580c0c7e5870c07e0349fbffda8b241ce393bcb826deaef6f329601f0619db2d",
+      "test": "DesktopChromeDeviceTest",
+      "result": "pass",
+      "seconds": 138.634,
+      "source_sha256": "41e0505020e87e133ba265977e8fcfa88198adf043fab6066408e5cfd16cf17b",
+      "scope": "Real long-press move to lower empty cell, held-edge page creation, drop, sparse persistence/recreation, page dots, shell and package-manager routing. Desktop code unchanged in final host; subsequent changes concern messenger/provider/label."
+    }
+  },
+  "messenger_device_test_scope": [
+    "Real Android SMS fixture/provider discovery including combined SMS/MMS canonical thread endpoint",
+    "Rust MMS compose/parse Unicode on Android and private PDU provider byte equality",
+    "Rust draft/folder/flag persistence and migration of own OnKlav preferences",
+    "Feed/Gallery/Starred navigation; actual SMS starring",
+    "Draft close/reopen; emoji dialog",
+    "Pin and mute; Inbox/Archive moves",
+    "Setup/My Number dialog; live About version"
+  ],
+  "carrier_phone_acceptance": false,
+  "default_sms_role_gate": "MMS_READY=false; Setup never requests takeover. Current device test asserts OnKlav is not default.",
+  "real_external_messages_sent_by_tests": false,
+  "private_inner_circle_data_migrated": false,
+  "remaining_messenger_work": "Carrier SMS/MMS and dual-SIM receiving/sending/recovery/delivery acceptance, default role, remaining reference controls and visual/accessibility parity, camera/video/voice capture, internal media viewer, full spam/blocked/incoming-reaction and custom reminder behavior. See MESSAGING-PORT.md.",
+  "performance_acceptance": false,
+  "historical_not_current_checks": "Older Notes 0.8.3 pass, Appearance unresolved idle timeout, and Godot engine tests remain historical; no full game port or full app acceptance inferred.",
+  "iteration_record": "Initial desktop new-page timeout corrected before successful desktop regression. Initial messenger UI selector ambiguity corrected before final messenger pass. Full outcomes retained in evidence/v0.9.0."
+}

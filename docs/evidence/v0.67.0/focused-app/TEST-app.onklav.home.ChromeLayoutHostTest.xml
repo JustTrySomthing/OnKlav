@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.ChromeLayoutHostTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-10-24T14:00:26" hostname="41b9fb140d3c" time="17.964">
+  <properties/>
+  <testcase name="headersAndBottomBarReachBothEdgesAcrossEveryHomeTab" classname="app.onklav.home.ChromeLayoutHostTest" time="14.606"/>
+  <testcase name="sharedPopupMovesIntoPlaceInsteadOfAppearingAtItsFinalPosition" classname="app.onklav.home.ChromeLayoutHostTest" time="3.358"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.MmsDownloadRecoveryTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2026-10-28T22:07:30" hostname="1b65f1fab707" time="5.804">
+  <properties/>
+  <testcase name="cancelledCodeAndLegacyStatusesRemainRetryableAndTruthful" classname="app.onklav.home.MmsDownloadRecoveryTest" time="2.26"/>
+  <testcase name="temporaryDownloadFailureStaysVisibleAndSchedulesBoundedIncomingRetries" classname="app.onklav.home.MmsDownloadRecoveryTest" time="0.081"/>
+  <testcase name="carrierErrorsExplainConfigurationAndDoNotRetryPermanentFailures" classname="app.onklav.home.MmsDownloadRecoveryTest" time="0.034"/>
+  <testcase name="stalledDownloadSchedulesBoundedRecoveryWithoutResendingAnything" classname="app.onklav.home.MmsDownloadRecoveryTest" time="0.049"/>
+  <testcase name="acknowledgementFailureCannotReportAnAlreadyFiledPictureAsDownloadFailure" classname="app.onklav.home.MmsDownloadRecoveryTest" time="3.217"/>
+  <testcase name="oldAttemptCallbackCannotClearOrFailCurrentDownload" classname="app.onklav.home.MmsDownloadRecoveryTest" time="0.045"/>
+  <testcase name="scheduledDownloadNeverRunsWhenRoleWasRevokedAndMessagesRemainRecoverable" classname="app.onklav.home.MmsDownloadRecoveryTest" time="0.03"/>
+  <testcase name="inFlightDownloadCannotBeTruncatedByDuplicateRetryAndRevokedRolePreventsDownload" classname="app.onklav.home.MmsDownloadRecoveryTest" time="0.034"/>
+  <testcase name="independentPictureNotificationsCannotOverwriteEachOtherAndCompletionClearsOnlyItsOwn" classname="app.onklav.home.MmsDownloadRecoveryTest" time="0.052"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.PhotoRetouchUiTest" tests="4" skipped="0" failures="0" errors="0" timestamp="2026-10-31T23:42:54" hostname="a174a9bf0ea4" time="22.926">
+  <properties/>
+  <testcase name="stampSamplesWithoutEditingThenPaintsAndCanResample" classname="app.onklav.home.PhotoRetouchUiTest" time="12.417"/>
+  <testcase name="redEyeNoMatchGivesFeedbackAndKeepsOtherToolsAvailable" classname="app.onklav.home.PhotoRetouchUiTest" time="3.612"/>
+  <testcase name="retouchTapUndoRedoAndPersistentToolRowWork" classname="app.onklav.home.PhotoRetouchUiTest" time="3.644"/>
+  <testcase name="pinchDoesNotApplyCorrectionAndCompareDisablesPainting" classname="app.onklav.home.PhotoRetouchUiTest" time="3.253"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

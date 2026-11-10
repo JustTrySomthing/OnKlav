@@ -1,0 +1,32 @@
+[
+  {
+    "name": "app.onklav.home.FriendGamesTest",
+    "tests": 9,
+    "failures": 0,
+    "errors": 0
+  },
+  {
+    "name": "app.onklav.shared.NativeBridgeTest",
+    "tests": 3,
+    "failures": 0,
+    "errors": 0
+  },
+  {
+    "name": "app.onklav.shared.Mp3CodecTest",
+    "tests": 2,
+    "failures": 0,
+    "errors": 0
+  },
+  {
+    "name": "app.onklav.shared.ThemePackageTest",
+    "tests": 4,
+    "failures": 0,
+    "errors": 0
+  },
+  {
+    "name": "app.onklav.shared.LauncherLayoutTest",
+    "tests": 8,
+    "failures": 0,
+    "errors": 0
+  }
+]

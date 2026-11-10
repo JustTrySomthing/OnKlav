@@ -1,0 +1,76 @@
+{
+  "scope": "Air Hockey polish, frozen-puck lifecycle repair and shared controls safeguards",
+  "reproduced_cause": "Freezing a RigidBody2D zeroed velocity; closing Sound restored UI state but not motion. Paused saves retained zero velocity.",
+  "hockey_checks": 95,
+  "sdk_motion_checks": 14,
+  "sdk_python_checks": 11,
+  "phone_browser": [
+    {
+      "viewport": [
+        320,
+        640
+      ],
+      "actual_audio_settings_resume_restores_motion": true,
+      "host_probe_does_not_break_done": true,
+      "existing_pause_preserved": true,
+      "touch_responsiveness_and_primary_pointer": true,
+      "real_collision_rebound": true,
+      "unboxed_goal_rival_and_match_results": true,
+      "saved_playing_rally_restores_velocity": true,
+      "music_rms": 0.009870897703155659,
+      "errors": []
+    },
+    {
+      "viewport": [
+        432,
+        800
+      ],
+      "actual_audio_settings_resume_restores_motion": true,
+      "host_probe_does_not_break_done": true,
+      "existing_pause_preserved": true,
+      "touch_responsiveness_and_primary_pointer": true,
+      "real_collision_rebound": true,
+      "unboxed_goal_rival_and_match_results": true,
+      "saved_playing_rally_restores_velocity": true,
+      "music_rms": 0.0030182528055006483,
+      "errors": []
+    }
+  ],
+  "all_games_browser": [
+    {
+      "game": "naval",
+      "audio_settings_pause_snapshot_and_resume": true,
+      "errors": []
+    },
+    {
+      "game": "four",
+      "audio_settings_pause_snapshot_and_resume": true,
+      "errors": []
+    },
+    {
+      "game": "blackjack",
+      "audio_settings_pause_snapshot_and_resume": true,
+      "errors": []
+    },
+    {
+      "game": "panda",
+      "audio_settings_pause_snapshot_and_resume": true,
+      "errors": []
+    }
+  ],
+  "source_sha256": {
+    "games/engine-checks/air_hockey/main.gd": "6d29e3ccaa2df2038819c2a6abc52d8532a918ade243489424d5dc168c901976",
+    "games/engine-checks/air_hockey/rink.gd": "c3a6bf763d1a74b223910ff3e2c6141521f366225eb9234db4197bc7a9edc634",
+    "games/engine-checks/air_hockey/puck.gd": "1fcf739a13183b73570ea46716baf09ea7338d1b0bb3ee39082bab5cae1921ad",
+    "games/engine-checks/air_hockey/audio.gd": "e4516b1e70ba557a6b27ad17d5c96886865da590960c7ddc2140185eaf57f0ab",
+    "games/engine-checks/game_chrome.gd": "4ae3bd95ecf42fecf832cee8e65dc63d0bf4b489260fe900f44f9f12fe826d44",
+    "developer/games/templates/shared/game_chrome.gd": "4ae3bd95ecf42fecf832cee8e65dc63d0bf4b489260fe900f44f9f12fe826d44",
+    "developer/games/templates/shared/tests.gd": "9623001f35f8ae95144677baa20378e14906e2aefb8bef2b87993845031980b4"
+  },
+  "canonical_helpers_match": true,
+  "source_current_export": true,
+  "post_browser_change": "Only larger goal lettering and concise single-line final headings; final shared build parses/exports them.",
+  "apk_built": false,
+  "latest_apk": "0.100.51-rc1/code160",
+  "physical_device_testing": false
+}

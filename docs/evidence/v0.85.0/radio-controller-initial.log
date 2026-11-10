@@ -1,0 +1,15 @@
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/developer/components)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.54s
+     Running unittests src/lib.rs (developer/components/target/debug/deps/onklav_ui-1771de5ff2e26eff)
+
+running 7 tests
+test reference_apps::internet_radio::tests::compact_filters_keep_selected_values_inside_the_controls ... ok
+test reference_apps::internet_radio::tests::last_station_is_restored_without_autoplay ... ok
+test reference_apps::internet_radio::tests::polished_tabs_recent_and_settings_keep_the_page_focused ... ok
+test reference_apps::internet_radio::tests::radio_favorites_get_live_revision_before_changing_and_failures_keep_data ... ok
+test reference_apps::internet_radio::tests::saved_stations_have_filled_bookmarks_and_independent_play_actions ... ok
+test reference_apps::internet_radio::tests::radio_starts_local_separately_and_has_no_credential_or_url_fields ... ok
+test reference_apps::internet_radio::tests::radio_search_is_bounded_and_station_selection_never_passes_a_url ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 119 filtered out; finished in 0.00s
+

@@ -1,0 +1,71 @@
+{
+  "date": "2026-10-30",
+  "status": "source implemented; host checks and Android dependency packaging passed; physical phone/Office fidelity qualification pending",
+  "summary": "Docu View and continuously fading screen light",
+  "checks": [
+    {
+      "class": "DocumentReadingTest",
+      "passed": 8,
+      "test_names": [
+        "csvQuotedNewlinesDelimitersAndBlankColumnsRemainIntact",
+        "docxReusesWriteFormattingAndTextDecodingHonorsBom",
+        "filesOpenRoutesDocumentsInsideHostAndNeverGrantsWrite",
+        "legacyWordAndExcelAreParsedAsRealBinaryOfficeFiles",
+        "odfDocumentsSheetsAndEquationsHaveReadableContentAndRejectEntities",
+        "oversizedSparseAndExternalWorkbookPathsAreRejected",
+        "rtfSkipsImagesMetadataAndInstructionsButKeepsUnicodeAndVisibleFields",
+        "xlsxRespectsSheetRelationshipsSharedStringsInlineValuesAndSparseCells"
+      ],
+      "evidence": "docs/docu-view-checks/final-tests.log"
+    },
+    {
+      "class": "DocuViewUiTest",
+      "passed": 4,
+      "test_names": [
+        "chosenCsvOpensThroughSignedFilesAndLosingSourceAccessClearsTheSnapshot",
+        "screenLightOffersContinuousColorFade",
+        "tableSearchAndSheetNavigationRemainSimple",
+        "welcomeIsReadableAndUsesOnKlavFiles"
+      ],
+      "evidence": "docs/docu-view-checks/final-ui-tests.log"
+    },
+    {
+      "class": "SdkPdfTest",
+      "passed": 7,
+      "test_names": [
+        "boundedSearchContinuationDoesNotSkipMatchesOnTheSamePage",
+        "engineAndPageRequestFailuresDoNotLeaveAnOpenRenderer",
+        "infoAndRasterRemainAvailableWhenAdvancedTextIsUnsupported",
+        "nativeSourceMustBeAnOwnedCanonicalPrivatePdf",
+        "renderingDimensionsBoundPixelCountAndRejectInvalidGeometry",
+        "savedPagesArePinnedToPublisherAndContentAndRemovalIsOwnerOnly",
+        "selectionClampsCoordinatesAndTextHasExplicitLimits"
+      ],
+      "evidence": "docs/docu-view-checks/final-tests.log"
+    }
+  ],
+  "unique_host_checks_passed": 19,
+  "android_library_linkage": "passed; DOC text/XLS values with desktop API packages unavailable in Android blocked; Android SDK java.beans property-change classes allowed",
+  "android_packaging": "passed mergeDebugJavaResource and mergeExtDexDebug; duplicate-class check also passed; no APK generated",
+  "native_source_changed": false,
+  "new_apk_built": false,
+  "physical_device_validation": false,
+  "limits": [
+    "PDF text/search Android15+; scans need external OCR",
+    "Non-PDF Office documents use reading/values views; complex layout/images/embedded objects can be omitted",
+    "No Office macros, formula calculation, password-protected input unlock or external content execution",
+    "See docs/DOCU-VIEW.md for file/row/text bounds"
+  ],
+  "evidence": "docs/docu-view-checks and docs/evidence/docu-view",
+  "earlier_failures_addressed": [
+    "Resource R namespace import fixed",
+    "Manual animation frame loop replaced with lifecycle-scoped Compose infinite transition; UI check passed",
+    "Files launch test now uses Activity context",
+    "UI fixture now has Surface content color and a real signed Files open/source-loss test"
+  ],
+  "test_fixture": {
+    "source": "https://raw.githubusercontent.com/apache/poi/REL_5_5_1/test-data/document/empty.doc",
+    "license": "Apache-2.0",
+    "sha256": "5f421a3970c70f12296073478380c0849a54c03fb2f4842392c7d3c5039bf1eb"
+  }
+}

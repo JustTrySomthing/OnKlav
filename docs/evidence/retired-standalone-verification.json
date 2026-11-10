@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-21",
+  "scope": "Actual development rewrite; not a finished Inner Circle 2.2.85 replacement",
+  "full_rewrite_complete": false,
+  "authored_java_source_files": 0,
+  "legacy_app_module_included": false,
+  "notes_production_call_path": "Kotlin Compose editor -> NotesModel -> Core -> JNI NativeCore.dispatch -> Rust private-file document store",
+  "tests": {
+    "rust_unit_tests": {
+      "passed": 7,
+      "failed": 0
+    },
+    "kotlin_real_rust_host_jni_tests": {
+      "passed": 2,
+      "failed": 0,
+      "includes": [
+        "Unicode save/load/delete",
+        "invalid ID and oversize rejection",
+        "clearing a stored document"
+      ]
+    },
+    "godot_rule_checks": {
+      "passed": 12,
+      "failed": 0
+    },
+    "godot_headless_startup": [
+      "four",
+      "naval",
+      "blackjack",
+      "hockey"
+    ],
+    "godot_exported_pack_headless_startup": "four"
+  },
+  "apk_checks": "See apk-verification.json for each exact APK hash, retained signer, signature scheme, ZIP integrity, ABI, ELF/ZIP alignment, permissions and DEX/source checks",
+  "android_runtime": {
+    "device": "Software-only Android 10 x86_64 emulator; no concurrent Gradle build",
+    "notes_instrumentation": "pass",
+    "godot_android_startup": "not_run",
+    "handset_performance_acceptance": false,
+    "notes_build_apk_sha256": "dd6bf1dbac3cbb4b647c8564e88ad57b45563d3cf6c27ee0867c22289e317eef",
+    "scope": "One bounded Notes-only attempt; no unlock command or concurrent build",
+    "notes_installed_apk_sha256": "dd6bf1dbac3cbb4b647c8564e88ad57b45563d3cf6c27ee0867c22289e317eef",
+    "exact_notes_apk_tested": true,
+    "visual_acceptance": "Pending: post-test screenshot shows the emulator home screen with a System UI ANR; no clean reference/UI or handset acceptance claimed",
+    "notes_app_crash_buffer": "empty"
+  },
+  "earlier_android_attempts": {
+    "notes_startup": "Notes rendered and native core loaded on an Android 10 software emulator; System UI ANR prevented clean visual acceptance",
+    "instrumentation_repairs": "Preserve the full debug runtime API surface after Kotlin facade and Guava future classes were removed by shrinking",
+    "godot_startup": "Godot 4.5.1 initialized in its separate process with no recorded app crash/script error, but System UI ANR blocked clean visual/gameplay acceptance",
+    "resource_issue": "Concurrent heavy Gradle work and software emulation exhausted memory; final verification separates those workloads"
+  },
+  "not_verified": [
+    "Full original UI/feature parity",
+    "Physical handset behavior",
+    "Carrier SMS/MMS",
+    "External accounts/transports",
+    "Original games/Panda and multiplayer",
+    "Untrusted developer packages/SDK workflow",
+    "Measured performance or stability improvement"
+  ],
+  "migration": "No existing Inner Circle/OnKlav private data was copied or deleted",
+  "signing": "Retained existing OnKlav debug key; private signing material excluded from public artifacts",
+  "delivery": "Notes-only tested development APK, plus the same source archive updated in place; other platform components remain unfinished",
+  "build": "All eight development APKs compiled successfully; final ABI build successful; Notes test package rebuilt successfully"
+}

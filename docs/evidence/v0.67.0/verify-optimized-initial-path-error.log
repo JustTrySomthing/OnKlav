@@ -1,0 +1,13 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/ed752e8a1957/current/OnKlav/scripts/verify_apks.py", line 97, in <module>
+    backup_rules=command(BUILD_TOOLS / "aapt", "dump", "xmltree", path, "res/xml/data_extraction_rules.xml")
+                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/ed752e8a1957/current/OnKlav/scripts/verify_apks.py", line 26, in command
+    return subprocess.check_output([str(a) for a in args], text=True, stderr=subprocess.STDOUT)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/subprocess.py", line 466, in check_output
+    return run(*popenargs, stdout=PIPE, timeout=timeout, check=True,
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/opt/codex/runtimes/codex-primary-runtime/dependencies/python/lib/python3.12/subprocess.py", line 571, in run
+    raise CalledProcessError(retcode, process.args,
+subprocess.CalledProcessError: Command '['/workspace/scratch/ed752e8a1957/build-env/sdk/build-tools/35.0.0/aapt', 'dump', 'xmltree', '/workspace/scratch/ed752e8a1957/current/OnKlav/android/app/build/outputs/apk/optimized/app-optimized.apk', 'res/xml/data_extraction_rules.xml']' returned non-zero exit status 1.

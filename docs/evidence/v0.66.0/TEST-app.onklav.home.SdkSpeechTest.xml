@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.SdkSpeechTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-24T08:54:13" hostname="ac5668fae30d" time="0.224">
+  <properties/>
+  <testcase name="chunkedPlaybackPauseSeekRevocationAndLateCallbacks" classname="app.onklav.home.SdkSpeechTest" time="0.11"/>
+  <testcase name="defaultRateAndInvalidStoredRateStayUsable" classname="app.onklav.home.SdkSpeechTest" time="0.032"/>
+  <testcase name="queuedSpeechCannotInterruptNewerReaderOrSurviveRevocation" classname="app.onklav.home.SdkSpeechTest" time="0.03"/>
+  <testcase name="utf16BoundariesAndPreviewRestoresPosition" classname="app.onklav.home.SdkSpeechTest" time="0.024"/>
+  <testcase name="retryIgnoresOldInitializationAndCloseCancelsQueue" classname="app.onklav.home.SdkSpeechTest" time="0.027"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

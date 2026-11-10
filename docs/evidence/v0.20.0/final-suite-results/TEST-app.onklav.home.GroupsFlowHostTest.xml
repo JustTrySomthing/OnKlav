@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.GroupsFlowHostTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-22T17:13:12" hostname="2383b52a5fc7" time="14.034">
+  <properties/>
+  <testcase name="createEditMembersFoldersSearchAndDelete" classname="app.onklav.home.GroupsFlowHostTest" time="14.034"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,44 @@
+Isolated harness: /tmp/onklav-device-checks-gm8tn_vy
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.11.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :checks
+WARNING: The option setting 'android.aapt2FromMavenOverride=/workspace/scratch/ed752e8a1957/group12-env/sdk/build-tools/35.0.0/aapt2' is experimental.
+WARNING: platform-tools package is not installed.
+
+> Task :checks:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :checks:preBuild UP-TO-DATE
+> Task :checks:preDebugBuild UP-TO-DATE
+> Task :checks:generateDebugResValues UP-TO-DATE
+> Task :checks:generateDebugResources UP-TO-DATE
+> Task :checks:packageDebugResources UP-TO-DATE
+> Task :checks:parseDebugLocalResources UP-TO-DATE
+> Task :checks:generateDebugRFile UP-TO-DATE
+> Task :android:shared:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:shared:preBuild UP-TO-DATE
+> Task :android:shared:preDebugBuild UP-TO-DATE
+> Task :android:shared:generateDebugResValues UP-TO-DATE
+> Task :android:shared:generateDebugResources UP-TO-DATE
+> Task :android:shared:packageDebugResources UP-TO-DATE
+> Task :android:shared:parseDebugLocalResources UP-TO-DATE
+> Task :android:shared:generateDebugRFile UP-TO-DATE
+> Task :android:shared:compileDebugKotlin UP-TO-DATE
+> Task :android:shared:javaPreCompileDebug UP-TO-DATE
+> Task :android:shared:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:shared:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :checks:javaPreCompileDebug UP-TO-DATE
+> Task :checks:preDebugUnitTestBuild UP-TO-DATE
+> Task :checks:writeDebugAarMetadata UP-TO-DATE
+> Task :android:shared:writeDebugAarMetadata UP-TO-DATE
+> Task :checks:checkDebugUnitTestAarMetadata UP-TO-DATE
+> Task :checks:compileDebugLibraryResources UP-TO-DATE
+> Task :checks:generateDebugUnitTestResValues UP-TO-DATE
+> Task :checks:mapDebugUnitTestSourceSetPaths UP-TO-DATE
+> Task :checks:generateDebugUnitTestResources UP-TO-DATE
+> Task :checks:mergeDebugUnitTestResources UP-TO-DATE
+> Task :checks:extractDeepLinksDebug UP-TO-DATE
+> Task :checks:processDebugManifest UP-TO-DATE
+> Task :android:shared:extractDeepLinksDebug UP-TO-DATE
+> Task :android:shared:processDebugManifest UP-TO-DATE
+> Task :checks:processDebugUnitTestManifest UP-TO-DATE
+> Task :android:shared:compileDebugLibraryResources UP-TO-DATE

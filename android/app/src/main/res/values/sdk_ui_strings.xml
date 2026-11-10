@@ -1,0 +1,8 @@
+<resources>
+    <string name="sdk_back">Back</string>
+    <string name="sdk_app_controls">App controls</string>
+    <string name="sdk_close_app">Close App</string>
+    <string name="sdk_loading">Loading</string>
+    <string name="sdk_restarted">App restarted. Only saved data can be recovered; unfinished actions were not repeated.</string>
+    <string name="sdk_dismiss">Dismiss</string>
+</resources>

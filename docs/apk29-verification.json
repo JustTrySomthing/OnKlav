@@ -1,0 +1,13 @@
+{
+  "version": "0.100.29-rc1",
+  "version_code": 138,
+  "bytes": 122025255,
+  "sha256": "24d5e5d3349a3c8aa3c13aaa50934bd5d6021bc61bb73bf3aa52aee67ff8fbb7",
+  "signer_sha256": "6ed975c5fc27d19f6291f751a8bb00fa8a2c2e7d268bffc7b6ddf7e1b1a7a69d",
+  "build_status": "passed",
+  "verification": "docs/apk-verification-optimized.json",
+  "build": "docs/evidence/v0.100.29/build-optimized.json",
+  "packaged_features": "docs/evidence/v0.100.29/feature-packaging.json",
+  "initial_attempt": "R8 exceeded 600-second limit; preserved in attempt1; cached retry passed",
+  "physical_phone_qualification": "pending; not claimed from host verification"
+}

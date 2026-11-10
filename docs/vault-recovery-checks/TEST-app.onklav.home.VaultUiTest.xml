@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.VaultUiTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-10-31T14:38:56" hostname="ac9e6af65788" time="39.767">
+  <properties/>
+  <testcase name="landscapeSetupKeepsCreateAndCancelReachable" classname="app.onklav.home.VaultUiTest" time="11.484"/>
+  <testcase name="backgroundingHidesEditorAndRequiresPasswordAgain" classname="app.onklav.home.VaultUiTest" time="8.81"/>
+  <testcase name="setupMatchesPasswordsAndOffersVisibilityThenFlushesAndLocks" classname="app.onklav.home.VaultUiTest" time="10.158"/>
+  <testcase name="resetRequiresAllThreeAnswersAndMatchingPasswordsThenReturnsToLogin" classname="app.onklav.home.VaultUiTest" time="5.094"/>
+  <testcase name="autosavePersistsTheLatestTypingWithoutPressingSave" classname="app.onklav.home.VaultUiTest" time="4.22"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

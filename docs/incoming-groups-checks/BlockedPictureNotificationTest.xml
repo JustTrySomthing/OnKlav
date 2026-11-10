@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.BlockedPictureNotificationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-30T17:24:06" hostname="e89dc6ba27f3" time="2.138">
+  <properties/>
+  <testcase name="blockedSenderCannotBypassBlockingThroughAnMmsDownloadAlert" classname="app.onklav.home.BlockedPictureNotificationTest" time="2.138"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

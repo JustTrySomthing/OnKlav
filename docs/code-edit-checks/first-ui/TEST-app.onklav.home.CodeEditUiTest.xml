@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.CodeEditUiTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-31T17:26:43" hostname="83231ba1f14b" time="20.804">
+  <properties/>
+  <testcase name="draftsAndNativeTextSelectionRecover" classname="app.onklav.home.CodeEditUiTest" time="12.177"/>
+  <testcase name="tabsSearchReplaceUndoAndLanguageAreReachable" classname="app.onklav.home.CodeEditUiTest" time="5.219"/>
+  <testcase name="nativeNewlineAddsIndentWithoutLosingTheCursor" classname="app.onklav.home.CodeEditUiTest" time="3.408"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

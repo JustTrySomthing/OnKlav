@@ -1,0 +1,29 @@
+{
+  "status": "Original-signer ARM64 RC assembled and finally verified",
+  "version": "0.100.19-rc1",
+  "version_code": 128,
+  "apk_sha256": "672172158a990866488d9c3e9999c08bded22f9cd001e8e0833f1740f1661380",
+  "apk_bytes": 106725627,
+  "included_sdk_apps": 23,
+  "retired_assets_absent": [
+    "Notes",
+    "Annotation"
+  ],
+  "packaged_markers": [
+    "Select conversations",
+    "Picture messages are on by default.",
+    "Quick preview"
+  ],
+  "verification_report": "docs/apk-verification-debug.json",
+  "native_checks": "299 unit plus 1 old-backup migration integration case passed; new main JNI produced by normal native builder",
+  "feature_checks_reused": [
+    "22 messaging/setup/dialog/recovery checks",
+    "3 composer/scroll checks",
+    "14 Audio Editor checks",
+    "14 audio handoff checks",
+    "Write/Files/encryption and camera recorded focused checks"
+  ],
+  "build": "Source-current SDK/games reused; normal native build and refreshed resources/DEX/native packaging; original debug signer restored",
+  "diagnostic": "Initial verifier named a nonexistent AudioPreviewKt class; actual AudioPreviewPlan companion is now checked. Assembly succeeded unchanged; final verifier passed. Original diagnostic retained.",
+  "physical_carrier_or_handset_qualified": false
+}

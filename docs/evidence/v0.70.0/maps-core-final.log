@@ -1,0 +1,14 @@
+   Compiling onklav-core v0.8.0 (/workspace/scratch/75acf774e3b8/work/OnKlav/core)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 5.22s
+     Running unittests src/lib.rs (core/target/debug/deps/onklav_core-8a579202944a8eae)
+
+running 6 tests
+test sdk::tests::maps_widget_requires_one_non_scrolling_body ... ok
+test sdk_maps::tests::maps_provider_rejects_hidden_credits_credentials_and_ambiguous_templates ... ok
+test sdk_maps::tests::maps_schema_bounds_coordinates_private_tiles_and_provider_metadata ... ok
+test history_completed::tests::incomplete_and_unacknowledged_maps_are_retained_in_full ... ok
+test sdk::tests::maps_component_scopes_tiles_to_current_visible_signed_owner ... ok
+test history_completed::tests::full_active_receipts_and_maps_are_reclaimed_but_archive_overflow_is_refused ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 242 filtered out; finished in 1.43s
+

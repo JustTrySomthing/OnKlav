@@ -1,0 +1,31 @@
+   Compiling onklav-core v0.8.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/core)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 7.36s
+     Running unittests src/lib.rs (core/target/debug/deps/onklav_core-8a579202944a8eae)
+
+running 23 tests
+test content::tests::corrupt_index_fails_closed_and_never_erases_file_bytes ... ok
+test content::tests::folders_reject_traversal_collisions_cycles_and_system_changes ... ok
+test content::tests::a_corrupt_trashed_note_does_not_block_other_files_or_active_notes ... ok
+test content::tests::copied_files_are_independent_and_purge_leaves_other_content ... ok
+test content::tests::existing_notes_are_verified_migrated_once_and_originals_remain ... ok
+test content::tests::recursive_copy_and_compress_fail_without_partial_outputs_for_links ... ok
+test content::tests::note_move_rename_trash_restore_and_permanent_delete_share_one_record ... ok
+test content::tests::roots_and_notes_live_in_the_shared_library ... ok
+test content::tests::restore_handles_a_removed_parent_without_overwriting_names ... ok
+test content::tests::symlinks_cannot_redirect_content_reads_or_imports ... ok
+test content::tests::shared_index_metadata_does_not_consume_the_notes_private_quota ... ok
+test content::tests::staged_import_is_bounded_and_keeps_the_android_original ... ok
+test content::tests::text_api_edits_notes_without_losing_their_titles ... ok
+test content::tests::recursive_copy_and_zip_preserve_nested_files_and_notes ... ok
+test content::tests::text_api_never_follows_a_link_out_of_content_storage ... ok
+test content::tests::text_api_classifies_all_newline_styles ... ok
+test content::tests::text_api_reads_full_utf8_and_preserves_bom_with_conflict_checks ... ok
+test content::tests::many_case_insensitive_collisions_find_the_next_name_without_a_full_scan_per_candidate ... ok
+test content::tests::unicode_and_unusual_note_titles_cannot_poison_the_index ... ok
+test content::tests::text_api_rejects_oversize_binary_trash_and_unread_revisions ... ok
+test content::tests::duplicate_maximum_length_names_remain_readable_after_copy_import_and_restore ... ok
+test content::tests::pagination_and_search_include_files_beyond_the_first_page ... ok
+test content::tests::excessive_nesting_is_rejected_before_it_can_damage_the_index ... ok
+
+test result: ok. 23 passed; 0 failed; 0 ignored; 0 measured; 256 filtered out; finished in 0.28s
+

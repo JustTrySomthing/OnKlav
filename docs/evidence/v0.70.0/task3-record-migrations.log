@@ -1,0 +1,11 @@
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/ed752e8a1957/current/OnKlav/developer/components)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.40s
+     Running unittests src/lib.rs (developer/components/target/debug/deps/onklav_ui-c94c9f1e1c388478)
+
+running 3 tests
+test records::tests::foreign_future_missing_and_failing_migrations_are_errors ... ok
+test records::tests::legacy_upgrades_in_order_preserve_unknown_values_and_need_explicit_save ... ok
+test records::tests::record_bounds_and_migration_configuration_are_checked ... ok
+
+test result: ok. 3 passed; 0 failed; 0 ignored; 0 measured; 24 filtered out; finished in 0.01s
+

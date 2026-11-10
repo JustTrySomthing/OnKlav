@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.FilesFlowHostTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-29T04:24:29" hostname="8a3ee6b7e8e3" time="32.385">
+  <properties/>
+  <testcase name="fileIconFoldersRenameMoveTrashAndRestoreUseTheRealNotesStore" classname="app.onklav.home.FilesFlowHostTest" time="22.643"/>
+  <testcase name="openingANoteUsesNotesAndBackReturnsToFiles" classname="app.onklav.home.FilesFlowHostTest" time="5.102"/>
+  <testcase name="modernCalculatorKeypadUsesSignedArithmetic" classname="app.onklav.home.FilesFlowHostTest" time="4.64"/>
+  <system-out><![CDATA[Files UI waiting: tab-Apps
+Files UI waiting: app-icon-files
+Files UI waiting: sdk-entry:documents
+Files UI waiting: sdk-entry:documents
+Files UI waiting: sdk-name
+Files UI waiting: sdk-name.save
+Files UI waiting: sdk-entry:notes
+Files UI waiting: sdk-rename
+Files UI waiting: sdk-name
+Files UI waiting: sdk-name.save
+Files UI waiting: sdk-menu.status
+Files UI waiting: sdk-name.save
+Files UI waiting: sdk-move
+Files UI waiting: sdk-entry:documents
+Files UI waiting: sdk-entry:b9364fa0b43b467cb9665672465bf4d0
+Files UI waiting: sdk-destination.accept
+Files UI waiting: sdk-entry:7fcd5390ab564cee881392dc81818998
+Files UI waiting: sdk-trash
+Files UI waiting: action-Files Home
+Files UI waiting: sdk-entry:trash
+Files UI waiting: sdk-restore
+Files UI waiting: action-Files Home
+Files UI waiting: sdk-entry:documents
+Files UI waiting: sdk-entry:b9364fa0b43b467cb9665672465bf4d0
+Files UI waiting: sdk-entry:7fcd5390ab564cee881392dc81818998
+Files UI waiting: tab-Apps
+Files UI waiting: app-icon-files
+Files UI waiting: sdk-entry:documents
+Files UI waiting: sdk-entry:documents
+Files UI waiting: sdk-entry:notes
+Files UI waiting: sdk-entry:b8802721691d45758cf99efae521a7ad
+Files UI waiting: sdk-note.text
+Files UI waiting: sdk-query
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

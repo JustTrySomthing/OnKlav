@@ -1,0 +1,38 @@
+{
+  "version": "0.78.0-youtube-polish1",
+  "version_code": 86,
+  "status": "Completed: signed ARM64 APK assembled and verified",
+  "changes": [
+    "Cold launch selects Apps. Existing rememberSaveable navigation retains the active home tab and internal app across background/resume and configuration recreation. Explicit message and app launch intents retain their destination.",
+    "Shared SDK header Back closes the current app through its normal flush/close path, returning to its retained caller. Webpage history remains available through Browser page controls and Android Back.",
+    "YouTube exposes Home, History, Channels and Bookmarks directly; no host three-dot overflow. Bookmark drawer starts with Add Bookmark / Add Video Bookmark and includes Bookmark Current Channel.",
+    "Channels lists saved channel-homepage bookmarks with add, open, copy and confirmed remove; storage, limits, reset preservation and backup use the existing scoped video library.",
+    "Fixed provider metadata extracts the current video owner or current channel page. Rust canonicalizes/validates homepage URLs before exposing channel actions; unsafe and offsite URLs are rejected.",
+    "Best-effort automatic Skip supports additional desktop and mobile controls, ignores disabled buttons and restores mute/rate after ads and disposal. Existing ad-host blocking and ad-only seeking remain."
+  ],
+  "checks": {
+    "rust": {
+      "passed": 273,
+      "failed": 0
+    },
+    "android_focused": {
+      "passed": 10,
+      "failed": 0,
+      "skipped": 0
+    },
+    "javascript": "Exact production scripts passed bounded fake-DOM checks for visible/disabled Skip, ad seek, playback restoration/cleanup, current/stale player metadata, owner links and channel pages",
+    "lint": {
+      "Warning": 172
+    }
+  },
+  "limits": [
+    "Live YouTube markup, streaming, ads and actual phone return navigation remain unverified; automatic skipping is best effort and does not guarantee ad-free playback.",
+    "Channels are local bookmarks, not signed-in YouTube account subscriptions."
+  ],
+  "apk": {
+    "name": "OnKlav-0.78.0-ARM64.apk",
+    "bytes": 71386610,
+    "sha256": "6fb56ae943ef7cf2591bd7b9f4ac0f669aeed503f3fa48fbb465e0bbe4d25aa8",
+    "verification": "Original Android signing identity, bundled SDK publisher/source provenance and16KiB native alignment verified"
+  }
+}

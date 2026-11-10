@@ -1,0 +1,22 @@
+{
+  "apk_sha256": "6d01e0a3a66626a8e6831aa0d566bfc4f1667f3ee116c28286d97599d3f7ca17",
+  "device": "Android 10 x86_64 software emulator, 2 GiB, four cores; no KVM",
+  "ui_regression": "pass",
+  "phone_acceptance": false,
+  "captures": [
+    "messages-header",
+    "apps-original-grid",
+    "apps-second-page",
+    "games-artwork",
+    "settings-original-icons",
+    "settings-games-manager",
+    "settings-sounds-menu"
+  ],
+  "reference_captures": [],
+  "exact_apk_installed": true,
+  "installation_basis": "Frozen host APK path supplied to adb install --no-streaming -r; Success recorded before instrumentation; supplied APK hash independently verified before and after runtime.",
+  "installed_hash_output_retained": false,
+  "runtime_report_reconstructed": true,
+  "optional_reference_phase": "Stopped after passing test and collecting app captures. System UI ANR covered reference screens; fresh reference screenshots are unusable. Existing 0.8.3 native reference Settings/Appearance captures and 2.2.85 source/resource audit were used.",
+  "report_limit": "The process was interrupted during optional reference capture, before its final report flush. Installation command results, instrumentation output and app images had already been saved; the installed-file checksum read was not retained."
+}

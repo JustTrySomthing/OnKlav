@@ -1,0 +1,9 @@
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/developer/components)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 1.47s
+     Running unittests src/lib.rs (developer/components/target/debug/deps/onklav_ui-1771de5ff2e26eff)
+
+running 1 test
+test reference_apps::youtube::channel_tests::late_metadata_preserves_current_owner_but_home_navigation_clears_it ... ok
+
+test result: ok. 1 passed; 0 failed; 0 ignored; 0 measured; 118 filtered out; finished in 0.00s
+

@@ -1,0 +1,14 @@
+{
+  "build": [
+    "WalkieTalkie"
+  ],
+  "restore_bundles": [],
+  "reuse": [],
+  "unselected_stale": []
+}
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 0.07s
+WalkieTalkie: compiling changed app
+   Compiling onklav-walkie v0.1.0 (/workspace/scratch/ed752e8a1957/current/OnKlav/sdk/apps/walkie)
+    Finished `release` profile [optimized] target(s) in 1.54s
+Created /workspace/scratch/ed752e8a1957/current/OnKlav/sdk/packages/.sdk-build-r3t7l6gp/WalkieTalkie.onklav-a
+{"built": ["WalkieTalkie"], "bundles_restored": [], "all_packages_current": true}

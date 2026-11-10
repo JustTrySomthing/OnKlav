@@ -1,0 +1,14 @@
+[package]
+name = "onklav-starter-app"
+version = "0.1.0"
+edition = "2021"
+[lib]
+crate-type = ["cdylib"]
+[dependencies]
+onklav-app = { path = "__SDK_RUST_PATH__" }
+onklav-ui = { path = "__UI_COMPONENTS_PATH__" }
+[profile.release]
+opt-level = "z"
+lto = true
+panic = "abort"
+strip = "symbols"

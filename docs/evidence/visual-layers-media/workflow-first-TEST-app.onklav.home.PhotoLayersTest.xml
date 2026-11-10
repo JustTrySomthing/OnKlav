@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.PhotoLayersTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-29T00:27:32" hostname="1b65f1fab707" time="1.896">
+  <properties/>
+  <testcase name="portableProjectRetainsOriginalEditsMarksAndBothHistoryDirections" classname="app.onklav.home.PhotoLayersTest" time="1.819"/>
+  <testcase name="cancellationStopsArchiveWithoutChangingOriginal" classname="app.onklav.home.PhotoLayersTest" time="0.041"/>
+  <testcase name="invalidVersionTraversalAndOversizedHistoryAreRejectedBeforeSourceIsWritten" classname="app.onklav.home.PhotoLayersTest" time="0.035"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

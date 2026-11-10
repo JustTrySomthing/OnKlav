@@ -1,0 +1,112 @@
+{
+  "scope": "Cats/Panda final polish, shared audio continuity and catalog/session identity",
+  "game_checks": {
+    "rules_checks": 12,
+    "hockey_checks": 95,
+    "naval_turn_checks": 247,
+    "cats_dogs_checks": 353,
+    "blackjack_checks": 179,
+    "panda_checks": 805
+  },
+  "sdk_template_checks": 17,
+  "sdk_python_tests": 11,
+  "android_unique_cases": 16,
+  "android_cases": {
+    "FriendGameUiTest": 3,
+    "GameSessionStatusTest": 4,
+    "FriendGamesTest": 9
+  },
+  "android_runtime_matches_compiled_kotlin": true,
+  "catalog_final_source_recheck": true,
+  "phone_browser": [
+    {
+      "game": "four",
+      "viewport": [
+        320,
+        640
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "game": "panda",
+      "viewport": [
+        320,
+        640
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "game": "four",
+      "viewport": [
+        432,
+        800
+      ],
+      "passed": true,
+      "errors": []
+    },
+    {
+      "game": "panda",
+      "viewport": [
+        432,
+        800
+      ],
+      "passed": true,
+      "errors": []
+    }
+  ],
+  "friend_browser": {
+    "rules": 2,
+    "eight_blocks": true,
+    "real_channel_intents": true,
+    "paused_arrival_queued": true,
+    "exact_model_after_physics": true,
+    "errors": []
+  },
+  "all_game_controls": [
+    {
+      "game": "naval",
+      "audio_settings_pause_snapshot_and_resume": true,
+      "errors": []
+    },
+    {
+      "game": "four",
+      "audio_settings_pause_snapshot_and_resume": true,
+      "errors": []
+    },
+    {
+      "game": "blackjack",
+      "audio_settings_pause_snapshot_and_resume": true,
+      "errors": []
+    },
+    {
+      "game": "panda",
+      "audio_settings_pause_snapshot_and_resume": true,
+      "errors": []
+    }
+  ],
+  "source_sha256": {
+    "games/engine-checks/cat_dog/main.gd": "6c4772a9c14f881e724072bc8464524c29b53816776f2e1610d88c87c554a38d",
+    "games/engine-checks/panda/main.gd": "6404b9fb4f4c0e52dcc78949702757e1ddd46869375df426dec96aaabb795cde",
+    "games/engine-checks/panda/model.gd": "bc1734c8fb82358e8ae181d51a98e39429a42bf3a6dd4ce1422cf27e7f64fe7e",
+    "games/engine-checks/panda/arena.gd": "cb7313d57669835570d8859362a3c3fc2d33c3f590e7bfe2fe613edff406b13b",
+    "games/engine-checks/panda/hud.gd": "846ecff71341b38aa24dc14ec5fcb379bda50eaccf3167a1e46cb08a1c6a40e1",
+    "games/engine-checks/panda/audio.gd": "61b06aa05c3144296e6d8f4f7b83992047335364b5e3e2d23abcd8a0c01e6f87",
+    "games/engine-checks/game_chrome.gd": "06b0b2bdbde37cbcb0ee2f029176bd64158e7d344a3a097d7038f608e3733dd7",
+    "games/engine-checks/project.godot": "4dee2a98a265921ee546583d7a42d861a66f9d3dc953c5343451bb2404c92416",
+    "android/app/src/main/kotlin/app/onklav/home/GamesCatalog.kt": "c1901a1e9d30de978b9e6e59844e46d1e88e5465509acf9eed5b87b0d631b50a",
+    "android/app/src/main/kotlin/app/onklav/home/GameSessionStatus.kt": "6cfdd929341dbdbad3b3678e2327a5839c5270f0258dc6784052719dc73ab47d",
+    "android/app/src/main/kotlin/app/onklav/home/WebGameActivity.kt": "0a9fc6f844e4b37c11582e83afb6a3684a450e21b0ddf7e51d80e91dcb518db1",
+    "android/app/src/main/kotlin/app/onklav/home/FriendGames.kt": "77f027aa59a8a3d4d066912676cbf47f5d2a2587d0a56c03cb2c7a55d0fe452a",
+    "android/app/src/main/kotlin/app/onklav/home/FriendGameWire.kt": "3e364e1dd0504e1e45fe6d49aaab185fb4f36663e217c021a40c9e9985a6ec91"
+  },
+  "canonical_shared_helpers_match": true,
+  "source_current_export": true,
+  "final_change_after_browser": "None in production game code; latest phone-size browser pass uses final source including angled muzzle and legacy build-clock migration.",
+  "new_friend_rules": "pt2; oldpt1 and model revision1 retained",
+  "apk_built": false,
+  "latest_apk": "0.100.51-rc1/code160",
+  "physical_phone_or_carrier_tested": false,
+  "audible_handset_static_clearance_claimed": false
+}

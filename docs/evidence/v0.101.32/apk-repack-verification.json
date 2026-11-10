@@ -1,0 +1,17 @@
+{
+  "status": "passed",
+  "package": "app.onklav.home.prototype.rewrite",
+  "version": "0.101.32-rc1",
+  "version_code": 211,
+  "abi": "arm64-v8a",
+  "base_apk": "OnKlav-0.101.31.apk",
+  "packaging": "Original signed host payload reused after offline Gradle dependency resolution failed. Updated the manifest version and certified Godot content and signed with the original OnKlav signer.",
+  "changed_apk_entries": [
+    "AndroidManifest.xml",
+    "assets/godot-builtin/index.html",
+    "assets/godot-builtin/index.pck"
+  ],
+  "sha256": "21a32d4837dd5ecc27c7b2c049055f83d269c4883c35fe0024c03b654490cb2a",
+  "verification": "docs/apk-verification-optimized.json",
+  "physical_phone_qualification": "pending"
+}

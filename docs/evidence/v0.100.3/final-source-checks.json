@@ -1,0 +1,47 @@
+{
+  "unique_focused_cases_passed": 24,
+  "rechecked_after_shared_probe_adjustment": [
+    {
+      "class": "app.onklav.home.SdkMediaSourceTest",
+      "name": "podcastWithoutValidatorsStillRejectsChangedLength"
+    },
+    {
+      "class": "app.onklav.home.SdkMediaSourceTest",
+      "name": "decoderCannotFollowRedirectsOrContinueAfterPermissionLoss"
+    },
+    {
+      "class": "app.onklav.home.SdkMediaSourceTest",
+      "name": "audiobookCanProbeTailFirstAndSeekUsingLastModified"
+    },
+    {
+      "class": "app.onklav.home.SdkMediaSourceTest",
+      "name": "dynamicPodcastDatesDoNotBreakValidRanges"
+    },
+    {
+      "class": "app.onklav.home.SdkMediaSourceTest",
+      "name": "audiobookRejectsChangedDateOrLengthAcrossSeek"
+    },
+    {
+      "class": "app.onklav.home.SdkMediaSourceTest",
+      "name": "readChunksAreBoundedAndClosedSourceCannotReopen"
+    },
+    {
+      "class": "app.onklav.home.SdkMediaSourceTest",
+      "name": "decoderLearnsLargeAudioLengthBeforeReadingWithoutDownloadingWholeFile"
+    },
+    {
+      "class": "app.onklav.home.SdkMediaSourceTest",
+      "name": "sourceReusesSequentialReadsAndRequiresMatchingRangeForSeeking"
+    },
+    {
+      "class": "app.onklav.home.SdkMediaSourceTest",
+      "name": "podcastTailProbeCanUseRangeWithoutEtag"
+    },
+    {
+      "class": "app.onklav.home.OfflineHandoffTest",
+      "name": "streamedEpisodeProbeRunsOffMainAndFailureBecomesPlayerError"
+    }
+  ],
+  "radio_controller_cases_passed": 10,
+  "initial_failure": "Android33 test fixture download SSL failure; fixture checksum verified and only affected method rechecked successfully"
+}

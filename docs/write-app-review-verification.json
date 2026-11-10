@@ -1,0 +1,30 @@
+{
+  "status": "source complete; production compile passed; no APK built",
+  "focused_passed": 16,
+  "checks": [
+    "WriteHostTest > documentsAreAtomicPrivateAndRespectRevocation",
+    "WriteHostTest > embeddedImagesSurviveWriteRoundTripAndSafeExports",
+    "WriteHostTest > numberedListsContinueAndRemovingOneParagraphKeepsItsNeighbors",
+    "WriteHostTest > partialAndCursorFormattingPreserveSurroundingText",
+    "WriteHostTest > proofreadingPreservesOffsetsAndDoesNotRewriteText",
+    "WriteHostTest > richDocumentsRoundTripDocxAndPdfPagination",
+    "WriteReviewTest > backwardsSelectionFormatsTheEntireRangeAndParagraph",
+    "WriteReviewTest > closingTheModelPersistsItsFinalDebouncedDraft",
+    "WriteReviewTest > damagedCurrentDocumentIsReportedAndCanBeRetriedWithoutSavingABlankReplacement",
+    "WriteReviewTest > docxIndentRoundTripsAndUnsupportedContentIsReported",
+    "WriteReviewTest > formattingDismissesTheNativeMenuWithoutLosingRangeOrViewport",
+    "WriteReviewTest > invalidFormattingDoesNotStripSpansOrLeaveTheEditorGuarded",
+    "WriteReviewTest > typingAfterAFormatHasItsOwnUndoStep",
+    "WriteSaveCheckpointTest > discardRestoresExplicitSaveDespiteAutosaveAndDoesNotDeleteTheDocument",
+    "WriteUiTest > colorAndHighlightKeepSelectionKeyboardAndDocumentViewportStable",
+    "WriteUiTest > signedWriterFormatsManagesAndExportsWithoutLosingSelection"
+  ],
+  "visual_review": [
+    "inline highlight palette with long-document selection"
+  ],
+  "limits": [
+    "Host simulations; Samsung/Gboard/native handle and clipboard presentation/rotation acceptance remains.",
+    "Full-app lint, full Word compatibility and measured large-document performance not claimed."
+  ],
+  "test_fixture_correction": "The standalone palette case explicitly restores test-profile Write grants because the preceding revocation regression intentionally removes them. Product revocation behavior is unchanged."
+}

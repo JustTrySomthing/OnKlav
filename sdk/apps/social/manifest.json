@@ -1,0 +1,8 @@
+{
+  "schema": "onklav.app.v1",
+  "runtime": "rust-wasm-ui.v1",
+  "id": "app.onklav.social",
+  "name": "Social",
+  "version": 40,
+  "capabilities": []
+}

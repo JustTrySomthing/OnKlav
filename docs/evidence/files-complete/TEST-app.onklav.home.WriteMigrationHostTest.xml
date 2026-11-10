@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.WriteMigrationHostTest" tests="2" skipped="0" failures="0" errors="0" timestamp="2026-11-03T02:45:31" hostname="3bfb1ef11171" time="7.003">
+  <properties/>
+  <testcase name="conflictingWriteDocumentDoesNotRemoveNotesOrOverwriteEitherOriginal" classname="app.onklav.home.WriteMigrationHostTest" time="4.7"/>
+  <testcase name="startupConvertsLegacyNotesRetiresThePackageAndKeepsLinkedSaves" classname="app.onklav.home.WriteMigrationHostTest" time="2.303"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

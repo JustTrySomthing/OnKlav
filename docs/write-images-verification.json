@@ -1,0 +1,28 @@
+{
+  "date": "2026-10-29",
+  "status": "bounded_feature_verified_not_release_ready",
+  "tests_passed": [
+    "app.onklav.home.WriteUiTest.signedWriterFormatsManagesAndExportsWithoutLosingSelection",
+    "app.onklav.home.WriteHostTest.numberedListsContinueAndRemovingOneParagraphKeepsItsNeighbors",
+    "app.onklav.home.WriteHostTest.richDocumentsRoundTripDocxAndPdfPagination",
+    "app.onklav.home.WriteHostTest.partialAndCursorFormattingPreserveSurroundingText",
+    "app.onklav.home.WriteHostTest.documentsAreAtomicPrivateAndRespectRevocation",
+    "app.onklav.home.WriteHostTest.proofreadingPreservesOffsetsAndDoesNotRewriteText",
+    "app.onklav.home.WriteHostTest.embeddedImagesSurviveWriteRoundTripAndSafeExports"
+  ],
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/WriteImages.kt": "fe8298ccce2e626ed0ed3dff3ee57afe896bb952721c710fdbc8a37045a0eda9",
+    "android/app/src/main/kotlin/app/onklav/home/WriteDocument.kt": "ec7f7605740b18a2ef50cb3ddd191a3e19a720cdab459b8b0b65111993fb08b1",
+    "android/app/src/main/kotlin/app/onklav/home/WriteEditor.kt": "1837783181603474583b52009282b128197028d56096267b36741e42f74a0b7a"
+  },
+  "runtime_classes_match": true,
+  "native_changed": false,
+  "limitations": [
+    "DOCX image export unavailable; preflight and UI block it",
+    "HTML and DOCX image import unavailable",
+    "PDF layout image pixels verified; native PDF container needs handset acceptance",
+    "Notes migration and removal unfinished",
+    "Authenticated encrypted folders unfinished"
+  ],
+  "apk_built": false
+}

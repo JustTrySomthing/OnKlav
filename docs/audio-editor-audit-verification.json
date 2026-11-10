@@ -1,0 +1,76 @@
+{
+  "status": "review and confirmed fixes complete; focused checks passed",
+  "base_source_version": 230,
+  "latest_delivered_apk": "0.100.25-rc1/code134",
+  "apk_built": false,
+  "physical_device_tested": false,
+  "unique_focused_checks_passed": 28,
+  "cases": {
+    "AudioEditorHostTest": [
+      "pitchAndTempoAreIndependentAndStereoRemainsLinked",
+      "learnedSpectralNoiseReductionReducesNoiseAndKeepsTone",
+      "signedAppLaunchAndRevocableStorageAreEnforced",
+      "dcRemovalKeepsLowBassAtDifferentHighSampleRates",
+      "editsKeepSourceAndRoundTripWithStereoSilence",
+      "gainToneFadesNormalizationAndOverloadProtectionWork"
+    ],
+    "AudioImportWaveTest": [
+      "cancelledDecodeRemovesPartialOutputAndKeepsSource",
+      "downloadedAudioBecomesRealMp3AndReopensWithExpectedDuration",
+      "incompletePcmFramesAreRejectedRatherThanSilentlyTruncated",
+      "riffBoundaryIncludesTheHeaderAndOversizedExportsFailBeforeProcessing",
+      "bufferedWaveImportPreservesAllPcmDepthsAndFloatingHeadroom",
+      "abortedExportClosesItsDescriptorWithoutDeletingTheDestination"
+    ],
+    "AudioPreviewModelTest": [
+      "failedHistorySavePreservesTheCurrentEditAndBothStacks",
+      "ownershipInterruptionDuringDecoderPreparationCancelsWithoutWaitingForTimeout",
+      "seekingIsRelativeToTheAuditionWindowAndOutsideSeekingStopsIt",
+      "unpluggingHeadphonesReleasesPreviewAndLateOldRouteEventsAreIgnored",
+      "reverseTrimTargetsTheVisibleSectionAndTempoUpdatesTimelineTimes",
+      "mp3LengthLimitIsReportedBeforeAFullRender",
+      "reverseRefreshesWaveformAndShortEditsKeepFadeValuesHonest",
+      "cancellingAnImportKeepsThePreviousDraftAndRemovesTemporaryFiles",
+      "failedRenderNeverDeletesOrOpensTheChosenDestination"
+    ],
+    "AudioPreviewTest": [
+      "originalComparisonDoesNotApplyTheDefaultLimiter",
+      "reversedPreviewUsesTheSameRegionOrderAsTheWaveform",
+      "interpolationAcrossBlockBoundariesDoesNotRepeatedlyReadTheDisk",
+      "previewIsBoundedStartsAtPlayheadAndRespectsSelectionAndTempo",
+      "longEditedProjectAuditionsTwelveSecondsWithIndependentPitchAndTempo",
+      "midTrackPreviewDoesNotRestartBeginningOrEndFades"
+    ],
+    "AudioEditorUiTest": [
+      "smallPhoneKeepsToolsAndPlaybackReachable"
+    ]
+  },
+  "runtime_matches_compiled": true,
+  "native_sdk_game_speech_changed": false,
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/AudioEditor.kt": "9446f609f21183c5a034b719e6186f2ec96965d2422a01bf67577ffa089165d3",
+    "android/app/src/main/kotlin/app/onklav/home/AudioEditorModel.kt": "f0898a6515fb771d03b2709e2c2441ccb1f382bd8f2dc28d5ee21c214d03d8a1",
+    "android/app/src/main/kotlin/app/onklav/home/AudioEditEngine.kt": "e1fb2f0a761f1266379fbc37936a0521491932ac8dcc0d10326a9914565fe21a",
+    "android/app/src/main/kotlin/app/onklav/home/AudioEditMedia.kt": "379012571e9dc5129be43536fa9b5e8527a5826e036dced37754f4ef03862ef2",
+    "android/app/src/main/kotlin/app/onklav/home/AudioPreview.kt": "89a21829b1ef2202bd21311ef377049b1d011596184b766dce81ff42e9954179",
+    "android/app/src/main/kotlin/app/onklav/home/AudioEditorStorage.kt": "532d3cd28526a29c7ceff53e8ca43524fd23c1c0f35c287941b542d02b9b2e87",
+    "android/app/src/test/kotlin/app/onklav/home/AudioEditorHostTest.kt": "fa6bd20ad7a55ca3673348b91a383a9fd623b2493faf24e10a286b371b61d298",
+    "android/app/src/test/kotlin/app/onklav/home/AudioImportWaveTest.kt": "f7185058c8dd24aee8322fe91908051aee395f4a0d3fd1b55a51da3f6d49b30b",
+    "android/app/src/test/kotlin/app/onklav/home/AudioPreviewModelTest.kt": "9baee41d90666cca1de307aafc6c71c7489f39ce8dd8a8bc7d1f0fc09f5bf2b1",
+    "android/app/src/test/kotlin/app/onklav/home/AudioPreviewTest.kt": "b78207784d1e2dc160d931daeda8c68b85b1b0189cdefde3d3b2223619396412"
+  },
+  "open_technical_followup": [
+    "noise-profile alignment when combined with pitch",
+    "representative music/vocal/transient listening quality",
+    "device AAC/provider and long-file acceptance"
+  ],
+  "feature_recommendations": [
+    "named editable projects",
+    "full-track/loop audition without full-render waits",
+    "background export",
+    "meters/stereo/time ruler",
+    "internal crossfades/zero-crossing assistance",
+    "export settings and higher bit-depth WAV"
+  ],
+  "evidence": "docs/evidence/audio-editor-audit"
+}

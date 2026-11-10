@@ -1,0 +1,10 @@
+{"grants":[],"steps":[
+ {"action":"sdk.permission.dismiss","expect":{"ready":true,"store_revision":null}},
+ {"action":"reading.next","expect":{"offset":5500,"dirty":true,"store_revision":null}},
+ {"action":"reading.back","frame_expect":{"confirm.title":"Leave without saving position?"}},
+ {"action":"reading.keep","expect":{"offset":5500,"dirty":true}},
+ {"reopen":true,"expect":{"offset":0,"dirty":false}},
+ {"action":"sdk.permission.dismiss"},
+ {"action":"reading.query","value":"😀"},
+ {"action":"reading.find","expect":{"results.0":[6,10],"store_revision":null}}
+]}

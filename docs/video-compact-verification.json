@@ -1,0 +1,68 @@
+{
+  "status": "passed",
+  "tests": [
+    {
+      "class": "app.onklav.home.VideoCanvasMetadataTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "class": "app.onklav.home.VideoCanvasSizingTest",
+      "tests": 2,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "class": "app.onklav.home.VideoEditorUiTest",
+      "tests": 1,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "class": "app.onklav.home.VideoPhoneWorkflowTest",
+      "tests": 11,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "class": "app.onklav.home.VideoProTest",
+      "tests": 8,
+      "failures": 0,
+      "errors": 0
+    },
+    {
+      "class": "app.onklav.home.VideoRefinementsTest",
+      "tests": 11,
+      "failures": 0,
+      "errors": 0
+    }
+  ],
+  "total_tests": 35,
+  "merge_checks": [
+    "shared project versions 351 and 352 have identical Video sources/tests",
+    "all eight targets match the version 352 base",
+    "clean version 352 application",
+    "upgrade from initial Video Edit update",
+    "conflicting source refuses every write",
+    "repeat application is idempotent"
+  ],
+  "render_review": [
+    "wide preview",
+    "portrait canvas",
+    "short 360x320 window at 1.5 font scale",
+    "narrow 540x320 landscape inspector"
+  ],
+  "physical_phone_tested": false,
+  "apk_built": false,
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/VideoEditor.kt": "99a5a87fcec79e9c40af7ac6a41bc6c6484331f980666e33fd1160e758911911",
+    "android/app/src/main/kotlin/app/onklav/home/VideoEditorLayout.kt": "080658296d597e229806371b7b9b11dc559faa32b0eb6117b6798257363bd892",
+    "android/app/src/main/kotlin/app/onklav/home/VideoEditorModel.kt": "e6f13464a41bd67faab003c422bce1fc1e14a4c8bf2d40696cce62db0f0a78c0",
+    "android/app/src/main/kotlin/app/onklav/home/VideoProWorkspace.kt": "d6a712e7f79141953e0255e0b3d26f71443241330ef9edda133ad94955bffa38",
+    "android/app/src/main/kotlin/app/onklav/home/VideoCanvasSizing.kt": "d02e3196cecfb61fe801d1aa38105b040e2cfdbc0c01705a5849ee19773563e2",
+    "android/app/src/test/kotlin/app/onklav/home/VideoPhoneWorkflowTest.kt": "e71ba3d70ffbc855c916cb2fbc69217f3253d11f43a89e267c246e6df0ecf819",
+    "android/app/src/test/kotlin/app/onklav/home/VideoCanvasSizingTest.kt": "74b0ee42b775b6ee4103ea8139b5f49e5fbbd2ab721c8aeb1b3a84f995e6345f",
+    "android/app/src/test/kotlin/app/onklav/home/VideoCanvasMetadataTest.kt": "d7199296b7371f29f6ca1fa5513ffe14dcbed5d33b867e7a7a81c5e447e37e07"
+  }
+}

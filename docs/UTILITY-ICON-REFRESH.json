@@ -1,0 +1,28 @@
+{
+  "status": "four native vector icons updated; XML and vector-render visual checks passed",
+  "date": "2026-10-30",
+  "changes": {
+    "Format Swap": "two documents and opposing curved arrows",
+    "Screen Recorder": "capture corners and a double recording dot",
+    "Voice Recorder": "diagonal handheld microphone with cord",
+    "Vault": "safe door with wheel, hinges and handle"
+  },
+  "theme_behavior": "transparent glyphs; existing desktop primary tint is preserved, with no opaque inner tiles",
+  "scope": "drawable resources only; stable IDs and catalog references retained",
+  "verification": [
+    "XML parsed for all four vectors",
+    "actual XML paths rendered at desktop and compact sizes in light/dark themes",
+    "rotation and painted stroke bounds fit the32x32 viewport",
+    "visual preview inspected"
+  ],
+  "preview": "docs/evidence/utility-icons/utility-icons-preview.png",
+  "resource_sha256": {
+    "android/shared/src/main/res/drawable/ref_app_format_swap.xml": "8a3b20b1cae6f73b8491f7a3af28eed32a58bb8e688fddc73d3a6dffa39ec17c",
+    "android/shared/src/main/res/drawable/ref_app_screen_recorder.xml": "df0c95cdebe7bcf07ab7ba422d659c8d96d5ce6b5f061ba631d6df393a5d6c4f",
+    "android/shared/src/main/res/drawable/ref_app_voice_recorder.xml": "3349a63f71bd74ee1e04a494bb9e9f4670ecb6af29fe1f808b94bebbf1495b77",
+    "android/shared/src/main/res/drawable/ref_app_vault.xml": "d04ac78ef65e5cca021e03e6b6efcafa9656d888babd9f234ec83b786d584286"
+  },
+  "android_compile_performed": false,
+  "apk_built": false,
+  "latest_apk": "0.100.27-rc1/code136 predates these icon changes"
+}

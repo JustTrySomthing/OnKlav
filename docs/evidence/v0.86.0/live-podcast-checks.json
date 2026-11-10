@@ -1,0 +1,20 @@
+[
+  {
+    "show": "History That Doesn't Suck",
+    "feed": "https://rss.amperwave.net/v2/feed/audacynetwork/e69da14a26973f1dc761432876205254",
+    "episodes": 236,
+    "audio_status": 206,
+    "content_type": "audio/mpeg",
+    "content_range": "bytes 0-0/93146573",
+    "audio_byte_received": 1
+  },
+  {
+    "show": "Stuff You Missed in History Class",
+    "feed": "https://www.omnycontent.com/d/playlist/e73c998e-6e60-432f-8610-ae210140c5b1/cfb428ef-eafc-44d0-9d09-ae2701747e6f/fb626e1f-112c-4246-a40d-ae2701747e7d/podcast.rss",
+    "episodes": 2787,
+    "audio_status": 206,
+    "content_type": "audio/mpeg",
+    "content_range": "bytes 0-0/48074114",
+    "audio_byte_received": 1
+  }
+]

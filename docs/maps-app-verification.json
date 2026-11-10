@@ -1,0 +1,120 @@
+{
+  "version": "0.95.0-maps1",
+  "android_code": 103,
+  "status": "source complete",
+  "features": [
+    "Themed Maps workspace and shared-header folder action",
+    "Current-location permission flow, GPS/network/last-fix and manual fallback",
+    "Offline US ZIP/ZIP+4, cities/coordinates and Photon online place/address search",
+    "Viewport-only cached OSM tiles, pan/pinch, accessible controls and dropped pins",
+    "Nearby gas/hotels/restaurants/cafes/groceries/pharmacy/parking/EV search",
+    "Named bookmarks and saved route snapshots, rename/delete and recovery",
+    "Drive/walk/cycle routes with geometry, metrics and instruction list",
+    "Units/radius/cache controls, Help and visible source credits"
+  ],
+  "validation": {
+    "focused_unique_passed": 6,
+    "cases": [
+      {
+        "class": "app.onklav.home.MapsAppHostTest",
+        "case": "offlineZipCityAndCoordinatesAreUsefulWithoutNetwork",
+        "evidence": "intermediate-TEST-app.onklav.home.MapsAppHostTest.xml"
+      },
+      {
+        "class": "app.onklav.home.MapsAppHostTest",
+        "case": "projectionGesturesAndDatelineFitStayFinite",
+        "evidence": "intermediate-TEST-app.onklav.home.MapsAppHostTest.xml"
+      },
+      {
+        "class": "app.onklav.home.MapsAppHostTest",
+        "case": "realProviderPlacesAndAllTravelModesParse",
+        "evidence": "initial-TEST-app.onklav.home.MapsAppHostTest.xml"
+      },
+      {
+        "class": "app.onklav.home.MapsAppHostTest",
+        "case": "requestsStayOnDeclaredProvidersAndUseExplicitQueries",
+        "evidence": "initial-TEST-app.onklav.home.MapsAppHostTest.xml"
+      },
+      {
+        "class": "app.onklav.home.MapsAppHostTest",
+        "case": "savedNamesRoutesRecoveryAndGrantsUseTheSignedApp",
+        "evidence": "initial-TEST-app.onklav.home.MapsAppHostTest.xml"
+      },
+      {
+        "class": "app.onklav.home.MapsAppUiTest",
+        "case": "zipBookmarksRenamingAndSavedDirectionsAreReachable",
+        "evidence": "intermediate-TEST-app.onklav.home.MapsAppUiTest.xml"
+      }
+    ],
+    "lint_errors": 0,
+    "lint_severities": {
+      "Warning": 203,
+      "Information": 1
+    },
+    "runtime_classes_matched": 127,
+    "signed_included_apps": 20,
+    "native": "unchanged; source-matched JNI retained",
+    "visual_review": "Themed native direction/map screenshots inspected. Map screen uses one explicitly injected real OSM fixture tile, not full live network coverage. No screenshots included in source deliverable.",
+    "ui": "Folder/bookmarks, rename, saved directions rename/reopen, ZIP search, actual raster drawing, new-place centering clears stale route, and revocation hide passed",
+    "public_https_checks": {
+      "nearby_gas_results": 20,
+      "routes": {
+        "Drive": {
+          "code": "Ok",
+          "metres": 2094.2,
+          "seconds": 203.6
+        },
+        "Walk": {
+          "code": "Ok",
+          "metres": 2062.1,
+          "seconds": 1650
+        },
+        "Cycle": {
+          "code": "Ok",
+          "metres": 2098.6,
+          "seconds": 600.5
+        }
+      },
+      "tile_status": 200,
+      "tile_cache_headers": {
+        "etag": "\"3dbb37b14df3b2499666fed172cb5fcf\"",
+        "cache-control": "max-age=15788, stale-while-revalidate=604800, stale-if-error=604800",
+        "expires": "Tue, 27 Oct 2026 02:45:03 GMT",
+        "content-type": "image/png"
+      },
+      "scope": "Public Nashville samples via build environment HTTPS; not Android native-client or phone qualification"
+    },
+    "apk": "Included in user-requested OnKlav0.95.0-maps1/code103 ARM64 debug APK; original signer, source-matched native/20included apps, ZIP integrity and16KiB alignment verified",
+    "phone_acceptance": "not performed; live GPS/provider permissions, native Android TLS/cache, touch/rotation, accessibility and sustained performance remain separate",
+    "apk_sha256": "0e9a0bde198f62db37b777464832cf66963486812acd25ac930726b4e8d08fc3"
+  },
+  "test_notes": [
+    "Initial Kotlin property/method setter clash fixed before successful compilation",
+    "Initial inverse projection wrapped longitude incorrectly; corrected and roundtrip/dateline checks passed",
+    "Modal text selectors were narrowed to editable controls to avoid duplicate bookmark text",
+    "Visual review found route fit overriding new search centering and missing standalone Surface; corrected, then UI regression asserted exact new-place coordinates and empty stale route",
+    "Roundabout entry/exit instructions do not invent a missing exit number; new cases passed",
+    "Generated unit-test cache cleared after transient Gradle binary-store error; final provider/UI and full lint succeeded",
+    "Passing backend cases retained across bounded selections; repeat runs add no unique checks"
+  ],
+  "limits": {
+    "routing": "Route preview/instructions, without voice navigation, traffic or auto-rerouting",
+    "offline": "Saved places and route snapshots; cached viewport tiles may be available; no offline-area/bulk tile download",
+    "providers": "Best-effort public services; fixed signed origins, no auto fallback to public Nominatim/OSRM demo/Overpass",
+    "bookmarks": 300,
+    "saved_routes": 50,
+    "saved_bytes": 12000000,
+    "tile_cache_bytes": 33554432,
+    "bitmap_lru_tiles": 64,
+    "route_response_bytes": 2000000
+  },
+  "evidence": "docs/evidence/v0.95.0",
+  "files_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/MapsData.kt": "cdd61e1ff8fea7c82f51f9e98426a44487ed1ee945b25563eab19b43ddcbd891",
+    "android/app/src/main/kotlin/app/onklav/home/MapsCanvas.kt": "9cdb7f57592afcf6ec04657724901949c9d0d5efffa548c24b424e87c70be09f",
+    "android/app/src/main/kotlin/app/onklav/home/MapsModel.kt": "81a285fec2ac61aa8a8d9fb3e39a0cf3ed60c1cf9d867547351bc55d81d0a9bb",
+    "android/app/src/main/kotlin/app/onklav/home/MapsScreen.kt": "d660cc977e8dcfcd7714c05f08bf0230dc801dda5aaa0d2882303683b7c10f48",
+    "sdk/packages/Maps.onklav-a": "f35cd1ed3df524d29fbb190ef0ab6ef9c8ff85c5c268df1cc9c7e8a9aef8260f",
+    "android/app/src/main/assets/maps/places.json": "abeb74d4b109921a09d44f7203949f1ab1e3444c60ea4fa2c316f491a7cc29d5"
+  }
+}

@@ -1,0 +1,45 @@
+4.7.2.stable.official.ed1daf0bf
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Started Project initialization (5 steps)[39m[0m
+[   0% ] [90m[1mfirst_scan_filesystem[22m | Scanning file structure...[39m[0m
+[  16% ] [90m[1mfirst_scan_filesystem[22m | Loading global class names...[39m[0m
+[  33% ] [90m[1mfirst_scan_filesystem[22m | Verifying GDExtensions...[39m[0m
+[  50% ] [90m[1mfirst_scan_filesystem[22m | Creating autoload scripts...[39m[0m
+[  66% ] [90m[1mfirst_scan_filesystem[22m | Initializing plugins...[39m[0m
+[  83% ] [90m[1mfirst_scan_filesystem[22m | Starting file scan...[39m[0m
+[92m[ DONE ][39m [1mfirst_scan_filesystem[22m
+[0m
+[   0% ] [90m[1mupdate_scripts_classes[22m | Started Registering global classes... (2 steps)[39m[0m
+[   0% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[  33% ] [90m[1mupdate_scripts_classes[22m | [39m[0m
+[92m[ DONE ][39m [1mupdate_scripts_classes[22m
+[0m
+[   0% ] [90m[1mloading_editor_layout[22m | Started Loading editor (5 steps)[39m[0m
+[   0% ] [90m[1mloading_editor_layout[22m | Loading editor layout...[39m[0m
+[  16% ] [90m[1mloading_editor_layout[22m | Loading docks...[39m[0m
+[92m[ DONE ][39m [1mloading_editor_layout[22m
+[0m
+Traceback (most recent call last):
+  File "/workspace/scratch/a3048c8ff972/restored/OnKlav/scripts/package_included_shroom.py", line 47, in <module>
+    main()
+  File "/workspace/scratch/a3048c8ff972/restored/OnKlav/scripts/package_included_shroom.py", line 22, in main
+    manifest = export_web(ROOT / "games/shroom", web, args.godot)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/a3048c8ff972/restored/OnKlav/developer/games/gamekit.py", line 176, in export_web
+    m=check(path,binary)
+      ^^^^^^^^^^^^^^^^^^
+  File "/workspace/scratch/a3048c8ff972/restored/OnKlav/developer/games/gamekit.py", line 137, in check
+    run([binary,'--headless','--path',path,'--script','res://tests.gd'])
+  File "/workspace/scratch/a3048c8ff972/restored/OnKlav/developer/games/gamekit.py", line 31, in run
+    if p.returncode or 'SCRIPT ERROR:' in p.stdout or 'ERROR:' in p.stdout:raise ValueError(p.stdout[-6000:]or'Engine command failed')
+                                                                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+ONKLAV_SESSION_READY
+OnKlav template: 3528 checks
+WARNING: 6 ObjectDB instances were leaked at exit (run with `--verbose` for details).
+   at: cleanup (core/object/object.cpp:2536)
+ERROR: 2 resources still in use at exit (run with --verbose for details).
+   at: clear (core/io/resource.cpp:822)
+

@@ -1,0 +1,47 @@
+[
+  {
+    "file": "speech-trial-work/samples/0-message.wav",
+    "transcription": "Hi, Charles. Your order is ready. Why would you like me to leave it at the workshop or bring it over tomorrow?",
+    "elapsed_seconds": 0.7345984579997094
+  },
+  {
+    "file": "speech-quality-work/samples/0-message.wav",
+    "transcription": "Hi, Charles. Your order is ready. Would you like me to leave it at the workshop or bring it over tomorrow?",
+    "elapsed_seconds": 0.5316287050000028
+  },
+  {
+    "file": "speech-quality-work/samples/1-message.wav",
+    "transcription": "Hi, Charles. Your order is ready. Would you like me to leave it at the workshop or bring it over tomorrow?",
+    "elapsed_seconds": 0.5754144100001213
+  },
+  {
+    "file": "speech-quality-work/samples/2-message.wav",
+    "transcription": "Hi, Charles. Your order is ready. Would you like me to leave it at the workshop or bring it over tomorrow?",
+    "elapsed_seconds": 0.5619244880008409
+  },
+  {
+    "file": "speech-quality-work/samples/3-message.wav",
+    "transcription": "Hi Charles, your order is ready. Would you like me to leave it at the workshop or bring it over tomorrow?",
+    "elapsed_seconds": 0.655170279000231
+  },
+  {
+    "file": "speech-quality-work/samples/4-message.wav",
+    "transcription": "Hi, Charles. Your order is ready. Would you like me to leave it at the workshop or bring it over tomorrow?",
+    "elapsed_seconds": 0.561801677999938
+  },
+  {
+    "file": "speech-quality-work/samples/5-message.wav",
+    "transcription": "Hi Charles, your order is ready. Would you like me to leave it at the workshop or bring it over tomorrow?",
+    "elapsed_seconds": 0.6255372360001275
+  },
+  {
+    "file": "speech-quality-work/samples/6-message.wav",
+    "transcription": "Hi Charles, your order is ready. Would you like me to leave it at the workshop or bring it over tomorrow?",
+    "elapsed_seconds": 0.536639517000367
+  },
+  {
+    "file": "speech-quality-work/samples/7-message.wav",
+    "transcription": "Hi Charles, your order is ready. Would you like me to leave it at the workshop or bring it over tomorrow?",
+    "elapsed_seconds": 0.5525249310003346
+  }
+]

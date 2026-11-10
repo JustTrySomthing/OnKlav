@@ -1,0 +1,42 @@
+[
+  {
+    "viewport": [
+      320,
+      640
+    ],
+    "drag_hides_dock_ship": true,
+    "shell_flight": true,
+    "original_fire_hit_miss_sink_plus_flight_audio": true,
+    "purple_loading_css": true,
+    "new_music_rms": 0.02431511978907414,
+    "shell_flight_rms": 0.05249742015872394,
+    "unboxed_report_above_board": true,
+    "longer_readable_results": true,
+    "incoming_automatically_shows_own_fleet": true,
+    "red_sunk_ship_geometry": true,
+    "centered_miss_hit_sunk_destroyed_banners": true,
+    "pause_freezes_presentation_and_audio": true,
+    "saved_return_preserves_wrecks": true,
+    "engine_errors": []
+  },
+  {
+    "viewport": [
+      432,
+      800
+    ],
+    "drag_hides_dock_ship": true,
+    "shell_flight": true,
+    "original_fire_hit_miss_sink_plus_flight_audio": true,
+    "purple_loading_css": true,
+    "new_music_rms": 0.010989749943878477,
+    "shell_flight_rms": 0.0367749619928827,
+    "unboxed_report_above_board": true,
+    "longer_readable_results": true,
+    "incoming_automatically_shows_own_fleet": true,
+    "red_sunk_ship_geometry": true,
+    "centered_miss_hit_sunk_destroyed_banners": true,
+    "pause_freezes_presentation_and_audio": true,
+    "saved_return_preserves_wrecks": true,
+    "engine_errors": []
+  }
+]

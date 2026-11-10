@@ -1,0 +1,26 @@
+test_catalog_covers_every_native_widget_and_shared_controller (__main__.Tools.test_catalog_covers_every_native_widget_and_shared_controller) ... ok
+test_failed_upgrade_rolls_back_developer_files (__main__.Tools.test_failed_upgrade_rolls_back_developer_files) ... ok
+test_invalid_author_identity_has_a_clear_error (__main__.Tools.test_invalid_author_identity_has_a_clear_error) ... ok
+test_portable_project_moves_and_verifies_without_author_key_setup (__main__.Tools.test_portable_project_moves_and_verifies_without_author_key_setup) ... Publisher key created. Keep it private and backed up.
+   Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/tmp/onklav-portable-r6jn4wzh/moved project 🐈/vendor/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/tmp/onklav-portable-r6jn4wzh/moved project 🐈/vendor/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-portable-r6jn4wzh/moved project 🐈)
+    Finished `release` profile [optimized] target(s) in 4.16s
+Created /tmp/onklav-verify-i9npmg7k/check.onklav-a
+ok
+test_portable_upgrade_keeps_a_backup_and_updates_the_lock (__main__.Tools.test_portable_upgrade_keeps_a_backup_and_updates_the_lock) ...     Updating crates.io index
+     Locking 1 package to latest compatible version
+    Updating onklav-ui v0.3.0 (/tmp/tmp66le21v6/project/vendor/developer/components) -> v0.4.0
+ok
+test_scenario_paths_handle_arrays_and_missing_fields (__main__.Tools.test_scenario_paths_handle_arrays_and_missing_fields) ... ok
+test_signed_minimum_and_icon_preflight_are_consistent (__main__.Tools.test_signed_minimum_and_icon_preflight_are_consistent) ... ok
+
+----------------------------------------------------------------------
+Ran 7 tests in 10.306s
+
+OK

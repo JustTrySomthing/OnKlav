@@ -1,0 +1,12 @@
+   Compiling jni-sys v0.3.1
+   Compiling jni v0.21.1
+   Compiling onklav-core v0.8.0 (/workspace/scratch/75acf774e3b8/recovered/OnKlav/core)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 9.29s
+     Running unittests src/lib.rs (core/target/debug/deps/onklav_core-8a579202944a8eae)
+
+running 2 tests
+test sdk_places::tests::offline_world_search_and_coordinates ... ok
+test sdk_places::postal_tests::us_zip_lookup_is_offline_preserves_zeroes_and_accepts_zip_plus_four ... ok
+
+test result: ok. 2 passed; 0 failed; 0 ignored; 0 measured; 280 filtered out; finished in 0.55s
+

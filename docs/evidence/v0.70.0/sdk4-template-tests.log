@@ -1,0 +1,147 @@
+Publisher key created. Keep it private and backed up.
+test_each_public_template_compiles_launches_and_runs_its_declared_scenario (__main__.Templates.test_each_public_template_compiles_launches_and_runs_its_declared_scenario) ...    Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/tmp/onklav-components-stdhr87b/document/vendor/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/tmp/onklav-components-stdhr87b/document/vendor/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-components-stdhr87b/document)
+    Finished `release` profile [optimized] target(s) in 4.49s
+Created /tmp/onklav-components-stdhr87b/document/dist/org.example.document-v1.onklav-a
+   Compiling zmij v1.0.23
+   Compiling serde_core v1.0.229
+   Compiling serde_json v1.0.154
+   Compiling memchr v2.8.3
+   Compiling itoa v1.0.18
+   Compiling onklav-app v0.1.0 (/tmp/onklav-components-stdhr87b/list/vendor/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/tmp/onklav-components-stdhr87b/list/vendor/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-components-stdhr87b/list)
+    Finished `release` profile [optimized] target(s) in 4.11s
+Created /tmp/onklav-components-stdhr87b/list/dist/org.example.list-v1.onklav-a
+   Compiling zmij v1.0.23
+   Compiling serde_core v1.0.229
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/tmp/onklav-components-stdhr87b/form/vendor/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/tmp/onklav-components-stdhr87b/form/vendor/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-components-stdhr87b/form)
+    Finished `release` profile [optimized] target(s) in 4.43s
+Created /tmp/onklav-components-stdhr87b/form/dist/org.example.form-v1.onklav-a
+   Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/tmp/onklav-components-stdhr87b/settings/vendor/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/tmp/onklav-components-stdhr87b/settings/vendor/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-components-stdhr87b/settings)
+    Finished `release` profile [optimized] target(s) in 3.94s
+Created /tmp/onklav-components-stdhr87b/settings/dist/org.example.settings-v1.onklav-a
+   Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling serde_json v1.0.154
+   Compiling memchr v2.8.3
+   Compiling itoa v1.0.18
+   Compiling onklav-app v0.1.0 (/tmp/onklav-components-stdhr87b/files/vendor/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/tmp/onklav-components-stdhr87b/files/vendor/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-components-stdhr87b/files)
+    Finished `release` profile [optimized] target(s) in 4.06s
+Created /tmp/onklav-components-stdhr87b/files/dist/org.example.files-v1.onklav-a
+   Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/tmp/onklav-components-stdhr87b/viewer/vendor/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/tmp/onklav-components-stdhr87b/viewer/vendor/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-components-stdhr87b/viewer)
+    Finished `release` profile [optimized] target(s) in 4.44s
+Created /tmp/onklav-components-stdhr87b/viewer/dist/org.example.viewer-v1.onklav-a
+   Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/tmp/onklav-components-stdhr87b/notes/vendor/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/tmp/onklav-components-stdhr87b/notes/vendor/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-components-stdhr87b/notes)
+    Finished `release` profile [optimized] target(s) in 3.96s
+Created /tmp/onklav-components-stdhr87b/notes/dist/org.example.notes-v1.onklav-a
+   Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/tmp/onklav-components-stdhr87b/rss/vendor/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/tmp/onklav-components-stdhr87b/rss/vendor/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-components-stdhr87b/rss)
+    Finished `release` profile [optimized] target(s) in 4.36s
+Created /tmp/onklav-components-stdhr87b/rss/dist/org.example.rss-v1.onklav-a
+   Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/tmp/onklav-components-stdhr87b/reader/vendor/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/tmp/onklav-components-stdhr87b/reader/vendor/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-components-stdhr87b/reader)
+    Finished `release` profile [optimized] target(s) in 3.92s
+Created /tmp/onklav-components-stdhr87b/reader/dist/org.example.reader-v1.onklav-a
+   Compiling zmij v1.0.23
+   Compiling serde_core v1.0.229
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/tmp/onklav-components-stdhr87b/browser/vendor/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/tmp/onklav-components-stdhr87b/browser/vendor/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-components-stdhr87b/browser)
+    Finished `release` profile [optimized] target(s) in 4.07s
+Created /tmp/onklav-components-stdhr87b/browser/dist/org.example.browser-v1.onklav-a
+   Compiling zmij v1.0.23
+   Compiling serde_core v1.0.229
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/tmp/onklav-components-stdhr87b/youtube/vendor/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/tmp/onklav-components-stdhr87b/youtube/vendor/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-components-stdhr87b/youtube)
+    Finished `release` profile [optimized] target(s) in 4.02s
+Created /tmp/onklav-components-stdhr87b/youtube/dist/org.example.youtube-v1.onklav-a
+   Compiling zmij v1.0.23
+   Compiling serde_core v1.0.229
+   Compiling serde_json v1.0.154
+   Compiling memchr v2.8.3
+   Compiling itoa v1.0.18
+   Compiling onklav-app v0.1.0 (/tmp/onklav-components-stdhr87b/annotation/vendor/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/tmp/onklav-components-stdhr87b/annotation/vendor/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-components-stdhr87b/annotation)
+    Finished `release` profile [optimized] target(s) in 3.81s
+Created /tmp/onklav-components-stdhr87b/annotation/dist/org.example.annotation-v1.onklav-a
+   Compiling zmij v1.0.23
+   Compiling serde_core v1.0.229
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/tmp/onklav-components-stdhr87b/social/vendor/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/tmp/onklav-components-stdhr87b/social/vendor/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-components-stdhr87b/social)
+    Finished `release` profile [optimized] target(s) in 3.56s
+Created /tmp/onklav-components-stdhr87b/social/dist/org.example.social-v1.onklav-a
+   Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling serde_json v1.0.154
+   Compiling memchr v2.8.3
+   Compiling itoa v1.0.18
+   Compiling onklav-app v0.1.0 (/tmp/onklav-components-stdhr87b/walkie/vendor/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/tmp/onklav-components-stdhr87b/walkie/vendor/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-components-stdhr87b/walkie)
+    Finished `release` profile [optimized] target(s) in 3.84s
+Created /tmp/onklav-components-stdhr87b/walkie/dist/org.example.walkie-v1.onklav-a
+ok
+
+----------------------------------------------------------------------
+Ran 1 test in 69.901s
+
+OK

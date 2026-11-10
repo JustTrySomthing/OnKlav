@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.PhotoEffectsTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-10-29T13:55:08" hostname="3d3a46c2e56a" time="11.209">
+  <properties/>
+  <testcase name="threeLooksHaveDistinctGradingAndRemovedLooksAreNeutral" classname="app.onklav.home.PhotoEffectsTest" time="6.715"/>
+  <testcase name="hdrAddsStructureWithoutLiftingBlacksOrWashingTonalRange" classname="app.onklav.home.PhotoEffectsTest" time="0.394"/>
+  <testcase name="hdrStrengthHasClearlyVisibleRangeWithoutGlobalBrightnessLift" classname="app.onklav.home.PhotoEffectsTest" time="0.342"/>
+  <testcase name="powerfulHdrDoesNotTurnFineGrainIntoTexture" classname="app.onklav.home.PhotoEffectsTest" time="0.209"/>
+  <testcase name="portraitAndScenicHdrStrengthContactSheet" classname="app.onklav.home.PhotoEffectsTest" time="2.353"/>
+  <testcase name="renderedLookContactSheet" classname="app.onklav.home.PhotoEffectsTest" time="1.091"/>
+  <testcase name="hdrDoesNotDrawHalosAroundHardEdges" classname="app.onklav.home.PhotoEffectsTest" time="0.056"/>
+  <testcase name="sharpeningHasVisibleStrengthWithoutChangingFlatAreasOrAlpha" classname="app.onklav.home.PhotoEffectsTest" time="0.048"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

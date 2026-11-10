@@ -1,0 +1,6 @@
+{
+  "fallback_sha256": "3fcaf6e559060152da5e62145fecb26ecddd147a48e0598afa98364fa3bfef08",
+  "fallback_matches_current_host_jni": true,
+  "old_cache_host_sha256": "1be0aba0aeaec21879c9bd0bb943d382ed943e58d2dbed85540c134f259295a5",
+  "full_cache_reextraction_this_turn": false
+}

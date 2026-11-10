@@ -1,0 +1,20 @@
+   Compiling onklav-core v0.8.0 (/workspace/scratch/75acf774e3b8/work/OnKlav/core)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 10.53s
+     Running unittests src/lib.rs (core/target/debug/deps/onklav_core-8a579202944a8eae)
+
+running 6 tests
+test sdk_http::tests::wrap_upload_request_rejects_paths_mixed_bodies_and_non_post ... ok
+test sdk_mime::tests::wrap_mime_rejects_ambiguous_paths_padding_and_depth ... ok
+test sdk_mime::tests::wrap_mime_decodes_multipart_and_never_renders_html ... ok
+test sdk_map_cache::tests::wrap_viewport_cache_wraps_and_deduplicates_world_edges ... ok
+test sdk::tests::wrap_map_callbacks_are_owned_bounded_and_non_gestural ... ok
+test sdk::tests::wrap_upload_live_authorization_resolves_only_owned_private_files ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 256 filtered out; finished in 0.53s
+
+     Running unittests src/bin/onklav-pack.rs (core/target/debug/deps/onklav_pack-ee23dc4255ec4a6b)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

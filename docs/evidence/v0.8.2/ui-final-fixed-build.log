@@ -1,0 +1,179 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.11.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :android:app
+WARNING: The option setting 'android.aapt2FromMavenOverride=/workspace/scratch/39f240a7e5bd/android-sdk/build-tools/35.0.0/aapt2' is experimental.
+WARNING: BuildType 'debug' is both debuggable and has 'isMinifyEnabled' set to true.
+All code optimizations and obfuscation are disabled for debuggable builds.
+
+> Task :android:app:preBuild UP-TO-DATE
+> Task :android:app:preDebugBuild UP-TO-DATE
+> Task :android:app:mergeDebugNativeDebugMetadata NO-SOURCE
+> Task :android:app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:games:preBuild UP-TO-DATE
+> Task :android:games:preDebugBuild UP-TO-DATE
+> Task :android:games:writeDebugAarMetadata UP-TO-DATE
+> Task :android:shared:preBuild UP-TO-DATE
+> Task :android:shared:preDebugBuild UP-TO-DATE
+> Task :android:shared:writeDebugAarMetadata UP-TO-DATE
+> Task :android:tools:preBuild UP-TO-DATE
+> Task :android:tools:preDebugBuild UP-TO-DATE
+> Task :android:tools:writeDebugAarMetadata UP-TO-DATE
+> Task :android:app:checkDebugAarMetadata UP-TO-DATE
+> Task :android:app:generateDebugResValues UP-TO-DATE
+> Task :android:games:generateDebugResValues UP-TO-DATE
+> Task :android:games:generateDebugResources UP-TO-DATE
+> Task :android:games:packageDebugResources UP-TO-DATE
+> Task :android:shared:generateDebugResValues UP-TO-DATE
+> Task :android:shared:generateDebugResources UP-TO-DATE
+> Task :android:shared:packageDebugResources UP-TO-DATE
+> Task :android:tools:generateDebugResValues UP-TO-DATE
+> Task :android:tools:generateDebugResources UP-TO-DATE
+> Task :android:tools:packageDebugResources UP-TO-DATE
+> Task :android:app:mapDebugSourceSetPaths UP-TO-DATE
+> Task :android:app:generateDebugResources UP-TO-DATE
+> Task :android:app:mergeDebugResources UP-TO-DATE
+> Task :android:app:packageDebugResources UP-TO-DATE
+> Task :android:app:parseDebugLocalResources UP-TO-DATE
+> Task :android:app:createDebugCompatibleScreenManifests UP-TO-DATE
+> Task :android:app:extractDeepLinksDebug UP-TO-DATE
+> Task :android:games:extractDeepLinksDebug UP-TO-DATE
+> Task :android:games:processDebugManifest UP-TO-DATE
+> Task :android:shared:extractDeepLinksDebug UP-TO-DATE
+> Task :android:shared:processDebugManifest UP-TO-DATE
+> Task :android:tools:extractDeepLinksDebug UP-TO-DATE
+> Task :android:tools:processDebugManifest UP-TO-DATE
+> Task :android:app:processDebugMainManifest UP-TO-DATE
+> Task :android:app:processDebugManifest UP-TO-DATE
+> Task :android:app:processDebugManifestForPackage UP-TO-DATE
+> Task :android:games:compileDebugLibraryResources UP-TO-DATE
+> Task :android:games:parseDebugLocalResources UP-TO-DATE
+> Task :android:games:generateDebugRFile UP-TO-DATE
+> Task :android:shared:compileDebugLibraryResources UP-TO-DATE
+> Task :android:shared:parseDebugLocalResources UP-TO-DATE
+> Task :android:shared:generateDebugRFile UP-TO-DATE
+> Task :android:tools:compileDebugLibraryResources UP-TO-DATE
+> Task :android:tools:parseDebugLocalResources UP-TO-DATE
+> Task :android:tools:generateDebugRFile UP-TO-DATE
+> Task :android:app:processDebugResources UP-TO-DATE
+> Task :android:games:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:games:compileDebugKotlin UP-TO-DATE
+> Task :android:games:javaPreCompileDebug UP-TO-DATE
+> Task :android:games:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:games:bundleLibCompileToJarDebug UP-TO-DATE
+> Task :android:shared:checkKotlinGradlePluginConfigurationErrors SKIPPED
+
+> Task :android:shared:compileDebugKotlin
+w: file:///workspace/scratch/39f240a7e5bd/project/OnKlav-Rewrite/android/shared/src/main/kotlin/app/onklav/shared/AppearanceDialog.kt:183:50 'val Icons.Outlined.HelpOutline: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Outlined.HelpOutline.
+w: file:///workspace/scratch/39f240a7e5bd/project/OnKlav-Rewrite/android/shared/src/main/kotlin/app/onklav/shared/Chrome.kt:239:24 'var statusBarColor: Int' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/39f240a7e5bd/project/OnKlav-Rewrite/android/shared/src/main/kotlin/app/onklav/shared/Chrome.kt:240:24 'var navigationBarColor: Int' is deprecated. Deprecated in Java.
+
+> Task :android:shared:javaPreCompileDebug UP-TO-DATE
+> Task :android:shared:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:shared:bundleLibCompileToJarDebug
+> Task :android:tools:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:tools:compileDebugKotlin UP-TO-DATE
+> Task :android:tools:javaPreCompileDebug UP-TO-DATE
+> Task :android:tools:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:tools:bundleLibCompileToJarDebug UP-TO-DATE
+
+> Task :android:app:compileDebugKotlin
+w: file:///workspace/scratch/39f240a7e5bd/project/OnKlav-Rewrite/android/app/src/main/kotlin/app/onklav/home/MainActivity.kt:60:58 'val Icons.Outlined.VolumeUp: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Outlined.VolumeUp.
+w: file:///workspace/scratch/39f240a7e5bd/project/OnKlav-Rewrite/android/app/src/main/kotlin/app/onklav/home/MainActivity.kt:229:60 'val Icons.Outlined.Send: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Outlined.Send.
+w: file:///workspace/scratch/39f240a7e5bd/project/OnKlav-Rewrite/android/app/src/main/kotlin/app/onklav/home/SettingsPane.kt:25:40 'val Icons.Outlined.VolumeUp: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Outlined.VolumeUp.
+w: file:///workspace/scratch/39f240a7e5bd/project/OnKlav-Rewrite/android/app/src/main/kotlin/app/onklav/home/SettingsPane.kt:33:34 'val Icons.Outlined.HelpOutline: ImageVector' is deprecated. Use the AutoMirrored version at Icons.AutoMirrored.Outlined.HelpOutline.
+
+> Task :android:app:javaPreCompileDebug UP-TO-DATE
+> Task :android:app:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:app:mergeDebugShaders UP-TO-DATE
+> Task :android:app:compileDebugShaders NO-SOURCE
+> Task :android:app:generateDebugAssets UP-TO-DATE
+> Task :android:games:mergeDebugShaders UP-TO-DATE
+> Task :android:games:compileDebugShaders NO-SOURCE
+> Task :android:games:generateDebugAssets UP-TO-DATE
+> Task :android:games:mergeDebugAssets UP-TO-DATE
+> Task :android:shared:mergeDebugShaders UP-TO-DATE
+> Task :android:shared:compileDebugShaders NO-SOURCE
+> Task :android:shared:generateDebugAssets UP-TO-DATE
+> Task :android:shared:mergeDebugAssets UP-TO-DATE
+> Task :android:tools:mergeDebugShaders UP-TO-DATE
+> Task :android:tools:compileDebugShaders NO-SOURCE
+> Task :android:tools:generateDebugAssets UP-TO-DATE
+> Task :android:tools:mergeDebugAssets UP-TO-DATE
+> Task :android:app:mergeDebugAssets UP-TO-DATE
+> Task :android:app:compressDebugAssets UP-TO-DATE
+> Task :android:tools:mergeDebugGeneratedProguardFiles UP-TO-DATE
+> Task :android:tools:exportDebugConsumerProguardFiles UP-TO-DATE
+> Task :android:shared:mergeDebugGeneratedProguardFiles UP-TO-DATE
+> Task :android:shared:exportDebugConsumerProguardFiles UP-TO-DATE
+> Task :android:games:mergeDebugGeneratedProguardFiles UP-TO-DATE
+> Task :android:games:exportDebugConsumerProguardFiles UP-TO-DATE
+> Task :android:app:checkDebugDuplicateClasses UP-TO-DATE
+> Task :android:app:extractProguardFiles UP-TO-DATE
+> Task :android:app:mergeDebugGeneratedProguardFiles UP-TO-DATE
+> Task :android:app:processDebugJavaRes UP-TO-DATE
+> Task :android:games:processDebugJavaRes UP-TO-DATE
+> Task :android:shared:processDebugJavaRes UP-TO-DATE
+> Task :android:tools:processDebugJavaRes UP-TO-DATE
+> Task :android:app:mergeDebugJavaResource UP-TO-DATE
+> Task :android:games:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :android:shared:bundleLibRuntimeToJarDebug
+> Task :android:tools:bundleLibRuntimeToJarDebug UP-TO-DATE
+> Task :android:app:minifyDebugWithR8
+> Task :android:app:mergeDebugJniLibFolders UP-TO-DATE
+> Task :android:games:mergeDebugJniLibFolders UP-TO-DATE
+> Task :android:games:mergeDebugNativeLibs NO-SOURCE
+> Task :android:games:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :android:shared:mergeDebugJniLibFolders UP-TO-DATE
+> Task :android:shared:mergeDebugNativeLibs UP-TO-DATE
+> Task :android:shared:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :android:tools:mergeDebugJniLibFolders UP-TO-DATE
+> Task :android:tools:mergeDebugNativeLibs NO-SOURCE
+> Task :android:tools:copyDebugJniLibsProjectOnly UP-TO-DATE
+> Task :android:app:mergeDebugNativeLibs UP-TO-DATE
+> Task :android:app:stripDebugDebugSymbols UP-TO-DATE
+> Task :android:app:validateSigningDebug UP-TO-DATE
+> Task :android:app:writeDebugAppMetadata UP-TO-DATE
+> Task :android:app:writeDebugSigningConfigVersions UP-TO-DATE
+> Task :android:app:packageDebug
+> Task :android:app:createDebugApkListingFileRedirect UP-TO-DATE
+> Task :android:app:assembleDebug
+> Task :android:app:bundleDebugClassesToCompileJar
+> Task :android:app:preDebugAndroidTestBuild SKIPPED
+> Task :android:app:checkDebugAndroidTestAarMetadata UP-TO-DATE
+> Task :android:app:generateDebugAndroidTestResValues UP-TO-DATE
+> Task :android:app:mapDebugAndroidTestSourceSetPaths UP-TO-DATE
+> Task :android:app:generateDebugAndroidTestResources UP-TO-DATE
+> Task :android:app:mergeDebugAndroidTestResources UP-TO-DATE
+> Task :android:app:processDebugAndroidTestManifest UP-TO-DATE
+> Task :android:app:processDebugAndroidTestResources UP-TO-DATE
+> Task :android:app:compileDebugAndroidTestKotlin
+> Task :android:app:javaPreCompileDebugAndroidTest UP-TO-DATE
+> Task :android:app:compileDebugAndroidTestJavaWithJavac NO-SOURCE
+> Task :android:app:mergeDebugAndroidTestShaders UP-TO-DATE
+> Task :android:app:compileDebugAndroidTestShaders NO-SOURCE
+> Task :android:app:generateDebugAndroidTestAssets UP-TO-DATE
+> Task :android:app:mergeDebugAndroidTestAssets UP-TO-DATE
+> Task :android:app:compressDebugAndroidTestAssets UP-TO-DATE
+> Task :android:app:checkDebugAndroidTestDuplicateClasses UP-TO-DATE
+> Task :android:app:processDebugAndroidTestJavaRes UP-TO-DATE
+> Task :android:app:mergeDebugAndroidTestJavaResource UP-TO-DATE
+> Task :android:app:minifyDebugAndroidTestWithR8
+> Task :android:app:mergeDebugAndroidTestJniLibFolders UP-TO-DATE
+> Task :android:app:mergeDebugAndroidTestNativeLibs NO-SOURCE
+> Task :android:app:stripDebugAndroidTestDebugSymbols NO-SOURCE
+> Task :android:app:validateSigningDebugAndroidTest UP-TO-DATE
+> Task :android:app:writeDebugAndroidTestSigningConfigVersions UP-TO-DATE
+> Task :android:app:packageDebugAndroidTest
+> Task :android:app:createDebugAndroidTestApkListingFileRedirect UP-TO-DATE
+> Task :android:app:assembleDebugAndroidTest
+> Task :android:shared:preDebugUnitTestBuild UP-TO-DATE
+> Task :android:shared:generateDebugUnitTestStubRFile UP-TO-DATE
+> Task :android:shared:compileDebugUnitTestKotlin UP-TO-DATE
+> Task :android:shared:javaPreCompileDebugUnitTest UP-TO-DATE
+> Task :android:shared:compileDebugUnitTestJavaWithJavac NO-SOURCE
+> Task :android:shared:processDebugUnitTestJavaRes UP-TO-DATE
+> Task :android:shared:testDebugUnitTest
+
+BUILD SUCCESSFUL in 2m 9s
+120 actionable tasks: 11 executed, 109 up-to-date

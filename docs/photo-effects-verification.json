@@ -1,0 +1,55 @@
+{
+  "status": "source complete; no new APK requested or assembled",
+  "latest_delivered_apk": "0.100.6/code115",
+  "validation": {
+    "focused_unique_passed": 10,
+    "suites": [
+      {
+        "class": "PhotoEffectsTest",
+        "tests": 5,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "scope": "Final rendering code"
+      },
+      {
+        "class": "PhotoEditorHostTest",
+        "tests": 4,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "scope": "Final rendering code"
+      },
+      {
+        "class": "PhotoEditorUiTest",
+        "tests": 1,
+        "failures": 0,
+        "errors": 0,
+        "skipped": 0,
+        "scope": "Passed before final pixel-only halo refinement; UI unchanged"
+      }
+    ],
+    "runtime_classes_match_compilation": 2841,
+    "native_signed_apps_games_current": true,
+    "visual_review": "docs/evidence/image-editor-effects/effects-contact-sheet.png",
+    "fixture_note": "Controlled generated scene; natural-photo/phone visual acceptance not performed",
+    "lint": "Not rerun; prior full-release lint remains incomplete"
+  },
+  "features": [
+    "Luminance-guided HDR local contrast with endpoint-preserving tone curve, shadow noise gate and strong-edge halo suppression",
+    "Adaptive-radius stronger luminance sharpening, thresholded and bounded with original-row/alpha-aware sampling",
+    "Independent strength sliders for Teal & Orange, Dark & Moody, Film Noir and Retro Technicolor",
+    "Existing default marks, reset, undo and private draft persistence apply to all new strengths",
+    "Zero strengths preserve neutral rendering; transparency and geometry remain supported"
+  ],
+  "limits": [
+    "SDR HDR-style effect; no HDR-format export or recovery of missing sensor data",
+    "Strength at zero is off; all looks remain optional and blendable",
+    "Physical phone performance and subjective visual acceptance remain open"
+  ],
+  "evidence": [
+    "docs/evidence/image-editor-effects/initial-android-check.log",
+    "docs/evidence/image-editor-effects/final-android-check.log"
+  ],
+  "visual_refinement": "Initial passing synthetic tests did not expose prominent hard-edge halos in contact-sheet review. Added edge gating and tighter sharpening correction; final hard-edge regression, contrast/strength/alpha checks and contact-sheet review passed."
+}

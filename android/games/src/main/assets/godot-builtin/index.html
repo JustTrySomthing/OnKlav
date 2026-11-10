@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0">
+		<title>OnKlav Games</title>
+		<style>
+html, body, #canvas {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+
+body {
+	color: white;
+	background-color: black;
+	overflow: hidden;
+	touch-action: none;
+}
+
+#canvas {
+	display: block;
+}
+
+#canvas:focus {
+	outline: none;
+}
+
+#status, #status-splash, #status-progress {
+	position: absolute;
+	left: 0;
+	right: 0;
+}
+
+#status, #status-splash {
+	top: 0;
+	bottom: 0;
+}
+
+#status {
+	background-color: #603d77;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	visibility: hidden;
+}
+
+#status-splash {
+	max-height: 100%;
+	max-width: 100%;
+	margin: auto;
+}
+
+#status-splash.show-image--false {
+	display: none;
+}
+
+#status-splash.fullsize--true {
+	height: 100%;
+	width: 100%;
+	object-fit: contain;
+}
+
+#status-splash.use-filter--false {
+	image-rendering: pixelated;
+}
+
+#status-progress, #status-notice {
+	display: none;
+}
+
+#status-progress {
+	bottom: 10%;
+	width: 50%;
+	margin: 0 auto;
+}
+
+#status-notice {
+	background-color: #5b3943;
+	border-radius: 0.5rem;
+	border: 1px solid #9b3943;
+	color: #e0e0e0;
+	font-family: 'Noto Sans', 'Droid Sans', Arial, sans-serif;
+	line-height: 1.3;
+	margin: 0 2rem;
+	overflow: hidden;
+	padding: 1rem;
+	text-align: center;
+	z-index: 1;
+}
+		/* ONKLAV_LOADING_THEME_BEGIN */
+/* Canonical OnKlav Games entrance. Transform/opacity-only motion; true byte progress. */
+body { background: #603D77; }
+#status {
+  position:fixed; inset:0; z-index:10; overflow:hidden; visibility:visible;
+  color:#fff; background:#603D77;
+  background-image:radial-gradient(ellipse at 50% 44%,#80549455 0,transparent 62%);
+  font-family:system-ui,-apple-system,"Segoe UI",sans-serif;
+  transition:opacity .22s ease; isolation:isolate;
+}
+#status::before { content:""; position:absolute; width:min(85vw,620px); height:38%; left:50%; top:42%; transform:translateX(-50%); background:radial-gradient(ellipse at 50% 0,#f1cbff10,transparent 66%); pointer-events:none; }
+#status-splash { display:none; }
+#onklav-brand { position:absolute; width:min(52vw,224px); left:50%; top:43%; transform:translate(-50%,-50%); text-align:center; perspective:800px; }
+.onklav-logo { width:min(44vw,188px); margin:auto; position:relative; filter:drop-shadow(0 16px 24px #29133645); animation:onklav-arrive 1.35s both,onklav-idle 3.2s ease-in-out 1.65s infinite; will-change:transform,opacity; }
+.onklav-logo svg { display:block; width:100%; height:auto; overflow:visible; }
+.onklav-horizon { position:absolute; width:180%; height:26%; left:-40%; top:73%; border-radius:50%; background:radial-gradient(ellipse,#f1d0ff40,transparent 68%); transform:scale(.15); opacity:0; animation:onklav-horizon 1.5s both; }
+.onklav-word { margin-top:26px; font-weight:500; font-size:clamp(26px,7vw,34px); line-height:1.3; white-space:nowrap; letter-spacing:.18em; padding-left:.18em; }
+.onklav-word span { display:inline-block; opacity:0; animation:onklav-letter .44s cubic-bezier(.2,.8,.25,1) both; animation-delay:calc(.92s + var(--letter)*.065s); }
+#onklav-loading { position:absolute; z-index:2; bottom:max(10%,32px); bottom:max(10%,calc(24px + env(safe-area-inset-bottom))); width:min(72vw,288px); left:50%; transform:translateX(-50%); }
+.onklav-loading-copy { display:flex; justify-content:space-between; align-items:baseline; gap:12px; margin-bottom:12px; color:#f7ebff; font-size:13px; font-weight:500; letter-spacing:.025em; line-height:1.5; font-variant-numeric:tabular-nums; }
+#onklav-loading-percent { color:#fff; font-weight:700; }
+.onklav-track { height:8px; background:#2e163f88; box-shadow:inset 0 0 0 1px #ffffff12; border-radius:20px; overflow:hidden; position:relative; }
+#onklav-fill { position:absolute; inset:0; transform:scaleX(0); transform-origin:left; border-radius:20px; background:linear-gradient(90deg,#e2c3ff,#fff); box-shadow:0 0 12px #edceff80; transition:transform .24s cubic-bezier(.2,.7,.2,1); }
+.onklav-comet { position:absolute; inset:0; background:linear-gradient(90deg,transparent,#ffffff90,transparent); transform:translateX(-100%); animation:onklav-comet 1.4s ease-in-out infinite; }
+#status[data-determinate="true"] .onklav-comet { animation-duration:2.3s; opacity:.3; }
+#status-progress { opacity:0; pointer-events:none; width:min(72vw,288px); height:8px; bottom:10%; margin:0 auto; }
+#status-notice { position:relative; max-height:65vh; overflow:auto; width:min(78vw,360px); box-sizing:border-box; margin:auto; padding:22px; border:1px solid #ffffff40; background:#321b46f5; color:#fff; border-radius:18px; line-height:1.5; font-family:inherit; z-index:2; }
+#status.loader-error #onklav-loading { display:none; }
+#status.loader-error #onklav-brand { opacity:.12; }
+#status.loader-error * { animation:none!important; }
+#status.loader-leaving { opacity:0; pointer-events:none; }
+#status.loader-hidden * { animation-play-state:paused!important; }
+#status.onklav-custom { background:#603d77; }
+#status.onklav-custom #onklav-brand { display:none; }
+#status.onklav-custom #status-splash { display:block; }
+#status.onklav-custom #status-splash.show-image--false { display:none; }
+@keyframes onklav-arrive {
+  0% { transform:translateY(76px) scale(.035); opacity:0; }
+  12% { opacity:.7; }
+  56% { transform:translateY(-4px) scale(1.15); opacity:1; }
+  76% { transform:translateY(2px) scale(.945); }
+  91% { transform:translateY(-1px) scale(1.018); }
+  100% { transform:translateY(0) scale(1); opacity:1; }
+}
+@keyframes onklav-idle { 0%,100% { transform:translateY(0) scale(1); } 50% { transform:translateY(-2px) scale(1.008); } }
+@keyframes onklav-letter { from { transform:translateY(16px) scale(.94); opacity:0; } to { transform:translateY(0) scale(1); opacity:1; } }
+@keyframes onklav-horizon { 0%,8% { opacity:0; transform:scale(.15); } 45% { opacity:.6; transform:scale(.8); } 100% { opacity:0; transform:scale(1.2); } }
+@keyframes onklav-comet { to { transform:translateX(100%); } }
+#status.loader-reduced .onklav-logo { animation:none; transform:none; opacity:1; will-change:auto; }
+#status.loader-reduced .onklav-word span { animation:none; opacity:1; transform:none; }
+#status.loader-reduced .onklav-horizon,#status.loader-reduced .onklav-comet { animation:none; opacity:0; }
+#status.loader-reduced,#status.loader-reduced #onklav-fill { transition:none; }
+@media (prefers-reduced-motion:reduce) {
+  .onklav-logo,.onklav-word span { animation:none; opacity:1; transform:none; }
+  .onklav-horizon,.onklav-comet { animation:none; opacity:0; }
+  #status,#onklav-fill { transition:none; }
+}
+@media (max-height:420px) {
+  #onklav-brand { top:40%; width:160px; }
+  .onklav-logo { width:min(23vh,104px); }
+  .onklav-word { margin-top:12px; font-size:24px; }
+  #onklav-loading { bottom:22px; }
+}
+/* ONKLAV_LOADING_THEME_END */
+</style>
+		<link id="-gd-engine-icon" rel="icon" type="image/png" href="index.icon.png" />
+<link rel="apple-touch-icon" href="index.apple-touch-icon.png"/>
+
+	</head>
+	<body>
+		<canvas id="canvas">
+			Your browser does not support the canvas tag.
+		</canvas>
+
+		<noscript>
+			Your browser does not support JavaScript.
+		</noscript>
+
+		<div id="status">
+			<!-- ONKLAV_LOADER_DOM_BEGIN -->
+<div id="onklav-brand" role="img" aria-label="OnKlav Games"><div class="onklav-horizon" aria-hidden="true"></div><div class="onklav-logo"><svg xmlns="http://www.w3.org/2000/svg" viewBox="125 125 1280 1280" aria-hidden="true"><path fill="white" fill-rule="evenodd" d="M 770,144 C 1111,144 1383,419 1383,765 C 1383,1110 1108,1385 770,1385 C 629,1385 500,1337 392,1258 L 225,1337 Q 186,1355 195,1316 L 261,1120 C 191,1021 151,898 151,765 C 151,420 425,144 770,144 Z M 770,265 C 497,265 277,489 277,765 C 277,1043 497,1268 770,1268 C 1046,1268 1272,1043 1272,765 C 1272,489 1046,265 770,265 Z"/><path fill="white" fill-rule="evenodd" d="M 545,499 Q 603,450 680,426 L 680,1107 Q 602,1086 545,1033 Z"/><path fill="white" fill-rule="evenodd" d="M 680,766 L 1096,389 L 1190,461 L 843,776 L 1173,1084 L 1090,1160 L 680,803 Z"/></svg></div><div class="onklav-word" aria-hidden="true"><span style="--letter:0">G</span><span style="--letter:1">a</span><span style="--letter:2">m</span><span style="--letter:3">e</span><span style="--letter:4">s</span></div></div>
+<div id="onklav-loading" aria-hidden="true"><div class="onklav-loading-copy"><span id="onklav-loading-label">Getting ready</span><span id="onklav-loading-percent"></span></div><div class="onklav-track"><div id="onklav-fill"></div><div class="onklav-comet"></div></div></div>
+<!-- ONKLAV_LOADER_DOM_END -->
+<img id="status-splash" class="show-image--true fullsize--false use-filter--true" src="index.png" alt="">
+			<progress id="status-progress"></progress>
+			<div id="status-notice"></div>
+		</div>
+
+		<!-- ONKLAV_LOADER_SCRIPT_BEGIN -->
+<script>
+/* OnKlav loader: local assets only; sound is best-effort under browser autoplay rules. */
+(() => {
+  'use strict';
+  const screen=document.getElementById('status');
+  const fill=document.getElementById('onklav-fill');
+  const label=document.getElementById('onklav-loading-label');
+  const percent=document.getElementById('onklav-loading-percent');
+  const progress=document.getElementById('status-progress');
+  const started=performance.now();
+  const custom=!!document.querySelector('meta[name="onklav-loader"][content="custom"]');
+  let prefs={};
+  try { prefs=JSON.parse(localStorage.getItem('onklav-loader-preferences')||'{}')||{}; } catch (_) {}
+  const reduced=matchMedia('(prefers-reduced-motion:reduce)').matches||prefs.reduce_motion===true;
+  const volume=typeof prefs.volume==='number'&&Number.isFinite(prefs.volume)?Math.max(0,Math.min(1,prefs.volume)):.8;
+  screen.classList.toggle('onklav-custom',custom);
+  screen.classList.toggle('loader-reduced',reduced);
+  progress.setAttribute('aria-label','Loading game files');
+  let failed=false,leaving=false,context=null,played=false,closeTimer=0;
+  const intro=new Promise(resolve=>setTimeout(resolve,custom||reduced?0:1650));
+  function stopSound() {
+    clearTimeout(closeTimer);
+    if(context) { const closing=context; context=null; closing.close().catch(()=>{}); }
+  }
+  async function sound() {
+    if(played||failed||leaving||document.hidden||custom||prefs.muted===true||volume===0||performance.now()-started>1100)return;
+    const Audio=window.AudioContext||window.webkitAudioContext;
+    if(!Audio)return;
+    try {
+      if(!context)context=new Audio();
+      const current=context;
+      await current.resume();
+      if(current!==context||current.state!=='running'||failed||leaving||document.hidden||performance.now()-started>1100){stopSound();return;}
+      if(played)return;
+      played=true;
+      const now=current.currentTime;
+      const master=current.createGain();master.gain.value=.22*volume;master.connect(current.destination);
+      // Soft airborne sweep and a short resolving three-note shimmer; every voice has tapered edges.
+      const sweep=current.createOscillator(),env=current.createGain();sweep.type='sine';
+      sweep.frequency.setValueAtTime(145,now);sweep.frequency.exponentialRampToValueAtTime(520,now+.46);
+      env.gain.setValueAtTime(0,now);env.gain.linearRampToValueAtTime(.2,now+.08);env.gain.exponentialRampToValueAtTime(.001,now+.56);
+      sweep.connect(env).connect(master);sweep.start(now);sweep.stop(now+.58);
+      [523.251,783.991,1046.502].forEach((hz,i)=>{
+        const osc=current.createOscillator(),gain=current.createGain(),at=now+.5+i*.055;
+        osc.type='sine';osc.frequency.value=hz;
+        gain.gain.setValueAtTime(0,at);gain.gain.linearRampToValueAtTime(.25-i*.035,at+.018);gain.gain.exponentialRampToValueAtTime(.001,at+.48);
+        osc.connect(gain).connect(master);osc.start(at);osc.stop(at+.5);
+      });
+      closeTimer=setTimeout(stopSound,1400);
+    } catch (_) { stopSound(); }
+  }
+  const onPointer=()=>sound();
+  document.addEventListener('pointerdown',onPointer,{passive:true});
+  document.addEventListener('visibilitychange',()=>{
+    screen.classList.toggle('loader-hidden',document.hidden);
+    if(document.hidden)stopSound();
+  });
+  window.addEventListener('pagehide',stopSound,{once:true});
+  setTimeout(sound,100);
+  function cleanup() { stopSound();document.removeEventListener('pointerdown',onPointer); }
+  window.OnKlavLoader={
+    prepare(engine) {
+      const start=engine.start;
+      engine.start=function(...args) {
+        label.textContent='Starting game';
+        return intro.then(()=>start.apply(this,args));
+      };
+    },
+    progress(current,total) {
+      if(failed||leaving)return;
+      const known=Number.isFinite(current)&&Number.isFinite(total)&&current>=0&&total>0;
+      screen.dataset.determinate=String(known);
+      if(known) {
+        const ratio=Math.max(0,Math.min(1,current/total));
+        fill.style.transform=`scaleX(${ratio})`;
+        percent.textContent=`${Math.floor(ratio*100)}%`;
+        label.textContent=ratio===1?'Preparing game':'Loading game files';
+        progress.setAttribute('aria-valuetext',`${Math.floor(ratio*100)} percent of game files loaded`);
+      } else {
+        percent.textContent='';label.textContent='Getting ready';
+        progress.setAttribute('aria-valuetext','Loading game files');
+      }
+    },
+    finish(remove) {
+      if(failed||leaving)return;
+      leaving=true;cleanup();percent.textContent='';label.textContent='Ready';fill.style.transform='scaleX(1)';
+      screen.classList.add('loader-leaving');
+      setTimeout(remove,reduced?0:220);
+    },
+    fail() {
+      failed=true;cleanup();screen.classList.add('loader-error');
+      document.getElementById('status-notice').setAttribute('role','alert');
+    }
+  };
+})();
+
+</script>
+<!-- ONKLAV_LOADER_SCRIPT_END -->
+<script src="index.js"></script>
+		<script>
+const GODOT_CONFIG = {"args":[],"canvasResizePolicy":2,"emscriptenPoolSize":8,"ensureCrossOriginIsolationHeaders":true,"executable":"index","experimentalVK":true,"fileSizes":{"index.pck":7706592,"index.wasm":39513580},"focusCanvas":true,"gdextensionLibs":[],"godotPoolSize":4};
+const GODOT_THREADS_ENABLED = false;
+const engine = new Engine(GODOT_CONFIG);
+window.OnKlavLoader.prepare(engine);
+
+(function () {
+	const statusOverlay = document.getElementById('status');
+	const statusProgress = document.getElementById('status-progress');
+	const statusNotice = document.getElementById('status-notice');
+
+	let initializing = true;
+	let statusMode = '';
+
+	function setStatusMode(mode) {
+		if (statusMode === mode || !initializing) {
+			return;
+		}
+		if (mode === 'hidden') {
+			window.OnKlavLoader.finish(() => statusOverlay.remove());
+			initializing = false;
+			return;
+		}
+		statusOverlay.style.visibility = 'visible';
+		statusProgress.style.display = mode === 'progress' ? 'block' : 'none';
+		statusNotice.style.display = mode === 'notice' ? 'block' : 'none';
+		statusMode = mode;
+	}
+
+	function setStatusNotice(text) {
+		while (statusNotice.lastChild) {
+			statusNotice.removeChild(statusNotice.lastChild);
+		}
+		const lines = text.split('\n');
+		lines.forEach((line) => {
+			statusNotice.appendChild(document.createTextNode(line));
+			statusNotice.appendChild(document.createElement('br'));
+		});
+	}
+
+	function displayFailureNotice(err) {
+		window.OnKlavLoader.fail();
+		console.error(err);
+		if (err instanceof Error) {
+			setStatusNotice(err.message);
+		} else if (typeof err === 'string') {
+			setStatusNotice(err);
+		} else {
+			setStatusNotice('An unknown error occurred.');
+		}
+		setStatusMode('notice');
+		initializing = false;
+	}
+
+	const missing = Engine.getMissingFeatures({
+		threads: GODOT_THREADS_ENABLED,
+	});
+
+	if (missing.length !== 0) {
+		if (GODOT_CONFIG['serviceWorker'] && GODOT_CONFIG['ensureCrossOriginIsolationHeaders'] && 'serviceWorker' in navigator) {
+			let serviceWorkerRegistrationPromise;
+			try {
+				serviceWorkerRegistrationPromise = navigator.serviceWorker.getRegistration();
+			} catch (err) {
+				serviceWorkerRegistrationPromise = Promise.reject(new Error('Service worker registration failed.'));
+			}
+			// There's a chance that installing the service worker would fix the issue
+			Promise.race([
+				serviceWorkerRegistrationPromise.then((registration) => {
+					if (registration != null) {
+						return Promise.reject(new Error('Service worker already exists.'));
+					}
+					return registration;
+				}).then(() => engine.installServiceWorker()),
+				// For some reason, `getRegistration()` can stall
+				new Promise((resolve) => {
+					setTimeout(() => resolve(), 2000);
+				}),
+			]).then(() => {
+				// Reload if there was no error.
+				window.location.reload();
+			}).catch((err) => {
+				console.error('Error while registering service worker:', err);
+			});
+		} else {
+			// Display the message as usual
+			const missingMsg = 'Error\nThe following features required to run Godot projects on the Web are missing:\n';
+			displayFailureNotice(missingMsg + missing.join('\n'));
+		}
+	} else {
+		setStatusMode('progress');
+		engine.startGame({onExit: function() { console.log("ONKLAV_GAME_EXIT"); },
+			'onProgress': function (current, total) {
+				window.OnKlavLoader.progress(current, total);
+				if (current > 0 && total > 0) {
+					statusProgress.value = current;
+					statusProgress.max = total;
+				} else {
+					statusProgress.removeAttribute('value');
+					statusProgress.removeAttribute('max');
+				}
+			},
+		}).then(() => {
+			setStatusMode('hidden');
+		}, displayFailureNotice);
+	}
+}());
+		</script>
+	</body>
+</html>
+

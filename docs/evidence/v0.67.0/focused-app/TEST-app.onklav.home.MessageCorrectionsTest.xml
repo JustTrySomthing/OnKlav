@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.MessageCorrectionsTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-24T14:02:43" hostname="41b9fb140d3c" time="2.971">
+  <properties/>
+  <testcase name="selectedThemeFillAlwaysGetsReadableButtonText" classname="app.onklav.home.MessageCorrectionsTest" time="2.472"/>
+  <testcase name="completePickerIsAcceptedByWireAndRepresentativeChoicesSurviveNativeReload" classname="app.onklav.home.MessageCorrectionsTest" time="0.447"/>
+  <testcase name="mediaOnlyMessagesHaveNoSpeechButCaptionsAndTextDo" classname="app.onklav.home.MessageCorrectionsTest" time="0.051"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

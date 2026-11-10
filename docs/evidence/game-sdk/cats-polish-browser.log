@@ -1,0 +1,5 @@
+Cats vs Dogs exported Godot web fixture with simulated OnKlav host.
+Solo round tests seeded legal board positions and exercised the final drop and round controls.
+PASS 360 780 touch drag and release, Casual depth, resume marker, three rounds, match-only celebration
+PASS 320 640 touch drag and release, Casual depth, resume marker, three rounds, match-only celebration
+PASS 360x780 friend guest, correct team labels, incoming move, send acknowledgement, journal restore and no rival setting

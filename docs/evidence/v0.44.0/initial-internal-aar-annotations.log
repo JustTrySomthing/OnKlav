@@ -1,0 +1,176 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.11.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :android:app
+WARNING: The option setting 'android.aapt2FromMavenOverride=/workspace/scratch/0c4f42874eaa/android-env/sdk/build-tools/35.0.0/aapt2' is experimental.
+WARNING: platform-tools package is not installed.
+
+> Task :android:app:preBuild UP-TO-DATE
+> Task :android:app:preOptimizedBuild UP-TO-DATE
+> Task :android:app:mergeOptimizedJniLibFolders UP-TO-DATE
+> Task :android:games:preBuild UP-TO-DATE
+> Task :android:games:preDebugBuild UP-TO-DATE
+> Task :android:games:mergeDebugJniLibFolders
+> Task :android:games:mergeDebugNativeLibs NO-SOURCE
+> Task :android:shared:preBuild UP-TO-DATE
+> Task :android:shared:preDebugBuild UP-TO-DATE
+> Task :android:games:copyDebugJniLibsProjectOnly
+> Task :android:shared:mergeDebugJniLibFolders
+> Task :android:tools:preBuild UP-TO-DATE
+> Task :android:tools:preDebugBuild UP-TO-DATE
+> Task :android:tools:mergeDebugJniLibFolders
+> Task :android:tools:mergeDebugNativeLibs NO-SOURCE
+> Task :android:tools:copyDebugJniLibsProjectOnly
+> Task :android:shared:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:shared:mergeDebugNativeLibs
+> Task :android:shared:generateDebugResValues
+> Task :android:shared:generateDebugResources
+> Task :android:shared:copyDebugJniLibsProjectOnly
+> Task :android:shared:packageDebugResources
+> Task :android:app:mergeOptimizedNativeLibs UP-TO-DATE
+
+> Task :android:app:stripOptimizedDebugSymbols
+Unable to strip the following libraries, packaging them as they are: .libgodot_android.so.GAPbKI.
+
+> Task :android:shared:parseDebugLocalResources
+> Task :android:app:extractOptimizedNativeSymbolTables
+> Task :android:app:mergeOptimizedNativeDebugMetadata NO-SOURCE
+> Task :android:shared:javaPreCompileDebug
+> Task :android:tools:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:shared:generateDebugRFile
+> Task :android:tools:generateDebugResValues
+> Task :android:tools:generateDebugResources
+> Task :android:tools:packageDebugResources
+> Task :android:tools:parseDebugLocalResources
+> Task :android:tools:generateDebugRFile
+> Task :android:tools:javaPreCompileDebug
+> Task :android:games:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:games:generateDebugResValues
+> Task :android:games:generateDebugResources
+> Task :android:games:packageDebugResources
+> Task :android:games:parseDebugLocalResources
+> Task :android:games:generateDebugRFile
+> Task :android:games:compileDebugKotlin
+> Task :android:games:javaPreCompileDebug
+> Task :android:games:compileDebugJavaWithJavac NO-SOURCE
+> Task :android:games:mergeDebugGeneratedProguardFiles
+> Task :android:games:exportDebugConsumerProguardFiles
+> Task :android:app:buildKotlinToolingMetadata UP-TO-DATE
+> Task :android:app:checkOptimizedDuplicateClasses UP-TO-DATE
+> Task :android:app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:games:writeDebugAarMetadata
+> Task :android:shared:writeDebugAarMetadata
+> Task :android:tools:writeDebugAarMetadata
+> Task :android:app:checkOptimizedAarMetadata UP-TO-DATE
+> Task :android:app:generateOptimizedResValues UP-TO-DATE
+> Task :android:app:mapOptimizedSourceSetPaths UP-TO-DATE
+> Task :android:app:generateOptimizedResources UP-TO-DATE
+> Task :android:app:mergeOptimizedResources UP-TO-DATE
+> Task :android:app:packageOptimizedResources UP-TO-DATE
+> Task :android:app:parseOptimizedLocalResources UP-TO-DATE
+> Task :android:app:createOptimizedCompatibleScreenManifests UP-TO-DATE
+> Task :android:app:extractDeepLinksOptimized UP-TO-DATE
+> Task :android:games:extractDeepLinksDebug
+> Task :android:games:processDebugManifest
+> Task :android:shared:extractDeepLinksDebug
+> Task :android:shared:processDebugManifest
+> Task :android:tools:extractDeepLinksDebug
+> Task :android:tools:processDebugManifest
+> Task :android:app:processOptimizedMainManifest UP-TO-DATE
+> Task :android:app:processOptimizedManifest UP-TO-DATE
+> Task :android:app:processOptimizedManifestForPackage UP-TO-DATE
+> Task :android:app:processOptimizedResources UP-TO-DATE
+> Task :android:games:bundleLibCompileToJarDebug
+> Task :android:app:javaPreCompileOptimized UP-TO-DATE
+> Task :android:games:prepareDebugArtProfile
+> Task :android:shared:prepareDebugArtProfile
+> Task :android:tools:prepareDebugArtProfile
+> Task :android:app:mergeOptimizedArtProfile UP-TO-DATE
+> Task :android:games:bundleLibRuntimeToJarDebug
+> Task :android:app:extractProguardFiles UP-TO-DATE
+> Task :android:games:processDebugJavaRes
+> Task :android:app:mergeOptimizedStartupProfile UP-TO-DATE
+> Task :android:app:mergeOptimizedShaders UP-TO-DATE
+> Task :android:app:compileOptimizedShaders NO-SOURCE
+> Task :android:app:generateOptimizedAssets UP-TO-DATE
+> Task :android:games:mergeDebugShaders
+> Task :android:games:compileDebugShaders NO-SOURCE
+> Task :android:games:generateDebugAssets UP-TO-DATE
+> Task :android:games:mergeDebugAssets
+> Task :android:shared:mergeDebugShaders
+> Task :android:shared:compileDebugShaders NO-SOURCE
+> Task :android:shared:generateDebugAssets UP-TO-DATE
+> Task :android:shared:mergeDebugAssets
+> Task :android:tools:mergeDebugShaders
+> Task :android:tools:compileDebugShaders NO-SOURCE
+> Task :android:tools:generateDebugAssets UP-TO-DATE
+> Task :android:tools:mergeDebugAssets
+> Task :android:app:mergeOptimizedAssets UP-TO-DATE
+> Task :android:app:compressOptimizedAssets UP-TO-DATE
+> Task :android:app:extractOptimizedVersionControlInfo UP-TO-DATE
+> Task :android:games:createFullJarDebug
+> Task :android:games:extractProguardFiles UP-TO-DATE
+> Task :android:games:generateDebugLintModel
+> Task :android:games:prepareLintJarForPublish UP-TO-DATE
+> Task :android:shared:extractProguardFiles UP-TO-DATE
+> Task :android:shared:prepareLintJarForPublish UP-TO-DATE
+> Task :android:tools:extractProguardFiles UP-TO-DATE
+> Task :android:tools:prepareLintJarForPublish UP-TO-DATE
+> Task :android:tools:stripDebugDebugSymbols NO-SOURCE
+> Task :android:tools:copyDebugJniLibsProjectAndLocalJars
+> Task :android:tools:extractDeepLinksForAarDebug
+
+> Task :android:shared:stripDebugDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libonklav_core.so.
+
+> Task :android:shared:copyDebugJniLibsProjectAndLocalJars
+> Task :android:shared:extractDeepLinksForAarDebug
+> Task :android:games:stripDebugDebugSymbols NO-SOURCE
+> Task :android:games:copyDebugJniLibsProjectAndLocalJars
+> Task :android:games:extractDebugAnnotations FAILED
+
+> Task :android:shared:compileDebugKotlin
+w: file:///workspace/scratch/0c4f42874eaa/source/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/Chrome.kt:240:24 'var statusBarColor: Int' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/0c4f42874eaa/source/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/Chrome.kt:241:24 'var navigationBarColor: Int' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/0c4f42874eaa/source/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/Chrome.kt:242:65 'var isStatusBarContrastEnforced: Boolean' is deprecated. Deprecated in Java.
+w: file:///workspace/scratch/0c4f42874eaa/source/OnKlav/android/shared/src/main/kotlin/app/onklav/shared/LauncherLayout.kt:4:27 Non-public primary constructor is exposed via the generated 'copy()' method of the 'data' class.
+
+The generated 'copy()' will change its visibility in future releases.
+
+To suppress the warning do one of the following:
+- Annotate the data class with the '@ConsistentCopyVisibility' annotation.
+- Use the '-Xconsistent-data-class-copy-visibility' compiler flag.
+- Annotate the data class with the '@ExposedCopyVisibility' annotation 
+  (Discouraged, but can be used to keep binary compatibility).
+
+To learn more, see the documentation of the '@ConsistentCopyVisibility' and '@ExposedCopyVisibility' annotations.
+
+This will become an error in Kotlin 2.2.
+w: Detected multiple Kotlin daemon sessions at 
+[Incubating] Problems report is available at: file:///workspace/scratch/0c4f42874eaa/source/OnKlav/build/reports/problems/problems-report.html
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':android:games:extractDebugAnnotations'.
+> Could not resolve all files for configuration ':android:games:detachedConfiguration1'.
+   > Could not resolve com.android.tools.lint:lint-gradle:31.9.2.
+     Required by:
+         project :android:games
+      > No cached version of com.android.tools.lint:lint-gradle:31.9.2 available for offline mode.
+      > No cached version of com.android.tools.lint:lint-gradle:31.9.2 available for offline mode.
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+Deprecated Gradle features were used in this build, making it incompatible with Gradle 9.0.
+
+You can use '--warning-mode all' to show the individual deprecation warnings and determine if they come from your own scripts or plugins.
+
+For more on this, please refer to https://docs.gradle.org/8.11.1/userguide/command_line_interface.html#sec:command_line_warnings in the Gradle documentation.
+
+BUILD FAILED in 55s
+92 actionable tasks: 61 executed, 31 up-to-date

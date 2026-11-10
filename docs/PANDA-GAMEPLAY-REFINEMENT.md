@@ -1,0 +1,16 @@
+> Historical implementation: new Panda games now use the solo reboot in [PANDA-SOLO-REBOOT.md](PANDA-SOLO-REBOOT.md). Building and Panda friend play are retired. Legacy solo saves remain readable.
+
+# Crash Test Panda gameplay refinement
+
+New solo campaigns and pt3 friend matches use revision3. Existing revision1/2 saves and pt1/pt2 matches retain their course geometry and physics. No APK was requested or built; latest APK remains0.100.54/code163.
+
+- Reserve uses a bounded six-column, up-to-three-row rack. Arena fits1400 world units, with all reserve blocks clear of the separate build buttons, including18-block courses. Bottom controls appear only during build/review. Continue fills the available width and uses green.
+- Cannon sits32 units lower and the distracting translucent stand circle is removed. White translucent outlined aiming circle is at920 world units. Finger pull has room for100% power; loading, visible barrel and launch origin remain aligned. Valid-placement ghosts, placement particles, material markings and an unsupported-placement response improve feedback.
+- New campaigns provide12/15/18 mixed blocks. Five seeded platform profiles vary widths, quantity, spacing and height, with platforms above the old courses. Compact block proportions allow the larger inventory to fit. Auto-completion fallback is bounded, including malformed/overfull drafts; no recursive retry loop. Campaign seed is sent in the initial character intent so both friend peers build identical courses.
+- Build and active aim clocks are20 seconds. Pause/loading/report/physics time remains excluded.
+- Bonus birds are visible and move before launch. Deterministic seeded passes vary color, size, entry direction, position, speed and vertical waves; their full silhouette remains within the upper half. The visible bird clock is committed with each shot for peer replay; bird collision radius follows its visual size. Once-only250-point scoring survives recovery.
+- Four marked materials have different density, grip and restitution. Rigid-body240Hz solver, velocity limits and bounded flight remain. Mass/inertia terms in revision3 are canonicalized before simulation to avoid compact-JSON precision drift; restored blocks recover their material properties. Legacy physics is unchanged.
+
+Validation: standard game build/export succeeded; Panda2102 checks passed, plus unchanged shared rules12, Air Hockey95, Naval247, Cats/Dogs327, Blackjack179, Dominos4628 and Dominos layout60324. Panda checks include generated courses, raised platforms, fixed bounds on bird silhouettes, actual collision/once-only bonuses, exact in-flight JSON continuation with weighted materials, old-save continuation and reserve/full-pull bounds at four arena sizes. The earlier larger geometry sample also completed120 seeded courses; its weighted-restore failure led to the mass-term repair before the final passing build.
+
+Production game UI instantiated without script errors. Browser fixture exported, but local Chromium closed under socket restrictions; no browser/physical-device visual acceptance is claimed. Android host pt3 routing changes were reviewed but Android compilation/carrier acceptance was not run in this source-only pass. Both phones need the updated host for new pt3 matches. Existing pt1/pt2 routes remain accepted.

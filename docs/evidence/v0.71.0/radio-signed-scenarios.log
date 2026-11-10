@@ -1,0 +1,2 @@
+{"scenario": "scenario.json", "result": {"passed": 5, "runtime": "production Rust app broker", "android_ui_tested": false}}
+{"scenario": "scenario-denied.json", "result": {"passed": 1, "runtime": "production Rust app broker", "android_ui_tested": false}}

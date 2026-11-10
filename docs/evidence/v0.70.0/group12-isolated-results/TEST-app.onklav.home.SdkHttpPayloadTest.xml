@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.SdkHttpPayloadTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-10-25T21:58:58" hostname="1122594d9286" time="3.082">
+  <properties/>
+  <testcase name="textRetainsStrictUtf8AndExistingByteBounds" classname="app.onklav.home.SdkHttpPayloadTest" time="2.984"/>
+  <testcase name="binaryPreservesNonUtf8BytesAndHasNoTextAlias" classname="app.onklav.home.SdkHttpPayloadTest" time="0.042"/>
+  <testcase name="binaryRejectsOversizeBeforeHexExpansion" classname="app.onklav.home.SdkHttpPayloadTest" time="0.056"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

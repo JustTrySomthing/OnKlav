@@ -1,0 +1,6 @@
+test_stalled_runtime_is_killed_and_streams_are_closed (__main__.Deadline.test_stalled_runtime_is_killed_and_streams_are_closed) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.410s
+
+OK

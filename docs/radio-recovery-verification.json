@@ -1,0 +1,274 @@
+{
+  "version": "0.100.13-rc1",
+  "version_code": 122,
+  "checks": {
+    "MmsDownloadRecoveryTest.temporaryDownloadFailureStaysVisibleAndSchedulesBoundedIncomingRetries": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.13/affected-and-ui-final.log"
+    },
+    "MmsDownloadRecoveryTest.carrierErrorsExplainConfigurationAndDoNotRetryPermanentFailures": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.13/affected-and-ui-final.log"
+    },
+    "MmsDownloadRecoveryTest.acknowledgementFailureCannotReportAnAlreadyFiledPictureAsDownloadFailure": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.13/affected-and-ui-final.log"
+    },
+    "MmsDownloadRecoveryTest.scheduledDownloadNeverRunsWhenRoleWasRevokedAndMessagesRemainRecoverable": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.13/affected-and-ui-final.log"
+    },
+    "MmsDownloadRecoveryTest.inFlightDownloadCannotBeTruncatedByDuplicateRetryAndRevokedRolePreventsDownload": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.13/affected-and-ui-final.log"
+    },
+    "MmsDownloadRecoveryTest.independentPictureNotificationsCannotOverwriteEachOtherAndCompletionClearsOnlyItsOwn": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.13/affected-and-ui-final.log"
+    },
+    "NetworkDownloadRecoveryTest.cellularNat64AllowsPublicDestinationsAndRejectsPrivateOnes": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.13/functional-first.log"
+    },
+    "NetworkDownloadRecoveryTest.formatsListActualHeightsAndPairSeparateAudioWithoutUpscaling": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.13/functional-first.log"
+    },
+    "NetworkDownloadRecoveryTest.reconnectOnlyForNewValidatedDefaultRouteAndUnregisterOnClose": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.13/functional-first.log"
+    },
+    "RadioContinuityTest.sleepDeadlineAndRevocationCannotBeBypassedByReconnect": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.13/functional-first.log"
+    },
+    "RadioContinuityTest.rapidEofAndIoErrorsAreBoundedAndManualPlayCanRetry": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.13/functional-first.log"
+    },
+    "RadioContinuityTest.pauseStopAndReplacementCancelQueuedReconnection": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.13/functional-first.log"
+    },
+    "RadioContinuityTest.trackBoundaryReconnectsLiveEdgeAndKeepsChangingAudioSession": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.13/functional-first.log"
+    },
+    "RadioControlsTest.usersCanDisableAutomaticHidingShowHiddenManuallyHideAndRestore": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.13/functional-first.log"
+    },
+    "RadioControlsTest.successfulRetryRemovesOldFailureAndDoesNotChangeUserSettings": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.13/functional-first.log"
+    },
+    "RadioControlsTest.networkTimeoutsAndOfflineDnsDoNotClaimStationClosure": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.13/functional-first.log"
+    },
+    "RadioControlsTest.onlyConfirmedUnplayableResponsesAreAutomaticallyHidden": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.13/functional-first.log"
+    },
+    "RadioSceneRenderTest.featuredScenesMoveWithNewAudioAndIntensityChangesTheirOutput": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.13/functional-first.log"
+    },
+    "RadioSceneRenderTest.allSevenScenesReactToAudioAndPausedFramesRemainStill": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.13/functional-first.log"
+    },
+    "RadioSceneRenderTest.frequencyLayersAreIndependentAndWaveComponentsKeepActualSound": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.13/functional-first.log"
+    },
+    "RadioSceneRenderTest.radialScenesExpandPastFormerBoundsAndAllLayersReact": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.13/functional-first.log"
+    },
+    "RadioStreamRepairTest.offlineWaitDoesNotExhaustRetriesAndFallbackRecoversWithoutCallback": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.13/functional-first.log"
+    },
+    "RadioStreamRepairTest.screenOffDoesNotStopServiceAndExplicitStopAndRevocationCancelRecovery": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.13/functional-first.log"
+    },
+    "RadioStreamRepairTest.longPauseAndRepeatedRouteChangesNeverRequireAppRestart": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.13/functional-first.log"
+    },
+    "RadioStreamRepairTest.extensionlessHlsKeepsItsContentType": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.13/functional-first.log"
+    },
+    "RadioStreamRepairTest.playlistsResolveRelativeAudioAndPublicHttpButNeverPrivateSchemes": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.13/functional-first.log"
+    },
+    "RadioStreamRepairTest.replacedStationCannotAuthorizeOldReadsOrReceiveOldCallbacks": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.13/functional-first.log"
+    },
+    "RadioStreamRepairTest.frozenPlaybackClockIsRecoveredEvenWhenEngineClaimsPlaying": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.13/functional-first.log"
+    },
+    "RadioStreamRepairTest.abandonedAudioFocusCallbackCannotPauseNewStation": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.13/functional-first.log"
+    },
+    "RadioStreamRepairTest.resumeCreatesFreshLiveConnectionAndNeverStaysReady": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.13/functional-first.log"
+    },
+    "RadioStreamRepairTest.streamingSourcePreservesIcyHeadersAndChecksPermissionOnEachRead": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.13/functional-first.log"
+    },
+    "RadioStreamRepairTest.readyWithoutAudioAndLongBufferingCannotRemainStuck": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.13/functional-first.log"
+    },
+    "RadioStreamRepairTest.newRadioSessionRestoresQueryAndLoadsCachedResultsWithoutAUserSearch": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.13/functional-first.log"
+    },
+    "TransportRecoveryTest.walkieCallbackIsRetainedWhenPermissionGatePreventsReconciliation": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.13/affected-and-ui-final.log"
+    },
+    "TransportRecoveryTest.callbacksRequireMatchingActionUriKindAndPart": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.13/affected-and-ui-final.log"
+    },
+    "TransportRecoveryTest.failedAttemptJournalStopsBeforeCallingTheCarrier": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.13/affected-and-ui-final.log"
+    },
+    "TransportRecoveryTest.receiptsSurviveRestartUntilCoreAcceptsTheOutcomeWithoutResending": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.13/affected-and-ui-final.log"
+    },
+    "TransportRecoveryTest.internalBrowserHandoffUsesTheSignedGuestNavigationAndRejectsUnsafeSchemes": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.13/affected-and-ui-final.log"
+    },
+    "TransportRecoveryTest.failedMmsAddressInsertRollsBackOnlyTheNewParent": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.13/affected-and-ui-final.log"
+    },
+    "TransportRecoveryTest.committedCoreRemovalWithBlockedPrivateCleanupResumesBeforeAnotherLaunch": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.13/affected-and-ui-final.log"
+    },
+    "TransportRecoveryTest.failedDownloadErrorJournalRetainsTheDurableCallback": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.13/affected-and-ui-final.log"
+    },
+    "TransportRecoveryTest.completedCallbackIsRetainedWhenDurabilityCannotBeConfirmed": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.13/affected-and-ui-final.log"
+    },
+    "TransportRecoveryTest.recoverySchedulingCoalescesAndDoesNotEnableTransport": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.13/affected-and-ui-final.log"
+    },
+    "RadioVisualizerTest.packedFftIgnoresDcAndNyquistAndMapsComplexToneToLogFrequency": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.13/affected-and-ui-final.log"
+    },
+    "RadioVisualizerTest.actualLandscapeFillsWindowControlsHideRevealAndBackRestores": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.13/affected-and-ui-final.log"
+    },
+    "RadioVisualizerTest.portraitWindowAndUnitBasedOrbitRemainReadableAtEitherAspect": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.13/affected-and-ui-final.log"
+    },
+    "RadioVisualizerTest.captureRejectsGlobalSessionAndCloseClearsWaveform": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.13/affected-and-ui-final.log"
+    },
+    "RadioVisualizerTest.visualizerModesLandscapeBackAndOrientationRestore": {
+      "status": "PASSED",
+      "log": "docs/evidence/v0.100.13/affected-and-ui-final.log"
+    }
+  },
+  "focused_checks_passed": 48,
+  "compiled_kotlin_runtime_classes": 3158,
+  "runtime_mismatches": 0,
+  "native_ui_images": [
+    "docs/evidence/v0.100.13/radio-visualizer-landscape.png",
+    "docs/evidence/v0.100.13/radio-visualizer-portrait-1.png",
+    "docs/evidence/v0.100.13/radio-visualizer-landscape-1.png",
+    "docs/evidence/v0.100.13/radio-visualizer-landscape-6.png",
+    "docs/evidence/v0.100.13/radio-visualizer-portrait-6.png",
+    "docs/evidence/v0.100.13/radio-visualizer-portrait-2.png",
+    "docs/evidence/v0.100.13/radio-visualizer-landscape-3.png",
+    "docs/evidence/v0.100.13/radio-visualizer-portrait-4.png",
+    "docs/evidence/v0.100.13/radio-visualizer-portrait-0.png",
+    "docs/evidence/v0.100.13/radio-visualizer-portrait.png",
+    "docs/evidence/v0.100.13/radio-visualizer-landscape-5.png",
+    "docs/evidence/v0.100.13/radio-visualizer-portrait-5.png",
+    "docs/evidence/v0.100.13/radio-visualizer-landscape-4.png",
+    "docs/evidence/v0.100.13/radio-visualizer-portrait-3.png",
+    "docs/evidence/v0.100.13/radio-visualizer-landscape-0.png",
+    "docs/evidence/v0.100.13/radio-visualizer-landscape-2.png"
+  ],
+  "lint": {
+    "status": "passed",
+    "severity_counts": {
+      "Warning": 287,
+      "Information": 1
+    },
+    "evidence": "docs/evidence/v0.100.13/final-source-lint.log"
+  },
+  "apk": {
+    "status": "passed",
+    "version": "0.100.13-rc1",
+    "version_code": 122,
+    "sha256": "ff7a09efbfb749cc53fff3f58200f220f2dbe4703afb546935fb821766db3960",
+    "bytes": 102343570,
+    "signer_sha256": "6ed975c5fc27d19f6291f751a8bb00fa8a2c2e7d268bffc7b6ddf7e1b1a7a69d",
+    "defined_classes_verified": [
+      "app/onklav/home/RadioVisualSceneKt",
+      "app/onklav/home/RadioStreamEngine",
+      "app/onklav/home/ExoRadioStream",
+      "androidx/media3/exoplayer/hls/HlsMediaSource",
+      "app/onklav/home/MmsDownloadRecovery",
+      "app/onklav/home/MmsDownloadRecoveryKt",
+      "app/onklav/home/PhotoCanvasPreviewKt",
+      "app/onklav/home/PhotoImageSave",
+      "app/onklav/shared/Mp3Codec"
+    ],
+    "standard_proof": "docs/apk-verification-debug.json"
+  },
+  "scope": "Framework host and headless native UI, not physical-phone/carrier qualification",
+  "corrections": [
+    "AudioFocusRequest hidden getter accessed via reflection in regression fixture",
+    "Download retry bookkeeping committed with attempt journal, preserving descriptive disk-failure error",
+    "Swatch hue anchors match the chosen color"
+  ],
+  "remaining_acceptance": [
+    "Actual phone Wi-Fi/mobile handoff and extended pause/screen-off/OEM behavior",
+    "Affected station availability and device codecs",
+    "Incoming/outgoing MMS on user carrier and SIM/APN",
+    "Earlier documented provider/carrier gates"
+  ],
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/SdkMedia.kt": "3aea2f4cf56652a35908fd881a9c6ad729352f88703b3d26f8ce468c9973ff8b",
+    "android/app/src/main/kotlin/app/onklav/home/RadioStreamEngine.kt": "ad524dbe0a61ecc2d6eee0ca12b9819618ab3c4ea53dd2f0b5e652d2acf4e8c9",
+    "android/app/src/main/kotlin/app/onklav/home/SdkRadio.kt": "0acf86837e7313d58675fc864d67083e5f5cf312167c5bd25ca5fc964c24bf38",
+    "android/app/src/main/kotlin/app/onklav/home/SdkRadioPlayer.kt": "cfd3292c29c71b8addaaaf2198149b6c2cb21a7b4c3b400bf57939967221b679",
+    "android/app/src/main/kotlin/app/onklav/home/RadioVisualScene.kt": "d6fba50538b3adc10a693956084598b5a5970ca1195b1506fe92a10f7e51e55f",
+    "android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt": "b67934a1e6552d07185d4c720517b3056f70ccefabecb4f55a722d2945076d5b",
+    "android/app/src/main/kotlin/app/onklav/home/MmsDownloadRecovery.kt": "695b5e8158bfb4a0903add2868a3c0190e9900af448252a302d476e1c86cb788",
+    "android/app/src/main/kotlin/app/onklav/home/MessageNotifications.kt": "f2735cc588f3b1283eba0233e1f636d06b8388e7dc491dcc08a01eed8b5371ef",
+    "android/app/src/main/kotlin/app/onklav/home/MessengerPane.kt": "eb063f623f6d882afcd68619d24938a531c48e5095cf8569a903469ac8cd17d1",
+    "android/app/src/main/kotlin/app/onklav/home/SettingsMessaging.kt": "bf53d996414b28395344f304abce4d4e0d6f99f3dc44d1100ddf44100015feae",
+    "android/app/src/main/kotlin/app/onklav/home/MainActivity.kt": "bb590d9519e27ce25fc7224b690770113b073481cf2938bd5ff73135cfd7d388",
+    "android/app/src/main/AndroidManifest.xml": "c8720b4a53ef6f172c425a3d9c54e65e81b64e71a0c686450ee6d01220fc3c30"
+  },
+  "final_navigation_change": "Picture notice opens existing pending-download dialog directly; final compile and lint validate this small navigation change after the 48 focused checks."
+}

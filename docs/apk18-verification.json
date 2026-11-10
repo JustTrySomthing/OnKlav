@@ -1,0 +1,18 @@
+{
+  "status": "Original-signer ARM64 debug RC assembled and verified",
+  "version": "0.100.18-rc1",
+  "version_code": 127,
+  "apk_sha256": "f732530741e3228c013c291c20400e3de86d94c166b5aa360254acfbe9062a17",
+  "verification_report": "docs/apk-verification-debug.json",
+  "packaged_markers": [
+    "visual_color_v2",
+    "Save (Overwrite)",
+    "Close (Discard Changes)"
+  ],
+  "feature_tests_reused": [
+    "8 Radio rendering/UI checks",
+    "2 Image Editor save/discard/markup/export checks"
+  ],
+  "build": "Reused verified SDK/native/games; refreshed generated resource/DEX/assets/package state; no broad test repeat",
+  "limitations": "Physical handset/carrier/route/provider/IME/GPU/performance acceptance remains separate"
+}

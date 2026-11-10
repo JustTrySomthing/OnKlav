@@ -1,0 +1,12 @@
+{
+  "status": "original-signer ARM64 RC assembled and verified",
+  "version": "0.100.21-rc1",
+  "version_code": 130,
+  "apk_sha256": "63550a20031e32f165350e4d2db5ef4407f4ede2b38192dabd37a416c78e22c9",
+  "apk_bytes": 106738887,
+  "feature_checks": "21 focused HDR/local-light/legacy/crop/layer/UI checks retained; five comparison sheets reviewed",
+  "verification_report": "docs/apk-verification-debug.json",
+  "build": "Current native/SDK/games reused; generated resource/DEX/package outputs refreshed. Assembly125.86s; verification5.64s. No broad test repeat.",
+  "native_sdk_signer_identity_changed": false,
+  "physical_device_performance_qualified": false
+}

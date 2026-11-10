@@ -1,0 +1,62 @@
+{
+  "chunk": 34,
+  "status": "bounded RSS2/Icecast adapter source implemented; full-host/provider/device qualification pending",
+  "production_path": "Signed HTTP broker fetch -> podcasts.parse local storage.private broker using bounded shared XML tokenizer -> selected enclosure -> existing shared media.play; selected Icecast JSON mount -> plain station/artist/title result; no stream switching",
+  "rust_podcast_cases_passed": 2,
+  "sdk_radio_cases_passed": 2,
+  "developer_contract_cases_passed": 5,
+  "signed_guest_scenario_steps_passed": 3,
+  "signed_guest_denial_steps_passed": 1,
+  "scenario_limits": "Conspicuously synthetic RSS/Icecast fixtures. The playback step reaches an actual pending media.play request; no Android reply or audio was fabricated. Final display-only status/song labels compiled in the denial scenario.",
+  "supported_profile": [
+    "RSS2 UTF-8 XML audio enclosures; explicit titles/MIME/length and HTTPS URLs",
+    "Icecast single-source or selected exact mount from bounded JSON source list",
+    "Existing shared media player and signed exact-origin HTTP; discovered URLs never expand grants"
+  ],
+  "bounds": {
+    "feed_bytes": 131072,
+    "audio_episodes": 40,
+    "enclosure_declared_bytes_max": 1073741824,
+    "radio_mounts": 32,
+    "metadata_field_characters": 240
+  },
+  "unsupported": [
+    "Atom/iTunes/Podcasting2.0 conformance and automatic large-feed pagination",
+    "Station discovery or automatic metadata polling",
+    "ICY interleaved metadata, SHOUTcast and HLS/DASH",
+    "Automatic downloads/provider/codec fallback"
+  ],
+  "remaining": [
+    "Actual feed/station/codec/provider and OEM/background audio acceptance",
+    "Full Android/JNI integration with the recorded missing dependencies restored",
+    "Phone layout/TalkBack/process recovery and sustained performance; reference app workflows remain chunk38"
+  ],
+  "native": {
+    "linux_jni_sha256": "38bb36beff6772fa41d3fbd0d06f396bdcbb3271eb95c8ffc473701ef0f7a1d9",
+    "arm64_jni_sha256": "b03be9cec5f8a72afc9ca921269bb8600151af63c264b3334932c0ff2fb4378d",
+    "arm64_load_alignment": 16384
+  },
+  "native_source_and_artifact_hashes_verified": true,
+  "released_main_jni_unchanged": true,
+  "android_or_provider_tested": false,
+  "apk_created": false,
+  "sdk_release_created": false,
+  "shipping_package_created": false,
+  "logs": [
+    "docs/evidence/v0.70.0/podcasts-core-final.log",
+    "docs/evidence/v0.70.0/radio-components.log",
+    "docs/evidence/v0.70.0/media34-contract.log",
+    "docs/evidence/v0.70.0/media34-broker.log",
+    "docs/evidence/v0.70.0/media34-broker-denied.log",
+    "docs/evidence/v0.70.0/media34-native.log"
+  ],
+  "source_sha256": {
+    "core/src/sdk_podcasts.rs": "647ba49f9f620230d7a64b0e5c04284708899fa36728e1d81454a9c59672f8a4",
+    "core/src/sdk.rs": "f0b63aabf4d10a04ef6da5f677affb0837ee8afde53c72e16cd7553a3b6f29f9",
+    "core/src/lib.rs": "25a33d3bdb4f40d2a6a1ca448bf9118321d50e50e606242527bab8823d375df6",
+    "developer/components/src/podcasts.rs": "e801bb24bbd5f28da3a339bf1db864ef4816cd370ba96ff6874c166160dff511",
+    "developer/components/src/radio.rs": "99a5dc78923b9686a325f1d541d2f32eaf67d010cb91d475ca97d8c676ccaee7",
+    "developer/examples/media-adapters/src/lib.rs": "d0407fcfa1176f86481083116fa1d674658e3cd74da80e903eeb91084451bbf8"
+  },
+  "next_feature": 35
+}

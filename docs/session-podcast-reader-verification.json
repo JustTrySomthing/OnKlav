@@ -1,0 +1,53 @@
+{
+  "version": "0.82.0-playback-readers1",
+  "version_code": 90,
+  "status": "Completed; signed ARM64 APK assembled and verified",
+  "changes": {
+    "sessions": "Clear closed frames, WebView snapshots, pending launch tokens and drafts so reopening starts a new session instead of rendering a closed session. Closed web-component callbacks return no component.",
+    "podcasts": [
+      "Larger22sp show title immediately above episode list, after subscription and refresh controls.",
+      "Enable transparent compressed RSS transport. Keep already-listed episode metadata for playback for24hours rather than downloading large feeds after5minutes.",
+      "Stream size is discovered from initial range metadata before decoder probing; no20MB audio buffering cap. Support checked206 range reads from dynamic timestamp servers.",
+      "Audiobook streams also allow validated-length ranges without server validators and resolve their redirect chain once per source."
+    ],
+    "ebooks": [
+      "Subtle catalog/library record dividers and short two-sentence Gutenberg summary beneath the author on catalog detail.",
+      "Separate themed Play/Pause/Stop icon controls below speaker and Read aloud; remove text Stop button.",
+      "Spoken word changes to primary color with bold weight via Android speech range callbacks.",
+      "ASCII uppercase-only lines are lowercased for speech while preservingUTF16 offsets. Display text stays unchanged."
+    ]
+  },
+  "checks": {
+    "android_passed": 33,
+    "android_skipped": 1,
+    "ebook_controller_passed": 6,
+    "podcast_controller_passed": 4,
+    "real_publisher_parser": {
+      "History That Doesn't Suck": 236,
+      "Stuff You Missed in History Class": 2787
+    },
+    "large_audio_test": "80MiB range reported without downloading whole file",
+    "sources": "Named shows returned audio/mpeg206 for91,572,330byte and47,320,955byte episodes via environment HTTPS transport.",
+    "native": "Core source unchanged; source-matched existingLinux/main/diagnosticARM64JNI reused.",
+    "lint": {
+      "status": "passed",
+      "errors": 0,
+      "warnings": 172,
+      "note": "Fresh serialized retry passed after interrupted temporary-store error."
+    },
+    "optional_desktop_workflow": "Not counted: desktop workflow helper rejected its outdated linked-runtime fingerprint. Android signed-package sessions and10Rust controller checks passed."
+  },
+  "limits": [
+    "No physical Samsung decoder/speaker or direct Android-network acceptance performed.",
+    "Speech highlighting requires engine range callbacks.",
+    "Source outages, unsupported formats and provider access restrictions can still fail.",
+    "Selected live EPUB acquisition check requires opt-in and was skipped; fixture acquisition and reader UI passed."
+  ],
+  "apk": {
+    "name": "OnKlav-0.82.0-ARM64.apk",
+    "bytes": 71337146,
+    "sha256": "8780d5c078e173d7d0c239693081ed15a04f2e25c28157c8ecf4a5d7fda208d1",
+    "signer_sha256": "6ed975c5fc27d19f6291f751a8bb00fa8a2c2e7d268bffc7b6ddf7e1b1a7a69d",
+    "assembled_and_verified": true
+  }
+}

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.RadioSceneRenderTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-28T13:20:29" hostname="1b65f1fab707" time="7.142">
+  <properties/>
+  <testcase name="allSevenScenesReactToAudioAndPausedFramesRemainStill" classname="app.onklav.home.RadioSceneRenderTest" time="7.142"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

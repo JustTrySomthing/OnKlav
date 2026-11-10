@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.VaultTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-10-30T18:58:36" hostname="e89dc6ba27f3" time="3.624">
+  <properties/>
+  <testcase name="realEncryptedVaultRoundTripsThroughNativeAppDocumentsBackup" classname="app.onklav.home.VaultTest" time="3.624"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

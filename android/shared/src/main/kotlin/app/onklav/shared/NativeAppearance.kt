@@ -1,0 +1,8 @@
+package app.onklav.shared
+import android.content.Context
+import android.view.ContextThemeWrapper
+private val nativeStyles=arrayOf(arrayOf(R.style.OnKlavNativeDark0,R.style.OnKlavNativeDark1,R.style.OnKlavNativeDark2,R.style.OnKlavNativeDark3,R.style.OnKlavNativeDark4,R.style.OnKlavNativeDark5,R.style.OnKlavNativeDark6,R.style.OnKlavNativeDark7,R.style.OnKlavNativeDark8,R.style.OnKlavNativeDark9,R.style.OnKlavNativeDark10,R.style.OnKlavNativeDark11,R.style.OnKlavNativeDark12,R.style.OnKlavNativeDark13,R.style.OnKlavNativeDark14),arrayOf(R.style.OnKlavNativeLight0,R.style.OnKlavNativeLight1,R.style.OnKlavNativeLight2,R.style.OnKlavNativeLight3,R.style.OnKlavNativeLight4,R.style.OnKlavNativeLight5,R.style.OnKlavNativeLight6,R.style.OnKlavNativeLight7,R.style.OnKlavNativeLight8,R.style.OnKlavNativeLight9,R.style.OnKlavNativeLight10,R.style.OnKlavNativeLight11,R.style.OnKlavNativeLight12,R.style.OnKlavNativeLight13,R.style.OnKlavNativeLight14))
+private val nativeFonts=arrayOf(R.style.OnKlavNativeFont0,R.style.OnKlavNativeFont1,R.style.OnKlavNativeFont2,R.style.OnKlavNativeFont3,R.style.OnKlavNativeFont4,R.style.OnKlavNativeFont5)
+fun nativeFontStyle(spec:AppearanceSpec)=nativeFonts[spec.font.coerceIn(0,5)]
+fun nativeAppearanceStyle(spec:AppearanceSpec)=nativeStyles[if(spec.dark)0 else 1][spec.palette.coerceIn(0,14)]
+fun appearanceDialogContext(context:Context,spec:AppearanceSpec):Context = ContextThemeWrapper(context,if(spec.dark)android.R.style.Theme_Material_Dialog_Alert else android.R.style.Theme_Material_Light_Dialog_Alert).apply {theme.applyStyle(nativeAppearanceStyle(spec),true);theme.applyStyle(nativeFontStyle(spec),true)}

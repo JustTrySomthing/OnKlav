@@ -1,0 +1,20 @@
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/ed752e8a1957/current/OnKlav/developer/components)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 0.83s
+     Running unittests src/lib.rs (current/OnKlav/developer/components/target/debug/deps/onklav_ui-c94c9f1e1c388478)
+
+running 6 tests
+test tests::host_navigation_and_dialogs ... ok
+test tests_shared::invalid_form_configuration_is_a_controlled_screen ... ok
+test tests_shared::navigation_restores_and_bounds_route_history ... ok
+test tests::reference_controller_matches_included_notes ... ok
+test tests_shared::form_validation_preserves_drafts_and_cancel_does_not_save ... ok
+test tests_shared::unreadable_saved_form_cannot_be_silently_overwritten ... ok
+
+test result: ok. 6 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+
+   Doc-tests onklav_ui
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

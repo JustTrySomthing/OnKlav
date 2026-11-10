@@ -1,0 +1,9 @@
+qualified-host-lint 20 seconds
+qualified-host-lint 40 seconds
+qualified-host-lint 60 seconds
+qualified-host-lint 80 seconds
+qualified-host-lint 100 seconds
+qualified-host-lint 120 seconds
+qualified-host-lint 140 seconds
+qualified-host-lint 160 seconds
+Exit 0

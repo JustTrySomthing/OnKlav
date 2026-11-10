@@ -1,0 +1,678 @@
+{
+  "source_plan": "Remaining work from original tasks 4\u201313; prior tasks 1\u20133 retained as complete in source",
+  "execution": "One coherent production change at a time; keep independent chunks moving when prerequisites block another. No confirmation gate.",
+  "testing": "One focused run per change; investigate a concrete failure before any rerun. Maximum 120 seconds for a focused check, 240 seconds for a necessary first compile. Stop and record timeout instead of increasing it repeatedly.",
+  "hardware": "Hardware/account acceptance cannot be replaced by fixtures.",
+  "release": "No APK/SDK release until separately requested.",
+  "chunks": [
+    {
+      "number": 1,
+      "group": "Small reading improvement",
+      "original_task": 10,
+      "title": "Bounded literal text search with Unicode offsets",
+      "status": "complete",
+      "done_when": "Bounded literal search implemented; three reading-library checks pass.",
+      "batch": 5
+    },
+    {
+      "number": 2,
+      "group": "Accounts and secure networking",
+      "original_task": 4,
+      "title": "Signed account/provider policy and install permission review",
+      "status": "complete",
+      "done_when": "Production path plus a focused positive and denial/cancellation check; no placeholder service counted as complete.",
+      "completed_parts": [
+        "Rust signed metadata validation",
+        "Development preflight validation",
+        "Install/update review source"
+      ],
+      "remaining": [],
+      "batch": 1,
+      "verification": "docs/accounts-policy-verification.json"
+    },
+    {
+      "number": 3,
+      "group": "Accounts and secure networking",
+      "original_task": 4,
+      "title": "System-browser PKCE launch and exact callback/state validation",
+      "status": "source_complete",
+      "done_when": "Production path plus a focused positive and denial/cancellation check; no placeholder service counted as complete.",
+      "batch": 1,
+      "recovery_status": "reimplemented_initial_checks_passed",
+      "recovery_work": "Restore the PKCE/state generator, bounded browser launch, exact callback validation, cancellation/timeout, one-use callback handling and callback activity registration.",
+      "verification_to_restore": "Test mismatched/duplicate state, wrong routes, replay, expiry, user cancellation and a signed guest through JNI.",
+      "verification": "docs/accounts-connect-vault-verification.json"
+    },
+    {
+      "number": 4,
+      "group": "Accounts and secure networking",
+      "original_task": 4,
+      "title": "Host-only encrypted account/token handles",
+      "status": "source_complete",
+      "done_when": "Production path plus a focused positive and denial/cancellation check; no placeholder service counted as complete.",
+      "batch": 1,
+      "recovery_status": "reimplemented_initial_checks_passed",
+      "recovery_work": "Restore app/publisher-isolated account storage, opaque account handles and signed-provider policy invalidation. Keep tokens inside the host and exclude them from replies, previews and logs.",
+      "verification_to_restore": "Test encrypted storage, app/publisher isolation, changed provider policy and secret redaction.",
+      "verification": "docs/accounts-connect-vault-verification.json"
+    },
+    {
+      "number": 5,
+      "group": "Accounts and secure networking",
+      "original_task": 4,
+      "title": "Token refresh, sign-out and removal cleanup",
+      "status": "source_complete",
+      "done_when": "Production path plus a focused positive and denial/cancellation check; no placeholder service counted as complete.",
+      "batch": 1,
+      "recovery_status": "reimplemented_and_verified",
+      "recovery_work": "Restore bounded refresh/revocation, local sign-out even when remote revocation fails, cancellation on revoke/remove and prevention of refresh resurrecting a disconnected account.",
+      "verification_to_restore": "Test token rotation, rate limits, timeouts, revoke/remove races and local cleanup after provider failure.",
+      "remaining": [
+        "Real provider refresh/revocation acceptance; part of final qualification"
+      ],
+      "verification": "docs/services-completion-verification.json"
+    },
+    {
+      "number": 6,
+      "group": "Accounts and secure networking",
+      "original_task": 4,
+      "title": "Origin-bound authenticated HTTPS requests",
+      "status": "source_complete",
+      "done_when": "Production path plus a focused positive and denial/cancellation check; no placeholder service counted as complete.",
+      "batch": 1,
+      "recovery_status": "reimplemented_and_verified",
+      "recovery_work": "Restore live-grant-checked account attachment to signed API origins, without guest credential headers or automatic replay of mutating requests. Restore the public account helper and developer/runtime integration.",
+      "verification_to_restore": "Regenerate the disposable signed account fixture and test connect/request/disconnect through source-matched JNI; retain real-provider acceptance as separate work.",
+      "verification": "docs/services-completion-verification.json"
+    },
+    {
+      "number": 7,
+      "group": "Jobs and downloads",
+      "original_task": 5,
+      "title": "Durable job records, ownership and status/cancel API",
+      "status": "source_complete",
+      "done_when": "Production path plus a focused positive and denial/cancellation check; no placeholder service counted as complete.",
+      "batch": 2,
+      "verification": "docs/services-completion-verification.json",
+      "recovery_status": "reimplemented_and_verified"
+    },
+    {
+      "number": 8,
+      "group": "Jobs and downloads",
+      "original_task": 5,
+      "title": "Android job execution, constraints and reboot recovery",
+      "status": "source_complete",
+      "done_when": "Production path plus a focused positive and denial/cancellation check; no placeholder service counted as complete.",
+      "batch": 2,
+      "verification": "docs/services-completion-verification.json",
+      "recovery_status": "reimplemented_and_verified"
+    },
+    {
+      "number": 9,
+      "group": "Jobs and downloads",
+      "original_task": 5,
+      "title": "Bounded binary download to private staging",
+      "status": "source_complete",
+      "done_when": "Production path plus a focused positive and denial/cancellation check; no placeholder service counted as complete.",
+      "batch": 2,
+      "verification": "docs/services-completion-verification.json",
+      "recovery_status": "reimplemented_and_verified"
+    },
+    {
+      "number": 10,
+      "group": "Jobs and downloads",
+      "original_task": 5,
+      "title": "Validated resume, integrity checking and atomic completion",
+      "status": "source_complete",
+      "done_when": "Production path plus a focused positive and denial/cancellation check; no placeholder service counted as complete.",
+      "batch": 2,
+      "verification": "docs/services-completion-verification.json",
+      "recovery_status": "reimplemented_and_verified"
+    },
+    {
+      "number": 11,
+      "group": "Media",
+      "original_task": 6,
+      "title": "Shared local-file player and progress/seek component",
+      "status": "source_complete",
+      "done_when": "Production path plus a focused positive and denial/cancellation check; no placeholder service counted as complete.",
+      "batch": 2,
+      "verification": "docs/services-completion-verification.json",
+      "recovery_status": "reimplemented_and_verified"
+    },
+    {
+      "number": 12,
+      "group": "Media",
+      "original_task": 6,
+      "title": "HTTPS streams, queue and playback-speed controls",
+      "status": "source_complete",
+      "done_when": "Production path plus a focused positive and denial/cancellation check; no placeholder service counted as complete.",
+      "batch": 2,
+      "verification": "docs/services-completion-verification.json",
+      "recovery_status": "reimplemented_and_verified"
+    },
+    {
+      "number": 13,
+      "group": "Media",
+      "original_task": 6,
+      "title": "Background media session, audio focus and lock-screen controls",
+      "status": "source_complete",
+      "done_when": "Production path plus a focused positive and denial/cancellation check; no placeholder service counted as complete.",
+      "batch": 2,
+      "verification": "docs/services-completion-verification.json",
+      "recovery_status": "reimplemented_and_verified"
+    },
+    {
+      "number": 14,
+      "group": "Calendars and reminders",
+      "original_task": 7,
+      "title": "Trusted clock/timezone API",
+      "status": "source_complete",
+      "done_when": "Production path plus a focused positive and denial/cancellation check; no placeholder service counted as complete.",
+      "batch": 3,
+      "recovery_status": "reimplemented_and_verified",
+      "recovery_work": "Restore the read-only clock broker, Android snapshot, public helper, contract/catalog entries and source guide. Preserve local date, DST offset, locale, week start and user 12/24-hour preference.",
+      "verification_to_restore": "Regenerate the permission-free signed clock fixture; test DST/date boundaries, user preferences and no-grant JNI access.",
+      "verification": "docs/clock-verification.json"
+    },
+    {
+      "number": 15,
+      "group": "Calendars and reminders",
+      "original_task": 7,
+      "title": "All-day ICS import/export",
+      "status": "source_complete",
+      "done_when": "Production path plus a focused positive and denial/cancellation check; no placeholder service counted as complete.",
+      "batch": 3,
+      "recovery_status": "reimplemented_and_verified",
+      "recovery_work": "Restore bounded mixed UTC/all-day event import/export, exclusive DATE end semantics, Unicode escaping/folding and atomic rejection of mixed or duplicate date properties. Preserve the existing UTC-only API.",
+      "verification_to_restore": "Recreate the all-day regression tests and run them with existing UTC calendar checks; the earlier reported six-case run is not available as a current proof.",
+      "verification": "docs/calendar-components-verification.json"
+    },
+    {
+      "number": 16,
+      "group": "Calendars and reminders",
+      "original_task": 7,
+      "title": "Themed agenda and event editor",
+      "status": "source_complete",
+      "done_when": "Production path plus a focused positive and denial/cancellation check; no placeholder service counted as complete.",
+      "batch": 3,
+      "verification": "docs/calendar-components-verification.json"
+    },
+    {
+      "number": 17,
+      "group": "Calendars and reminders",
+      "original_task": 7,
+      "title": "Bounded recurrence with timezone/DST handling",
+      "status": "source_complete",
+      "done_when": "Production path plus a focused positive and denial/cancellation check; no placeholder service counted as complete.",
+      "batch": 3,
+      "verification": "docs/recurrence-reminders-verification.json"
+    },
+    {
+      "number": 18,
+      "group": "Calendars and reminders",
+      "original_task": 7,
+      "title": "Reminder pending/status and absolute-date scheduling",
+      "status": "source_complete",
+      "done_when": "Production path plus a focused positive and denial/cancellation check; no placeholder service counted as complete.",
+      "batch": 3,
+      "verification": "docs/recurrence-reminders-verification.json"
+    },
+    {
+      "number": 19,
+      "group": "Calendars and reminders",
+      "original_task": 7,
+      "title": "Snooze/repeat actions and missed-event policy",
+      "status": "source_implemented_integration_pending",
+      "done_when": "Production path plus a focused positive and denial/cancellation check; no placeholder service counted as complete.",
+      "batch": 3,
+      "verification": "docs/group12-verification.json",
+      "remaining": [
+        "Full Android host compilation/integration when missing dependencies are available",
+        "Physical device/OEM acceptance for the relevant service"
+      ]
+    },
+    {
+      "number": 20,
+      "group": "Calendars and reminders",
+      "original_task": 7,
+      "title": "User-selected Android calendar integration",
+      "status": "source_implemented_integration_pending",
+      "done_when": "Production path plus a focused positive and denial/cancellation check; no placeholder service counted as complete.",
+      "batch": 3,
+      "verification": "docs/group12-verification.json",
+      "remaining": [
+        "Full Android host compilation/integration when missing dependencies are available",
+        "Physical device/OEM acceptance for the relevant service"
+      ]
+    },
+    {
+      "number": 21,
+      "group": "Device services",
+      "original_task": 8,
+      "title": "Connectivity status and Android settings handoff",
+      "status": "source_implemented_integration_pending",
+      "done_when": "Production path plus a focused positive and denial/cancellation check; no placeholder service counted as complete.",
+      "batch": 4,
+      "recovery_status": "reimplemented_isolated_checks_passed",
+      "recovery_work": "Restore nonidentifying connectivity snapshots, trusted system settings handoff, direct-tap enforcement, broker/public helper and contract/catalog integration. Do not expose Wi-Fi identifiers or add direct radio toggles.",
+      "verification_to_restore": "Restore the signed connectivity fixture; test captive portal/metering/roaming, trusted settings selection, unavailable settings, live authorization and source-matched JNI. The interrupted Android build has no recovered completion evidence.",
+      "verification": "docs/group12-verification.json",
+      "remaining": [
+        "Full Android host compilation/integration when missing dependencies are available",
+        "Physical device/OEM acceptance for the relevant service"
+      ]
+    },
+    {
+      "number": 22,
+      "group": "Device services",
+      "original_task": 8,
+      "title": "Scoped foreground location with manual fallback",
+      "status": "source_implemented_integration_pending",
+      "done_when": "Production path plus a focused positive and denial/cancellation check; no placeholder service counted as complete.",
+      "batch": 4,
+      "verification": "docs/group12-verification.json",
+      "remaining": [
+        "Full Android host compilation/integration when missing dependencies are available",
+        "Physical device/OEM acceptance for the relevant service"
+      ]
+    },
+    {
+      "number": 23,
+      "group": "Device services",
+      "original_task": 8,
+      "title": "Torch ownership, timeout and cleanup",
+      "status": "source_implemented_integration_pending",
+      "done_when": "Production path plus a focused positive and denial/cancellation check; no placeholder service counted as complete.",
+      "batch": 4,
+      "verification": "docs/group12-verification.json",
+      "remaining": [
+        "Full Android host compilation/integration when missing dependencies are available",
+        "Physical device/OEM acceptance for the relevant service"
+      ]
+    },
+    {
+      "number": 24,
+      "group": "Device services",
+      "original_task": 8,
+      "title": "Selected BLE scan/connect/read/write/notify",
+      "status": "source_implemented_integration_pending",
+      "done_when": "Production path plus a focused positive and denial/cancellation check; no placeholder service counted as complete.",
+      "batch": 4,
+      "verification": "docs/group12-verification.json",
+      "remaining": [
+        "Full Android host compilation/integration when missing dependencies are available",
+        "Physical device/OEM acceptance for the relevant service"
+      ]
+    },
+    {
+      "number": 25,
+      "group": "Device services",
+      "original_task": 8,
+      "title": "Separately scoped nearby Wi-Fi and LAN workflows",
+      "status": "source_implemented_integration_pending",
+      "done_when": "Production path plus a focused positive and denial/cancellation check; no placeholder service counted as complete.",
+      "batch": 4,
+      "verification": "docs/group12-verification.json",
+      "remaining": [
+        "Full Android host compilation/integration when missing dependencies are available",
+        "Physical device/OEM acceptance for the relevant service"
+      ]
+    },
+    {
+      "number": 26,
+      "group": "App handoffs",
+      "original_task": 9,
+      "title": "Typed file/share handoff and handler discovery",
+      "status": "source_implemented_integration_pending",
+      "done_when": "Production path plus a focused positive and denial/cancellation check; no placeholder service counted as complete.",
+      "batch": 4,
+      "verification": "docs/handoff-verification.json",
+      "remaining": [
+        "Full-host Android/JNI integration when dependency artifacts are available",
+        "Real chooser, URI-grant/receiver and OEM/process-recovery acceptance"
+      ]
+    },
+    {
+      "number": 27,
+      "group": "App handoffs",
+      "original_task": 9,
+      "title": "Cross-app/publisher ownership and removal checks",
+      "status": "source_implemented_integration_pending",
+      "done_when": "Production path plus a focused positive and denial/cancellation check; no placeholder service counted as complete.",
+      "batch": 4,
+      "verification": "docs/handoff-verification.json",
+      "remaining": [
+        "Full-host Android/JNI integration when dependency artifacts are available",
+        "Real chooser, URI-grant/receiver and OEM/process-recovery acceptance"
+      ]
+    },
+    {
+      "number": 28,
+      "group": "Reading",
+      "original_task": 10,
+      "title": "Shared text search UI and saved reading position",
+      "status": "source_complete_qualification_pending",
+      "done_when": "Production path plus a focused positive and denial/cancellation check; no placeholder service counted as complete.",
+      "batch": 5,
+      "verification": "docs/reading-ui-verification.json",
+      "remaining": [
+        "Full Android host rendering/integration and actual phone accessibility/layout qualification",
+        "EPUB/PDF adapters remain separate chunks29\u201330"
+      ]
+    },
+    {
+      "number": 29,
+      "group": "Reading",
+      "original_task": 10,
+      "title": "EPUB chapters/TOC, reflow and search",
+      "status": "source_complete_text_profile_qualification_pending",
+      "done_when": "Production path plus a focused positive and denial/cancellation check; no placeholder service counted as complete.",
+      "batch": 5,
+      "verification": "docs/epub-verification.json",
+      "supported_profile": "Bounded offline EPUB2/3 text reflow, chapters, TOC, whole-book search and positions; images/CSS fidelity, DRM and fixed layout unsupported",
+      "remaining": [
+        "Android renderer/JNI integration and handset accessibility/layout/performance qualification",
+        "Full visual EPUB conformance is not claimed by this text profile"
+      ]
+    },
+    {
+      "number": 30,
+      "group": "Reading",
+      "original_task": 10,
+      "title": "PDF pages/search/selection and shared viewer integration",
+      "status": "source_implemented_integration_pending",
+      "done_when": "Production path plus a focused positive and denial/cancellation check; no placeholder service counted as complete.",
+      "batch": 5,
+      "verification": "docs/pdf-verification.json",
+      "remaining": [
+        "Actual Android PDFium rendering, isolated-service IPC/watchdog and lifecycle enforcement",
+        "Full-host integration and phone accessibility/layout/process/performance qualification"
+      ]
+    },
+    {
+      "number": 31,
+      "group": "Maps",
+      "original_task": 11,
+      "title": "Map renderer with provider configuration and attribution",
+      "status": "source_implemented_integration_pending",
+      "done_when": "Production path plus a focused positive and denial/cancellation check; no placeholder service counted as complete.",
+      "batch": 5,
+      "verification": "docs/maps-verification.json",
+      "supported_profile": "Passive app-private256\u00d7256 XYZ raster tiles, bounded native pan/raster magnification, markers, provider configuration and visible attribution; tile fetch/cache/offline data is chunk32",
+      "remaining": [
+        "Actual configured provider/OAuth/HTTP and full Android/device qualification",
+        "Bounded profiles apply; see current public workflow guides"
+      ],
+      "workflow_wrap_verification": "docs/workflow-wrap-verification.json"
+    },
+    {
+      "number": 32,
+      "group": "Maps",
+      "original_task": 11,
+      "title": "Bounded tile cache and offline-data policy",
+      "status": "source_implemented_integration_pending",
+      "done_when": "Production path plus a focused positive and denial/cancellation check; no placeholder service counted as complete.",
+      "batch": 5,
+      "verification": "docs/maps32-33-verification.json",
+      "supported_profile": "Owner-private64-entry/16MiB XYZ tile cache, bounded binary HTTP, expiry/conditional requests and explicit provider offline policy; app must request only displayed tiles",
+      "remaining": [
+        "Actual configured provider/OAuth/HTTP and full Android/device qualification",
+        "Bounded profiles apply; see current public workflow guides"
+      ],
+      "workflow_wrap_verification": "docs/workflow-wrap-verification.json"
+    },
+    {
+      "number": 33,
+      "group": "Maps",
+      "original_task": 11,
+      "title": "Geocoding and routing adapters",
+      "status": "source_implemented_integration_pending",
+      "done_when": "Production path plus a focused positive and denial/cancellation check; no placeholder service counted as complete.",
+      "batch": 5,
+      "verification": "docs/maps32-33-verification.json",
+      "supported_profile": "Configured keyless Nominatim-jsonv2 search and OSRM-GeoJSON route previews, native result rows and attributed map route overlay",
+      "remaining": [
+        "Actual configured provider/OAuth/HTTP and full Android/device qualification",
+        "Bounded profiles apply; see current public workflow guides"
+      ],
+      "workflow_wrap_verification": "docs/workflow-wrap-verification.json"
+    },
+    {
+      "number": 34,
+      "group": "Adapters and examples",
+      "original_task": 12,
+      "title": "Podcast enclosures and radio metadata adapters",
+      "status": "source_implemented_integration_pending",
+      "done_when": "Production path plus a focused positive and denial/cancellation check; no placeholder service counted as complete.",
+      "batch": 5,
+      "verification": "docs/media34-verification.json",
+      "supported_profile": "Bounded RSS2 audio enclosures and selected Icecast JSON metadata using existing signed HTTP/shared media brokers",
+      "remaining": [
+        "Actual chosen feed/station/codec, background audio and phone acceptance",
+        "Full-host integration with recorded missing dependencies restored; broader feed/directory formats are not claimed"
+      ]
+    },
+    {
+      "number": 35,
+      "group": "Adapters and examples",
+      "original_task": 12,
+      "title": "Email transport/account and bounded mailbox sync",
+      "status": "source_implemented_integration_pending",
+      "done_when": "Production path plus a focused positive and denial/cancellation check; no placeholder service counted as complete.",
+      "batch": 5,
+      "verification": "docs/email35-verification.json",
+      "supported_profile": "Configured read-only OAuth/JMAP header transport and bounded foreground mailbox snapshot sync; no IMAP/POP/SMTP or universal provider claim",
+      "remaining": [
+        "Actual configured provider/OAuth/HTTP and full Android/device qualification",
+        "Bounded profiles apply; see current public workflow guides"
+      ],
+      "workflow_wrap_verification": "docs/workflow-wrap-verification.json"
+    },
+    {
+      "number": 36,
+      "group": "Adapters and examples",
+      "original_task": 12,
+      "title": "Safe MIME, attachments, drafts and confirmed-send UI",
+      "status": "source_implemented_integration_pending",
+      "done_when": "Production path plus a focused positive and denial/cancellation check; no placeholder service counted as complete.",
+      "batch": 5,
+      "verification": "docs/email36-verification.json",
+      "supported_profile": "Configured JMAP server-decoded plain text, server-blob attachment metadata/downloads, one private draft and native confirmed submission with durable no-auto-retry lock",
+      "remaining": [
+        "Actual configured provider/OAuth/HTTP and full Android/device qualification",
+        "Bounded profiles apply; see current public workflow guides"
+      ],
+      "workflow_wrap_verification": "docs/workflow-wrap-verification.json"
+    },
+    {
+      "number": 37,
+      "group": "Adapters and examples",
+      "original_task": 12,
+      "title": "Weather adapter, units, attribution and stale-cache UI",
+      "status": "source_implemented_integration_pending",
+      "done_when": "Production path plus a focused positive and denial/cancellation check; no placeholder service counted as complete.",
+      "batch": 5,
+      "verification": "docs/weather37-verification.json",
+      "supported_profile": "Configured current Open-Meteo-compatible model weather, metric/imperial units, attribution and explicitly stale private cache with manual refresh/age check",
+      "remaining": [
+        "Actual provider HTTP/model/terms and full Android/device qualification",
+        "No forecasts/alerts/background polling; freshness is as of last explicit device-time check"
+      ]
+    },
+    {
+      "number": 38,
+      "group": "Adapters and examples",
+      "original_task": 12,
+      "title": "Public-API reference apps for the new services",
+      "status": "source_implemented_integration_pending",
+      "done_when": "Production path plus a focused positive and denial/cancellation check; no placeholder service counted as complete.",
+      "batch": 5,
+      "verification": "docs/reference38-verification.json",
+      "supported_profile": "Initial public reference controllers/projects for manual weather, podcast/radio listening, center-tile preview and connected-mail headers, plus preserved fixture examples",
+      "remaining": [
+        "Actual configured provider/OAuth/HTTP and full Android/device qualification",
+        "Bounded profiles apply; see current public workflow guides"
+      ],
+      "workflow_wrap_verification": "docs/workflow-wrap-verification.json"
+    },
+    {
+      "number": 39,
+      "group": "Qualification",
+      "original_task": 13,
+      "title": "Phone media, TalkBack, size/IME and process-recovery qualification",
+      "status": "requires_environment",
+      "done_when": "Production path plus a focused positive and denial/cancellation check; no placeholder service counted as complete.",
+      "batch": 6,
+      "verification": "docs/qualification-environment.json",
+      "remaining": [
+        "Physical device/two-phone environment unavailable; no acceptance run"
+      ]
+    },
+    {
+      "number": 40,
+      "group": "Qualification",
+      "original_task": 13,
+      "title": "Two-phone delivery/receipts/reconnect/removal qualification",
+      "status": "requires_environment",
+      "done_when": "Production path plus a focused positive and denial/cancellation check; no placeholder service counted as complete.",
+      "batch": 6,
+      "verification": "docs/qualification-environment.json",
+      "remaining": [
+        "Physical device/two-phone environment unavailable; no acceptance run"
+      ]
+    },
+    {
+      "number": 41,
+      "group": "Qualification",
+      "original_task": 13,
+      "title": "Bounded sustained performance/heap profiling and security review",
+      "status": "host_review_partial_requires_environment",
+      "done_when": "Production path plus a focused positive and denial/cancellation check; no placeholder service counted as complete.",
+      "batch": 6,
+      "verification": "docs/qualification41-review.json",
+      "completed_parts": [
+        "Bounded optimized synthetic Linux SDK timing/process-RSS sample",
+        "Focused source review and malformed mail acknowledgement hardening",
+        "Selected HTTP/storage/mail policy regressions"
+      ],
+      "remaining": [
+        "Sustained Android heap/PSS/performance/UI/process profiling",
+        "Actual provider/Android transport and dependency/adversarial security qualification"
+      ]
+    },
+    {
+      "number": 42,
+      "group": "Qualification",
+      "original_task": 13,
+      "title": "SDK/package/documentation and APK release preparation when requested",
+      "status": "deferred_release",
+      "done_when": "Production path plus a focused positive and denial/cancellation check; no placeholder service counted as complete.",
+      "batch": 6
+    }
+  ],
+  "next": 41,
+  "active_batch": 5,
+  "batches": [
+    {
+      "number": 1,
+      "title": "Accounts and secure networking",
+      "status": "source_complete_qualification_pending"
+    },
+    {
+      "number": 2,
+      "title": "Background jobs, downloads and media",
+      "status": "source_complete_qualification_pending"
+    },
+    {
+      "number": 3,
+      "title": "Calendars and reminders",
+      "status": "source_complete_qualification_pending"
+    },
+    {
+      "number": 4,
+      "title": "Device services and app sharing",
+      "status": "source_complete_qualification_pending"
+    },
+    {
+      "number": 5,
+      "title": "Reading, maps, adapters and examples",
+      "status": "source_complete_qualification_pending"
+    },
+    {
+      "number": 6,
+      "title": "Final qualification",
+      "status": "pending"
+    }
+  ],
+  "continue_without_confirmation": true,
+  "recovery": {
+    "saved_version_restored": 33,
+    "reason": "Execution workspace disconnected and returned an older source tree. Restored the last durable checkpoint.",
+    "interrupted_changes_not_recovered": [
+      21
+    ],
+    "earlier_test_reports": "Historical reports exist in conversation; the corresponding interrupted source is absent from the saved checkpoint. Do not count those changes as completed.",
+    "source_and_native_hashes_match": true,
+    "checkpoint_tool": "scripts/checkpoint_working.py",
+    "next": 19,
+    "latest_saved_source_verified": 34,
+    "unrecoverable_source_chunks": [],
+    "todo": "docs/REMAINING-WORK.md",
+    "reimplemented_chunks": [
+      3,
+      4,
+      5,
+      6,
+      14,
+      15
+    ],
+    "latest_completed_pair": [
+      3,
+      4
+    ],
+    "original_interrupted_chunks": [
+      3,
+      4,
+      5,
+      6,
+      14,
+      15,
+      21
+    ],
+    "current_note": "Latest complete Map/mail/MIME/upload/recovery source verified against saved checkpoint27; no missing source. Historical interrupted-source lists are resolved.",
+    "current_verification": "docs/recovery-current-verification.json",
+    "historical_unrecoverable_chunks": [
+      21
+    ]
+  },
+  "latest_completed_items": [
+    1,
+    2
+  ],
+  "latest_completed_chunks": [
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38
+  ],
+  "latest_completed_note": "Map/mail workflow wrap: bounded MIME/upload/recovery and integrated reference workflows source complete; qualification pending.",
+  "current_full_host_verification": "docs/integration-provider-verification.json",
+  "dependency_blocker": "resolved: exact3 dependencies restored from official repositories"
+}

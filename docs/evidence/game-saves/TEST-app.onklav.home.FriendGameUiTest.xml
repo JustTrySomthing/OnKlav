@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.FriendGameUiTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-11-04T15:55:43" hostname="1bb679a568a0" time="6.373">
+  <properties/>
+  <testcase name="navalTapOpensNavalAndLeavesOtherSavedGameAlone" classname="app.onklav.home.FriendGameUiTest" time="6.373"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,62 @@
+{
+  "version": "0.97.0-email1",
+  "version_code": 105,
+  "status": "Native Email implemented and host-verified; provider and phone qualification pending",
+  "production_ready": false,
+  "included_app": {
+    "id": "app.onklav.email",
+    "package": "Email.onklav-a",
+    "version": 1,
+    "host_dispatch": "SdkAppScreen -> EmailWorkspace -> MailModel -> MailProtocol/MailDisk",
+    "language": "Rust/Wasm signed shell; Kotlin/Compose UI; Android-compatible upstream mail and activation binaries"
+  },
+  "implemented": [
+    "unified and per-account inboxes",
+    "read/unread, stars, local and server-header search, older pages",
+    "server folders, archive/trash/copy/move and targeted delete",
+    "editable local inbox filters",
+    "rich text, To/Cc/Bcc, signatures, reply/reply-all/forward",
+    "encrypted persistent drafts, attachments and SMTP send phases",
+    "attachment and EML export with cancellation/progress",
+    "periodic background checks and private notifications",
+    "revocable host permissions and encrypted no-backup data"
+  ],
+  "providers": {
+    "gmail": "app-password IMAP/SMTP where eligible; Google AuthorizationClient flow implemented, publisher registration/verification and live acceptance pending",
+    "icloud": "app-specific-password TLS IMAP/SMTP implemented; live acceptance pending",
+    "outlook": "PKCE/XOAUTH2/refresh implemented; publisher Entra client ID/redirect registration and live acceptance pending; web alternative when not configured",
+    "yahoo": "app-password TLS IMAP/SMTP implemented; live acceptance pending",
+    "custom_domains": "explicit secure IMAP/SMTP server configuration; provider-specific OAuth outside Google/Microsoft, POP/EWS/ActiveSync not supported",
+    "proton": "web-mail handoff only; native Android Proton mailbox/unified inbox unsupported"
+  },
+  "verification": {
+    "focused_unique_tests": 10,
+    "host_tests": 6,
+    "real_loopback_tls_protocol_tests": 3,
+    "native_themed_ui_tests": 1,
+    "final_ui_recheck": "passed after permission-revoked draft flush fix",
+    "runtime_classes": 219,
+    "runtime_mismatches": 0,
+    "full_lint": {
+      "errors": 0,
+      "warnings": 218,
+      "information": 1,
+      "status": "passed on final source; scoped generated lint model retry after transient Gradle binary-store failure"
+    },
+    "sdk_package": "signed with original publisher and launched through AppSdk; grant revocation verified",
+    "native_core": "unchanged, source-matched JNI reused; no new core test run",
+    "real_provider_accounts_tested": false,
+    "messages_sent_to_real_recipients": false,
+    "phone_tested": false,
+    "apk_built": false
+  },
+  "remaining": [
+    "publisher Google OAuth registration/consent verification and Microsoft Entra public-client registration",
+    "real Gmail/iCloud/Outlook/Yahoo/custom-domain receive/send/folder/filter/attachment acceptance",
+    "phone lifecycle, background scheduling, provider document picker, accessibility and performance acceptance",
+    "independent security/store qualification"
+  ],
+  "scope_limits": "See docs/EMAIL.md. No native Proton, threading, server rules, provider-synchronized drafts, IDLE push, PGP/S-MIME, scheduled send, contact autocomplete, or POP/Exchange-specific protocol implementation.",
+  "evidence": "docs/evidence/v0.97.0",
+  "included_in_apk": "0.98.0-media1"
+}

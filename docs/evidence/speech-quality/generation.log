@@ -1,0 +1,20 @@
+/home/runner/work/sherpa-onnx/sherpa-onnx/sherpa-onnx/csrc/offline-tts-kokoro-model-config.cc:Validate:97 WARNING: --kokoro-lang is deprecated and ignored in sherpa-onnx >= v2.0.0. espeak-ng is no longer used. Language is determined by the lexicon files you provide.
+Model ready in 1061 ms; 11 speakers; 24000 Hz
+af message 4342 ms
+af reading 11470 ms
+af_bella message 4357 ms
+af_bella reading 11025 ms
+bm_lewis message 3623 ms
+bm_lewis reading 10659 ms
+bf_isabella message 3679 ms
+bf_isabella reading 10106 ms
+Model ready in 1940 ms; 8 speakers; 24000 Hz
+expr-voice-4-f message 5417 ms
+expr-voice-4-f reading 16278 ms
+expr-voice-3-m message 5662 ms
+expr-voice-3-m reading 16078 ms
+Model ready in 539 ms; 8 speakers; 24000 Hz
+expr-voice-4-f message 4067 ms
+expr-voice-4-f reading 12197 ms
+expr-voice-3-m message 3312 ms
+expr-voice-3-m reading 10472 ms

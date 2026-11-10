@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.UiPolishHostTest" tests="8" skipped="0" failures="1" errors="0" timestamp="2026-10-24T15:23:36" hostname="41b9fb140d3c" time="18.009">
+  <properties/>
+  <testcase name="messageLongPressUsesReadUnreadDraftAndSaveCancel" classname="app.onklav.home.UiPolishHostTest" time="8.823">
+    <failure message="java.lang.AssertionError: Failed to assert the following: (ToggleableState = 'On')&#10;Semantics of the node:&#10;Node #200 at (l=182.0, t=40.0, r=234.0, b=72.0)px, Tag: 'conversation-unread-switch'&#10;Focused = 'false'&#10;Role = 'Switch'&#10;ToggleableState = 'Off'&#10;Actions = [OnClick, RequestFocus]&#10;MergeDescendants = 'true'&#10;Has 2 siblings&#10;Selector used: (TestTag = 'conversation-unread-switch')&#10;" type="java.lang.AssertionError">java.lang.AssertionError: Failed to assert the following: (ToggleableState = 'On')
+Semantics of the node:
+Node #200 at (l=182.0, t=40.0, r=234.0, b=72.0)px, Tag: 'conversation-unread-switch'
+Focused = 'false'
+Role = 'Switch'
+ToggleableState = 'Off'
+Actions = [OnClick, RequestFocus]
+MergeDescendants = 'true'
+Has 2 siblings
+Selector used: (TestTag = 'conversation-unread-switch')
+
+	at androidx.compose.ui.test.AssertionsKt.assert(Assertions.kt:260)
+	at androidx.compose.ui.test.AssertionsKt.assert$default(Assertions.kt:250)
+	at androidx.compose.ui.test.AssertionsKt.assertIsOn(Assertions.kt:70)
+	at app.onklav.home.UiPolishHostTest.messageLongPressUsesReadUnreadDraftAndSaveCancel(UiPolishHostTest.kt:123)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:569)
+	at org.junit.runners.model.FrameworkMethod$1.runReflectiveCall(FrameworkMethod.java:59)
+	at org.junit.internal.runners.model.ReflectiveCallable.run(ReflectiveCallable.java:12)
+	at org.junit.runners.model.FrameworkMethod.invokeExplosively(FrameworkMethod.java:56)
+	at org.junit.internal.runners.statements.InvokeMethod.evaluate(InvokeMethod.java:17)
+	at org.robolectric.internal.TimeLimitedStatement.evaluate(TimeLimitedStatement.java:38)
+	at org.junit.rules.ExternalResource$1.evaluate(ExternalResource.java:54)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1$evaluate$1.invoke(AndroidComposeTestRule.android.kt:295)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1$evaluate$1.invoke(AndroidComposeTestRule.android.kt:295)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$AndroidComposeUiTestImpl.withDisposableContent(ComposeUiTest.android.kt:565)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1$1$1$1.invoke(ComposeUiTest.android.kt:370)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.withComposeIdlingResource(ComposeUiTest.android.kt:439)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.access$withComposeIdlingResource(ComposeUiTest.android.kt:235)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1$1$1.invoke(ComposeUiTest.android.kt:369)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.withWindowRecomposer(ComposeUiTest.android.kt:413)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.access$withWindowRecomposer(ComposeUiTest.android.kt:235)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1$1.invoke(ComposeUiTest.android.kt:368)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.withTestCoroutines(ComposeUiTest.android.kt:426)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.access$withTestCoroutines(ComposeUiTest.android.kt:235)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1$1.invoke(ComposeUiTest.android.kt:367)
+	at androidx.compose.ui.test.IdlingStrategy.withStrategy(IdlingStrategy.android.kt:55)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1$1.invoke(ComposeUiTest.android.kt:366)
+	at androidx.compose.ui.test.IdlingResourceRegistry.withRegistry(IdlingResourceRegistry.jvm.kt:148)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment$runTest$1.invoke(ComposeUiTest.android.kt:365)
+	at androidx.compose.ui.test.ComposeRootRegistry.withRegistry(ComposeRootRegistry.android.kt:139)
+	at androidx.compose.ui.test.AndroidComposeUiTestEnvironment.runTest(ComposeUiTest.android.kt:364)
+	at androidx.compose.ui.test.junit4.AndroidComposeTestRule$apply$1.evaluate(AndroidComposeTestRule.android.kt:295)
+	at org.junit.runners.ParentRunner$3.evaluate(ParentRunner.java:306)
+	at org.robolectric.RobolectricTestRunner$HelperTestRunner$1.evaluate(RobolectricTestRunner.java:502)
+	at org.robolectric.internal.SandboxTestRunner$2.lambda$evaluate$2(SandboxTestRunner.java:285)
+	at org.robolectric.internal.bytecode.Sandbox.lambda$runOnMainThread$0(Sandbox.java:104)
+	at java.base/java.util.concurrent.FutureTask.run(FutureTask.java:264)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+	at java.base/java.lang.Thread.run(Thread.java:840)
+</failure>
+  </testcase>
+  <testcase name="contactsGroupLettersShowNoNumberAndChooseMessageOrWalkieRecipient" classname="app.onklav.home.UiPolishHostTest" time="1.207"/>
+  <testcase name="contactsUnavailableCanRetryAndSearchHasAnExplicitEmptyResult" classname="app.onklav.home.UiPolishHostTest" time="1.242"/>
+  <testcase name="keypadAddsDigitsFormatsAndBackspacesWithoutChangingDialableTarget" classname="app.onklav.home.UiPolishHostTest" time="1.903"/>
+  <testcase name="pageSlidesFromRightAndRetainsContentUntilExitCompletes" classname="app.onklav.home.UiPolishHostTest" time="1.073"/>
+  <testcase name="mailboxTabsSelectAndExposeBothTrashActions" classname="app.onklav.home.UiPolishHostTest" time="1.189"/>
+  <testcase name="contactsRefreshAfterEditorReturnAndHideRevokedContacts" classname="app.onklav.home.UiPolishHostTest" time="1.409"/>
+  <testcase name="messageFoldersFilterProviderRowsAndRestoreAllUpdatesRustState" classname="app.onklav.home.UiPolishHostTest" time="1.163"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

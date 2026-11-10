@@ -1,0 +1,37 @@
+{
+  "grants": [
+    "storage.private",
+    "files.manage"
+  ],
+  "steps": [
+    {
+      "action": "body",
+      "value": "Keep my draft"
+    },
+    {
+      "action": "sdk.files.open",
+      "expect": {
+        "picker.folder": ""
+      }
+    },
+    {
+      "action": "sdk.files.cancel",
+      "expect": {
+        "app.doc.text": "Keep my draft",
+        "picker": null
+      }
+    },
+    {
+      "action": "save",
+      "expect": {
+        "app.status": "Saved"
+      }
+    },
+    {
+      "reopen": true,
+      "expect": {
+        "app.doc.text": "Keep my draft"
+      }
+    }
+  ]
+}

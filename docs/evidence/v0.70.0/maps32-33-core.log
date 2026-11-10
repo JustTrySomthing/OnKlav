@@ -1,0 +1,15 @@
+   Compiling onklav-core v0.8.0 (/workspace/scratch/75acf774e3b8/work/OnKlav/core)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 8.78s
+     Running unittests src/lib.rs (core/target/debug/deps/onklav_core-8a579202944a8eae)
+
+running 7 tests
+test sdk_maps::tests::maps_provider_rejects_hidden_credits_credentials_and_ambiguous_templates ... ok
+test sdk_maps::tests::maps_route_geometry_requires_bounded_points_and_visible_credits ... ok
+test sdk_maps::tests::maps_schema_bounds_coordinates_private_tiles_and_provider_metadata ... ok
+test sdk_map_cache::tests::map_cache_expiry_age_dates_and_clock_rollback_are_conservative ... ok
+test sdk_map_cache::tests::map_cache_hit_stale_offline_conditional_and_publisher_isolation ... ok
+test sdk_map_cache::tests::map_cache_no_store_must_revalidate_and_invalid_data_fail_closed ... ok
+test sdk_map_cache::tests::map_cache_eviction_missing_blobs_and_clear_preserve_other_private_files ... ok
+
+test result: ok. 7 passed; 0 failed; 0 ignored; 0 measured; 247 filtered out; finished in 1.76s
+

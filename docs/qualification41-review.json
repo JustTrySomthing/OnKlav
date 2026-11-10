@@ -1,0 +1,39 @@
+{
+  "status": "limited host-side qualification checkpoint; full41 acceptance remains open",
+  "chunks39_40": "requires_environment; no adb/platform-tools/USB bus; no phone/two-phone checks run",
+  "chunk41_complete": false,
+  "security_fix": "Mail accepts only unique correlated create/submission method acknowledgements for the configured account with valid nonempty IDs and no contradictory notCreated; malformed responses stay uncertain/locked",
+  "email_cases_passed": 10,
+  "http_policy_cases_passed": 7,
+  "storage_cases_passed": 16,
+  "contract_cases_passed": 5,
+  "unique_case_note": "Selected regressions counted once. Performance rerun followed the SDK fix and source-freeze guard change; pre-fix sample is retained but not added as coverage.",
+  "performance": "Short optimized Linux synthetic SDK workload,100 warmup+600 samples per three operations; batch process RSS, not heap/PSS or Android UI. No performance/leak acceptance threshold imposed.",
+  "performance_report": "docs/qualification41-host-performance.json",
+  "performance_current_sdk_hashes_verified": true,
+  "native_source_and_artifact_hashes_verified": true,
+  "core_or_kotlin_changed": false,
+  "native_rebuilt": false,
+  "review_scope": "Source inspection of signed HTTP/private storage/PDF/map owner/lifecycle/mail lock paths plus selected Rust/helper regressions; not an external audit or penetration assessment",
+  "remaining": [
+    "39/40 real phone/two-phone qualification",
+    "41 sustained Android heap/PSS/UI/network/provider/process performance",
+    "Dependency/adversarial/provider/Android security qualification; cargo-audit unavailable",
+    "Existing MIME/upload/map/mail workflow gaps",
+    "42 release deferred until requested"
+  ],
+  "apk_created": false,
+  "actual_email_sent": false,
+  "sdk_release_created": false,
+  "next_plan_chunk": 41,
+  "source_sha256": {
+    "developer/components/src/email_compose.rs": "88829f6c68f3f9253b6627359550500a55e3b19f2f0963f2eaed24ea0267251c"
+  },
+  "logs": [
+    "docs/evidence/v0.70.0/qualification41-mail-ack.log",
+    "docs/evidence/v0.70.0/qualification41-http.log",
+    "docs/evidence/v0.70.0/qualification41-storage.log",
+    "docs/evidence/v0.70.0/qualification41-contract.log",
+    "docs/evidence/v0.70.0/qualification41-final-summary.log"
+  ]
+}

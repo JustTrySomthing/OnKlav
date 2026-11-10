@@ -1,0 +1,15 @@
+{
+  "scope": "Build-environment HTTPS only; not Android phone acceptance",
+  "results": [
+    {
+      "url": "https://librivox.org/api/feed/audiobooks?format=json&limit=1",
+      "status": 200,
+      "bytes_sampled": 1914
+    },
+    {
+      "url": "https://www.gutenberg.org/ebooks/search.opds/?query=alice&start_index=1",
+      "status": 200,
+      "bytes_sampled": 62347
+    }
+  ]
+}

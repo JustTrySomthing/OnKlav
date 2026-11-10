@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.GamePackagesTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2026-11-03T13:10:56" hostname="d82446dcc971" time="2.345">
+  <properties/>
+  <testcase name="updatesRejectWrongPublisherRollbackAndSameVersionChangedContent" classname="app.onklav.home.GamePackagesTest" time="2.142"/>
+  <testcase name="rejectsTraversalAndSharedEngineReplacementEvenWhenPublisherSignsThem" classname="app.onklav.home.GamePackagesTest" time="0.054"/>
+  <testcase name="userCanInstallWithoutOwnerApprovalAndRemoveWithoutErasingPublisherIdentity" classname="app.onklav.home.GamePackagesTest" time="0.061"/>
+  <testcase name="installsRealPythonSignedGodotExportWithTheProductionEngineContract" classname="app.onklav.home.GamePackagesTest" time="0.048"/>
+  <testcase name="changedStoredPackageFailsLaunchAndCannotExposeFilesystemPaths" classname="app.onklav.home.GamePackagesTest" time="0.039"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

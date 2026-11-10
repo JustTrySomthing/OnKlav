@@ -1,0 +1,7 @@
+apk-lint-full: 20s
+apk-lint-full: 40s
+apk-lint-full: 60s
+apk-lint-full: 80s
+apk-lint-full: 100s
+apk-lint-full: 120s
+apk-lint-full: exit 0 in 137.7s

@@ -1,0 +1,62 @@
+{
+  "production_and_test_compilation": "passed",
+  "runtime_bundle_matches_compiled_Kotlin": true,
+  "suites": [
+    {
+      "name": "app.onklav.home.SendingSubscriptionTest",
+      "tests": "8",
+      "failures": "0",
+      "errors": "0"
+    },
+    {
+      "name": "app.onklav.home.SmsSettlementTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0"
+    },
+    {
+      "name": "app.onklav.home.SmsFailureTest",
+      "tests": "7",
+      "failures": "0",
+      "errors": "0"
+    },
+    {
+      "name": "app.onklav.shared.NativeBridgeTest",
+      "tests": "3",
+      "failures": "0",
+      "errors": "0"
+    },
+    {
+      "name": "app.onklav.shared.LauncherLayoutTest",
+      "tests": "8",
+      "failures": "0",
+      "errors": "0"
+    },
+    {
+      "name": "app.onklav.shared.Mp3CodecTest",
+      "tests": "2",
+      "failures": "0",
+      "errors": "0"
+    },
+    {
+      "name": "app.onklav.shared.ThemePackageTest",
+      "tests": "4",
+      "failures": "0",
+      "errors": "0"
+    }
+  ],
+  "tests_passed": 36,
+  "sms_specific_checks": 19,
+  "shared_checks": 17,
+  "physical_phone_testing": false,
+  "apk_built": false,
+  "underlying_network_failure": "unconfirmed; no device telephony logs or carrier evidence available",
+  "source_sha256": {
+    "android/app/src/main/kotlin/app/onklav/home/MessagingTransport.kt": "7fd055e4d29e998baed7d6e642a057f057c451f57e5d66c7caf94b5f5f22d66b",
+    "android/app/src/main/kotlin/app/onklav/home/Messages.kt": "df483523bf86c5ca215b10d0b754fb3af9e6a60c4f305ed37edf164c9a29648d",
+    "android/app/src/test/kotlin/app/onklav/home/SmsFailureTest.kt": "88b58800f385987b545cebded74a8b85d249ceee18d435708b91d83520e9fdaa",
+    "android/app/src/test/kotlin/app/onklav/home/SmsSettlementTest.kt": "d1dcbf6ee8e9aeb3ffc53d10937c0f44631a17d41bfbc9419f651edd3596bacb",
+    "android/app/src/main/kotlin/app/onklav/home/SendingSubscription.kt": "611ba44b74fee607e59d50429465c30b8e9665c1bdf3e615e01a5ee0c2aa9520",
+    "android/app/src/test/kotlin/app/onklav/home/SendingSubscriptionTest.kt": "91f2d335ef2f4010f0673a09bf0a6102ff38b2a3cfaff9a3d0db59fe911e468b"
+  }
+}

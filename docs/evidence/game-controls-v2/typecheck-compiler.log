@@ -1,0 +1,6 @@
+source/OnKlav/android/app/src/main/kotlin/app/onklav/home/WebGameActivity.kt:46:16: warning: 'var statusBarColor: Int' is deprecated. Deprecated in Java.
+        window.statusBarColor=Color.TRANSPARENT
+               ^^^^^^^^^^^^^^
+source/OnKlav/android/app/src/main/kotlin/app/onklav/home/WebGameActivity.kt:47:16: warning: 'var navigationBarColor: Int' is deprecated. Deprecated in Java.
+        window.navigationBarColor=Color.TRANSPARENT
+               ^^^^^^^^^^^^^^^^^^

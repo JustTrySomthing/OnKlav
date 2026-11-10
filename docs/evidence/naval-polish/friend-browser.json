@@ -1,0 +1,10 @@
+{
+  "two_isolated_peers": true,
+  "nine_alternating_sms_turns": true,
+  "confirmed_enemy_wreck_geometry": true,
+  "incoming_view_switch": true,
+  "paused_incoming_has_no_flight_or_audio_until_resumed": true,
+  "duplicate_journal_does_not_replay_combat": true,
+  "real_carrier_delivery": false,
+  "errors": []
+}

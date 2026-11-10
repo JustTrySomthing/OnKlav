@@ -1,0 +1,12 @@
+Publisher key created. Keep it private and backed up.
+   Compiling zmij v1.0.23
+   Compiling serde_core v1.0.229
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/workspace/scratch/75acf774e3b8/work/OnKlav/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/75acf774e3b8/work/OnKlav/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/workspace/scratch/75acf774e3b8/work/OnKlav/developer/examples/email-compose)
+    Finished `release` profile [optimized] target(s) in 7.60s
+Created /tmp/onklav-verify-tvamgn0f/check.onklav-a
+OnKlav SDK: Scenario step 6 (redacted): Sensitive app check failed; payload omitted. Local diagnostic: /workspace/scratch/75acf774e3b8/work/OnKlav/developer/examples/email-compose/target/onklav-diagnostics/scenario-failure-u2va0f0q.json

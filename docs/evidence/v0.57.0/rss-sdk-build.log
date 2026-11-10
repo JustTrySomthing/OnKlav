@@ -1,0 +1,93 @@
+{
+  "build": [
+    "RSS"
+  ],
+  "restore_bundles": [],
+  "reuse": [],
+  "unselected_stale": []
+}
+   Compiling proc-macro2 v1.0.107
+   Compiling unicode-ident v1.0.27
+   Compiling quote v1.0.47
+   Compiling cfg-if v1.0.5
+   Compiling version_check v0.9.5
+   Compiling memchr v2.8.3
+   Compiling typenum v1.20.1
+   Compiling libm v0.2.16
+   Compiling libc v0.2.191
+   Compiling bumpalo v3.20.3
+   Compiling wasm-encoder v0.240.0
+   Compiling generic-array v0.14.7
+   Compiling semver v1.0.28
+   Compiling crc32fast v1.5.3
+   Compiling rustc_version v0.4.1
+   Compiling serde_core v1.0.229
+   Compiling simd-adler32 v0.3.10
+   Compiling leb128fmt v0.1.0
+   Compiling curve25519-dalek v4.1.3
+   Compiling jni-sys v0.3.1
+   Compiling getrandom v0.4.3
+   Compiling thiserror v1.0.69
+   Compiling adler2 v2.0.1
+   Compiling log v0.4.34
+   Compiling syn v2.0.119
+   Compiling cpufeatures v0.2.17
+   Compiling zmij v1.0.23
+   Compiling crypto-common v0.1.7
+   Compiling block-buffer v0.10.4
+   Compiling downcast-rs v2.0.2
+   Compiling wasmparser v0.228.0
+   Compiling unicode-width v0.2.2
+   Compiling digest v0.10.7
+   Compiling syn v3.0.9
+   Compiling miniz_oxide v0.9.1
+   Compiling subtle v2.6.1
+   Compiling wast v240.0.0
+   Compiling hashbrown v0.17.1
+   Compiling wasmi_core v0.46.0
+   Compiling bytes v1.12.1
+   Compiling getrandom v0.3.4
+   Compiling bitflags v2.13.2
+   Compiling zip v2.6.1
+   Compiling serde_json v1.0.154
+   Compiling serde v1.0.229
+   Compiling signature v2.2.0
+   Compiling zeroize v1.9.1
+   Compiling equivalent v1.0.3
+   Compiling indexmap v2.14.2
+   Compiling ed25519 v2.2.3
+   Compiling combine v4.6.9
+   Compiling wasmi_ir v0.46.0
+   Compiling flate2 v1.1.10
+   Compiling sha2 v0.10.9
+   Compiling serde_derive v1.0.229
+   Compiling zopfli v0.8.4
+   Compiling wat v1.240.0
+   Compiling itoa v1.0.18
+   Compiling smallvec v1.16.3
+   Compiling wasmi_collections v0.46.0
+   Compiling arrayvec v0.7.8
+   Compiling multi-stash v0.2.0
+   Compiling cesu8 v1.1.0
+   Compiling spin v0.9.9
+   Compiling uuid v1.28.0
+   Compiling wasmi v0.46.0
+   Compiling jni-sys-macros v0.4.1
+   Compiling thiserror-impl v1.0.69
+   Compiling curve25519-dalek-derive v0.1.1
+   Compiling jni-sys v0.4.1
+   Compiling jni v0.21.1
+   Compiling ed25519-dalek v2.2.0
+   Compiling onklav-core v0.8.0 (/workspace/scratch/ed752e8a1957/current/OnKlav/core)
+    Finished `dev` profile [unoptimized + debuginfo] target(s) in 30.92s
+RSS: compiling changed app
+   Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/workspace/scratch/ed752e8a1957/current/OnKlav/sdk/rust)
+   Compiling onklav-rss v0.1.0 (/workspace/scratch/ed752e8a1957/current/OnKlav/sdk/apps/rss)
+    Finished `release` profile [optimized] target(s) in 5.99s
+Created /workspace/scratch/ed752e8a1957/current/OnKlav/sdk/packages/.sdk-build-636uxpwj/RSS.onklav-a
+{"built": ["RSS"], "bundles_restored": [], "all_packages_current": true}

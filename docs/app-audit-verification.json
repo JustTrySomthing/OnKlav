@@ -1,0 +1,203 @@
+{
+  "status": "requested receiving fix complete; deep review complete with open findings",
+  "apk_created": false,
+  "latest_delivered_apk": "0.100.26-rc1/code135",
+  "functional_regressions": 21,
+  "functional_tests": [
+    {
+      "class": "app.onklav.home.IncomingArchiveTest",
+      "test": "blockedArrivalsLeaveInboxAndNeverPostAnAlert"
+    },
+    {
+      "class": "app.onklav.home.IncomingArchiveTest",
+      "test": "incomingTextReturnsDeletedConversationToInboxWithoutLosingFlags"
+    },
+    {
+      "class": "app.onklav.home.IncomingArchiveTest",
+      "test": "incomingPictureUsesTheSameResurfacingPathForGroupThreads"
+    },
+    {
+      "class": "app.onklav.home.IncomingArchiveTest",
+      "test": "incomingTextReturnsArchivedThreadToInboxAndPreservesFlagsAcrossReload"
+    },
+    {
+      "class": "app.onklav.home.IncomingArchiveTest",
+      "test": "blockedArrivalWithoutOldMetadataIsRetainedOutsideInbox"
+    },
+    {
+      "class": "app.onklav.home.IncomingArchiveTest",
+      "test": "unblockingAllowsTheNextMessageToResurfaceTrash"
+    },
+    {
+      "class": "app.onklav.home.IncomingArchiveTest",
+      "test": "blockedSendersStayInTheirExistingFolders"
+    },
+    {
+      "class": "app.onklav.home.IncomingArchiveTest",
+      "test": "incomingPictureReturnsDeletedGroupConversationToInbox"
+    },
+    {
+      "class": "app.onklav.home.IncomingArchiveTest",
+      "test": "inboxAndInvalidThreadsDoNotCreateOrRewriteMetadata"
+    },
+    {
+      "class": "app.onklav.home.BlockedPictureNotificationTest",
+      "test": "blockedSenderCannotBypassBlockingThroughAnMmsDownloadAlert"
+    },
+    {
+      "class": "app.onklav.home.MmsDownloadRecoveryTest",
+      "test": "cancelledCodeAndLegacyStatusesRemainRetryableAndTruthful"
+    },
+    {
+      "class": "app.onklav.home.MmsDownloadRecoveryTest",
+      "test": "temporaryDownloadFailureStaysVisibleAndSchedulesBoundedIncomingRetries"
+    },
+    {
+      "class": "app.onklav.home.MmsDownloadRecoveryTest",
+      "test": "realPlatformRequestUsesOriginalSimUniqueOutputAndMatchingCallback"
+    },
+    {
+      "class": "app.onklav.home.MmsDownloadRecoveryTest",
+      "test": "carrierErrorsExplainConfigurationAndDoNotRetryPermanentFailures"
+    },
+    {
+      "class": "app.onklav.home.MmsDownloadRecoveryTest",
+      "test": "stalledDownloadSchedulesBoundedRecoveryWithoutResendingAnything"
+    },
+    {
+      "class": "app.onklav.home.MmsDownloadRecoveryTest",
+      "test": "acknowledgementFailureCannotReportAnAlreadyFiledPictureAsDownloadFailure"
+    },
+    {
+      "class": "app.onklav.home.MmsDownloadRecoveryTest",
+      "test": "oldAttemptCallbackCannotClearOrFailCurrentDownload"
+    },
+    {
+      "class": "app.onklav.home.MmsDownloadRecoveryTest",
+      "test": "scheduledDownloadNeverRunsWhenRoleWasRevokedAndMessagesRemainRecoverable"
+    },
+    {
+      "class": "app.onklav.home.MmsDownloadRecoveryTest",
+      "test": "unrecognizedCallbackCannotCreateAnIncomingMessageOrError"
+    },
+    {
+      "class": "app.onklav.home.MmsDownloadRecoveryTest",
+      "test": "inFlightDownloadCannotBeTruncatedByDuplicateRetryAndRevokedRolePreventsDownload"
+    },
+    {
+      "class": "app.onklav.home.MmsDownloadRecoveryTest",
+      "test": "independentPictureNotificationsCannotOverwriteEachOtherAndCompletionClearsOnlyItsOwn"
+    }
+  ],
+  "direct_store_checks": {
+    "passed": 9,
+    "duplicates_of_functional_cases": true
+  },
+  "audit_observations": {
+    "A05": {
+      "BANK_key": "",
+      "DELIVERY_key": "",
+      "sameRecipients": true,
+      "finding": "A05"
+    },
+    "A01": {
+      "file_state": "saved",
+      "bytes": 15,
+      "is_complete_docx": false,
+      "finding": "A01"
+    },
+    "A00-send-limit": {
+      "finding": "A00",
+      "existing_completed_outgoing": 1000,
+      "next_stage": {
+        "error": "Messenger state limit reached",
+        "ok": false
+      },
+      "retained_after_rejected_stage": 1000,
+      "carrier_sends_performed": 0,
+      "scope": "Actual source-matched Rust JNI, isolated synthetic messenger state"
+    },
+    "A03-timer": {
+      "stored_timers": 0,
+      "scheduled_callbacks": 1,
+      "finding": "A03-timer"
+    },
+    "A03-alarm": {
+      "stored_enabled": true,
+      "stored_hour": 7,
+      "scheduled_alarms": 0,
+      "finding": "A03-alarm"
+    }
+  },
+  "open_functional_findings": {
+    "A00": {
+      "priority": "high",
+      "status": "open",
+      "title": "Outgoing records never compact; next send rejected at 1000 retained records",
+      "evidence": "runtime JNI reproduction"
+    },
+    "A01": {
+      "priority": "high",
+      "status": "open",
+      "title": "Partial export completion and premature saved status",
+      "evidence": "protocol reproduction plus writer control-flow review"
+    },
+    "A02": {
+      "priority": "high",
+      "status": "open",
+      "title": "Receipt filing can be skipped after provider insertion on recovery",
+      "evidence": "source control-flow"
+    },
+    "A03": {
+      "priority": "high",
+      "status": "open",
+      "title": "Clock save failures can cancel schedules or leave orphan callbacks",
+      "evidence": "two corrected fault-injection observations"
+    },
+    "A04": {
+      "priority": "medium",
+      "status": "open",
+      "title": "Search and Trash-wide actions only cover loaded pages",
+      "evidence": "source control-flow"
+    },
+    "A05": {
+      "priority": "medium",
+      "status": "open",
+      "title": "Alphanumeric sender identity collision and unsupported block identity",
+      "evidence": "runtime production predicate observation and Rust validation"
+    },
+    "A06": {
+      "priority": "medium",
+      "status": "open",
+      "title": "Reply All omits original Cc",
+      "evidence": "header schema, parser and composition source"
+    }
+  },
+  "ui_refinements": [
+    "Native calculator omits supported sign/previous/next controls; history header still works",
+    "Two competing empty-state notices"
+  ],
+  "test_coverage_gap": "Older utility/editor UI tests still target prior layouts; update before broad UI acceptance claims",
+  "lint": {
+    "scope": "debug production and test sources",
+    "time_limit_seconds": 300,
+    "status": "timeout without final report",
+    "passed": false,
+    "rerun_loop": false
+  },
+  "production_compile": "passed with the final blocked-picture change",
+  "production_runtime_classes_byte_matched": 3516,
+  "native_source_changed": false,
+  "production_source_sha256": {
+    "ChatStore.kt": "a24ef721edac579077456b76c5661a50fc2d89824db672725a2f20b7c8657336",
+    "MessageNotifications.kt": "28ff02a806c81dd444bd0e061b70b30afbaf8bf0b50d01683ad5db7f5471d125"
+  },
+  "limits": [
+    "Framework host API29; no physical Samsung/Android15 acceptance",
+    "No carrier messages sent or actual provider sign-in",
+    "No new APK and no full lint pass",
+    "Games integration boundaries inspected; not full gameplay coverage"
+  ],
+  "report": "docs/APP-DEEP-REVIEW-2026-10-30.md",
+  "initial_probe_correction": "Initial Clock editor fault injector returned its delegate from fluent putString; corrected wrapper preserved interception, then only the two affected observations were rerun. Those initial probe failures are retained, not treated as product regressions."
+}

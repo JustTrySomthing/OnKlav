@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.FriendGameUiTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2026-11-03T19:52:14" hostname="d514432facff" time="4.913">
+  <properties/>
+  <testcase name="navalTapRecoversExistingGameAndUnblockedSoloLaunchesNaval" classname="app.onklav.home.FriendGameUiTest" time="4.392"/>
+  <testcase name="originalOpponentChoicesAndSeparateNumberInvitation" classname="app.onklav.home.FriendGameUiTest" time="0.383"/>
+  <testcase name="messageShortcutSkipsOpponentAndOffersRetryAfterSetupFailure" classname="app.onklav.home.FriendGameUiTest" time="0.138"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

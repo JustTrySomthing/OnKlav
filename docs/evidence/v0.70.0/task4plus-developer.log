@@ -1,0 +1,437 @@
+Publisher key created. Keep it private and backed up.
+   Compiling zmij v1.0.23
+   Compiling serde_core v1.0.229
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/tmp/onklav-authoring-arozgiba/form/vendor/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/tmp/onklav-authoring-arozgiba/form/vendor/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-authoring-arozgiba/form)
+    Finished `release` profile [optimized] target(s) in 4.31s
+Created /tmp/onklav-authoring-arozgiba/form/dist/org.example.authoring-v1.onklav-a
+test_bad_configuration_stops_before_wasm_build_or_signing (test_authoring.Authoring.test_bad_configuration_stops_before_wasm_build_or_signing) ... ok
+test_declarative_project_validates_and_persists_using_the_real_broker (test_authoring.Authoring.test_declarative_project_validates_and_persists_using_the_real_broker) ... ok
+test_failed_scenario_keeps_a_private_local_diagnostic (test_authoring.Authoring.test_failed_scenario_keeps_a_private_local_diagnostic) ... ok
+test_form_capability_error_does_not_start_a_runtime (test_authoring.Authoring.test_form_capability_error_does_not_start_a_runtime) ... ok
+test_logic_runner_edits_saves_and_reopens_without_native_simulation (test_authoring.Authoring.test_logic_runner_edits_saves_and_reopens_without_native_simulation) ... Publisher key created. Keep it private and backed up.
+    Finished `release` profile [optimized] target(s) in 0.00s
+Created /tmp/onklav-run-p48ax1ph/update-1-h2yezujw/run.onklav-a
+ok
+test_malformed_scenario_is_rejected_before_process_start (test_authoring.Authoring.test_malformed_scenario_is_rejected_before_process_start) ... ok
+test_numeric_schema_persists_drafts_and_exposes_typed_data (test_authoring.Authoring.test_numeric_schema_persists_drafts_and_exposes_typed_data) ... Publisher key created. Keep it private and backed up.
+   Compiling zmij v1.0.23
+   Compiling serde_core v1.0.229
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/tmp/onklav-authoring-arozgiba/typed/vendor/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/tmp/onklav-authoring-arozgiba/typed/vendor/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-authoring-arozgiba/typed)
+    Finished `release` profile [optimized] target(s) in 4.98s
+Created /tmp/onklav-verify-ro3_w24_/check.onklav-a
+ok
+test_validator_refuses_a_different_project_schema_implementation (test_authoring.Authoring.test_validator_refuses_a_different_project_schema_implementation) ... ok
+test_all_capabilities_have_scope_and_extension_boundaries (test_capability_discovery.Discovery.test_all_capabilities_have_scope_and_extension_boundaries) ... ok
+test_cli_reports_working_scope_and_rejects_unknown (test_capability_discovery.Discovery.test_cli_reports_working_scope_and_rejects_unknown) ... ok
+test_native_effect_inventory_matches_production_dispatch (test_capability_discovery.Discovery.test_native_effect_inventory_matches_production_dispatch) ... ok
+test_unknown_permissions_and_channels_fail_closed (test_capability_discovery.Discovery.test_unknown_permissions_and_channels_fail_closed) ... ok
+test_working_services_are_not_promoted_to_released (test_capability_discovery.Discovery.test_working_services_are_not_promoted_to_released) ... ok
+Publisher key created. Keep it private and backed up.
+   Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/tmp/tmptqofrzl0/app/vendor/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/tmp/tmptqofrzl0/app/vendor/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/tmp/tmptqofrzl0/app)
+    Finished `release` profile [optimized] target(s) in 4.23s
+Created /tmp/tmptqofrzl0/external.onklav-a
+    Finished `release` profile [optimized] target(s) in 0.01s
+Created /tmp/tmptqofrzl0/second.onklav-a
+test_builtin_authorization_supplies_signed_owner_and_canonical_recipient (test_carrier_isolation.CarrierIsolation.test_builtin_authorization_supplies_signed_owner_and_canonical_recipient) ... ok
+test_external_private_voice_stays_local_and_cannot_use_builtin_carrier_routes (test_carrier_isolation.CarrierIsolation.test_external_private_voice_stays_local_and_cannot_use_builtin_carrier_routes) ... ok
+test_revocation_and_reinstall_never_reactivate_an_old_confirmation (test_carrier_isolation.CarrierIsolation.test_revocation_and_reinstall_never_reactivate_an_old_confirmation) ... ok
+test_two_apps_on_the_same_peer_have_separate_sessions_and_receipts (test_carrier_isolation.CarrierIsolation.test_two_apps_on_the_same_peer_have_separate_sessions_and_receipts) ... ok
+test_voice_receipts_reconnect_and_removal_use_the_owning_app_scope (test_carrier_isolation.CarrierIsolation.test_voice_receipts_reconnect_and_removal_use_the_owning_app_scope) ... ok
+test_build_icon_and_catalog_inventory_match_the_runtime (test_contract.PublishedContract.test_build_icon_and_catalog_inventory_match_the_runtime) ... ok
+test_capabilities_and_widgets_match_production_validation (test_contract.PublishedContract.test_capabilities_and_widgets_match_production_validation) ... ok
+test_developer_links_and_required_sources_exist (test_contract.PublishedContract.test_developer_links_and_required_sources_exist) ... ok
+test_harness_uses_the_same_locked_runtime_dependency_versions (test_contract.PublishedContract.test_harness_uses_the_same_locked_runtime_dependency_versions) ... ok
+test_included_apps_use_the_public_controller_crate (test_contract.PublishedContract.test_included_apps_use_the_public_controller_crate) ... ok
+test_compile_timeout_stops_the_process_tree_on_posix (test_deadline.Deadline.test_compile_timeout_stops_the_process_tree_on_posix) ... ok
+test_stalled_runtime_is_killed_and_streams_are_closed (test_deadline.Deadline.test_stalled_runtime_is_killed_and_streams_are_closed) ... ok
+test_feedback_is_read_from_private_device_storage_without_building (test_device_preview.DevicePreview.test_feedback_is_read_from_private_device_storage_without_building) ... ok
+test_missing_device_tools_and_bad_serial_fail_before_building (test_device_preview.DevicePreview.test_missing_device_tools_and_bad_serial_fail_before_building) ... ok
+Publisher key created. Keep it private and backed up.
+   Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling serde_json v1.0.154
+   Compiling memchr v2.8.3
+   Compiling itoa v1.0.18
+   Compiling onklav-app v0.1.0 (/tmp/onklav-device-a5rbb44r/app/vendor/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/tmp/onklav-device-a5rbb44r/app/vendor/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-device-a5rbb44r/app)
+    Finished `release` profile [optimized] target(s) in 4.79s
+Created /tmp/onklav-device-a5rbb44r/test.onklav-a
+test_camera_commit_requires_a_live_capture_token_and_returns_only_file_metadata (test_device_services.DeviceServices.test_camera_commit_requires_a_live_capture_token_and_returns_only_file_metadata) ... ok
+test_denial_and_revocation_block_both_device_services (test_device_services.DeviceServices.test_denial_and_revocation_block_both_device_services) ... ok
+test_notifications_bind_native_identity_validate_arguments_and_recheck_grants (test_device_services.DeviceServices.test_notifications_bind_native_identity_validate_arguments_and_recheck_grants) ... ok
+test_scheduled_notifications_use_the_same_live_capability_and_strict_reply (test_device_services.DeviceServices.test_scheduled_notifications_use_the_same_live_capability_and_strict_reply) ... ok
+Publisher key created. Keep it private and backed up.
+   Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling serde_json v1.0.154
+   Compiling memchr v2.8.3
+   Compiling itoa v1.0.18
+   Compiling onklav-app v0.1.0 (/tmp/onklav-text-app-zinefkn_/app/vendor/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/tmp/onklav-text-app-zinefkn_/app/vendor/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-text-app-zinefkn_/app)
+    Finished `release` profile [optimized] target(s) in 4.35s
+Created /tmp/onklav-text-app-zinefkn_/app/dist/org.example.textapi-v1.onklav-a
+test_missing_file_grant_prevents_read_and_write (test_files_api.FilesApi.test_missing_file_grant_prevents_read_and_write) ... ok
+test_real_file_read_write_preserves_line_endings_and_rejects_stale_data (test_files_api.FilesApi.test_real_file_read_write_preserves_line_endings_and_rejects_stale_data) ... ok
+test_build_retains_cache_and_stamps_only_verified_sources (test_host_cache.HostCache.test_build_retains_cache_and_stamps_only_verified_sources) ... ok
+test_changed_restored_sources_refresh_without_touching_unchanged_inputs (test_host_cache.HostCache.test_changed_restored_sources_refresh_without_touching_unchanged_inputs) ... ok
+test_invalid_ledger_refreshes_safely (test_host_cache.HostCache.test_invalid_ledger_refreshes_safely) ... ok
+test_generated_origins_add_the_capability_and_survive_validation (test_http_policy.HttpPolicy.test_generated_origins_add_the_capability_and_survive_validation) ... ok
+test_unsafe_or_missing_origins_do_not_create_a_project (test_http_policy.HttpPolicy.test_unsafe_or_missing_origins_do_not_create_a_project) ... ok
+test_unsigned_or_unused_network_policy_is_rejected (test_http_policy.HttpPolicy.test_unsigned_or_unused_network_policy_is_rejected) ... ok
+test_signed_update_migrates_in_memory_and_preserves_saved_data_until_save (test_migration_update.MigrationUpdate.test_signed_update_migrates_in_memory_and_preserves_saved_data_until_save) ... Publisher key created. Keep it private and backed up.
+   Compiling zmij v1.0.23
+   Compiling serde_core v1.0.229
+   Compiling serde_json v1.0.154
+   Compiling memchr v2.8.3
+   Compiling itoa v1.0.18
+   Compiling onklav-app v0.1.0 (/tmp/onklav-migration-_7xlt5wy/form/vendor/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/tmp/onklav-migration-_7xlt5wy/form/vendor/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-migration-_7xlt5wy/form)
+    Finished `release` profile [optimized] target(s) in 4.94s
+Created /tmp/onklav-migration-_7xlt5wy/old.onklav-a
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-migration-_7xlt5wy/form)
+    Finished `release` profile [optimized] target(s) in 1.09s
+Created /tmp/onklav-migration-_7xlt5wy/new.onklav-a
+ok
+test_denied_and_undeclared_services_keep_drafts_and_never_create_pending_work (test_permissions.PermissionRecovery.test_denied_and_undeclared_services_keep_drafts_and_never_create_pending_work) ... Publisher key created. Keep it private and backed up.
+   Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/tmp/onklav-permissions-iodktvrg/app/vendor/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/tmp/onklav-permissions-iodktvrg/app/vendor/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-permissions-iodktvrg/app)
+    Finished `release` profile [optimized] target(s) in 4.10s
+Created /tmp/onklav-permissions-iodktvrg/app/dist/org.example.permissions-v1.onklav-a
+ok
+test_existing_viewer_feature_is_not_wrapped_twice (test_permissions.PermissionRecovery.test_existing_viewer_feature_is_not_wrapped_twice) ... ok
+test_generated_feature_adds_live_file_viewer_and_rejects_missing_capability (test_permissions.PermissionRecovery.test_generated_feature_adds_live_file_viewer_and_rejects_missing_capability) ... Publisher key created. Keep it private and backed up.
+   Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling serde_json v1.0.154
+   Compiling memchr v2.8.3
+   Compiling itoa v1.0.18
+   Compiling onklav-app v0.1.0 (/tmp/tmphpxsgbzf/app/vendor/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/tmp/tmphpxsgbzf/app/vendor/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/tmp/tmphpxsgbzf/app)
+    Finished `release` profile [optimized] target(s) in 4.85s
+Created /tmp/onklav-verify-cj3d4zoe/check.onklav-a
+ok
+test_unknown_feature_does_not_create_a_partial_project (test_permissions.PermissionRecovery.test_unknown_feature_does_not_create_a_partial_project) ... ok
+test_bad_preview_options_and_sensitive_apps_fail_before_compiling (test_preview.Preview.test_bad_preview_options_and_sensitive_apps_fail_before_compiling) ... ok
+test_preview_never_forges_a_pending_android_reply (test_preview.Preview.test_preview_never_forges_a_pending_android_reply) ... Publisher key created. Keep it private and backed up.
+   Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling serde_json v1.0.154
+   Compiling memchr v2.8.3
+   Compiling itoa v1.0.18
+   Compiling onklav-app v0.1.0 (/tmp/tmpe82xfzfe/app/vendor/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/tmp/tmpe82xfzfe/app/vendor/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/tmp/tmpe82xfzfe/app)
+    Finished `release` profile [optimized] target(s) in 4.45s
+Created /tmp/onklav-preview-app-en_fre7g/update-1-s18tcfdc/run.onklav-a
+Publisher key created. Keep it private and backed up.
+    Finished `release` profile [optimized] target(s) in 0.00s
+Created /tmp/onklav-preview-app-4z2oa6_j/update-1-7_ucxum_/run.onklav-a
+ok
+test_real_form_events_produce_a_validated_snapshot_without_private_runtime_tokens (test_preview.Preview.test_real_form_events_produce_a_validated_snapshot_without_private_runtime_tokens) ... Publisher key created. Keep it private and backed up.
+   Compiling zmij v1.0.23
+   Compiling serde_core v1.0.229
+   Compiling serde_json v1.0.154
+   Compiling memchr v2.8.3
+   Compiling itoa v1.0.18
+   Compiling onklav-app v0.1.0 (/tmp/tmp68yck_f7/app/vendor/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/tmp/tmp68yck_f7/app/vendor/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/tmp/tmp68yck_f7/app)
+    Finished `release` profile [optimized] target(s) in 4.85s
+Created /tmp/onklav-preview-app-l5x4krl9/update-1-3v41rb39/run.onklav-a
+ok
+test_failed_startup_recovers_through_a_new_update_and_keeps_saved_documents (test_reload.Reload.test_failed_startup_recovers_through_a_new_update_and_keeps_saved_documents) ... Publisher key created. Keep it private and backed up.
+   Compiling zmij v1.0.23
+   Compiling serde_core v1.0.229
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/tmp/onklav-startup-resl_w1q/app/vendor/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/tmp/onklav-startup-resl_w1q/app/vendor/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-startup-resl_w1q/app)
+    Finished `release` profile [optimized] target(s) in 4.22s
+Created /tmp/onklav-run-4xtf7yal/update-1-5to9pcqg/run.onklav-a
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-startup-resl_w1q/app)
+    Finished `release` profile [optimized] target(s) in 0.55s
+Created /tmp/onklav-run-4xtf7yal/update-2-guhpqo9p/run.onklav-a
+    Finished `release` profile [optimized] target(s) in 0.00s
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-startup-resl_w1q/app)
+    Finished `release` profile [optimized] target(s) in 0.65s
+Created /tmp/onklav-run-4xtf7yal/update-3-35qs_in2/run.onklav-a
+ok
+test_invalid_grants_stop_before_build_or_signing (test_reload.Reload.test_invalid_grants_stop_before_build_or_signing) ... ok
+test_reload_keeps_saved_data_skips_unchanged_and_preserves_session_on_build_errors (test_reload.Reload.test_reload_keeps_saved_data_skips_unchanged_and_preserves_session_on_build_errors) ... Publisher key created. Keep it private and backed up.
+   Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/tmp/onklav-reload-w_87q8q7/app/vendor/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/tmp/onklav-reload-w_87q8q7/app/vendor/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-reload-w_87q8q7/app)
+    Finished `release` profile [optimized] target(s) in 4.33s
+Created /tmp/onklav-run-msddwzht/update-1-sqgbcu08/run.onklav-a
+    Finished `release` profile [optimized] target(s) in 0.01s
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-reload-w_87q8q7/app)
+    Finished `release` profile [optimized] target(s) in 0.98s
+Created /tmp/onklav-run-msddwzht/update-2-bt0ud0zv/run.onklav-a
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-reload-w_87q8q7/app)
+error: expected one of `!` or `::`, found `is`
+ --> src/lib.rs:1:6
+  |
+1 | this is deliberately invalid Rust
+  |      ^^ expected one of `!` or `::`
+
+error: could not compile `onklav-starter-app` (lib) due to 1 previous error
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-reload-w_87q8q7/app)
+    Finished `release` profile [optimized] target(s) in 1.11s
+Created /tmp/onklav-run-msddwzht/update-3-zoslgide/run.onklav-a
+ok
+Publisher key created. Keep it private and backed up.
+   Compiling zmij v1.0.23
+   Compiling serde_core v1.0.229
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/tmp/onklav-secrets-y37srxfu/app/vendor/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/tmp/onklav-secrets-y37srxfu/app/vendor/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-secrets-y37srxfu/app)
+    Finished `release` profile [optimized] target(s) in 4.25s
+Created /tmp/onklav-secrets-y37srxfu/test.onklav-a
+test_denial_and_revocation_never_authorize_secret_access (test_secrets.Secrets.test_denial_and_revocation_never_authorize_secret_access) ... ok
+test_diagnostics_and_runner_output_redact_sensitive_app_payloads (test_secrets.Secrets.test_diagnostics_and_runner_output_redact_sensitive_app_payloads) ... Publisher key created. Keep it private and backed up.
+    Finished `release` profile [optimized] target(s) in 0.00s
+Created /tmp/onklav-run-r8_n_60l/update-1-1lfs2lzb/run.onklav-a
+ok
+test_native_request_owner_is_bound_to_signature_and_invalid_inputs_fail (test_secrets.Secrets.test_native_request_owner_is_bound_to_signature_and_invalid_inputs_fail) ... ok
+Publisher key created. Keep it private and backed up.
+test_each_public_template_compiles_launches_and_runs_its_declared_scenario (test_templates.Templates.test_each_public_template_compiles_launches_and_runs_its_declared_scenario) ...    Compiling zmij v1.0.23
+   Compiling serde_core v1.0.229
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/tmp/onklav-components-1ft7bt_0/document/vendor/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/tmp/onklav-components-1ft7bt_0/document/vendor/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-components-1ft7bt_0/document)
+    Finished `release` profile [optimized] target(s) in 3.83s
+Created /tmp/onklav-components-1ft7bt_0/document/dist/org.example.document-v1.onklav-a
+   Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/tmp/onklav-components-1ft7bt_0/list/vendor/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/tmp/onklav-components-1ft7bt_0/list/vendor/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-components-1ft7bt_0/list)
+    Finished `release` profile [optimized] target(s) in 4.36s
+Created /tmp/onklav-components-1ft7bt_0/list/dist/org.example.list-v1.onklav-a
+   Compiling zmij v1.0.23
+   Compiling serde_core v1.0.229
+   Compiling serde_json v1.0.154
+   Compiling memchr v2.8.3
+   Compiling itoa v1.0.18
+   Compiling onklav-app v0.1.0 (/tmp/onklav-components-1ft7bt_0/form/vendor/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/tmp/onklav-components-1ft7bt_0/form/vendor/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-components-1ft7bt_0/form)
+    Finished `release` profile [optimized] target(s) in 4.02s
+Created /tmp/onklav-components-1ft7bt_0/form/dist/org.example.form-v1.onklav-a
+   Compiling zmij v1.0.23
+   Compiling serde_core v1.0.229
+   Compiling serde_json v1.0.154
+   Compiling memchr v2.8.3
+   Compiling itoa v1.0.18
+   Compiling onklav-app v0.1.0 (/tmp/onklav-components-1ft7bt_0/settings/vendor/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/tmp/onklav-components-1ft7bt_0/settings/vendor/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-components-1ft7bt_0/settings)
+    Finished `release` profile [optimized] target(s) in 3.69s
+Created /tmp/onklav-components-1ft7bt_0/settings/dist/org.example.settings-v1.onklav-a
+   Compiling zmij v1.0.23
+   Compiling serde_core v1.0.229
+   Compiling serde_json v1.0.154
+   Compiling memchr v2.8.3
+   Compiling itoa v1.0.18
+   Compiling onklav-app v0.1.0 (/tmp/onklav-components-1ft7bt_0/files/vendor/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/tmp/onklav-components-1ft7bt_0/files/vendor/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-components-1ft7bt_0/files)
+    Finished `release` profile [optimized] target(s) in 3.87s
+Created /tmp/onklav-components-1ft7bt_0/files/dist/org.example.files-v1.onklav-a
+   Compiling zmij v1.0.23
+   Compiling serde_core v1.0.229
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/tmp/onklav-components-1ft7bt_0/viewer/vendor/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/tmp/onklav-components-1ft7bt_0/viewer/vendor/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-components-1ft7bt_0/viewer)
+    Finished `release` profile [optimized] target(s) in 3.77s
+Created /tmp/onklav-components-1ft7bt_0/viewer/dist/org.example.viewer-v1.onklav-a
+   Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling serde_json v1.0.154
+   Compiling memchr v2.8.3
+   Compiling itoa v1.0.18
+   Compiling onklav-app v0.1.0 (/tmp/onklav-components-1ft7bt_0/notes/vendor/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/tmp/onklav-components-1ft7bt_0/notes/vendor/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-components-1ft7bt_0/notes)
+    Finished `release` profile [optimized] target(s) in 3.87s
+Created /tmp/onklav-components-1ft7bt_0/notes/dist/org.example.notes-v1.onklav-a
+   Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/tmp/onklav-components-1ft7bt_0/rss/vendor/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/tmp/onklav-components-1ft7bt_0/rss/vendor/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-components-1ft7bt_0/rss)
+    Finished `release` profile [optimized] target(s) in 4.08s
+Created /tmp/onklav-components-1ft7bt_0/rss/dist/org.example.rss-v1.onklav-a
+   Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/tmp/onklav-components-1ft7bt_0/reader/vendor/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/tmp/onklav-components-1ft7bt_0/reader/vendor/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-components-1ft7bt_0/reader)
+    Finished `release` profile [optimized] target(s) in 3.76s
+Created /tmp/onklav-components-1ft7bt_0/reader/dist/org.example.reader-v1.onklav-a
+   Compiling zmij v1.0.23
+   Compiling serde_core v1.0.229
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/tmp/onklav-components-1ft7bt_0/browser/vendor/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/tmp/onklav-components-1ft7bt_0/browser/vendor/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-components-1ft7bt_0/browser)
+    Finished `release` profile [optimized] target(s) in 3.94s
+Created /tmp/onklav-components-1ft7bt_0/browser/dist/org.example.browser-v1.onklav-a
+   Compiling zmij v1.0.23
+   Compiling serde_core v1.0.229
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/tmp/onklav-components-1ft7bt_0/youtube/vendor/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/tmp/onklav-components-1ft7bt_0/youtube/vendor/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-components-1ft7bt_0/youtube)
+    Finished `release` profile [optimized] target(s) in 3.84s
+Created /tmp/onklav-components-1ft7bt_0/youtube/dist/org.example.youtube-v1.onklav-a
+   Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/tmp/onklav-components-1ft7bt_0/annotation/vendor/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/tmp/onklav-components-1ft7bt_0/annotation/vendor/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-components-1ft7bt_0/annotation)
+    Finished `release` profile [optimized] target(s) in 4.32s
+Created /tmp/onklav-components-1ft7bt_0/annotation/dist/org.example.annotation-v1.onklav-a
+   Compiling zmij v1.0.23
+   Compiling serde_core v1.0.229
+   Compiling serde_json v1.0.154
+   Compiling memchr v2.8.3
+   Compiling itoa v1.0.18
+   Compiling onklav-app v0.1.0 (/tmp/onklav-components-1ft7bt_0/social/vendor/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/tmp/onklav-components-1ft7bt_0/social/vendor/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-components-1ft7bt_0/social)
+    Finished `release` profile [optimized] target(s) in 4.32s
+Created /tmp/onklav-components-1ft7bt_0/social/dist/org.example.social-v1.onklav-a
+   Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/tmp/onklav-components-1ft7bt_0/walkie/vendor/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/tmp/onklav-components-1ft7bt_0/walkie/vendor/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-components-1ft7bt_0/walkie)
+    Finished `release` profile [optimized] target(s) in 3.94s
+Created /tmp/onklav-components-1ft7bt_0/walkie/dist/org.example.walkie-v1.onklav-a
+ok
+Publisher key created. Keep it private and backed up.
+   Compiling zmij v1.0.23
+   Compiling serde_core v1.0.229
+   Compiling serde_json v1.0.154
+   Compiling memchr v2.8.3
+   Compiling itoa v1.0.18
+   Compiling onklav-app v0.1.0 (/workspace/scratch/ed752e8a1957/current/OnKlav/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/workspace/scratch/ed752e8a1957/current/OnKlav/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/workspace/scratch/ed752e8a1957/current/OnKlav/developer/examples/text-inspector)
+    Finished `release` profile [optimized] target(s) in 3.91s
+Created /tmp/onklav-import-qrgj_3sf/test.onklav-a
+test_denied_and_revoked_imports_cannot_commit_a_staged_file (test_text_picker.TextPicker.test_denied_and_revoked_imports_cannot_commit_a_staged_file) ... ok
+test_imported_utf8_is_processed_and_binary_failure_keeps_previous_result (test_text_picker.TextPicker.test_imported_utf8_is_processed_and_binary_failure_keeps_previous_result) ... ok
+test_catalog_covers_every_native_widget_and_shared_controller (test_tools.Tools.test_catalog_covers_every_native_widget_and_shared_controller) ... ok
+test_failed_upgrade_rolls_back_developer_files (test_tools.Tools.test_failed_upgrade_rolls_back_developer_files) ... ok
+test_invalid_author_identity_has_a_clear_error (test_tools.Tools.test_invalid_author_identity_has_a_clear_error) ... ok
+test_portable_project_moves_and_verifies_without_author_key_setup (test_tools.Tools.test_portable_project_moves_and_verifies_without_author_key_setup) ... Publisher key created. Keep it private and backed up.
+   Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling serde_json v1.0.154
+   Compiling memchr v2.8.3
+   Compiling itoa v1.0.18
+   Compiling onklav-app v0.1.0 (/tmp/onklav-portable-_2528w6j/moved project 🐈/vendor/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/tmp/onklav-portable-_2528w6j/moved project 🐈/vendor/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-portable-_2528w6j/moved project 🐈)
+    Finished `release` profile [optimized] target(s) in 3.79s
+Created /tmp/onklav-verify-j1cn81n7/check.onklav-a
+ok
+test_portable_upgrade_keeps_a_backup_and_updates_the_lock (test_tools.Tools.test_portable_upgrade_keeps_a_backup_and_updates_the_lock) ...     Updating crates.io index
+     Locking 1 package to latest compatible version
+    Updating onklav-ui v0.3.0 (/tmp/tmployuhxvo/project/vendor/developer/components) -> v0.4.0
+ok
+test_scenario_paths_handle_arrays_and_missing_fields (test_tools.Tools.test_scenario_paths_handle_arrays_and_missing_fields) ... ok
+test_signed_minimum_and_icon_preflight_are_consistent (test_tools.Tools.test_signed_minimum_and_icon_preflight_are_consistent) ... ok
+Publisher key created. Keep it private and backed up.
+Publisher key created. Keep it private and backed up.
+   Compiling serde_core v1.0.229
+   Compiling zmij v1.0.23
+   Compiling serde_json v1.0.154
+   Compiling itoa v1.0.18
+   Compiling memchr v2.8.3
+   Compiling onklav-app v0.1.0 (/tmp/onklav-author-sc_xejhi/project/vendor/sdk/rust)
+   Compiling onklav-ui v0.4.0 (/tmp/onklav-author-sc_xejhi/project/vendor/developer/components)
+   Compiling onklav-starter-app v0.1.0 (/tmp/onklav-author-sc_xejhi/project)
+    Finished `release` profile [optimized] target(s) in 3.63s
+Created /tmp/onklav-author-sc_xejhi/project/dist/org.example.notebook-v1.onklav-a
+Created /tmp/onklav-author-sc_xejhi/v2.onklav-a
+Created /tmp/onklav-author-sc_xejhi/other-publisher.onklav-a
+Created /tmp/onklav-author-sc_xejhi/other-app.onklav-a
+test_01_generated_project_builds_signed_package_and_runs_its_scenario (test_workflow.DeveloperWorkflow.test_01_generated_project_builds_signed_package_and_runs_its_scenario) ... ok
+test_02_denial_and_grant_revocation_are_live (test_workflow.DeveloperWorkflow.test_02_denial_and_grant_revocation_are_live) ... ok
+test_03_signed_update_preserves_data_invalidates_session_and_rejects_downgrade (test_workflow.DeveloperWorkflow.test_03_signed_update_preserves_data_invalidates_session_and_rejects_downgrade) ... ok
+test_04_different_publisher_cannot_take_over_identity (test_workflow.DeveloperWorkflow.test_04_different_publisher_cannot_take_over_identity) ... ok
+test_05_same_author_other_id_cannot_read_private_documents (test_workflow.DeveloperWorkflow.test_05_same_author_other_id_cannot_read_private_documents) ... ok
+test_06_remove_reinstall_retains_or_deletes_only_as_requested (test_workflow.DeveloperWorkflow.test_06_remove_reinstall_retains_or_deletes_only_as_requested) ... ok
+test_07_tampered_wasm_and_stale_review_do_not_install (test_workflow.DeveloperWorkflow.test_07_tampered_wasm_and_stale_review_do_not_install) ... ok
+test_08_tools_preserve_projects_outputs_and_private_keys (test_workflow.DeveloperWorkflow.test_08_tools_preserve_projects_outputs_and_private_keys) ... ok
+test_09_saved_data_survives_a_fresh_runtime_process (test_workflow.DeveloperWorkflow.test_09_saved_data_survives_a_fresh_runtime_process) ... ok
+
+----------------------------------------------------------------------
+Ran 72 tests in 219.624s
+
+OK

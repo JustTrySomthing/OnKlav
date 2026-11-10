@@ -1,0 +1,16 @@
+--- a/core/object/worker_thread_pool.cpp
++++ b/core/object/worker_thread_pool.cpp
+@@ -756,6 +756,13 @@
+ 
+ 	MutexLock task_lock(task_mutex); // This mutex is needed when Physics 2D and/or 3D is selected to run on a separate thread.
+ 	groups.erase(p_group);
++#else
++	// In a single-thread build, posting runs synchronously. The waiter still
++	// owns the final group reference and must release it, including empty groups.
++	Group **groupp = groups.getptr(p_group);
++	ERR_FAIL_NULL_MSG(groupp, "Invalid Group ID.");
++	group_allocator.free(*groupp);
++	groups.erase(p_group);
+ #endif
+ }
+ 

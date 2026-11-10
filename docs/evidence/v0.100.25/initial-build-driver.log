@@ -1,0 +1,64 @@
+{
+  "sdk_apps": "reuse",
+  "mobile_rust": "reuse",
+  "neural_speech": "reuse",
+  "games": "reuse",
+  "android_tests": "not requested",
+  "variant": "optimized",
+  "abis": [
+    "arm64-v8a"
+  ]
+}
+Resource inputs changed: refreshing generated resource/package/DEX caches
+assemble-optimized: starting (maximum 600s)
+assemble-optimized: 20s elapsed
+assemble-optimized: 40s elapsed
+assemble-optimized: 60s elapsed
+assemble-optimized: 80s elapsed
+assemble-optimized: 100s elapsed
+assemble-optimized: 120s elapsed
+assemble-optimized: 140s elapsed
+assemble-optimized: 160s elapsed
+assemble-optimized: finished in 164.89s
+reTask.java:264)
+		at org.gradle.internal.concurrent.ExecutorPolicy$CatchAndRecordFailures.onExecute(ExecutorPolicy.java:64)
+		at org.gradle.internal.concurrent.AbstractManagedExecutor$1.run(AbstractManagedExecutor.java:48)
+		at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1136)
+		at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:635)
+		at java.base/java.lang.Thread.run(Thread.java:840)
+	Caused by: [CIRCULAR REFERENCE: com.android.tools.r8.internal.g: Missing class java.beans.BeanDescriptor (referenced from: java.lang.Object org.mozilla.javascript.JavaToJSONConverters.lambda$static$4(java.lang.Object))
+Missing class java.beans.BeanInfo (referenced from: java.lang.Object org.mozilla.javascript.JavaToJSONConverters.lambda$static$4(java.lang.Object))
+Missing class java.beans.IntrospectionException (referenced from: java.lang.Object org.mozilla.javascript.JavaToJSONConverters.lambda$static$4(java.lang.Object))
+Missing class java.beans.Introspector (referenced from: java.lang.Object org.mozilla.javascript.JavaToJSONConverters.lambda$static$4(java.lang.Object))
+Missing class java.beans.PropertyDescriptor (referenced from: java.lang.Object org.mozilla.javascript.JavaToJSONConverters.lambda$static$4(java.lang.Object))
+Missing class jdk.dynalink.CallSiteDescriptor (referenced from: jdk.dynalink.linker.GuardedInvocation org.mozilla.javascript.optimizer.BaseFunctionLinker.getGuardedInvocation(jdk.dynalink.linker.LinkRequest, jdk.dynalink.linker.LinkerServices) and 9 other contexts)
+Missing class jdk.dynalink.DynamicLinker (referenced from: jdk.dynalink.DynamicLinker org.mozilla.javascript.optimizer.Bootstrapper.linker and 2 other contexts)
+Missing class jdk.dynalink.DynamicLinkerFactory (referenced from: void org.mozilla.javascript.optimizer.Bootstrapper.<clinit>())
+Missing class jdk.dynalink.NamedOperation (referenced from: jdk.dynalink.Operation org.mozilla.javascript.optimizer.Bootstrapper.parseOperation(java.lang.String) and 1 other context)
+Missing class jdk.dynalink.Namespace (referenced from: jdk.dynalink.Namespace org.mozilla.javascript.optimizer.ParsedOperation.namespace and 4 other contexts)
+Missing class jdk.dynalink.NamespaceOperation (referenced from: jdk.dynalink.Operation org.mozilla.javascript.optimizer.Bootstrapper.parseOperation(java.lang.String) and 1 other context)
+Missing class jdk.dynalink.Operation (referenced from: jdk.dynalink.Operation org.mozilla.javascript.optimizer.ParsedOperation.operation and 17 other contexts)
+Missing class jdk.dynalink.RelinkableCallSite (referenced from: java.lang.invoke.CallSite org.mozilla.javascript.optimizer.Bootstrapper.bootstrap(java.lang.invoke.MethodHandles$Lookup, java.lang.String, java.lang.invoke.MethodType))
+Missing class jdk.dynalink.StandardNamespace (referenced from: jdk.dynalink.Operation org.mozilla.javascript.optimizer.Bootstrapper.parseOperation(java.lang.String))
+Missing class jdk.dynalink.StandardOperation (referenced from: jdk.dynalink.Operation org.mozilla.javascript.optimizer.Bootstrapper.parseOperation(java.lang.String) and 1 other context)
+Missing class jdk.dynalink.linker.GuardedInvocation (referenced from: jdk.dynalink.linker.GuardedInvocation org.mozilla.javascript.optimizer.BaseFunctionLinker.getGuardedInvocation(jdk.dynalink.linker.LinkRequest, jdk.dynalink.linker.LinkerServices) and 12 other contexts)
+Missing class jdk.dynalink.linker.GuardingDynamicLinker (referenced from: void org.mozilla.javascript.optimizer.Bootstrapper.<clinit>() and 1 other context)
+Missing class jdk.dynalink.linker.LinkRequest (referenced from: jdk.dynalink.linker.GuardedInvocation org.mozilla.javascript.optimizer.BaseFunctionLinker.getGuardedInvocation(jdk.dynalink.linker.LinkRequest, jdk.dynalink.linker.LinkerServices) and 8 other contexts)
+Missing class jdk.dynalink.linker.LinkerServices (referenced from: jdk.dynalink.linker.GuardedInvocation org.mozilla.javascript.optimizer.BaseFunctionLinker.getGuardedInvocation(jdk.dynalink.linker.LinkRequest, jdk.dynalink.linker.LinkerServices) and 8 other contexts)
+Missing class jdk.dynalink.linker.TypeBasedGuardingDynamicLinker (referenced from: void org.mozilla.javascript.optimizer.Bootstrapper.<clinit>() and 8 other contexts)
+Missing class jdk.dynalink.linker.support.CompositeTypeBasedGuardingDynamicLinker (referenced from: void org.mozilla.javascript.optimizer.Bootstrapper.<clinit>())
+Missing class jdk.dynalink.linker.support.Guards (referenced from: jdk.dynalink.linker.GuardedInvocation org.mozilla.javascript.optimizer.BaseFunctionLinker.getGuardedInvocation(jdk.dynalink.linker.LinkRequest, jdk.dynalink.linker.LinkerServices) and 7 other contexts)
+Missing class jdk.dynalink.support.ChainedCallSite (referenced from: java.lang.invoke.CallSite org.mozilla.javascript.optimizer.Bootstrapper.bootstrap(java.lang.invoke.MethodHandles$Lookup, java.lang.String, java.lang.invoke.MethodType))]
+
+
+BUILD FAILED in 2m 44s
+144 actionable tasks: 144 executed
+
+Traceback (most recent call last):
+  File "/workspace/scratch/f56bb877cb5d/onklav/OnKlav/scripts/build.py", line 168, in <module>
+    main()
+  File "/workspace/scratch/f56bb877cb5d/onklav/OnKlav/scripts/build.py", line 154, in main
+    run('assemble-' + args.variant, gradle + [':android:app:assemble' + args.variant.capitalize(),*selected], 600)
+  File "/workspace/scratch/f56bb877cb5d/onklav/OnKlav/scripts/build.py", line 84, in run
+    raise RuntimeError(f'{label} failed; see {path}')
+RuntimeError: assemble-optimized failed; see /workspace/scratch/f56bb877cb5d/onklav/OnKlav/docs/evidence/v0.100.25/assemble-optimized.log

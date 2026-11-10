@@ -1,0 +1,143 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.11.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build 
+
+> Configure project :android:app
+WARNING: The option setting 'android.aapt2FromMavenOverride=/workspace/scratch/b5e698131b7f/build-toolchain/android-sdk/build-tools/35.0.0/aapt2' is experimental.
+Checking the license for package Android SDK Platform-Tools in /workspace/scratch/b5e698131b7f/build-toolchain/android-sdk/licenses
+Warning: License for package Android SDK Platform-Tools not accepted.
+WARNING: platform-tools package is not installed. Please accept the installation licence to continue
+
+> Task :android:app:buildKotlinToolingMetadata
+> Task :android:app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:app:preBuild UP-TO-DATE
+> Task :android:app:preOptimizedBuild UP-TO-DATE
+> Task :android:games:preBuild UP-TO-DATE
+> Task :android:games:preReleaseBuild UP-TO-DATE
+> Task :android:games:writeReleaseAarMetadata UP-TO-DATE
+> Task :android:shared:preBuild UP-TO-DATE
+> Task :android:shared:preReleaseBuild UP-TO-DATE
+> Task :android:shared:writeReleaseAarMetadata UP-TO-DATE
+> Task :android:tools:preBuild UP-TO-DATE
+> Task :android:tools:preReleaseBuild UP-TO-DATE
+> Task :android:tools:writeReleaseAarMetadata UP-TO-DATE
+> Task :android:app:checkOptimizedAarMetadata UP-TO-DATE
+> Task :android:app:generateOptimizedResValues UP-TO-DATE
+> Task :android:games:generateReleaseResValues UP-TO-DATE
+> Task :android:games:generateReleaseResources UP-TO-DATE
+> Task :android:games:packageReleaseResources UP-TO-DATE
+> Task :android:shared:generateReleaseResValues UP-TO-DATE
+> Task :android:shared:generateReleaseResources UP-TO-DATE
+> Task :android:shared:packageReleaseResources UP-TO-DATE
+> Task :android:tools:generateReleaseResValues UP-TO-DATE
+> Task :android:tools:generateReleaseResources UP-TO-DATE
+> Task :android:tools:packageReleaseResources UP-TO-DATE
+> Task :android:app:mapOptimizedSourceSetPaths UP-TO-DATE
+> Task :android:app:generateOptimizedResources UP-TO-DATE
+> Task :android:app:mergeOptimizedResources UP-TO-DATE
+> Task :android:app:packageOptimizedResources UP-TO-DATE
+> Task :android:app:parseOptimizedLocalResources UP-TO-DATE
+> Task :android:app:createOptimizedCompatibleScreenManifests UP-TO-DATE
+> Task :android:app:extractDeepLinksOptimized UP-TO-DATE
+> Task :android:games:extractDeepLinksRelease UP-TO-DATE
+> Task :android:games:processReleaseManifest UP-TO-DATE
+> Task :android:shared:extractDeepLinksRelease UP-TO-DATE
+> Task :android:shared:processReleaseManifest UP-TO-DATE
+> Task :android:tools:extractDeepLinksRelease UP-TO-DATE
+> Task :android:tools:processReleaseManifest UP-TO-DATE
+> Task :android:app:processOptimizedMainManifest UP-TO-DATE
+> Task :android:app:processOptimizedManifest UP-TO-DATE
+> Task :android:app:processOptimizedManifestForPackage UP-TO-DATE
+> Task :android:games:parseReleaseLocalResources UP-TO-DATE
+> Task :android:games:generateReleaseRFile UP-TO-DATE
+> Task :android:shared:parseReleaseLocalResources UP-TO-DATE
+> Task :android:shared:generateReleaseRFile UP-TO-DATE
+> Task :android:tools:parseReleaseLocalResources UP-TO-DATE
+> Task :android:tools:generateReleaseRFile UP-TO-DATE
+> Task :android:games:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:games:compileReleaseKotlin NO-SOURCE
+> Task :android:games:javaPreCompileRelease UP-TO-DATE
+> Task :android:games:compileReleaseJavaWithJavac NO-SOURCE
+> Task :android:games:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :android:shared:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:shared:compileReleaseKotlin UP-TO-DATE
+> Task :android:shared:javaPreCompileRelease UP-TO-DATE
+> Task :android:shared:compileReleaseJavaWithJavac NO-SOURCE
+> Task :android:shared:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :android:tools:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:tools:compileReleaseKotlin UP-TO-DATE
+> Task :android:tools:javaPreCompileRelease UP-TO-DATE
+> Task :android:tools:compileReleaseJavaWithJavac NO-SOURCE
+> Task :android:tools:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :android:app:javaPreCompileOptimized
+> Task :android:app:preOptimizedUnitTestBuild UP-TO-DATE
+> Task :android:app:javaPreCompileOptimizedUnitTest
+> Task :android:app:mergeOptimizedShaders
+> Task :android:app:compileOptimizedShaders NO-SOURCE
+> Task :android:app:generateOptimizedAssets UP-TO-DATE
+> Task :android:games:mergeReleaseShaders
+> Task :android:games:compileReleaseShaders NO-SOURCE
+> Task :android:games:generateReleaseAssets UP-TO-DATE
+> Task :android:games:mergeReleaseAssets
+> Task :android:shared:mergeReleaseShaders
+> Task :android:shared:compileReleaseShaders NO-SOURCE
+> Task :android:shared:generateReleaseAssets UP-TO-DATE
+> Task :android:app:processOptimizedResources
+> Task :android:shared:mergeReleaseAssets
+> Task :android:app:compileOptimizedKotlin UP-TO-DATE
+> Task :android:app:compileOptimizedJavaWithJavac NO-SOURCE
+> Task :android:app:bundleOptimizedClassesToCompileJar
+> Task :android:app:bundleOptimizedClassesToRuntimeJar
+> Task :android:tools:mergeReleaseShaders
+> Task :android:tools:compileReleaseShaders NO-SOURCE
+> Task :android:tools:generateReleaseAssets UP-TO-DATE
+> Task :android:tools:mergeReleaseAssets
+> Task :android:app:mergeOptimizedAssets
+> Task :android:app:convertLinkedResourcesToBinaryOptimized
+> Task :android:app:packageOptimizedUnitTestForUnitTest
+> Task :android:app:generateOptimizedUnitTestConfig
+> Task :android:app:processOptimizedJavaRes
+> Task :android:games:bundleLibRuntimeToJarRelease
+> Task :android:games:processReleaseJavaRes NO-SOURCE
+> Task :android:shared:bundleLibRuntimeToJarRelease
+> Task :android:shared:processReleaseJavaRes
+> Task :android:tools:bundleLibRuntimeToJarRelease
+> Task :android:tools:processReleaseJavaRes
+> Task :android:app:compileOptimizedUnitTestKotlin
+e: file:///workspace/scratch/b5e698131b7f/recovered/OnKlav/android/app/src/test/kotlin/app/onklav/home/SdkDevicePreviewTest.kt:18:49 Unresolved reference 'SdkDevPreviewActivity'.
+e: file:///workspace/scratch/b5e698131b7f/recovered/OnKlav/android/app/src/test/kotlin/app/onklav/home/SdkDevicePreviewTest.kt:20:50 Unresolved reference 'filesDir'.
+e: file:///workspace/scratch/b5e698131b7f/recovered/OnKlav/android/app/src/test/kotlin/app/onklav/home/SdkDevicePreviewTest.kt:20:84 Unresolved reference 'exists'.
+e: file:///workspace/scratch/b5e698131b7f/recovered/OnKlav/android/app/src/test/kotlin/app/onklav/home/SdkDevicePreviewTest.kt:21:47 Unresolved reference 'filesDir'.
+e: file:///workspace/scratch/b5e698131b7f/recovered/OnKlav/android/app/src/test/kotlin/app/onklav/home/SdkDevicePreviewTest.kt:21:121 Unresolved reference 'getString'.
+e: file:///workspace/scratch/b5e698131b7f/recovered/OnKlav/android/app/src/test/kotlin/app/onklav/home/SdkDevicePreviewTest.kt:21:175 Unresolved reference 'filesDir'.
+e: file:///workspace/scratch/b5e698131b7f/recovered/OnKlav/android/app/src/test/kotlin/app/onklav/home/SdkDevicePreviewTest.kt:21:209 Unresolved reference 'exists'.
+e: file:///workspace/scratch/b5e698131b7f/recovered/OnKlav/android/app/src/test/kotlin/app/onklav/home/SdkDevicePreviewTest.kt:25:39 Unresolved reference 'filesDir'.
+e: file:///workspace/scratch/b5e698131b7f/recovered/OnKlav/android/app/src/test/kotlin/app/onklav/home/SdkDevicePreviewTest.kt:25:59 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///workspace/scratch/b5e698131b7f/recovered/OnKlav/android/app/src/test/kotlin/app/onklav/home/SdkDevicePreviewTest.kt:25:59 Unresolved reference. None of the following candidates is applicable because of a receiver type mismatch:
+fun <T> T.apply(block: T.() -> Unit): T
+    [R|Contract description]
+     <
+        CallsInPlace(block, EXACTLY_ONCE)
+    >
+e: file:///workspace/scratch/b5e698131b7f/recovered/OnKlav/android/app/src/test/kotlin/app/onklav/home/SdkDevicePreviewTest.kt:25:64 Cannot infer type for this parameter. Specify it explicitly.
+e: file:///workspace/scratch/b5e698131b7f/recovered/OnKlav/android/app/src/test/kotlin/app/onklav/home/SdkDevicePreviewTest.kt:25:65 Unresolved reference 'mkdirs'.
+e: file:///workspace/scratch/b5e698131b7f/recovered/OnKlav/android/app/src/test/kotlin/app/onklav/home/SdkDevicePreviewTest.kt:28:20 Unresolved reference 'intent'.
+e: file:///workspace/scratch/b5e698131b7f/recovered/OnKlav/android/app/src/test/kotlin/app/onklav/home/SdkDevicePreviewTest.kt:34:46 Unresolved reference 'exists'.
+e: file:///workspace/scratch/b5e698131b7f/recovered/OnKlav/android/app/src/test/kotlin/app/onklav/home/SdkDevicePreviewTest.kt:34:103 Unresolved reference 'exists'.
+
+> Task :android:app:compileOptimizedUnitTestKotlin FAILED
+
+FAILURE: Build failed with an exception.
+
+* What went wrong:
+Execution failed for task ':android:app:compileOptimizedUnitTestKotlin'.
+> A failure occurred while executing org.jetbrains.kotlin.compilerRunner.GradleCompilerRunnerWithWorkers$GradleKotlinCompilerWorkAction
+   > Compilation error. See log for more details
+
+* Try:
+> Run with --stacktrace option to get the stack trace.
+> Run with --info or --debug option to get more log output.
+> Run with --scan to get full insights.
+> Get more help at https://help.gradle.org.
+
+BUILD FAILED in 1m 13s
+69 actionable tasks: 24 executed, 45 up-to-date

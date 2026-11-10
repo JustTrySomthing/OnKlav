@@ -1,0 +1,18 @@
+{
+  "rust": 118,
+  "kotlin": 99,
+  "failed": 0,
+  "runtime_classes_current": true,
+  "apk_created": false,
+  "history_journal": true,
+  "injected_provider_executor": true,
+  "archive_coordinator": true,
+  "durable_partial_outcome_maps": true,
+  "post_snapshot_merge": true,
+  "atomic_metadata_receipt": true,
+  "recovery_review_ui": true,
+  "identity_settings": true,
+  "ack_repair": true,
+  "history_restore": false,
+  "real_phone_provider": false
+}

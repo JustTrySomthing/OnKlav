@@ -1,0 +1,71 @@
+{
+  "scope": "Development builds; not full Inner Circle 2.2.85 parity",
+  "source_counts": {
+    ".java": 0,
+    ".kt": 81,
+    ".rs": 16,
+    ".gd": 4
+  },
+  "application_modules": [
+    "android/app/build.gradle.kts"
+  ],
+  "apks": [
+    {
+      "name": "host",
+      "package": "app.onklav.home.prototype.rewrite",
+      "bytes": 125996993,
+      "sha256": "bae905c8285fcd700c7327bb0a355f1b2b6e8691c0492d26a989fe3c33eb68f5",
+      "signer_sha256": "6ed975c5fc27d19f6291f751a8bb00fa8a2c2e7d268bffc7b6ddf7e1b1a7a69d",
+      "signature_v2_verified": true,
+      "zip_integrity": "pass",
+      "zipalign_16kb": "pass",
+      "abis": [
+        "arm64-v8a",
+        "x86_64"
+      ],
+      "elf_minimum_load_alignment": {
+        "lib/arm64-v8a/libandroidx.graphics.path.so": 16384,
+        "lib/arm64-v8a/libc++_shared.so": 16384,
+        "lib/arm64-v8a/libgodot_android.so": 16384,
+        "lib/arm64-v8a/libonklav_core.so": 16384,
+        "lib/x86_64/libandroidx.graphics.path.so": 16384,
+        "lib/x86_64/libc++_shared.so": 16384,
+        "lib/x86_64/libgodot_android.so": 16384,
+        "lib/x86_64/libonklav_core.so": 16384
+      },
+      "native_library_sha256": {
+        "lib/arm64-v8a/libandroidx.graphics.path.so": "41e9a793c43a0f4fddb19e33f346bace464f30f888ba7b9eaf96294ea115bfb6",
+        "lib/arm64-v8a/libc++_shared.so": "ad74bf43eb1fd576518168f664ad16a74e00eeda9595875c33dd87f6dd197869",
+        "lib/arm64-v8a/libgodot_android.so": "9e10c5ebda9bb629c671929441cdde3b4a8ab0e5542fc7e88de8d71f2b9840db",
+        "lib/arm64-v8a/libonklav_core.so": "615f418caa4d7bfcdd673ce1792187af56e4ac7fcfc87c8a339baa48b18e9239",
+        "lib/x86_64/libandroidx.graphics.path.so": "4e56c996f13670e70082658de7880c4020eabf4f25e43387f88ed78a713fc9f0",
+        "lib/x86_64/libc++_shared.so": "294e0ce4e88589103952c57c9484f917c26509d66170bc86d07d48f0fc879de4",
+        "lib/x86_64/libgodot_android.so": "10e4a3a3c12f32185436efa68a094f3ff7d114c9efd1ebfa6dde100e351327d0",
+        "lib/x86_64/libonklav_core.so": "e6e64d83dad4266da228bf6f55d324c19f96b621bf1f863829f21db746a18189"
+      },
+      "legacy_defined_classes": 0,
+      "defined_class_count": 26430,
+      "permissions": [
+        "android.permission.INTERNET",
+        "android.permission.ACCESS_NETWORK_STATE",
+        "android.permission.VIBRATE",
+        "android.permission.READ_SMS",
+        "android.permission.READ_CONTACTS",
+        "android.permission.SEND_SMS",
+        "android.permission.RECEIVE_SMS",
+        "android.permission.RECEIVE_MMS",
+        "android.permission.RECEIVE_WAP_PUSH",
+        "android.permission.READ_PHONE_STATE",
+        "android.permission.READ_PHONE_NUMBERS",
+        "android.permission.POST_NOTIFICATIONS",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.RECEIVE_BOOT_COMPLETED",
+        "app.onklav.home.prototype.rewrite.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+      ],
+      "rust_libraries": {
+        "arm64-v8a": "615f418caa4d7bfcdd673ce1792187af56e4ac7fcfc87c8a339baa48b18e9239",
+        "x86_64": "e6e64d83dad4266da228bf6f55d324c19f96b621bf1f863829f21db746a18189"
+      }
+    }
+  ]
+}

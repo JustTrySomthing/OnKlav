@@ -1,0 +1,33 @@
+{
+  "plan": {
+    "sdk_apps": "reuse",
+    "mobile_rust": "reuse",
+    "games": "reuse",
+    "android_tests": "not requested",
+    "variant": "optimized",
+    "abis": [
+      "arm64-v8a"
+    ]
+  },
+  "phases": [
+    {
+      "phase": "assemble-optimized",
+      "seconds": 296.13,
+      "returncode": 0,
+      "log": "docs/evidence/v0.68.0/assemble-optimized.log"
+    },
+    {
+      "phase": "verify-optimized",
+      "seconds": 2.99,
+      "returncode": 1,
+      "log": "docs/evidence/v0.68.0/verify-initial-synthetic-filter.log"
+    },
+    {
+      "phase": "verify-optimized-native-callback-filter",
+      "returncode": 0,
+      "log": "docs/evidence/v0.68.0/verify-optimized.log"
+    }
+  ],
+  "status": "passed",
+  "note": "One APK assembly. Verification first rejected empty static initializers and R8-generated intermediate interfaces. Narrowed that filter to require retained real classes and callbacks; the same APK passes. No rebuild or test rerun."
+}

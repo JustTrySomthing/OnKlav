@@ -1,0 +1,86 @@
+{
+  "date": "2026-10-21",
+  "scope": "0.8.2 Appearance and shared UI restoration; not a finished platform or SDK",
+  "full_rewrite_complete": false,
+  "sdk_complete": false,
+  "authored_java_source_files": 0,
+  "legacy_app_module_included": false,
+  "application_delivery": "Only OnKlav is an APK; tools and Godot are included as host libraries",
+  "notes_production_call_path": "OnKlav internal navigation -> Kotlin NotesScreen/NotesModel -> Core JNI -> Rust document store",
+  "package_runtime": "External executable packages remain disabled; archive inspection does not authorize execution",
+  "component_tests_reused_without_component_changes": {
+    "rust_unit_tests": {
+      "passed": 7,
+      "failed": 0
+    },
+    "kotlin_real_rust_host_jni_tests": {
+      "passed": 2,
+      "failed": 0,
+      "includes": [
+        "Unicode save/load/delete",
+        "invalid ID and oversize rejection",
+        "clearing a stored document"
+      ]
+    },
+    "godot_rule_checks": {
+      "passed": 12,
+      "failed": 0
+    },
+    "godot_headless_startup": [
+      "four",
+      "naval",
+      "blackjack",
+      "hockey"
+    ],
+    "godot_exported_pack_headless_startup": "four"
+  },
+  "current_host_build": "pass; 0.8.2-dev / versionCode 10; assembleDebug, assembleDebugAndroidTest, shared testDebugUnitTest",
+  "current_host_android_runtime": {
+    "result": "pass; OK (2 tests)",
+    "exact_apk_tested": true,
+    "apk_sha256": "cfbbcd0699d2206a7799c527531912e6afcaf8025d65d4fa925aec36c27c6006",
+    "device": "Software-only Android 10 x86_64 emulator; no concurrent Gradle build",
+    "tests": [
+      "Appearance cancellation, preset loading, staged font/color/size/gradient, draft recreation, named-theme persistence, image normalization and theme/provider round-trips",
+      "Internal RSS Back navigation, Notes left drawer/popup, actual Rust/JNI autosave/readback/recreation/clearing, invalid ID rejection"
+    ],
+    "rendered_screens_reviewed": [
+      "dark Settings",
+      "staged light Appearance preview in dark editor",
+      "light Settings after Apply/recreation"
+    ],
+    "app_crash_buffer": "empty",
+    "device_limitation": "Post-test Android home shows System UI ANR. App-render captures and passing tests do not establish clean system-UI, physical-handset or performance acceptance.",
+    "evidence": "evidence/v0.8.2/ui-check-instrumentation.log"
+  },
+  "historical_standalone_notes_evidence": "evidence/retired-standalone-verification.json; not verification of this host APK",
+  "not_verified": [
+    "SDK package installation and restricted execution",
+    "Capability broker and revocation",
+    "Original full UI/feature parity",
+    "Physical handset and carrier/account behavior",
+    "Original game ports/Panda/multiplayer",
+    "Measured speed or stability improvement"
+  ],
+  "signing": "Retained existing OnKlav debug key; no key included in public artifacts",
+  "migration": "No existing user data copied or deleted",
+  "current_host_apk_checks": "pass; retained signature v2, ZIP CRC/alignment, 16KB native alignment, both ABIs, one application module and launcher, no nested APK/legacy classes; see apk-verification.json",
+  "build_repair": "No new build failures; consolidated host and relocated shared export provider compile successfully",
+  "prior_host_attempt": {
+    "result": "Appearance passed; Notes test read before body save completion",
+    "diagnosis": "Broad Saved substring also matched editable body. Corrected complete save-status wait; fixed observed dark-dialog contrast and narrow Settings layout.",
+    "evidence": "evidence/v0.8.2/first-attempt-diagnosis.txt"
+  },
+  "sdk_assessment": "Keep Kotlin/Compose app UI and Godot/GDScript games; shared services and separate authoring paths. Execution runtime and permission boundary remain unimplemented; see SDK-OPTIONS.md",
+  "ui_work": "Appearance and shared UI restoration verified within UI-PARITY.md scope; full original application parity remains incomplete",
+  "current_host_apk_sha256": "cfbbcd0699d2206a7799c527531912e6afcaf8025d65d4fa925aec36c27c6006",
+  "current_shared_unit_tests": {
+    "passed": 6,
+    "failed": 0,
+    "includes": [
+      "4 new theme archive codec, validation and bounds checks",
+      "2 real Rust/JNI document-store tests"
+    ],
+    "evidence": "evidence/v0.8.2/TEST-*.xml"
+  }
+}

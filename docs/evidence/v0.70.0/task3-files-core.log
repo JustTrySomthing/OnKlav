@@ -1,0 +1,40 @@
+   Compiling onklav-core v0.8.0 (/workspace/scratch/ed752e8a1957/current/OnKlav/core)
+warning: unused import: `BTreeSet`
+ --> src/sdk_storage.rs:6:34
+  |
+6 | use std::{collections::{BTreeMap,BTreeSet},fs::{self,File,OpenOptions},io::{Read,Seek,SeekFrom,Write},path::{Path,PathBuf}};
+  |                                  ^^^^^^^^
+  |
+  = note: `#[warn(unused_imports)]` on by default
+
+warning: `onklav-core` (lib) generated 1 warning (run `cargo fix --lib -p onklav-core` to apply 1 suggestion)
+warning: `onklav-core` (lib test) generated 1 warning (1 duplicate)
+    Finished `test` profile [unoptimized + debuginfo] target(s) in 4.14s
+     Running unittests src/lib.rs (core/target/debug/deps/onklav_core-8a579202944a8eae)
+
+running 16 tests
+test history_recovery::tests::corrupt_config_and_symlink_storage_fail_closed ... ok
+test history_journal::tests::symlink_storage_fails_closed ... ok
+test sdk_storage::tests::storage_foreign_handles_corruption_and_symlinks_are_rejected ... ok
+test sdk_collections::tests::storage_invalid_backup_preserves_collection ... ok
+test sdk_storage::tests::storage_lower_saved_quota_and_unknown_admin_effect_never_delete_data ... ok
+test content::tests::text_api_never_follows_a_link_out_of_content_storage ... ok
+test sdk_collections::tests::storage_collection_backup_restore_is_scoped_and_revision_checked ... ok
+test sdk_storage::tests::storage_symlinked_directory_never_touches_external_files ... ok
+test sdk_storage::tests::storage_staging_retry_checksum_and_immutable_commit ... ok
+test tests::storage_lifecycle_and_search ... ok
+test sdk_storage::tests::storage_reopen_resumes_staging_without_replaying_appends ... ok
+test sdk_storage::tests::storage_cache_eviction_and_lower_limits_preserve_saved_files ... ok
+test sdk::tests::storage_native_transfer_tokens_and_revocation_are_live ... ok
+test sdk::tests::denied_private_storage_never_creates_app_documents ... ok
+test sdk::tests::actual_notes_guest_create_reload_search_delete_and_scoped_storage ... ok
+test sdk_storage::tests::storage_streams_a_file_larger_than_the_guest_memory_budget ... ok
+
+test result: ok. 16 passed; 0 failed; 0 ignored; 0 measured; 195 filtered out; finished in 3.48s
+
+     Running unittests src/bin/onklav-pack.rs (core/target/debug/deps/onklav_pack-ee23dc4255ec4a6b)
+
+running 0 tests
+
+test result: ok. 0 passed; 0 failed; 0 ignored; 0 measured; 0 filtered out; finished in 0.00s
+

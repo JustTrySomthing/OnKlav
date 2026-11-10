@@ -1,0 +1,5 @@
+Traceback (most recent call last):
+  File "/workspace/scratch/d853f89e99b7/onklav/OnKlav/scripts/build_native.py", line 23, in <module>
+    assert HOST_ONLY or ndk.is_dir(), 'Restore NDK 27.2.12479018 before rebuilding Android Rust'
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Restore NDK 27.2.12479018 before rebuilding Android Rust
