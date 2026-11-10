@@ -52,6 +52,15 @@ internal object SdkWalkieTransport {
     fun state(c:Context,owner:JSONObject?=null)=call(c,JSONObject().put("operation","state"),owner) as JSONObject
     fun command(c:Context,args:JSONObject,owner:JSONObject?=null):JSONObject {
         val copy=JSONObject(args.toString())
+        // Carrier sender formatting may add +1 to a selected ten-digit US number.
+        // Resolve only inbound packets against this owner's existing session and SIM;
+        // native session IDs, frame validation and authorization still apply.
+        if(copy.optString("operation") in setOf("receive","clip.receive")) {
+            val current=state(c,owner)
+            val saved=current.optString("peer")
+            if(saved.isNotEmpty()&&current.optInt("subscription",-1)==copy.optInt("subscription",-1)&&
+                phoneKey(saved)==phoneKey(copy.getString("peer")))copy.put("peer",saved)
+        }
         copy.put("facts",facts(c,copy.getString("peer"),copy.optInt("subscription",-1),owner))
         return call(c,copy,owner) as JSONObject
     }

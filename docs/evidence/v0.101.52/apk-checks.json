@@ -1,0 +1,10 @@
+{
+  "version": "0.101.52-rc1",
+  "version_code": 231,
+  "size_bytes": 132747588,
+  "sha256": "e829293f5e67089f6e2d1ba0a58b08e6c8d3ce818de9dbdded403f9504a65775",
+  "signer_matches_previous": true,
+  "zip_alignment_16kb": true,
+  "unchanged_game_and_sdk_assets": 36,
+  "physical_device_acceptance": false
+}

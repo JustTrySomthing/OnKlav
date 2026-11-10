@@ -54,7 +54,7 @@ internal object FriendGames {
         check.getString("status")
     }
     fun cancelVerification(c:Context,peer:String) {transaction(c){root->if(root.optJSONObject("verification")?.optString("peer")==phoneKey(peer))root.remove("verification")}}
-    fun validNumber(peer:String)=peer.matches(Regex("[+0-9 ()-]{3,40}")) && phoneKey(peer).length in 3..20
+    fun validNumber(peer:String)=peer.matches(Regex("[+0-9 ().-]{3,40}")) && phoneKey(peer).length in 3..20
     fun blocking(c:Context)=list(c).firstOrNull{it.optString("status") in setOf("active","checking","outgoing","invite")}
     /** Cancel only an invitation. Acceptance racing dismissal must preserve the live game. */
     fun cancelInvitation(c:Context,id:String) {
@@ -142,10 +142,17 @@ internal object FriendGames {
                 if(app){
                     val verification=root.optJSONObject("verification")
                     if(verification?.optString("peer")==phoneKey(peer)&&verification.optString("status")=="checking"&&now()-verification.optLong("at") in 0L..65000L){verification.put("status","verified");rememberVerified(root,peer)}
-                    val m=all.keys().asSequence().map{all.getJSONObject(it)}.firstOrNull{phoneKey(it.getString("peer"))==phoneKey(peer)&&it.optString("status")=="checking"&&now()-it.optLong("at")in 0L..65000L}?:return@transaction
-                    if(m.optString("game") in singlePlayerOnlyGames)return@transaction
-                    rememberVerified(root,peer)
-                    m.put("status","outgoing");enqueue(m,FriendGameWire("I",m.getString("id"),0,m.getString("token")).encode(),"invite");send+=m.getString("id");return@transaction}
+                    val waiting=all.keys().asSequence().map{all.getJSONObject(it)}.filter{
+                        phoneKey(it.getString("peer"))==phoneKey(peer)&&it.optString("status")=="checking"&&
+                            now()-it.optLong("at") in 0L..65000L&&it.optString("game") !in singlePlayerOnlyGames
+                    }.toList()
+                    if(waiting.isNotEmpty())rememberVerified(root,peer)
+                    waiting.forEach { m ->
+                        m.put("status","outgoing")
+                        enqueue(m,FriendGameWire("I",m.getString("id"),0,m.getString("token")).encode(),"invite")
+                        send+=m.getString("id")
+                    }
+                    return@transaction}
                 val f=frame?:return@transaction
                 var m=all.optJSONObject(f.id)
                 if(m==null && f.type=="I"){

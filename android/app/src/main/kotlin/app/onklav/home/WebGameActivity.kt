@@ -133,7 +133,7 @@ class WebGameActivity : androidx.activity.ComponentActivity() {
         val requested=next.getStringExtra("game") ?: return
         // Every explicit Play resolves the requested title afresh. Never reuse a renderer
         // with a stale menu, session lease or consumed launch action.
-        if(web==null && !active){closing=true;next.flags=0;finish();startActivity(next);return}
+        if((web==null && !active)||canLeaveStartup()){closing=true;next.flags=0;finish();startActivity(next);return}
         pendingLaunch=next
         requestReturn()
     }
@@ -390,9 +390,13 @@ class WebGameActivity : androidx.activity.ComponentActivity() {
         val script="(function(){window.onklavHostSuspended="+(!resumed)+";if(typeof window.onklavGameAction==='function'){window.onklavGameAction("+JSONObject.quote(action)+");return true;}return false;})()"
         view.evaluateJavascript(script){complete?.invoke(it=="true")}
     }
+    // Included games cannot save before their session-ready handshake. A loader
+    // that has installed the JS callback must not trap Back or a different Play.
+    private fun canLeaveStartup() = !gameReady &&
+        (sessionId in BUILTINS || sessionId in setOf(GamePackages.SHROOM_ID,GamePackages.LAST_LIGHT_ID))
     private fun requestReturn() {
         // Back from a native entry/cancel/recovery screen has no running game to save.
-        if(web==null && !active){finish();return}
+        if((web==null && !active)||canLeaveStartup()){closing=true;finish();return}
         if(returning)return
         returning=true
         sendGameAction("return") { supported ->

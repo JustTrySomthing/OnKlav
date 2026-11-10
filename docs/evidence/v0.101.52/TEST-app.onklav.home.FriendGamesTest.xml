@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.FriendGamesTest" tests="14" skipped="0" failures="0" errors="0" timestamp="2026-11-10T23:42:41" hostname="4e6a3c69280b" time="2.528">
+  <properties/>
+  <testcase name="retryExpiredAttemptCreatesFreshWindowAndCancelCannotEndAcceptedGame" classname="app.onklav.home.FriendGamesTest" time="1.975"/>
+  <testcase name="otherGamesRemainIndependentWhileFriendMatchIsPaused" classname="app.onklav.home.FriendGamesTest" time="0.057"/>
+  <testcase name="replayJournalPreservesBothDirectionsAndAcknowledgesDrainedFrames" classname="app.onklav.home.FriendGamesTest" time="0.058"/>
+  <testcase name="carrierConvertedVerificationAndTurnsStillReachTheMatch" classname="app.onklav.home.FriendGamesTest" time="0.036"/>
+  <testcase name="outOfOrderTurnsDrainContiguouslyAndWrongGameCannotSend" classname="app.onklav.home.FriendGamesTest" time="0.049"/>
+  <testcase name="wireRejectsMalformedOversizedAndRealtimePayloads" classname="app.onklav.home.FriendGamesTest" time="0.021"/>
+  <testcase name="oneVerificationAdvancesAllPendingGamesForTheSameFriend" classname="app.onklav.home.FriendGamesTest" time="0.037"/>
+  <testcase name="featuredGamesArePreinstalledAndSoloOnly" classname="app.onklav.home.FriendGamesTest" time="0.072"/>
+  <testcase name="originalReadableCheckInvitationAcceptanceTurnsAndAcknowledgement" classname="app.onklav.home.FriendGamesTest" time="0.061"/>
+  <testcase name="dottedContactNumbersCanConnectWithoutChangingPeerIdentity" classname="app.onklav.home.FriendGamesTest" time="0.034"/>
+  <testcase name="standaloneReverificationNeverCreatesAnInvitationAndHonorsClose" classname="app.onklav.home.FriendGamesTest" time="0.041"/>
+  <testcase name="cancelledInvitationDoesNotBlockSoloOrReviveOnLateAppReply" classname="app.onklav.home.FriendGamesTest" time="0.031"/>
+  <testcase name="retiredPandaMatchIsRetainedButCannotInterceptSoloOrSend" classname="app.onklav.home.FriendGamesTest" time="0.029"/>
+  <testcase name="incomingCancelDeclinesAndReleasesThePendingSlot" classname="app.onklav.home.FriendGamesTest" time="0.026"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

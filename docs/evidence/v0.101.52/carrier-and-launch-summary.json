@@ -1,0 +1,11 @@
+{
+  "host_version": "0.101.52-rc1",
+  "checks": {
+    "FriendGamesTest": 14,
+    "GameEntryFlowTest": 12,
+    "RealSocialTest": 7,
+    "WalkieCarrierConnectionTest": 1
+  },
+  "physical_phone_and_carrier_verified": false,
+  "scope": "Host protocol state machines, native Walkie carrier bridge, sender/SIM rejection, Real Social token validation and included-game startup recovery."
+}

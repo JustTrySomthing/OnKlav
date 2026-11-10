@@ -26,6 +26,24 @@ class GameEntryFlowTest {
         Shadows.shadowOf(Looper.getMainLooper()).idle()
         return c
     }
+    @Test fun stalledIncludedLoaderCanSwitchGamesWithoutDiscardingSavedProgress() {
+        val saved=store("panda");saved.commit(saved.begin(),"resume",JSONObject().put("level",4),1,true)
+        val c=ready("panda");val a=c.get()
+        field("web").set(a,WebView(a));field("active").setBoolean(a,true)
+        field("gameReady").setBoolean(a,false)
+        c.newIntent(Intent(a,WebGameActivity::class.java).putExtra("game","hockey"))
+        assertTrue(a.isFinishing)
+        assertEquals("hockey",Shadows.shadowOf(a).nextStartedActivity.getStringExtra("game"))
+        assertEquals(4,saved.load("resume").getJSONObject("record").getJSONObject("state").getInt("level"))
+        c.pause().stop().destroy()
+    }
+    @Test fun backCanLeaveIncludedLoaderBeforeSessionReady() {
+        val c=ready("hockey");val a=c.get()
+        field("web").set(a,WebView(a));field("active").setBoolean(a,true)
+        field("gameReady").setBoolean(a,false)
+        a.onBackPressed();assertTrue(a.isFinishing)
+        c.pause().stop().destroy()
+    }
     @Test fun gameWindowSupportsThePortraitAndLandscapeOrientationRequests() {
         val context=android.view.ContextThemeWrapper(
             ApplicationProvider.getApplicationContext<android.content.Context>(),

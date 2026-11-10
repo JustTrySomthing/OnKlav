@@ -22,6 +22,23 @@ class RealSocialTest {
         assertFalse(RealSocial.safeLink("file:///private"))
     }
 
+    @Test fun convertedCarrierDelimiterPreservesFriendRequestsAndPosts() {
+        val c=carrierContext();val peer="+15550100003";val token="a".repeat(32)
+        fun packet(kind:String,id:String)=JSONObject().put("kind",kind).put("token",token)
+            .put("id",id.repeat(32)).put("at",System.currentTimeMillis())
+        val invitation=RealSocial.wire(packet("invite","b")).replace("!OKS1|","!OKS1@")
+        assertTrue(RealSocial.receive(c,peer,1,invitation))
+        val key=phoneKey(peer)
+        assertEquals("request",RealSocial.snapshot(c).getJSONObject("friends").getJSONObject(key).getString("status"))
+        RealSocial.accept(c,key)
+        val post=packet("post","c").put("text","A carrier-delivered post")
+        assertTrue(RealSocial.receive(c,peer,1,RealSocial.wire(post).replace("!OKS1|","!OKS1:")))
+        assertEquals(1,RealSocial.snapshot(c).getJSONObject("posts").length())
+        val forged=packet("post","d").put("token","e".repeat(32)).put("text","Wrong token")
+        RealSocial.receive(c,peer,1,RealSocial.wire(forged).replace("!OKS1|","!OKS1@"))
+        assertEquals(1,RealSocial.snapshot(c).getJSONObject("posts").length())
+    }
+
     @Test fun friendsGetOnlyThreeRecentPostsAndRemovedTokensCannotReopenRequests() {
         val c=carrierContext()
         repeat(5) { RealSocial.post(c,"Charles","Post $it","",null,"") }

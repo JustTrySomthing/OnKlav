@@ -38,6 +38,31 @@ class FriendGamesTest {
         FriendGames.receive(b,one,1,invite);assertEquals("invite",FriendGames.find(b,id)!!.getString("status"))
         FriendGames.accept(b,id,true);val answer=sent();FriendGames.receive(a,two,1,answer);assertEquals("active",FriendGames.find(a,id)!!.getString("status"));return Triple(a,b,id)
     }
+    @Test fun oneVerificationAdvancesAllPendingGamesForTheSameFriend() {
+        val a=device();val b=device()
+        val naval=FriendGames.invite(a,two,"naval")
+        val blackjack=FriendGames.invite(a,two,"blackjack")
+        FriendGames.receive(b,one,1,FriendGameWire.QUESTION)
+        val proof=sent()
+        FriendGames.receive(a,two,1,proof)
+        for(id in listOf(naval,blackjack)) {
+            val match=FriendGames.find(a,id)!!
+            assertEquals("outgoing",match.getString("status"))
+            FriendGames.receive(b,one,1,FriendGameWire("I",id,0,match.getString("token")).encode())
+            FriendGames.accept(b,id,true)
+            FriendGames.receive(a,two,1,sent())
+            assertEquals("active",FriendGames.find(a,id)!!.getString("status"))
+        }
+    }
+    @Test fun dottedContactNumbersCanConnectWithoutChangingPeerIdentity() {
+        val a=device();val b=device();val peer="555.010.0002"
+        val id=FriendGames.invite(a,peer,"naval")
+        FriendGames.receive(b,one,1,FriendGameWire.QUESTION)
+        FriendGames.receive(a,two,1,sent())
+        assertEquals("outgoing",FriendGames.find(a,id)!!.getString("status"))
+        assertEquals(phoneKey(two),phoneKey(peer))
+        assertFalse(FriendGames.validNumber("555.evil.0002"))
+    }
     @Test fun carrierConvertedVerificationAndTurnsStillReachTheMatch() {
         val a=device()
         val b=device()

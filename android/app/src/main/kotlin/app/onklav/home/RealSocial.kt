@@ -84,10 +84,13 @@ internal object RealSocial {
     private fun packet(kind: String, token: String) =
         JSONObject().put("kind", kind).put("token", token).put("id", id()).put("at", now())
     internal fun wire(row: JSONObject) = PREFIX + Base64.encodeToString(row.toString().toByteArray(), Base64.NO_WRAP or Base64.URL_SAFE)
+    private fun packetPrefix(text:String):String? = listOf(PREFIX,PREFIX.dropLast(1)+"@",PREFIX.dropLast(1)+":")
+        .firstOrNull { text.startsWith(it) }
     internal fun decode(text: String): JSONObject? {
-        if (!text.startsWith(PREFIX) || text.length > MAX_WIRE) return null
+        val prefix=packetPrefix(text) ?: return null
+        if (text.length > MAX_WIRE) return null
         return runCatching {
-            JSONObject(Base64.decode(text.removePrefix(PREFIX), Base64.URL_SAFE).decodeToString()).also {
+            JSONObject(Base64.decode(text.removePrefix(prefix), Base64.URL_SAFE).decodeToString()).also {
                 require(key.matches(it.getString("id")) && key.matches(it.getString("token")))
                 require(it.getString("kind") in setOf("invite","accept","remove","post","comment","reaction"))
             }
@@ -279,7 +282,7 @@ internal object RealSocial {
     }
 
     fun receive(c: Context, peer: String, sub: Int, text: String, file: File? = null, mime: String = ""): Boolean {
-        if (!text.startsWith(PREFIX)) return false
+        if (packetPrefix(text)==null) return false
         val p = decode(text) ?: return true
         if (!installed(c) || runCatching { FriendGames.policy(c, peer, sub) }.isFailure) return true
         scheduleCleanup(c)
@@ -369,7 +372,7 @@ internal object RealSocial {
     fun receiveMms(c: Context, pdu: JSONObject, sub: Int): Boolean {
         val parts = pdu.nodes("parts")
         val text = parts.filter { it.optString("mime") == "text/plain" }.joinToString("") { it.optString("text") }
-        if (!text.startsWith(PREFIX)) return false
+        if (packetPrefix(text)==null) return false
         val part = parts.singleOrNull { it.has("file") && validMime(it.optString("mime")) } ?: return true
         return receive(c, pdu.optString("from"), sub, text, MessageTransferProvider.file(c, part.getString("file")), part.getString("mime"))
     }
