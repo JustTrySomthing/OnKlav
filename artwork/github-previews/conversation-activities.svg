@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 310" role="img" aria-labelledby="title">
+  <title id="title">Illustration of the open OnKlav conversation activities menu</title>
+  <rect width="420" height="310" rx="22" fill="#19191f"/>
+  <rect x="12" y="12" width="396" height="286" rx="16" fill="#292831"/>
+  <g font-family="system-ui, sans-serif" text-anchor="middle">
+    <text x="227" y="48" font-size="19" font-weight="650" fill="#f6f2ff">Conversation Activities</text>
+    <rect x="33" y="71" width="166" height="135" rx="18" fill="#1c1b24"/>
+    <rect x="221" y="71" width="166" height="135" rx="18" fill="#1c1b24"/>
+    <text x="116" y="168" font-size="19" font-weight="600" fill="#f6f2ff">Voice chat</text>
+    <text x="116" y="189" font-size="13" fill="#cabbdc">Walkie-Talkie</text>
+    <text x="304" y="168" font-size="19" font-weight="600" fill="#f6f2ff">Play game</text>
+    <text x="304" y="189" font-size="13" fill="#cabbdc">Invite a friend</text>
+    <text x="210" y="237" font-size="17" fill="#f6f2ff">With Sam</text>
+    <rect x="142" y="253" width="136" height="32" rx="14" fill="#393442"/>
+    <text x="210" y="275" font-size="15" fill="#d3b8ff">Cancel</text>
+  </g>
+  <g fill="none" stroke="#d3b8ff" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M109 101h14a5 5 0 0 1 5 5v36a5 5 0 0 1-5 5h-14a5 5 0 0 1-5-5v-36a5 5 0 0 1 5-5Zm0 0-4-13m5 22h12v10h-12zm0 17h12m-12 5h12m-12 5h12"/>
+    <path d="M291 105h26c8 0 14 7 16 15l3 11c2 8-6 12-12 7l-8-7h-24l-8 7c-6 5-14 1-12-7l3-11c2-8 8-15 16-15Zm-4 7v14m-7-7h14m20-2h.1m7 6h.1"/>
+    <path d="m109 47 12-12m-6 2 4 4m-10-8v-5m-3 2h6m12 17v-5m-3 2h6"/>
+  </g>
+</svg>

@@ -32,11 +32,22 @@ Download the APK, open it on Android, and follow the installation prompt.
 
 ## Keep your favorite people one tap away
 
-| A family conversation | Start a message |
+| A family conversation | Open the magic wand |
 | :---: | :---: |
-| <img src="artwork/github-previews/messaging-example.svg" width="450" alt="Illustrated family group chat about a Saturday picnic"> | <img src="docs/evidence/phone-chrome-keypad/message-keypad.png" width="150" alt="OnKlav number keypad for starting a text message"> |
+| <img src="artwork/github-previews/messaging-example.svg" width="450" alt="Illustrated family group chat about a Saturday picnic"> | <img src="artwork/github-previews/conversation-activities.svg" width="305" alt="Illustration of the open conversation activities menu with Voice chat and Play game"> |
 
-*The family chat is an illustration with sample messages. The number keypad is a development-build screenshot.*
+*Illustrations use sample conversations.*
+
+- **Go beyond a text.** Tap the magic wand in a one-on-one conversation to open
+  Conversation Activities. Choose **Voice chat** for Walkie-Talkie or **Play game**
+  to invite a friend to a supported turn-based game.
+- **Find and save what matters.** Open the media **Gallery** to find shared photos,
+  audio, video, and attachments. Star the messages you want to keep, then find
+  them again in **Starred**, your conversation favorites tab.
+- **Give messages a voice and a reaction.** Use built-in text-to-speech to listen
+  to individual messages, and reply with animated emoji reactions.
+- **Share with your circle.** [Real Social](docs/REAL-SOCIAL.md) lets you share
+  posts, replies, and media directly with accepted friends over SMS and MMS.
 
 On first launch, follow OnKlav’s setup checklist. To use Messages for SMS and MMS,
 choose OnKlav as the default messaging app when Android asks and review the
