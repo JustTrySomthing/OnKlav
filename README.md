@@ -73,18 +73,24 @@ Android from one optimized, signed APK.
 | <a href="docs/evidence/files-simplification/files-home.png"><img src="docs/evidence/files-simplification/files-home.png" width="190" alt="Files home with OnKlav and Android storage tabs"></a> | <a href="artwork/github-previews/video-edit-coast.webp"><img src="artwork/github-previews/video-edit-coast.webp" width="190" alt="Video Edit overlay workspace with a vertical coastal sunset clip"></a> |
 | Manage files across OnKlav and Android storage. | Trim and arrange clips in a touch-friendly editor. |
 
-**Radio with Mandala**
+**Amazing Music Visualizing**
 
-<a href="docs/evidence/radio-geometry-polish/visualizer-landscape-3.png"><img src="docs/evidence/radio-geometry-polish/visualizer-landscape-3.png" width="610" alt="Radio player with the blue Mandala visualizer, playback controls, and intensity slider"></a>
+Listen to live radio streams from around the world and transform them into hypnotic visualizations. Choose the **Rainbow** palette to see all six effects in multicolor.
 
-Listen to live radio streams from around the world and transform them into hypnotic visualizations.
+| Wave | Spectrum | Orbit |
+| :---: | :---: | :---: |
+| <a href="artwork/github-previews/radio-wave.webp"><img src="artwork/github-previews/radio-wave.webp" width="245" alt="Layered waveforms bending with the music"></a> | <a href="artwork/github-previews/radio-spectrum.webp"><img src="artwork/github-previews/radio-spectrum.webp" width="245" alt="Rainbow frequency bars pulsing to the track"></a> | <a href="artwork/github-previews/radio-orbit.webp"><img src="artwork/github-previews/radio-orbit.webp" width="245" alt="A circular spectrum radiating from the center"></a> |
+
+| Mandala | Slipstream | Aurora |
+| :---: | :---: | :---: |
+| <a href="artwork/github-previews/radio-mandala.webp"><img src="artwork/github-previews/radio-mandala.webp" width="245" alt="Rotating layers of colorful geometric petals"></a> | <a href="artwork/github-previews/radio-slipstream.webp"><img src="artwork/github-previews/radio-slipstream.webp" width="245" alt="Rainbow streaks rushing out from the center"></a> | <a href="artwork/github-previews/radio-aurora.webp"><img src="artwork/github-previews/radio-aurora.webp" width="245" alt="Rippling ribbons of colorful light"></a> |
 
 | RSS Reader | Weather | Calendar |
 | :---: | :---: | :---: |
 | <a href="artwork/github-previews/rss-reader.svg"><img src="artwork/github-previews/rss-reader.svg" width="205" alt="Illustrated RSS Reader with unread articles and bookmarks"></a> | <a href="artwork/github-previews/weather.svg"><img src="artwork/github-previews/weather.svg" width="205" alt="Illustrated Weather preview with a sample Portland forecast"></a> | <a href="docs/evidence/calendar/week.png"><img src="docs/evidence/calendar/week.png" width="150" alt="Calendar week view in OnKlav"></a> |
 | Follow the blogs, newsrooms, and independent writers you choose. Filter for unread posts, bookmark a good read, or catch up on cached entries offline. The content available in each entry depends on what the publisher includes in its RSS or Atom feed. | Check your hometown before heading out, then look up a destination by city or U.S. ZIP code. Your saved home location stays put while you check other places. | See your day in a timeline, scan the week for gaps, or zoom out to the month. Use recurring events and reminders for the things you do every week. Your calendar works offline and needs no account. |
 
-*Files, Radio, and Calendar are development-build captures. Video Edit shows the editor with an illustrated sample clip. RSS Reader and Weather are illustrations with sample content.*
+*The Radio previews use OnKlav’s visualizer with music from the Air Hockey soundtrack. Files and Calendar are development-build captures. Video Edit shows the editor with an illustrated sample clip. RSS Reader and Weather are illustrations with sample content.*
 
 ## Themes
 
@@ -116,8 +122,9 @@ You can also save and share your own [theme packages](docs/THEME-PACKAGES.md).
 
 Find these built-in tools on the Apps desktop or bottom navigation.
 
+### Communication
+
 <table>
-  <tr><th colspan="3" align="left">Communication</th></tr>
   <tr>
     <td width="160" align="center"><img src="artwork/github-apps/phone.svg" width="30" height="30" alt=""><br><strong>Phone</strong><br>Call contacts or dial a number.</td>
     <td width="160" align="center"><img src="artwork/github-apps/messages.svg" width="30" height="30" alt=""><br><strong>Messages</strong><br>Text friends and keep favorite photos and messages handy.</td>
@@ -128,7 +135,11 @@ Find these built-in tools on the Apps desktop or bottom navigation.
     <td width="160" align="center"><img src="artwork/github-apps/social.svg" width="30" height="30" alt=""><br><strong>Real Social</strong><br>Share updates and photos with friends over SMS and MMS.</td>
     <td width="160" align="center"><img src="artwork/github-apps/walkie.svg" width="30" height="30" alt=""><br><strong>Walkie-Talkie</strong><br>Send a quick voice message with push-to-talk controls.</td>
   </tr>
-  <tr><th colspan="3" align="left">Web &amp; listening</th></tr>
+</table>
+
+### Web & listening
+
+<table>
   <tr>
     <td width="160" align="center"><img src="artwork/github-apps/browser.svg" width="30" height="30" alt=""><br><strong>Browser</strong><br>Browse the web and open links inside OnKlav.</td>
     <td width="160" align="center"><img src="artwork/github-apps/youtube.svg" width="30" height="30" alt=""><br><strong>YouTube</strong><br>Find and watch YouTube videos from OnKlav.</td>
@@ -144,7 +155,11 @@ Find these built-in tools on the Apps desktop or bottom navigation.
     <td width="160" align="center"><img src="artwork/github-apps/reader.svg" width="30" height="30" alt=""><br><strong>Read Aloud</strong><br>Listen to text with built-in speech voices.</td>
     <td></td>
   </tr>
-  <tr><th colspan="3" align="left">Create &amp; capture</th></tr>
+</table>
+
+### Create & capture
+
+<table>
   <tr>
     <td width="160" align="center"><img src="artwork/github-apps/camera.svg" width="30" height="30" alt=""><br><strong>Camera</strong><br>Capture photos and videos from OnKlav.</td>
     <td width="160" align="center"><img src="artwork/github-apps/photo.svg" width="30" height="30" alt=""><br><strong>Image Edit</strong><br>Crop and retouch photos before you share them.</td>
@@ -160,7 +175,11 @@ Find these built-in tools on the Apps desktop or bottom navigation.
     <td width="160" align="center"><img src="artwork/github-apps/codeedit.svg" width="30" height="30" alt=""><br><strong>Code Edit</strong><br>Open and edit source files right on your phone.</td>
     <td></td>
   </tr>
-  <tr><th colspan="3" align="left">Files &amp; privacy</th></tr>
+</table>
+
+### Files & privacy
+
+<table>
   <tr>
     <td width="160" align="center"><img src="artwork/github-apps/files.svg" width="30" height="30" alt=""><br><strong>Files</strong><br>Organize and move files between OnKlav and Android storage.</td>
     <td width="160" align="center"><img src="artwork/github-apps/cloudfiles.svg" width="30" height="30" alt=""><br><strong>Cloud Files</strong><br>Browse files in supported cloud storage accounts.</td>
@@ -176,7 +195,11 @@ Find these built-in tools on the Apps desktop or bottom navigation.
     <td></td>
     <td></td>
   </tr>
-  <tr><th colspan="3" align="left">Everyday tools</th></tr>
+</table>
+
+### Everyday tools
+
+<table>
   <tr>
     <td width="160" align="center"><img src="artwork/github-apps/calendar.svg" width="30" height="30" alt=""><br><strong>Calendar</strong><br>Plan your week and set reminders without an account.</td>
     <td width="160" align="center"><img src="artwork/github-apps/clock.svg" width="30" height="30" alt=""><br><strong>Clock</strong><br>Set alarms, start timers, or use the stopwatch.</td>
@@ -192,7 +215,11 @@ Find these built-in tools on the Apps desktop or bottom navigation.
     <td width="160" align="center"><img src="artwork/github-apps/power.svg" width="30" height="30" alt=""><br><strong>Power</strong><br>Open Android's restart and power-off menu.</td>
     <td></td>
   </tr>
-  <tr><th colspan="3" align="left">System</th></tr>
+</table>
+
+### System
+
+<table>
   <tr>
     <td width="160" align="center"><img src="artwork/github-apps/settings.svg" width="30" height="30" alt=""><br><strong>Settings</strong><br>Customize themes, app visibility, and OnKlav preferences.</td>
     <td width="160" align="center"><img src="artwork/github-apps/games.svg" width="30" height="30" alt=""><br><strong>Games</strong><br>Play included games offline or challenge a friend in supported titles.</td>
