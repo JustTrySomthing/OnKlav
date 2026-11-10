@@ -6,27 +6,50 @@
 
 *Pronounced “Enclave,” a protected, self-contained territory.*
 
-OnKlav is a free, open-source project that runs inside Android. It gives you a
-customizable desktop, built-in apps and games, and two SDKs for building your own.
-Its design priorities are user control, direct communication, and a lightweight
-environment that keeps apps and games together.
+Give your Android phone a desktop of its own. Organize your everyday tools in one
+place, turn a live radio stream into a moving mandala, or play a bundled game when
+you're offline. OnKlav runs inside Android and includes both App and Game SDKs.
 
-## Get OnKlav
+**[Download OnKlav for Android](https://github.com/JustTrySomthing/OnKlav/releases/download/v0.101.49-rc1/OnKlav-0.101.49-RC.apk)** · [Release notes and SDK downloads](https://github.com/JustTrySomthing/OnKlav/releases/tag/v0.101.49-rc1)
 
-**[Download the signed Android APK](https://github.com/JustTrySomthing/OnKlav/releases/download/v0.101.49-rc1/OnKlav-0.101.49-RC.apk)** · [Release notes and SDK downloads](https://github.com/JustTrySomthing/OnKlav/releases/tag/v0.101.49-rc1)
-
-Version **0.101.49-rc1** is a prerelease for **ARM64 devices running Android 10 or newer**.
+One signed APK includes **8 games and 39 built-in apps and tools**. This
+**0.101.49-rc1** prerelease supports ARM64 devices running Android 10 or newer.
 Download the APK, open it on Android, and follow the installation prompt.
 
-[See the interface](#see-onklav) · [Included games](#included-games) · [Included apps](#included-apps)
+[See OnKlav in action](#see-onklav) · [Included games](#included-games) · [Included apps](#included-apps)
+
+## What to try first
+
+- **Make the desktop yours.** Organize apps into folders and share
+  [theme packages](docs/THEME-PACKAGES.md) with your own colors and wallpaper.
+- **Put on the radio.** Open Radio and choose Mandala in the visualizer
+  to watch layered patterns move with the audio.
+- **Play on the go.** Try a solo game offline, or invite a friend to an
+  [SMS turn-based match](developer/games/SMS-TURNS.md) in supported titles.
+  Friend matches require compatible OnKlav installs and cellular SMS service.
 
 ## See OnKlav
+
+### Games in action
+
+| Shroom | Last Light Express |
+| :---: | :---: |
+| <a href="artwork/github-gameplay/shroom.webp"><img src="artwork/github-gameplay/shroom.webp" width="390" alt="Shroom first-person gameplay with glowing projectiles in a spore-infested corridor"></a> | <a href="artwork/github-gameplay/last-light-express.webp"><img src="artwork/github-gameplay/last-light-express.webp" width="390" alt="Lantern courier jumping between moving train cars in Last Light Express"></a> |
+| Take on the outbreak one sector at a time. | Carry the last lantern across a moving train. |
+
+| Crash Test Panda | Radio with Mandala |
+| :---: | :---: |
+| <a href="artwork/github-gameplay/crash-test-panda.webp"><img src="artwork/github-gameplay/crash-test-panda.webp" width="210" alt="Crash Test Panda mid-demolition as a tower breaks apart and the score climbs"></a> | <a href="docs/evidence/radio-geometry-polish/visualizer-landscape-3.png"><img src="docs/evidence/radio-geometry-polish/visualizer-landscape-3.png" width="470" alt="Radio player with the blue Mandala visualizer, playback controls, and intensity slider"></a> |
+| Launch a panda and bring down the tower. | Tune in and watch the patterns move with the music. |
+
+*Gameplay captured from the shipped game exports in a browser. The Radio
+and app interface screenshots are from development builds. Select an image to enlarge it.*
+
+### The desktop and everyday tools
 
 | OnKlav desktop | Files | Video Edit |
 | :---: | :---: | :---: |
 | <a href="docs/evidence/desktop-folders/main-navigation.png"><img src="docs/evidence/desktop-folders/main-navigation.png" width="190" alt="Apps desktop with wallpaper and bottom navigation"></a> | <a href="docs/evidence/files-simplification/files-home.png"><img src="docs/evidence/files-simplification/files-home.png" width="190" alt="Files home with OnKlav and Android storage tabs"></a> | <a href="docs/evidence/video-footer-repair/portrait-video.png"><img src="docs/evidence/video-footer-repair/portrait-video.png" width="190" alt="Video Edit with a portrait preview, timeline, and tools"></a> |
-
-*Interface screenshots from development builds. Select a screenshot to enlarge it.*
 
 ## Included games
 
@@ -69,26 +92,17 @@ Find these built-in tools on the Apps desktop or bottom navigation.
 
 <img src="artwork/github-apps/settings.svg" width="22" height="22" alt=""> Settings · <img src="artwork/github-apps/games.svg" width="22" height="22" alt=""> Games
 
-## What you can do
+## Built for everyday use
 
-- **Make it yours.** Arrange your desktop, change colors, fonts, and backgrounds,
-  and save or share [theme packages](docs/THEME-PACKAGES.md).
-- **Run apps and games inside OnKlav.** Install signed `.onklav-a` apps and
-  `.onklav-g` games in a single Android app. OnKlav runs them in sandboxed
-  environments and mediates access to supported device capabilities.
-- **Play offline.** Play bundled single-player games such as Shroom, Last Light
-  Express, Crash Test Panda, and Air Hockey without an internet connection.
-- **Play a friend by text.** Supported games such as Naval Battle, Cats vs Dogs,
-  and Blackjack use [SMS for one-on-one turns](developer/games/SMS-TURNS.md)
-  without a game server or an internet connection. Both players need compatible
-  OnKlav installs, default messaging setup, and working cellular SMS service.
+- **Keep your tools together.** Install signed `.onklav-a` apps and `.onklav-g`
+  games inside OnKlav. It runs them in sandboxed environments and mediates
+  access to supported device capabilities.
+- **Stay in touch.** Use Messages and Groups for SMS and MMS. [Real Social](docs/REAL-SOCIAL.md)
+  shares posts and replies with accepted friends over SMS, and uses MMS for media attachments.
   Carrier charges may apply.
-- **Stay in touch.** Use built-in Messages and Groups for SMS and MMS.
-  [Real Social](docs/REAL-SOCIAL.md) shares posts and replies directly with
-  accepted friends over SMS, and uses MMS for media attachments.
-- **Build and share your own.** Use the [App SDK](developer/README.md)
-  for apps and utilities, and the [Game SDK](developer/games/README.md)
-  for games. Developers can share signed packages for users to install.
+- **Build something of your own.** The [App SDK](developer/README.md) and
+  [Game SDK](developer/games/README.md) help you build and share signed packages
+  that other OnKlav users can install.
 
 ## How it fits together
 

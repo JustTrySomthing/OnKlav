@@ -7,7 +7,7 @@
   "files_sha256": {
     "OnKlav/.gitignore": "267f4bbb0b4f80061293679ff5996c70ecc76295f8d99a206a87f6a4347d926c",
     "OnKlav/AGENTS.md": "ba9831a7ebfd69b19d888da45c9224de983c7e7f84b7573722967c2281cb5fb8",
-    "OnKlav/README.md": "8e62db459aa4ff1b57c767f582c1b0e4ac4ca9b84332581786b2732d4bae7055",
+    "OnKlav/README.md": "3f2cd60a988dcea8188d9f8a6155feb1bcf327829799520b0ae5faf5e0218490",
     "OnKlav/START-HERE.md": "bdb5f39135fdc1f7373ee72a4a139bd61b36662291bb5a055c957e11bf285606",
     "OnKlav/TODO.md": "a328d022e662e70403f61bc238343315210e379041d915e7711720ebf8e354a5",
     "OnKlav/android/app/build.gradle.kts": "4f827e3c16cf6b0107fe8a43c096679a92d00fc1a65f105cff8588ba89941568",
@@ -8535,6 +8535,9 @@
     "OnKlav/artwork/github-apps/walkie.svg": "88ba29965fe2791ca6f031a2eddf03d93c164c660e6c96f4d8515bdaf4a49f3b",
     "OnKlav/artwork/github-apps/weather.svg": "148fa2685795660194d7f53de0ebef1eeac0f7f249644fd17b349009aeb824a3",
     "OnKlav/artwork/github-apps/write.svg": "3b8706c5e6eac3165721972bccb55963146edb3bc0cf966a563c592ca7c0542d",
-    "OnKlav/artwork/github-apps/youtube.svg": "111bc817cacc7234c03e6bc6653b46a1593e4e80241c90e49b4baa786f373d73"
+    "OnKlav/artwork/github-apps/youtube.svg": "111bc817cacc7234c03e6bc6653b46a1593e4e80241c90e49b4baa786f373d73",
+    "OnKlav/artwork/github-gameplay/crash-test-panda.webp": "664c536af6f8cb1ca6c66a5b3980242c966d0b501f7ef17978cbd366877944bf",
+    "OnKlav/artwork/github-gameplay/last-light-express.webp": "7c793ed8c79cb26ec015cb3e6740b79659d625b927ff72faac605ea12b2e8935",
+    "OnKlav/artwork/github-gameplay/shroom.webp": "b97ad7dcb0a506857cf7d7a17926348be8aed61a00cd71530535fc1c68f0339c"
   }
 }
