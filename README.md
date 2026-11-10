@@ -22,7 +22,7 @@ Listen to live radio streams from around the world and transform them into
 hypnotic visualizations, or play a bundled game offline. Everything runs inside
 Android from one optimized, signed APK.
 
-[Install and set up](#install-and-set-up) · [See OnKlav in action](#see-onklav) · [Themes](#themes) · [Games](#included-games) · [Apps](#included-apps) · [Contribute](#help-improve-onklav)
+[Install and set up](#install-and-set-up) · [See OnKlav in action](#see-onklav) · [Themes](#themes) · [Games](#included-games) · [Apps](#all-the-apps-you-need) · [Contribute](#help-improve-onklav)
 
 <a href="#see-onklav"><img src="artwork/github-previews/onklav-overview.webp" width="960" alt="OnKlav desktop alongside gameplay from Last Light Express and Crash Test Panda. The app includes 39 built-in apps and tools and eight bundled games."></a>
 
@@ -117,90 +117,90 @@ You can also save and share your own [theme packages](docs/THEME-PACKAGES.md).
 
 *Gameplay images were captured from the shipped game exports in a browser.*
 
-## Included apps
+## All the Apps You Need
 
 Find these built-in tools on the Apps desktop or bottom navigation.
 
 <table>
   <tr><th colspan="3" align="left">Communication</th></tr>
   <tr>
-    <td width="160" align="center"><img src="artwork/github-apps/phone.svg" width="30" height="30" alt=""><br>Phone</td>
-    <td width="160" align="center"><img src="artwork/github-apps/messages.svg" width="30" height="30" alt=""><br>Messages</td>
-    <td width="160" align="center"><img src="artwork/github-apps/groups.svg" width="30" height="30" alt=""><br>Groups</td>
+    <td width="160" align="center"><img src="artwork/github-apps/phone.svg" width="30" height="30" alt=""><br><strong>Phone</strong><br>Call contacts or dial a number.</td>
+    <td width="160" align="center"><img src="artwork/github-apps/messages.svg" width="30" height="30" alt=""><br><strong>Messages</strong><br>Text friends and keep favorite photos and messages handy.</td>
+    <td width="160" align="center"><img src="artwork/github-apps/groups.svg" width="30" height="30" alt=""><br><strong>Groups</strong><br>Keep group texts with family and friends together.</td>
   </tr>
   <tr>
-    <td width="160" align="center"><img src="artwork/github-apps/email.svg" width="30" height="30" alt=""><br>Email</td>
-    <td width="160" align="center"><img src="artwork/github-apps/social.svg" width="30" height="30" alt=""><br>Real Social</td>
-    <td width="160" align="center"><img src="artwork/github-apps/walkie.svg" width="30" height="30" alt=""><br>Walkie-Talkie</td>
+    <td width="160" align="center"><img src="artwork/github-apps/email.svg" width="30" height="30" alt=""><br><strong>Email</strong><br>Read and send mail from your existing inbox.</td>
+    <td width="160" align="center"><img src="artwork/github-apps/social.svg" width="30" height="30" alt=""><br><strong>Real Social</strong><br>Share updates and photos with friends over SMS and MMS.</td>
+    <td width="160" align="center"><img src="artwork/github-apps/walkie.svg" width="30" height="30" alt=""><br><strong>Walkie-Talkie</strong><br>Send a quick voice message with push-to-talk controls.</td>
   </tr>
   <tr><th colspan="3" align="left">Web &amp; listening</th></tr>
   <tr>
-    <td width="160" align="center"><img src="artwork/github-apps/browser.svg" width="30" height="30" alt=""><br>Browser</td>
-    <td width="160" align="center"><img src="artwork/github-apps/youtube.svg" width="30" height="30" alt=""><br>YouTube</td>
-    <td width="160" align="center"><img src="artwork/github-apps/rss.svg" width="30" height="30" alt=""><br>RSS Reader</td>
+    <td width="160" align="center"><img src="artwork/github-apps/browser.svg" width="30" height="30" alt=""><br><strong>Browser</strong><br>Browse the web and open links inside OnKlav.</td>
+    <td width="160" align="center"><img src="artwork/github-apps/youtube.svg" width="30" height="30" alt=""><br><strong>YouTube</strong><br>Find and watch YouTube videos from OnKlav.</td>
+    <td width="160" align="center"><img src="artwork/github-apps/rss.svg" width="30" height="30" alt=""><br><strong>RSS Reader</strong><br>Follow your favorite sites and save articles for later.</td>
   </tr>
   <tr>
-    <td width="160" align="center"><img src="artwork/github-apps/radio.svg" width="30" height="30" alt=""><br>Radio</td>
-    <td width="160" align="center"><img src="artwork/github-apps/podcasts.svg" width="30" height="30" alt=""><br>Podcasts</td>
-    <td width="160" align="center"><img src="artwork/github-apps/audiobooks.svg" width="30" height="30" alt=""><br>AudioBooks</td>
+    <td width="160" align="center"><img src="artwork/github-apps/radio.svg" width="30" height="30" alt=""><br><strong>Radio</strong><br>Tune in worldwide and turn live audio into moving visuals.</td>
+    <td width="160" align="center"><img src="artwork/github-apps/podcasts.svg" width="30" height="30" alt=""><br><strong>Podcasts</strong><br>Find shows and download episodes for offline listening.</td>
+    <td width="160" align="center"><img src="artwork/github-apps/audiobooks.svg" width="30" height="30" alt=""><br><strong>AudioBooks</strong><br>Discover free audiobooks for your next commute.</td>
   </tr>
   <tr>
-    <td width="160" align="center"><img src="artwork/github-apps/ebooks.svg" width="30" height="30" alt=""><br>eBooks</td>
-    <td width="160" align="center"><img src="artwork/github-apps/reader.svg" width="30" height="30" alt=""><br>Read Aloud</td>
+    <td width="160" align="center"><img src="artwork/github-apps/ebooks.svg" width="30" height="30" alt=""><br><strong>eBooks</strong><br>Find free books or read EPUBs from your own library.</td>
+    <td width="160" align="center"><img src="artwork/github-apps/reader.svg" width="30" height="30" alt=""><br><strong>Read Aloud</strong><br>Listen to text with built-in speech voices.</td>
     <td></td>
   </tr>
   <tr><th colspan="3" align="left">Create &amp; capture</th></tr>
   <tr>
-    <td width="160" align="center"><img src="artwork/github-apps/camera.svg" width="30" height="30" alt=""><br>Camera</td>
-    <td width="160" align="center"><img src="artwork/github-apps/photo.svg" width="30" height="30" alt=""><br>Image Edit</td>
-    <td width="160" align="center"><img src="artwork/github-apps/videoeditor.svg" width="30" height="30" alt=""><br>Video Edit</td>
+    <td width="160" align="center"><img src="artwork/github-apps/camera.svg" width="30" height="30" alt=""><br><strong>Camera</strong><br>Capture photos and videos from OnKlav.</td>
+    <td width="160" align="center"><img src="artwork/github-apps/photo.svg" width="30" height="30" alt=""><br><strong>Image Edit</strong><br>Crop and retouch photos before you share them.</td>
+    <td width="160" align="center"><img src="artwork/github-apps/videoeditor.svg" width="30" height="30" alt=""><br><strong>Video Edit</strong><br>Trim and arrange clips into a video worth sharing.</td>
   </tr>
   <tr>
-    <td width="160" align="center"><img src="artwork/github-apps/audioeditor.svg" width="30" height="30" alt=""><br>Audio Edit</td>
-    <td width="160" align="center"><img src="artwork/github-apps/voicerecorder.svg" width="30" height="30" alt=""><br>Voice Record</td>
-    <td width="160" align="center"><img src="artwork/github-apps/screenrecorder.svg" width="30" height="30" alt=""><br>Screen Record</td>
+    <td width="160" align="center"><img src="artwork/github-apps/audioeditor.svg" width="30" height="30" alt=""><br><strong>Audio Edit</strong><br>Trim recordings and clean up audio clips.</td>
+    <td width="160" align="center"><img src="artwork/github-apps/voicerecorder.svg" width="30" height="30" alt=""><br><strong>Voice Record</strong><br>Capture voice notes, ideas, and reminders.</td>
+    <td width="160" align="center"><img src="artwork/github-apps/screenrecorder.svg" width="30" height="30" alt=""><br><strong>Screen Record</strong><br>Record a walkthrough or save a moment on screen.</td>
   </tr>
   <tr>
-    <td width="160" align="center"><img src="artwork/github-apps/write.svg" width="30" height="30" alt=""><br>Write</td>
-    <td width="160" align="center"><img src="artwork/github-apps/codeedit.svg" width="30" height="30" alt=""><br>Code Edit</td>
+    <td width="160" align="center"><img src="artwork/github-apps/write.svg" width="30" height="30" alt=""><br><strong>Write</strong><br>Draft anything from a quick note to a formatted document.</td>
+    <td width="160" align="center"><img src="artwork/github-apps/codeedit.svg" width="30" height="30" alt=""><br><strong>Code Edit</strong><br>Open and edit source files right on your phone.</td>
     <td></td>
   </tr>
   <tr><th colspan="3" align="left">Files &amp; privacy</th></tr>
   <tr>
-    <td width="160" align="center"><img src="artwork/github-apps/files.svg" width="30" height="30" alt=""><br>Files</td>
-    <td width="160" align="center"><img src="artwork/github-apps/cloudfiles.svg" width="30" height="30" alt=""><br>Cloud Files</td>
-    <td width="160" align="center"><img src="artwork/github-apps/docuview.svg" width="30" height="30" alt=""><br>Docu View</td>
+    <td width="160" align="center"><img src="artwork/github-apps/files.svg" width="30" height="30" alt=""><br><strong>Files</strong><br>Organize and move files between OnKlav and Android storage.</td>
+    <td width="160" align="center"><img src="artwork/github-apps/cloudfiles.svg" width="30" height="30" alt=""><br><strong>Cloud Files</strong><br>Browse files in supported cloud storage accounts.</td>
+    <td width="160" align="center"><img src="artwork/github-apps/docuview.svg" width="30" height="30" alt=""><br><strong>Docu View</strong><br>Open PDFs and other supported documents for reading.</td>
   </tr>
   <tr>
-    <td width="160" align="center"><img src="artwork/github-apps/compress.svg" width="30" height="30" alt=""><br>Compress</td>
-    <td width="160" align="center"><img src="artwork/github-apps/formatswap.svg" width="30" height="30" alt=""><br>Format Swap</td>
-    <td width="160" align="center"><img src="artwork/github-apps/vault.svg" width="30" height="30" alt=""><br>Vault</td>
+    <td width="160" align="center"><img src="artwork/github-apps/compress.svg" width="30" height="30" alt=""><br><strong>Compress</strong><br>Shrink media files or bundle a folder into a ZIP.</td>
+    <td width="160" align="center"><img src="artwork/github-apps/formatswap.svg" width="30" height="30" alt=""><br><strong>Format Swap</strong><br>Convert supported files on your phone.</td>
+    <td width="160" align="center"><img src="artwork/github-apps/vault.svg" width="30" height="30" alt=""><br><strong>Vault</strong><br>Keep private notes in a password-protected, encrypted vault.</td>
   </tr>
   <tr>
-    <td width="160" align="center"><img src="artwork/github-apps/authentic.svg" width="30" height="30" alt=""><br>Authentic</td>
+    <td width="160" align="center"><img src="artwork/github-apps/authentic.svg" width="30" height="30" alt=""><br><strong>Authentic</strong><br>Generate two-factor sign-in codes offline.</td>
     <td></td>
     <td></td>
   </tr>
   <tr><th colspan="3" align="left">Everyday tools</th></tr>
   <tr>
-    <td width="160" align="center"><img src="artwork/github-apps/calendar.svg" width="30" height="30" alt=""><br>Calendar</td>
-    <td width="160" align="center"><img src="artwork/github-apps/clock.svg" width="30" height="30" alt=""><br>Clock</td>
-    <td width="160" align="center"><img src="artwork/github-apps/maps.svg" width="30" height="30" alt=""><br>Maps</td>
+    <td width="160" align="center"><img src="artwork/github-apps/calendar.svg" width="30" height="30" alt=""><br><strong>Calendar</strong><br>Plan your week and set reminders without an account.</td>
+    <td width="160" align="center"><img src="artwork/github-apps/clock.svg" width="30" height="30" alt=""><br><strong>Clock</strong><br>Set alarms, start timers, or use the stopwatch.</td>
+    <td width="160" align="center"><img src="artwork/github-apps/maps.svg" width="30" height="30" alt=""><br><strong>Maps</strong><br>Find places nearby and look up routes.</td>
   </tr>
   <tr>
-    <td width="160" align="center"><img src="artwork/github-apps/weather.svg" width="30" height="30" alt=""><br>Weather</td>
-    <td width="160" align="center"><img src="artwork/github-apps/calc.svg" width="30" height="30" alt=""><br>Calc</td>
-    <td width="160" align="center"><img src="artwork/github-apps/convert.svg" width="30" height="30" alt=""><br>Convert</td>
+    <td width="160" align="center"><img src="artwork/github-apps/weather.svg" width="30" height="30" alt=""><br><strong>Weather</strong><br>Check the forecast at home or where you're headed.</td>
+    <td width="160" align="center"><img src="artwork/github-apps/calc.svg" width="30" height="30" alt=""><br><strong>Calc</strong><br>Work out quick sums and everyday calculations.</td>
+    <td width="160" align="center"><img src="artwork/github-apps/convert.svg" width="30" height="30" alt=""><br><strong>Convert</strong><br>Switch between common units of measurement.</td>
   </tr>
   <tr>
-    <td width="160" align="center"><img src="artwork/github-apps/flashlight.svg" width="30" height="30" alt=""><br>Flashlight</td>
-    <td width="160" align="center"><img src="artwork/github-apps/power.svg" width="30" height="30" alt=""><br>Power</td>
+    <td width="160" align="center"><img src="artwork/github-apps/flashlight.svg" width="30" height="30" alt=""><br><strong>Flashlight</strong><br>Light up a dark room with your phone.</td>
+    <td width="160" align="center"><img src="artwork/github-apps/power.svg" width="30" height="30" alt=""><br><strong>Power</strong><br>Open Android's restart and power-off menu.</td>
     <td></td>
   </tr>
   <tr><th colspan="3" align="left">System</th></tr>
   <tr>
-    <td width="160" align="center"><img src="artwork/github-apps/settings.svg" width="30" height="30" alt=""><br>Settings</td>
-    <td width="160" align="center"><img src="artwork/github-apps/games.svg" width="30" height="30" alt=""><br>Games</td>
+    <td width="160" align="center"><img src="artwork/github-apps/settings.svg" width="30" height="30" alt=""><br><strong>Settings</strong><br>Customize themes, app visibility, and OnKlav preferences.</td>
+    <td width="160" align="center"><img src="artwork/github-apps/games.svg" width="30" height="30" alt=""><br><strong>Games</strong><br>Play included games offline or challenge a friend in supported titles.</td>
     <td></td>
   </tr>
 </table>
