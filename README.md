@@ -16,7 +16,7 @@ One signed APK includes **8 games and 39 built-in apps and tools**. This
 **0.101.49-rc1** prerelease supports ARM64 devices running Android 10 or newer.
 Download the APK, open it on Android, and follow the installation prompt.
 
-[See OnKlav in action](#see-onklav) · [Included games](#included-games) · [Included apps](#included-apps)
+[See OnKlav in action](#see-onklav) · [Themes](#themes) · [Included games](#included-games) · [Included apps](#included-apps)
 
 ## What to try first
 
@@ -49,20 +49,31 @@ and app interface screenshots are from development builds. Select an image to en
 
 | OnKlav desktop | Files | Video Edit |
 | :---: | :---: | :---: |
-| <a href="docs/evidence/desktop-folders/main-navigation.png"><img src="docs/evidence/desktop-folders/main-navigation.png" width="190" alt="Apps desktop with wallpaper and bottom navigation"></a> | <a href="docs/evidence/files-simplification/files-home.png"><img src="docs/evidence/files-simplification/files-home.png" width="190" alt="Files home with OnKlav and Android storage tabs"></a> | <a href="docs/evidence/video-footer-repair/portrait-video.png"><img src="docs/evidence/video-footer-repair/portrait-video.png" width="190" alt="Video Edit with a portrait preview, timeline, and tools"></a> |
+| <a href="docs/evidence/desktop-folders/main-navigation.png"><img src="docs/evidence/desktop-folders/main-navigation.png" width="190" alt="Apps desktop with wallpaper and bottom navigation"></a> | <a href="docs/evidence/files-simplification/files-home.png"><img src="docs/evidence/files-simplification/files-home.png" width="190" alt="Files home with OnKlav and Android storage tabs"></a> | <a href="artwork/github-previews/video-edit-coast.webp"><img src="artwork/github-previews/video-edit-coast.webp" width="190" alt="Video Edit overlay workspace with a vertical coastal sunset clip"></a> |
+
+*The Video Edit image pairs the app’s actual editor controls with an illustrated sample clip.*
+
+## Themes
+
+Choose a built-in look under **Settings → Appearance**. These previews show
+the wallpapers included with each preset.
+
+| Starry Nights | Neon Synthwave | The Great Wave | Water Lilies |
+| :---: | :---: | :---: | :---: |
+| <a href="android/shared/src/main/assets/backgrounds/starry.webp"><img src="android/shared/src/main/assets/backgrounds/starry.webp" width="155" alt="Starry Nights, a Van Gogh-inspired night sky"></a> | <a href="android/shared/src/main/assets/backgrounds/synthwave.webp"><img src="android/shared/src/main/assets/backgrounds/synthwave.webp" width="155" alt="Neon Synthwave, a retro neon landscape"></a> | <a href="android/shared/src/main/assets/backgrounds/greatwave.webp"><img src="android/shared/src/main/assets/backgrounds/greatwave.webp" width="155" alt="The Great Wave, a stylized ocean wave"></a> | <a href="android/shared/src/main/assets/backgrounds/waterlilies.webp"><img src="android/shared/src/main/assets/backgrounds/waterlilies.webp" width="155" alt="Water Lilies, a painterly pond"></a> |
 
 ## Included games
 
 | Game | How to play |
-| --- | --- |
-| <img src="android/app/src/main/assets/catalog/last-light.webp" width="64" height="64" alt=""> **Last Light Express** | **Solo.** Ten levels · fight across a moving train and face the Iron Warden. |
-| <img src="android/app/src/main/assets/catalog/panda.webp" width="64" height="64" alt=""> **Crash Test Panda** | **Solo.** Solo demolition: twelve courses, explosive chains and a shot-for-shot panda rivalry. |
-| <img src="android/app/src/main/assets/catalog/shroom.webp" width="64" height="64" alt=""> **Shroom** | **Solo.** Fight through five spore-infested sectors and take down the Cap King. |
-| <img src="android/app/src/main/assets/catalog/hockey.webp" width="64" height="64" alt=""> **Air Hockey** | **Solo.** Solo Air Hockey · ten goals · redesigned arcade table. |
-| <img src="android/app/src/main/assets/catalog/naval.webp" width="64" height="64" alt=""> **Naval Battle** | **Solo or SMS friend match.** Outsmart your opponent and destroy their ships. |
-| <img src="android/app/src/main/assets/catalog/dominos.webp" width="64" height="64" alt=""> **Neon Dominos** | **Solo.** Earn pips by playing tiles, then subtract the pips you still hold. Highest total after three rounds wins. |
-| <img src="android/app/src/main/assets/catalog/pets.webp" width="64" height="64" alt=""> **Cats vs Dogs** | **Solo or SMS friend match.** Classic four in a row with a playful twist. |
-| <img src="android/app/src/main/assets/catalog/blackjack.webp" width="64" height="64" alt=""> **Blackjack** | **Solo or SMS friend match.** Test your luck and skill in a blackjack tournament. |
+| :---: | --- |
+| <img src="android/app/src/main/assets/catalog/last-light.webp" width="64" height="64" alt=""><br>**Last&nbsp;Light&nbsp;Express** | **Solo.** Ten levels · fight across a moving train and face the Iron Warden. |
+| <img src="android/app/src/main/assets/catalog/panda.webp" width="64" height="64" alt=""><br>**Crash&nbsp;Test&nbsp;Panda** | **Solo.** Solo demolition: twelve courses, explosive chains and a shot-for-shot panda rivalry. |
+| <img src="android/app/src/main/assets/catalog/shroom.webp" width="64" height="64" alt=""><br>**Shroom** | **Solo.** Fight through five spore-infested sectors and take down the Cap King. |
+| <img src="android/app/src/main/assets/catalog/hockey.webp" width="64" height="64" alt=""><br>**Air&nbsp;Hockey** | **Solo.** Solo Air Hockey · ten goals · redesigned arcade table. |
+| <img src="android/app/src/main/assets/catalog/naval.webp" width="64" height="64" alt=""><br>**Naval&nbsp;Battle** | **Solo or SMS friend match.** Outsmart your opponent and destroy their ships. |
+| <img src="android/app/src/main/assets/catalog/dominos.webp" width="64" height="64" alt=""><br>**Neon&nbsp;Dominos** | **Solo.** Earn pips by playing tiles, then subtract the pips you still hold. Highest total after three rounds wins. |
+| <img src="android/app/src/main/assets/catalog/pets.webp" width="64" height="64" alt=""><br>**Cats&nbsp;vs&nbsp;Dogs** | **Solo or SMS friend match.** Classic four in a row with a playful twist. |
+| <img src="android/app/src/main/assets/catalog/blackjack.webp" width="64" height="64" alt=""><br>**Blackjack** | **Solo or SMS friend match.** Test your luck and skill in a blackjack tournament. |
 
 ## Included apps
 
@@ -115,7 +126,10 @@ Start with [START-HERE.md](START-HERE.md), [current tasks](TODO.md), or the
 
 ## Speech
 
-One English-only Kitten Nano v0.8 FP32 model with exactly two selected voice rows and host native engine serve Messages, readers and SDK apps. The choices are Male (speaker2, default) and Female (speaker0), using the owner-requested labels; both upstream speakers are male. No Kokoro bank, system TTS setup, per-app model or cloud synthesis is required. See [shared speech](docs/NEURAL-SPEECH.md).
+OnKlav includes two English text-to-speech choices for Messages, readers, and
+SDK apps. Choose **Male (Bruno)**, the default, or **Female (Maya)**. Maya is an
+OnKlav nickname for the existing Female option. The two bundled Kitten Nano
+voices are classified as male upstream. See [shared speech](docs/NEURAL-SPEECH.md).
 
 ## Build
 
