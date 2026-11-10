@@ -42,8 +42,8 @@ Android from one optimized, signed APK.
   them again in **Starred**, your conversation favorites tab.
 - **Give messages a voice and a reaction.** Use built-in text-to-speech to listen
   to individual messages, and reply with animated emoji reactions.
-- **Share with your circle.** [Real Social](docs/REAL-SOCIAL.md) lets you share
-  posts, replies, and media directly with accepted friends over SMS and MMS.
+- **Replace Toxic Social Media with** [Real Social](docs/REAL-SOCIAL.md). Share posts, replies,
+  and media directly with accepted friends over SMS and MMS. No Big Tech, Fake Friends, Spam, Ads or Weirdos
 
 ## Install and set up
 
