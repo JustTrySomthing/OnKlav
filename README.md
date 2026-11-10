@@ -66,28 +66,18 @@ Android from one optimized, signed APK.
 
 ## See OnKlav
 
-### Games in action
+### App previews
 
-| Shroom | Last Light Express |
+| Files | Video Edit |
 | :---: | :---: |
-| <a href="artwork/github-gameplay/shroom.webp"><img src="artwork/github-gameplay/shroom.webp" width="390" alt="Shroom gameplay with reduced-size touch controls and glowing shots in the breach"></a> | <a href="artwork/github-gameplay/last-light-express.webp"><img src="artwork/github-gameplay/last-light-express.webp" width="390" alt="Lantern courier jumping between moving train cars in Last Light Express"></a> |
-| Take on the outbreak one sector at a time. | Carry the last lantern across a moving train. |
+| <a href="docs/evidence/files-simplification/files-home.png"><img src="docs/evidence/files-simplification/files-home.png" width="190" alt="Files home with OnKlav and Android storage tabs"></a> | <a href="artwork/github-previews/video-edit-coast.webp"><img src="artwork/github-previews/video-edit-coast.webp" width="190" alt="Video Edit overlay workspace with a vertical coastal sunset clip"></a> |
 
-| Crash Test Panda | Radio with Mandala |
-| :---: | :---: |
-| <a href="artwork/github-gameplay/crash-test-panda.webp"><img src="artwork/github-gameplay/crash-test-panda.webp" width="320" alt="Crash Test Panda mid-demolition as a tower breaks apart and the score climbs"></a> | <a href="docs/evidence/radio-geometry-polish/visualizer-landscape-3.png"><img src="docs/evidence/radio-geometry-polish/visualizer-landscape-3.png" width="410" alt="Radio player with the blue Mandala visualizer, playback controls, and intensity slider"></a> |
-| Launch a panda and bring down the tower. | Tune in and watch the patterns move with the music. |
+**Radio with Mandala**
 
-*Gameplay captured from the shipped game exports in a browser. The Radio
-and app interface screenshots are from development builds. Select an image to enlarge it.*
+<a href="docs/evidence/radio-geometry-polish/visualizer-landscape-3.png"><img src="docs/evidence/radio-geometry-polish/visualizer-landscape-3.png" width="610" alt="Radio player with the blue Mandala visualizer, playback controls, and intensity slider"></a>
 
-### The desktop and everyday tools
-
-| OnKlav desktop | Files | Video Edit |
-| :---: | :---: | :---: |
-| <a href="docs/evidence/desktop-folders/main-navigation.png"><img src="docs/evidence/desktop-folders/main-navigation.png" width="190" alt="Apps desktop with wallpaper and bottom navigation"></a> | <a href="docs/evidence/files-simplification/files-home.png"><img src="docs/evidence/files-simplification/files-home.png" width="190" alt="Files home with OnKlav and Android storage tabs"></a> | <a href="artwork/github-previews/video-edit-coast.webp"><img src="artwork/github-previews/video-edit-coast.webp" width="190" alt="Video Edit overlay workspace with a vertical coastal sunset clip"></a> |
-
-*The Video Edit image pairs the app’s actual editor controls with an illustrated sample clip.*
+*Files and Radio are development-build captures. The Video Edit preview pairs
+the app’s actual editor controls with an illustrated sample clip.*
 
 ## Themes
 
@@ -104,14 +94,16 @@ You can also save and share your own [theme packages](docs/THEME-PACKAGES.md).
 
 | Game | How to play |
 | :---: | --- |
-| <img src="android/app/src/main/assets/catalog/last-light.webp" width="64" height="64" alt=""><br>**Last&nbsp;Light&nbsp;Express** | **Solo.** Ten levels · fight across a moving train and face the Iron Warden. |
-| <img src="android/app/src/main/assets/catalog/panda.webp" width="64" height="64" alt=""><br>**Crash&nbsp;Test&nbsp;Panda** | **Solo.** Solo demolition: twelve courses, explosive chains and a shot-for-shot panda rivalry. |
-| <img src="android/app/src/main/assets/catalog/shroom.webp" width="64" height="64" alt=""><br>**Shroom** | **Solo.** Fight through five spore-infested sectors and take down the Cap King. |
+| <img src="android/app/src/main/assets/catalog/last-light.webp" width="64" height="64" alt=""><br>**Last&nbsp;Light&nbsp;Express** | **Solo.** Ten levels · fight across a moving train and face the Iron Warden. [See gameplay](artwork/github-gameplay/last-light-express.webp) |
+| <img src="android/app/src/main/assets/catalog/panda.webp" width="64" height="64" alt=""><br>**Crash&nbsp;Test&nbsp;Panda** | **Solo.** Solo demolition: twelve courses, explosive chains and a shot-for-shot panda rivalry. [See gameplay](artwork/github-gameplay/crash-test-panda.webp) |
+| <img src="android/app/src/main/assets/catalog/shroom.webp" width="64" height="64" alt=""><br>**Shroom** | **Solo.** Fight through five spore-infested sectors and take down the Cap King. [See gameplay](artwork/github-gameplay/shroom.webp) |
 | <img src="android/app/src/main/assets/catalog/hockey.webp" width="64" height="64" alt=""><br>**Air&nbsp;Hockey** | **Solo.** Solo Air Hockey · ten goals · redesigned arcade table. |
 | <img src="android/app/src/main/assets/catalog/naval.webp" width="64" height="64" alt=""><br>**Naval&nbsp;Battle** | **Solo or SMS friend match.** Outsmart your opponent and destroy their ships. |
 | <img src="android/app/src/main/assets/catalog/dominos.webp" width="64" height="64" alt=""><br>**Neon&nbsp;Dominos** | **Solo.** Earn pips by playing tiles, then subtract the pips you still hold. Highest total after three rounds wins. |
 | <img src="android/app/src/main/assets/catalog/pets.webp" width="64" height="64" alt=""><br>**Cats&nbsp;vs&nbsp;Dogs** | **Solo or SMS friend match.** Classic four in a row with a playful twist. |
 | <img src="android/app/src/main/assets/catalog/blackjack.webp" width="64" height="64" alt=""><br>**Blackjack** | **Solo or SMS friend match.** Test your luck and skill in a blackjack tournament. |
+
+*Gameplay images were captured from the shipped game exports in a browser.*
 
 ## Included apps
 
