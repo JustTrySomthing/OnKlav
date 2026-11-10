@@ -2,13 +2,46 @@
 
 **A Virtual Operating System and Game Console for Android**
 
-OnKlav runs inside Android and gives you a customizable desktop, built-in
-apps and games, and SDKs for building your own.
-One APK contains the Kotlin/Compose host, shared Rust services, signed
-internal apps and the shared Godot Web game engine. This repository
-contains the source for OnKlav 0.101.49-rc1 and the App and Game SDKs.
+*Pronounced “Enclave,” a protected, self-contained territory.*
 
-Start with [START-HERE.md](START-HERE.md), [current tasks](TODO.md) and [engineering instructions](AGENTS.md). The [developer toolkit](developer/README.md) and [SDK guide](sdk/README.md) describe the shared app APIs.
+OnKlav is a free, open-source project that runs inside Android. It gives you a
+customizable desktop, built-in apps and games, and two SDKs for building your own.
+Its design priorities are user control, direct communication, and a lightweight
+environment that keeps apps and games together.
+
+[Download OnKlav for Android](https://github.com/JustTrySomthing/OnKlav/releases/tag/v0.101.49-rc1)
+from the release page. The signed prerelease APK supports ARM64 devices running
+Android 10 or newer. The App SDK and Game SDK are available on the same page.
+
+## What you can do
+
+- **Make it yours.** Arrange your desktop, change colors, fonts, and backgrounds,
+  and save or share [theme packages](docs/THEME-PACKAGES.md).
+- **Run apps and games inside OnKlav.** Install signed `.onklav-a` apps and
+  `.onklav-g` games in a single Android app. OnKlav runs them in sandboxed
+  environments and mediates access to supported device capabilities.
+- **Play offline.** Play bundled single-player games such as Shroom, Last Light
+  Express, Crash Test Panda, and Air Hockey without an internet connection.
+- **Play a friend by text.** Supported games such as Naval Battle, Cats vs Dogs,
+  and Blackjack use [SMS for one-on-one turns](developer/games/SMS-TURNS.md)
+  without a game server or an internet connection. Both players need compatible
+  OnKlav installs, default messaging setup, and working cellular SMS service.
+  Carrier charges may apply.
+- **Stay in touch.** Use built-in Messages and Groups for SMS and MMS.
+  [Real Social](docs/REAL-SOCIAL.md) shares posts and replies directly with
+  accepted friends over SMS, and uses MMS for media attachments.
+- **Build and share your own.** Use the [App SDK](developer/README.md)
+  for apps and utilities, and the [Game SDK](developer/games/README.md)
+  for games. Developers can share signed packages for users to install.
+
+## How it fits together
+
+One APK contains the Kotlin/Compose host, shared Rust services, signed
+internal apps, and the shared Godot Web game engine. The repository contains
+the source for OnKlav 0.101.49-rc1 and both SDKs.
+
+Start with [START-HERE.md](START-HERE.md), [current tasks](TODO.md), or the
+[SDK guide](sdk/README.md).
 
 ## Speech
 
