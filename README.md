@@ -79,6 +79,18 @@ Android from one optimized, signed APK.
 *Files and Radio are development-build captures. The Video Edit preview pairs
 the app’s actual editor controls with an illustrated sample clip.*
 
+#### Three apps worth opening first
+
+| RSS Reader | Weather | Calendar |
+| :---: | :---: | :---: |
+| <a href="artwork/github-previews/rss-reader.svg"><img src="artwork/github-previews/rss-reader.svg" width="205" alt="Illustrated RSS Reader with unread articles and bookmarks"></a> | <a href="artwork/github-previews/weather.svg"><img src="artwork/github-previews/weather.svg" width="205" alt="Illustrated Weather preview with a sample Portland forecast"></a> | <a href="docs/evidence/calendar/week.png"><img src="docs/evidence/calendar/week.png" width="150" alt="Calendar week view in OnKlav"></a> |
+
+- **RSS Reader.** Follow the blogs, newsrooms, and independent writers you choose. Filter for unread posts, bookmark a good read, or catch up on cached entries offline. The content available in each entry depends on what the publisher includes in its RSS or Atom feed.
+- **Weather.** Check your hometown before heading out, then look up a destination by city or U.S. ZIP code. Your saved home location stays put while you check other places.
+- **Calendar.** See your day in a timeline, scan the week for gaps, or zoom out to the month. Use recurring events and reminders for the things you do every week. Your calendar works offline and needs no account.
+
+*RSS Reader and Weather are illustrations with sample content. Calendar is a development-build capture.*
+
 ## Themes
 
 Choose a built-in look under **Settings → Appearance**. The same conversation

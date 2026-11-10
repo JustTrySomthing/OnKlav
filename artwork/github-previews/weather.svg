@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="360" height="450" viewBox="0 0 360 450" role="img" aria-labelledby="title">
+  <title id="title">Illustrated Weather preview for a sample Portland forecast</title>
+  <defs>
+    <linearGradient id="sky" x2="0" y2="1">
+      <stop stop-color="#254877"/><stop offset="1" stop-color="#121d39"/>
+    </linearGradient>
+  </defs>
+  <rect width="360" height="450" rx="26" fill="url(#sky)"/>
+  <g font-family="system-ui, sans-serif">
+    <text x="28" y="68" fill="#fff" font-size="29" font-weight="700">Weather</text>
+    <text x="28" y="105" fill="#d8e9ff" font-size="17">Portland, Oregon</text>
+    <circle cx="266" cy="161" r="28" fill="#ffd484"/>
+    <path d="M235 205a19 19 0 1 1 2-38 26 26 0 0 1 47 8 15 15 0 1 1 7 30Z" fill="#e0efff"/>
+    <text x="26" y="199" fill="#fff" font-size="74" font-weight="600">62°</text>
+    <text x="30" y="231" fill="#d8e9ff" font-size="17">Partly cloudy</text>
+    <rect x="28" y="256" width="304" height="136" rx="14" fill="#192b4b" stroke="#6486ae"/>
+    <text x="45" y="286" fill="#fff" font-size="17" font-weight="700">Later today</text>
+    <g text-anchor="middle" fill="#c9def6" font-size="14">
+      <text x="80" y="320">Noon</text><text x="180" y="320">3 PM</text><text x="280" y="320">6 PM</text>
+    </g>
+    <g text-anchor="middle" fill="#fff" font-size="25" font-weight="600">
+      <text x="80" y="357">64°</text><text x="180" y="357">67°</text><text x="280" y="357">61°</text>
+    </g>
+    <text x="28" y="423" fill="#c9def6" font-size="13">Illustration · Sample forecast in °F</text>
+  </g>
+</svg>
