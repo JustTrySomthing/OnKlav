@@ -490,7 +490,7 @@
     "OnKlav/android/app/src/test/kotlin/app/onklav/home/CodeEditFilesTest.kt": "c45e608972544f494ce52b3b40c078b96439593baed3306016b2bbecd8825ecb",
     "OnKlav/android/app/src/test/kotlin/app/onklav/home/CodeEditUiTest.kt": "5cae943d7a70296c4f4e31ca8debab095eb8c79241ca2015e9844cf5c89fe9e6",
     "OnKlav/android/app/src/test/kotlin/app/onklav/home/CompressTest.kt": "3915c69d409d3fbd2496ce37792ce6e657dbabf833294890846694f275e7590f",
-    "OnKlav/android/app/src/test/kotlin/app/onklav/home/DesktopFoldersTest.kt": "e4e4649c2b2d9f207c7e88ebf977889ed15d561d1b0a473cf5ccbd68f650ef95",
+    "OnKlav/android/app/src/test/kotlin/app/onklav/home/DesktopFoldersTest.kt": "f49b690ea261f003f270c7f0ab6b24c05297352353c80c64ae9ae12a7060c2db",
     "OnKlav/android/app/src/test/kotlin/app/onklav/home/DesktopFoldersUiTest.kt": "646fb074cb4aa1b83b96ad314b25ec29edc1e473fbfdf1057e630a8d33f483a1",
     "OnKlav/android/app/src/test/kotlin/app/onklav/home/DevicePolishTest.kt": "0a9f7cee1957997d9542a9be0784c85b50bf547d3d7d58ff0b6661aa02d23026",
     "OnKlav/android/app/src/test/kotlin/app/onklav/home/DialPadContrastTest.kt": "365b40ba18a53d431f06bf4b6c6dd3606d3cb9f6462abb8d58b6361b256d4d82",
