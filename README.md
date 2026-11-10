@@ -30,6 +30,19 @@ Download the APK, open it on Android, and follow the installation prompt.
 
 [See OnKlav in action](#see-onklav) · [Themes](#themes) · [Included games](#included-games) · [Included apps](#included-apps) · [Make, share, and install](#make-share-and-install)
 
+## Keep your favorite people one tap away
+
+| A family conversation | Start a message |
+| :---: | :---: |
+| <img src="artwork/github-previews/messaging-example.svg" width="450" alt="Illustrated family group chat about a Saturday picnic"> | <img src="docs/evidence/phone-chrome-keypad/message-keypad.png" width="150" alt="OnKlav number keypad for starting a text message"> |
+
+*The family chat is an illustration with sample messages. The number keypad is a development-build screenshot.*
+
+On first launch, follow OnKlav’s setup checklist. To use Messages for SMS and MMS,
+choose OnKlav as the default messaging app when Android asks and review the
+requested permissions. Then open Messages or Groups and start a conversation.
+Setup can be finished later from Settings.
+
 ## What to try first
 
 - **Start with your favorite people.** Open Messages or Groups to text your
@@ -169,6 +182,14 @@ python3 scripts/check_android.py --tests-only --test app.onklav.home.NeuralSpeec
 Phone/carrier/Bluetooth/endurance and public distribution qualification remain separate from host tests and APK verification. Active backup/document adoption and Notes recovery protect existing user data. Historical milestones are retained in docs/history/pre-0.100.24. Keep third-party licenses/corresponding source and signing identities.
 
 See [size and responsiveness](docs/SIZE-AND-RESPONSIVENESS.md) for measured package changes, preserved features and device-validation limits.
+
+## Help improve OnKlav
+
+Try the prerelease and [report a bug](https://github.com/JustTrySomthing/OnKlav/issues/new/choose),
+improve a guide or share a theme, or contribute code. The
+[contributor guide](CONTRIBUTING.md) explains setup, tests, and pull requests.
+Browse [good first issues](https://github.com/JustTrySomthing/OnKlav/labels/good%20first%20issue)
+if you’d like a small place to start.
 
 ## License
 

@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 620 310" role="img" aria-labelledby="title">
+  <title id="title">Illustration of a family group conversation in OnKlav</title>
+  <rect width="620" height="310" rx="22" fill="#19191f"/>
+  <rect x="12" y="12" width="596" height="56" rx="14" fill="#292831"/>
+  <g font-family="system-ui, sans-serif">
+    <text x="32" y="48" font-size="22" fill="#d3b8ff">‹</text>
+    <text x="63" y="47" font-size="20" font-weight="650" fill="#f6f2ff">Family group</text>
+    <text x="480" y="46" font-size="14" fill="#d3b8ff">ONKLAV GROUPS</text>
+    <text x="30" y="94" font-size="15" fill="#d3b8ff">Sam</text>
+    <rect x="26" y="102" width="335" height="40" rx="13" fill="#30303c"/>
+    <text x="42" y="128" font-size="17" fill="#f6f2ff">Saturday picnic at the lake?</text>
+    <rect x="219" y="153" width="375" height="40" rx="13" fill="#604687"/>
+    <text x="235" y="179" font-size="17" fill="#fff">I’m in! I’ll bring sandwiches.</text>
+    <text x="30" y="215" font-size="15" fill="#d3b8ff">Alex</text>
+    <rect x="26" y="223" width="370" height="40" rx="13" fill="#30303c"/>
+    <text x="42" y="249" font-size="17" fill="#f6f2ff">Perfect. I’ll share the photos here.</text>
+    <rect x="26" y="274" width="568" height="24" rx="12" fill="#292831"/>
+    <text x="42" y="291" font-size="13" fill="#c6bfd2">Write a message</text>
+  </g>
+</svg>

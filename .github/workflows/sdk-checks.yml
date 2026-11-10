@@ -1,0 +1,43 @@
+name: SDK checks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  app-sdk:
+    name: App SDK
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    env:
+      RUSTUP_TOOLCHAIN: '1.90.0'
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Install Rust and WebAssembly target
+        run: rustup toolchain install 1.90.0 --profile minimal --target wasm32-unknown-unknown
+      - name: Verify distribution packaging
+        run: python3 -m unittest discover -s developer/tests -p test_distribution.py -v
+      - name: Build and run a starter app
+        run: python3 developer/ci_smoke.py
+
+  game-sdk:
+    name: Game SDK
+    runs-on: ubuntu-24.04
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+        with:
+          persist-credentials: false
+      - name: Install Game SDK dependencies
+        run: |
+          python3 -m venv .sdk-venv
+          .sdk-venv/bin/python -m pip install -r developer/games/requirements.txt
+      - name: Run Game SDK tooling tests
+        run: .sdk-venv/bin/python -m unittest discover -s developer/games/tests -v

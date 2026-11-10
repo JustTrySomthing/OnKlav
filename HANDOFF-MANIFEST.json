@@ -7,7 +7,7 @@
   "files_sha256": {
     "OnKlav/.gitignore": "267f4bbb0b4f80061293679ff5996c70ecc76295f8d99a206a87f6a4347d926c",
     "OnKlav/AGENTS.md": "ba9831a7ebfd69b19d888da45c9224de983c7e7f84b7573722967c2281cb5fb8",
-    "OnKlav/README.md": "91fca27c5fdc48eac1610150aeaa186a2727e12f37e1ca6deede10545f4ff1c6",
+    "OnKlav/README.md": "f13849a546160e65edbbfe5746f4208d2b29c443435122dd1c7af26efa4d7efb",
     "OnKlav/START-HERE.md": "bdb5f39135fdc1f7373ee72a4a139bd61b36662291bb5a055c957e11bf285606",
     "OnKlav/TODO.md": "a328d022e662e70403f61bc238343315210e379041d915e7711720ebf8e354a5",
     "OnKlav/android/app/build.gradle.kts": "4f827e3c16cf6b0107fe8a43c096679a92d00fc1a65f105cff8588ba89941568",
@@ -8539,6 +8539,12 @@
     "OnKlav/artwork/github-gameplay/crash-test-panda.webp": "664c536af6f8cb1ca6c66a5b3980242c966d0b501f7ef17978cbd366877944bf",
     "OnKlav/artwork/github-gameplay/last-light-express.webp": "7c793ed8c79cb26ec015cb3e6740b79659d625b927ff72faac605ea12b2e8935",
     "OnKlav/artwork/github-gameplay/shroom.webp": "b9d6cff0bd9073ee7641e7ac43a21b9bbda4102c353959c96c4f4546e0a50517",
-    "OnKlav/artwork/github-previews/video-edit-coast.webp": "fa62c6fe1a7421fa4644c06b9efaf872500556a5fb4d1b2411b0803bf81dfbaf"
+    "OnKlav/artwork/github-previews/video-edit-coast.webp": "fa62c6fe1a7421fa4644c06b9efaf872500556a5fb4d1b2411b0803bf81dfbaf",
+    "OnKlav/CONTRIBUTING.md": "45402e3628e5fdb07632d4266c531451c9e168b44b2daeefa400a5136ba1e12b",
+    "OnKlav/artwork/github-previews/messaging-example.svg": "6ea38e8bec4d3bf499d77a7296eb6399008b647c8c2db8da735aa4ee59e7ec79",
+    "OnKlav/.github/ISSUE_TEMPLATE/bug-report.md": "f0a557d17cb5145ed7ec72089ca980726e4d7dda6eb399cbaca7a0f1a77018a9",
+    "OnKlav/.github/ISSUE_TEMPLATE/feature-request.md": "d3925679c37c2e38c69ddac1841b47bbab688fd5afedef2fb0f2f3be6b3bb4b8",
+    "OnKlav/.github/pull_request_template.md": "3a99a8aaa5030d73e1f53a64240a87583ed25309bea80ad4084f864574e6bba3",
+    "OnKlav/.github/workflows/sdk-checks.yml": "8e30986b75877b8ca03ed00b1a712a5d286530c67a94070526261a614ceae2be"
   }
 }
