@@ -26,7 +26,7 @@ Android from one optimized, signed APK.
 
 <a href="#see-onklav"><img src="artwork/github-previews/onklav-overview.webp" width="960" alt="OnKlav desktop alongside gameplay from Last Light Express and Crash Test Panda. The app includes 39 built-in apps and tools and eight bundled games."></a>
 
-## Keep your favorite people one tap away
+## Stay in Touch and Spend more time with the People that matter most
 
 | A family conversation | Open the magic wand |
 | :---: | :---: |
@@ -71,25 +71,20 @@ Android from one optimized, signed APK.
 | Files | Video Edit |
 | :---: | :---: |
 | <a href="docs/evidence/files-simplification/files-home.png"><img src="docs/evidence/files-simplification/files-home.png" width="190" alt="Files home with OnKlav and Android storage tabs"></a> | <a href="artwork/github-previews/video-edit-coast.webp"><img src="artwork/github-previews/video-edit-coast.webp" width="190" alt="Video Edit overlay workspace with a vertical coastal sunset clip"></a> |
+| Manage files across OnKlav and Android storage. | Trim and arrange clips in a touch-friendly editor. |
 
 **Radio with Mandala**
 
 <a href="docs/evidence/radio-geometry-polish/visualizer-landscape-3.png"><img src="docs/evidence/radio-geometry-polish/visualizer-landscape-3.png" width="610" alt="Radio player with the blue Mandala visualizer, playback controls, and intensity slider"></a>
 
-*Files and Radio are development-build captures. The Video Edit preview pairs
-the app’s actual editor controls with an illustrated sample clip.*
-
-#### Three apps worth opening first
+Listen to live radio streams from around the world and transform them into hypnotic visualizations.
 
 | RSS Reader | Weather | Calendar |
 | :---: | :---: | :---: |
 | <a href="artwork/github-previews/rss-reader.svg"><img src="artwork/github-previews/rss-reader.svg" width="205" alt="Illustrated RSS Reader with unread articles and bookmarks"></a> | <a href="artwork/github-previews/weather.svg"><img src="artwork/github-previews/weather.svg" width="205" alt="Illustrated Weather preview with a sample Portland forecast"></a> | <a href="docs/evidence/calendar/week.png"><img src="docs/evidence/calendar/week.png" width="150" alt="Calendar week view in OnKlav"></a> |
+| Follow the blogs, newsrooms, and independent writers you choose. Filter for unread posts, bookmark a good read, or catch up on cached entries offline. The content available in each entry depends on what the publisher includes in its RSS or Atom feed. | Check your hometown before heading out, then look up a destination by city or U.S. ZIP code. Your saved home location stays put while you check other places. | See your day in a timeline, scan the week for gaps, or zoom out to the month. Use recurring events and reminders for the things you do every week. Your calendar works offline and needs no account. |
 
-- **RSS Reader.** Follow the blogs, newsrooms, and independent writers you choose. Filter for unread posts, bookmark a good read, or catch up on cached entries offline. The content available in each entry depends on what the publisher includes in its RSS or Atom feed.
-- **Weather.** Check your hometown before heading out, then look up a destination by city or U.S. ZIP code. Your saved home location stays put while you check other places.
-- **Calendar.** See your day in a timeline, scan the week for gaps, or zoom out to the month. Use recurring events and reminders for the things you do every week. Your calendar works offline and needs no account.
-
-*RSS Reader and Weather are illustrations with sample content. Calendar is a development-build capture.*
+*Files, Radio, and Calendar are development-build captures. Video Edit shows the editor with an illustrated sample clip. RSS Reader and Weather are illustrations with sample content.*
 
 ## Themes
 
