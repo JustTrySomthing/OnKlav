@@ -7,26 +7,30 @@
 *Pronounced “Enclave,” a protected, self-contained territory.*
 
 Give your Android phone a desktop of its own. Organize your everyday tools in one
-place, turn a live radio stream into a moving mandala, or play a bundled game when
-you're offline. OnKlav runs inside Android and includes both App and Game SDKs.
+place, listen to live radio streams from around the world and transform them into
+hypnotic visualizations, or play a bundled game offline. OnKlav runs inside Android
+and includes both App and Game SDKs.
 
-**[Download OnKlav for Android](https://github.com/JustTrySomthing/OnKlav/releases/download/v0.101.49-rc1/OnKlav-0.101.49-RC.apk)** · [Release notes and SDK downloads](https://github.com/JustTrySomthing/OnKlav/releases/tag/v0.101.49-rc1)
+**[Download OnKlav for Android · 133 MB APK](https://github.com/JustTrySomthing/OnKlav/releases/download/v0.101.49-rc1/OnKlav-0.101.49-RC.apk)** · [Release notes and SDK downloads](https://github.com/JustTrySomthing/OnKlav/releases/tag/v0.101.49-rc1)
 
-One signed APK includes **8 games and 39 built-in apps and tools**. This
-**0.101.49-rc1** prerelease supports ARM64 devices running Android 10 or newer.
+Start with the essentials in one optimized, signed APK. Get **39 built-in apps
+and tools** for messaging, browsing, files, listening, and editing, plus **8 games**.
+They’re ready to open after installation.
+
+This **0.101.49-rc1** prerelease supports ARM64 devices running Android 10 or newer.
 Download the APK, open it on Android, and follow the installation prompt.
 
 [See OnKlav in action](#see-onklav) · [Themes](#themes) · [Included games](#included-games) · [Included apps](#included-apps) · [Make, share, and install](#make-share-and-install)
 
 ## What to try first
 
-- **Make the desktop yours.** Organize apps into folders and share
-  [theme packages](docs/THEME-PACKAGES.md) with your own colors and wallpaper.
-- **Put on the radio.** Open Radio and choose Mandala in the visualizer
-  to watch layered patterns move with the audio.
-- **Play on the go.** Try a solo game offline, or invite a friend to an
+- **Set up your own space.** Put your favorite apps within reach and give the
+  desktop a look you can save and share with [theme packages](docs/THEME-PACKAGES.md).
+- **Find your next free read or listen.** Browse free ebooks from Project
+  Gutenberg in eBooks, or find free audiobooks from LibriVox in AudioBooks.
+- **Take a game with you.** Play a solo game offline, or invite a friend to an
   [SMS turn-based match](developer/games/SMS-TURNS.md) in supported titles.
-  Friend matches require compatible OnKlav installs and cellular SMS service.
+  Both players need compatible OnKlav installs and cellular SMS service.
 
 ## See OnKlav
 
@@ -34,12 +38,12 @@ Download the APK, open it on Android, and follow the installation prompt.
 
 | Shroom | Last Light Express |
 | :---: | :---: |
-| <a href="artwork/github-gameplay/shroom.webp"><img src="artwork/github-gameplay/shroom.webp" width="390" alt="Shroom first-person gameplay with glowing projectiles in a spore-infested corridor"></a> | <a href="artwork/github-gameplay/last-light-express.webp"><img src="artwork/github-gameplay/last-light-express.webp" width="390" alt="Lantern courier jumping between moving train cars in Last Light Express"></a> |
+| <a href="artwork/github-gameplay/shroom.webp"><img src="artwork/github-gameplay/shroom.webp" width="390" alt="Shroom gameplay with reduced-size touch controls and glowing shots in the breach"></a> | <a href="artwork/github-gameplay/last-light-express.webp"><img src="artwork/github-gameplay/last-light-express.webp" width="390" alt="Lantern courier jumping between moving train cars in Last Light Express"></a> |
 | Take on the outbreak one sector at a time. | Carry the last lantern across a moving train. |
 
 | Crash Test Panda | Radio with Mandala |
 | :---: | :---: |
-| <a href="artwork/github-gameplay/crash-test-panda.webp"><img src="artwork/github-gameplay/crash-test-panda.webp" width="210" alt="Crash Test Panda mid-demolition as a tower breaks apart and the score climbs"></a> | <a href="docs/evidence/radio-geometry-polish/visualizer-landscape-3.png"><img src="docs/evidence/radio-geometry-polish/visualizer-landscape-3.png" width="470" alt="Radio player with the blue Mandala visualizer, playback controls, and intensity slider"></a> |
+| <a href="artwork/github-gameplay/crash-test-panda.webp"><img src="artwork/github-gameplay/crash-test-panda.webp" width="320" alt="Crash Test Panda mid-demolition as a tower breaks apart and the score climbs"></a> | <a href="docs/evidence/radio-geometry-polish/visualizer-landscape-3.png"><img src="docs/evidence/radio-geometry-polish/visualizer-landscape-3.png" width="410" alt="Radio player with the blue Mandala visualizer, playback controls, and intensity slider"></a> |
 | Launch a panda and bring down the tower. | Tune in and watch the patterns move with the music. |
 
 *Gameplay captured from the shipped game exports in a browser. The Radio
