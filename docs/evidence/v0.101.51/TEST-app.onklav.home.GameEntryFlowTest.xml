@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.GameEntryFlowTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-11-10T23:09:24" hostname="4e6a3c69280b" time="3.466">
+  <properties/>
+  <testcase name="resumeChoiceIsResolvedBeforeLoadingAndOnlyForSelectedGame" classname="app.onklav.home.GameEntryFlowTest" time="2.753"/>
+  <testcase name="explicitResumeBypassesSecondEntryDialog" classname="app.onklav.home.GameEntryFlowTest" time="0.209"/>
+  <testcase name="friendNewRetainsTheHostStorageProtocolWhenSwitchingToSolo" classname="app.onklav.home.GameEntryFlowTest" time="0.106"/>
+  <testcase name="hostRejectsLateSessionSaveAfterAcknowledgedDiscard" classname="app.onklav.home.GameEntryFlowTest" time="0.101"/>
+  <testcase name="noSaveShowsStartBeforeAnyWebViewAndCancelLoadsNothing" classname="app.onklav.home.GameEntryFlowTest" time="0.049"/>
+  <testcase name="retiredFriendIntentCannotSelectPandasFriendSaveSlot" classname="app.onklav.home.GameEntryFlowTest" time="0.044"/>
+  <testcase name="backFromEntryClosesToListWithoutAnySaveWarning" classname="app.onklav.home.GameEntryFlowTest" time="0.043"/>
+  <testcase name="completedGameHasNoResumePrompt" classname="app.onklav.home.GameEntryFlowTest" time="0.039"/>
+  <testcase name="gameWindowSupportsThePortraitAndLandscapeOrientationRequests" classname="app.onklav.home.GameEntryFlowTest" time="0.022"/>
+  <testcase name="newChoiceKeepsPreviousSaveUntilStartAndQuitTombstoneOffersOnlyStart" classname="app.onklav.home.GameEntryFlowTest" time="0.095"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Invalid ID 0x00000000.
+Invalid ID 0x00000000.
+Invalid ID 0x00000000.
+Invalid ID 0x00000000.
+Invalid ID 0x00000000.
+Invalid ID 0x00000000.
+Invalid ID 0x00000000.
+Invalid ID 0x00000000.
+Invalid ID 0x00000000.
+Invalid ID 0x00000000.
+Invalid ID 0x00000000.
+]]></system-err>
+</testsuite>

@@ -65,6 +65,26 @@ class WalkieSdkHostTest {
         }
     }
 
+    @Test(timeout=60000) fun conversationRecipientCanBeSelectedAndChangedWithoutHiddenUiActions() {
+        val context=InstrumentationRegistry.getInstrumentation().targetContext
+        runBlocking { AppSdk.bootstrap(context) }
+        AppSdk.sync(context,JSONObject().put("action","permissions").put("id","app.onklav.walkie")
+            .put("grants",org.json.JSONArray(listOf("storage.private","contacts.pick","communications.walkie"))))
+        val model=SdkAppModel(compose.activity.application)
+        runBlocking {
+            model.open("app.onklav.walkie")
+            model.chooseWalkieRecipient("+15550101234")
+            assertEquals("+15550101234",model.frame.getJSONObject("state").getString("peer"))
+            assertNull(model.pending)
+            assertNull(model.error)
+            model.chooseWalkieRecipient("+15550105678")
+            assertEquals("+15550105678",model.frame.getJSONObject("state").getString("peer"))
+            assertNull(model.pending)
+            assertNull(model.error)
+            assertEquals("offline",SdkWalkieTransport.state(context).optString("phase"))
+        }
+    }
+
     private fun menu(label:String) {compose.onNodeWithContentDescription("More actions").readyClick();compose.onNodeWithText(label).readyClick()}
     @Test(timeout = 60000)
     @Config(qualifiers = "w320dp-h720dp-mdpi", fontScale = 1.3f)

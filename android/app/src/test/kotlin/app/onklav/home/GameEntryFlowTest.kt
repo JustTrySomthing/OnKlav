@@ -26,6 +26,14 @@ class GameEntryFlowTest {
         Shadows.shadowOf(Looper.getMainLooper()).idle()
         return c
     }
+    @Test fun gameWindowSupportsThePortraitAndLandscapeOrientationRequests() {
+        val context=android.view.ContextThemeWrapper(
+            ApplicationProvider.getApplicationContext<android.content.Context>(),
+            R.style.OnKlavGameEntryTheme,
+        )
+        val attributes=context.obtainStyledAttributes(intArrayOf(android.R.attr.windowIsTranslucent))
+        try { assertFalse(attributes.getBoolean(0,false)) } finally { attributes.recycle() }
+    }
     @Test fun noSaveShowsStartBeforeAnyWebViewAndCancelLoadsNothing(){
         val store=store("dominos");store.clear(store.begin(),"resume")
         val c=ready("dominos");val a=c.get()

@@ -124,7 +124,7 @@ internal object RealSocial {
         kick(c)
     }
     fun observeVerification(c: Context, peer: String, body: String) {
-        if (!body.matches(Regex("!OKA1\\|[0-9a-f]{32}\\|t1"))) return
+        if (!FriendGameWire.appResponse(body)) return
         if (!installed(c) || runCatching { FriendGames.policy(c, peer) }.isFailure) return
         val confirmed = state(c) { s ->
             val f = table(s, "friends").optJSONObject(phoneKey(peer)) ?: return@state false

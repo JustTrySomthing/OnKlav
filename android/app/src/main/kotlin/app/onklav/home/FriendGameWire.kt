@@ -7,9 +7,17 @@ internal data class FriendGameWire(val type:String,val id:String,val sequence:In
         const val QUESTION="? Do you have OnKlav App ?"
         const val PREFIX="!OKG1|"
         const val APP="!OKA1|"
+        const val CARRIER_PREFIX="!OKG1:"
+        fun appResponse(text:String)=text.matches(Regex("!OKA1([|:@])[0-9a-f]{32}\\1t1"))
         fun parse(text:String):FriendGameWire? {
-            if(text.length>140 || !text.startsWith(PREFIX))return null
-            val p=text.split('|');if(p.size!=5 || !p[1].matches(Regex("[IADNQKX]")) || !p[2].matches(Regex("[0-9a-f]{32}")))return null
+            if(text.length>140)return null
+            val separator=when {
+                text.startsWith(PREFIX)->'|'
+                text.startsWith(CARRIER_PREFIX)->':'
+                text.startsWith("!OKG1@")->'@'
+                else->return null
+            }
+            val p=text.split(separator,limit=5);if(p.size!=5 || !p[1].matches(Regex("[IADNQKX]")) || !p[2].matches(Regex("[0-9a-f]{32}")))return null
             val seq=p[3].takeIf{it.matches(Regex("[0-9]{1,4}"))}?.toIntOrNull() ?: return null
             if(seq>9999)return null
             val type=p[1];val data=p[4]

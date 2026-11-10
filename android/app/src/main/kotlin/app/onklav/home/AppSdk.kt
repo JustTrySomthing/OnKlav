@@ -523,9 +523,22 @@ class SdkAppModel(application: Application) : AndroidViewModel(application) {
         flushLocked()
         val number=app.onklav.shared.phoneInput(phone)
         val label=withContext(Dispatchers.IO){MessageRepository(context).contactName(number)}
-        step("peer",number)
-        if(label.isNotBlank() && label!=number)step("label",label)
-        step("prepare","")
+        val token=session ?: error("Walkie-Talkie is not open")
+        check(pending==null) { "Finish the current Walkie-Talkie action first" }
+        val selection=AppSdk.call(context,JSONObject().put("action","event").put("session",token)
+            .put("event",JSONObject().put("action","contacts").put("value",""))) as JSONObject
+        val request=selection.getJSONObject("pending")
+        check(request.getString("service")=="contacts.pick") { "Contact selection is unavailable" }
+        try {
+            val result=AppSdk.call(context,JSONObject().put("action","reply").put("session",token)
+                .put("token",request.getString("token"))
+                .put("reply",JSONObject().put("ok",true).put("value",
+                    JSONObject().put("phone",number).put("name",label.take(80))))) as JSONObject
+            apply(result)
+        } catch (e:Exception) {
+            apply(selection)
+            throw e
+        }
     }
     private var videoLaunchKey:String?=null
     internal suspend fun openMessageVideo(video:MessageVideo,key:Long)=operations.withLock {

@@ -23,6 +23,16 @@ class SdkCarrierRoutesTest{
   assertEquals(voice,SdkCarrierRoutes.decode(SdkCarrierRoutes.encode(a,voice),listOf(a))!!.second)
   assertNull(SdkCarrierRoutes.decode("!OKW2|../escape|payload",listOf(a)))
  }
+ @Test fun carrierSeparatorConversionKeepsControlFramesOnTheirOriginalAppRoute(){
+  val builtin=owner("app.onklav.walkie")
+  val guest=owner()
+  val control="!OKW1|P|"+"1".repeat(32)+"|0|wt1"
+  assertEquals(control,SdkCarrierRoutes.decode(control.replace('|','@'),listOf(builtin))!!.second)
+  val routed=SdkCarrierRoutes.encode(guest,control).replace('|','@')
+  assertEquals(control,SdkCarrierRoutes.decode(routed,listOf(guest,builtin))!!.second)
+  assertNull(SdkCarrierRoutes.decode(routed,listOf(builtin)))
+  assertNull(SdkCarrierRoutes.decode(routed,listOf(guest,guest)))
+ }
  @Test fun oversizedLegacyAndRoutedMetadataAreRejectedBeforeOwnerRouting(){
   val builtin=owner("app.onklav.walkie")
   assertNull(SdkCarrierRoutes.decode("!OKW1|"+"x".repeat(421),listOf(builtin)))

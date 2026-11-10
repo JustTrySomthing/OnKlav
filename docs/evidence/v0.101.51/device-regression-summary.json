@@ -1,0 +1,17 @@
+{
+  "host_version": "0.101.51-rc1",
+  "reported_release": "0.101.50-rc1",
+  "checks": {
+    "FriendGamesTest": 12,
+    "GameEntryFlowTest": 10,
+    "WalkieSdkHostTest.conversationRecipientCanBeSelectedAndChangedWithoutHiddenUiActions": 1,
+    "SdkCarrierRoutesTest": 4
+  },
+  "physical_phone_and_carrier_verified": false,
+  "public_game_assets_browser_checks": "Six bundled titles rendered in Chromium using assets extracted from 0.101.50. Phone-specific blank-screen reproduction unavailable.",
+  "fixes": [
+    "Opaque WebGL game window",
+    "Existing contact broker for conversation Walkie recipient selection",
+    "Strict handling of carrier-converted control separators"
+  ]
+}

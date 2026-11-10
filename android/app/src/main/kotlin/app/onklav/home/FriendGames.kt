@@ -131,7 +131,7 @@ internal object FriendGames {
     /** Protected SMS receiver calls this before ordinary-message filing. */
     fun receive(c:Context,peer:String,sub:Int,body:String):Boolean {
         val frame=FriendGameWire.parse(body)
-        val app=body.matches(Regex("!OKA1\\|[0-9a-f]{32}\\|t1"))
+        val app=FriendGameWire.appResponse(body)
         if(body!=FriendGameWire.QUESTION && !app && frame==null)return false
         try {
             policy(c,peer,sub)

@@ -38,6 +38,26 @@ class FriendGamesTest {
         FriendGames.receive(b,one,1,invite);assertEquals("invite",FriendGames.find(b,id)!!.getString("status"))
         FriendGames.accept(b,id,true);val answer=sent();FriendGames.receive(a,two,1,answer);assertEquals("active",FriendGames.find(a,id)!!.getString("status"));return Triple(a,b,id)
     }
+    @Test fun carrierConvertedVerificationAndTurnsStillReachTheMatch() {
+        val a=device()
+        val b=device()
+        val id=FriendGames.invite(a,two,"naval")
+        assertTrue(FriendGames.receive(b,one,1,sent()))
+        val answer=sent().replace('|','@')
+        assertTrue(FriendGameWire.appResponse(answer))
+        assertTrue(FriendGames.receive(a,two,1,answer))
+        val invite=sent().replace('|','@')
+        assertEquals("I",FriendGameWire.parse(invite)?.type)
+        assertTrue(FriendGames.receive(b,one,1,invite))
+        FriendGames.accept(b,id,true)
+        assertTrue(FriendGames.receive(a,two,1,sent().replace('|','@')))
+        assertEquals("active",FriendGames.find(a,id)!!.getString("status"))
+        assertEquals("active",FriendGames.find(b,id)!!.getString("status"))
+        assertFalse(FriendGameWire.appResponse(answer+" extra"))
+        assertNull(FriendGameWire.parse(invite+" extra"))
+        assertFalse(FriendGameWire.appResponse(answer.replaceFirst('@','|')))
+    }
+
     @Test fun otherGamesRemainIndependentWhileFriendMatchIsPaused() {
         val (a,b,id)=pair("blackjack")
         GameSessionStatus.open(a).save("hockey")

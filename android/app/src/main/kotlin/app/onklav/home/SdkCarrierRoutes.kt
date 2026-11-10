@@ -26,7 +26,9 @@ internal object SdkCarrierRoutes {
   if(owner.getString("id")=="app.onklav.walkie")return wire
   return (if(wire.startsWith("!OKW1|"))"!OKW2|"else"!OKV2|")+route(owner)+"|"+wire.substring(6)
  }
- fun decode(wire:String,owners:List<JSONObject>):Pair<JSONObject,String>?{
+ fun decode(raw:String,owners:List<JSONObject>):Pair<JSONObject,String>?{
+  val wire=if(listOf("!OKW1@","!OKW2@","!OKV1@","!OKV2@").any(raw::startsWith))
+   raw.replace('@','|') else raw
   if(wire.length>420)return null
   if(wire.startsWith("!OKW1|")||wire.startsWith("!OKV1|"))return owners.firstOrNull{it.getString("id")=="app.onklav.walkie"}?.let{it to wire}
   if(wire.length>420||(!wire.startsWith("!OKW2|")&&!wire.startsWith("!OKV2|")))return null
