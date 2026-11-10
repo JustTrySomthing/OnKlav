@@ -24,6 +24,8 @@ Android from one optimized, signed APK.
 
 [Install and set up](#install-and-set-up) · [See OnKlav in action](#see-onklav) · [Themes](#themes) · [Games](#included-games) · [Apps](#included-apps) · [Contribute](#help-improve-onklav)
 
+<a href="#see-onklav"><img src="artwork/github-previews/onklav-overview.webp" width="960" alt="OnKlav desktop alongside gameplay from Last Light Express and Crash Test Panda. The app includes 39 built-in apps and tools and eight bundled games."></a>
+
 ## Keep your favorite people one tap away
 
 | A family conversation | Open the magic wand |

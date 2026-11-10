@@ -7,7 +7,7 @@
   "files_sha256": {
     "OnKlav/.gitignore": "267f4bbb0b4f80061293679ff5996c70ecc76295f8d99a206a87f6a4347d926c",
     "OnKlav/AGENTS.md": "ba9831a7ebfd69b19d888da45c9224de983c7e7f84b7573722967c2281cb5fb8",
-    "OnKlav/README.md": "38ee30f0f4496af57fef5b0d92669fcc04f7c2adc0a39f12296fd29bef0acf5c",
+    "OnKlav/README.md": "e15d5f894802d10200ce37496db40034a526de0f368f1d1b15ec8a694fc9a7ef",
     "OnKlav/START-HERE.md": "bdb5f39135fdc1f7373ee72a4a139bd61b36662291bb5a055c957e11bf285606",
     "OnKlav/TODO.md": "a328d022e662e70403f61bc238343315210e379041d915e7711720ebf8e354a5",
     "OnKlav/android/app/build.gradle.kts": "4f827e3c16cf6b0107fe8a43c096679a92d00fc1a65f105cff8588ba89941568",
@@ -8547,6 +8547,7 @@
     "OnKlav/.github/pull_request_template.md": "3a99a8aaa5030d73e1f53a64240a87583ed25309bea80ad4084f864574e6bba3",
     "OnKlav/.github/workflows/sdk-checks.yml": "8e30986b75877b8ca03ed00b1a712a5d286530c67a94070526261a614ceae2be",
     "OnKlav/artwork/github-previews/conversation-activities.svg": "d30823c65da8cb0ab6ccc9c2d262611d9c292302e9b4c9c34bcf2ebcb1db4f64",
-    "OnKlav/artwork/github-previews/message-themes.webp": "870c845cc238f63c3e8be3caaa5742c43782315eb48526f823f2834bf156bf57"
+    "OnKlav/artwork/github-previews/message-themes.webp": "870c845cc238f63c3e8be3caaa5742c43782315eb48526f823f2834bf156bf57",
+    "OnKlav/artwork/github-previews/onklav-overview.webp": "7c0884c819971e2e8373a0429821b77c7b972304f93a0e707c6252fbadf75216"
   }
 }
