@@ -6,10 +6,18 @@
 
 *Pronounced “Enclave,” a protected, self-contained territory.*
 
-Give your Android phone a desktop of its own. Organize your everyday tools in one
-place, listen to live radio streams from around the world and transform them into
-hypnotic visualizations, or play a bundled game offline. OnKlav runs inside Android
-and includes both App and Game SDKs.
+OnKlav puts you in control of more of your Android experience. Set up a desktop
+that works for you, install apps and games shared directly by their creators,
+and get free access to built-in tools, games, and public-domain books. You can
+do more on your phone with less reliance on Google Play.
+
+**Messaging is at the heart of OnKlav.** Keep your closest friends and family
+a tap away with built-in Messages and Groups. Share photos and everyday updates,
+or turn a text exchange into a turn-based game with a friend.
+
+Organize your everyday tools, listen to live radio streams from around the world
+and transform them into hypnotic visualizations, or play a bundled game offline.
+OnKlav runs inside Android and includes both App and Game SDKs.
 
 **[Download OnKlav for Android · 133 MB APK](https://github.com/JustTrySomthing/OnKlav/releases/download/v0.101.49-rc1/OnKlav-0.101.49-RC.apk)** · [Release notes and SDK downloads](https://github.com/JustTrySomthing/OnKlav/releases/tag/v0.101.49-rc1)
 
@@ -24,6 +32,9 @@ Download the APK, open it on Android, and follow the installation prompt.
 
 ## What to try first
 
+- **Start with your favorite people.** Open Messages or Groups to text your
+  friends and family. Pin the conversations you return to, share photos and
+  files, and listen to individual messages with Read Aloud.
 - **Set up your own space.** Put your favorite apps within reach and give the
   desktop a look you can save and share with [theme packages](docs/THEME-PACKAGES.md).
 - **Find your next free read or listen.** Browse free ebooks from Project
