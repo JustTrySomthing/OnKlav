@@ -47,9 +47,16 @@ Android from one optimized, signed APK.
 
 Share posts, replies, and media directly with accepted friends over SMS and MMS. No Big Tech, Fake Friends, Spam, Ads or Weirdos.
 
-<p align="center">
-  <a href="artwork/github-previews/real-social-feed.webp"><img src="artwork/github-previews/real-social-feed.webp" width="340" alt="Real Social feed showing two friends sharing bakery and hiking photos"></a>
-</p>
+<table>
+  <tr>
+    <th align="center">Photo feed</th>
+    <th align="center">Friends</th>
+  </tr>
+  <tr>
+    <td align="center" valign="top"><a href="artwork/github-previews/real-social-feed.webp"><img src="artwork/github-previews/real-social-feed.webp" width="310" alt="Real Social feed showing two friends sharing bakery and hiking photos"></a></td>
+    <td align="center" valign="top"><a href="artwork/github-previews/real-social-friends.webp"><img src="artwork/github-previews/real-social-friends.webp" width="310" alt="Real Social Friends tab showing Maya Chen and Jordan Ellis as accepted friends"></a></td>
+  </tr>
+</table>
 
 [Explore Real Social](docs/REAL-SOCIAL.md)
 
