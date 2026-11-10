@@ -45,6 +45,23 @@ func run() -> void:
 	check(not host.turn and guest.turn,"SMS result alternates turns")
 	host.peer_positioned();check(not host.turn,"duplicate ready cannot reset turns")
 	check(not host.result(target,true),"duplicate result rejected")
+	var committed:Dictionary=host.shots.duplicate()
+	check(not host.result(-1,true) and host.shots==committed,"no result without an outstanding shot")
+	var damaged:Dictionary=host.snapshot().duplicate(true)
+	damaged.shots["00"]="hit"
+	var recovered=Model.new();recovered.friend=true
+	check(not recovered.restore(damaged),"noncanonical shot key rejected")
+	damaged=host.snapshot().duplicate(true)
+	damaged.ships[0][0]="bad cell"
+	check(not recovered.restore(damaged),"malformed fleet rejected without conversion")
+	damaged=host.snapshot().duplicate(true)
+	damaged.phase="finished";damaged.winner="you"
+	check(not recovered.restore(damaged),"finished save requires a winning fleet count")
+	damaged=host.snapshot().duplicate(true)
+	var expected_ship:Array=damaged.ships[0].duplicate()
+	damaged.ships[0].reverse()
+	check(recovered.restore(damaged) and recovered.ships[0]==expected_ship,"older valid unsorted hulls restored in draw order")
+
 	# Adjacent sunk ships retain separate, validated silhouettes through save/restore.
 	var wreck=Model.new();wreck.shuffle_fleet();wreck.ready()
 	wreck.opponent=[[0,1,2,3,4],[10,11,12,13],[20,21,22],[30,31,32],[40,41]]

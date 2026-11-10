@@ -266,7 +266,9 @@ func _ready() -> void:
 		var ink:=Color("a9ecff") if kind==1 else Color("76edff") if puck.position.y>DIM.y*.5 else Color("ff9dbc")
 		impacts.append({"at":puck.position,"life":.22,"kind":kind,"ink":ink,"strength":strength}))
 	world.add_child(puck)
-	resized.connect(redraw)
+	resized.connect(func():
+		touches = -1
+		redraw())
 	artist = Painter.new()
 	artist.rink = self
 	world.add_child(artist)
@@ -336,16 +338,12 @@ func _physics_process(delta: float) -> void:
 	var previous: float = player.position.x
 	player.position.x = move_toward(previous, target * 600, 3600 * delta)
 	puck.player_motion = (player.position.x - previous) / maxf(delta, .001)
-	var reaction_ticks: int = [18, 12, 8][difficulty]
-	if tick % reaction_ticks == 0:
+	var plan_interval: int = [20,12,7][difficulty]
+	if tick % plan_interval == 0:
 		update_opponent_plan()
-	var speed_limit:=.38 if ai_mode=="chase" else .33
-	if difficulty == Difficulty.EASY:
-		speed_limit *= .8
-	elif difficulty == Difficulty.HARD:
-		speed_limit = .38
+	var speed_limit: float = [.24,.38,.52][difficulty] if ai_mode=="chase" else [.21,.33,.46][difficulty]
 	var desired:=clampf((ai_target-opponent.position.x/DIM.x)*4,-speed_limit,speed_limit)
-	ai_velocity=move_toward(ai_velocity,desired,1.65*delta)
+	ai_velocity=move_toward(ai_velocity,desired,[1.12,1.65,2.4][difficulty]*delta)
 	opponent.position.x=clampf(opponent.position.x+ai_velocity*DIM.x*delta,60,540)
 	var scorer := pocket_scorer(previous_puck,puck.position)
 	if scorer >= 0:
@@ -374,8 +372,8 @@ func update_opponent_plan() -> void:
 		var seconds:=clampf(reach/-velocity.y,0,.48)
 		var reflected:=fposmod(position_x+velocity.x/DIM.x*seconds-.025,1.9)
 		var intercept:=.025+minf(reflected,1.9-reflected)
-		var uncertainty:=sin(tick*.017+puck.ai_hits*2.13)*.052
-		ai_target=clampf(lerpf(.5,intercept,.78)+uncertainty,.14,.86)
+		var uncertainty: float = sin(tick*.017+puck.ai_hits*2.13)*[.085,.052,.024][difficulty]
+		ai_target=clampf(lerpf(.5,intercept,[.61,.78,.93][difficulty])+uncertainty,.14,.86)
 	else:
 		ai_mode="recover"
 		ai_target=lerpf(.5,position_x,.13)
@@ -436,9 +434,10 @@ func move_input(x: float) -> void:
 func snapshot() -> Dictionary:
 	var at:Vector2=paused_position if paused and not stopped else puck.position
 	var velocity:Vector2=paused_velocity if paused and not stopped else puck.linear_velocity
-	return {"x": at.x / 600, "y": at.y / DIM.y, "vx": velocity.x / 600, "vy": velocity.y / DIM.y, "player": player.position.x / 600, "opponent": opponent.position.x / 600, "ai_velocity": ai_velocity, "ai_target": ai_target, "tick": tick, "ai_hits": puck.ai_hits, "difficulty": difficulty}
+	return {"difficulty":difficulty,"x": at.x / 600, "y": at.y / DIM.y, "vx": velocity.x / 600, "vy": velocity.y / DIM.y, "player": player.position.x / 600, "opponent": opponent.position.x / 600, "ai_velocity": ai_velocity, "ai_target": ai_target, "tick": tick, "ai_hits": puck.ai_hits}
 
 func restore(data: Dictionary, playing: bool) -> void:
+	difficulty = int(data.get("difficulty",Difficulty.NORMAL)) as Difficulty
 	paused_position=Vector2(data.x*600,data.y*DIM.y);paused_velocity=Vector2(data.vx*600,data.vy*DIM.y);paused_contact=""
 	# Repair old PLAYING saves written after the freeze bug without changing scores.
 	if playing and paused_velocity.length()<1:paused_velocity=Vector2(0,-.63*DIM.y)

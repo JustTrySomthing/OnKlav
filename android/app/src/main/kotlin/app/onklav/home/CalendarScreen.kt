@@ -44,7 +44,7 @@ internal fun calendarDate(d:LocalDate)=d.format(DateTimeFormatter.ofPattern("EEE
 @OptIn(ExperimentalMaterial3Api::class,ExperimentalFoundationApi::class)
 @Composable internal fun CalendarWorkspace(exit:()->Unit,m:CalendarModel=viewModel(),initialEvent:String?=null,initialDate:String?=null,launchKey:Long=0L){
  val searchFocus=remember{FocusRequester()};LaunchedEffect(m.searching){if(m.searching)searchFocus.requestFocus()}
- val compactHeader=androidx.compose.ui.platform.LocalConfiguration.current.screenWidthDp<360||androidx.compose.ui.platform.LocalDensity.current.fontScale>1.25f
+ val compactHeader=androidx.compose.ui.platform.LocalConfiguration.current.screenWidthDp < 290f + 100f * (androidx.compose.ui.platform.LocalDensity.current.fontScale.coerceAtLeast(1f) - 1f)
  val c=LocalContext.current;var menu by remember{mutableStateOf(false)};var panel by remember{mutableStateOf<String?>(null)};var jump by remember{mutableStateOf(false)};var discard by remember{mutableStateOf(false)}
  val open=rememberLauncherForActivityResult(OnKlavFileContracts.OpenDocument()){it?.let(m::import)}
  val save=rememberLauncherForActivityResult(OnKlavFileContracts.CreateDocument("text/calendar")){it?.let(m::export)}

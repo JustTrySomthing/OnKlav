@@ -66,6 +66,7 @@ func _ready():
 	rating=Control.new();rating.custom_minimum_size.y=68;rating.draw.connect(draw_rating);result.add_child(rating)
 	result_detail=label("",17,Color("fff9e7"));result.add_child(result_detail);result.hide()
 	resized.connect(layout)
+	if OS.has_feature("web"): get_viewport().size_changed.connect(layout, CONNECT_DEFERRED)
 	OnKlavGame.attach_session(self,snapshot,restore,start_new,HELP,"user://builtin-panda.json",{}, {"format_version":4,"is_resumable":func(data:Dictionary):return data.model.phase!="finished"})
 	OnKlavGame.resumed.connect(reset_frame_clock)
 	OnKlavGame.suspended.connect(func():
@@ -84,9 +85,8 @@ func preferences():
 		hud.reduced=arena.reduced
 		if arena.reduced:arena.clear_effects()
 func layout():
-	var width:=432.0
-	if OS.has_feature("web"):width=maxf(320,float(JavaScriptBridge.eval("window.innerWidth")))
-	var ratio:=maxf(.01,size.x/width);canvas.scale=Vector2.ONE*ratio;canvas.size=Vector2(width,maxf(260,size.y/ratio-56))
+	Chrome.fit_board(canvas, size, 56, 500)
+	var width := canvas.size.x
 	report.position=Vector2(14,canvas.size.y*.56);report.size=Vector2(width-28,0)
 	var compact:=canvas.size.y<450
 	result_title.add_theme_font_size_override("font_size",22 if compact else 31)

@@ -21,18 +21,7 @@ import org.json.JSONObject
  val nodes=model.frame.nodes("body");fun node(id:String)=nodes.firstOrNull{it.optString("id")==id}
  val colors=MaterialTheme.colorScheme;val scroll=rememberScrollState()
  LaunchedEffect(model.frame.optString("scroll_key")){scroll.scrollTo(0)}
- var targetChapter by remember{mutableIntStateOf(-1)}
- var targetLast by remember{mutableStateOf(false)}
- val reader=model.frame.child("state").child("reader")
- val chapter=reader.child("chapter").optInt("chapter",-1)
  val ready=!model.busy&&model.pending==null
- LaunchedEffect(chapter,ready,reader.child("reading").optBoolean("ready")){
-  if(ready&&chapter==targetChapter&&reader.child("reading").optBoolean("ready")){
-   targetChapter=-1
-   val offset=ebookBoundaryOffset(reader.child("chapter").optString("text"),targetLast)
-   model.action("reading.goto",offset.toString())
-  }
- }
  fun enabled(id:String)=node(id)?.optBoolean("enabled",true)==true
  val nextPage=enabled("reading.next");val nextChapter=enabled("epub.next")
  val previousPage=enabled("reading.previous");val previousChapter=enabled("epub.previous")
@@ -50,10 +39,10 @@ import org.json.JSONObject
     Text(node("book.progress")?.optString("text").orEmpty(),style=MaterialTheme.typography.labelMedium,color=colors.onSurfaceVariant)
     Text(if(nextPage)"Continue this chapter"else if(nextChapter)"End of chapter"else"End of book",style=MaterialTheme.typography.titleMedium,modifier=Modifier.semantics{liveRegion=LiveRegionMode.Polite})
     Row(horizontalArrangement=Arrangement.spacedBy(8.dp)){
-     OutlinedButton(enabled=ready&&(previousPage||previousChapter),onClick={if(previousPage)model.action("reading.previous")else{targetChapter=chapter-1;targetLast=true;model.action("epub.previous")}},modifier=Modifier.weight(1f).heightIn(min=48.dp).testTag("ebook-previous")){
+     OutlinedButton(enabled=ready&&(previousPage||previousChapter),onClick={model.action(if(previousPage) "reading.previous" else "epub.previous")},modifier=Modifier.weight(1f).heightIn(min=48.dp).testTag("ebook-previous")){
       Text("Previous")
      }
-     Button(enabled=ready&&(nextPage||nextChapter),onClick={if(nextPage)model.action("reading.next")else{targetChapter=chapter+1;targetLast=false;model.action("epub.next")}},modifier=Modifier.weight(1f).heightIn(min=48.dp).testTag("ebook-next")){
+     Button(enabled=ready&&(nextPage||nextChapter),onClick={model.action(if(nextPage) "reading.next" else "epub.next")},modifier=Modifier.weight(1f).heightIn(min=48.dp).testTag("ebook-next")){
       Text("Next")
      }
     }
@@ -66,9 +55,4 @@ import org.json.JSONObject
   }
   node("book.status")?.optString("text")?.takeIf{it.isNotBlank()}?.let{Text(it,style=MaterialTheme.typography.bodySmall,color=colors.primary)}
  }
-}
-
-internal fun ebookBoundaryOffset(text:String,last:Boolean):Int {
- val count=text.codePointCount(0,text.length);val page=if(last&&count>0)((count-1)/4000)*4000 else 0
- return text.substring(0,text.offsetByCodePoints(0,page)).toByteArray(Charsets.UTF_8).size
 }

@@ -15,6 +15,22 @@ class SdkWebPolicyTest {
         assertEquals(SdkWebPolicy.profile("app.example.first"),SdkWebPolicy.profile("app.example.first"))
         assertNotEquals(SdkWebPolicy.profile("app.example.first"),SdkWebPolicy.profile("app.example.second"))
     }
+    @Test fun secureBrowserHandsOffOnlyValidatedWebAddresses() {
+        val app = androidx.test.core.app.ApplicationProvider.getApplicationContext<android.content.Context>()
+        var launched: android.content.Intent? = null
+        val context = object : android.content.ContextWrapper(app) {
+            override fun startActivity(intent: android.content.Intent) { launched = intent }
+        }
+        assertFalse(openSecureBrowser(context, "intent://accounts.google.com/"))
+        assertFalse(openSecureBrowser(context, "https://user:password@accounts.google.com/"))
+        assertNull(launched)
+        val address = "https://accounts.google.com/signin"
+        assertTrue(openSecureBrowser(context, address))
+        assertEquals(android.content.Intent.ACTION_VIEW, launched?.action)
+        assertEquals(address, launched?.dataString)
+        assertNull(launched?.`package`)
+        assertTrue(launched?.hasExtra("android.support.customtabs.extra.SESSION") == true)
+    }
     @Test fun nativeClipboardEntryPointsCheckLiveGrants() {
         val context=androidx.test.core.app.ApplicationProvider.getApplicationContext<android.content.Context>()
         var allow=false;val checks=mutableListOf<String>()

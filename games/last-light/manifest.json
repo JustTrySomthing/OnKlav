@@ -22,6 +22,6 @@
   "profile": "arcade",
   "runtime": "godot.web.v1",
   "schema": "onklav.package.v1",
-  "version": "0.2.37",
-  "version_code": 44
+  "version": "0.2.38",
+  "version_code": 45
 }

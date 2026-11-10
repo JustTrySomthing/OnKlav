@@ -19,7 +19,23 @@ class AndroidFilesTest {
  @Test fun attachmentAndSaveTypesOpenTheirMatchingFolders(){assertEquals("images",initialFilesFolder(listOf("image/*")));assertEquals("audio",initialFilesFolder(listOf("audio/mpeg")));assertEquals("video",initialFilesFolder(listOf("video/*")));assertEquals("",initialFilesFolder(listOf("*/*")));assertEquals("documents",initialFilesFolder(listOf("application/pdf"),true))}
  @Test fun androidFilesCannotEscapeSharedStorageOrEnterPrivateAppDirectories(){val root=File(app.cacheDir,"shared-fixture").apply{mkdirs()};for(path in listOf("../secret","/etc/passwd","Android/data/app/secret","Android/obb/app/file",".hidden/file"))assertThrows(Exception::class.java){AndroidFilesAccess.checked(app,path,root)};assertEquals(File(root,"DCIM/photo.jpg"),AndroidFilesAccess.checked(app,"DCIM/photo.jpg",root));assertEquals(File(root,"Android/media/app/photo.jpg"),AndroidFilesAccess.checked(app,"Android/media/app/photo.jpg",root));val outside=File(app.cacheDir,"other-private").apply{mkdirs()};java.nio.file.Files.createSymbolicLink(File(root,"link").toPath(),outside.toPath());assertThrows(Exception::class.java){AndroidFilesAccess.checked(app,"link/secret",root)}}
  @Test fun revokingAndroidAccessBlocksEvenKnownFiles(){shadowOf(app).denyPermissions(Manifest.permission.READ_EXTERNAL_STORAGE);assertFalse(AndroidFilesAccess.allowed(app));assertThrows(IllegalStateException::class.java){AndroidFilesAccess.checked(app,"DCIM/photo.jpg",app.cacheDir)}}
- @Test fun supportedEmailProvidersHaveNoRetiredPlatformPresets(){for(provider in listOf("Yahoo","Gmail","Other")){val a=MailAccount.preset(provider,"owner@example.org");assertEquals(provider,a.provider)};for(provider in listOf("GMX","Outlook","iCloud"))assertThrows(IllegalArgumentException::class.java){MailAccount.preset(provider)}}
+ @Test fun supportedEmailProvidersHaveNoRetiredPlatformPresets(){for(provider in listOf("GMX","Yahoo","Gmail","Other")){val a=MailAccount.preset(provider,"owner@example.org");assertEquals(provider,a.provider)};for(provider in listOf("Outlook","iCloud"))assertThrows(IllegalArgumentException::class.java){MailAccount.preset(provider)}}
+
+ @Test fun gmxPresetUsesTlsAndRoundTripsWithRegionalDefaults() {
+  val account = MailAccount.preset("GMX").withAddress("owner@gmx.com")
+  assertEquals("imap.gmx.com", account.imap)
+  assertEquals("mail.gmx.com", account.smtp)
+  assertEquals(993, account.imapPort)
+  assertEquals(465, account.smtpPort)
+  assertFalse(account.smtpTls)
+  assertEquals(account.email, account.user)
+  assertEquals(account, MailAccount.parse(account.json()))
+  val regional = account.withAddress("owner@gmx.de")
+  assertEquals("imap.gmx.net", regional.imap)
+  assertEquals("mail.gmx.net", regional.smtp)
+  assertEquals("https://www.gmx.net/", MailSetup.accountSettings("GMX", regional.email))
+  assertEquals("custom.example.org", account.copy(imap = "custom.example.org").withAddress(regional.email).imap)
+ }
 
  @Test fun directAndroidFilesCanBeRenamedCopiedCompressedAndNeverOverwrite(){
   val root=AndroidFilesAccess.root().apply{mkdirs()};val source=File(root,"Shared fixture").apply{mkdirs()};File(source,"sound.mp3").writeText("audio fixture")

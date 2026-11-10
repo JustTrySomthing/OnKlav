@@ -292,9 +292,15 @@ private class GatedSdkClipboard(context: Context, val model: SdkAppModel) : andr
         BrowserDownloadsDialog(model.browserDownloads){browserDownloadsOpen=false}
     }
     val panel=!external&&frame.optString("presentation")=="panel"
-    Surface(Modifier.fillMaxSize(), color = if(panel)Color.Black.copy(alpha=.55f)else MaterialTheme.colorScheme.background) {
+    val walkie = id == "app.onklav.walkie"
+    val colors = MaterialTheme.colorScheme
+    Surface(
+        Modifier.fillMaxSize(),
+        color = if (panel) Color.Black.copy(alpha = .55f) else colors.background,
+        contentColor = if (panel) colors.onSurface else colors.onBackground,
+    ) {
         Column(Modifier.fillMaxSize().then(if(immersiveVideo||immersiveCamera||embeddedInHome)Modifier else Modifier.windowInsetsPadding(WindowInsets.safeDrawing).imePadding()).testTag("sdk-app-screen")) {
-            if(!panel&&!immersiveVideo&&!immersiveCamera) SdkFrameHeader(if(id=="app.onklav.youtube")youtubeDownloadHeader(frame)else if(id=="app.onklav.files")JSONObject(frame.toString()).put("header_actions",0).put("title",if(frame.child("state").optBoolean("external_mode"))"Android Files"else frame.child("state").optString("title").replace("OnKlav System Files","OnKlave Files").ifBlank{"Files"})else frame,model.busy||pending!=null,webPool.progress,showBack=!embeddedInHome,
+            if(!panel&&!immersiveVideo&&!immersiveCamera) SdkFrameHeader(if(id=="app.onklav.youtube")youtubeDownloadHeader(frame)else if(id=="app.onklav.files")JSONObject(frame.toString()).put("header_actions",0).put("title",if(frame.child("state").optBoolean("external_mode"))"Android Files"else "OnKlav Files")else frame,model.busy||pending!=null,webPool.progress,showBack=!embeddedInHome,
                 titleContent=if(id=="app.onklav.youtube") {{ modifier -> YoutubeHeaderMark(modifier) }} else null,
                 afterAction={action->
                 if(id=="app.onklav.youtube"&&action=="download") YoutubePreviewAction(model.youtubePreviews,model::toggleYoutubePreviews)
@@ -331,7 +337,9 @@ private class GatedSdkClipboard(context: Context, val model: SdkAppModel) : andr
                 val scrollBody=!pinKeypad&&frame.optBoolean("scroll_body")&&frame.nodes("body").none{it.optString("kind") in setOf("web","canvas","pdf_viewer","map_viewer")}
                 val pinnedTabs=frame.nodes("body").filter{it.optBoolean("tab")};val nativeLibrary=frame.nodes("body").any{it.optBoolean("audiobook")}
                 val dockedPlayer=frame.nodes("body").firstOrNull{it.optString("kind")=="media_player"&&it.optBoolean("dock")}
-                val rowColumns=(maxWidth.value/(160f*LocalDensity.current.fontScale.coerceIn(1f,1.5f))).toInt().coerceIn(1,3)
+                val bodyWidth=if(panel) minOf(380.dp,maxWidth*.94f)-48.dp
+                    else maxWidth-(if(frame.optBoolean("full_bleed"))0.dp else 24.dp)
+                val rowColumns=responsiveColumns(bodyWidth,LocalDensity.current.fontScale,3,8.dp)
                 if(vaultStatus?.optBoolean("locked")==true)FolderLockedPane(vaultStatus){model.vaultRequest=vaultStatus}
                 else if(id=="app.onklav.files" && !model.sessionUnavailable) FilesWorkspaceBody(model)
                 else if(id=="app.onklav.clock" && !model.busy && model.error==null && !model.sessionUnavailable) ClockWorkspace()
@@ -351,9 +359,16 @@ private class GatedSdkClipboard(context: Context, val model: SdkAppModel) : andr
                     if(panel) {
                         var more by remember{mutableStateOf(false)}
                         Row(Modifier.fillMaxWidth().padding(bottom=8.dp),verticalAlignment=Alignment.CenterVertically) {
-                            Spacer(Modifier.width(40.dp))
-                            Text(frame.optString("title"),Modifier.weight(1f),textAlign=androidx.compose.ui.text.style.TextAlign.Center,fontSize=23.sp,fontWeight=FontWeight.Bold,color=MaterialTheme.colorScheme.onSurface)
+                            if (!walkie) Spacer(Modifier.width(40.dp))
+                            Text(frame.optString("title"), Modifier.weight(1f),
+                                textAlign = if (walkie) androidx.compose.ui.text.style.TextAlign.Start else androidx.compose.ui.text.style.TextAlign.Center,
+                                fontSize = if (walkie) 20.sp else 23.sp, fontWeight = FontWeight.Bold, color = colors.onSurface)
                             Box{CompactAction(Icons.Outlined.MoreVert,"More actions"){more=true};DropdownMenu(more,{more=false}){SdkAppActionItems(frame.nodes("actions"),model.busy||pending!=null){action->more=false;model.action(action)};DropdownMenuItem(text={Text("Close")},onClick={more=false;back()})}}
+                            if (walkie) ClosePageButton(enabled = !model.busy, description = "Close Walkie-Talkie") {
+                                focus.clearFocus(force = true)
+                                textToolbar.hide()
+                                model.close(finishExit)
+                            }
                         }
                     }
                     if(id=="app.onklav.files"&&frame.child("state").optString("folder").isEmpty())FileRecoveryPanel()
@@ -373,7 +388,7 @@ private class GatedSdkClipboard(context: Context, val model: SdkAppModel) : andr
                             SdkBodyNodes(frame.nodes("body").filter{!it.optBoolean("tab")},rowColumns,false,true){node,modifier->SdkWidget(node,frame.optString("revision_key"),model,speech,webPool,modifier)}
                         }
                     } else {
-                        SdkBodyNodes(frame.nodes("body"),rowColumns,compactEditor,scrollBody,pinKeypad){node,modifier->SdkWidget(node,frame.optString("revision_key"),model,speech,webPool,modifier)}
+                        SdkBodyNodes(frame.nodes("body"),rowColumns,compactEditor,scrollBody,pinKeypad,keepWalkieQuickRow=walkie){node,modifier->SdkWidget(node,frame.optString("revision_key"),model,speech,webPool,modifier)}
                     }
                     if(frame.length()==0) { Text("Opening…",fontSize=16.sp) }
                     if(id=="app.onklav.files"&&(model.busy||pending!=null)){LinearProgressIndicator(Modifier.fillMaxWidth());Text(model.fileStatus?:"Working with Files…",fontSize=13.sp)}
@@ -393,14 +408,31 @@ private class GatedSdkClipboard(context: Context, val model: SdkAppModel) : andr
     val creatingFolder=menuOpen&&id=="app.onklav.files"&&frame.child("state").optString("dialog")=="new"
     if(creatingFolder)FilesCreateFolderDialog(model){dismissMenu("menu.close")}
     if(menuOpen&&!creatingFolder) ReferenceDialog(frame.optString("menu_title",frame.optString("title")), { dismissMenu(frame.optString("menu_close","close.menu")) }, footer = {if(external)DialogAction("Cancel"){dismissMenu(frame.optString("menu_close","close.menu"))}}) {
-        BoxWithConstraints { val menuWidth=maxWidth;Column(Modifier.fillMaxWidth().padding(16.dp),verticalArrangement=Arrangement.spacedBy(10.dp)) {
+        BoxWithConstraints { val menuColumns=responsiveColumns(maxWidth-32.dp,LocalDensity.current.fontScale,2,8.dp,104.dp);Column(Modifier.fillMaxWidth().padding(16.dp),verticalArrangement=Arrangement.spacedBy(10.dp)) {
             if(id=="app.onklav.radio"&&frame.optString("menu_title")=="Radio settings")SdkRadioVisualizationSettings()
-            val nodes=frame.nodes("menu");var index=0
+            val nodes=frame.nodes("menu").let{items->
+                if(id!="app.onklav.files")items else {
+                    val selected=frame.child("state").child("selected")
+                    val canPaste=model.filesClipboard!=null&&selected.optBoolean("folder")&&
+                        filesWritable(selected.optString("id"),selected.optBoolean("trash")||frame.child("state").optBoolean("in_trash"))
+                    val visible=items.filterNot{it.optString("id") in setOf("export","paste")}
+                    if(canPaste)visible.toMutableList().apply{add((size-1).coerceAtLeast(0),JSONObject().put("kind","button").put("id","paste").put("text","Paste"))}else visible
+                }
+            };var index=0
             while(index<nodes.size) {
                 val node=nodes[index];val row=node.optString("row")
                 if(row.isNotEmpty()) {
                     val group=nodes.drop(index).takeWhile {it.optString("row")==row};index+=group.size
-                    group.chunked(if(menuWidth<380.dp||LocalDensity.current.fontScale>1.2f)1 else 2).forEach{cells->Row(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.spacedBy(8.dp)) {cells.forEach{SdkWidget(it,"menu",model,speech,webPool,Modifier.weight(1f))}}}
+                    val equalButtons=group.all{it.optString("kind")=="button"}
+                    group.chunked(menuColumns).forEach{cells->
+                        Row(Modifier.fillMaxWidth().then(if(equalButtons)Modifier.height(IntrinsicSize.Min)else Modifier),horizontalArrangement=Arrangement.spacedBy(8.dp)){
+                            cells.forEach{
+                                val slot=Modifier.weight(1f)
+                                SdkWidget(it,"menu",model,speech,webPool,if(equalButtons)slot.fillMaxHeight()else slot)
+                            }
+                            repeat((minOf(group.size,menuColumns)-cells.size).coerceAtLeast(0)){Spacer(Modifier.weight(1f))}
+                        }
+                    }
                 } else {SdkWidget(node,"menu",model,speech,webPool);index++}
             }
             webPool.findStatus?.let { Text(it,Modifier.padding(vertical=8.dp),fontSize=14.sp,color=MaterialTheme.colorScheme.onSurfaceVariant) }
@@ -438,9 +470,9 @@ private class GatedSdkClipboard(context: Context, val model: SdkAppModel) : andr
 
 /** Shared responsive body layout, also used by the desktop native preview test host. */
 @Composable internal fun ColumnScope.SdkBodyNodes(nodes:List<JSONObject>,rowColumns:Int,compactEditor:Boolean,scrollBody:Boolean,render:@Composable (JSONObject,Modifier)->Unit){
-    SdkBodyNodes(nodes,rowColumns,compactEditor,scrollBody,false,render)
+    SdkBodyNodes(nodes,rowColumns,compactEditor,scrollBody,false,render=render)
 }
-@Composable internal fun ColumnScope.SdkBodyNodes(nodes:List<JSONObject>,rowColumns:Int,compactEditor:Boolean,scrollBody:Boolean,pinKeypad:Boolean,render:@Composable (JSONObject,Modifier)->Unit){
+@Composable internal fun ColumnScope.SdkBodyNodes(nodes:List<JSONObject>,rowColumns:Int,compactEditor:Boolean,scrollBody:Boolean,pinKeypad:Boolean,keepWalkieQuickRow:Boolean=false,render:@Composable (JSONObject,Modifier)->Unit){
     val groups=mutableListOf<List<JSONObject>>()
     var index=0
     while(index<nodes.size){
@@ -455,16 +487,40 @@ private class GatedSdkClipboard(context: Context, val model: SdkAppModel) : andr
         key(node.optString("id"),node.optString("kind")){
             if(node.optString("row").isNotEmpty()||group.size>1){
                 if(group.all{it.optString("kind")=="icon"})SdkActionRow(group){cell,modifier->key(cell.optString("id")){render(cell,modifier)}}
-                else group.chunked(if(group.all{it.optBoolean("keypad")})4 else if(group.all{it.optBoolean("tab")})3 else if(group.all{it.optString("kind")=="select"&&it.optBoolean("compact")})2 else rowColumns.coerceIn(1,3)).forEach{cells->
-                    Row(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.spacedBy(8.dp)){
-                        cells.forEach{cell->key(cell.optString("id"),cell.optString("kind")){
-                            render(cell,if(cell.optBoolean("compact")&&cell.optString("kind")!="select")Modifier.width(48.dp)else Modifier.weight(1f))
-                        }}
+                else {
+                    val quickRow = keepWalkieQuickRow && node.optString("row") == "quick"
+                    val columns=when{
+                        quickRow -> 2
+                        group.all{it.optBoolean("keypad")}->4
+                        group.all{it.optBoolean("tab")}->3
+                        group.all{it.optString("kind")=="select"&&it.optBoolean("compact")}->minOf(2,rowColumns)
+                        else->rowColumns.coerceIn(1,3)
+                    }
+                    val equalButtons=group.all{it.optString("kind")=="button"&&!it.optBoolean("compact")&&!it.optBoolean("keypad")&&!it.optBoolean("tab")}
+                    group.chunked(columns).forEach{cells->
+                        Row(Modifier.fillMaxWidth().then(if(equalButtons)Modifier.height(IntrinsicSize.Min)else Modifier),
+                            horizontalArrangement=Arrangement.spacedBy(8.dp),
+                            verticalAlignment=if (quickRow) Alignment.CenterVertically else Alignment.Top){
+                            cells.forEach{cell->key(cell.optString("id"),cell.optString("kind")){
+                                val slot=if(cell.optBoolean("compact")&&cell.optString("kind")!="select")Modifier.width(48.dp)else Modifier.weight(1f)
+                                render(cell,if(equalButtons)slot.fillMaxHeight()else slot)
+                            }}
+                            if(equalButtons)repeat(minOf(group.size,columns)-cells.size){Spacer(Modifier.weight(1f))}
+                        }
                     }
                 }
             }else render(node,if((compactEditor||scrollBody)&&node.optString("kind")=="editor")Modifier.heightIn(min=160.dp,max=280.dp)else if(node.optString("kind")in setOf("editor","web","canvas","pdf_viewer","map_viewer"))Modifier.weight(1f)else Modifier)
         }
     }
+}
+
+@Composable
+private fun SdkToggleCheck(node: JSONObject, enabled: Boolean) {
+    val colors = MaterialTheme.colorScheme
+    Checkbox(node.optBoolean("checked"), onCheckedChange = null, enabled = enabled,
+        colors = if (node.optBoolean("neutral")) CheckboxDefaults.colors(
+            checkedColor = colors.onSurfaceVariant, checkmarkColor = colors.surface,
+        ) else CheckboxDefaults.colors())
 }
 
 @Composable internal fun SdkWidget(node: JSONObject, revision: String, model: SdkAppModel, speech: SdkSpeechController, webPool:SdkWebPool, modifier: Modifier = Modifier) {
@@ -497,9 +553,25 @@ private class GatedSdkClipboard(context: Context, val model: SdkAppModel) : andr
                 val value=node.optString("text");append(value);val start=speech.position.coerceIn(0,value.length);var end=start;while(end<value.length&&!value[end].isWhitespace())end++
                 if(end>start)addStyle(androidx.compose.ui.text.SpanStyle(color=readingColor,fontWeight=FontWeight.Bold),start,end)
             }else androidx.compose.ui.text.AnnotatedString(node.optString("text")),modifier.fillMaxWidth().then(if(node.optBoolean("utility_display")&&node.optString("align")!="end")Modifier.background(MaterialTheme.colorScheme.primaryContainer,RoundedCornerShape(16.dp)).padding(horizontal=16.dp)else Modifier).then(if(node.has("long_action")) Modifier.combinedClickable(enabled=interactive,onClick={},onLongClick={model.action(node.getString("long_action"))},onLongClickLabel=node.optString("long_label","Copy"))else Modifier).padding(vertical=if(node.optBoolean("utility_display"))12.dp else 4.dp).testTag("sdk-$id").semantics {if(node.optBoolean("heading"))heading();if(node.optBoolean("status"))liveRegion=LiveRegionMode.Polite},textAlign=if(node.optString("align")=="end") androidx.compose.ui.text.style.TextAlign.End else if(node.optBoolean("center")) androidx.compose.ui.text.style.TextAlign.Center else androidx.compose.ui.text.style.TextAlign.Start,maxLines=if(node.optBoolean("utility_display"))1 else Int.MAX_VALUE,overflow=if(node.optBoolean("utility_display"))TextOverflow.Ellipsis else TextOverflow.Clip,lineHeight=if(id=="reading.page")(node.optInt("font",18)*1.55f).sp else androidx.compose.ui.unit.TextUnit.Unspecified,fontSize=(if(node.optBoolean("utility_display")&&node.optString("text").length>22)20 else if(node.optBoolean("utility_display")&&node.optString("text").length>16)26 else node.optInt("font",13)).coerceIn(12,if(node.optBoolean("utility_display"))40 else 28).sp,fontWeight=if(node.optBoolean("strong")) FontWeight.Bold else FontWeight.Normal,color=if(node.optBoolean("utility_display")&&node.optString("align")!="end")MaterialTheme.colorScheme.onPrimaryContainer else if(node.optInt("font",13)>=16) MaterialTheme.colorScheme.onSurface else MaterialTheme.colorScheme.onSurfaceVariant) };if(node.optBoolean("selectable")) SelectionContainer { content() } else content() }
-        "toggle" -> Row(modifier.fillMaxWidth().padding(top=12.dp).heightIn(min=48.dp).testTag("sdk-$id").semantics {node.optString("error").takeIf{it.isNotBlank()}?.let{error(it)}}.toggleable(value=node.optBoolean("checked"),enabled=interactive,role=Role.Checkbox,onValueChange={model.action(id,it.toString())}),verticalAlignment=Alignment.CenterVertically) {
-            @Composable fun check(){Checkbox(node.optBoolean("checked"),onCheckedChange=null,enabled=interactive,colors=if(node.optBoolean("neutral"))CheckboxDefaults.colors(checkedColor=MaterialTheme.colorScheme.onSurfaceVariant,checkmarkColor=MaterialTheme.colorScheme.surface)else CheckboxDefaults.colors())}
-            if(node.optString("align")=="end"){Text(node.optString("text"),Modifier.weight(1f),fontSize=16.sp);check()}else{check();Text(node.optString("text"),Modifier.weight(1f),fontSize=16.sp)}
+        "toggle" -> {
+            val quick = model.isBuiltinVoice() && node.optString("row") == "quick"
+            val end = node.optString("align") == "end"
+            val colors = MaterialTheme.colorScheme
+            Row(
+                modifier.fillMaxWidth().padding(top = if (quick) 4.dp else 12.dp).heightIn(min = 48.dp)
+                    .testTag("sdk-$id")
+                    .semantics { node.optString("error").takeIf { it.isNotBlank() }?.let { error(it) } }
+                    .toggleable(value = node.optBoolean("checked"), enabled = interactive, role = Role.Checkbox,
+                        onValueChange = { model.action(id, it.toString()) }),
+                horizontalArrangement = if (quick && end) Arrangement.End else Arrangement.Start,
+                verticalAlignment = Alignment.CenterVertically,
+            ) {
+                if (!end) SdkToggleCheck(node, interactive)
+                Text(node.optString("text"), Modifier.weight(1f, fill = !quick),
+                    fontSize = if (quick) 14.sp else 16.sp,
+                    color = if (quick) colors.onSurface else LocalContentColor.current)
+                if (end) SdkToggleCheck(node, interactive)
+            }
         }
         "select" -> { var expanded by remember(id) { mutableStateOf(false) };val options=node.nodes("options");Column(modifier.fillMaxWidth()) { if(!node.optBoolean("compact"))Text(node.optString("text"),fontSize=14.sp);Box(Modifier.align(if(id=="radio.language")Alignment.End else Alignment.Start)) { ChoiceButton((options.firstOrNull { it.optString("value")==node.optString("value") }?.optString("text") ?: "Choose…")+" ▾",Modifier.testTag("sdk-$id").semantics {contentDescription=node.optString("text");stateDescription=options.firstOrNull{it.optString("value")==node.optString("value")}?.optString("text")?:"Choose…";node.optString("error").takeIf{it.isNotBlank()}?.let{error(it)}},enabled=interactive,outlined=false) { expanded=true };DropdownMenu(expanded&&interactive,{expanded=false}) { options.forEach { o -> DropdownMenuItem(text={Text(o.optString("text"))},enabled=interactive,onClick={expanded=false;model.action(id,o.getString("value"))}) } } } }
         }

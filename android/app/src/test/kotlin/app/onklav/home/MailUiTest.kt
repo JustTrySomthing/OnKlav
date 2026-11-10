@@ -63,7 +63,7 @@ val n=nodes().last{it.config.contains(SemanticsActions.SetText)&&contains(it)};a
   org.robolectric.shadows.ShadowChoreographer.setPaused(true);compose.mainClock.autoAdvance=false
   compose.runOnUiThread{compose.activity.setContent{OnKlavTheme{MailAccountDialog(initial,m,{},{})}}}
   waitFor{!m.busy&&nodes().any{text(it,"Setup directions")}}
-  assertFalse(nodes().any{text(it,"GMX")});click("Setup directions");assertTrue(nodes().any{text(it,"Connect Yahoo")});click("Done")
+  assertTrue(nodes().any{text(it,"GMX")});click("Setup directions");assertTrue(nodes().any{text(it,"Connect Yahoo")});click("Done")
   click("Server settings");assertTrue(nodes().any{it.config.getOrNull(SemanticsProperties.EditableText)?.text=="imap.mail.yahoo.com"});assertTrue(nodes().any{it.config.getOrNull(SemanticsProperties.EditableText)?.text=="smtp.mail.yahoo.com"})
   click("Private domain")
   fun label(n:SemanticsNode):Boolean=text(n,"Server")||n.children.any{label(it)}

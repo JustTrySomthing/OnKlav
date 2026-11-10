@@ -9,7 +9,7 @@ const Audio=preload("res://cat_dog/audio.gd")
 const Art=preload("res://cat_dog/art.gd")
 const Chrome=preload("res://game_chrome.gd")
 const Channel=preload("res://turn_channel.gd")
-const HELP:="Tap inside a board column to drop your pet, or press and slide across the board to preview your landing spot. Release inside the board to drop. Connect four of your pets horizontally, vertically or diagonally to win. Full columns cannot accept another piece. First to win three rounds wins the tournament; draws award no win.\n\nPlay as Cat in single player. Dog looks for wins and blocks. In friend play, the inviter chooses Cats or Dogs and the inviter starts. Turns travel by text message; wait for delivery before the next move. Return to Games to retry a delayed update.\n\nThe shared top bar provides Pause/Play, save and return, Help, Sound and Settings. Reduce motion replaces the falling/bouncing effects with short fades and disables confetti."
+const HELP:="Tap inside a board column to drop your pet, or press and slide across the board to preview your landing spot. Release inside the board to drop. Connect four of your pets horizontally, vertically or diagonally to win. Full columns cannot accept another piece. First to win three rounds wins the tournament; draws award no win.\n\nChoose Cat or Dog in single player. Your rival takes the other side. In friend play, the inviter chooses Cats or Dogs and the inviter starts. Turns travel by text message; wait for delivery before the next move. Return to Games to retry a delayed update.\n\nThe shared top bar provides Pause/Play, save and return, Help, Sound and Settings. Reduce motion replaces the falling/bouncing effects with short fades and disables confetti."
 var model=Model.new()
 var network
 var audio
@@ -32,6 +32,8 @@ var report_kind:=""
 var loss_delay:=0.0
 var me:=0
 var host_dog:=false
+var side_picker: ColorRect
+var dog_choice: Button
 var invalid:=false
 var events:Array=[]
 var active:Dictionary={}
@@ -73,8 +75,10 @@ func _ready() -> void:
 	new_button.custom_minimum_size.x=148
 	footer.add_child(new_button)
 	make_report()
+	make_side_picker()
 	network.sent.connect(func(data):apply_move(me,data));network.received.connect(func(data):apply_move(1-me,data));network.changed.connect(refresh)
 	resized.connect(layout)
+	if OS.has_feature("web"): get_viewport().size_changed.connect(layout, CONNECT_DEFERRED)
 	var path:String="user://friend-"+network.match_id+".json" if network.enabled else "user://builtin-four.json"
 	OnKlavGame.attach_session(self,snapshot,restore,start_new,HELP,path,{}, {"is_resumable":func(_state:Dictionary):return network.enabled or not model.series_over()})
 	audio.music()
@@ -101,10 +105,7 @@ func _draw() -> void:
 		draw_rect(banner,Color(ink,.12),false,1)
 		Art.paw(self,Vector2(x,banner.end.y-24),12,Color(ink,.25))
 func layout() -> void:
-	var width:=432.0
-	if OS.has_feature("web"):width=maxf(320,float(JavaScriptBridge.eval("window.innerWidth")))
-	var ratio:=maxf(.01,size.x/width)
-	canvas.scale=Vector2.ONE*ratio;canvas.size=Vector2(width,maxf(200,size.y/ratio-56))
+	Chrome.fit_board(canvas, size, 56, 500)
 	scoreboard.custom_minimum_size.y=102 if canvas.size.y<600 else 122
 	queue_redraw()
 func preferences() -> void:
@@ -112,7 +113,7 @@ func preferences() -> void:
 func is_cat(actor:int) -> bool:return (actor==0)!=host_dog
 func team(actor:int) -> String:return "Cat" if is_cat(actor) else "Dog"
 func busy() -> bool:return not active.is_empty() or not events.is_empty()
-func can_play() -> bool:return intro_left<=0 and not invalid and not model.finished and not busy() and model.turn==me and (not network.enabled or (network.status=="active" and not network.sending and not network.pending))
+func can_play() -> bool:return not side_picker.visible and intro_left<=0 and not invalid and not model.finished and not busy() and model.turn==me and (not network.enabled or (network.status=="active" and not network.sending and not network.pending))
 func make_report() -> void:
 	report=PanelContainer.new();report.mouse_filter=Control.MOUSE_FILTER_IGNORE
 	report.add_theme_stylebox_override("panel",StyleBoxEmpty.new());canvas.add_child(report)
@@ -125,8 +126,63 @@ func notify(title:String,detail:String,duration:float=1.5,kind:String="") -> voi
 	report_title.add_theme_color_override("font_outline_color",Color("fff5ec") if kind=="round" else Color("07101e"))
 	report_title.add_theme_font_size_override("font_size",29 if kind=="round" else 30)
 	report_title.add_theme_color_override("font_color",Art.color(is_cat(model.winner if model.winner>=0 else me)))
+func make_side_picker() -> void:
+	side_picker = ColorRect.new()
+	side_picker.color = Color("090e20e8")
+	side_picker.hide()
+	canvas.add_child(side_picker)
+	side_picker.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	var center := CenterContainer.new()
+	side_picker.add_child(center)
+	center.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
+	var panel := PanelContainer.new()
+	var frame := Chrome.box("132239", "719fc5", 18)
+	for side in [SIDE_LEFT, SIDE_TOP, SIDE_RIGHT, SIDE_BOTTOM]:
+		frame.set_content_margin(side, 18)
+	panel.add_theme_stylebox_override("panel", frame)
+	center.add_child(panel)
+	var column := VBoxContainer.new()
+	column.add_theme_constant_override("separation",16)
+	panel.add_child(column)
+	var title := Chrome.caption("Choose your side",25)
+	title.horizontal_alignment = HORIZONTAL_ALIGNMENT_CENTER
+	column.add_child(title)
+	var choices := HBoxContainer.new()
+	choices.add_theme_constant_override("separation",16)
+	column.add_child(choices)
+	var group := ButtonGroup.new()
+	for dog in [false,true]:
+		var name_label := "Dog" if dog else "Cat"
+		var choice := Chrome.action(name_label,func(): pass)
+		choice.icon = preload("res://cat_dog/art/dog.webp") if dog else preload("res://cat_dog/art/cat.webp")
+		choice.expand_icon = true
+		choice.icon_alignment = HORIZONTAL_ALIGNMENT_CENTER
+		choice.vertical_icon_alignment = VERTICAL_ALIGNMENT_TOP
+		choice.custom_minimum_size = Vector2(130,142)
+		choice.toggle_mode = true
+		choice.button_group = group
+		choice.button_pressed = not dog
+		var ink := Art.BLUE if dog else Art.ROSE
+		choice.add_theme_stylebox_override("pressed",Chrome.box("24374b",ink.to_html(false),14))
+		choice.add_theme_stylebox_override("hover_pressed",Chrome.box("24374b",ink.to_html(false),14))
+		choices.add_child(choice)
+		if dog: dog_choice = choice
+	var play := Chrome.action("Play",confirm_side)
+	play.custom_minimum_size.y = 48
+	play.add_theme_stylebox_override("normal",Chrome.box("17604d","61b89a",14))
+	column.add_child(play)
+
+func confirm_side() -> void:
+	if not side_picker.visible or network.enabled or OnKlavGame.paused: return
+	host_dog = dog_choice.button_pressed
+	side_picker.hide()
+	intro_left = INTRO_TIME
+	OnKlavGame.checkpoint()
+	refresh()
+
 func start_new() -> void:
-	intro_left=INTRO_TIME
+	side_picker.visible=not network.enabled
+	intro_left=INTRO_TIME if network.enabled else 0.0
 	model=Model.new();invalid=false;events.clear();active={};think_time=0;outcome_shown=false;report_time=0;audio.stop();board.event={};board.win_line=[];board.celebration=0;board.recent_cell=-1;board.match_win=false;board.loss_side=-1;loss_delay=0;scoreboard.reaction_time=0;refresh()
 func next_round()->void:
 	if not model.finished or busy() or loss_delay>0 or OnKlavGame.paused:return
@@ -135,12 +191,15 @@ func next_round()->void:
 	elif model.series_over():OnKlavGame.replay()
 	else:apply_move(0,"N")
 func snapshot() -> Dictionary:
-	return {"game":"four","schema":1,"base":model.base,"tape":model.tape,"network":network.snapshot(),"friend":network.enabled,"host_dog":host_dog,"invalid":invalid}
+	return {"game":"four","schema":1,"base":model.base,"tape":model.tape,"network":network.snapshot(),"friend":network.enabled,"host_dog":host_dog,"side_pending":side_picker.visible,"invalid":invalid}
 func restore(value:Dictionary) -> bool:
 	if value.get("game")!="four":return false
 	var candidate=Model.new()
 	if value.has("friend") and value.friend!=network.enabled:return false
-	if value.has("host_dog") and value.host_dog!=host_dog:return false
+	var saved_dog: Variant = value.get("host_dog",network.enabled and network.host_dog)
+	var pending: Variant = value.get("side_pending",false)
+	if not saved_dog is bool or not pending is bool: return false
+	if network.enabled and (saved_dog!=host_dog or pending): return false
 	if value.has("tape"):
 		if not value.tape is Array or value.tape.size()>4096:return false
 		if value.has("base"):
@@ -161,6 +220,9 @@ func restore(value:Dictionary) -> bool:
 			if int(move.actor)==me:own_count+=1
 		if int(value.network.get("tx",-1))!=own_count or int(value.network.get("rx",-1))!=candidate.tape.size()-own_count:return false
 		if not network.restore(value.network):return false
+	if pending and candidate.board.any(func(cell): return cell!=0): return false
+	host_dog=saved_dog
+	side_picker.visible=pending
 	intro_left=0.0
 	model=candidate;invalid=value.get("invalid",false)==true;events.clear();active={};board.event={};think_time=.5 if not network.enabled and not model.finished and model.turn==1 else 0;outcome_shown=model.finished
 	board.win_line=Model.line_for(model.board) if model.finished else [];board.celebration=10;report_time=0
@@ -366,6 +428,7 @@ func feedback_y()->float:
 	var score_bottom:Vector2=canvas.get_global_transform_with_canvas().affine_inverse()*(scoreboard.get_global_transform_with_canvas()*Vector2(0,scoreboard.size.y))
 	return (score_bottom.y+board_top.y)*.5
 func _process(delta:float) -> void:
+	if side_picker.visible: return
 	canvas.queue_redraw()
 	if intro_left>0:
 		intro_left=maxf(0,intro_left-delta)

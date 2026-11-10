@@ -7,7 +7,24 @@ var flight_voice:AudioStreamPlayer
 var voices:Array[AudioStreamPlayer]=[]
 var next_voice:=0
 var played:Array[String]=[]
+var interface_cues: Dictionary
+func interface_cue(pitch: float, duration: float) -> AudioStreamWAV:
+	var samples := PackedByteArray()
+	var count := roundi(22050*duration)
+	samples.resize(count*2)
+	for i in range(count):
+		var t := i/22050.0
+		var envelope := minf(1,t/.006)*pow(1.0-t/duration,2)
+		var signal_value := sin(TAU*pitch*t)+.22*sin(TAU*pitch*1.5*t)
+		samples.encode_s16(i*2,roundi(signal_value*envelope*2200))
+	var stream := AudioStreamWAV.new()
+	stream.format=AudioStreamWAV.FORMAT_16_BITS
+	stream.mix_rate=22050
+	stream.data=samples
+	return stream
+
 func _ready() -> void:
+	interface_cues={"target":interface_cue(520,.085),"deploy":interface_cue(305,.15)}
 	if AudioServer.get_bus_index("Effects")==-1:
 		AudioServer.add_bus();AudioServer.set_bus_name(AudioServer.bus_count-1,"Effects")
 	for i in range(3):
@@ -20,10 +37,11 @@ func _ready() -> void:
 		for voice in voices:voice.stream_paused=false
 		flight_voice.stream_paused=false)
 func play(kind:String) -> void:
-	if not CUES.has(kind) or voices.is_empty():return
+	var stream: AudioStream = CUES.get(kind,interface_cues.get(kind))
+	if stream==null or voices.is_empty():return
 	played.append(kind)
 	if played.size()>16:played.pop_front()
-	var voice:=voices[next_voice];next_voice=(next_voice+1)%voices.size();voice.stream=CUES[kind];voice.stream_paused=false;voice.play()
+	var voice:=voices[next_voice];next_voice=(next_voice+1)%voices.size();voice.stream=stream;voice.stream_paused=false;voice.play()
 func music(finished:bool=false) -> void:
 	if not is_instance_valid(OnKlavGame.chrome):return
 	var player=OnKlavGame.chrome.soundtrack

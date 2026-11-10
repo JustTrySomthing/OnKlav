@@ -272,6 +272,7 @@ class SdkAppModel(application: Application) : AndroidViewModel(application) {
     private var carrierOwner by mutableStateOf<JSONObject?>(null)
     internal var fileConnectLocation:android.net.Uri?=null
     internal var fileStatus by mutableStateOf<String?>(null)
+    internal var filesClipboard by mutableStateOf<FilesClipboard?>(null); private set
     internal var speechCaret by mutableStateOf<EditorCaretRequest?>(null);private set
     private var caretSerial=0L
     internal fun followSpeechPosition(widget:String,text:String,at:Int) {
@@ -314,7 +315,7 @@ class SdkAppModel(application: Application) : AndroidViewModel(application) {
                 }
             }
             val result = AppSdk.call(context, JSONObject().put("action", "launch").put("id", id)) as JSONObject
-            radioOpeningEpoch=userActionEpoch;session = result.getString("session"); appId = id;if(managesYoutubePreviews)youtubePreviews=youtubePrefs.getBoolean("feed_previews",false);carrierOwner=result.optJSONObject("owner"); apply(result);sessionUnavailable=false;accessNotice=false;error=null;recoveryNotice=recovering
+            radioOpeningEpoch=userActionEpoch;filesClipboard=null;session = result.getString("session"); appId = id;if(managesYoutubePreviews)youtubePreviews=youtubePrefs.getBoolean("feed_previews",false);carrierOwner=result.optJSONObject("owner"); apply(result);sessionUnavailable=false;accessNotice=false;error=null;recoveryNotice=recovering
             if(id=="app.onklav.reader"){
                 val legacy=context.getSharedPreferences("reader",0)
                 if(!legacy.getBoolean("sdk_draft_adopted",false)){
@@ -419,12 +420,61 @@ class SdkAppModel(application: Application) : AndroidViewModel(application) {
     fun action(id: String, value: String = "", fromHostDismiss:Boolean=false) { if(!fromHostDismiss)userActionEpoch++;debounce?.cancel(); viewModelScope.launch { operations.withLock {
         if(pending!=null||sessionUnavailable)return@withLock
         busy = true; try {
+            if(appId=="app.onklav.files"&&id in setOf("copy","move","paste","paste.here","clipboard.cancel")){
+                flushLocked()
+                if(pending==null) handleFilesClipboard(id)
+                return@withLock
+            }
             if(appId=="app.onklav.files"&&id.startsWith("entry:")){
                 val target=id.removePrefix("entry:");val status=withContext(Dispatchers.IO){AppSdk.folderVault(context,"status",target)}
                 if(status.optBoolean("locked")){vaultRequest=status.put("navigate",target);return@withLock}
             }
             flushLocked(); if(pending==null)step(id,value) } catch(e: Exception) { if (e is CancellationException) throw e; error = e.message } finally { busy = false }
     } } }
+    private suspend fun handleFilesClipboard(action:String){
+        val state=frame.child("state")
+        val selected=state.child("selected")
+        val android=state.optBoolean("external_mode")
+        if(action=="clipboard.cancel"){filesClipboard=null;return}
+        if(action=="copy"||action=="move"){
+            check(selected.optString("id").isNotEmpty()&&!selected.optBoolean("protected")&&
+                !selected.optBoolean("trash")&&!selected.optBoolean("connected_root")&&
+                (action=="copy"||selected.optBoolean("editable",true))){"This item is protected."}
+            filesClipboard=FilesClipboard(JSONObject(selected.toString()),android,action=="move")
+            step("menu.close")
+            return
+        }
+        val clipboard=filesClipboard?:return
+        val intoFolder=action=="paste"&&selected.optBoolean("folder")
+        val folder=if(intoFolder) selected.optString("id") else state.optString("folder")
+        check(filesWritable(folder,state.optBoolean("in_trash"))){"Choose a writable destination folder."}
+        val token=session?:return
+        if(frame.optBoolean("menu_open"))step("menu.close")
+        val borrowed=FileSelectionSession(context).also{it.borrow(token,frame)}
+        try{
+            fileStatus=if(clipboard.move)"Moving…" else "Copying…"
+            withContext(Dispatchers.IO){
+                val job=currentCoroutineContext()
+                val authorize:()->Unit={
+                    job.ensureActive()
+                    AppSdk.sync(context,JSONObject().put("action","check").put("session",token))
+                    if(android||clipboard.android)filesPermission(context,true)
+                    if(android&&!clipboard.android)filesCapability(context,"files.export")
+                }
+                if(intoFolder&&!android)borrowed.event("entry:$folder")
+                val path=if(!android&&!clipboard.android)borrowed.breadcrumbs() else null
+                FilesTransfer(context,borrowed,authorize).paste(clipboard,folder,android,path)
+            }
+            if(clipboard.move)filesClipboard=null
+        }catch(e:FilesMoveIncomplete){
+            filesClipboard=null
+            throw e
+        }finally{
+            fileStatus=null
+            apply(borrowed.result)
+            if(pending==null&&currentCoroutineContext().isActive)step("refresh")
+        }
+    }
     internal fun androidTrash(empty:Boolean){
         if(appId!="app.onklav.files"||busy||pending!=null)return
         viewModelScope.launch{operations.withLock{

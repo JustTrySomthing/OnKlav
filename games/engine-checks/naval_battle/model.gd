@@ -77,7 +77,7 @@ func fire(cell: int) -> bool:
 	return true
 
 func result(cell: int, hit: bool, proof: Array = []) -> bool:
-	if pending != cell or phase != "battle": return false
+	if cell < 0 or pending != cell or phase != "battle": return false
 	if not proof.is_empty():
 		if not hit or proof.size() < 2 or proof.size() > 5 or cell not in proof: return false
 		var ordered := proof.duplicate(); ordered.sort()
@@ -134,13 +134,13 @@ func ai_cell() -> int:
 func ai_fire() -> Dictionary:
 	if friend or phase != "battle" or turn: return {}
 	var cell := ai_cell(); var out := defend(cell)
+	if out.is_empty():return {}
 	if out.get("hit",false) and out.get("proof",[]).is_empty():
 		for n in [cell-10,cell+10]:
 			if n >= 0 and n < 100: hunt.append(n)
 		for n in [cell-1,cell+1]:
 			if n >= 0 and n < 100 and n / 10 == cell / 10: hunt.append(n)
 	elif not out.get("proof",[]).is_empty(): hunt.clear()
-	out["cell"] = cell
 	return out
 
 static func hit_count(values: Dictionary) -> int:
@@ -160,16 +160,19 @@ static func legal_fleet(fleet: Variant, empty: bool = false) -> bool:
 			if empty and fleet[i] is Array and fleet[i].is_empty(): continue
 			return false
 		if fleet[i].size() != LENGTHS[i]: return false
+		if not fleet[i].all(valid_cell):return false
 		var sorted: Array = fleet[i].duplicate(); sorted.sort()
 		var step := int(sorted[1]) - int(sorted[0])
 		if step not in [1,10]: return false
 		for j in range(sorted.size()):
 			var value: Variant = sorted[j]
-			if not (value is int or value is float) or not is_finite(float(value)) or float(value) != int(value) or int(value) < 0 or int(value) > 99: return false
 			var n := int(value)
 			if n in used or n != int(sorted[0]) + j * step or (step == 1 and n / 10 != int(sorted[0]) / 10): return false
 			used.append(n)
 	return true
+
+static func valid_cell(value: Variant) -> bool:
+	return (value is int or value is float) and value>=0 and value<=99 and value==floor(value)
 
 func restore(data: Dictionary) -> bool:
 	if data.get("schema") != 1 or not legal_fleet(data.get("ships"),data.get("phase") == "setup"): return false
@@ -179,16 +182,22 @@ func restore(data: Dictionary) -> bool:
 	for key in ["shots","incoming"]:
 		if not data.get(key) is Dictionary or data[key].size() > 100: return false
 		for n in data[key]:
-			if not str(n).is_valid_int() or int(n) < 0 or int(n) > 99 or data[key][n] not in ["hit","miss","pending"]: return false
-	var next_pending := int(data.get("pending",-1))
-	if next_pending < -1 or next_pending > 99 or (next_pending >= 0 and data.shots.get(str(next_pending)) != "pending"): return false
+			if not n is String or not n.is_valid_int() or n!=str(int(n)) or not valid_cell(int(n)) or data[key][n] not in ["hit","miss","pending"]: return false
+	var saved_pending:Variant=data.get("pending",-1)
+	if saved_pending!=-1 and not valid_cell(saved_pending):return false
+	var next_pending := int(saved_pending)
+	if next_pending>=0 and (data.phase!="battle" or not data.get("turn") or data.shots.get(str(next_pending))!="pending"):return false
 	if not data.get("opponent") is Array or data.opponent.size()>5:return false
 	for key in ["turn","own_ready","peer_ready","friend","host"]:
 		if not data.get(key)is bool:return false
 	if data.get("phase")in["battle","finished"] and (not data.own_ready or not data.peer_ready):return false
 	if data.get("phase")=="waiting" and (not data.own_ready or data.peer_ready):return false
 	if data.get("winner")not in["","you","them"]:return false
-	if data.get("phase")=="finished" and data.winner=="":return false
+	if data.phase=="finished":
+		if data.winner=="":return false
+		var winning_marks:Dictionary=data.shots if data.winner=="you" else data.incoming
+		if hit_count(winning_marks)!=17:return false
+	elif data.winner!="":return false
 	if not data.get("sunk") is Array or data.sunk.size() > 17 or not data.get("hunt") is Array or data.hunt.size() > 400: return false
 	var seen:=[]
 	for n in data.sunk:
@@ -201,7 +210,7 @@ func restore(data: Dictionary) -> bool:
 	if not next_wrecks is Array or next_wrecks.size()>5:return false
 	var wreck_cells:=[];var wreck_lengths:=[]
 	for wreck in next_wrecks:
-		if not wreck is Array or wreck.size() not in LENGTHS:return false
+		if not wreck is Array or wreck.size() not in LENGTHS or not wreck.all(valid_cell):return false
 		var ordered:Array=wreck.duplicate();ordered.sort()
 		var stride:int=int(ordered[1])-int(ordered[0])
 		if stride not in [1,10]:return false
@@ -216,6 +225,9 @@ func restore(data: Dictionary) -> bool:
 			if ship.all(func(n):return n in data.sunk):next_wrecks.append(ship.duplicate())
 	wrecks=next_wrecks.duplicate(true)
 	ships = data.ships.duplicate(true); opponent = data.opponent.duplicate(true); shots = data.shots.duplicate(); incoming = data.incoming.duplicate(); sunk = data.sunk.duplicate()
+	for ship in ships+ wrecks:ship.sort()
+	if not friend and data.own_ready:
+		for ship in opponent:ship.sort()
 	pending = next_pending; phase = data.phase; turn = bool(data.turn); own_ready = bool(data.own_ready); peer_ready = bool(data.peer_ready); winner = str(data.winner); hunt = data.hunt.duplicate()
 	return true
 

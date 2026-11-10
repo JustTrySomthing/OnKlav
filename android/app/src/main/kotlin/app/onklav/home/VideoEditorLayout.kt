@@ -89,24 +89,19 @@ internal val videoToolGroups = listOf(
     options: List<Pair<String, () -> Unit>>,
 ) {
     VideoEditorSheet("Editor options", dismiss) {
-        Column(Modifier.verticalScroll(rememberScrollState()), verticalArrangement = Arrangement.spacedBy(8.dp)) {
-            options.chunked(2).forEach { row ->
-                Row(Modifier.fillMaxWidth(), horizontalArrangement = Arrangement.spacedBy(8.dp)) {
-                    row.forEach { (label, action) ->
-                        Surface(
-                            onClick = { dismiss(); action() },
-                            modifier = Modifier.weight(1f),
-                            enabled = enabled,
-                            shape = RoundedCornerShape(14.dp),
-                            color = MaterialTheme.colorScheme.surfaceContainerHigh,
-                        ) {
-                            Box(Modifier.heightIn(min = 52.dp).padding(horizontal = 12.dp, vertical = 10.dp),
-                                contentAlignment = Alignment.CenterStart) {
-                                Text(label, style = MaterialTheme.typography.titleSmall)
-                            }
-                        }
+        Column(Modifier.verticalScroll(rememberScrollState())) {
+            AlignedCardGrid(options, gap = 8.dp) { (label, action), modifier ->
+                Surface(
+                    onClick = { dismiss(); action() },
+                    modifier = modifier,
+                    enabled = enabled,
+                    shape = RoundedCornerShape(14.dp),
+                    color = MaterialTheme.colorScheme.surfaceContainerHigh,
+                ) {
+                    Box(Modifier.heightIn(min = 52.dp).padding(horizontal = 12.dp, vertical = 10.dp),
+                        contentAlignment = Alignment.CenterStart) {
+                        Text(label, style = MaterialTheme.typography.titleSmall)
                     }
-                    if (row.size == 1) Spacer(Modifier.weight(1f))
                 }
             }
         }

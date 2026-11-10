@@ -177,7 +177,18 @@ func run() -> void:
 	root.add_child(ui)
 	await frames(3)
 	check(ui.loaded and ui.rink.paused and is_instance_valid(ui.chrome.dialog), "fresh game offers its supported start mode")
-	await ui.start_single_player()
+	ui.show_difficulty()
+	var choices: Array = ui.chrome.dialog.find_children("*","Button",true,false)
+	check(choices.any(func(item): return item.text=="Easy") and choices.any(func(item): return item.text=="Normal")
+		and choices.any(func(item): return item.text=="Hard") and ui.serve_button.disabled,
+		"all difficulty choices are offered before the first serve")
+	await ui.start_single_player(Rink.Difficulty.HARD)
+	check(ui.rink.difficulty==Rink.Difficulty.HARD,"choosing Hard configures the rival")
+	var old_rink: Dictionary = ui.rink.snapshot()
+	old_rink.erase("difficulty")
+	check(Store.valid_rink(old_rink),"old rink checkpoints load as Normal")
+	old_rink.difficulty = 3
+	check(not Store.valid_rink(old_rink),"invalid difficulty is rejected")
 	check(not ui.serve_button.disabled and ui.state.scores == [0, 0], "single player selection starts ready to serve")
 	ui.serve()
 	await frames(3)
@@ -235,6 +246,7 @@ func run() -> void:
 	root.add_child(resume_ui)
 	await frames(3)
 	check(resume_ui.rink.paused and resume_ui.state.phase == MatchState.Phase.PLAYING and is_instance_valid(resume_ui.chrome.dialog), "another game request retains and gates on current match")
+	check(resume_ui.rink.difficulty==Rink.Difficulty.HARD,"Hard is restored with the saved match")
 	await resume_ui.restart()
 	check(resume_ui.state.scores == [0, 0] and resume_ui.state.phase == MatchState.Phase.WAITING and not resume_ui.rink.paused, "restart replaces score and resets physics")
 	for i in range(10):

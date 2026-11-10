@@ -1,0 +1,198 @@
+To honour the JVM settings for this build a single-use Daemon process will be forked. For more on this, please refer to https://docs.gradle.org/8.11.1/userguide/gradle_daemon.html#sec:disabling_the_daemon in the Gradle documentation.
+Daemon will be stopped at the end of the build
+
+> Configure project :android:app
+WARNING: The option setting 'android.aapt2FromMavenOverride=/workspace/scratch/9ccdbd7839a6/onklav-release-build-env/sdk/build-tools/35.0.0/aapt2' is experimental.
+WARNING: platform-tools package is not installed.
+
+> Task :android:app:preBuild UP-TO-DATE
+> Task :android:app:preOptimizedBuild UP-TO-DATE
+> Task :android:app:mergeOptimizedJniLibFolders
+> Task :android:games:preBuild UP-TO-DATE
+> Task :android:games:preReleaseBuild UP-TO-DATE
+> Task :android:games:mergeReleaseJniLibFolders
+> Task :android:games:mergeReleaseNativeLibs NO-SOURCE
+> Task :android:shared:preBuild UP-TO-DATE
+> Task :android:shared:preReleaseBuild UP-TO-DATE
+> Task :android:games:copyReleaseJniLibsProjectOnly
+> Task :android:shared:mergeReleaseJniLibFolders
+> Task :android:tools:preBuild UP-TO-DATE
+> Task :android:tools:preReleaseBuild UP-TO-DATE
+> Task :android:tools:mergeReleaseJniLibFolders
+> Task :android:tools:mergeReleaseNativeLibs NO-SOURCE
+> Task :android:tools:copyReleaseJniLibsProjectOnly
+> Task :android:shared:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:shared:generateReleaseResValues UP-TO-DATE
+> Task :android:shared:generateReleaseResources UP-TO-DATE
+> Task :android:shared:packageReleaseResources UP-TO-DATE
+> Task :android:shared:parseReleaseLocalResources UP-TO-DATE
+> Task :android:shared:generateReleaseRFile UP-TO-DATE
+> Task :android:shared:mergeReleaseNativeLibs
+> Task :android:shared:compileReleaseKotlin UP-TO-DATE
+> Task :android:shared:javaPreCompileRelease UP-TO-DATE
+> Task :android:shared:compileReleaseJavaWithJavac NO-SOURCE
+> Task :android:shared:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :android:tools:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:tools:generateReleaseResValues UP-TO-DATE
+> Task :android:tools:generateReleaseResources UP-TO-DATE
+> Task :android:tools:packageReleaseResources UP-TO-DATE
+> Task :android:tools:parseReleaseLocalResources UP-TO-DATE
+> Task :android:tools:generateReleaseRFile UP-TO-DATE
+> Task :android:shared:copyReleaseJniLibsProjectOnly
+> Task :android:tools:compileReleaseKotlin UP-TO-DATE
+> Task :android:tools:javaPreCompileRelease UP-TO-DATE
+> Task :android:tools:compileReleaseJavaWithJavac NO-SOURCE
+> Task :android:tools:mergeReleaseGeneratedProguardFiles
+> Task :android:tools:exportReleaseConsumerProguardFiles
+> Task :android:shared:mergeReleaseGeneratedProguardFiles
+> Task :android:shared:exportReleaseConsumerProguardFiles
+> Task :android:games:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:games:generateReleaseResValues UP-TO-DATE
+> Task :android:games:generateReleaseResources UP-TO-DATE
+> Task :android:games:packageReleaseResources UP-TO-DATE
+> Task :android:games:parseReleaseLocalResources UP-TO-DATE
+> Task :android:games:generateReleaseRFile UP-TO-DATE
+> Task :android:games:compileReleaseKotlin NO-SOURCE
+> Task :android:games:javaPreCompileRelease UP-TO-DATE
+> Task :android:games:compileReleaseJavaWithJavac NO-SOURCE
+> Task :android:games:mergeReleaseGeneratedProguardFiles
+> Task :android:games:exportReleaseConsumerProguardFiles
+> Task :android:app:buildKotlinToolingMetadata
+> Task :android:app:mergeOptimizedNativeLibs
+> Task :android:app:checkOptimizedDuplicateClasses
+> Task :android:app:checkKotlinGradlePluginConfigurationErrors SKIPPED
+> Task :android:app:generateOptimizedBuildConfig UP-TO-DATE
+> Task :android:games:writeReleaseAarMetadata UP-TO-DATE
+> Task :android:shared:writeReleaseAarMetadata UP-TO-DATE
+> Task :android:tools:writeReleaseAarMetadata UP-TO-DATE
+> Task :android:app:checkOptimizedAarMetadata UP-TO-DATE
+> Task :android:app:generateOptimizedResValues UP-TO-DATE
+
+> Task :android:app:stripOptimizedDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libandroidx.graphics.path.so, libimage_processing_util_jni.so, libsurface_util_jni.so.
+
+> Task :android:app:mapOptimizedSourceSetPaths UP-TO-DATE
+> Task :android:app:generateOptimizedResources UP-TO-DATE
+> Task :android:app:extractOptimizedNativeSymbolTables
+> Task :android:app:mergeOptimizedResources UP-TO-DATE
+> Task :android:app:mergeOptimizedNativeDebugMetadata NO-SOURCE
+> Task :android:app:packageOptimizedResources UP-TO-DATE
+> Task :android:app:parseOptimizedLocalResources UP-TO-DATE
+> Task :android:app:createOptimizedCompatibleScreenManifests UP-TO-DATE
+> Task :android:app:extractDeepLinksOptimized UP-TO-DATE
+> Task :android:games:extractDeepLinksRelease UP-TO-DATE
+> Task :android:games:processReleaseManifest UP-TO-DATE
+> Task :android:shared:extractDeepLinksRelease UP-TO-DATE
+> Task :android:shared:processReleaseManifest UP-TO-DATE
+> Task :android:tools:extractDeepLinksRelease UP-TO-DATE
+> Task :android:tools:processReleaseManifest UP-TO-DATE
+> Task :android:app:processOptimizedMainManifest UP-TO-DATE
+> Task :android:app:processOptimizedManifest UP-TO-DATE
+> Task :android:app:processOptimizedManifestForPackage UP-TO-DATE
+> Task :android:games:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :android:tools:bundleLibCompileToJarRelease UP-TO-DATE
+> Task :android:app:javaPreCompileOptimized
+> Task :android:games:prepareReleaseArtProfile
+> Task :android:shared:prepareReleaseArtProfile
+> Task :android:tools:prepareReleaseArtProfile
+> Task :android:app:mergeOptimizedArtProfile
+> Task :android:games:bundleLibRuntimeToJarRelease
+> Task :android:shared:bundleLibRuntimeToJarRelease
+> Task :android:tools:bundleLibRuntimeToJarRelease
+> Task :android:app:extractProguardFiles
+> Task :android:games:processReleaseJavaRes NO-SOURCE
+> Task :android:shared:processReleaseJavaRes
+> Task :android:tools:processReleaseJavaRes
+> Task :android:app:mergeOptimizedStartupProfile
+> Task :android:app:mergeOptimizedShaders
+> Task :android:app:compileOptimizedShaders NO-SOURCE
+> Task :android:app:generateOptimizedAssets UP-TO-DATE
+> Task :android:games:mergeReleaseShaders
+> Task :android:games:compileReleaseShaders NO-SOURCE
+> Task :android:games:generateReleaseAssets UP-TO-DATE
+> Task :android:games:mergeReleaseAssets
+> Task :android:shared:mergeReleaseShaders
+> Task :android:shared:compileReleaseShaders NO-SOURCE
+> Task :android:shared:generateReleaseAssets UP-TO-DATE
+> Task :android:app:processOptimizedResources
+> Task :android:shared:mergeReleaseAssets
+> Task :android:app:compileOptimizedKotlin UP-TO-DATE
+> Task :android:app:compileOptimizedJavaWithJavac
+> Task :android:app:mergeOptimizedGeneratedProguardFiles
+> Task :android:app:processOptimizedJavaRes
+> Task :android:app:expandOptimizedArtProfileWildcards
+> Task :android:tools:mergeReleaseShaders
+> Task :android:tools:compileReleaseShaders NO-SOURCE
+> Task :android:app:mergeOptimizedJavaResource
+> Task :android:tools:generateReleaseAssets UP-TO-DATE
+> Task :android:tools:mergeReleaseAssets
+> Task :android:app:mergeOptimizedAssets
+> Task :android:app:compressOptimizedAssets
+> Task :android:app:extractOptimizedVersionControlInfo
+> Task :android:games:createFullJarRelease
+> Task :android:games:extractProguardFiles
+> Task :android:games:generateReleaseLintModel
+> Task :android:games:prepareLintJarForPublish
+> Task :android:shared:createFullJarRelease
+> Task :android:shared:extractProguardFiles
+> Task :android:shared:generateReleaseLintModel
+> Task :android:shared:prepareLintJarForPublish
+> Task :android:tools:createFullJarRelease
+> Task :android:tools:extractProguardFiles
+> Task :android:tools:generateReleaseLintModel
+> Task :android:tools:prepareLintJarForPublish
+> Task :android:app:generateOptimizedLintVitalReportModel
+> Task :android:tools:stripReleaseDebugSymbols NO-SOURCE
+> Task :android:tools:copyReleaseJniLibsProjectAndLocalJars
+> Task :android:tools:extractDeepLinksForAarRelease
+> Task :android:tools:extractReleaseAnnotations
+> Task :android:tools:mergeReleaseConsumerProguardFiles
+> Task :android:tools:mergeReleaseJavaResource
+> Task :android:tools:syncReleaseLibJars
+> Task :android:tools:bundleReleaseLocalLintAar
+
+> Task :android:shared:stripReleaseDebugSymbols
+Unable to strip the following libraries, packaging them as they are: libonklav_core.so, libonklav_speech.so, libonnxruntime.so, libsherpa-onnx-c-api.so.
+
+> Task :android:shared:copyReleaseJniLibsProjectAndLocalJars
+> Task :android:shared:extractDeepLinksForAarRelease
+> Task :android:shared:extractReleaseAnnotations
+> Task :android:shared:mergeReleaseConsumerProguardFiles
+> Task :android:shared:mergeReleaseJavaResource
+> Task :android:shared:syncReleaseLibJars
+> Task :android:shared:bundleReleaseLocalLintAar
+> Task :android:games:stripReleaseDebugSymbols NO-SOURCE
+> Task :android:games:copyReleaseJniLibsProjectAndLocalJars
+> Task :android:games:extractDeepLinksForAarRelease
+> Task :android:games:extractReleaseAnnotations
+> Task :android:games:mergeReleaseConsumerProguardFiles
+> Task :android:games:mergeReleaseJavaResource
+> Task :android:games:syncReleaseLibJars
+> Task :android:games:bundleReleaseLocalLintAar
+> Task :android:games:lintVitalAnalyzeRelease
+> Task :android:games:writeReleaseLintModelMetadata
+> Task :android:shared:lintVitalAnalyzeRelease
+> Task :android:shared:writeReleaseLintModelMetadata
+> Task :android:tools:lintVitalAnalyzeRelease
+> Task :android:tools:writeReleaseLintModelMetadata
+> Task :android:app:minifyOptimizedWithR8
+> Task :android:app:lintVitalAnalyzeOptimized
+> Task :android:games:generateReleaseLintVitalModel
+> Task :android:shared:generateReleaseLintVitalModel
+> Task :android:tools:generateReleaseLintVitalModel
+> Task :android:app:lintVitalReportOptimized
+> Task :android:app:lintVitalOptimized
+> Task :android:app:collectOptimizedDependencies
+> Task :android:app:sdkOptimizedDependencyData
+> Task :android:app:validateSigningOptimized
+> Task :android:app:writeOptimizedAppMetadata
+> Task :android:app:writeOptimizedSigningConfigVersions
+> Task :android:app:convertShrunkResourcesToBinaryOptimized
+> Task :android:app:compileOptimizedArtProfile
+> Task :android:app:optimizeOptimizedResources
+> Task :android:app:packageOptimized
+> Task :android:app:createOptimizedApkListingFileRedirect
+> Task :android:app:assembleOptimized
+
+BUILD SUCCESSFUL in 3m 30s
+151 actionable tasks: 105 executed, 46 up-to-date

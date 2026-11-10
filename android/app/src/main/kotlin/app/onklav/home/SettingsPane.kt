@@ -3,13 +3,10 @@ package app.onklav.home
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.icons.outlined.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.*
-import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.platform.testTag
-import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.*
 
 private val settingsIcons =
@@ -34,78 +31,43 @@ private val settingsIcons =
 
 @Composable
 fun SettingsPane(open: (String) -> Unit) {
-    val fontScale = LocalDensity.current.fontScale
-    BoxWithConstraints(Modifier.fillMaxSize().testTag("settings-pane")) {
-        val columns = if (fontScale > 1.3f || maxWidth - 16.dp < 300.dp) 1 else 2
+    Box(Modifier.fillMaxSize().testTag("settings-pane"), contentAlignment = Alignment.TopCenter) {
         Column(
-            Modifier.align(Alignment.TopCenter).widthIn(max=760.dp).fillMaxWidth().fillMaxHeight().verticalScroll(rememberScrollState()).padding(vertical = 6.dp),
-            verticalArrangement = Arrangement.Top,
+            Modifier.widthIn(max = 760.dp).fillMaxWidth().fillMaxHeight()
+                .verticalScroll(rememberScrollState()).padding(vertical = 6.dp),
+            verticalArrangement = Arrangement.spacedBy(10.dp),
         ) {
-            @Composable
-            fun row(names: List<String>, slots: Int, shortcut: Boolean = false) {
-                Row(
-                    Modifier.fillMaxWidth().padding(vertical = if (shortcut) 0.dp else 4.dp),
-                    horizontalArrangement = Arrangement.spacedBy(8.dp),
-                ) {
-                    names.forEach { name ->
-                        Surface(
-                            onClick = { open(name) },
-                            modifier = Modifier.weight(1f).heightIn(min = 64.dp),
-                            shape = RoundedCornerShape(12.dp),
-                            color = MaterialTheme.colorScheme.surface,
-                        ) {
-                            Row(
-                                Modifier.padding(
-                                    start = 14.dp,
-                                    end = 12.dp,
-                                    top = 12.dp,
-                                    bottom = 12.dp,
-                                ),
-                                verticalAlignment = Alignment.CenterVertically,
-                            ) {
-                                Icon(
-                                    androidx.compose.ui.res.painterResource(
-                                        settingsIcons.getValue(name)
-                                    ),
-                                    null,
-                                    Modifier.size(20.dp),
-                                    tint = MaterialTheme.colorScheme.primary,
-                                )
-                                Text(
-                                    name,
-                                    Modifier.weight(1f).padding(start = 10.dp),
-                                    fontSize = 14.sp,
-                                    maxLines =
-                                        if (columns == 1) 3 else 2,
-                                    overflow = TextOverflow.Ellipsis,
-                                )
-                            }
-                        }
-                    }
-                    repeat(slots - names.size) { Spacer(Modifier.weight(1f)) }
-                }
+            AlignedCardGrid(listOf("Appearance", "Profile"), gap = 8.dp) { name, modifier ->
+                SettingsCard(name, modifier) { open(name) }
             }
-            val shortcuts = columns
-            listOf("Appearance", "Profile").chunked(shortcuts).forEach { row(it, shortcuts, true) }
-            Spacer(Modifier.height(2.dp))
-            listOf(
-                    "Setup",
-                    "Sounds",
-                    "Security",
-                    "Storage",
-                    "Read Aloud",
-                    "Backups",
-                    "Games",
-                    "Apps",
-                    "Walkie Talkie",
-                    "Quiet Hours",
-                    "Reminders",
-                    "Help",
-                    "About",
-                    "Advanced",
-                )
-                .chunked(columns)
-                .forEach { row(it, columns) }
+            AlignedCardGrid(
+                listOf("Setup", "Sounds", "Security", "Storage", "Read Aloud", "Backups", "Games",
+                    "Apps", "Walkie Talkie", "Quiet Hours", "Reminders", "Help", "About", "Advanced"),
+                maxColumns = 3,
+                gap = 8.dp,
+            ) { name, modifier ->
+                SettingsCard(name, modifier) { open(name) }
+            }
+        }
+    }
+}
+
+@Composable
+private fun SettingsCard(name: String, modifier: Modifier, open: () -> Unit) {
+    Surface(
+        onClick = open,
+        modifier = modifier.heightIn(min = 64.dp),
+        shape = RoundedCornerShape(12.dp),
+        color = MaterialTheme.colorScheme.surface,
+    ) {
+        Row(
+            Modifier.padding(horizontal = 12.dp, vertical = 12.dp),
+            horizontalArrangement = Arrangement.spacedBy(8.dp),
+            verticalAlignment = Alignment.CenterVertically,
+        ) {
+            Icon(androidx.compose.ui.res.painterResource(settingsIcons.getValue(name)), null,
+                Modifier.size(20.dp), tint = MaterialTheme.colorScheme.primary)
+            Text(name, Modifier.weight(1f), style = MaterialTheme.typography.titleSmall)
         }
     }
 }

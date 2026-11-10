@@ -20,6 +20,11 @@ internal class FileSelectionSession(private val c:Context):AutoCloseable {
  private val external=ExternalFiles(c,"app.onklav.files")
  private fun call(q:JSONObject)=AppSdk.sync(c,q)as JSONObject
  fun start(){check(session.isEmpty());result=call(JSONObject().put("action","launch").put("id","app.onklav.files"));session=result.getString("session");settle()}
+ internal fun borrow(token:String,frame:JSONObject){
+  check(session.isEmpty())
+  session=token
+  result=JSONObject().put("session",token).put("frame",frame)
+ }
  fun authorize(p:JSONObject)=call(JSONObject().put("action","authorize").put("session",session).put("token",p.getString("token")))
  private fun settle(){repeat(4){val p=result.optJSONObject("pending")?:return;val a=authorize(p);check(a.optString("service")=="library.external"&&a.child("args").optString("operation")=="list"){"Complete or cancel the current file action"};val rows=external.run(a.child("args")){authorize(p)};result=call(JSONObject().put("action","reply").put("session",session).put("token",p.getString("token")).put("reply",JSONObject().put("ok",true).put("value",rows)))};error("File listing did not settle")}
  fun event(action:String,value:String="",complete:Boolean=true):JSONObject{result=call(JSONObject().put("action","event").put("session",session).put("event",JSONObject().put("action",action).put("value",value)));if(complete)settle();val status=state.optString("status");check(status.isBlank()||(action=="copy"&&status.startsWith("Copied.")&&state.child("clipboard").optString("id").isNotBlank())){status};return result}
@@ -34,11 +39,23 @@ internal class FileSelectionSession(private val c:Context):AutoCloseable {
   result=call(JSONObject().put("action","reply").put("session",session).put("token",p.getString("token")).put("reply",JSONObject().put("ok",true).put("value",JSONObject())));settle();return descriptor
  }
  fun importSaved(path:List<String>,file:File,name:String,mime:String):JSONObject{
-  navigate(path);check(!state.optBoolean("external_mode")&&state.optString("folder") !in setOf("","system","trash","external"))
+  navigate(path);return importHere(file,name,mime,continueSession=false)
+ }
+ internal fun importHere(file:File,name:String,mime:String,checkTransfer:()->Unit={},continueSession:Boolean=true):JSONObject{
+  check(!state.optBoolean("external_mode")&&state.optString("folder") !in setOf("","system","trash","external"))
   val p=event("import",complete=false).getJSONObject("pending");authorize(p)
   return runBlocking{AppSdk.staging.withLock{
    val staging=File(c.filesDir,"content-import.tmp")
-   try{file.inputStream().use{input->staging.outputStream().use{FilesBroker.copyBoundedLimit(input,it,if(mime.startsWith("audio/")||mime.startsWith("video/"))2L*1024*1024*1024 else FilesBroker.MAX_FILE){authorize(p)}}};call(JSONObject().put("action","library_host").put("session",session).put("token",p.getString("token")).put("operation","import").put("name",name).put("mime",mime))}finally{staging.delete()}
+   try{
+    file.inputStream().use{input->staging.outputStream().use{FilesBroker.copyBoundedLimit(input,it,if(mime.startsWith("audio/")||mime.startsWith("video/"))2L*1024*1024*1024 else FilesBroker.MAX_FILE){checkTransfer();authorize(p)}}}
+    checkTransfer()
+    val saved=call(JSONObject().put("action","library_host").put("session",session).put("token",p.getString("token")).put("operation","import").put("name",name).put("mime",mime))
+    if(continueSession){
+     result=call(JSONObject().put("action","reply").put("session",session).put("token",p.getString("token")).put("reply",JSONObject().put("ok",true).put("value",saved)))
+     settle()
+    }
+    saved
+   }catch(e:Exception){if(continueSession)cancelPending(e.message?:"Copy failed");throw e}finally{staging.delete()}
   }}
  }
  fun connect(uri:Uri){val p=event("external.connect",complete=false).getJSONObject("pending");val saved=external.connect(uri){authorize(p)};result=call(JSONObject().put("action","reply").put("session",session).put("token",p.getString("token")).put("reply",JSONObject().put("ok",true).put("value",saved)));settle()}

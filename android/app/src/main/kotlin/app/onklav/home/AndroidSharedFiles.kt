@@ -29,10 +29,14 @@ internal object AndroidFilesAccess {
   val parts=relative.split('/').filter{it.isNotEmpty()};if(parts.isEmpty())return true
   val standard=setOf("Android","DCIM","Pictures","Music","Movies","Download","Downloads","Documents","Alarms","Notifications","Ringtones","Podcasts","Audiobooks","Recordings","Samsung","Amazon","OnKlav Trash","LOST.DIR")
   if(parts.size==1&&folder&&(parts[0] in standard||parts[0].matches(Regex("(?:com|org|net)\\.[A-Za-z0-9_.]+"))))return true
-  if(folder&&(parts[0] in setOf("Samsung","Amazon")||parts[0].matches(Regex("(?:com|org|net)\\.[A-Za-z0-9_.]+"))))return true
+  if(appManaged(relative))return true
   if(folder&&relative in setOf("DCIM/Camera","DCIM/Screenshots","Pictures/Screenshots"))return true
   if(parts[0]=="Android")return folder||parts.drop(1).any{it in setOf("data","obb")}||relative.substringAfterLast('.').lowercase() in setOf("db","sqlite","sqlite3","xml","json","ini","cfg","properties")
   return false
+ }
+ fun appManaged(relative:String):Boolean{
+  val top=relative.substringBefore('/')
+  return top in setOf("Samsung","Amazon","LOST.DIR")||top.matches(Regex("(?:com|org|net)\\.[A-Za-z0-9_.]+"))
  }
  val categories=listOf("audio" to "Audio","video" to "Video","images" to "Images","documents" to "Documents","downloads" to "Downloads","trash" to "Trash","other" to "Internal files")
  private val legacyCategories=listOf("photos" to "Photos","apk" to "APK")

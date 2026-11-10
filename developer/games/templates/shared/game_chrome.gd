@@ -29,15 +29,6 @@ static var music_stream: AudioStreamWAV
 
 const PREFS := "user://onklav-game-controls.cfg"
 
-static func fit_board(board: Control, available: Vector2, reserved_height: float, min_height: float) -> void:
-	var logical_width := 432.0
-	if OS.has_feature("web"):
-		logical_width = maxf(320, float(JavaScriptBridge.eval("window.innerWidth")))
-	var ratio := maxf(.01, minf(available.x / logical_width, available.y / (min_height + reserved_height)))
-	board.scale = Vector2.ONE * ratio
-	board.position.x = maxf(0, (available.x - logical_width * ratio) * .5)
-	board.size = Vector2(logical_width, maxf(min_height, available.y / ratio - reserved_height))
-
 static func box(fill: String = "102638", edge: String = "294c60", radius: int = 14) -> StyleBoxFlat:
 	var item := StyleBoxFlat.new()
 	item.bg_color = Color(fill)
@@ -226,6 +217,43 @@ static func request_start_menu() -> bool:
 		return true
 	return false
 
+## Keep the existing phone units while fitting short windows and wide tablets.
+static func window_width() -> float:
+	if OS.has_feature("web"):
+		return maxf(320, float(JavaScriptBridge.eval("window.innerWidth")))
+	return 432.0
+
+static func fit_board(canvas: Control, available: Vector2, header: float, min_height: float) -> void:
+	var width := window_width()
+	var phone_scale := maxf(0.001, available.x / width)
+	var height := maxf(1.0, available.y - header * phone_scale)
+	var scale_factor := maxf(0.001, minf(phone_scale, height / min_height))
+	var board_width := minf(width, 540.0)
+	canvas.scale = Vector2.ONE * scale_factor
+	canvas.position = Vector2((available.x - board_width * scale_factor) * .5, 0)
+	canvas.size = Vector2(board_width, height / scale_factor)
+
+## Fit modal layers to the current viewport, including while gameplay is paused.
+static func fit_layer(screen: Control, after_fit: Callable = Callable()) -> void:
+	var viewport := screen.get_viewport()
+	var update := func():
+		if not is_instance_valid(screen) or not screen.is_inside_tree(): return
+		var extent := viewport.get_visible_rect().size
+		var scale_factor := maxf(0.001, minf(extent.x / window_width(), extent.y / 240.0))
+		screen.scale = Vector2.ONE * scale_factor
+		screen.size = extent / scale_factor
+		if after_fit.is_valid(): after_fit.call()
+	viewport.size_changed.connect(update)
+	screen.tree_exiting.connect(func(): viewport.size_changed.disconnect(update), CONNECT_ONE_SHOT)
+	update.call()
+
+static func fit_dialog(screen: Control, panel: PanelContainer, content: VBoxContainer) -> void:
+	var fit_panel := func():
+		panel.custom_minimum_size = Vector2(minf(400.0, screen.size.x - 32.0),
+			minf(content.get_combined_minimum_size().y + 16.0, screen.size.y - 32.0))
+	content.minimum_size_changed.connect(fit_panel)
+	fit_layer(screen, fit_panel)
+
 func show_pause_notice(value: bool) -> void:
 	pause_attention = value
 	blink_time = 0
@@ -237,13 +265,9 @@ func show_pause_notice(value: bool) -> void:
 	pause_notice.layer = 90
 	add_child(pause_notice)
 	var screen := Control.new()
-	var viewport := get_viewport_rect().size
-	var width := 432.0
-	if OS.has_feature("web"): width = maxf(320, float(JavaScriptBridge.eval("window.innerWidth")))
-	screen.scale = Vector2.ONE * viewport.x / width
-	screen.size = viewport / screen.scale
 	screen.mouse_filter = Control.MOUSE_FILTER_IGNORE
 	pause_notice.add_child(screen)
+	fit_layer(screen)
 	var center := CenterContainer.new()
 	center.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	center.mouse_filter = Control.MOUSE_FILTER_IGNORE
@@ -332,12 +356,6 @@ func dialog_box(title: String) -> VBoxContainer:
 	dialog.layer = 200
 	add_child(dialog)
 	var screen := Control.new()
-	var viewport := get_viewport_rect().size
-	var width := 432.0
-	if OS.has_feature("web"):
-		width = maxf(320, float(JavaScriptBridge.eval("window.innerWidth")))
-	screen.scale = Vector2.ONE * viewport.x / width
-	screen.size = Vector2(width, viewport.y / screen.scale.y)
 	dialog.add_child(screen)
 	var shade := ColorRect.new()
 	shade.color = Color(0, 0, 0, .72)
@@ -347,7 +365,6 @@ func dialog_box(title: String) -> VBoxContainer:
 	center.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	shade.add_child(center)
 	var panel := PanelContainer.new()
-	panel.custom_minimum_size.x = minf(400, width - 32)
 	panel.add_theme_stylebox_override("panel", box("102638", "38d4ea", 20))
 	center.add_child(panel)
 	var content := VBoxContainer.new()
@@ -357,9 +374,7 @@ func dialog_box(title: String) -> VBoxContainer:
 	panel.add_child(scroll)
 	content.size_flags_horizontal = Control.SIZE_EXPAND_FILL
 	scroll.add_child(content)
-	var layer:=dialog
-	content.minimum_size_changed.connect(func():
-		if is_instance_valid(layer) and not layer.is_queued_for_deletion() and is_instance_valid(panel) and is_instance_valid(screen):panel.custom_minimum_size.y = minf(content.get_combined_minimum_size().y + 16, maxf(80, screen.size.y - 32)))
+	fit_dialog(screen, panel, content)
 	if not title.is_empty(): content.add_child(caption(title, 24))
 	return content
 

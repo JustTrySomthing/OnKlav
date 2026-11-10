@@ -53,6 +53,9 @@ func _ready():
 		action_styles[action] = [idle,active]
 	mouse_filter=Control.MOUSE_FILTER_IGNORE;set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
 	resized.connect(reset_input);visibility_changed.connect(reset_input)
+	if OS.has_feature("web"):
+		get_viewport().size_changed.connect(update_action_unit)
+		update_action_unit()
 	var session=get_node_or_null("/root/OnKlavGame")
 	if session!=null and session.has_signal("suspended"):session.suspended.connect(reset_input)
 func configure(preset:String):
@@ -69,25 +72,40 @@ func radius()->float:return clampf(minf(size.x,size.y)*.17*clampf(control_scale,
 func mirror(p:Vector2)->Vector2:return Vector2(size.x-p.x,p.y) if left_handed else p
 func aim_home()->Vector2:return Vector2(size.x-radius()-22,size.y-radius()-22)
 func home()->Vector2:return Vector2(radius()+22,size.y-radius()-22)
+var css_unit := 1.0
+
+func update_action_unit() -> void:
+	var css_width := float(JavaScriptBridge.eval("window.innerWidth"))
+	var unit := maxf(.1, css_width / maxf(1.0, get_viewport_rect().size.x))
+	if is_equal_approx(unit, css_unit): return
+	css_unit = unit
+	reset_input()
+
+func action_unit() -> float:
+	if OS.has_feature("web"): return css_unit
+	return maxf(.1, get_viewport().get_stretch_transform().x.length())
+
 func button_rect(index:int)->Rect2:
-	var unit := maxf(.1,get_viewport().get_stretch_transform().x.length())
-	var width := minf(256.0/unit*control_scale,size.x*.25)
-	var height := minf(160.0/unit*control_scale,size.y*.30)
+	var unit := action_unit()
+	var width := minf(132.0/unit*control_scale,size.x*.25)
+	var height := minf(68.0/unit*control_scale,size.y*.30)
 	var margin := minf(12.0/unit,minf(size.x,size.y)*.05)
-	var column := 1 if index==1 else 0
-	var row := 1 if index==2 else 0
+	var column := index % 2
+	var row := 1 if index >= 2 else 0
 	return Rect2(size.x-margin-width-column*(width+margin*.65),
 		size.y-margin-height-row*(height+margin*.65),width,height)
+
 func button_hit_rect(index: int) -> Rect2:
 	# Half the gutter keeps adjacent actions separate even at custom sizes.
-	var unit := maxf(.1,get_viewport().get_stretch_transform().x.length())
-	var margin := minf(12.0/unit,minf(size.x,size.y)*.05)
+	var margin := minf(12.0/action_unit(),minf(size.x,size.y)*.05)
 	var gutter := margin*.325
+	var left_column := index % 2 == 1
+	var top_row := index >= 2
 	return button_rect(index).grow_individual(
-		gutter if index != 1 else margin,
-		gutter if index == 0 else margin,
-		gutter if index == 1 else margin,
-		gutter if index == 2 else margin
+		margin if left_column else gutter,
+		margin if top_row else gutter,
+		gutter if left_column else margin,
+		gutter if top_row else margin
 	)
 func reset_input():
 	aim_vector=Vector2.ZERO;aim_changed.emit(aim_vector)

@@ -38,7 +38,7 @@ Current work: Docu View/screen-light fade (docs/DOCU-VIEW.md); Voice/Screen Reco
 
 - Preserve Email account-isolated reference threading, bounded off-thread recipient suggestions, draft revision/phase safeguards, cache pagination retention and live revocable grant checks. See docs/EMAIL-EVERYDAY-POLISH.md. No new APK for this refinement.
 
-- Email offers only Yahoo, Google and Private domain, with password/app-password sign-in and official help. GMX and its migration/purge code, other retired presets and Email OAuth are removed at the owner’s request. Do not reintroduce them. Keep generic third-party SDK capabilities separate. See docs/FILES-SIMPLIFICATION.md.
+- Email offers GMX, Yahoo, Google and Private domain with password or app-password sign-in. Open provider signup and security settings in a browser-backed tab. Keep other retired presets, old migration/purge code and Email OAuth retired. Keep generic third-party SDK capabilities separate.
 
 - Calendar is a host-native offline app. Preserve exclusive all-day end dates, zone-aware recurring wall times, per-occurrence exceptions, atomic validated storage and one-next-alarm scheduling. All import/export uses OnKlav Files. Keep silent and alarm-tone channels separate; report missing Android permission, unsupported ICS data and real-device qualification honestly. Calendar export provides its backup; it is not yet included in Rust App Documents Backup. See docs/CALENDAR.md.
 

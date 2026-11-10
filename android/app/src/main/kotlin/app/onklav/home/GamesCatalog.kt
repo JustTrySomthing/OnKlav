@@ -7,8 +7,12 @@ import androidx.compose.foundation.gestures.detectDragGesturesAfterLongPress
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.lazy.*
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Person
+import androidx.compose.ui.graphics.Path
+import androidx.compose.ui.graphics.drawscope.Stroke
+import androidx.compose.ui.graphics.StrokeJoin
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.*
@@ -262,12 +266,20 @@ fun GamesCatalog(friendPeer:String?=null,launch: (String) -> Unit) {
                             )
                         }
                     }
-                    Icon(
-                        Icons.Outlined.ChevronRight,
-                        contentDescription = null,
-                        modifier = Modifier.size(20.dp),
-                        tint = colors.primary,
-                    )
+                    Box(
+                        Modifier.padding(end = 6.dp).size(34.dp).border(1.5.dp, colors.primary, CircleShape),
+                        contentAlignment = Alignment.Center,
+                    ) {
+                        Canvas(Modifier.size(14.dp)) {
+                            val triangle = Path().apply {
+                                moveTo(size.width * .23f, size.height * .10f)
+                                lineTo(size.width * .87f, size.height * .50f)
+                                lineTo(size.width * .23f, size.height * .90f)
+                                close()
+                            }
+                            drawPath(triangle, colors.primary, style = Stroke(1.5.dp.toPx(), join = StrokeJoin.Round))
+                        }
+                    }
                 }
             }
         }

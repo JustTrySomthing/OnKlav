@@ -230,6 +230,8 @@ func run() -> void:
 			var bounds: Rect2 = game._button_bounds(button)
 			check(play_area.grow(0.01).encloses(screen * bounds), "Entire touch target fits in the landscape play area")
 			check(bounds.position.y > 389 and bounds.position.x > last_x, "Buttons clear the trains and each other")
+			check(is_equal_approx(play_area.end.y - (screen * point).y, 60.0 * screen.x.x),
+				"Landscape controls stay near the bottom on taller screens")
 			check(game._pad(screen.affine_inverse() * (screen * point)) == button[1], "Visible control matches its landscape touch target")
 			check((button[2].is_empty() and bounds.size.x == bounds.size.y) if button[1] in ["left", "right"] else bounds.size.x > bounds.size.y, "Arrows have no label and action buttons are shorter than they are wide")
 			if button[1] not in ["left", "right"]:

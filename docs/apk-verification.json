@@ -2,7 +2,7 @@
   "scope": "Development builds; not full Inner Circle 2.2.85 parity",
   "source_counts": {
     ".java": 0,
-    ".kt": 650,
+    ".kt": 655,
     ".rs": 172,
     ".gd": 151
   },
@@ -14,11 +14,11 @@
       "name": "host",
       "variant": "optimized",
       "package": "app.onklav.home.prototype.rewrite",
-      "version_name": "0.101.49-rc1",
-      "version_code": 228,
+      "version_name": "0.101.50-rc1",
+      "version_code": 229,
       "target_sdk": 36,
-      "bytes": 132595418,
-      "sha256": "a3f488668eb2b18a8c462983768e0e3e24677a0b4475900875880c9e48680a34",
+      "bytes": 132746284,
+      "sha256": "348fdd7bcd89a120f98f50ee79bf14ff10612b0ce57fce9afcffa96e2f88742a",
       "signer_sha256": "6ed975c5fc27d19f6291f751a8bb00fa8a2c2e7d268bffc7b6ddf7e1b1a7a69d",
       "signature_v2_verified": true,
       "public_http_radio_transport": true,
@@ -46,7 +46,7 @@
         "lib/arm64-v8a/libsurface_util_jni.so": "6cb2eac3c68e6a82ce2a5ea5aba86749eb8c609914392e125f6cdfbc208992f8"
       },
       "legacy_defined_classes": 0,
-      "defined_class_count": 11803,
+      "defined_class_count": 11823,
       "permissions": [
         "android.permission.CALL_PHONE",
         "android.permission.READ_CALL_LOG",

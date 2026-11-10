@@ -94,6 +94,12 @@ internal class ExternalFiles(private val c:Context,app:String){
         val entries=load();val existing=entries.keys().asSequence().firstOrNull{entries.getJSONObject(it).optBoolean("connected_root")&&entries.getJSONObject(it).optString("tree")==uri.toString()};val id=existing?:UUID.randomUUID().toString().replace("-","")
         authorize();entries.put(id,JSONObject().put("id",id).put("name",name).put("uri",doc.toString()).put("tree",uri.toString()).put("folder",true).put("parent","external").put("connected_root",true));save(entries);return JSONObject().put("id",id)
     }
+    internal fun sharedPath(id:String,destination:Boolean=false):String=synchronized(lock){
+        if(destination)androidPasteFolders[id]?.let{return@synchronized it}
+        val row=entry(load(),id)
+        check(row.has("android_path")){"Open a folder in Android shared storage."}
+        row.getString("android_path")
+    }
     internal fun createDirect(folder:String,name:String,authorize:()->Unit):Uri?=AndroidSharedFiles(c).create(folder,load(),name,authorize)
     internal fun folderDestination(id:String,authorize:()->Unit):Uri {authorize();val row=entry(load(),id);check(row.getBoolean("folder"));val uri=active(row);writable(row);return uri}
     private fun editable(row:JSONObject):Boolean {

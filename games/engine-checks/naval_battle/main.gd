@@ -42,7 +42,11 @@ var banner_detail:Label
 var toast_time:=0.0
 var toast_title:=""
 var toast_detail:=""
-const HELP:="Drag each top-down ship from the dock onto your grid. Placed ships leave the dock. Drag a placed ship to move it, or tap it to rotate. Randomize offers a legal fleet.\n\nDeploy when ready. Choose Enemy Fleet, tap a target, then Fire. Shells arc toward the target: orange explosions are hits and blue splashes are misses. Sunk ships flash and become red wrecks. Enemy attacks automatically show your fleet. Sink all five ships (17 squares) to win. Every shot passes the turn.\n\nWith a friend, your fleet stays on your phone. Only readiness, shots and validated results are sent by text. Wait for delivery or use Retry update in Games."
+var result_age := 0.0
+var banner_state: Array = []
+var banner_plate: StyleBoxFlat
+var banner_edge: Color
+const HELP:="Drag each top-down ship from the dock onto your grid. Placed ships leave the dock. Drag a placed ship to move it, or tap it to rotate. Randomize offers a legal fleet.\n\nDeploy when ready. Choose Enemy Fleet, tap a target, then Fire. Shells arc toward the target: orange impacts and cross marks are hits; white plumes and ring markers are misses. Hits leave damage on visible ships. Sunk ships list and settle into dark wrecks. Enemy attacks automatically show your fleet. Sink all five ships (17 squares) to win. Every shot passes the turn.\n\nWith a friend, your fleet stays on your phone. Only readiness, shots and validated results are sent by text. Wait for delivery or use Retry update in Games."
 
 func _ready() -> void:
 	set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT)
@@ -55,7 +59,10 @@ func _ready() -> void:
 	enemy_button=Chrome.action("Enemy Fleet",func():own_view=false;refresh());enemy_button.size_flags_horizontal=Control.SIZE_EXPAND_FILL;tabs.add_child(enemy_button)
 	own_button=Chrome.action("Your Fleet",func():own_view=true;refresh());own_button.size_flags_horizontal=Control.SIZE_EXPAND_FILL;tabs.add_child(own_button)
 	board=Board.new();board.model=model;canvas.add_child(board)
-	board.selected.connect(func(cell):target=cell;refresh())
+	board.selected.connect(func(cell):
+		if cell!=target and not model.shots.has(str(cell)):audio.play("target")
+		target=cell
+		refresh())
 	board.positioned.connect(place_ship);board.rotated.connect(rotate_ship)
 	fleet_label=Chrome.caption("",12);fleet_label.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER;canvas.add_child(fleet_label)
 	place_title=Chrome.caption("Place Your Ships",21);place_title.autowrap_mode=TextServer.AUTOWRAP_OFF;place_title.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER;canvas.add_child(place_title)
@@ -63,7 +70,9 @@ func _ready() -> void:
 	controls=HBoxContainer.new();controls.add_theme_constant_override("separation",3);canvas.add_child(controls)
 	for i in range(5):
 		var item=Dock.new();item.index=i;item.size_flags_horizontal=Control.SIZE_EXPAND_FILL;item.size_flags_stretch_ratio=Model.LENGTHS[i]+.4
-		item.chosen.connect(func(index,event):selected=index;board.begin_dock_drag(index,event);refresh())
+		item.chosen.connect(func(index,event):
+			board.begin_dock_drag(index,event)
+			if board.dock_dragging:selected=board.drag_ship;refresh())
 		controls.add_child(item);ships.append(item)
 	actions=HBoxContainer.new();actions.add_theme_constant_override("separation",8);canvas.add_child(actions)
 	rotate_button=Chrome.action("",func():
@@ -80,15 +89,19 @@ func _ready() -> void:
 	make_banner()
 	network.received.connect(receive_turn);network.sent.connect(own_turn);network.changed.connect(refresh)
 	resized.connect(layout)
+	if OS.has_feature("web"): get_viewport().size_changed.connect(layout, CONNECT_DEFERRED)
 	var path:String="user://naval-v2"+("-"+network.match_id if network.enabled else "")+".json"
 	migrate_legacy(path)
 	OnKlavGame.attach_session(self,snapshot,restore,start_new,HELP,path,{}, {"is_resumable":func(_state:Dictionary):return network.enabled or model.phase!="finished"})
-	OnKlavGame.chrome.preferences_changed.connect(func():board.reduced=OnKlavGame.chrome.reduce_motion)
+	OnKlavGame.chrome.preferences_changed.connect(func():
+		board.reduced=OnKlavGame.chrome.reduce_motion
+		board.queue_redraw())
 	board.reduced=OnKlavGame.chrome.reduce_motion
 	layout();refresh()
 
 func _draw() -> void:
-	for i in range(40):draw_rect(Rect2(0,size.y*i/40,size.x,size.y/40+1),Color("0b2636").lerp(Color("061521"),i/39.0))
+	draw_polygon(PackedVector2Array([Vector2.ZERO,Vector2(size.x,0),size,Vector2(0,size.y)]),
+		PackedColorArray([Color("202c43"),Color("151f33"),Color("070f1b"),Color("091b2a")]))
 
 func make_banner() -> void:
 	banner=VBoxContainer.new();banner.mouse_filter=Control.MOUSE_FILTER_IGNORE;banner.add_theme_constant_override("separation",2);canvas.add_child(banner)
@@ -96,13 +109,17 @@ func make_banner() -> void:
 	banner_detail=Chrome.caption("",14);banner_detail.horizontal_alignment=HORIZONTAL_ALIGNMENT_CENTER;banner_detail.add_theme_color_override("font_color",Color("c1d9e4"));banner.add_child(banner_detail)
 	for label in [banner_title,banner_detail]:
 		label.mouse_filter=Control.MOUSE_FILTER_IGNORE;label.add_theme_color_override("font_shadow_color",Color("031320"));label.add_theme_constant_override("shadow_offset_y",3);label.add_theme_constant_override("outline_size",3);label.add_theme_color_override("font_outline_color",Color("071723"))
+	banner_plate=Chrome.box("0a1729","375363",10)
+	banner_plate.bg_color.a=.92
+	banner.draw.connect(func():
+		var plate := Rect2(Vector2(0,-5),banner.size+Vector2(0,10))
+		banner.draw_style_box(banner_plate,plate)
+		for x in [12.0,plate.size.x-30.0]:
+			banner.draw_line(Vector2(x,plate.position.y+1),Vector2(x+18,plate.position.y+1),banner_edge,2,true))
 	banner.hide()
 
 func layout() -> void:
-	var width:=432.0
-	if OS.has_feature("web"):width=maxf(320,float(JavaScriptBridge.eval("window.innerWidth")))
-	var ratio:=maxf(.01,size.x/width)
-	canvas.scale=Vector2.ONE*ratio;canvas.size=Vector2(width,maxf(200,size.y/ratio-56))
+	Chrome.fit_board(canvas, size, 56, 520)
 	fit_table();queue_redraw()
 
 func fit_table() -> void:
@@ -132,7 +149,7 @@ func fit_table() -> void:
 func start_new() -> void:
 	model=Model.new();model.friend=network.enabled;model.host=network.host if network.enabled else true
 	board.model=model;selected=0;horizontal=true;target=-1;own_view=true;queued_reply="";invalid=false;ai_time=0;feedback="Place your fleet"
-	salvos.clear();active_event={};board.salvo={};toast_time=0;view_delay=0;audio.stop();refresh()
+	salvos.clear();active_event={};board.salvo={};toast_time=0;view_delay=0;audio.stop();board.settled_ship=-1;result_age=0;refresh()
 
 func snapshot() -> Dictionary:return {"model":model.snapshot(),"network":network.snapshot(),"reply":queued_reply,"own_view":own_view,"invalid":invalid}
 func restore(value:Dictionary) -> bool:
@@ -140,7 +157,10 @@ func restore(value:Dictionary) -> bool:
 	if network.enabled and not network.restore(value.network):return false
 	if not model.restore(value.model):return false
 	invalid=bool(value.get("invalid",false));queued_reply=str(value.get("reply",""));own_view=bool(value.get("own_view",false));board.model=model
-	salvos.clear();active_event={};board.salvo={};toast_time=0
+	salvos.clear();active_event={};board.salvo={};toast_time=0;board.settled_ship=-1;result_age=0
+	board.cancel_pointer();target=-1;view_delay=0;ai_time=0;audio.stop()
+	if not network.enabled and model.pending>=0:model.solo_result()
+	if model.phase=="finished":own_view=model.winner!="you"
 	if not network.enabled and model.phase=="battle" and not model.turn:ai_time=.5
 	refresh();return true
 
@@ -148,9 +168,10 @@ func notify(title:String,detail:String) -> void:
 	toast_title=title;toast_detail=detail;toast_time=3.8
 
 func place_ship(index:int,cell:int,direction:bool) -> void:
-	if busy():return
+	if busy() or deployment_pending():return
 	selected=index
 	if model.place(index,cell,direction):
+		board.settle_ship(index);audio.play("deploy")
 		horizontal=direction;feedback=Model.NAMES[index]+" positioned"
 		for i in range(5):
 			if model.ships[i].is_empty():selected=i;break
@@ -164,6 +185,9 @@ func rotate_ship(index:int) -> void:
 	place_ship(index,int(model.ships[index][0]),int(model.ships[index][1])-int(model.ships[index][0])!=1)
 
 func busy() -> bool:return not active_event.is_empty() or not salvos.is_empty() or view_delay>0
+func deployment_pending() -> bool:
+	return model.phase=="setup" and network.enabled and (network.pending or network.sending)
+
 func primary() -> void:
 	if busy() or invalid:return
 	if model.phase=="setup":
@@ -185,21 +209,21 @@ func primary() -> void:
 # Game state commits before presentation. VFX never send or repeat a turn.
 func queue_salvo(out:Dictionary,defending:bool,resolved:bool=true) -> void:
 	if out.is_empty():return
-	var event:=out.duplicate(true);event.own=defending;event.resolved=resolved;event.age=0.0;event.impacted=false;event.launched=false;event.whistled=false
+	var event:=out.duplicate(true);event.own=defending;event.final=resolved and model.phase=="finished";event.resolved=resolved;event.age=0.0;event.impacted=false;event.launched=false;event.whistled=false
 	salvos.append(event)
 	if active_event.is_empty():begin_salvo()
 
 func begin_salvo() -> void:
 	if salvos.is_empty():return
-	view_delay=0;active_event=salvos.pop_front();own_view=bool(active_event.own);target=-1;toast_time=0;board.salvo=active_event
+	view_delay=0;active_event=salvos.pop_front();active_event.flight=.12 if board.reduced else Board.FLIGHT;own_view=bool(active_event.own);target=-1;toast_time=0;board.salvo=active_event
 	if not OnKlavGame.paused:audio.play("fire");active_event.launched=true
 	refresh()
 
 func resolve_own(out:Dictionary) -> void:
 	if not active_event.is_empty() and not active_event.own and int(active_event.cell)==int(out.cell):
-		active_event.merge(out,true);active_event.resolved=true;return
+		active_event.merge(out,true);active_event.resolved=true;active_event.final=model.phase=="finished";return
 	for event in salvos:
-		if not event.own and int(event.cell)==int(out.cell):event.merge(out,true);event.resolved=true;return
+		if not event.own and int(event.cell)==int(out.cell):event.merge(out,true);event.resolved=true;event.final=model.phase=="finished";return
 	queue_salvo(out,false)
 
 func visible_marks(yours:bool) -> Dictionary:
@@ -221,18 +245,35 @@ func hold_duration(event:Dictionary) -> float:
 	return 4.8 if not event.get("proof",[]).is_empty() else 4.1 if event.get("hit",false) else 3.4
 
 func update_banner() -> void:
+	var state := [message_space, board.reduced, model.phase, model.winner, busy(), result_age, toast_time, active_event.get("age"), active_event.get("resolved")]
+	if state==banner_state:return
+	banner_state=state
 	banner.size.x=message_space.size.x;banner_title.size.x=message_space.size.x;banner_detail.size.x=message_space.size.x
 	var show:=false;var opacity:=1.0;var entrance:=1.0;var shake:=0.0
-	if not active_event.is_empty():
-		var flight:float=.12 if board.reduced else Board.FLIGHT
-		var elapsed:float=float(active_event.age)-flight
-		if active_event.impacted and elapsed>.12:
+	banner_edge=Color("82cdd1")
+	var flight:float=active_event.get("flight",Board.FLIGHT)
+	var elapsed:float=float(active_event.get("age",0.0))-flight
+	var final_impact:bool=active_event.get("final",false) and active_event.get("impacted",false)
+	var result_delay := .22 if board.reduced else 1.55
+	if (final_impact and elapsed>=result_delay) or (model.phase=="finished" and (not busy() or result_age>=1.0)):
+		var won:bool=model.winner=="you"
+		var age := elapsed-result_delay if final_impact else result_age
+		show=true
+		entrance=1.0 if board.reduced else clampf(age/.64,0,1)
+		opacity=1.0 if board.reduced else smoothstep(0.0,.48,age)
+		banner_edge=Color("f5c178") if won else Color("e68a88")
+		banner_title.text="VICTORY" if won else "FLEET LOST"
+		banner_detail.text="Enemy fleet destroyed" if won else "Your fleet fought to the last ship"
+		banner_title.add_theme_color_override("font_color",banner_edge)
+	elif not active_event.is_empty():
+		if active_event.impacted and elapsed>.12 and not final_impact:
 			var duration:=hold_duration(active_event)
 			show=true;entrance=clampf((elapsed-.12)/.35,0,1);opacity=clampf((elapsed-.12)/.16,0,1)*clampf((duration-elapsed)/.35,0,1)
 			banner_title.text=feedback
 			var hit:bool=active_event.get("hit",false);var sunk:bool=not active_event.get("proof",[]).is_empty()
 			banner_detail.text=("Your fleet lost a ship" if sunk else "Your rival hit your fleet" if hit else "Your fleet is safe") if active_event.own else ("Your rival lost a ship" if sunk else "Your shot damaged a rival ship" if hit else "Your shot landed in open water")
 			banner_title.add_theme_color_override("font_color",Color("ffb59e") if active_event.own and hit else Color("ffcc87") if hit else Color("b6ebf2"))
+			banner_edge=Color("ffc386") if hit else Color("b7e7ee")
 			if hit and elapsed<.7:shake=sin(elapsed*55)*(1-elapsed/.7)*3
 		elif not active_event.get("resolved",true) and float(active_event.age)>=flight:
 			show=true;banner_title.text="Waiting for result…";banner_detail.text="Your shot has been sent";banner_title.add_theme_color_override("font_color",Color("c1d9e4"))
@@ -245,6 +286,7 @@ func update_banner() -> void:
 		banner.size=Vector2(message_space.size.x,0)
 		banner.position=Vector2(message_space.position.x+(0 if board.reduced else shake),message_space.position.y+(message_space.size.y-banner.size.y)*.5)
 		banner.pivot_offset=banner.size*.5
+		banner.queue_redraw()
 		var pop:float=1+pow(2,-8*entrance)*sin((entrance-.15)*TAU*1.2)*.16 if entrance<1 else 1
 		banner.scale=Vector2.ONE*(1 if board.reduced else pop)
 
@@ -252,13 +294,16 @@ func _process(delta:float) -> void:
 	if not is_instance_valid(network) or not is_instance_valid(board):return
 	toast_time=maxf(0,toast_time-delta)
 	audio.music(model.phase=="finished")
+	if model.phase=="finished" and not busy():result_age=minf(1.0,result_age+delta)
 	if view_delay>0:
 		view_delay=maxf(0,view_delay-delta)
-		if view_delay==0 and salvos.is_empty():own_view=not model.turn;refresh()
+		if view_delay==0 and salvos.is_empty():
+			own_view=model.winner!="you" if model.phase=="finished" else not model.turn
+			refresh()
 	if network.enabled and not invalid and not queued_reply.is_empty() and not network.pending and not network.sending and network.status=="active":network.send(queued_reply)
 	if not active_event.is_empty():
 		if not active_event.launched:audio.play("fire");active_event.launched=true
-		var flight:float=.12 if board.reduced else Board.FLIGHT
+		var flight:float=active_event.flight
 		active_event.age=float(active_event.age)+delta
 		if not active_event.get("whistled",false) and float(active_event.age)>=.1:
 			active_event.whistled=true
@@ -266,12 +311,12 @@ func _process(delta:float) -> void:
 		if not active_event.resolved:active_event.age=minf(float(active_event.age),flight)
 		elif float(active_event.age)>=flight and not active_event.impacted:impact()
 		if active_event.impacted and float(active_event.age)>=flight+hold_duration(active_event):
+			if active_event.get("final",false):result_age=1.0
 			active_event={};board.salvo={}
 			if not salvos.is_empty():begin_salvo()
 			else:
 				view_delay=.55
 				if not network.enabled and model.phase=="battle" and not model.turn:ai_time=.75
-				if model.phase=="finished":notify("Victory!" if model.winner=="you" else "Fleet lost", "All five enemy ships destroyed" if model.winner=="you" else "Your fleet fought to the last ship")
 				refresh()
 	elif ai_time>0 and view_delay<=0:
 		ai_time-=delta
@@ -293,7 +338,11 @@ func receive_turn(data:String) -> void:
 	if invalid:return
 	if data=="N" and not network.host and model.phase=="finished":start_new();OnKlavGame.checkpoint();return
 	var accepted:=false
-	if data=="P":model.peer_positioned();accepted=true;own_view=not model.turn if model.phase=="battle" else true
+	if data=="P":
+		accepted=true
+		if not model.peer_ready:
+			model.peer_positioned()
+			own_view=not model.turn if model.phase=="battle" else true
 	elif data.begins_with("S") and data.substr(1).is_valid_int():
 		var cell:=int(data.substr(1));var out:Dictionary=model.defend(cell)
 		if not out.is_empty():
@@ -325,9 +374,15 @@ func style_fleet_tab(button:Button,selected:bool):
 func refresh() -> void:
 	if not is_instance_valid(board):return
 	var setup:bool=model.phase=="setup" and not model.own_ready
-	board.model=model;board.own=own_view;board.ship_index=selected;board.horizontal=horizontal;board.target=target;board.locked=busy() or invalid or (model.phase!="setup" and (not model.turn or own_view or model.phase!="battle"));board.masked_cells=[]
+	board.model=model;board.own=own_view;board.ship_index=selected;board.horizontal=horizontal;board.target=target;board.locked=busy() or invalid or deployment_pending() or (model.phase!="setup" and (not model.turn or own_view or model.phase!="battle"));board.masked_cells=[]
+	if board.locked:board.cancel_pointer()
+	var yours:=visible_marks(true)
+	var theirs:=visible_marks(false)
+	var displayed:=yours if own_view else theirs
 	for key in (model.incoming if own_view else model.shots):
-		if not visible_marks(own_view).has(key):board.masked_cells.append(int(key))
+		if not displayed.has(key):board.masked_cells.append(int(key))
+	rotate_button.disabled=board.locked
+	random_button.disabled=board.locked
 	board.queue_redraw()
 	controls.visible=setup and not model.fleet_ready();rotate_button.visible=setup;random_button.visible=setup
 	for i in range(ships.size()):ships[i].visible=model.ships[i].is_empty();ships[i].selected=i==selected;ships[i].queue_redraw()
@@ -337,9 +392,9 @@ func refresh() -> void:
 	fleet_label.visible=false
 	place_title.visible=setup and not model.fleet_ready()
 	target_prompt.visible=not setup and model.phase=="battle" and model.turn and not busy() and not own_view
-	target_prompt.text="Choose target" if target<0 else "Target "+char(65+target%10)+str(target/10+1)
+	target_prompt.text="Choose Target" if target<0 else "Target "+char(65+target%10)+str(target/10+1)
 
-	scoreboard.model=model;scoreboard.your_marks=visible_marks(true);scoreboard.enemy_marks=visible_marks(false);scoreboard.setup=setup;scoreboard.incoming=busy() and own_view
+	scoreboard.model=model;scoreboard.your_marks=yours;scoreboard.enemy_marks=theirs;scoreboard.setup=setup;scoreboard.incoming=busy() and own_view
 	scoreboard.title="FLEET DEPLOYMENT" if setup else "AWAITING ENEMY FLEET" if model.phase=="waiting" else "INCOMING FIRE" if busy() and own_view else "SHELL AWAY" if busy() else "VICTORY" if model.winner=="you" else "FLEET LOST" if model.winner=="them" else "YOUR TURN" if model.turn else "OPPONENT’S TURN"
 	if network.enabled and network.status=="ended":scoreboard.title="YOUR FRIEND LEFT THE GAME"
 	if network.enabled and not network.error.is_empty():fleet_label.text=network.error;fleet_label.show()

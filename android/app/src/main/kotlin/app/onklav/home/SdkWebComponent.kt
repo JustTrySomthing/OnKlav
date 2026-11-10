@@ -38,10 +38,20 @@ internal object SdkWebPolicy {
         val safe=parsed.newBuilder().scheme("https").port(if(parsed.scheme=="http" && parsed.port==80) 443 else parsed.port).build().toString()
         return safe
     }
-    fun address(raw:String):String { val safe=external(raw);require(Uri.parse(safe).host != "accounts.google.com") { "Continue This Sign-In with Open in Browser" };return safe }
+    fun isGoogleSignIn(url: String): Boolean = Uri.parse(url).host?.trimEnd('.') == "accounts.google.com"
+    fun address(raw:String):String { val safe=external(raw);require(!isGoogleSignIn(safe)) { "Continue This Sign-In with Open in Browser" };return safe }
     fun profile(app:String):String = "onklav_"+java.security.MessageDigest.getInstance("SHA-256").digest(app.toByteArray()).joinToString("") { "%02x".format(it) }
     fun bounded(bundle:Bundle):Boolean { val p=Parcel.obtain();return try { p.writeBundle(bundle);p.dataSize()<=256*1024 } catch(_:Exception) { false } finally { p.recycle() } }
 }
+/** Request a browser-backed tab. Browsers without Custom Tabs handle the same HTTPS intent normally. */
+internal fun openSecureBrowser(context: android.content.Context, raw: String): Boolean = runCatching {
+    val url = Uri.parse(SdkWebPolicy.external(raw))
+    val intent = android.content.Intent(android.content.Intent.ACTION_VIEW, url)
+        .addCategory(android.content.Intent.CATEGORY_BROWSABLE)
+        .putExtras(Bundle().apply { putBinder("android.support.customtabs.extra.SESSION", null) })
+    context.startActivity(intent)
+}.isSuccess
+
 /** Small host memory cache. Rust owns the authoritative eight-tab metadata. */
 internal class SdkWebPool {
     data class Entry(val state:Bundle,val seq:Long)
@@ -160,7 +170,19 @@ internal class SdkWebPage {
     if(provider)YoutubeDownloadDialog(model,id,pool,page.view,youtubeDownloadOpen){youtubeDownloadOpen=false}
     fun authorize():JSONObject = model.webComponent(id).also { require(it.child("node").optString("tab")==tab) { "Tab Is Closed" } }
     fun hideFullscreen() { val callback=fullscreenCallback;fullscreen=null;fullscreenCallback=null;callback?.onCustomViewHidden() }
+    var secureSignIn by remember(tab) { mutableStateOf<String?>(null) }
+    var secureBrowserUnavailable by remember(tab) { mutableStateOf(false) }
+    fun offerSecureSignIn(raw: String, source: String? = null): Boolean {
+        if (provider) return false
+        val url = SdkWebPolicy.external(raw)
+        if (!SdkWebPolicy.isGoogleSignIn(url)) return false
+        // Restart at the referring page so the browser can create its own provider session.
+        secureSignIn = source?.let { runCatching { SdkWebPolicy.address(it) }.getOrNull() } ?: url
+        secureBrowserUnavailable = false
+        return true
+    }
     fun safe(raw:String):String { val url=SdkWebPolicy.address(raw);if(provider) require(SdkVideoPolicy.page(url) && !SdkVideoPolicy.account(url)) { "Use a Signed-Out YouTube Page" };return url }
+    fun load(view: WebView, raw: String) { if (!offerSecureSignIn(raw)) view.loadUrl(safe(raw)) }
     val orientation=androidx.compose.ui.platform.LocalConfiguration.current.orientation
     val wide by rememberUpdatedState(orientation==android.content.res.Configuration.ORIENTATION_LANDSCAPE)
     fun updateViewport(view:WebView){
@@ -216,7 +238,23 @@ internal class SdkWebPage {
     } }
     Column(Modifier.fillMaxSize()) {
         if(node.optBoolean("progress_inline",true) && page.progress in 0..99) LinearProgressIndicator(progress={page.progress/100f},modifier=Modifier.fillMaxWidth().height(3.dp))
-        page.failure?.let { Text(it,Modifier.padding(8.dp),fontSize=13.sp,color=MaterialTheme.colorScheme.error) }
+        val signInUrl = secureSignIn
+        if (signInUrl != null) {
+            Column(Modifier.fillMaxWidth().padding(horizontal = 12.dp, vertical = 4.dp)) {
+                Text(if (secureBrowserUnavailable) "No browser could open this sign-in." else "Google sign-in opens in a secure browser.", fontSize = 13.sp)
+                TextButton(onClick = {
+                    val access = runCatching { authorize() }
+                    if (access.isFailure) {
+                        secureSignIn = null
+                        page.failure = access.exceptionOrNull()?.message
+                    } else if (openSecureBrowser(context, signInUrl)) {
+                        secureSignIn = null
+                        page.failure = null
+                    } else secureBrowserUnavailable = true
+                }) { Text("Continue in secure browser") }
+                TextButton(onClick = { secureSignIn = null; page.failure = null }) { Text("Cancel") }
+            }
+        } else page.failure?.let { Text(it,Modifier.padding(8.dp),fontSize=13.sp,color=MaterialTheme.colorScheme.error) }
         key(recreation) { AndroidView(modifier=Modifier.weight(1f).fillMaxWidth(),factory={ ctx ->
             android.widget.FrameLayout(ctx).also { container ->
                 try {
@@ -249,9 +287,31 @@ internal class SdkWebPage {
                             override fun onShowFileChooser(v:WebView,callback:ValueCallback<Array<Uri>>,params:FileChooserParams):Boolean { callback.onReceiveValue(null);return true }
                         }
                         view.webViewClient=object:WebViewClient() {
-                            override fun shouldOverrideUrlLoading(v:WebView,request:WebResourceRequest):Boolean { if(!page.current(v)) return true;return runCatching { authorize();val raw=request.url.toString();if(provider && request.isForMainFrame) { if(SdkVideoPolicy.account(raw)) { notice("account",raw);return true };if(!SdkVideoPolicy.page(raw)) { if(raw.startsWith("https://")) notice("external",raw);return true } };val target=safe(raw);if(target!=request.url.toString()) { if(request.isForMainFrame) v.loadUrl(target);true } else false }.getOrElse { page.failure=it.message;true } }
+                            override fun shouldOverrideUrlLoading(v: WebView, request: WebResourceRequest): Boolean {
+                                if (!page.current(v)) return true
+                                return runCatching {
+                                    authorize()
+                                    val raw = request.url.toString()
+                                    if (request.isForMainFrame) {
+                                        if (provider) {
+                                            if (SdkVideoPolicy.account(raw)) {
+                                                notice("account", raw)
+                                                return true
+                                            }
+                                            if (!SdkVideoPolicy.page(raw)) {
+                                                if (raw.startsWith("https://")) notice("external", raw)
+                                                return true
+                                            }
+                                        } else if (offerSecureSignIn(raw, v.url)) return true
+                                    }
+                                    val target = safe(raw)
+                                    if (target == raw) return false
+                                    if (request.isForMainFrame) v.loadUrl(target)
+                                    true
+                                }.getOrElse { page.failure = it.message; true }
+                            }
                             override fun shouldInterceptRequest(v:WebView,request:WebResourceRequest):WebResourceResponse? = if(runCatching { check(page.current(v));authorize();val raw=request.url.toString();SdkWebPolicy.address(raw);if(provider){pool.videoStreams.observe(raw)};if(provider) require(!SdkVideoPolicy.blocked(raw) && !SdkVideoPolicy.account(raw) && (!request.isForMainFrame || SdkVideoPolicy.page(raw))) }.isSuccess) null else WebResourceResponse("text/plain","UTF-8",ByteArrayInputStream(ByteArray(0)))
-                            override fun onPageStarted(v:WebView,url:String,icon:Bitmap?) { if(!page.current(v)) return;page.started(v);if(provider)pool.videoStreams.bind(SdkVideoPolicy.video(url));pool.findStatus=null;v.setFindListener(null);navigating=false;if(runCatching { authorize();safe(url) }.isFailure) { v.stopLoading();page.failure="Website Access Is Off or the Address Is Not Allowed" } }
+                            override fun onPageStarted(v:WebView,url:String,icon:Bitmap?) { if(!page.current(v)) return;page.started(v);if(provider)pool.videoStreams.bind(SdkVideoPolicy.video(url));pool.findStatus=null;v.setFindListener(null);navigating=false;if(runCatching { authorize();if(offerSecureSignIn(url)) v.stopLoading() else { secureSignIn=null; safe(url) } }.isFailure) { v.stopLoading();page.failure="Website Access Is Off or the Address Is Not Allowed" } }
                             override fun onPageCommitVisible(v: WebView, url: String) {
                                 if (previewControl && page.current(v) && SdkVideoPolicy.page(url))
                                     v.evaluateJavascript(SdkMediaScripts.feedPreviews(model.youtubePreviews), null)
@@ -275,7 +335,7 @@ internal class SdkWebPage {
                         val current=latest
                         if(!recoveryCommand && old!=null && old.seq==current.optLong("seq") && view.restoreState(old.state)!=null) applied=old.seq
                         else if(recoveryCommand && current.getString("command") in setOf("reset","clear")) { applied=current.getLong("seq")-1 }
-                        else { view.loadUrl(safe(current.getString("url")));applied=current.getLong("seq") }
+                        else { load(view, current.getString("url"));applied=current.getLong("seq") }
                         recoveryCommand=false
                     } catch(e:Exception) { page.detach(view);view.destroy();throw e }
                 } catch(e:Exception) { page.failure=e.message ?: "Website Component Could Not Start" }
@@ -288,10 +348,10 @@ internal class SdkWebPage {
             if (view != null && previewControl) page.configurePreviews(view, model.youtubePreviews, applyNow = true)
             if(view!=null && seq!=applied) {
                 try {
-                    authorize();page.failure=null
+                    authorize();page.failure=null;secureSignIn=null
                     if(provider && n.getString("command") in setOf("load","back","forward","reload","reset")) navigating=true
                     when(n.getString("command")) {
-                        "load"->view.loadUrl(safe(n.getString("url")))
+                        "load"->load(view, n.getString("url"))
                         "back"->if(view.canGoBack()) view.goBack()
                         "forward"->if(view.canGoForward()) view.goForward()
                         "reload"->view.reload()
@@ -317,7 +377,7 @@ internal class SdkWebPage {
                             // clear the default/global WebView cache or another app's data.
                             WebStorageCompat.deleteBrowsingData(profile.webStorage) {
                                 page.cleared(view,seq,latest.optLong("seq"),navigation,{authorize()}) {
-                                    view.loadUrl(safe(n.getString("url")))
+                                    load(view, n.getString("url"))
                                 }
                             }
                         }

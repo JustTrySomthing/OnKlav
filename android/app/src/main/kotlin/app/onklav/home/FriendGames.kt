@@ -70,14 +70,15 @@ internal object FriendGames {
         };flush(c,id)
     }
     fun restartInvitation(c:Context,id:String?,peer:String,game:String,dogs:Boolean):String {
+        val old = id?.let { find(c,it) }
+        val selectedDogs = if (game == "four" && old != null) old.optString("token") == "fd1" else dogs
         if(id!=null){
-            val old=find(c,id)
             if(old?.optString("status")=="active")return id
             cancelInvitation(c,id)
             // Old attempts must not exhaust the bounded match history on repeated retries.
             if(find(c,id)?.optString("status") in setOf("ended","declined"))remove(c,id)
         }
-        return invite(c,peer,game,dogs)
+        return invite(c,peer,game,selectedDogs)
     }
     fun policy(c:Context,peer:String,sub:Int=-1) {
         check(MessagingTransport.role(c)&&MessagingTransport.permission(c,android.Manifest.permission.SEND_SMS)&&MessagingTransport.permission(c,android.Manifest.permission.RECEIVE_SMS)){"Complete messaging Setup before inviting a friend."}

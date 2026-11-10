@@ -48,20 +48,49 @@ fun AppsDesktop(resetKey:Int=0,manage:(()->Unit)?=null,open:(String)->Unit){
  var installed by remember{mutableStateOf(emptyList<org.json.JSONObject>())};var ready by remember{mutableStateOf(false)}
  var loadError by remember { mutableStateOf<String?>(null) }
  var retry by remember { mutableIntStateOf(0) }
- LaunchedEffect(epoch,retry){
-  loadError=null
+ suspend fun loadCatalog() {
+  installed = AppSdk.list(c).filter { it.optBoolean("installed") }
+ }
+ LaunchedEffect(retry) {
+  loadError = null
   try {
-   installed=AppSdk.list(c).filter{it.optBoolean("installed")}
-   ready=true
-  } catch(e:kotlinx.coroutines.CancellationException){throw e}
-  catch(e:Exception){loadError=e.message ?: "Apps could not be loaded."}
+   // Wait for the full bundled catalog before committing the one-time arrangement.
+   AppSdk.bootstrap(c)
+   loadCatalog()
+   ready = true
+  } catch (e: kotlinx.coroutines.CancellationException) {
+   throw e
+  } catch (e: Exception) {
+   loadError = e.message ?: "Apps could not be loaded."
+  }
+ }
+ LaunchedEffect(epoch, ready) {
+  if (ready) {
+   try {
+    loadCatalog()
+   } catch (e: kotlinx.coroutines.CancellationException) {
+    throw e
+   } catch (e: Exception) {
+    loadError = e.message ?: "Apps could not be loaded."
+   }
+  }
  }
  val apps=platformApps.filter{it.id !in setOf("phone","camera")}.filter{a->AppSdk.bundledApps[a.id]?.let{p->installed.any{it.child("manifest").optString("id")==p.first}}?:true}+installed.filter{p->AppSdk.bundledApps.values.none{it.first==p.child("manifest").optString("id")}}.map{SdkDesktopIcons.app(it.child("manifest"))}
  var problem by remember{mutableStateOf<String?>(null)}
  var writable by remember{mutableStateOf(true)}
- var folders by remember{mutableStateOf(runCatching{DesktopFolders.read(prefs.getString("folders_v1",null))}.getOrElse{writable=false;problem="Folder layout could not be loaded. Restart OnKlav before changing folders.";DesktopFolders(emptyList())})}
+ var folders by remember{mutableStateOf(runCatching{
+  val savedFolders = prefs.getString("folders_v1",null)
+  if(savedFolders==null && prefs.contains("positions")) DesktopFolders(emptyList()) else DesktopFolders.read(savedFolders)
+ }.getOrElse{writable=false;problem="Folder layout could not be loaded. Restart OnKlav before changing folders.";DesktopFolders(emptyList())})}
  fun catalog()=folders.desktop(apps.map{it.id})
- var layout by remember{mutableStateOf(LauncherLayout.read(prefs.getString("positions","").orEmpty(),catalog()))}
+ fun isFreshDesktop() = !prefs.contains("positions") && !prefs.contains("folders_v1") &&
+  !prefs.contains("arrangement_version") && !prefs.contains("make_music_placed")
+ fun readLayout(): LauncherLayout {
+  val saved = prefs.getString("positions", null)
+  return if (isFreshDesktop()) DesktopArrangement.arrange(catalog())
+  else LauncherLayout.read(saved.orEmpty(), catalog())
+ }
+ var layout by remember { mutableStateOf(readLayout()) }
  val pager=rememberPagerState(initialPage=0){layout.pages};val scope=rememberCoroutineScope();val scroll=rememberScrollState();val density=LocalDensity.current;val haptic=LocalHapticFeedback.current
  var opened by remember{mutableStateOf<String?>(null)};var naming by remember{mutableStateOf<String?>(null)};var deleting by remember{mutableStateOf<String?>(null)};var folderMenu by remember{mutableStateOf(false)}
  var dragging by remember{mutableStateOf<String?>(null)};var sourceFolder by remember{mutableStateOf<String?>(null)};var before by remember{mutableStateOf(layout)}
@@ -72,7 +101,7 @@ fun AppsDesktop(resetKey:Int=0,manage:(()->Unit)?=null,open:(String)->Unit){
  val folder=folders.folders.firstOrNull{it.id==opened};val members=folder?.apps.orEmpty().mapNotNull{id->apps.firstOrNull{it.id==id&&id !in removedIds}}
  val folderPager=rememberPagerState(initialPage=0){maxOf(1,(members.size+8)/9)}
  fun reconcile(){layout=LauncherLayout.read(layout.encode(),catalog())}
- fun persist(arrangementVersion:Int?=null){if(!ready||!writable)return;layout=layout.trimmed();prefs.edit().putString("positions",layout.encode()).putString("folders_v1",folders.encode()).putInt("page",0).apply{if(arrangementVersion!=null)putInt("arrangement_version",arrangementVersion)}.apply()}
+ fun persist(initialized:Boolean=false){if(!ready||!writable)return;layout=layout.trimmed();prefs.edit().putString("positions",layout.encode()).putString("folders_v1",folders.encode()).putInt("page",0).apply{if(initialized)putInt("arrangement_version",DesktopArrangement.VERSION)}.apply()}
  fun dismissFolder(){opened=null;hovering=null;folderMenu=false;memberRects.clear()}
  fun cancel(){layout=before;dragging=null;sourceFolder=null;edge=0;hovering=null}
  fun slot(p:Offset,page:Int=pager.currentPage)=LauncherLayout.destination(page,p.x,p.y,viewport.width.toFloat(),rowPixels,scroll.value.toFloat())
@@ -111,9 +140,8 @@ fun AppsDesktop(resetKey:Int=0,manage:(()->Unit)?=null,open:(String)->Unit){
  })
  LaunchedEffect(apps.map{it.id},ready){
   if(dragging!=null)cancel()
-  if(ready&&writable&&prefs.getInt("arrangement_version",0)<DesktopArrangement.VERSION){
-   runCatching{val updated=folders.withRequestedFolders();val arranged=DesktopArrangement.arrange(updated.desktop(apps.map{it.id}));folders=updated;layout=arranged;persist(DesktopArrangement.VERSION)}.onFailure{problem="Desktop update could not finish. ${it.message.orEmpty()}"}
-  }else layout=LauncherLayout.read(prefs.getString("positions","").orEmpty(),catalog())
+  layout=readLayout()
+  if(ready&&writable&&isFreshDesktop())persist(initialized=true)
  }
  LaunchedEffect(resetKey){if(dragging!=null)cancel();dismissFolder();pager.scrollToPage(0);scroll.scrollTo(0)}
  LaunchedEffect(opened){memberRects.clear();folderPager.scrollToPage(0)}
@@ -131,9 +159,16 @@ fun AppsDesktop(resetKey:Int=0,manage:(()->Unit)?=null,open:(String)->Unit){
    }
   }
   if(problem!=null)Text(problem!!,Modifier.padding(12.dp),color=MaterialTheme.colorScheme.error,style=MaterialTheme.typography.bodySmall)
+  if (!ready && loadError == null && !prefs.contains("positions")) {
+   Box(Modifier.weight(1f).fillMaxWidth(), contentAlignment = Alignment.Center) {
+    CircularProgressIndicator(Modifier.semantics { contentDescription = "Preparing apps" })
+   }
+   return@Column
+  }
   BoxWithConstraints(Modifier.weight(1f).fillMaxWidth().testTag("apps-grid-viewport").onSizeChanged{viewport=it}.onGloballyPositioned{origin=it.positionInRoot()}.pointerInput(Unit){detectDragGesturesAfterLongPress(onDragStart={start(it)},onDragEnd={finish()},onDragCancel={if(dragging!=null)cancel()}){change,d->if(dragging!=null){change.consume();move(d)}}}){
    val workspaceHeight=maxHeight
-   val cellHeight=maxOf(maxHeight/5,68.dp+(32f*density.fontScale).dp);rowPixels=with(density){cellHeight.toPx()}
+   val minimumTileHeight = 76.dp + (32f * density.fontScale).dp
+   val cellHeight=maxOf(maxHeight/5,minimumTileHeight);rowPixels=with(density){cellHeight.toPx()}
    Box(Modifier.fillMaxSize().verticalScroll(scroll,enabled=dragging==null&&opened==null).then(if(opened!=null)Modifier.clearAndSetSemantics{}else Modifier)){
     HorizontalPager(pager,Modifier.fillMaxWidth().height(cellHeight*5),userScrollEnabled=dragging==null&&opened==null,key={it}){page->
      LazyVerticalGrid(GridCells.Fixed(3),userScrollEnabled=false,modifier=Modifier.fillMaxSize().testTag("apps-page-$page")){
@@ -152,7 +187,7 @@ fun AppsDesktop(resetKey:Int=0,manage:(()->Unit)?=null,open:(String)->Unit){
      Column(Modifier.padding(12.dp)){
       Row(verticalAlignment=Alignment.CenterVertically){Text(folder.name,Modifier.weight(1f).padding(start=8.dp),style=MaterialTheme.typography.titleLarge,maxLines=1,overflow=TextOverflow.Ellipsis);Box{IconButton(onClick={folderMenu=true},enabled=dragging==null){Icon(Icons.Outlined.MoreVert,"Folder options")};DropdownMenu(folderMenu,{folderMenu=false}){DropdownMenuItem(text={Text("Rename")},onClick={folderMenu=false;naming=folder.id});DropdownMenuItem(text={Text("Delete folder")},onClick={folderMenu=false;deleting=folder.id})}};IconButton(onClick={dismissFolder()},enabled=dragging==null){Icon(Icons.Outlined.Close,"Close folder")}}
       Text(if(dragging!=null&&sourceFolder==null)"Release in this folder to add the app"else if(dragging!=null&&sourceFolder!=null&&!folderRect.contains(finger))"Release outside to move to Apps"else"Hold and drag an app outside to move it to Apps",Modifier.padding(horizontal=8.dp,vertical=6.dp),style=MaterialTheme.typography.labelSmall,color=MaterialTheme.colorScheme.onSurfaceVariant)
-      val tileHeight=maxOf(92.dp,(64f+32f*density.fontScale).dp)
+      val tileHeight=minimumTileHeight
       val gridHeight=minOf(tileHeight*3,(workspaceHeight-190.dp).coerceAtLeast(120.dp))
       HorizontalPager(folderPager,Modifier.fillMaxWidth().height(gridHeight).onGloballyPositioned{folderGridRect=it.boundsInRoot().translate(-origin)}.testTag("folder-pager"),userScrollEnabled=dragging==null){page->
        Column(Modifier.verticalScroll(rememberScrollState(),enabled=dragging==null)){repeat(3){row->Row{repeat(3){col->val app=members.getOrNull(page*9+row*3+col);Box(Modifier.weight(1f).height(tileHeight)){
@@ -208,13 +243,13 @@ private fun AppTile(
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
         Box(
-            Modifier.size(56.dp)
+            Modifier.size(64.dp)
                 .background(
                     Brush.linearGradient(listOf(surface, background)),
                     RoundedCornerShape(15.dp),
                 )
                 .border(1.dp, MaterialTheme.colorScheme.primary, RoundedCornerShape(15.dp))
-                .padding(10.dp),
+                .padding(9.dp),
             contentAlignment = Alignment.Center,
         ) {
             val bitmap by produceState<android.graphics.Bitmap?>(null,app.iconPng){value=app.iconPng?.let{SdkDesktopIcons.bitmap(it)}}

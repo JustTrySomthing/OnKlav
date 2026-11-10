@@ -20,6 +20,21 @@ import java.nio.ByteBuffer
 import java.nio.ByteOrder
 @RunWith(RobolectricTestRunner::class) @Config(sdk=[29])
 class VideoEditorHostTest{
+ @Test fun editorStartupInitializesStateBeforeRestoringProjects() {
+    val app = ApplicationProvider.getApplicationContext<android.app.Application>()
+    runBlocking { AppSdk.bootstrap(app) }
+    val models = androidx.lifecycle.ViewModelStore()
+    org.robolectric.Shadows.shadowOf(android.os.Looper.getMainLooper()).runPaused {
+        try {
+            val factory = androidx.lifecycle.ViewModelProvider.AndroidViewModelFactory.getInstance(app)
+            val editor = androidx.lifecycle.ViewModelProvider.create(models, factory)[VideoEditorModel::class]
+            assertFalse(editor.recording)
+        } finally {
+            models.clear()
+        }
+    }
+ }
+
  @Test fun videoTransferChecksSizeAndReportsTheCompletedByteCount() = runBlocking {
     val source = ByteArray(300_000) { it.toByte() }
     val output = ByteArrayOutputStream()

@@ -18,20 +18,6 @@ internal data class DesktopFolders(val folders:List<DesktopFolder>){
   return copy(folders=folders.map{f->val rest=f.apps.filterNot{it==app};if(f.id==folder)f.copy(apps=rest.toMutableList().apply{add(index.coerceIn(0,size),app)})else f.copy(apps=rest)})
  }
  fun takeOut(app:String)=copy(folders=folders.map{it.copy(apps=it.apps.filterNot{n->n==app})})
- // One-time requested reorganization; preserve unrelated folders and memberships.
- fun withRequestedFolders():DesktopFolders {
-  var result=this
-  for((id,name) in listOf("folder-utilities" to "Utilities","folder-create" to "Create")){
-   if(result.folders.none{it.id==id}){
-    val existing=result.folders.firstOrNull{it.name.equals(name,true)}
-    result=if(existing!=null)result.copy(folders=result.folders.map{if(it.id==existing.id)it.copy(id=id,name=name)else it})
-    else {require(result.folders.size<200){"Make room for the default folders before updating the desktop."};result.copy(folders=result.folders+DesktopFolder(id,name,emptyList()))}
-   }
-  }
-  if(result.folders.first{it.id=="folder-create"}.apps.none{it=="voicerecorder"})result=result.put("folder-create","voicerecorder")
-  for(id in utilityMoves)result=result.put("folder-utilities",id)
-  return result
- }
  fun encode()=JSONObject().put("version",1).put("folders",JSONArray().apply{folders.forEach{f->put(JSONObject().put("id",f.id).put("name",f.name).put("apps",JSONArray(f.apps)))}}).toString()
  companion object {
   private val idPattern=Regex("[a-z][a-z0-9_-]{0,64}")

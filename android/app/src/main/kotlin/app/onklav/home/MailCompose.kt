@@ -8,7 +8,6 @@ import androidx.compose.material.icons.outlined.*
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.*
-import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.semantics.*
@@ -17,7 +16,7 @@ import androidx.compose.ui.viewinterop.AndroidView
 
 @Composable internal fun MailCompose(m:MailModel,onAttach:()->Unit,onSend:()->Unit,onDelete:()->Unit){val d=m.draft?:return;val colors=MaterialTheme.colorScheme;var editor by remember(d.id){mutableStateOf<WriteNativeEditor?>(null)};var cc by remember(d.id){mutableStateOf(d.cc.isNotBlank()||d.bcc.isNotBlank())};var from by remember{mutableStateOf(false)};var palette by remember{mutableStateOf<String?>(null)};var link by remember{mutableStateOf(false)};var url by remember{mutableStateOf("")};var copy by remember{mutableStateOf(false)};var selection by remember{mutableIntStateOf(0)};val editable=d.phase=="draft"
  fun format(kind:String,value:String?="1"){editor?.let{e->val active=WriteFormatting.active(e.editableText,e.selectionStart,e.selectionEnd,kind);e.format(kind,if(active&&kind in listOf("bold","italic","underline","strike"))null else value);selection++}}
- BoxWithConstraints(Modifier.fillMaxSize()){val bodyHeight=(maxHeight-240.dp).coerceIn(180.dp,420.dp);val compact=maxWidth<360.dp||LocalDensity.current.fontScale>1.25f;Column(Modifier.fillMaxSize()){
+ BoxWithConstraints(Modifier.fillMaxSize()){val bodyHeight=(maxHeight-240.dp).coerceIn(180.dp,420.dp);Column(Modifier.fillMaxSize()){
   Row(Modifier.fillMaxWidth(),verticalAlignment=Alignment.CenterVertically){app.onklav.shared.ClosePageButton(enabled=!m.busy,description=if(editable)"Save draft and close"else"Close draft",onClick=m::closeDraft);Spacer(Modifier.weight(1f));IconButton(onClick=onDelete,enabled=!m.busy){Icon(Icons.Outlined.Delete,"Delete local draft")};IconButton(onClick=onAttach,enabled=editable&&!m.busy){Icon(Icons.Outlined.AttachFile,"Attach files")};FilledTonalButton(onClick=onSend,enabled=editable&&!m.busy&&runCatching{MailMime.addresses(d.to).isNotEmpty()}.getOrDefault(false),modifier=Modifier.semantics{contentDescription="Send email"},contentPadding=PaddingValues(horizontal=12.dp)){Icon(Icons.Outlined.Send,null,Modifier.size(18.dp));Spacer(Modifier.width(6.dp));Text("Send")}}
    if(editable)Row(Modifier.fillMaxWidth().horizontalScroll(rememberScrollState()),horizontalArrangement=Arrangement.spacedBy(2.dp)){
     listOf("bold" to "B","italic" to "I","underline" to "U","strike" to "S̶").forEach{(kind,label)->val active=selection.let{editor?.let{e->WriteFormatting.active(e.editableText,e.selectionStart,e.selectionEnd,kind)}?:false};TextButton(onClick={format(kind)},enabled=!m.busy,modifier=Modifier.width(44.dp).semantics{contentDescription=kind;selected=active},colors=ButtonDefaults.textButtonColors(contentColor=if(active)colors.onSecondaryContainer else colors.onSurface),contentPadding=PaddingValues(4.dp)){Text(label,Modifier.background(if(active)colors.secondaryContainer else Color.Transparent).padding(5.dp),fontWeight=if(kind=="bold")androidx.compose.ui.text.font.FontWeight.Bold else null)}}

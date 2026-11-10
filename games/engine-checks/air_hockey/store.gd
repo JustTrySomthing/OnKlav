@@ -1,6 +1,7 @@
 extends RefCounted
 ## One bounded private checkpoint, never a match history or an executable package.
 const MatchState = preload("res://air_hockey/match.gd")
+const Rink = preload("res://air_hockey/rink.gd")
 const CURRENT := "user://onklav-current-game.json"
 const LIMIT := 4096
 
@@ -40,14 +41,14 @@ static func validate(raw:Variant)->Dictionary:
 	return {"ok": true, "active": state.phase != MatchState.Phase.FINISHED, "record": raw}
 
 static func valid_rink(rink: Dictionary) -> bool:
-	var difficulty = rink.get("difficulty", 1)
-	if typeof(difficulty) not in [TYPE_INT, TYPE_FLOAT] or difficulty < 0 or difficulty > 2 or difficulty != floor(difficulty):
-		return false
 	for key in ["x", "y", "vx", "vy", "player", "opponent", "ai_velocity", "ai_target", "tick", "ai_hits"]:
 		var n: Variant = rink.get(key)
 		if not (n is int or n is float) or not is_finite(float(n)):
 			return false
-	return float(rink.x) >= -0.1 and float(rink.x) <= 1.1 and float(rink.y) >= -0.1 and float(rink.y) <= 1.1 and absf(rink.vx) <= 2 and absf(rink.vy) <= 2 and rink.player >= 0.1 and rink.player <= 0.9 and rink.opponent >= 0.1 and rink.opponent <= 0.9 and absf(rink.ai_velocity) <= 0.38 and rink.ai_target >= 0.1 and rink.ai_target <= 0.9 and rink.tick == floor(rink.tick) and rink.ai_hits == floor(rink.ai_hits) and rink.tick >= 0 and rink.tick <= 1000000000 and rink.ai_hits >= 0 and rink.ai_hits <= 10000000
+	var difficulty: Variant = rink.get("difficulty",Rink.Difficulty.NORMAL)
+	if not (difficulty is int or difficulty is float) or not is_finite(float(difficulty)) or difficulty != floor(float(difficulty)) or difficulty < Rink.Difficulty.EASY or difficulty > Rink.Difficulty.HARD:
+		return false
+	return float(rink.x) >= -0.1 and float(rink.x) <= 1.1 and float(rink.y) >= -0.1 and float(rink.y) <= 1.1 and absf(rink.vx) <= 2 and absf(rink.vy) <= 2 and rink.player >= 0.1 and rink.player <= 0.9 and rink.opponent >= 0.1 and rink.opponent <= 0.9 and absf(rink.ai_velocity) <= [.24,.38,.52][int(difficulty)] and rink.ai_target >= 0.1 and rink.ai_target <= 0.9 and rink.tick == floor(rink.tick) and rink.ai_hits == floor(rink.ai_hits) and rink.tick >= 0 and rink.tick <= 1000000000 and rink.ai_hits >= 0 and rink.ai_hits <= 10000000
 
 static func save_current(state: RefCounted, rink: Dictionary, path: String = CURRENT) -> Error:
 	if state.phase==MatchState.Phase.FINISHED:return clear(path)

@@ -12,8 +12,6 @@ import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
-import androidx.compose.ui.platform.LocalDensity
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.semantics.contentDescription
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.unit.dp
@@ -43,15 +41,18 @@ import kotlin.math.roundToInt
                 if(kind==null){
                     Text("What do you want to compress?",style=MaterialTheme.typography.headlineMedium)
                     Text("Smaller copies. Easier to send.",color=MaterialTheme.colorScheme.onSurfaceVariant)
-                    CompressKind.entries.chunked(if(LocalDensity.current.fontScale>1.2f)1 else 2).forEach{row->Row(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.spacedBy(12.dp)){
-                        row.forEach{category->FilledTonalButton(onClick={model.choose(category);if(category!=CompressKind.FILES)pick()},modifier=Modifier.weight(1f).heightIn(min=160.dp),shape=RoundedCornerShape(24.dp),contentPadding=PaddingValues(16.dp)){
-                            Column(Modifier.fillMaxWidth(),verticalArrangement=Arrangement.spacedBy(12.dp)){
-                                Icon(painterResource(when(category){CompressKind.IMAGE->R.drawable.ref_app_photo;CompressKind.VIDEO->R.drawable.ref_app_video_editor;CompressKind.AUDIO->R.drawable.ref_app_audio_editor;CompressKind.FILES->R.drawable.ref_app_files}),null,Modifier.size(28.dp))
-                                Text(category.title,style=MaterialTheme.typography.titleLarge)
-                                Text(category.hint,style=MaterialTheme.typography.bodySmall)
-                            }
-                        }}
-                    }}
+                    AlignedCardGrid(CompressKind.entries, maxColumns = 4) { category, modifier ->
+                        val icon = when (category) {
+                            CompressKind.IMAGE -> R.drawable.ref_app_photo
+                            CompressKind.VIDEO -> R.drawable.ref_app_video_editor
+                            CompressKind.AUDIO -> R.drawable.ref_app_audio_editor
+                            CompressKind.FILES -> R.drawable.ref_app_files
+                        }
+                        FileTypeCard(category.title, category.hint, icon, modifier) {
+                            model.choose(category)
+                            if (category != CompressKind.FILES) pick()
+                        }
+                    }
                     Text("On your device · originals stay unchanged",style=MaterialTheme.typography.labelLarge,color=MaterialTheme.colorScheme.primary)
                     Text("Send the saved copy through Messages, email or another app. Each service has its own size limit.",style=MaterialTheme.typography.bodySmall,color=MaterialTheme.colorScheme.onSurfaceVariant)
                 }else{

@@ -14,7 +14,6 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.unit.dp
-import androidx.compose.ui.res.painterResource
 import app.onklav.shared.R
 import androidx.lifecycle.AndroidViewModel
 import androidx.lifecycle.viewModelScope
@@ -84,16 +83,18 @@ internal class FormatSwapModel(app:Application):AndroidViewModel(app) {
             if(model.kind==null){
                 Text("What kind of file do you want to convert",style=MaterialTheme.typography.headlineMedium)
                 Text("A new format. A separate copy.",color=MaterialTheme.colorScheme.onSurfaceVariant)
-                // Two generous rows that remain readable with larger accessibility text.
-                SwapKind.entries.chunked(if(androidx.compose.ui.platform.LocalDensity.current.fontScale>1.2f)1 else 2).forEach{row->Row(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.spacedBy(12.dp)){
-                    row.forEach{kind->FilledTonalButton(onClick={model.choose(kind);pick()},modifier=Modifier.weight(1f).heightIn(min=160.dp),shape=RoundedCornerShape(24.dp),contentPadding=PaddingValues(16.dp)){
-                        Column(verticalArrangement=Arrangement.spacedBy(12.dp)){
-                            Icon(painterResource(when(kind){SwapKind.AUDIO->R.drawable.ref_app_audio_editor;SwapKind.VIDEO->R.drawable.ref_app_video_editor;SwapKind.IMAGE->R.drawable.ref_app_photo;SwapKind.DOCUMENT->R.drawable.ref_app_write}),null,Modifier.size(28.dp))
-                            Text(kind.title,style=MaterialTheme.typography.titleLarge)
-                            Text(kind.inputs,style=MaterialTheme.typography.bodySmall)
-                        }
-                    }}
-                }}
+                AlignedCardGrid(SwapKind.entries, maxColumns = 4) { kind, modifier ->
+                    val icon = when (kind) {
+                        SwapKind.AUDIO -> R.drawable.ref_app_audio_editor
+                        SwapKind.VIDEO -> R.drawable.ref_app_video_editor
+                        SwapKind.IMAGE -> R.drawable.ref_app_photo
+                        SwapKind.DOCUMENT -> R.drawable.ref_app_write
+                    }
+                    FileTypeCard(kind.title, kind.inputs, icon, modifier) {
+                        model.choose(kind)
+                        pick()
+                    }
+                }
                 Text("Works on your device · no upload",style=MaterialTheme.typography.labelLarge,color=MaterialTheme.colorScheme.primary)
                 Text("Supported inputs depend on your device. Legacy DOC, AVI and WMV are not supported. HEIC and GIF can be opened as still images.",style=MaterialTheme.typography.bodySmall,color=MaterialTheme.colorScheme.onSurfaceVariant)
             }else{

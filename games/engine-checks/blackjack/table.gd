@@ -111,11 +111,16 @@ func _draw() -> void:
 		var label:="YOU" if actor==me else "FRIEND" if friend else "DEALER"
 		if stood[actor] and not hand_over:label+=" · STANDING"
 		var ink:=Color("c4f4e3" if actor==me else "f3d9a0")
-		var point:=Vector2(26,clampf(size.y*.105,31,50) if actor!=me else size.y-clampf(size.y*.09,29,45))
-		var width:=ThemeDB.fallback_font.get_string_size(label,HORIZONTAL_ALIGNMENT_LEFT,-1,11).x
-		draw_style_box(Chrome.box("112b2b","6b785d",6),Rect2(point-Vector2(5,13),Vector2(width+18,19)))
-		diamond(point+Vector2(2,-3),Vector2(2,3),ink)
-		draw_string(ThemeDB.fallback_font,point+Vector2(9,0),label,HORIZONTAL_ALIGNMENT_LEFT,-1,11,ink)
+		var font := ThemeDB.fallback_font
+		var font_size := 14
+		var width := font.get_string_size(label, HORIZONTAL_ALIGNMENT_LEFT, -1, font_size).x
+		var badge_height := 22.0
+		var hand_y := size.y * (.745 if actor == me else .27)
+		var spread := maxf(0, counts[actor] - 1) if actor == me else 0.0
+		var badge_y := minf(size.y - 15 - badge_height, hand_y + extent.y * .55 + spread + 5) if actor == me else maxf(15, hand_y - extent.y * .55 - badge_height - 5)
+		draw_style_box(Chrome.box("112b2b", "6b785d", 8), Rect2((size.x - width) * .5 - 10, badge_y, width + 20, badge_height))
+		var baseline := badge_y + (badge_height + font.get_ascent(font_size) - font.get_descent(font_size)) * .5
+		centered(label, Vector2(size.x * .5, baseline), font_size, ink)
 		if hand_over and actor==winning_actor and not hands[actor].is_empty():
 			var gold:=Color("c8a56c")
 			var left:=place(actor,0)

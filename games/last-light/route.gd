@@ -852,19 +852,21 @@ func _button_bounds(button: Array) -> Rect2:
 func _buttons() -> Array:
 	if not session.is_landscape():
 		return []
-	var width := _view_width(_play_area())
-	const Y := 480.0
+	var area := _play_area()
+	var transform := _layout_in(area)
+	var width := _view_width(area)
+	var control_y := (area.end.y - transform.origin.y) / transform.x.x - 60.0
 	const EDGE := 74.0
 	const SPACING := 112.0
 	if _show_delivery():
 		if delivered:
 			return []
-		return [[Vector2(EDGE, Y), "left", "", ARROW_SIZE], [Vector2(EDGE + SPACING, Y), "right", "", ARROW_SIZE],
-			[Vector2(width - EDGE - 42, Y), "strike", "PLACE", Vector2(166, 58)]]
-	return [[Vector2(EDGE, Y), "left", "", ARROW_SIZE], [Vector2(EDGE + SPACING, Y), "right", "", ARROW_SIZE],
-		[Vector2(width - EDGE - 2 * SPACING, Y), "drop", "DROP", ACTION_SIZE],
-		[Vector2(width - EDGE - SPACING, Y), "strike", "STRIKE", ACTION_SIZE],
-		[Vector2(width - EDGE, Y), "jump", "JUMP", ACTION_SIZE]]
+		return [[Vector2(EDGE, control_y), "left", "", ARROW_SIZE], [Vector2(EDGE + SPACING, control_y), "right", "", ARROW_SIZE],
+			[Vector2(width - EDGE - 42, control_y), "strike", "PLACE", Vector2(166, 58)]]
+	return [[Vector2(EDGE, control_y), "left", "", ARROW_SIZE], [Vector2(EDGE + SPACING, control_y), "right", "", ARROW_SIZE],
+		[Vector2(width - EDGE - 2 * SPACING, control_y), "drop", "DROP", ACTION_SIZE],
+		[Vector2(width - EDGE - SPACING, control_y), "strike", "STRIKE", ACTION_SIZE],
+		[Vector2(width - EDGE, control_y), "jump", "JUMP", ACTION_SIZE]]
 
 func _set_touch(index: int, point: Vector2) -> void:
 	var action := _pad(_layout().affine_inverse() * point)
@@ -1695,6 +1697,9 @@ func _draw() -> void:
 	var layout := _layout_in(area)
 	var width := _view_width(area)
 	draw_rect(Rect2(Vector2.ZERO, size), NIGHT)
+	if not session.is_landscape():
+		_draw_rotate_prompt(area)
+		return
 	draw_set_transform_matrix(layout)
 	if _intro_active():
 		_draw_intro(width, layout)
@@ -1741,6 +1746,16 @@ func _draw() -> void:
 	draw_set_transform_matrix(layout)
 	_draw_pickup_feedback(zoom * (pos - Vector2(camera_x, 0)), width)
 	_draw_hud(width)
+
+func _draw_rotate_prompt(area: Rect2) -> void:
+	var top := area.position
+	var bottom := area.end
+	draw_polygon(PackedVector2Array([top, Vector2(bottom.x, top.y), bottom, Vector2(top.x, bottom.y)]),
+		PackedColorArray([Color("#142c42"), Color("#142c42"), NIGHT, NIGHT]))
+	var center := area.get_center()
+	var font_size := clampi(roundi(area.size.x * .082), 18, 64)
+	var baseline := center.y + (font.get_ascent(font_size) - font.get_descent(font_size)) * .5
+	_center(center.x, baseline, "Rotate to play", font_size, GOLD)
 
 func _scenery_travel(depth: float) -> float:
 	return (time * TRAIN_SPEED + camera_x) * depth
@@ -2754,11 +2769,8 @@ func _draw_hud(width: float) -> void:
 		draw_circle(Vector2(width - 35 - (3 - i) * 22, 33), 6, GOLD if i < health else Color("#334b5b"))
 	draw_rect(Rect2(25, 68, width - 50, 2), Color("#254252"))
 	draw_rect(Rect2(25, 68, (width - 50) * clampf((pos.x - 135) / (goal_x - 135.0), 0, 1), 2), TEAL)
-	if not session.is_landscape():
-		_center(width * 0.5, 467, "Rotate sideways to play", 34, GOLD)
-	else:
-		draw_rect(Rect2(width * 0.5 - 143, 10, 286, 38), Color("#071322f2"))
-		_center(width * 0.5, 36, "Turn upright for menu", 23, Color("#e7f2f4"))
+	draw_rect(Rect2(width * 0.5 - 143, 10, 286, 38), Color("#071322f2"))
+	_center(width * 0.5, 36, "Turn upright for menu", 23, Color("#e7f2f4"))
 	_draw_controls()
 	if finished or defeated:
 		draw_rect(Rect2(width * 0.5 - 248, 151, 496, 201), Color("#091827ef"))

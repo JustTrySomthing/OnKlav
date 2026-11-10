@@ -22,6 +22,7 @@ import androidx.compose.ui.*
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.stateDescription
 import androidx.compose.ui.text.font.FontWeight
@@ -65,7 +66,17 @@ class PhoneCallActivity:ComponentActivity(){
   if(call.state==Call.STATE_SELECT_PHONE_ACCOUNT){Text("Choose a calling account");var lines by remember{mutableStateOf<List<PhoneLine>>(emptyList())};LaunchedEffect(call.id){lines=kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO){runCatching{PhoneRepository(c).lines()}.getOrDefault(emptyList())}};lines.forEach{line->OutlinedButton(onClick={PhoneCalls.service?.selectAccount(call.id,line.handle)},modifier=Modifier.fillMaxWidth()){Text(line.name)}}}
   if(call.state!=Call.STATE_RINGING&&call.state!=Call.STATE_DISCONNECTED){
    PhoneVideoSession(call)
-   if(pad){Text(digits,style=MaterialTheme.typography.headlineSmall);PhonePad(press={key->digits=(digits+key).takeLast(40);PhoneCalls.tone(call.id,key.single())},compact=true);TextButton(onClick={pad=false}){Text("Hide keypad")}}
+   if(pad){
+    Text(digits,style=MaterialTheme.typography.headlineSmall)
+    BoxWithConstraints(Modifier.fillMaxWidth(),contentAlignment=Alignment.Center){
+     val keyHeight=phonePadKeyHeight(maxWidth)
+     PhonePad(compact=keyHeight<54.dp||LocalDensity.current.fontScale>1.25f,keyHeight=keyHeight,press={key->
+      digits=(digits+key).takeLast(40)
+      PhoneCalls.tone(call.id,key.single())
+     })
+    }
+    TextButton(onClick={pad=false}){Text("Hide keypad")}
+   }
    else FlowRow(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.SpaceEvenly,verticalArrangement=Arrangement.spacedBy(12.dp),maxItemsInEachRow=3){
     PhoneCallControl("Mute",Icons.Outlined.MicOff,call.state==Call.STATE_ACTIVE,{PhoneCalls.action(call.id,"mute")},selected=state.muted)
     PhoneCallControl("Keypad",PhoneIcons.Pad,call.state==Call.STATE_ACTIVE,{pad=true})

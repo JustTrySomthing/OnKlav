@@ -14,11 +14,24 @@ internal fun mailId()=UUID.randomUUID().toString()
 internal fun mailAccess(c:Context,cap:String="storage.private")=runCatching{val rows=AppSdk.sync(c,JSONObject().put("action","list")) as JSONArray;(0 until rows.length()).any{val r=rows.getJSONObject(it);r.optBoolean("installed")&&r.optJSONObject("manifest")?.optString("id")==MAIL_APP&&r.optJSONArray("grants")?.let{a->(0 until a.length()).any{a.optString(it)==cap}}==true}}.getOrDefault(false)
 internal data class MailAccount(val id:String=mailId(),val provider:String="Other",val email:String="",val name:String="",val imap:String="",val imapPort:Int=993,val smtp:String="",val smtpPort:Int=465,val smtpTls:Boolean=false,val user:String=email,val smtpUser:String=user,val signature:String="",val enabled:Boolean=true,val notify:Boolean=true){
  fun json()=JSONObject().put("id",id).put("provider",provider).put("email",email).put("name",name).put("imap",imap).put("imapPort",imapPort).put("smtp",smtp).put("smtpPort",smtpPort).put("smtpTls",smtpTls).put("user",user).put("smtpUser",smtpUser).put("signature",signature).put("enabled",enabled).put("notify",notify)
- fun validate(){require(id.matches(Regex("[a-f0-9-]{36}")));MailMime.addresses(email).also{require(it.size==1)};require(name.length<=120&&name.none{it=='\r'||it=='\n'});require(provider in listOf("Gmail","Yahoo","Other"));for(h in listOf(imap,smtp))require(h.length in 1..253&&h.matches(Regex("[A-Za-z0-9][A-Za-z0-9.-]*[A-Za-z0-9]|[A-Za-z0-9]"))){"Enter a mail server hostname"};require(imapPort in 1..65535&&smtpPort in 1..65535);require(user.isNotBlank()&&smtpUser.isNotBlank()&&listOf(user,smtpUser).all{it.length<=320&&it.none{c->c=='\r'||c=='\n'}});require(signature.length<=4000)}
+ fun validate(){require(id.matches(Regex("[a-f0-9-]{36}")));MailMime.addresses(email).also{require(it.size==1)};require(name.length<=120&&name.none{it=='\r'||it=='\n'});require(provider in listOf("GMX","Gmail","Yahoo","Other"));for(h in listOf(imap,smtp))require(h.length in 1..253&&h.matches(Regex("[A-Za-z0-9][A-Za-z0-9.-]*[A-Za-z0-9]|[A-Za-z0-9]"))){"Enter a mail server hostname"};require(imapPort in 1..65535&&smtpPort in 1..65535);require(user.isNotBlank()&&smtpUser.isNotBlank()&&listOf(user,smtpUser).all{it.length<=320&&it.none{c->c=='\r'||c=='\n'}});require(signature.length<=4000)}
  fun withAddress(value:String):MailAccount {val old=preset(provider,email);val next=preset(provider,value);return copy(email=value,user=if(user==old.user||user==email)next.user else user,smtpUser=if(smtpUser==old.smtpUser||smtpUser==email)next.smtpUser else smtpUser,imap=if(imap==old.imap)next.imap else imap,smtp=if(smtp==old.smtp)next.smtp else smtp)}
  companion object{
   fun parse(j:JSONObject)=MailAccount(j.getString("id"),j.getString("provider"),j.getString("email"),j.optString("name"),j.getString("imap"),j.optInt("imapPort",993),j.getString("smtp"),j.optInt("smtpPort",465),j.optBoolean("smtpTls"),j.optString("user",j.getString("email")),j.optString("smtpUser",j.optString("user",j.getString("email"))),j.optString("signature"),j.optBoolean("enabled",true),j.optBoolean("notify",true)).also{it.validate()}
-  fun preset(provider:String,email:String=""):MailAccount{require(provider in listOf("Gmail","Yahoo","Other")){"Unsupported email provider"};val hosts=when(provider){"Gmail"->"imap.gmail.com" to "smtp.gmail.com";"Yahoo"->"imap.mail.yahoo.com" to "smtp.mail.yahoo.com";else->"" to ""};return MailAccount(provider=provider,email=email,imap=hosts.first,smtp=hosts.second,smtpPort=465,smtpTls=false)}
+  fun preset(provider: String, email: String = ""): MailAccount {
+   val (imap, smtp) = when (provider) {
+    "GMX" -> {
+     val domain = email.substringAfterLast('@').lowercase()
+     val server = if (domain in setOf("gmx.de", "gmx.net")) "gmx.net" else "gmx.com"
+     "imap.$server" to "mail.$server"
+    }
+    "Gmail" -> "imap.gmail.com" to "smtp.gmail.com"
+    "Yahoo" -> "imap.mail.yahoo.com" to "smtp.mail.yahoo.com"
+    "Other" -> "" to ""
+    else -> throw IllegalArgumentException("Unsupported email provider")
+   }
+   return MailAccount(provider = provider, email = email, imap = imap, smtp = smtp)
+  }
  }
 }
 internal data class MailFolder(val path:String,val name:String,val role:String="",val selectable:Boolean=true){fun json()=JSONObject().put("path",path).put("name",name).put("role",role).put("selectable",selectable);companion object{fun parse(j:JSONObject)=MailFolder(j.getString("path"),j.getString("name"),j.optString("role"),j.optBoolean("selectable",true))}}

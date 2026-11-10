@@ -54,6 +54,7 @@ func _ready() -> void:
 	make_report()
 	network.sent.connect(func(data):apply_peer(me,data));network.received.connect(func(data):apply_peer(1-me,data));network.changed.connect(refresh)
 	resized.connect(layout)
+	if OS.has_feature("web"): get_viewport().size_changed.connect(layout, CONNECT_DEFERRED)
 	var path:String="user://friend-"+network.match_id+".json" if network.enabled else "user://builtin-blackjack.json"
 	OnKlavGame.attach_session(self,snapshot,restore,start_new,HELP,path,{}, {"is_resumable":func(_state:Dictionary):return network.enabled or not model.finished})
 	audio.music()
@@ -80,9 +81,7 @@ func _draw() -> void:
 		var x:=8.0 if side==0 else size.x-8.0
 		draw_line(Vector2(x,0),Vector2(x,size.y),Color("bd9d6230"),1,true)
 func layout() -> void:
-	var width:=432.0
-	if OS.has_feature("web"):width=maxf(320,float(JavaScriptBridge.eval("window.innerWidth")))
-	var ratio:=maxf(.01,size.x/width);canvas.scale=Vector2.ONE*ratio;canvas.size=Vector2(width,maxf(200,size.y/ratio-56))
+	Chrome.fit_board(canvas, size, 56, 500)
 	scoreboard.custom_minimum_size.y=104 if canvas.size.y<600 else 116
 	queue_redraw()
 func make_report() -> void:

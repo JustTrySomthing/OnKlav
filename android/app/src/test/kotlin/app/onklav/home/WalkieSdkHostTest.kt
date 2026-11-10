@@ -47,8 +47,9 @@ class WalkieSdkHostTest {
                 run { // Android traverses newly created windows even without a pending Compose measure flag.
                     val decor = view.rootView
                     decor.forceLayout()
-                    decor.measure(android.view.View.MeasureSpec.makeMeasureSpec(432, android.view.View.MeasureSpec.EXACTLY),
-                        android.view.View.MeasureSpec.makeMeasureSpec(936, android.view.View.MeasureSpec.AT_MOST))
+                    val display = compose.activity.resources.displayMetrics
+                    decor.measure(android.view.View.MeasureSpec.makeMeasureSpec(display.widthPixels, android.view.View.MeasureSpec.EXACTLY),
+                        android.view.View.MeasureSpec.makeMeasureSpec(display.heightPixels, android.view.View.MeasureSpec.AT_MOST))
                     decor.layout(0, 0, decor.measuredWidth, decor.measuredHeight)
                     root.javaClass.getMethod("measureAndLayoutForTest").invoke(root)
                 }
@@ -65,6 +66,36 @@ class WalkieSdkHostTest {
     }
 
     private fun menu(label:String) {compose.onNodeWithContentDescription("More actions").readyClick();compose.onNodeWithText(label).readyClick()}
+    @Test(timeout = 60000)
+    @Config(qualifiers = "w320dp-h720dp-mdpi", fontScale = 1.3f)
+    fun closeButtonAndQuickTogglesFitOnANarrowPanel() {
+        var exits = 0
+        compose.runOnUiThread {
+            compose.activity.setContent {
+                OnKlavTheme(preview = app.onklav.shared.AppearanceSpec(dark = true, palette = 7)) {
+                    SdkAppScreen("app.onklav.walkie", exit = { exits++ })
+                }
+            }
+        }
+        compose.mainClock.autoAdvance = false
+        val more = compose.onNodeWithContentDescription("More actions")
+        val close = compose.onNodeWithContentDescription("Close Walkie-Talkie")
+        val play = compose.onNodeWithTag("sdk-quick.auto_play")
+        val send = compose.onNodeWithTag("sdk-quick.auto_send")
+        waitFor { runCatching { play.assertExists(); send.assertExists() }.isSuccess }
+
+        val playBounds = play.fetchSemanticsNode().boundsInRoot
+        val sendBounds = send.fetchSemanticsNode().boundsInRoot
+        assertEquals(playBounds.center.y, sendBounds.center.y, 1f)
+        assertTrue(playBounds.right <= sendBounds.left)
+        assertTrue(more.fetchSemanticsNode().boundsInRoot.right <= close.fetchSemanticsNode().boundsInRoot.left)
+
+        val model = androidx.lifecycle.ViewModelProvider(compose.activity)["sdk-app.onklav.walkie", SdkAppModel::class.java]
+        close.readyClick()
+        waitFor { exits == 1 }
+        assertEquals(0, model.frame.length())
+    }
+
     @Test(timeout=60000) fun walkieSettingsOfflineDialAndRecipientStorageUseSignedSdk() {
         val context=InstrumentationRegistry.getInstrumentation().targetContext
         runBlocking {AppSdk.bootstrap(context)}

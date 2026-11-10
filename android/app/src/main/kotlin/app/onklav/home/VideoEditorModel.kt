@@ -61,7 +61,6 @@ internal class VideoEditorModel(app:Application):AndroidViewModel(app){
     val hasUnsavedChanges get()=project!=committed
     val canUndo get()=undo.isNotEmpty()||hasUnsavedChanges;val canRedo get()=redo.isNotEmpty()&&!hasUnsavedChanges;val clip get()=project.clips.getOrNull(selected)
     val clipOffset get()=project.clipStart(selected)
-    init{launch("Restoring projects"){val restored=withContext(Dispatchers.IO){authorize();runCatching{store.current()}};restored.getOrNull()?.let{project=it;committed=project};refresh();loadThumbnails();if(restored.isFailure){status="Couldn’t restore the last project. Open Projects or start a new one. ${restored.exceptionOrNull()?.message.orEmpty()}";error=true}else reportMedia()}}
     private fun reportMedia(){val missing=store.missing(project);if(missing.isEmpty()){status="";error=false}else{status="${missing.size} project media file(s) missing. Open Projects and restore a portable backup; the saved edits are kept.";error=true}}
     private fun requireMedia(){val missing=store.missing(project);check(missing.isEmpty()){ "${missing.size} project media file(s) missing. Restore a portable backup from Projects before playback or export." }}
     private fun readyToSwitch():Boolean{commit();return project==committed}
@@ -361,6 +360,29 @@ internal class VideoEditorModel(app:Application):AndroidViewModel(app){
     }}
     fun cancel(){if(recording)stopVoiceover();if(!busy)commit();job?.cancel();transformer?.cancel();releasePreview()}
     override fun onCleared(){soundtrackFile?.second?.delete();compatibleFile?.second?.delete();if(recording)stopVoiceover();job?.cancel();thumbs?.cancel();transformer?.cancel();releasePreview()}
+
+    // Start restoration after every state delegate used by launch is initialized.
+    init {
+        launch("Restoring projects") {
+            val restored = withContext(Dispatchers.IO) {
+                authorize()
+                runCatching { store.current() }
+            }
+            restored.getOrNull()?.let {
+                project = it
+                committed = it
+            }
+            refresh()
+            loadThumbnails()
+            if (restored.isFailure) {
+                status = "Couldn’t restore the last project. Open Projects or start a new one. " +
+                    restored.exceptionOrNull()?.message.orEmpty()
+                error = true
+            } else {
+                reportMedia()
+            }
+        }
+    }
 }
 
 internal fun videoNeedsCompatiblePreview(code:Int):Boolean=code in setOf(PlaybackException.ERROR_CODE_VIDEO_FRAME_PROCESSING_FAILED,PlaybackException.ERROR_CODE_FAILED_RUNTIME_CHECK,PlaybackException.ERROR_CODE_DECODER_INIT_FAILED,PlaybackException.ERROR_CODE_DECODING_FAILED)

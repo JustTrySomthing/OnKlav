@@ -13,9 +13,9 @@ import org.json.*
 import java.time.*
 import java.util.UUID
 
-internal data class ClockAlarm(val id:String=UUID.randomUUID().toString(),val hour:Int=7,val minute:Int=0,val days:Int=0,val label:String="Alarm",val enabled:Boolean=true,val vibrate:Boolean=true,val tone:String="",val snooze:Int=10,val next:Long=0,val ringing:Boolean=false,val snoozed:Boolean=false){
- fun json()=JSONObject().put("id",id).put("hour",hour).put("minute",minute).put("days",days).put("label",label.take(80)).put("enabled",enabled).put("vibrate",vibrate).put("tone",tone).put("snooze",snooze).put("next",next).put("ringing",ringing).put("snoozed",snoozed)
- companion object{fun from(j:JSONObject)=ClockAlarm(j.getString("id"),j.optInt("hour",7).coerceIn(0,23),j.optInt("minute").coerceIn(0,59),j.optInt("days")and 127,j.optString("label","Alarm"),j.optBoolean("enabled"),j.optBoolean("vibrate",true),j.optString("tone"),j.optInt("snooze",10).coerceIn(1,30),j.optLong("next"),j.optBoolean("ringing"),j.optBoolean("snoozed"))}
+internal data class ClockAlarm(val id:String=UUID.randomUUID().toString(),val hour:Int=7,val minute:Int=0,val days:Int=0,val label:String="Alarm",val enabled:Boolean=true,val vibrate:Boolean=true,val tone:String="",val snooze:Int=10,val next:Long=0,val ringing:Boolean=false,val snoozed:Boolean=false,val skippedDay:Long=Long.MIN_VALUE){
+ fun json()=JSONObject().put("id",id).put("hour",hour).put("minute",minute).put("days",days).put("label",label.take(80)).put("enabled",enabled).put("vibrate",vibrate).put("tone",tone).put("snooze",snooze).put("next",next).put("ringing",ringing).put("snoozed",snoozed).put("skippedDay",skippedDay)
+ companion object{fun from(j:JSONObject)=ClockAlarm(j.getString("id"),j.optInt("hour",7).coerceIn(0,23),j.optInt("minute").coerceIn(0,59),j.optInt("days")and 127,j.optString("label","Alarm"),j.optBoolean("enabled"),j.optBoolean("vibrate",true),j.optString("tone"),j.optInt("snooze",10).coerceIn(1,30),j.optLong("next"),j.optBoolean("ringing"),j.optBoolean("snoozed"),j.optLong("skippedDay",Long.MIN_VALUE))}
 }
 internal data class ClockTimer(val id:String=UUID.randomUUID().toString(),val label:String="Timer",val duration:Long=300000,val remaining:Long=duration,val end:Long=0,val wall:Long=0,val boot:Int=0,val ringing:Boolean=false){
  fun left(c:Context,now:Long=SystemClock.elapsedRealtime(),wallNow:Long=System.currentTimeMillis())=if(end==0L)remaining else if(boot==ClockDisk.boot(c))(end-now).coerceAtLeast(0)else(wall-wallNow).coerceAtLeast(0)
@@ -40,7 +40,7 @@ internal object ClockDisk{
  /** A gap advances to the first valid local instant; an overlap may ring at either still-future occurrence. */
  fun next(a:ClockAlarm,now:Instant=Instant.now(),zone:ZoneId=ZoneId.systemDefault()):Long{
   val today=now.atZone(zone).toLocalDate()
-  for(d in 0L..8L){val date=today.plusDays(d);if(a.days!=0&&a.days and (1 shl (date.dayOfWeek.value-1))==0)continue
+  for(d in 0L..8L){val date=today.plusDays(d);if(date.toEpochDay()==a.skippedDay)continue;if(a.days!=0&&a.days and (1 shl (date.dayOfWeek.value-1))==0)continue
    val local=date.atTime(a.hour,a.minute);val offsets=zone.rules.getValidOffsets(local)
    val candidates=if(offsets.isEmpty())listOf(local.atZone(zone).toInstant())else offsets.map{local.toInstant(it)}
    candidates.sorted().firstOrNull{it>now}?.let{return it.toEpochMilli()}
@@ -60,9 +60,9 @@ internal object ClockDisk{
  // Schedule mutations acquire carrierEgress before the disk monitor used by read/update.
  fun saveAlarm(c:Context,a:ClockAlarm,preserveRing:Boolean=false)=AppSdk.carrierEgress {check(allowed(c)){"Clock permissions are off"};val next=if(a.enabled)if(a.next>System.currentTimeMillis())a.next else next(a)else 0;val value=a.copy(next=next,ringing=preserveRing&&a.ringing);val previous=alarms(c).firstOrNull{it.id==a.id}
   if(a.enabled){check(exact(c)){"Allow alarms & reminders first"};schedule(c,"a-${a.id}",next)}else cancel(c,"a-${a.id}")
-  try{update(c){j->val rows=alarms(c).filter{it.id!=a.id};check(rows.size<32){"Keep up to32 alarms"};j.put("alarms",JSONArray((rows+value).map{it.json()}))}}catch(e:Exception){try{if(previous?.enabled==true)schedule(c,"a-${a.id}",previous.next)else cancel(c,"a-${a.id}")}catch(rollback:Exception){e.addSuppressed(rollback)};throw e};notifyRing(c)
+  try{update(c){j->val rows=alarms(c).filter{it.id!=a.id};check(rows.size<32){"Keep up to32 alarms"};j.put("alarms",JSONArray((rows+value).map{it.json()}))}}catch(e:Exception){try{if(previous?.enabled==true)schedule(c,"a-${a.id}",previous.next)else cancel(c,"a-${a.id}")}catch(rollback:Exception){e.addSuppressed(rollback)};throw e};ClockUpcoming.refresh(c);notifyRing(c)
  }
- fun deleteAlarm(c:Context,id:String)=AppSdk.carrierEgress {update(c){j->j.put("alarms",JSONArray(alarms(c).filter{it.id!=id}.map{it.json()}))};cancel(c,"a-$id");notifyRing(c)}
+ fun deleteAlarm(c:Context,id:String)=AppSdk.carrierEgress {update(c){j->j.put("alarms",JSONArray(alarms(c).filter{it.id!=id}.map{it.json()}))};cancel(c,"a-$id");ClockUpcoming.refresh(c);notifyRing(c)}
  fun timer(c:Context,t:ClockTimer,run:Boolean)=AppSdk.carrierEgress {check(allowed(c)){"Clock permissions are off"};val previous=timers(c).firstOrNull{it.id==t.id};val existing=timers(c).filter{it.id!=t.id};check(existing.size<16){"Keep up to16 timers"};val left=if(t.end>0)t.left(c)else t.remaining
   val v=if(run)t.copy(end=SystemClock.elapsedRealtime()+left.coerceAtLeast(1000),wall=System.currentTimeMillis()+left.coerceAtLeast(1000),boot=boot(c),ringing=false)else t.copy(remaining=left,end=0,wall=0,ringing=false)
   if(run)schedule(c,"t-${t.id}",v.wall)else cancel(c,"t-${t.id}")
@@ -74,6 +74,7 @@ internal object ClockDisk{
   if(key.startsWith("a-")){val a=alarms(c).firstOrNull{"a-${it.id}"==key&&it.enabled&&it.next==at}?:return@carrierEgress false
    if(now+1000<at){schedule(c,key,at);return@carrierEgress false};if(now-at>20*60000L){update(c){it.put("error","An alarm was missed while OnKlav was unavailable")};saveAlarm(c,a.copy(enabled=a.days!=0,next=0));return@carrierEgress false}
    val next=afterRing(a,at);update(c){j->j.put("alarms",JSONArray(alarms(c).map{if(it.id==a.id)a.copy(enabled=a.days!=0,next=next,ringing=true,snoozed=false).json()else it.json()}))};if(next>0)runCatching{schedule(c,key,next)}.onFailure{update(c){j->j.put("error","Could not schedule the next alarm. Check Alarms & reminders access.")}}
+   ClockUpcoming.refresh(c)
   }else{val t=timers(c).firstOrNull{"t-${it.id}"==key&&it.end!=0L&&it.wall==at}?:return@carrierEgress false;val left=t.left(c);if(left>1000){val adjusted=t.copy(wall=now+left);update(c){j->j.put("timers",JSONArray(timers(c).map{if(it.id==t.id)adjusted.json()else it.json()}))};schedule(c,key,adjusted.wall);return@carrierEgress false};update(c){j->j.put("timers",JSONArray(timers(c).map{if(it.id==t.id)t.copy(end=0,wall=0,remaining=0,ringing=now-at<20*60000L).json()else it.json()}))}}
   if(rings(c).isNotEmpty())update(c){if(it.optLong("ringAt")==0L)it.put("ringAt",now)};return@carrierEgress rings(c).isNotEmpty()
  }
@@ -92,16 +93,25 @@ internal object ClockDisk{
   }
   notifyRing(c)
  }
+ fun dismissUpcoming(c:Context,id:String,at:Long)=AppSdk.carrierEgress {
+  val now=Instant.now()
+  val alarm=alarms(c).firstOrNull{it.id==id&&it.enabled&&it.next==at&&at>now.toEpochMilli()}?:return@carrierEgress
+  val zone=ZoneId.systemDefault()
+  val skippedDay=if(alarm.snoozed)alarm.skippedDay else Instant.ofEpochMilli(at).atZone(zone).toLocalDate().toEpochDay()
+  val next=afterRing(alarm,at,now,zone)
+  saveAlarm(c,alarm.copy(enabled=next>0,next=next,snoozed=false,skippedDay=skippedDay),preserveRing=true)
+ }
  fun notifyRing(c:Context){if(rings(c).isEmpty()&&read(c).has("ringAt"))update(c){it.remove("ringAt")};if(ClockRingService.alive)c.startService(Intent(c,ClockRingService::class.java).setAction("refresh"))}
- fun stopAll(c:Context)=AppSdk.carrierEgress {update(c){it.remove("ringAt")};alarms(c).forEach{cancel(c,"a-${it.id}")};timers(c).forEach{cancel(c,"t-${it.id}")};update(c){j->j.put("alarms",JSONArray(alarms(c).map{it.copy(enabled=false,next=0,ringing=false).json()}));j.put("timers",JSONArray(timers(c).map{it.copy(remaining=it.left(c),end=0,wall=0,ringing=false).json()}))};c.stopService(Intent(c,ClockRingService::class.java))}
- fun recover(c:Context)=AppSdk.carrierEgress {if(!allowed(c)){stopAll(c);return@carrierEgress};if(!exact(c))return@carrierEgress
+ fun stopAll(c:Context)=AppSdk.carrierEgress {update(c){it.remove("ringAt")};alarms(c).forEach{cancel(c,"a-${it.id}")};timers(c).forEach{cancel(c,"t-${it.id}")};update(c){j->j.put("alarms",JSONArray(alarms(c).map{it.copy(enabled=false,next=0,ringing=false).json()}));j.put("timers",JSONArray(timers(c).map{it.copy(remaining=it.left(c),end=0,wall=0,ringing=false).json()}))};ClockUpcoming.refresh(c);c.stopService(Intent(c,ClockRingService::class.java))}
+ fun recover(c:Context)=AppSdk.carrierEgress {if(!allowed(c)){stopAll(c);return@carrierEgress};if(!exact(c)){ClockUpcoming.refresh(c);return@carrierEgress}
   alarms(c).filter{it.enabled}.forEach{a->val at=if(a.snoozed&&a.next>System.currentTimeMillis())a.next else next(a);saveAlarm(c,a.copy(next=at,enabled=a.days!=0||a.next>System.currentTimeMillis()),preserveRing=true)}
   timers(c).filter{it.end>0}.forEach{t->timer(c,t.copy(remaining=t.left(c),end=0),t.left(c)>0)}
+  ClockUpcoming.refresh(c)
   // Boot/time broadcasts never start media playback; a future exact event does.
  }
 }
 class ClockReceiver:BroadcastReceiver(){override fun onReceive(c:Context,i:Intent){runCatching{
- when(i.action){"ring"->if(ClockDisk.fire(c,i.getStringExtra("key").orEmpty(),i.getLongExtra("at",0)))ContextCompat.startForegroundService(c,Intent(c,ClockRingService::class.java));"dismiss","snooze"->ClockDisk.dismiss(c,i.getStringExtra("key").orEmpty(),i.action=="snooze");else->ClockDisk.recover(c)}
+ when(i.action){ClockUpcoming.SHOW->AppSdk.carrierEgress { ClockUpcoming.refresh(c) };ClockUpcoming.DISMISS->ClockDisk.dismissUpcoming(c,i.getStringExtra("id").orEmpty(),i.getLongExtra("at",0));"ring"->if(ClockDisk.fire(c,i.getStringExtra("key").orEmpty(),i.getLongExtra("at",0)))ContextCompat.startForegroundService(c,Intent(c,ClockRingService::class.java));"dismiss","snooze"->ClockDisk.dismiss(c,i.getStringExtra("key").orEmpty(),i.action=="snooze");else->ClockDisk.recover(c)}
  }.onFailure{ClockDisk.update(c){j->j.put("error",it.message?:"Alarm could not start")}}}}
 class ClockRingService:Service(){
  companion object{@Volatile var alive=false}

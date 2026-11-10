@@ -22,16 +22,15 @@ import java.util.UUID
 @Composable private fun CalendarTimeDialog(time:LocalTime,close:()->Unit,select:(LocalTime)->Unit){val c=androidx.compose.ui.platform.LocalContext.current;val state=rememberTimePickerState(time.hour,time.minute,android.text.format.DateFormat.is24HourFormat(c));AlertDialog(onDismissRequest=close,title={Text("Choose time")},text={Box(Modifier.fillMaxWidth(),contentAlignment=Alignment.Center){TimeInput(state)}},confirmButton={TextButton(onClick={select(LocalTime.of(state.hour,state.minute))}){Text("Choose")}},dismissButton={TextButton(onClick=close){Text("Cancel")}})}
 @Composable internal fun CalendarChoice(label:String,values:List<String>,value:String,enabled:Boolean=true,change:(String)->Unit){var expanded by remember{mutableStateOf(false)};Box{OutlinedButton(onClick={expanded=true},enabled=enabled,modifier=Modifier.fillMaxWidth(),shape=RoundedCornerShape(12.dp)){Column(Modifier.weight(1f),horizontalAlignment=Alignment.Start){Text(label,style=MaterialTheme.typography.labelSmall,color=MaterialTheme.colorScheme.onSurfaceVariant);Text(value,style=MaterialTheme.typography.bodyLarge)};Icon(Icons.Outlined.ExpandMore,null)};DropdownMenu(expanded=expanded,onDismissRequest={expanded=false}){values.forEach{option->DropdownMenuItem(text={Text(option)},onClick={expanded=false;change(option)})}}}}
 @Composable private fun CalendarDateTimeButtons(date:LocalDate,time:LocalTime?,enabled:Boolean,onDate:()->Unit,onTime:()->Unit){
- BoxWithConstraints(Modifier.fillMaxWidth()){
-  val stack=maxWidth<270.dp||androidx.compose.ui.platform.LocalDensity.current.fontScale>1.25f
-  if(stack)Column(verticalArrangement=Arrangement.spacedBy(8.dp)){
-   OutlinedButton(onClick=onDate,enabled=enabled,modifier=Modifier.fillMaxWidth(),shape=RoundedCornerShape(12.dp)){Text(calendarDate(date))}
-   if(time!=null)OutlinedButton(onClick=onTime,enabled=enabled,modifier=Modifier.fillMaxWidth(),shape=RoundedCornerShape(12.dp)){Text(calendarTime(time))}
-  }else Row(horizontalArrangement=Arrangement.spacedBy(8.dp)){
-   OutlinedButton(onClick=onDate,enabled=enabled,modifier=Modifier.weight(1f),shape=RoundedCornerShape(12.dp)){Text(date.format(java.time.format.DateTimeFormatter.ofPattern("MMM d, yyyy")))}
-   if(time!=null)OutlinedButton(onClick=onTime,enabled=enabled,shape=RoundedCornerShape(12.dp)){Text(calendarTime(time))}
+ val labels = listOfNotNull(date.format(java.time.format.DateTimeFormatter.ofPattern("MMM d, yyyy")),
+  time?.let { calendarTime(it) })
+ AlignedCardGrid(labels,maxColumns=labels.size,gap=8.dp){label,modifier->
+  OutlinedButton(onClick=if(label==labels.first())onDate else onTime,enabled=enabled,
+   modifier=modifier,shape=RoundedCornerShape(12.dp),contentPadding=PaddingValues(horizontal=8.dp,vertical=8.dp)){
+   Text(label,textAlign=androidx.compose.ui.text.style.TextAlign.Center)
   }
  }
+
 }
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable internal fun CalendarEventEditor(m:CalendarModel,close:()->Unit){val e=m.draft?:return;var dateTarget by remember{mutableStateOf<String?>(null)};var timeTarget by remember{mutableStateOf<String?>(null)};var zone by remember{mutableStateOf(false)};var custom by remember{mutableStateOf<Int?>(null)};var customValue by remember{mutableStateOf("30")};var unit by remember{mutableStateOf("Minutes")};val colors=MaterialTheme.colorScheme

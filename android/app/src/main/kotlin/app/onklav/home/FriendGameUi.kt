@@ -1,6 +1,10 @@
 package app.onklav.home
 
+import androidx.compose.foundation.BorderStroke
+import androidx.compose.foundation.Image
 import androidx.compose.foundation.combinedClickable
+import androidx.compose.foundation.selection.selectable
+import androidx.compose.foundation.selection.selectableGroup
 import androidx.compose.foundation.ExperimentalFoundationApi
 import androidx.compose.foundation.lazy.LazyColumn
 import androidx.compose.foundation.lazy.items
@@ -14,6 +18,7 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
+import androidx.compose.ui.semantics.Role
 import androidx.compose.ui.text.input.KeyboardType
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.res.painterResource
@@ -29,7 +34,7 @@ import org.json.JSONObject
     val c=LocalContext.current;val scope=rememberCoroutineScope()
     var peer by rememberSaveable{mutableStateOf(preset.orEmpty())}
     var selected by rememberSaveable{mutableStateOf(existing)}
-    var stage by rememberSaveable{mutableStateOf(if(existing!=null)"connect" else if(preset.isNullOrBlank())"opponent" else if(game.id=="four")"side" else "connect")}
+    var stage by rememberSaveable{mutableStateOf(if(existing!=null)"connect" else if(game.id=="four")"side" else if(preset.isNullOrBlank())"opponent" else "connect")}
     var dogs by rememberSaveable{mutableStateOf(false)}
     var status by remember{mutableStateOf<JSONObject?>(null)}
     var error by remember{mutableStateOf<String?>(null)};var busy by remember{mutableStateOf(false)}
@@ -40,7 +45,7 @@ import org.json.JSONObject
     fun act(work:suspend ()->Unit){if(busy)return;busy=true;scope.launch{try{work()}catch(e:Exception){error=e.message?:"Unable to connect"}finally{busy=false}}}
     fun invite(){error=null;act{selected=withContext(Dispatchers.IO){FriendGames.invite(c,peer,game.id,dogs)}}}
     fun cancel(){if(busy)return;act{selected?.let{id->withContext(Dispatchers.IO){FriendGames.cancelInvitation(c,id)}};close()}}
-    fun recipient(number:String){peer=number;error=null;stage=if(game.id=="four")"side" else "connect"}
+    fun recipient(number:String){peer=number;error=null;stage="connect"}
     LaunchedEffect(stage){
         if(stage=="connect"&&selected==null)invite()
         if(stage=="contacts")try{contacts=withContext(Dispatchers.IO){loadPhoneContacts(c)};verified=withContext(Dispatchers.IO){FriendGames.verifiedPeers(c)};if(contacts.isEmpty())stage="number"}catch(e:Exception){error="Allow Contacts in Setup, or enter their number instead."}
@@ -70,10 +75,13 @@ import org.json.JSONObject
                     }
                     TextButton(onClick={stage="number"}){Text("Enter number")}
                 }
-                "side"->{Row(Modifier.fillMaxWidth(),horizontalArrangement=Arrangement.spacedBy(12.dp)){
-                    app.onklav.shared.ChoiceButton("Cats",Modifier.weight(1f)){dogs=false;stage="connect"}
-                    app.onklav.shared.ChoiceButton("Dogs",Modifier.weight(1f)){dogs=true;stage="connect"}
-                }}
+                "side" -> {
+                    Text("Your friend plays the other side.")
+                    Row(Modifier.fillMaxWidth().selectableGroup(), horizontalArrangement = Arrangement.spacedBy(12.dp)) {
+                        FriendSide("Cat", R.drawable.game_side_cat, !dogs, Modifier.weight(1f)) { dogs = false }
+                        FriendSide("Dog", R.drawable.game_side_dog, dogs, Modifier.weight(1f)) { dogs = true }
+                    }
+                }
                 else->{
                     Text(app.onklav.shared.displayPhone(peer),Modifier.align(Alignment.CenterHorizontally))
                     if(!failed&&state!="invite")CircularProgressIndicator(Modifier.size(32.dp).align(Alignment.CenterHorizontally))
@@ -90,9 +98,27 @@ import org.json.JSONObject
                 },modifier=Modifier.weight(1f).heightIn(min=48.dp),shape=RoundedCornerShape(12.dp),colors=ButtonDefaults.buttonColors(containerColor=Color(0xff7de0b4),contentColor=Color(0xff052d1e))){Text(if(state=="invite")"Accept"else"Try Again")}
             }
         }
-    },confirmButton={if(stage=="number")TextButton(enabled=!busy&&peer.isNotBlank(),onClick={if(FriendGames.validNumber(peer))recipient(peer)else error="Enter a mobile number."}){Text("Invite")}},dismissButton={if(stage!="connect")TextButton(enabled=!busy,onClick={cancel()}){Text("Cancel")}})
+    },confirmButton={
+        if (stage == "side") Button(onClick = { stage = if (peer.isBlank()) "opponent" else "connect" }) { Text("Play") }
+        if(stage=="number")TextButton(enabled=!busy&&peer.isNotBlank(),onClick={if(FriendGames.validNumber(peer))recipient(peer)else error="Enter a mobile number."}){Text("Invite")}},dismissButton={if(stage!="connect")TextButton(enabled=!busy,onClick={cancel()}){Text("Cancel")}})
     verifyPeer?.let{number->FriendVerificationDialog(number){verifyPeer=null;scope.launch{verified=withContext(Dispatchers.IO){FriendGames.verifiedPeers(c)}}}}
 
+}
+
+@Composable
+private fun FriendSide(label: String, artwork: Int, selected: Boolean, modifier: Modifier, onSelect: () -> Unit) {
+    val colors = MaterialTheme.colorScheme
+    Surface(
+        modifier = modifier.selectable(selected = selected, role = Role.RadioButton, onClick = onSelect),
+        shape = RoundedCornerShape(14.dp),
+        color = if (selected) colors.secondaryContainer else colors.surfaceVariant,
+        border = BorderStroke(if (selected) 2.dp else 1.dp, if (selected) colors.primary else colors.outlineVariant),
+    ) {
+        Column(Modifier.padding(8.dp), horizontalAlignment = Alignment.CenterHorizontally) {
+            Image(painterResource(artwork), null, Modifier.size(80.dp))
+            Text(label, color = if (selected) colors.onSecondaryContainer else colors.onSurfaceVariant)
+        }
+    }
 }
 
 @Composable private fun OpponentChoice(label:String,icon:Int,action:()->Unit) {

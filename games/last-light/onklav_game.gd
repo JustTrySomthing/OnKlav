@@ -237,6 +237,8 @@ func attach_session(scene: Control, snapshot: Callable, restore: Callable, resta
 	chrome.help_requested.connect(show_help)
 	chrome_root.add_child(chrome)
 	if not game_scene.resized.is_connected(fit_content): game_scene.resized.connect(fit_content)
+	if OS.has_feature("web") and not get_viewport().size_changed.is_connected(fit_content):
+		get_viewport().size_changed.connect(fit_content, CONNECT_DEFERRED)
 	wrap_content()
 	print("ONKLAV_SESSION_READY")
 	if Chrome.consume_fresh_start():
@@ -272,8 +274,7 @@ func is_landscape() -> bool:
 
 func fit_content() -> void:
 	if not is_instance_valid(game_scene) or not is_instance_valid(chrome_root): return
-	var width := 432.0
-	if OS.has_feature("web"): width = maxf(320, float(JavaScriptBridge.eval("window.innerWidth")))
+	var width := Chrome.window_width()
 	var ratio := maxf(game_scene.size.x / width, .01)
 	chrome_root.scale = Vector2.ONE * ratio
 	chrome_root.size = Vector2(width, game_scene.size.y / ratio)
@@ -305,19 +306,15 @@ func sheet(title: String, description: String, actions: Array) -> void:
 	if is_instance_valid(overlay): overlay.queue_free()
 	overlay = CanvasLayer.new(); overlay.layer = 180; add_child(overlay)
 	var screen := Control.new(); overlay.add_child(screen)
-	var width := 432.0
-	if OS.has_feature("web"): width = maxf(320, float(JavaScriptBridge.eval("window.innerWidth")))
-	screen.scale = Vector2.ONE * get_viewport().get_visible_rect().size.x / width
-	screen.size = get_viewport().get_visible_rect().size / screen.scale
 	var shade := ColorRect.new(); shade.color = Color(0, 0, 0, .75)
 	shade.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT); screen.add_child(shade)
 	var center := CenterContainer.new(); center.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT); shade.add_child(center)
-	var panel := PanelContainer.new(); panel.custom_minimum_size.x = minf(400, width - 32)
+	var panel := PanelContainer.new()
 	panel.add_theme_stylebox_override("panel", Chrome.box("102638", "38d4ea", 20)); center.add_child(panel)
 	var box := VBoxContainer.new(); box.add_theme_constant_override("separation", 12)
 	var scroll := ScrollContainer.new(); scroll.horizontal_scroll_mode = ScrollContainer.SCROLL_MODE_DISABLED; panel.add_child(scroll)
 	box.size_flags_horizontal = Control.SIZE_EXPAND_FILL; scroll.add_child(box)
-	box.minimum_size_changed.connect(func(): panel.custom_minimum_size.y = minf(box.get_combined_minimum_size().y + 16, maxf(80, screen.size.y - 32)))
+	Chrome.fit_dialog(screen, panel, box)
 	box.add_child(Chrome.caption(title, 24)); box.add_child(Chrome.caption(description, 17))
 	for entry in actions: box.add_child(Chrome.action(entry[0], entry[1]))
 

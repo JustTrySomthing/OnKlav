@@ -25,10 +25,10 @@ class AuditFixesTest {
  }
  @Test fun failedAlarmEditRestoresTheOriginalPendingIntentAndDeleteFailureKeepsIt(){
   runBlocking{AppSdk.bootstrap(c)};val context=FaultContext(c);val a=ClockAlarm(hour=7,minute=30);ClockDisk.saveAlarm(context,a)
-  val manager=Shadows.shadowOf(c.getSystemService(AlarmManager::class.java));val before=manager.scheduledAlarms.single().triggerAtTime
+  val manager=Shadows.shadowOf(c.getSystemService(AlarmManager::class.java));val before=manager.scheduledAlarms.single{Shadows.shadowOf(it.operation).savedIntent.action=="ring"}.triggerAtTime
   context.failWrites=true;assertThrows(IllegalStateException::class.java){ClockDisk.saveAlarm(context,a.copy(hour=8,next=0))}
-  assertEquals(7,ClockDisk.alarms(context).single().hour);assertEquals(before,manager.scheduledAlarms.single().triggerAtTime)
-  assertThrows(IllegalStateException::class.java){ClockDisk.deleteAlarm(context,a.id)};assertEquals(before,manager.scheduledAlarms.single().triggerAtTime)
+  assertEquals(7,ClockDisk.alarms(context).single().hour);assertEquals(before,manager.scheduledAlarms.single{Shadows.shadowOf(it.operation).savedIntent.action=="ring"}.triggerAtTime)
+  assertThrows(IllegalStateException::class.java){ClockDisk.deleteAlarm(context,a.id)};assertEquals(before,manager.scheduledAlarms.single{Shadows.shadowOf(it.operation).savedIntent.action=="ring"}.triggerAtTime)
  }
  @Test fun failedTimerCreationLeavesNoCallbackAndFailedPauseRestoresTheRunningTimer(){
   runBlocking{AppSdk.bootstrap(c)};val context=FaultContext(c);val t=ClockTimer(duration=60000);val manager=Shadows.shadowOf(c.getSystemService(AlarmManager::class.java));context.failWrites=true

@@ -16,7 +16,7 @@ import java.util.UUID
 
 @Composable internal fun MailAccountDialog(initial:MailAccount,m:MailModel,onClose:()->Unit,onWeb:(String)->Unit){
  var a by remember(initial.id){mutableStateOf(initial)};var password by remember{mutableStateOf("")};var smtpPassword by remember{mutableStateOf("")};var showPassword by remember{mutableStateOf(false)};var advanced by remember{mutableStateOf(initial.provider=="Other")};var directions by remember{mutableStateOf(false)};var preferences by remember{mutableStateOf(false)};var remove by remember{mutableStateOf(false)};var error by remember{mutableStateOf("")};val existing=m.accounts.any{it.id==initial.id}
- fun connect(){error="";try{a.validate();if(password.isBlank()&&(!existing))error=if(a.provider in listOf("Gmail","Yahoo"))"Enter your app password"else"Enter your mail password" else m.connect(a,password,smtpPassword,onClose)}catch(e:Exception){error=MailMime.error(e)}}
+ fun connect(){error="";try{a.validate();if(password.isBlank()&&(!existing))error=if(MailSetup.requiresAppPassword(a.provider))"Enter your app password"else"Enter your mail password" else m.connect(a,password,smtpPassword,onClose)}catch(e:Exception){error=MailMime.error(e)}}
  MailDialog(if(existing)"Account settings" else"Add email account",{if(!m.busy)onClose()}){
   if(!existing)Text("Email provider",style=MaterialTheme.typography.labelSmall,color=MaterialTheme.colorScheme.onSurfaceVariant)
   if(!existing)MailChoices(MailSetup.labels,MailSetup.label(a.provider)){label->val provider=MailSetup.provider(label);a=MailAccount.preset(provider,a.email).copy(id=a.id,name=a.name);password="";smtpPassword="";advanced=provider=="Other"}
@@ -24,10 +24,19 @@ import java.util.UUID
 
   if(!existing&&a.provider=="Other")Text("Enter the secure IMAP and SMTP settings from the company hosting your mailbox.",style=MaterialTheme.typography.bodySmall,color=MaterialTheme.colorScheme.onSurfaceVariant)
   MailField("Email address",a.email,!m.busy){a=a.withAddress(it.trim())};MailField("Your name",a.name,!m.busy){a=a.copy(name=it.take(120).replace('\r',' ').replace('\n',' '))}
-  if(a.provider in listOf("Gmail","Yahoo"))TextButton(onClick={directions=true}){Icon(Icons.Outlined.Info,null,Modifier.size(18.dp));Spacer(Modifier.width(6.dp));Text("Setup directions")}
-   Text(if(a.provider in listOf("Gmail","Yahoo"))"Use a provider-issued app password."else"Use the password supplied by your mail provider.",style=MaterialTheme.typography.bodySmall,color=MaterialTheme.colorScheme.onSurfaceVariant)
-   OutlinedTextField(value=password,onValueChange={password=it},label={Text(if(existing)"New password (optional)" else if(a.provider in listOf("Gmail","Yahoo"))"App password"else"Password")},visualTransformation=if(showPassword)VisualTransformation.None else PasswordVisualTransformation(),keyboardOptions=KeyboardOptions(autoCorrect=false,keyboardType=KeyboardType.Password),singleLine=true,enabled=!m.busy,modifier=Modifier.fillMaxWidth(),trailingIcon={IconButton(onClick={showPassword=!showPassword}){Icon(if(showPassword)Icons.Outlined.VisibilityOff else Icons.Outlined.Visibility,"Show or hide password")}})
-   if(a.provider in listOf("Gmail","Yahoo"))TextButton(onClick={onWeb(when(a.provider){"Gmail"->MailSetup.googlePasswordHelp;else->MailSetup.yahooPasswordHelp})}){Text("Get an app password")}
+  if(MailSetup.hasDirections(a.provider))TextButton(onClick={directions=true},enabled=!m.busy){Icon(Icons.Outlined.Info,null,Modifier.size(18.dp));Spacer(Modifier.width(6.dp));Text("Setup directions")}
+   Text(when {
+      a.provider == "GMX" -> "Enable IMAP in GMX first. Use an app password if two-factor authentication is enabled."
+      MailSetup.requiresAppPassword(a.provider) -> "Use a provider-issued app password."
+      else -> "Use the password supplied by your mail provider. Open your provider’s website in your browser for setup or password changes."
+   },style=MaterialTheme.typography.bodySmall,color=MaterialTheme.colorScheme.onSurfaceVariant)
+   OutlinedTextField(value=password,onValueChange={password=it},label={Text(if(existing)"New password (optional)" else if(MailSetup.requiresAppPassword(a.provider))"App password"else if(a.provider=="GMX")"GMX password or app password"else"Password")},visualTransformation=if(showPassword)VisualTransformation.None else PasswordVisualTransformation(),keyboardOptions=KeyboardOptions(autoCorrect=false,keyboardType=KeyboardType.Password),singleLine=true,enabled=!m.busy,modifier=Modifier.fillMaxWidth(),trailingIcon={IconButton(onClick={showPassword=!showPassword}){Icon(if(showPassword)Icons.Outlined.VisibilityOff else Icons.Outlined.Visibility,"Show or hide password")}})
+   if (MailSetup.requiresAppPassword(a.provider)) TextButton(
+       onClick = { onWeb(MailSetup.accountSettings(a.provider)) }, enabled = !m.busy,
+   ) { Text("Get an app password") }
+   if (!existing && a.provider == "GMX") TextButton(
+       onClick = { onWeb(MailSetup.gmxSignup) }, enabled = !m.busy,
+   ) { Text("Create a GMX account") }
   TextButton(onClick={advanced=!advanced}){Text(if(advanced)"Hide server settings" else"Server settings")}
   if(advanced){Text("Incoming · IMAP over TLS",style=MaterialTheme.typography.titleSmall);MailField("Server",a.imap,!m.busy){a=a.copy(imap=it.trim())};MailPort("Port",a.imapPort,!m.busy){a=a.copy(imapPort=it)};MailField("Incoming username",a.user,!m.busy){a=a.copy(user=it.trim())};Text("Outgoing · SMTP",style=MaterialTheme.typography.titleSmall);MailField("Server",a.smtp,!m.busy){a=a.copy(smtp=it.trim())};MailChoices(listOf("TLS","STARTTLS"),if(a.smtpTls)"STARTTLS" else"TLS"){a=a.copy(smtpTls=it=="STARTTLS",smtpPort=if(it=="STARTTLS")587 else 465)};MailPort("Port",a.smtpPort,!m.busy){a=a.copy(smtpPort=it)};MailField("Outgoing username",a.smtpUser,!m.busy){a=a.copy(smtpUser=it.trim())};OutlinedTextField(value=smtpPassword,onValueChange={smtpPassword=it},label={Text("Outgoing password (if different)")},singleLine=true,visualTransformation=PasswordVisualTransformation(),keyboardOptions=KeyboardOptions(autoCorrect=false,keyboardType=KeyboardType.Password),modifier=Modifier.fillMaxWidth(),enabled=!m.busy)}
   TextButton(onClick={preferences=!preferences}){Text(if(preferences)"Hide preferences"else"Signature & notifications")}
@@ -42,7 +51,7 @@ import java.util.UUID
 
   if(existing){OutlinedButton(onClick={m.updateAccount(a);onClose()},enabled=!m.busy&&password.isBlank()&&smtpPassword.isBlank()&&a.copy(name=initial.name,signature=initial.signature,enabled=initial.enabled,notify=initial.notify)==initial,modifier=Modifier.fillMaxWidth()){Text("Save preferences")};TextButton(onClick={remove=true},enabled=!m.busy){Text("Remove account",color=MaterialTheme.colorScheme.error)}}
  }
- if(directions)MailAppPasswordDirections(a.provider,{directions=false},onWeb)
+ if(directions)MailAppPasswordDirections(a.provider,{directions=false},onWeb,a.email)
  if(remove)AlertDialog(onDismissRequest={remove=false},title={Text("Remove account?")},text={Text("Remove ${a.email}, its downloaded mail and local drafts from OnKlav? Server mail is kept.")},confirmButton={TextButton(onClick={remove=false;m.remove(a);onClose()}){Text("Remove")}},dismissButton={TextButton(onClick={remove=false}){Text("Cancel")}})
 }
 @Composable internal fun MailField(label:String,value:String,enabled:Boolean=true,change:(String)->Unit){OutlinedTextField(value=value,onValueChange={change(it.take(1000))},label={Text(label)},singleLine=true,keyboardOptions=KeyboardOptions(keyboardType=if(label.contains("email",true)||label.endsWith("username",true))KeyboardType.Email else KeyboardType.Text),enabled=enabled,modifier=Modifier.fillMaxWidth())}

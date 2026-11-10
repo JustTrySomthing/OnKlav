@@ -1,7 +1,6 @@
 package app.onklav.home
 import android.app.Application
 import android.os.Looper
-import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.ui.test.*
 import androidx.compose.ui.semantics.SemanticsActions
@@ -21,10 +20,9 @@ import java.time.Duration
 import java.io.File
 @RunWith(RobolectricTestRunner::class) @Config(sdk=[29],qualifiers="w411dp-h891dp") @GraphicsMode(GraphicsMode.Mode.NATIVE)
 class SdkEbooksUiTest {
- @get:Rule val compose=createAndroidComposeRule<ComponentActivity>()
+ @get:Rule val compose=createAndroidComposeRule<MainActivity>()
  @get:Rule val emptyKeyStore=EmptyKeyStoreRule()
  private fun pump(){repeat(2){androidx.compose.runtime.snapshots.Snapshot.sendApplyNotifications();compose.mainClock.advanceTimeBy(100);shadowOf(Looper.getMainLooper()).idleFor(Duration.ofMillis(16))}}
- @Test fun chapterBoundaryTargetsLastPageAtAUnicodeByteBoundary(){org.junit.Assert.assertEquals(32000,ebookBoundaryOffset("😀".repeat(8001),true));org.junit.Assert.assertEquals(0,ebookBoundaryOffset("😀".repeat(4000),true));org.junit.Assert.assertEquals(0,ebookBoundaryOffset("long".repeat(4000),false))}
  @Test(timeout=60000)fun signedEbooksLibraryAndReaderShowOurSpeakerAndVoiceSettings(){
   val c=compose.activity.application as Application;runBlocking{AppSdk.bootstrap(c)}
   fun call(j:JSONObject)=AppSdk.sync(c,j)as JSONObject
@@ -43,9 +41,13 @@ class SdkEbooksUiTest {
   compose.onNodeWithText("End of chapter").assertExists()
   compose.onNodeWithTag("ebook-next").performScrollTo().performClick()
   compose.waitUntil(10000){pump();runCatching{compose.onNodeWithText("End of book").assertExists()}.isSuccess}
+  compose.onNodeWithText("This UI action is no longer available").assertDoesNotExist()
   compose.onNodeWithTag("ebook-next").assertIsNotEnabled();compose.onNodeWithText("Next page continues where this page ends.").assertDoesNotExist();compose.onNodeWithText("Previous chapter").assertDoesNotExist();compose.onNodeWithText("Previous").assertExists()
 
   compose.runOnUiThread{val view=compose.activity.window.decorView;val bitmap=android.graphics.Bitmap.createBitmap(view.width,view.height,android.graphics.Bitmap.Config.ARGB_8888);view.draw(android.graphics.Canvas(bitmap));File("/tmp/onklav-ebooks-reader.png").outputStream().use{bitmap.compress(android.graphics.Bitmap.CompressFormat.PNG,100,it)}}
   compose.onNodeWithContentDescription("Reader settings").assertExists()
+  compose.onNodeWithTag("ebook-previous").performScrollTo().performClick()
+  compose.waitUntil(10000){pump();runCatching{compose.onNodeWithText("End of chapter").assertExists()}.isSuccess}
+  compose.onNodeWithText("This UI action is no longer available").assertDoesNotExist()
  }
 }

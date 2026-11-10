@@ -57,11 +57,11 @@ class FilesFlowHostTest {
 
  @Test(timeout=120000) fun fileIconFoldersRenameMoveTrashAndRestoreKeepDocumentBytes(){
   runBlocking{AppSdk.bootstrap(compose.activity)};val id=document();start()
-  sdk("entry:documents");sdk("new.folder");waitFor("sdk-name");compose.onNodeWithTag("sdk-name").performTextInput("Work");sdk("name.save");sdk("options:$id");sdk("rename");waitFor("sdk-name");compose.onNodeWithTag("sdk-name").performTextReplacement("bad/name.txt");sdk("name.save");waitFor("sdk-menu.status");compose.onNodeWithTag("sdk-menu.status").assertTextContains("without slashes",substring=true);compose.onNodeWithTag("sdk-name").performTextReplacement("Renamed Note.txt");sdk("name.save");sdk("options:$id");sdk("move");sdk("entry:documents")
+  sdk("entry:documents");sdk("new.folder");waitFor("sdk-name");compose.onNodeWithTag("sdk-name").performTextInput("Work");sdk("name.save");sdk("options:$id");sdk("rename");waitFor("sdk-name");compose.onNodeWithTag("sdk-name").performTextReplacement("bad/name.txt");sdk("name.save");waitFor("sdk-menu.status");compose.onNodeWithTag("sdk-menu.status").assertTextContains("without slashes",substring=true);compose.onNodeWithTag("sdk-name").performTextReplacement("Renamed Note.txt");sdk("name.save");sdk("options:$id");sdk("move")
   val files=request("launch",JSONObject().put("id","app.onklav.files"))as JSONObject
   val token=files.getString("session");val docs=request("event",JSONObject().put("session",token).put("event",JSONObject().put("action","entry:documents")))as JSONObject
   val work=docs.child("frame").child("state").getJSONArray("items").let{a->(0 until a.length()).map{a.getJSONObject(it)}.single{it.getString("name")=="Work"}}.getString("id");request("close",JSONObject().put("session",token))
-  sdk("entry:$work");sdk("destination.accept");waitFor("sdk-entry:$id");compose.onNodeWithText("Renamed Note.txt").assertExists();sdk("options:$id");sdk("trash")
+  sdk("entry:$work");text("Paste here");waitFor("sdk-entry:$id");compose.onNodeWithText("Renamed Note.txt").assertExists();sdk("options:$id");sdk("trash")
   val model=androidx.lifecycle.ViewModelProvider(compose.activity).get("sdk-app.onklav.files",SdkAppModel::class.java)
   compose.waitUntil(12000){pump();!model.busy&&model.frame.optJSONObject("confirm")!=null&&compose.onAllNodesWithTag("sdk-trash").fetchSemanticsNodes().isEmpty()}
   text("Delete")

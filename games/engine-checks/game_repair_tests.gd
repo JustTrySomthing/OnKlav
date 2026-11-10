@@ -1,4 +1,5 @@
 extends SceneTree
+const Chrome=preload("res://game_chrome.gd")
 const Cats=preload("res://cat_dog/series.gd")
 const BJ=preload("res://blackjack/tournament.gd")
 const Dom=preload("res://dominos/tournament.gd")
@@ -15,7 +16,24 @@ func force_hand(t,who:int):
 		if c not in t.hands[0] and c not in t.hands[1]:t.deck.append(c)
 	t.finished=false;t.hand_over=false;t.phase="player";t.settle()
 func _init():call_deferred("run")
+func check_board_layout() -> void:
+	var canvas := Control.new()
+	for extent: Vector2 in [Vector2(600, 1233), Vector2(600, 1224), Vector2(600, 1000),
+			Vector2(1778, 1000), Vector2(1538, 1000), Vector2(824, 1000)]:
+		for header: float in [0.0, 56.0]:
+			var minimum := 540.0 if header == 0.0 else 520.0
+			Chrome.fit_board(canvas, extent, header, minimum)
+			var usable_height := extent.y - header * extent.x / Chrome.window_width()
+			var bounds := Rect2(canvas.position, canvas.size * canvas.scale)
+			check(Rect2(0, 0, extent.x, usable_height).grow(.01).encloses(bounds),
+				"Board and controls fit %s with header %s" % [extent, header])
+			check(is_equal_approx(bounds.get_center().x, extent.x * .5)
+				and canvas.size.y >= minimum - .01 and canvas.scale.x == canvas.scale.y,
+				"Board stays centered with room for controls and uniform scaling")
+	canvas.free()
+
 func run():
+	check_board_layout()
 	var m=Cats.new()
 	for win in range(3):
 		for col in [0,1,0,1,0,1,0]:check(m.apply(m.turn,"F"+str(col)),"series drop")

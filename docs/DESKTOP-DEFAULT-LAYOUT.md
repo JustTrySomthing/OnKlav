@@ -1,36 +1,30 @@
-# Requested desktop layout and page-safe moves — 2026-11-01
+# Default desktop layout and page-safe moves
 
-Default pages match the owner's two reference screenshots, read left to right:
+The Apps page uses this left-to-right order on a clean install.
 
 | Page one row | Left | Middle | Right |
 |---|---|---|---|
-| 1 | Browser | Email | YouTube |
-| 2 | Radio | Podcasts | AudioBooks |
-| 3 | eBooks | RSS Reader | Games |
-| 4 | Calendar | Clock | Weather |
-| 5 | Write | Social | Maps |
+| 1 | YouTube | Browser | Radio |
+| 2 | Podcasts | Audiobooks | Ebooks |
+| 3 | RSS Reader | Games | Write |
+| 4 | Email | Calendar | Maps |
+| 5 | Clock | Weather | Real Social |
 
 | Page two row | Left | Middle | Right |
 |---|---|---|---|
-| 1 | Utilities | Create | Settings |
-| 2 | Files | Cloud Files | Empty |
+| 1 | Files | Cloud Files | Settings |
+| 2 | Utilities | Create | Empty |
 
-Utilities retains Compress, Docu View, Authentic and Format Swap and adds Calc,
-Vault, Convert, Read Aloud, Walkie-Talkie, Flashlight and Power. Create contains
-Video Edit, Audio Edit, Image Edit, Voice Record, Screen Record and Code Edit.
-Phone and Camera remain exclusively in the bottom bar.
+Utilities contains Compress, Docu View, Authentic, Format Swap, Calc, Vault,
+Convert, Read Aloud, Walkie-Talkie, Flashlight and Power. Create contains Video
+Edit, Audio Edit, Image Edit, Voice Record, Screen Record, and Code Edit. Phone and Camera remain in the bottom bar.
 
 ## Existing installations
 
-Once the installed app catalog is ready, arrangement_version 2 applies the
-requested order and seven Utilities moves plus Voice Record to Create. Existing
-canonical folders are reused; if missing, a matching named folder is reused or
-the requested folder is recreated once. Unrelated custom folders/memberships and
-extra apps remain available. The new order is applied to the current desktop
-catalog, without extracting unrelated apps from user folders. Folder membership,
-positions and migration version are saved in one preference edit. Afterwards,
-custom moves/folder deletions survive reopening and catalog refreshes. Malformed
-folder data remains protected rather than overwritten.
+OnKlav seeds this order once the bundled catalog has loaded on a fresh desktop.
+Updates read saved icon positions and folder memberships without applying the
+clean-install order or moving apps into folders. This includes layouts saved
+before an arrangement marker was introduced.
 
 ## Icon moves
 
@@ -47,6 +41,5 @@ folder data remains protected rather than overwritten.
 - While adding an app to an open folder, helper text now describes dropping it
   into that folder rather than describing the drag-out gesture.
 
-Validation: desktop-default-layout-verification.json and docs/evidence/desktop-layout.
-Packaged in the subsequently requested 0.100.34-rc1/code143 APK; see RELEASE-0.100.34.md.
-Native device gesture/rotation acceptance remains separate from host pointer/UI fixtures.
+DesktopFoldersTest and DesktopFoldersUiTest cover the clean-install order and
+preservation of existing layouts.

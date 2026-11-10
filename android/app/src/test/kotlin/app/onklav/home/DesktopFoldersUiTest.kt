@@ -1,6 +1,5 @@
 package app.onklav.home
 
-import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.*
 import androidx.compose.ui.geometry.Offset
@@ -18,7 +17,7 @@ import java.io.File
 
 @RunWith(RobolectricTestRunner::class) @Config(sdk=[29],qualifiers="w432dp-h936dp-mdpi") @GraphicsMode(GraphicsMode.Mode.NATIVE)
 class DesktopFoldersUiTest{
- @get:Rule val compose=createAndroidComposeRule<ComponentActivity>()
+ @get:Rule val compose=createAndroidComposeRule<MainActivity>()
  private val prefs get()=compose.activity.getSharedPreferences("apps_desktop",0)
  private fun pump(){repeat(4){androidx.compose.runtime.snapshots.Snapshot.sendApplyNotifications();compose.mainClock.advanceTimeBy(100);org.robolectric.Shadows.shadowOf(android.os.Looper.getMainLooper()).idleFor(java.time.Duration.ofMillis(16));compose.runOnUiThread{val env=compose.javaClass.getDeclaredField("environment").apply{isAccessible=true}.get(compose);val registry=env.javaClass.superclass!!.getDeclaredField("composeRootRegistry").apply{isAccessible=true}.get(env);val roots=registry.javaClass.getMethod("getRegisteredComposeRoots").invoke(registry) as Set<*>;roots.filterNotNull().forEach{root->val view=root.javaClass.getMethod("getView").invoke(root) as android.view.View;val d=view.rootView;d.forceLayout();d.measure(android.view.View.MeasureSpec.makeMeasureSpec(compose.activity.resources.displayMetrics.widthPixels,android.view.View.MeasureSpec.EXACTLY),android.view.View.MeasureSpec.makeMeasureSpec(compose.activity.resources.displayMetrics.heightPixels,android.view.View.MeasureSpec.AT_MOST));d.layout(0,0,d.measuredWidth,d.measuredHeight);root.javaClass.getMethod("measureAndLayoutForTest").invoke(root)}}}}
  private fun click(tag:String){
@@ -70,18 +69,30 @@ class DesktopFoldersUiTest{
   compose.runOnUiThread{compose.activity.onBackPressedDispatcher.onBackPressed()};pump();pump();compose.onNodeWithTag("app-icon-games").assertIsDisplayed();capture("main-navigation")
  }
 
- @Test(timeout=45000) fun requestedLayoutAppliesOnceAndCustomMovesSurviveReopen(){
+ @Test(timeout=45000) fun cleanInstallUsesRequestedOrderAndCustomMovesSurviveReopen(){
   var generation by mutableIntStateOf(0)
-  compose.activity.setContent{OnKlavTheme{androidx.compose.material3.Surface{key(generation){AppsDesktop{}}}}};pump();pump()
-  assertEquals(2,prefs.getInt("arrangement_version",0))
+  compose.activity.setContent{OnKlavTheme{androidx.compose.material3.Surface{key(generation){AppsDesktop{}}}}};compose.waitUntil(10000){pump();prefs.getInt("arrangement_version",0)==DesktopArrangement.VERSION}
+  assertEquals(DesktopArrangement.VERSION,prefs.getInt("arrangement_version",0))
   val ids=DesktopArrangement.order
   assertEquals(ids,app.onklav.shared.LauncherLayout.read(prefs.getString("positions","").orEmpty(),ids).slots.filter{it.isNotBlank()})
   ids.take(15).forEach{compose.onNodeWithTag("app-icon-$it").assertIsDisplayed()};capture("requested-page-one")
   click("apps-next-page");ids.drop(15).forEach{compose.onNodeWithTag("app-icon-$it").assertIsDisplayed()};capture("requested-page-two")
   click("apps-previous-page")
   val action=compose.onNodeWithTag("app-icon-calendar").fetchSemanticsNode().config[SemanticsActions.CustomActions].first{it.label=="Move Earlier"};compose.runOnUiThread{assertTrue(action.action())};pump()
-  val customized=prefs.getString("positions","");assertNotEquals("calendar",customized.orEmpty().removePrefix("g1|").split(',')[9])
+  val customized=prefs.getString("positions","");assertEquals("calendar",customized.orEmpty().removePrefix("g1|").split(',')[9])
   compose.runOnUiThread{generation++};pump();pump();assertEquals(customized,prefs.getString("positions",""))
+ }
+
+ @Test(timeout=45000) fun updatingLegacyDesktopKeepsPositionsAndFolderMembership(){
+  val folders=DesktopFolders.defaults().takeOut("makemusic").put("folder-create","browser")
+  val ids=folders.desktop(platformApps.filter{it.id !in setOf("phone","camera")}.map{it.id})
+  val saved=app.onklav.shared.LauncherLayout.read("",ids).move("calendar",14).encode()
+  prefs.edit().putString("positions",saved).putString("folders_v1",folders.encode()).commit()
+  compose.activity.setContent{OnKlavTheme{androidx.compose.material3.Surface{AppsDesktop{}}}}
+  compose.waitUntil(10000){pump();runCatching{compose.onNodeWithTag("action-New folder").assertIsEnabled()}.isSuccess}
+  assertEquals(saved,prefs.getString("positions",null))
+  assertEquals(folders,DesktopFolders.read(prefs.getString("folders_v1",null)))
+  assertFalse(prefs.contains("arrangement_version"))
  }
 
  @Test(timeout=45000) fun quickDropNearEdgeDoesNotSendTheAppToAnotherPage(){
