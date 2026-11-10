@@ -44,7 +44,6 @@ Android from one optimized, signed APK.
   to individual messages, and reply with animated emoji reactions.
 - **Share with your circle.** [Real Social](docs/REAL-SOCIAL.md) lets you share
   posts, replies, and media directly with accepted friends over SMS and MMS.
-  Carrier charges may apply.
 
 ## Install and set up
 
@@ -218,8 +217,6 @@ Find these built-in tools on the Apps desktop or bottom navigation.
 <table>
   <tr>
     <td width="160" align="center" valign="top"><img src="artwork/github-apps/settings.svg" width="30" height="30" alt=""><br><strong>Settings</strong><br>Customize themes, app visibility, and OnKlav preferences.</td>
-    <td width="160" align="center" valign="top"><img src="artwork/github-apps/games.svg" width="30" height="30" alt=""><br><strong>Games</strong><br>Play included games offline or challenge a friend in supported titles.</td>
-    <td></td>
   </tr>
 </table>
 
