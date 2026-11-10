@@ -1,6 +1,9 @@
 # OnKlav
 
-OnKlav is an Android platform and launcher with built-in apps and games.
+**A Virtual Operating System and Game Console for Android**
+
+OnKlav runs inside Android and gives you a customizable desktop, built-in
+apps and games, and SDKs for building your own.
 One APK contains the Kotlin/Compose host, shared Rust services, signed
 internal apps and the shared Godot Web game engine. This repository
 contains the source for OnKlav 0.101.49-rc1 and the App and Game SDKs.
