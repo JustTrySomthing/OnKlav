@@ -1,3 +1,5 @@
+<img src="artwork/OnKlav-Icon.svg" width="72" height="72" alt="OnKlav logo">
+
 # OnKlav
 
 **A Virtual Operating System and Game Console for Android**
@@ -9,9 +11,63 @@ customizable desktop, built-in apps and games, and two SDKs for building your ow
 Its design priorities are user control, direct communication, and a lightweight
 environment that keeps apps and games together.
 
-[Download OnKlav for Android](https://github.com/JustTrySomthing/OnKlav/releases/tag/v0.101.49-rc1)
-from the release page. The signed prerelease APK supports ARM64 devices running
-Android 10 or newer. The App SDK and Game SDK are available on the same page.
+## Get OnKlav
+
+**[Download the signed Android APK](https://github.com/JustTrySomthing/OnKlav/releases/download/v0.101.49-rc1/OnKlav-0.101.49-RC.apk)** · [Release notes and SDK downloads](https://github.com/JustTrySomthing/OnKlav/releases/tag/v0.101.49-rc1)
+
+Version **0.101.49-rc1** is a prerelease for **ARM64 devices running Android 10 or newer**.
+Download the APK, open it on Android, and follow the installation prompt.
+
+[See the interface](#see-onklav) · [Included games](#included-games) · [Included apps](#included-apps)
+
+## See OnKlav
+
+| OnKlav desktop | Files | Video Edit |
+| :---: | :---: | :---: |
+| <a href="docs/evidence/desktop-folders/main-navigation.png"><img src="docs/evidence/desktop-folders/main-navigation.png" width="190" alt="Apps desktop with wallpaper and bottom navigation"></a> | <a href="docs/evidence/files-simplification/files-home.png"><img src="docs/evidence/files-simplification/files-home.png" width="190" alt="Files home with OnKlav and Android storage tabs"></a> | <a href="docs/evidence/video-footer-repair/portrait-video.png"><img src="docs/evidence/video-footer-repair/portrait-video.png" width="190" alt="Video Edit with a portrait preview, timeline, and tools"></a> |
+
+*Interface screenshots from development builds. Select a screenshot to enlarge it.*
+
+## Included games
+
+| Game | How to play |
+| --- | --- |
+| <img src="android/app/src/main/assets/catalog/last-light.webp" width="64" height="64" alt=""> **Last Light Express** | **Solo.** Ten levels · fight across a moving train and face the Iron Warden. |
+| <img src="android/app/src/main/assets/catalog/panda.webp" width="64" height="64" alt=""> **Crash Test Panda** | **Solo.** Solo demolition: twelve courses, explosive chains and a shot-for-shot panda rivalry. |
+| <img src="android/app/src/main/assets/catalog/shroom.webp" width="64" height="64" alt=""> **Shroom** | **Solo.** Fight through five spore-infested sectors and take down the Cap King. |
+| <img src="android/app/src/main/assets/catalog/hockey.webp" width="64" height="64" alt=""> **Air Hockey** | **Solo.** Solo Air Hockey · ten goals · redesigned arcade table. |
+| <img src="android/app/src/main/assets/catalog/naval.webp" width="64" height="64" alt=""> **Naval Battle** | **Solo or SMS friend match.** Outsmart your opponent and destroy their ships. |
+| <img src="android/app/src/main/assets/catalog/dominos.webp" width="64" height="64" alt=""> **Neon Dominos** | **Solo.** Earn pips by playing tiles, then subtract the pips you still hold. Highest total after three rounds wins. |
+| <img src="android/app/src/main/assets/catalog/pets.webp" width="64" height="64" alt=""> **Cats vs Dogs** | **Solo or SMS friend match.** Classic four in a row with a playful twist. |
+| <img src="android/app/src/main/assets/catalog/blackjack.webp" width="64" height="64" alt=""> **Blackjack** | **Solo or SMS friend match.** Test your luck and skill in a blackjack tournament. |
+
+## Included apps
+
+Find these built-in tools on the Apps desktop or bottom navigation.
+
+### Communication
+
+<img src="artwork/github-apps/phone.svg" width="22" height="22" alt=""> Phone · <img src="artwork/github-apps/messages.svg" width="22" height="22" alt=""> Messages · <img src="artwork/github-apps/groups.svg" width="22" height="22" alt=""> Groups · <img src="artwork/github-apps/email.svg" width="22" height="22" alt=""> Email · <img src="artwork/github-apps/social.svg" width="22" height="22" alt=""> Real Social · <img src="artwork/github-apps/walkie.svg" width="22" height="22" alt=""> Walkie-Talkie
+
+### Web & listening
+
+<img src="artwork/github-apps/browser.svg" width="22" height="22" alt=""> Browser · <img src="artwork/github-apps/youtube.svg" width="22" height="22" alt=""> YouTube · <img src="artwork/github-apps/rss.svg" width="22" height="22" alt=""> RSS Reader · <img src="artwork/github-apps/radio.svg" width="22" height="22" alt=""> Radio · <img src="artwork/github-apps/podcasts.svg" width="22" height="22" alt=""> Podcasts · <img src="artwork/github-apps/audiobooks.svg" width="22" height="22" alt=""> AudioBooks · <img src="artwork/github-apps/ebooks.svg" width="22" height="22" alt=""> eBooks · <img src="artwork/github-apps/reader.svg" width="22" height="22" alt=""> Read Aloud
+
+### Create & capture
+
+<img src="artwork/github-apps/camera.svg" width="22" height="22" alt=""> Camera · <img src="artwork/github-apps/photo.svg" width="22" height="22" alt=""> Image Edit · <img src="artwork/github-apps/videoeditor.svg" width="22" height="22" alt=""> Video Edit · <img src="artwork/github-apps/audioeditor.svg" width="22" height="22" alt=""> Audio Edit · <img src="artwork/github-apps/voicerecorder.svg" width="22" height="22" alt=""> Voice Record · <img src="artwork/github-apps/screenrecorder.svg" width="22" height="22" alt=""> Screen Record · <img src="artwork/github-apps/write.svg" width="22" height="22" alt=""> Write · <img src="artwork/github-apps/codeedit.svg" width="22" height="22" alt=""> Code Edit
+
+### Files & privacy
+
+<img src="artwork/github-apps/files.svg" width="22" height="22" alt=""> Files · <img src="artwork/github-apps/cloudfiles.svg" width="22" height="22" alt=""> Cloud Files · <img src="artwork/github-apps/docuview.svg" width="22" height="22" alt=""> Docu View · <img src="artwork/github-apps/compress.svg" width="22" height="22" alt=""> Compress · <img src="artwork/github-apps/formatswap.svg" width="22" height="22" alt=""> Format Swap · <img src="artwork/github-apps/vault.svg" width="22" height="22" alt=""> Vault · <img src="artwork/github-apps/authentic.svg" width="22" height="22" alt=""> Authentic
+
+### Everyday tools
+
+<img src="artwork/github-apps/calendar.svg" width="22" height="22" alt=""> Calendar · <img src="artwork/github-apps/clock.svg" width="22" height="22" alt=""> Clock · <img src="artwork/github-apps/maps.svg" width="22" height="22" alt=""> Maps · <img src="artwork/github-apps/weather.svg" width="22" height="22" alt=""> Weather · <img src="artwork/github-apps/calc.svg" width="22" height="22" alt=""> Calc · <img src="artwork/github-apps/convert.svg" width="22" height="22" alt=""> Convert · <img src="artwork/github-apps/flashlight.svg" width="22" height="22" alt=""> Flashlight · <img src="artwork/github-apps/power.svg" width="22" height="22" alt=""> Power
+
+### System
+
+<img src="artwork/github-apps/settings.svg" width="22" height="22" alt=""> Settings · <img src="artwork/github-apps/games.svg" width="22" height="22" alt=""> Games
 
 ## What you can do
 
