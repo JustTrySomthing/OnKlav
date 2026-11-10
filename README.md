@@ -16,7 +16,7 @@ One signed APK includes **8 games and 39 built-in apps and tools**. This
 **0.101.49-rc1** prerelease supports ARM64 devices running Android 10 or newer.
 Download the APK, open it on Android, and follow the installation prompt.
 
-[See OnKlav in action](#see-onklav) · [Themes](#themes) · [Included games](#included-games) · [Included apps](#included-apps)
+[See OnKlav in action](#see-onklav) · [Themes](#themes) · [Included games](#included-games) · [Included apps](#included-apps) · [Make, share, and install](#make-share-and-install)
 
 ## What to try first
 
@@ -111,9 +111,19 @@ Find these built-in tools on the Apps desktop or bottom navigation.
 - **Stay in touch.** Use Messages and Groups for SMS and MMS. [Real Social](docs/REAL-SOCIAL.md)
   shares posts and replies with accepted friends over SMS, and uses MMS for media attachments.
   Carrier charges may apply.
-- **Build something of your own.** The [App SDK](developer/README.md) and
-  [Game SDK](developer/games/README.md) help you build and share signed packages
-  that other OnKlav users can install.
+## Make, share, and install
+
+Build the app, utility, or game you want using the [App SDK](developer/README.md)
+or [Game SDK](developer/games/README.md). Sign your package, then share the file
+directly with friends or publish it wherever you like. Once OnKlav is installed,
+its apps and games install **inside OnKlav without separate APKs or a Google Play
+Store listing**.
+
+1. **Get the package.** Use a signed file you made, downloaded, or received from someone else.
+2. **Open OnKlav’s installer.** For an app (`.onklav-a`), go to **Settings → Apps → Install App**.
+   For a game (`.onklav-g`), open **Games → Games manager → Install a game**.
+3. **Select and install.** Review the publisher and any app permissions.
+   Your new app appears in Apps, and your new game appears in Games.
 
 ## How it fits together
 
