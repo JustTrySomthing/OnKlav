@@ -24,7 +24,7 @@ internal fun UpdateSettingsDialog(close:()->Unit) {
     }
     var permissionError by remember {mutableStateOf<String?>(null)}
     ReferenceDialog("OnKlav updates",close,footer={DialogAction("Close"){close()}}) {
-        Column(verticalArrangement=Arrangement.spacedBy(12.dp)) {
+        Column(Modifier.fillMaxWidth().padding(horizontal=24.dp,vertical=12.dp),verticalArrangement=Arrangement.spacedBy(12.dp)) {
             Text("Installed: OnKlav ${BuildConfig.VERSION_NAME}",style=MaterialTheme.typography.titleMedium)
             Text("Get updates directly from OnKlav’s GitHub releases. Your apps, games, messages and settings stay on this phone.")
             PreferenceToggle("Check automatically",model.automatic){model.changeAutomatic(it)}

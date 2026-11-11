@@ -1,8 +1,8 @@
 {
   "format": "onklav.complete-source-handoff.v1",
   "complete_source_tree": true,
-  "current_host_version": "0.101.53-rc1",
-  "current_host_build": 232,
+  "current_host_version": "0.101.54-rc1",
+  "current_host_build": 233,
   "status": "Corrective release candidate source with verified signed APK.",
   "files_sha256": {
     "OnKlav/.gitignore": "267f4bbb0b4f80061293679ff5996c70ecc76295f8d99a206a87f6a4347d926c",
@@ -10,7 +10,7 @@
     "OnKlav/README.md": "1f8f89c66d63046e129ea6304e9bd315582c4cbd028f2d66161079164c5571da",
     "OnKlav/START-HERE.md": "bdb5f39135fdc1f7373ee72a4a139bd61b36662291bb5a055c957e11bf285606",
     "OnKlav/TODO.md": "a328d022e662e70403f61bc238343315210e379041d915e7711720ebf8e354a5",
-    "OnKlav/android/app/build.gradle.kts": "2eb0ffe0fa5ddefe1c15e3d9243a02fdcb7418f2486e02e40021509dca7e0ab0",
+    "OnKlav/android/app/build.gradle.kts": "b1a051a5736696cef30cf04c1a6cdb14956c7e2f2a1166b6636835333139e0d3",
     "OnKlav/android/app/libs/jsoup-1.22.2.jar": "596785996d3c6df16f544c232d10a9a1d88783b2a4740cf5251cb616f2be704d",
     "OnKlav/android/app/libs/nanojson-e9d656ddb49a412a5a0a5d5ef20ca7ef09549996.jar": "d495881a322b3c72e5d43284afd7d7021520028ca8b7c6ba861e3fd8d90614d5",
     "OnKlav/android/app/libs/newpipe-extractor-0.26.4.jar": "8552fa30d02227ffbd4a8b3131141b9f388dfa5bc70586085f6fb1211c9e973c",
@@ -1797,8 +1797,8 @@
     "OnKlav/docs/annotation-verification.json": "ba9711c889e968f771f486208804e2ff297f5693db0ad6434c5eff325c495ed5",
     "OnKlav/docs/apk-test-build-verification.json": "25e1c5b460fc93e1559743ceec53c0e550c8314a29a2b1512dd178fbaebbe13a",
     "OnKlav/docs/apk-verification-debug.json": "a320cf6a4bde716875082c7faeffd70a58017df653d3b8466a145410f09ffef9",
-    "OnKlav/docs/apk-verification-optimized.json": "85e50838a023ae32c0ce517c6992351e2ef9365edd5e41e1e2b9950cac42a327",
-    "OnKlav/docs/apk-verification.json": "85e50838a023ae32c0ce517c6992351e2ef9365edd5e41e1e2b9950cac42a327",
+    "OnKlav/docs/apk-verification-optimized.json": "b6ad9f297a390138c7b1b65f832c2593d4eda59763268b2d7901d59ae4960efa",
+    "OnKlav/docs/apk-verification.json": "b6ad9f297a390138c7b1b65f832c2593d4eda59763268b2d7901d59ae4960efa",
     "OnKlav/docs/apk16-verification.json": "f21f9f23492a9cfd626804ef42f31a39751fad89f1b39b7938b37eb9c2939499",
     "OnKlav/docs/apk17-verification.json": "68104c44d37508d1d69a6d7d99c7169954167a5064732588995da385354e0cb9",
     "OnKlav/docs/apk18-verification.json": "7b72f52364a6f1dc2e09756bd2988bb36cdadefeb98cd4f8efdc5a5f4ab2b5de",
@@ -8595,7 +8595,7 @@
     "OnKlav/docs/evidence/v0.101.52/inputs-optimized.json": "81e30fe8d9b460b177fcef6f1a18fa001352c39b51c35084d4c8fe93c2f66de0",
     "OnKlav/docs/evidence/v0.101.52/verify-optimized.log": "b491281ce44fd8fc60f5c3c936aa6d75d8b25a8010213242db9415453cbe5166",
     "OnKlav/android/app/src/main/kotlin/app/onklav/home/OnKlavUpdates.kt": "0463cbe3777f99618928cc811b670d7a2b8e9505ecbd5333a31e0dfa54ae1be3",
-    "OnKlav/android/app/src/main/kotlin/app/onklav/home/UpdateSettings.kt": "207c18f238eb7913daa59996b6da6f9234fccddd17fbb21c96cfd6b78cf0936c",
+    "OnKlav/android/app/src/main/kotlin/app/onklav/home/UpdateSettings.kt": "15546ff66007a725d98990c594bf2bcaf2f5301bd7cace6a162a4cff29739f4b",
     "OnKlav/android/app/src/main/res/xml/update_paths.xml": "65dbb2a1fee1ab0640071aaf248b9a44f8bffa9e6158b9fab66d8535a26c7d3a",
     "OnKlav/android/app/src/test/kotlin/app/onklav/home/OnKlavUpdatesTest.kt": "fc0fb549bb7a506e7e7ee848190ffe32796eb0c2d28264f5ae622520233a9c05",
     "OnKlav/android/app/src/test/kotlin/app/onklav/home/UpdateSettingsTest.kt": "8ee0a56f1da76b37e2cbf5a9063711b8bfc10ada313f4b2294bbafa0a6621d4e",
@@ -8608,6 +8608,12 @@
     "OnKlav/docs/evidence/v0.101.53/build-optimized.json": "1ddaa146ade77e94fa1f3f52a1105022c9ab2efab1916fde2949cbda9ce2cc69",
     "OnKlav/docs/evidence/v0.101.53/inputs-optimized.json": "afcb5db996c2b7bc52954530f5ff4b73708ae4c95729b6382430827bddfd315b",
     "OnKlav/docs/evidence/v0.101.53/updates-test-summary.json": "5f614d6c951c7055fc7fe3ecf6a9ed30d197a11e7f4f287cb51d8948bad45ec0",
-    "OnKlav/docs/evidence/v0.101.53/verify-optimized.log": "7138e70acb5b923bdabce9dbb658e04a8053f1772c96b76fed72f5d3c37fb676"
+    "OnKlav/docs/evidence/v0.101.53/verify-optimized.log": "7138e70acb5b923bdabce9dbb658e04a8053f1772c96b76fed72f5d3c37fb676",
+    "OnKlav/docs/RELEASE-0.101.54.md": "54318dbbcb7c00d259c0e349f6ff42178dbe065376edb844dc3de7a75b90f2f6",
+    "OnKlav/docs/evidence/v0.101.54/apk-checks.json": "d7a07aaf8b5aef036dadec3e612c20b90dbbb248b52803b752cec9008a926a15",
+    "OnKlav/docs/evidence/v0.101.54/assemble-optimized.log": "39210c766afff66372d09cdfe5139dbcca6b3c48e4d7ad5b2a5696c17d5cb503",
+    "OnKlav/docs/evidence/v0.101.54/build-optimized.json": "a43cb23e5388caeeaaa3d60a18b0ba0afd0232e9003ac8cd323e29093a5b0025",
+    "OnKlav/docs/evidence/v0.101.54/inputs-optimized.json": "0fdb854d782298ba670a9d6cea0ae6ff9a6169290b6389904914bf20081d473b",
+    "OnKlav/docs/evidence/v0.101.54/verify-optimized.log": "7138e70acb5b923bdabce9dbb658e04a8053f1772c96b76fed72f5d3c37fb676"
   }
 }

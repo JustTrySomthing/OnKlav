@@ -1,0 +1,10 @@
+{
+  "version": "0.101.54-rc1",
+  "version_code": 233,
+  "size_bytes": 132778672,
+  "sha256": "236475c59e422701b78abef14168afbafbb084fc566e2504e8e0bf45c1b21576",
+  "signer_matches_previous": true,
+  "zip_alignment_16kb": true,
+  "unchanged_game_and_sdk_assets": 36,
+  "physical_device_acceptance": false
+}
