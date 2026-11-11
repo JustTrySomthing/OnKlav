@@ -71,7 +71,7 @@ internal object UpdateFeed {
             u.host in setOf("api.github.com","github.com","release-assets.githubusercontent.com","objects.githubusercontent.com")
     }.getOrDefault(false)
     /** Public HTTPS only. No cookies, GitHub credentials or authorization headers. */
-    private suspend fun <T> request(url:String,accept:String,read:suspend(HttpURLConnection)->T):T {
+    private suspend fun <T> request(url:String,accept:String,revalidate:Boolean=false,read:suspend(HttpURLConnection)->T):T {
         var next=url
         repeat(6) {
             currentCoroutineContext().ensureActive()
@@ -80,6 +80,7 @@ internal object UpdateFeed {
             c.instanceFollowRedirects=false;c.connectTimeout=15000;c.readTimeout=20000;c.useCaches=false
             c.setRequestProperty("Accept",accept);c.setRequestProperty("User-Agent","OnKlav/${BuildConfig.VERSION_NAME}")
             c.setRequestProperty("Accept-Encoding","identity")
+            if(revalidate)c.setRequestProperty("Cache-Control","no-cache")
             try {
                 val code=c.responseCode
                 if(code in setOf(301,302,303,307,308)) {
@@ -92,7 +93,11 @@ internal object UpdateFeed {
         }
         error("GitHub returned too many redirects.")
     }
-    suspend fun releases():JSONArray=request(ENDPOINT,"application/vnd.github+json") { c ->
+    internal fun releaseRequestUrl(manual:Boolean):String =
+        if(manual)"$ENDPOINT&_onklav_check=${java.util.UUID.randomUUID()}"else ENDPOINT
+
+    suspend fun releases(manual:Boolean=false):JSONArray =
+        request(releaseRequestUrl(manual),"application/vnd.github+json",revalidate=manual) { c ->
         c.inputStream.use { input ->
             val out=java.io.ByteArrayOutputStream();val buffer=ByteArray(8192)
             while(true){currentCoroutineContext().ensureActive();val n=input.read(buffer);if(n<0)break;check(out.size()+n<=4*1024*1024){"The update listing is too large."};out.write(buffer,0,n)}

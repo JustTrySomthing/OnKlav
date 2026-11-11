@@ -3,7 +3,7 @@ package app.onklav.home
 import android.content.Intent
 import android.net.Uri
 import android.provider.Settings
-import android.text.format.DateUtils
+import android.text.format.DateFormat
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.*
@@ -18,6 +18,8 @@ import androidx.lifecycle.repeatOnLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import app.onklav.shared.*
 import kotlinx.coroutines.delay
+import java.text.SimpleDateFormat
+import java.util.Date
 
 @Composable
 internal fun UpdateSettingsDialog(close:()->Unit) {
@@ -60,12 +62,15 @@ internal fun UpdateSettingsDialog(close:()->Unit) {
                 }
             }
             val error=permissionError?:state.error
-            val status=if(state.checking)"Checking…"else state.message
+            val status=if(state.checking)"Checking GitHub…"else state.message
             (error?:status)?.let {Text(it,color=if(error!=null)MaterialTheme.colorScheme.error else MaterialTheme.colorScheme.onSurface)}
             if(state.checkedAt>0) {
-                val checked=DateUtils.formatDateTime(context,state.checkedAt,
-                    DateUtils.FORMAT_SHOW_DATE or DateUtils.FORMAT_SHOW_TIME or DateUtils.FORMAT_ABBREV_MONTH)
-                Text("Last checked $checked",style=MaterialTheme.typography.bodySmall)
+                val locale=context.resources.configuration.locales[0]
+                val skeleton=if(DateFormat.is24HourFormat(context))"MMMdHms"else"MMMdhms"
+                val checked=remember(state.checkedAt,locale,skeleton) {
+                    SimpleDateFormat(DateFormat.getBestDateTimePattern(locale,skeleton),locale).format(Date(state.checkedAt))
+                }
+                Text("Last checked on GitHub $checked",style=MaterialTheme.typography.bodySmall)
             }
         }
     }) {

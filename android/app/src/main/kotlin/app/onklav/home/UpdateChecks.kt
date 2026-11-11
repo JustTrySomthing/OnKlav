@@ -70,7 +70,7 @@ internal object UpdateChecks {
             }
         }.apply()
         val release = withContext(Dispatchers.IO) {
-            UpdateFeed.select(UpdateFeed.releases(), current(), includesPreviews(prefs))
+            UpdateFeed.select(UpdateFeed.releases(manual = interval == null), current(), includesPreviews(prefs))
         }
         prefs.edit().putLong("checked", System.currentTimeMillis()).apply {
             if (foregroundBoot != null && foregroundBoot >= 0) putInt("foregroundBoot", foregroundBoot)

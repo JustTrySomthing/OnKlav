@@ -131,6 +131,16 @@ class OnKlavUpdatesTest {
         assertTrue(UpdateFeed.allowed("https://release-assets.githubusercontent.com/path?signature=abc"))
         for(url in listOf("http://github.com/file","https://github.com.evil.test/file","https://github.com@evil.test/file","https://user:pass@github.com/file","https://github.com:8080/file","file:///tmp/a.apk"))assertFalse(url,UpdateFeed.allowed(url))
     }
+    @Test fun manualChecksUseDistinctUrlsForTheSameGitHubReleaseFeed() {
+        val first=UpdateFeed.releaseRequestUrl(manual=true)
+        val second=UpdateFeed.releaseRequestUrl(manual=true)
+        assertNotEquals(first,second)
+        for(url in listOf(first,second)) {
+            assertEquals(UpdateFeed.ENDPOINT,url.substringBefore("&_onklav_check="))
+            assertTrue(UpdateFeed.allowed(url))
+        }
+        assertEquals(UpdateFeed.ENDPOINT,UpdateFeed.releaseRequestUrl(manual=false))
+    }
     @Test fun streamedDownloadChecksBytesAndDigestAndReportsProgress()=runBlocking {
         val target=target();var progress=0L
         try {UpdateFeed.copy(ByteArrayInputStream(payload),target,release()){progress=it};assertArrayEquals(payload,target.readBytes());assertEquals(payload.size.toLong(),progress)}finally{target.delete()}
