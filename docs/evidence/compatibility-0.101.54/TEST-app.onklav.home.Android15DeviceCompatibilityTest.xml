@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.Android15DeviceCompatibilityTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-11-11T01:48:08" hostname="4e6a3c69280b" time="11.582">
+  <properties/>
+  <testcase name="standardPhone" classname="app.onklav.home.Android15DeviceCompatibilityTest" time="6.528"/>
+  <testcase name="compactLargeText" classname="app.onklav.home.Android15DeviceCompatibilityTest" time="0.587"/>
+  <testcase name="tablet" classname="app.onklav.home.Android15DeviceCompatibilityTest" time="0.427"/>
+  <testcase name="extraLargeText" classname="app.onklav.home.Android15DeviceCompatibilityTest" time="0.514"/>
+  <testcase name="compactPhone" classname="app.onklav.home.Android15DeviceCompatibilityTest" time="0.357"/>
+  <testcase name="desktopSettingsRemainReachable" classname="app.onklav.home.Android15DeviceCompatibilityTest" time="2.38"/>
+  <testcase name="landscapePhone" classname="app.onklav.home.Android15DeviceCompatibilityTest" time="0.424"/>
+  <testcase name="largePhone" classname="app.onklav.home.Android15DeviceCompatibilityTest" time="0.365"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

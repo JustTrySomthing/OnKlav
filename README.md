@@ -289,6 +289,7 @@ improve a guide or share a theme, or contribute code. The
 [contributor guide](CONTRIBUTING.md) explains setup, tests, and pull requests.
 Browse [good first issues](https://github.com/JustTrySomthing/OnKlav/labels/good%20first%20issue)
 if you’d like a small place to start. [SDK checks](https://github.com/JustTrySomthing/OnKlav/actions/workflows/sdk-checks.yml) run on pull requests.
+See the [Android screen-size and game-rendering checks](docs/COMPATIBILITY.md) for repeatable compatibility testing and results.
 
 ## License
 

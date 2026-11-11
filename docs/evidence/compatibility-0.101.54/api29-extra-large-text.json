@@ -1,0 +1,9 @@
+{
+  "sdk": 29,
+  "width_dp": 360,
+  "height_dp": 800,
+  "font_scale": 2,
+  "density_dpi": 320,
+  "checks": "Settings reachability; update text\/margins\/actions; dial pad; navigation taps; game selection",
+  "passed": true
+}

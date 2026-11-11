@@ -1,0 +1,359 @@
+{
+  "scope": "Shipped game exports in desktop Chromium with software WebGL; not Android WebView or phone GPU testing",
+  "checks": [
+    {
+      "game": "hockey",
+      "viewport": [
+        320,
+        568
+      ],
+      "passed": true,
+      "render_seconds": 4.82,
+      "pixel_variation": 39.3,
+      "events": [
+        "ONKLAV_GAME_SCREEN_ON"
+      ]
+    },
+    {
+      "game": "hockey",
+      "viewport": [
+        800,
+        360
+      ],
+      "passed": true,
+      "render_seconds": 5.37,
+      "pixel_variation": 40.84,
+      "events": [
+        "ONKLAV_GAME_SCREEN_ON"
+      ]
+    },
+    {
+      "game": "hockey",
+      "viewport": [
+        800,
+        1280
+      ],
+      "passed": true,
+      "render_seconds": 5.86,
+      "pixel_variation": 24.74,
+      "events": [
+        "ONKLAV_GAME_SCREEN_ON"
+      ]
+    },
+    {
+      "game": "four",
+      "viewport": [
+        320,
+        568
+      ],
+      "passed": true,
+      "render_seconds": 5.4,
+      "pixel_variation": 46.63,
+      "events": [
+        "ONKLAV_GAME_SCREEN_ON",
+        "ONKLAV_SAVE",
+        "ONKLAV_SESSION_READY"
+      ]
+    },
+    {
+      "game": "four",
+      "viewport": [
+        800,
+        360
+      ],
+      "passed": true,
+      "render_seconds": 5.28,
+      "pixel_variation": 27.49,
+      "events": [
+        "ONKLAV_GAME_SCREEN_ON",
+        "ONKLAV_SAVE",
+        "ONKLAV_SESSION_READY"
+      ]
+    },
+    {
+      "game": "four",
+      "viewport": [
+        800,
+        1280
+      ],
+      "passed": true,
+      "render_seconds": 7.21,
+      "pixel_variation": 23.95,
+      "events": [
+        "ONKLAV_GAME_SCREEN_ON",
+        "ONKLAV_SAVE",
+        "ONKLAV_SESSION_READY"
+      ]
+    },
+    {
+      "game": "blackjack",
+      "viewport": [
+        320,
+        568
+      ],
+      "passed": true,
+      "render_seconds": 6.16,
+      "pixel_variation": 62.63,
+      "events": [
+        "ONKLAV_GAME_SCREEN_ON",
+        "ONKLAV_SAVE",
+        "ONKLAV_SESSION_READY"
+      ]
+    },
+    {
+      "game": "blackjack",
+      "viewport": [
+        800,
+        360
+      ],
+      "passed": true,
+      "render_seconds": 5.75,
+      "pixel_variation": 35.71,
+      "events": [
+        "ONKLAV_GAME_SCREEN_ON",
+        "ONKLAV_SAVE",
+        "ONKLAV_SESSION_READY"
+      ]
+    },
+    {
+      "game": "blackjack",
+      "viewport": [
+        800,
+        1280
+      ],
+      "passed": true,
+      "render_seconds": 7.43,
+      "pixel_variation": 41.59,
+      "events": [
+        "ONKLAV_GAME_SCREEN_ON",
+        "ONKLAV_SAVE",
+        "ONKLAV_SESSION_READY"
+      ]
+    },
+    {
+      "game": "dominos",
+      "viewport": [
+        320,
+        568
+      ],
+      "passed": true,
+      "render_seconds": 6.85,
+      "pixel_variation": 37.71,
+      "events": [
+        "ONKLAV_GAME_SCREEN_ON",
+        "ONKLAV_SAVE",
+        "ONKLAV_SESSION_READY"
+      ]
+    },
+    {
+      "game": "dominos",
+      "viewport": [
+        800,
+        360
+      ],
+      "passed": true,
+      "render_seconds": 7.64,
+      "pixel_variation": 23.2,
+      "events": [
+        "ONKLAV_GAME_SCREEN_ON",
+        "ONKLAV_SAVE",
+        "ONKLAV_SESSION_READY"
+      ]
+    },
+    {
+      "game": "dominos",
+      "viewport": [
+        800,
+        1280
+      ],
+      "passed": true,
+      "render_seconds": 8.22,
+      "pixel_variation": 21.19,
+      "events": [
+        "ONKLAV_GAME_SCREEN_ON",
+        "ONKLAV_SAVE",
+        "ONKLAV_SESSION_READY"
+      ]
+    },
+    {
+      "game": "panda",
+      "viewport": [
+        320,
+        568
+      ],
+      "passed": true,
+      "render_seconds": 5.83,
+      "pixel_variation": 65.26,
+      "events": [
+        "ONKLAV_GAME_SCREEN_ON",
+        "ONKLAV_SAVE",
+        "ONKLAV_SESSION_READY"
+      ]
+    },
+    {
+      "game": "panda",
+      "viewport": [
+        800,
+        360
+      ],
+      "passed": true,
+      "render_seconds": 6.04,
+      "pixel_variation": 77.42,
+      "events": [
+        "ONKLAV_GAME_SCREEN_ON",
+        "ONKLAV_SAVE",
+        "ONKLAV_SESSION_READY"
+      ]
+    },
+    {
+      "game": "panda",
+      "viewport": [
+        800,
+        1280
+      ],
+      "passed": true,
+      "render_seconds": 6.72,
+      "pixel_variation": 80.63,
+      "events": [
+        "ONKLAV_GAME_SCREEN_ON",
+        "ONKLAV_SAVE",
+        "ONKLAV_SESSION_READY"
+      ]
+    },
+    {
+      "game": "naval",
+      "viewport": [
+        320,
+        568
+      ],
+      "passed": true,
+      "render_seconds": 5.75,
+      "pixel_variation": 33.47,
+      "events": [
+        "ONKLAV_GAME_SCREEN_ON",
+        "ONKLAV_SAVE",
+        "ONKLAV_SESSION_READY"
+      ]
+    },
+    {
+      "game": "naval",
+      "viewport": [
+        800,
+        360
+      ],
+      "passed": true,
+      "render_seconds": 6.23,
+      "pixel_variation": 22.51,
+      "events": [
+        "ONKLAV_GAME_SCREEN_ON",
+        "ONKLAV_SAVE",
+        "ONKLAV_SESSION_READY"
+      ]
+    },
+    {
+      "game": "naval",
+      "viewport": [
+        800,
+        1280
+      ],
+      "passed": true,
+      "render_seconds": 7.63,
+      "pixel_variation": 23.08,
+      "events": [
+        "ONKLAV_GAME_SCREEN_ON",
+        "ONKLAV_SAVE",
+        "ONKLAV_SESSION_READY"
+      ]
+    },
+    {
+      "game": "shroom",
+      "viewport": [
+        320,
+        568
+      ],
+      "passed": true,
+      "render_seconds": 9.2,
+      "pixel_variation": 30.06,
+      "events": [
+        "ONKLAV_GAME_SCREEN_ON",
+        "ONKLAV_SAVE",
+        "ONKLAV_SESSION_READY"
+      ]
+    },
+    {
+      "game": "shroom",
+      "viewport": [
+        800,
+        360
+      ],
+      "passed": true,
+      "render_seconds": 7.9,
+      "pixel_variation": 31.03,
+      "events": [
+        "ONKLAV_GAME_SCREEN_ON",
+        "ONKLAV_SAVE",
+        "ONKLAV_SESSION_READY"
+      ]
+    },
+    {
+      "game": "shroom",
+      "viewport": [
+        800,
+        1280
+      ],
+      "passed": true,
+      "render_seconds": 9.35,
+      "pixel_variation": 30.54,
+      "events": [
+        "ONKLAV_GAME_SCREEN_ON",
+        "ONKLAV_SAVE",
+        "ONKLAV_SESSION_READY"
+      ]
+    },
+    {
+      "game": "last-light",
+      "viewport": [
+        320,
+        568
+      ],
+      "passed": true,
+      "render_seconds": 4.71,
+      "pixel_variation": 20.24,
+      "events": [
+        "ONKLAV_GAME_SCREEN_ON",
+        "ONKLAV_SAVE",
+        "ONKLAV_SESSION_READY"
+      ]
+    },
+    {
+      "game": "last-light",
+      "viewport": [
+        800,
+        360
+      ],
+      "passed": true,
+      "render_seconds": 4.81,
+      "pixel_variation": 34.15,
+      "events": [
+        "ONKLAV_GAME_SCREEN_ON",
+        "ONKLAV_SAVE",
+        "ONKLAV_SESSION_READY"
+      ]
+    },
+    {
+      "game": "last-light",
+      "viewport": [
+        800,
+        1280
+      ],
+      "passed": true,
+      "render_seconds": 5.21,
+      "pixel_variation": 20.02,
+      "events": [
+        "ONKLAV_GAME_SCREEN_ON",
+        "ONKLAV_SAVE",
+        "ONKLAV_SESSION_READY"
+      ]
+    }
+  ]
+}

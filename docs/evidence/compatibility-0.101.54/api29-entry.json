@@ -1,0 +1,15 @@
+{
+  "sdk": 29,
+  "main_startup": true,
+  "native_game_preflights": [
+    "hockey",
+    "four",
+    "blackjack",
+    "dominos",
+    "panda",
+    "naval",
+    "app.onklav.shroom",
+    "app.onklav.lastlight"
+  ],
+  "passed": true
+}

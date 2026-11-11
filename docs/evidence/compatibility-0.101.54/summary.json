@@ -1,0 +1,18 @@
+{
+  "host_version": "0.101.54-rc1",
+  "android_test_classes": {
+    "Android10DeviceCompatibilityTest": 8,
+    "Android15DeviceCompatibilityTest": 8,
+    "Android10LaunchCompatibilityTest": 1,
+    "Android15LaunchCompatibilityTest": 1
+  },
+  "android_screen_configurations": 14,
+  "android_desktop_checks": 2,
+  "android_startup_checks": 2,
+  "included_game_native_preflights": 16,
+  "browser_game_render_checks": 24,
+  "apk_sha256": "236475c59e422701b78abef14168afbafbb084fc566e2504e8e0bf45c1b21576",
+  "app_changes_required": false,
+  "physical_phones_or_full_android_emulator_tested": false,
+  "scope": "Robolectric native-graphics layouts and Android entry preflights; separate desktop Chromium software-WebGL render smoke checks. No carrier or OEM/GPU qualification."
+}

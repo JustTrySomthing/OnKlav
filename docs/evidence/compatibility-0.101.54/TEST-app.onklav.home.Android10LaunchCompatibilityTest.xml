@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.Android10LaunchCompatibilityTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-11-11T01:48:21" hostname="4e6a3c69280b" time="2.662">
+  <properties/>
+  <testcase name="appAndEightGameEntriesOpen" classname="app.onklav.home.Android10LaunchCompatibilityTest" time="2.662"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Invalid ID 0x00000000.
+Invalid ID 0x00000000.
+Invalid ID 0x00000000.
+Invalid ID 0x00000000.
+Invalid ID 0x00000000.
+Invalid ID 0x00000000.
+Invalid ID 0x00000000.
+Invalid ID 0x00000000.
+]]></system-err>
+</testsuite>
