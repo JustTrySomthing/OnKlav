@@ -54,9 +54,9 @@ internal data class MailDraft(val id:String=mailId(),val account:String="",val t
 }
 /** Account metadata, credentials, messages and drafts are encrypted at rest with a device-bound key. */
 internal class MailDisk(private val c:Context,private val keys:SecretKeys=AndroidSecretKeys()){
- private val root=File(c.noBackupFilesDir,"email")
+ private val root get() = mailDirectory(c)
  private val alias="onklav.email.data.v1"
- private fun path(name:String):File{require(name.matches(Regex("[A-Za-z0-9._-]{1,160}")));check(root.canonicalFile==root.absoluteFile);return File(root,name)}
+ private fun path(name:String):File{require(name.matches(Regex("[A-Za-z0-9._-]{1,160}")));return File(root,name)}
  @Synchronized fun read(name:String):JSONObject?{val f=path(name);val a=AtomicFile(f);if(!f.exists()&&!File(f.path+".bak").exists())return null;val b=a.openRead().use{MailMime.readBounded(it,16_000_000)};require(b.size>=29&&b[0]==1.toByte());val cipher=Cipher.getInstance("AES/GCM/NoPadding");cipher.init(Cipher.DECRYPT_MODE,keys.load(alias,false),GCMParameterSpec(128,b.copyOfRange(1,13)));cipher.updateAAD(name.toByteArray());val plain=cipher.doFinal(b.copyOfRange(13,b.size));return try{JSONObject(String(plain,Charsets.UTF_8))}finally{plain.fill(0)}}
  @Synchronized fun write(name:String,j:JSONObject){val f=path(name);if(f.exists()||File(f.path+".bak").exists())read(name);root.mkdirs();val plain=j.toString().toByteArray();require(plain.size<=15_999_900){"Mailbox cache is full. Clear downloaded mail in Settings."};val cipher=Cipher.getInstance("AES/GCM/NoPadding");cipher.init(Cipher.ENCRYPT_MODE,keys.load(alias,root.listFiles()?.none{it.isFile&&!it.name.endsWith(".new")}!=false));cipher.updateAAD(name.toByteArray());val bytes=try{byteArrayOf(1)+cipher.iv+cipher.doFinal(plain)}finally{plain.fill(0)};val a=AtomicFile(f);val stream=a.startWrite();try{stream.write(bytes);a.finishWrite(stream)}catch(e:Exception){a.failWrite(stream);throw e}}
  @Synchronized fun remove(name:String)=AtomicFile(path(name)).delete()
@@ -81,7 +81,23 @@ internal class MailDisk(private val c:Context,private val keys:SecretKeys=Androi
  fun saveRules(d:List<MailRule>)=write("rules",JSONObject().put("items",JSONArray(d.map{it.json()})))
  fun bodyName(h:MailHeader)="body-${h.account}-"+java.security.MessageDigest.getInstance("SHA-256").digest(h.key.toByteArray()).joinToString(""){"%02x".format(it)}
  fun clearCache(){root.listFiles()?.filter{it.name.startsWith("body-")||it.name.startsWith("headers-")||it.name.startsWith("folders-")}?.forEach{it.delete()}}
- companion object{private val accountLock=Any();fun clear(c:Context){check(!File(c.noBackupFilesDir,"email").exists()||File(c.noBackupFilesDir,"email").deleteRecursively());AndroidSecretKeys().deletePrefix("onklav.email.");c.getSharedPreferences("email-sync",0).edit().clear().commit()}}
+ companion object {
+  private val accountLock = Any()
+
+  private fun mailDirectory(context: Context): File {
+   // Android can give the app's private storage path through an alias.
+   val directory = File(context.noBackupFilesDir.canonicalFile, "email")
+   check(directory.canonicalFile == directory) { "OnKlav couldn’t access its private email storage." }
+   return directory
+  }
+
+  fun clear(c: Context) {
+   val directory = mailDirectory(c)
+   check(!directory.exists() || directory.deleteRecursively())
+   AndroidSecretKeys().deletePrefix("onklav.email.")
+   c.getSharedPreferences("email-sync", 0).edit().clear().commit()
+  }
+ }
 }
 
 /** Reply All uses visible To/Cc only; Bcc is deliberately never retained in a header. */
