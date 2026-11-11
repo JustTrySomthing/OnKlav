@@ -47,6 +47,7 @@ internal object SdkNativeData {
         val p=prefs(c)
         val walkie=AppSdk.carrierEgress { if(p.getBoolean("walkie_cleanup",false))p.getLong("walkie_cleanup_epoch",0)else null }
         if(walkie!=null){
+            SdkWalkieTransport.cancelVerification(c)
             SdkWalkieTransport.packageRemoved(c)
             AppSdk.carrierEgress {if(p.getLong("walkie_cleanup_epoch",0)==walkie)check(p.edit().putBoolean("walkie_cleanup",false).commit())}
         }

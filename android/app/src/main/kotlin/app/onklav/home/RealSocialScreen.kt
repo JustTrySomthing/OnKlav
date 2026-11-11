@@ -35,7 +35,7 @@ private fun JSONObject.socialRows(table: String): List<JSONObject> =
     optJSONObject(table)?.let { rows -> rows.keys().asSequence().map(rows::getJSONObject).toList() }.orEmpty()
 
 @Composable
-internal fun RealSocialScreen(exit: () -> Unit, openBrowser: ((String) -> Unit)?) {
+internal fun RealSocialScreen(exit: () -> Unit, openBrowser: ((String) -> Unit)?, requestLaunch:Long?=null) {
     val c = LocalContext.current
     val scope = rememberCoroutineScope()
     val epoch by RealSocial.epoch.collectAsState()
@@ -45,6 +45,10 @@ internal fun RealSocialScreen(exit: () -> Unit, openBrowser: ((String) -> Unit)?
     var snapshot by remember { mutableStateOf(JSONObject()) }
     var tab by rememberSaveable { mutableIntStateOf(0) }
     var page by rememberSaveable { mutableStateOf<String?>(null) }
+    var handledRequest by rememberSaveable { mutableStateOf<Long?>(null) }
+    LaunchedEffect(requestLaunch) {
+        if(requestLaunch!=null&&handledRequest!=requestLaunch){handledRequest=requestLaunch;page=null;tab=1}
+    }
     var text by rememberSaveable { mutableStateOf("") }
     var link by rememberSaveable { mutableStateOf("") }
     var linkDialog by remember { mutableStateOf(false) }
@@ -189,16 +193,18 @@ internal fun RealSocialScreen(exit: () -> Unit, openBrowser: ((String) -> Unit)?
                                     Text(f.optString("name").ifBlank { f.getString("peer") },style=MaterialTheme.typography.titleSmall)
                                     val label = when (status) {
                                         "friend" -> if (f.optBoolean("muted")) "Muted" else "Friend"
-                                        "request" -> "Friend request"
+                                        "request" -> "Would like to connect with you on Real Social"
                                         "fast","checking" -> "Checking OnKlav"
                                         "verified_waiting" -> "Invitation queued"
-                                        "unconfirmed" -> "Could not confirm OnKlav"
+                                        "unconfirmed" -> "No response · invitation timed out"
                                         else -> "Invitation sent"
                                     }
                                     Text(label,style=MaterialTheme.typography.labelMedium)
                                 }
-                                if (status == "request") TextButton(onClick = { work { withContext(Dispatchers.IO) { RealSocial.accept(c,number) } } }, enabled = !busy) { Text("Accept") }
-                                IconButton(onClick = { chosen = f },enabled = !busy) { Icon(Icons.Outlined.MoreVert,"Friend options") }
+                                if (status == "request") {
+                                    TextButton(onClick = { work { withContext(Dispatchers.IO) { RealSocial.remove(c,number,false) } } }, enabled = !busy) { Text("Decline") }
+                                    TextButton(onClick = { work { withContext(Dispatchers.IO) { RealSocial.accept(c,number) } } }, enabled = !busy) { Text("Accept") }
+                                } else IconButton(onClick = { chosen = f },enabled = !busy) { Icon(Icons.Outlined.MoreVert,"Friend options") }
                             }
                         }
                     }

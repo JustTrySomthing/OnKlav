@@ -18,6 +18,22 @@ class FriendGameUiTest {
  private fun capture(name:String){compose.runOnUiThread{val env=compose.javaClass.getDeclaredField("environment").apply{isAccessible=true}.get(compose);val registry=env.javaClass.superclass!!.getDeclaredField("composeRootRegistry").apply{isAccessible=true}.get(env);val roots=registry.javaClass.getMethod("getRegisteredComposeRoots").invoke(registry) as Set<*>;val view=roots.filterNotNull().map{it.javaClass.getMethod("getView").invoke(it) as android.view.View}.map{it.rootView}.last{it.width>0&&it.height>0};val b=android.graphics.Bitmap.createBitmap(view.width,view.height,android.graphics.Bitmap.Config.ARGB_8888);view.draw(android.graphics.Canvas(b));File(System.getProperty("onklav.project.root"),"docs/evidence/friend-dialog-repair/$name.png").apply{parentFile!!.mkdirs()}.outputStream().use{b.compress(android.graphics.Bitmap.CompressFormat.PNG,100,it)};b.recycle()}}
  private fun click(text:String){compose.onNodeWithText(text).performSemanticsAction(androidx.compose.ui.semantics.SemanticsActions.OnClick){it()};pump()}
  private fun await(text:String){compose.waitUntil(10000){pump();runCatching{compose.onNodeWithText(text).assertExists()}.isSuccess}}
+ @Test(timeout=45000) fun openingAnIncomingInviteShowsWhoWantsToPlayAndBothChoices(){
+  compose.mainClock.autoAdvance=false
+  val match="a1".repeat(16)
+  val number="+15550100001"
+  val game=platformGames.first{it.id=="naval"}
+  val journal=File(compose.activity.noBackupFilesDir,"friend-games/state.json")
+  journal.parentFile!!.mkdirs()
+  journal.writeText(org.json.JSONObject().put("answers",org.json.JSONObject()).put("matches",org.json.JSONObject()
+   .put(match,org.json.JSONObject().put("id",match).put("game",game.id).put("peer",number)
+    .put("status","invite").put("at",System.currentTimeMillis()).put("jobs",org.json.JSONObject()))).toString())
+  compose.activity.setContent{OnKlavTheme{GamesCatalog(inviteMatch=match){fail("Unexpected solo launch")}}};pump()
+  await("$number wants to play ${game.title} with you.")
+  val inPrompt=hasAnyAncestor(isDialog())
+  compose.onNode(hasText("Decline") and inPrompt).assertIsEnabled()
+  compose.onNode(hasText("Play") and inPrompt).assertIsEnabled()
+ }
  @Test(timeout=45000) fun originalOpponentChoicesAndSeparateNumberInvitation(){
   compose.mainClock.autoAdvance=false
   compose.activity.setContent{OnKlavTheme{FriendInviteDialog(platformGames.first{it.id=="naval"},null){}}};pump()

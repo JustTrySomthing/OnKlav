@@ -77,6 +77,8 @@ fun OnKlavScreen(launchIntent: Intent? = null, intentEpoch: Int = 0,onReady:()->
     var toolReturn by rememberSaveable { mutableStateOf<String?>(null) }
     fun playVideo(url:String){toolReturn=activeTool?.takeUnless{it=="youtube"};initialVideo=url;videoLaunchKey++;activeTool="youtube"}
     var gamePeer by rememberSaveable{mutableStateOf<String?>(null)}
+    var gameMatch by rememberSaveable{mutableStateOf<String?>(null)}
+    var socialRequestLaunch by rememberSaveable{mutableStateOf<Long?>(null)}
     var gameName by rememberSaveable{mutableStateOf("")}
     var tab by rememberSaveable { mutableIntStateOf(2) }
     var cameraImmersive by remember { mutableStateOf(false) }
@@ -126,7 +128,7 @@ fun OnKlavScreen(launchIntent: Intent? = null, intentEpoch: Int = 0,onReady:()->
     val incomingMessageKey = launchIntent?.getStringExtra("open_message_key")
     val incomingMessageDate = launchIntent?.getLongExtra("open_message_date", 0) ?: 0
     LaunchedEffect(intentEpoch) {
-        if(launchIntent?.getBooleanExtra("open_friend_games",false)==true){setup=false;tab=2;activeTool="games";return@LaunchedEffect}
+        if(launchIntent?.getBooleanExtra("open_friend_games",false)==true){setup=false;tab=2;gameMatch=launchIntent.getStringExtra("friend_game_match");activeTool="games";return@LaunchedEffect}
         try{launchIntent?.getStringExtra("sdk_notice")?.let{token->
             val app=withContext(kotlinx.coroutines.Dispatchers.IO){SdkNotifications.resolveTap(context,token)}
             if(app!=null){sdkCatalog=AppSdk.list(context);browserUrl=null;fileNote=null;noteReturn=null;setup=false;settingsRoute=null;tab=2;initialPeer=null;initialNote=null;initialVideo=null;videoLaunchKey++;activeTool=AppSdk.bundledApps.entries.firstOrNull{it.value.first==app}?.key?:AppSdk.desktopId(app);return@LaunchedEffect}
@@ -134,7 +136,7 @@ fun OnKlavScreen(launchIntent: Intent? = null, intentEpoch: Int = 0,onReady:()->
         val recorder=launchIntent?.getStringExtra("open_native_recorder")?.takeIf{it in setOf("voicerecorder","screenrecorder")}
         if(recorder!=null){browserUrl=null;fileNote=null;noteReturn=null;setup=false;settingsRoute=null;tab=2;videoLaunchKey++;if(activeTool!=recorder){toolReturn=activeTool;activeTool=recorder};return@LaunchedEffect}
         if(launchIntent?.getBooleanExtra("open_real_social",false)==true && RealSocial.installed(context)){
-            sdkCatalog=AppSdk.list(context);browserUrl=null;fileNote=null;noteReturn=null;setup=false;settingsRoute=null;tab=2;initialPeer=null;initialNote=null;initialVideo=null;videoLaunchKey++;activeTool="social";return@LaunchedEffect
+            sdkCatalog=AppSdk.list(context);browserUrl=null;fileNote=null;noteReturn=null;setup=false;settingsRoute=null;tab=2;initialPeer=null;initialNote=null;initialVideo=null;videoLaunchKey++;socialRequestLaunch=videoLaunchKey.takeIf{launchIntent.getBooleanExtra("open_real_social_requests",false)};activeTool="social";return@LaunchedEffect
         }
         val essential=launchIntent?.getStringExtra("open_native_tool")?.takeIf{it in setOf("clock","flashlight","camera","calendar")}
         if(essential!=null&&(essential=="calendar"||essentialAccess(context,"app.onklav.$essential","storage.private"))){sdkCatalog=AppSdk.list(context);browserUrl=null;fileNote=null;noteReturn=null;setup=false;settingsRoute=null;tab=2;initialPeer=null;initialNote=null;initialVideo=null;videoLaunchKey++;activeTool=essential;return@LaunchedEffect}
@@ -251,7 +253,8 @@ fun OnKlavScreen(launchIntent: Intent? = null, intentEpoch: Int = 0,onReady:()->
                 if(id=="voicerecorder") RecorderWorkspace(RecorderKind.VOICE,close)
                 else if(id=="screenrecorder") RecorderWorkspace(RecorderKind.SCREEN,close)
                 else if(id=="settings") Column(Modifier.fillMaxSize().windowInsetsPadding(WindowInsets.safeDrawing)){BackHandler(onBack=close);HomeHeader("Settings",back=close);SettingsPane{name->when(name){"Appearance"->appearance=true;"Setup"->platformSetup=true;else->settingsRoute=name}}}
-                else if(id=="games") Column(Modifier.fillMaxSize().windowInsetsPadding(WindowInsets.safeDrawing)){BackHandler(onBack=close);HomeHeader("Games",back=close){ManageGamesAction{catalogManagement="Games"}};GamesCatalog(){id->runCatching{WebGameActivity.launch(context,id)}.onFailure{error="Could not start the game runtime: "+it.message}}}
+                else if(id=="games") Column(Modifier.fillMaxSize().windowInsetsPadding(WindowInsets.safeDrawing)){BackHandler(onBack=close);HomeHeader("Games",back=close){ManageGamesAction{catalogManagement="Games"}};GamesCatalog(inviteMatch=gameMatch,inviteOpened={gameMatch=null}){id->runCatching{WebGameActivity.launch(context,id)}.onFailure{error="Could not start the game runtime: "+it.message}}}
+                else if(id=="social"&&packageId==RealSocial.APP) RealSocialScreen(close,::browse,socialRequestLaunch)
                 else if(id=="cloudfiles") CloudWorkspace(close,::browse)
                 else if(id=="phone") PhoneWorkspace(close)
                 else if(id=="calendar") CalendarWorkspace(close,initialEvent=launchIntent?.getStringExtra("calendar_event"),initialDate=launchIntent?.getStringExtra("calendar_date"),launchKey=videoLaunchKey)

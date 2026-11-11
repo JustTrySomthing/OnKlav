@@ -252,7 +252,8 @@ object MessagingTransport {
         }
         val body = parts.joinToString("") { it.messageBody.orEmpty() }
         if(RealSocial.receive(context,address,subscription,body)) {check(saved.delete());return}
-        runCatching { RealSocial.observeVerification(context,address,body) }.onFailure { ChatStore.lastError.value=it.message }
+        runCatching { RealSocial.observeVerification(context,address,body,subscription) }.onFailure { ChatStore.lastError.value=it.message }
+        runCatching { SdkWalkieTransport.observeVerification(context,address,subscription,body) }.onFailure { ChatStore.lastError.value=it.message }
         if(FriendGames.receive(context,address,subscription,body)) {check(saved.delete());return}
         if(SdkWalkieTransport.receiveControl(context,address,subscription,body)) {check(saved.delete());return}
         val date = parts.first().timestampMillis

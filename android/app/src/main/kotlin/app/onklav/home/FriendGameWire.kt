@@ -4,7 +4,8 @@ package app.onklav.home
 internal data class FriendGameWire(val type:String,val id:String,val sequence:Int,val data:String) {
     fun encode()="$PREFIX$type|$id|$sequence|$data"
     companion object {
-        const val QUESTION="? Do you have OnKlav App ?"
+        const val QUESTION="? Do you have the OnKlav App ?"
+        fun isQuestion(text: String) = text == QUESTION || text == "? Do you have OnKlav App ?"
         const val PREFIX="!OKG1|"
         const val APP="!OKA1|"
         const val CARRIER_PREFIX="!OKG1:"

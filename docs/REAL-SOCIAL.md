@@ -20,10 +20,11 @@ directly between the post author and a friend without exposing other friends'
 private replies. Removal exchanges a silent control message. Blocking also
 rejects subsequent requests locally.
 
-Verified peers reuse the existing game verification ledger. Real Social tries
-a direct invitation first for a known peer, then falls back to the shared
-OnKlav probe if needed. Connected Walkie peers can contribute to the shared
-ledger. Existing game and Walkie invitation protocols remain compatible.
+Verified peers receive a friend request in Real Social with Accept and Decline.
+An unverified number first receives `? Do you have the OnKlav App ?`.
+A timed-out request sends no further check. Once both sides connect, posts,
+replies and attachments appear in Real Social without ordinary Messages
+bubbles or per-post notifications.
 
 The signed Social package continues to supply its original identity and
 installation metadata. OnKlav's host supplies the new screen and display

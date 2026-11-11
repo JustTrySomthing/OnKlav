@@ -63,7 +63,7 @@ internal fun includedGameOrder(prefs:android.content.SharedPreferences,allIds:Li
 }
 
 @Composable
-fun GamesCatalog(friendPeer:String?=null,launch: (String) -> Unit) {
+fun GamesCatalog(friendPeer:String?=null,inviteMatch:String?=null,inviteOpened:()->Unit={},launch: (String) -> Unit) {
     val context = LocalContext.current
     val prefs = remember { context.getSharedPreferences("game_catalog", 0) }
     var notice by remember { mutableStateOf<String?>(null) }
@@ -107,6 +107,13 @@ fun GamesCatalog(friendPeer:String?=null,launch: (String) -> Unit) {
     var finger by remember { mutableStateOf(Offset.Zero) }
     var friendGame by remember { mutableStateOf<PlatformGame?>(null) }
     var blocking by remember { mutableStateOf<org.json.JSONObject?>(null) }
+    LaunchedEffect(inviteMatch) {
+        val match=inviteMatch ?: return@LaunchedEffect
+        try { blocking=kotlinx.coroutines.withContext(kotlinx.coroutines.Dispatchers.IO){FriendGames.find(context,match)} }
+        catch(e:kotlinx.coroutines.CancellationException){throw e}
+        catch(e:Exception){notice=e.message?:"Could not open the game invitation."}
+        inviteOpened()
+    }
     var checkingStart by remember { mutableStateOf(false) }
     fun enter(game:PlatformGame,friend:Boolean=false,solo:Boolean=false) {
         if(checkingStart)return

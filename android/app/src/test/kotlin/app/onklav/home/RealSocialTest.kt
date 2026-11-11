@@ -73,7 +73,7 @@ class RealSocialTest {
         assertTrue(invite().getLong("at")>0L)
     }
 
-    @Test fun fullOutboxCanDrainWhenVerificationFallbackIsDue() {
+    @Test fun timedOutVerifiedInvitationDoesNotSendASecondVerificationText() {
         val c=carrierContext()
         val peer="+15550100003"
         FriendGames.recordVerified(c,peer)
@@ -88,10 +88,11 @@ class RealSocialTest {
                 .put("wire",FriendGameWire.QUESTION).put("at",System.currentTimeMillis()-1_000))
         }
         java.io.File(c.noBackupFilesDir,"real-social/state.json").writeText(root.toString())
-        assertNotNull(RealSocial.recover(c))
+        assertNull(RealSocial.recover(c))
         val updated=RealSocial.snapshot(c)
-        assertEquals("checking",updated.getJSONObject("friends").getJSONObject(phoneKey(peer)).getString("status"))
-        assertEquals(384,updated.getJSONObject("jobs").length())
+        assertEquals("unconfirmed",updated.getJSONObject("friends").getJSONObject(phoneKey(peer)).getString("status"))
+        assertEquals(0,updated.getJSONObject("jobs").length())
+        assertFalse(phoneKey(peer) in FriendGames.verifiedPeers(c))
     }
 
     @Test fun verificationProofSurvivesFullOutboxAndCrossedInvitesCancelSupersededJobs() {
@@ -104,6 +105,7 @@ class RealSocialTest {
         val superseded="f".repeat(32)
         friend.put("token",superseded).put("at",System.currentTimeMillis())
         val jobs=root.getJSONObject("jobs")
+        assertEquals(FriendGameWire.QUESTION,jobs.getJSONObject(jobs.keys().next()).getString("wire"))
         repeat(383) { n ->
             val id=(n+1).toString(16).padStart(32,'0')
             jobs.put(id,JSONObject().put("id",id).put("peer",peer).put("sub",1)

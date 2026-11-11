@@ -348,7 +348,10 @@ class SdkAppModel(application: Application) : AndroidViewModel(application) {
         }catch(e:CancellationException){throw e}catch(e:Exception){error=e.message;radioRestored=true;true}finally{busy=false}
     }
     private fun saveRadioView(){if(!radioRestored||appId!="app.onklav.radio")return;val state=frame.child("state");val edit=radioViewPrefs().edit();for(key in listOf("tab","query","country","language","genre"))edit.putString(key,state.optString(key).take(128));edit.apply()}
-    private fun apply(result: JSONObject) { frame = result.getJSONObject("frame"); pending = result.optJSONObject("pending")
+    private fun apply(result: JSONObject) {
+        val next=result.getJSONObject("frame")
+        if(appId=="app.onklav.walkie")SdkWalkieTransport.presentBuiltin(context,next)
+        frame=next; pending = result.optJSONObject("pending")
         if(appId=="app.onklav.files"&&frame.child("state").optBoolean("external_mode")&&frame.child("state").optString("confirm")=="trash"){
             frame.optJSONObject("confirm")?.put("title","Move to Trash?")?.put("text","You can restore this item from Android Trash. Folders include their contents.")
         }
@@ -356,7 +359,7 @@ class SdkAppModel(application: Application) : AndroidViewModel(application) {
     private suspend fun step(id: String, value: String = "") {
         val token = session ?: error("App is not open")
         if(sessionUnavailable){accessNotice=true;error("This app session is no longer available")}
-        try{apply(AppSdk.call(context, JSONObject().put("action", "event").put("session", token).put("event", JSONObject().put("action", id).put("value", value).put("selection", selection).put("selection_end", selectionEnd))) as JSONObject)}
+        try{if(appId=="app.onklav.walkie"&&(id in setOf("end","contacts","prepare")||id.startsWith("recent.")))SdkWalkieTransport.cancelVerification(context);apply(AppSdk.call(context, JSONObject().put("action", "event").put("session", token).put("event", JSONObject().put("action", id).put("value", value).put("selection", selection).put("selection_end", selectionEnd))) as JSONObject)}
         catch(e:CancellationException){throw e}catch(e:Exception){
             try{AppSdk.call(context,JSONObject().put("action","check").put("session",token))}
             catch(cancel:CancellationException){throw cancel}catch(invalid:Exception){retainUnavailableSession()}
@@ -520,6 +523,7 @@ class SdkAppModel(application: Application) : AndroidViewModel(application) {
     }
     internal suspend fun chooseWalkieRecipient(phone:String)=operations.withLock {
         check(appId=="app.onklav.walkie")
+        SdkWalkieTransport.cancelVerification(context)
         flushLocked()
         val number=app.onklav.shared.phoneInput(phone)
         val label=withContext(Dispatchers.IO){MessageRepository(context).contactName(number)}
@@ -556,13 +560,13 @@ class SdkAppModel(application: Application) : AndroidViewModel(application) {
         }catch(e:Exception){ if (e is CancellationException) throw e;error=e.message}finally{busy=false}
     }
     fun closeFromHost(done:()->Unit){browserDownloads.cancelTransfers();debounce?.cancel();viewModelScope.launch{operations.withLock{
-        try{pending?.optString("token")?.let{SdkFeedService.cancel(it);SdkHttpService.cancel(it);SdkRadio.cancel(it);SdkPodcasts.cancel(it);SdkEbooks.cancel(it);SdkAccounts.cancel(it)};session?.let{AppSdk.call(context,JSONObject().put("action","close").put("session",it))}}
+        try{pending?.optString("token")?.let{SdkFeedService.cancel(it);SdkHttpService.cancel(it);SdkRadio.cancel(it);SdkPodcasts.cancel(it);SdkEbooks.cancel(it);SdkAccounts.cancel(it)};if(appId=="app.onklav.walkie")SdkWalkieTransport.cancelVerification(context);session?.let{AppSdk.call(context,JSONObject().put("action","close").put("session",it))}}
         catch(e:CancellationException){throw e}catch(e:Exception){error=e.message}
         finally{session=null;frame=JSONObject();webPool.entries.clear();launchedToken=null;pending=null;dirty.clear();speechCaret=null;webPool.autoplayVideo=null;busy=false;done()}
     }}}
     fun close(done: () -> Unit) { browserDownloads.cancelTransfers();debounce?.cancel(); viewModelScope.launch { operations.withLock {
         busy = true
-        try { pending?.optString("token")?.let { SdkFeedService.cancel(it);SdkHttpService.cancel(it);SdkRadio.cancel(it);SdkPodcasts.cancel(it);SdkEbooks.cancel(it);SdkAccounts.cancel(it) };flushLocked();releaseDeviceLeases(); session?.let { AppSdk.call(context, JSONObject().put("action", "close").put("session", it)) }; session = null;frame=JSONObject();dirty.clear();launchedToken=null;webPool.entries.clear();error=null;speechCaret=null;pending = null;videoLaunchKey=null;webPool.autoplayVideo=null;if(appId=="app.onklav.walkie")SdkWalkieTransport.kick(context);done() }
+        try { pending?.optString("token")?.let { SdkFeedService.cancel(it);SdkHttpService.cancel(it);SdkRadio.cancel(it);SdkPodcasts.cancel(it);SdkEbooks.cancel(it);SdkAccounts.cancel(it) };flushLocked();releaseDeviceLeases(); if(appId=="app.onklav.walkie")SdkWalkieTransport.cancelVerification(context);session?.let { AppSdk.call(context, JSONObject().put("action", "close").put("session", it)) }; session = null;frame=JSONObject();dirty.clear();launchedToken=null;webPool.entries.clear();error=null;speechCaret=null;pending = null;videoLaunchKey=null;webPool.autoplayVideo=null;if(appId=="app.onklav.walkie")SdkWalkieTransport.kick(context);done() }
         catch(e: Exception) { if (e is CancellationException) throw e; error = e.message } finally { busy = false }
     } } }
     fun launchPending(token:String):Boolean {

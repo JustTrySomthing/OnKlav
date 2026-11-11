@@ -54,6 +54,23 @@ class FriendGamesTest {
             assertEquals("active",FriendGames.find(a,id)!!.getString("status"))
         }
     }
+    @Test fun previouslyVerifiedPeerReceivesAPlayableInvitationWithoutAnotherQuestion() {
+        val a=device();val b=device()
+        FriendGames.verify(a,two)
+        FriendGames.receive(b,one,1,sent());FriendGames.receive(a,two,1,sent())
+        val receiver=File(b.noBackupFilesDir,"friend-games/state.json")
+        val journal=JSONObject(receiver.readText())
+        journal.getJSONObject("answers").put(phoneKey(one),System.currentTimeMillis()-70_000)
+        receiver.writeText(journal.toString())
+        val id=FriendGames.invite(a,two,"naval")
+        val wire=sent()
+        assertEquals("I",FriendGameWire.parse(wire)?.type)
+        assertEquals("outgoing",FriendGames.find(a,id)?.optString("status"))
+        assertTrue(FriendGames.receive(b,one,1,wire))
+        FriendGames.accept(b,id,false)
+        assertTrue(FriendGames.receive(a,two,1,sent()))
+        assertEquals("declined",FriendGames.find(a,id)?.optString("status"))
+    }
     @Test fun dottedContactNumbersCanConnectWithoutChangingPeerIdentity() {
         val a=device();val b=device();val peer="555.010.0002"
         val id=FriendGames.invite(a,peer,"naval")
@@ -160,6 +177,8 @@ class FriendGamesTest {
         val a=device();val id=FriendGames.invite(a,two,"naval")
         val state=File(a.noBackupFilesDir,"friend-games/state.json")
         val root=JSONObject(state.readText());root.getJSONObject("matches").getJSONObject(id).put("at",0);state.writeText(root.toString())
+        assertNull(FriendGames.recoverInvites(a))
+        assertEquals(FriendGameWire.QUESTION,sent())
         assertNull(FriendGames.blocking(a))
         val next=FriendGames.restartInvitation(a,id,two,"naval",false)
         assertNotEquals(id,next);assertEquals("checking",FriendGames.find(a,next)!!.getString("status"));assertNull(FriendGames.find(a,id))
@@ -186,6 +205,7 @@ class FriendGamesTest {
         val id="a".repeat(32)
         assertNotNull(FriendGameWire.parse(FriendGameWire("X",id,1,"S99").encode()))
         for(text in listOf(FriendGameWire("X",id,0,"P").encode(),FriendGameWire("X",id,1,"x".repeat(65)).encode(),FriendGameWire("I",id,0,"ah2").encode(),FriendGameWire("X",id,1,"x|y").encode(),"!OKG1|H|$id|1|1,2,3,4"))assertNull(FriendGameWire.parse(text))
-        assertEquals("? Do you have OnKlav App ?",FriendGameWire.QUESTION)
+        assertEquals("? Do you have the OnKlav App ?",FriendGameWire.QUESTION)
+        assertTrue(FriendGameWire.isQuestion("? Do you have OnKlav App ?"))
     }
 }

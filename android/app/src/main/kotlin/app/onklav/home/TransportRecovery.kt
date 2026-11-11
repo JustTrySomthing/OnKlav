@@ -25,10 +25,12 @@ internal object TransportRecovery {
             MmsDownloadRecovery.recover(context)
             if(MessagingTransport.role(context))MessagingTransport.retrySms(context)
             val social=runCatching { RealSocial.recover(context) }.getOrElse { ChatStore.lastError.value=it.message; null }
-            val walkie=listOfNotNull(SdkWalkieTransport.recover(context),social).minOrNull()
+            val walkie=runCatching { SdkWalkieTransport.recover(context) }.getOrElse { ChatStore.lastError.value=it.message; null }
+            val games=runCatching { FriendGames.recoverInvites(context) }.getOrElse { ChatStore.lastError.value=it.message; null }
+            val nextInvite=listOfNotNull(walkie,social,games).minOrNull()
             val receipts=CarrierResults(context)
             val nextReceipt=receipts.ids().mapNotNull{runCatching{receipts.read(it)?.let{row->MessagingTransport.receiptWait(row).takeIf{n->n>0}?:900_000L}}.getOrNull()}.minOrNull()
-            return if(nextReceipt!=null)minOf(walkie?:900_000L,nextReceipt)else walkie
+            return if(nextReceipt!=null)minOf(nextInvite?:900_000L,nextReceipt)else nextInvite
         } finally {running.set(false)}
     }
 }

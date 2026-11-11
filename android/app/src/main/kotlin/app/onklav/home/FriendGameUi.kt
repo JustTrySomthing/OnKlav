@@ -28,6 +28,9 @@ import androidx.compose.ui.graphics.Color
 import kotlinx.coroutines.*
 import org.json.JSONObject
 
+private val inviteGreen = Color(0xff318457)
+private val inviteRed = Color(0xffb53c46)
+
 /** Native counterpart of Inner Circle's recipient -> side -> ConnectionDialog flow. */
 @OptIn(ExperimentalFoundationApi::class)
 @Composable internal fun FriendInviteDialog(game:PlatformGame,preset:String?,existing:String?=null,close:()->Unit) {
@@ -42,6 +45,9 @@ import org.json.JSONObject
     var verified by remember{mutableStateOf<Set<String>>(emptySet())}
     var contacts by remember{mutableStateOf<List<ContactRow>>(emptyList())}
     var query by rememberSaveable{mutableStateOf("")}
+    val contact by produceState(peer,peer) {
+        value=if(peer.isBlank()) "" else withContext(Dispatchers.IO){MessageRepository(c).contactName(peer)}
+    }
     fun act(work:suspend ()->Unit){if(busy)return;busy=true;scope.launch{try{work()}catch(e:Exception){error=e.message?:"Unable to connect"}finally{busy=false}}}
     fun invite(){error=null;act{selected=withContext(Dispatchers.IO){FriendGames.invite(c,peer,game.id,dogs)}}}
     fun cancel(){if(busy)return;act{selected?.let{id->withContext(Dispatchers.IO){FriendGames.cancelInvitation(c,id)}};close()}}
@@ -53,7 +59,8 @@ import org.json.JSONObject
     LaunchedEffect(selected){val id=selected?:return@LaunchedEffect;while(isActive){
         try{status=withContext(Dispatchers.IO){FriendGames.find(c,id)}
             if(status?.optString("status")=="active"){WebGameActivity.launch(c,game.id,friend=id);close();return@LaunchedEffect}
-        }catch(e:Exception){error=e.message};delay(500)
+            if(status?.optString("status") in setOf("expired","declined","ended","needs_game"))return@LaunchedEffect
+        }catch(e:CancellationException){throw e}catch(e:Exception){error=e.message};delay(500)
     }}
     val state=status?.optString("status")
     val failed=error!=null||state in setOf("expired","declined","ended","needs_game")||status?.optString("error")?.isNotBlank()==true
@@ -85,17 +92,17 @@ import org.json.JSONObject
                 else->{
                     Text(app.onklav.shared.displayPhone(peer),Modifier.align(Alignment.CenterHorizontally))
                     if(!failed&&state!="invite")CircularProgressIndicator(Modifier.size(32.dp).align(Alignment.CenterHorizontally))
-                    Text(when{error!=null->"Unable to Connect";failed&&state=="checking"->"Unable to Verify User";failed&&state=="outgoing"->"Unable to Connect";state=="checking"->"Verifying User…";state=="outgoing"->"Waiting for User to Accept…";state=="invite"->"Game invitation";state=="declined"->"Invitation Declined";state=="needs_game"->"User Needs an App Update";state=="expired"->"Unable to Verify User";state=="ended"->"Unable to Connect";else->"Connecting…"},Modifier.align(Alignment.CenterHorizontally))
+                    Text(when{error!=null->"Unable to Connect";failed&&state=="checking"->"Unable to Verify User";failed&&state=="outgoing"->"Unable to Connect";state=="checking"->"Verifying OnKlav…";state=="outgoing"->"Waiting for $contact to play…";state=="invite"->"$contact wants to play ${game.title} with you.";state=="declined"->"$contact declined to play.";state=="needs_game"->"User Needs an App Update";state=="expired"->if(status?.optString("expired_from")=="checking")"Could not verify OnKlav for $contact." else "$contact wasn't available to play.";state=="ended"->"Unable to Connect";else->"Connecting…"},Modifier.align(Alignment.CenterHorizontally))
                     status?.optString("error")?.takeIf{it.isNotBlank()}?.let{Text(it,color=MaterialTheme.colorScheme.error)}
                 }
             }
             error?.let{Text(it,color=MaterialTheme.colorScheme.error)}
             if(stage=="connect")Row(Modifier.fillMaxWidth().padding(top=16.dp),horizontalArrangement=Arrangement.spacedBy(12.dp)){
-                Button(enabled=!busy,onClick={cancel()},modifier=Modifier.weight(1f).heightIn(min=48.dp),shape=RoundedCornerShape(12.dp),colors=ButtonDefaults.buttonColors(containerColor=MaterialTheme.colorScheme.background,contentColor=MaterialTheme.colorScheme.onSurface)){Text(if(state=="invite")"Decline"else"Cancel")}
+                Button(enabled=!busy,onClick={cancel()},modifier=Modifier.weight(1f).heightIn(min=48.dp),shape=RoundedCornerShape(12.dp),colors=ButtonDefaults.buttonColors(containerColor=if(state=="invite")inviteRed else MaterialTheme.colorScheme.background,contentColor=if(state=="invite")Color.White else MaterialTheme.colorScheme.onSurface)){Text(if(state=="invite")"Decline"else"Cancel")}
                 if(failed||state=="invite")Button(enabled=!busy,onClick={
                     if(state=="invite")act{withContext(Dispatchers.IO){FriendGames.accept(c,selected!!,true)}}
                     else{error=null;status=null;act{selected=withContext(Dispatchers.IO){FriendGames.restartInvitation(c,selected,peer,game.id,dogs)}}}
-                },modifier=Modifier.weight(1f).heightIn(min=48.dp),shape=RoundedCornerShape(12.dp),colors=ButtonDefaults.buttonColors(containerColor=Color(0xff7de0b4),contentColor=Color(0xff052d1e))){Text(if(state=="invite")"Accept"else"Try Again")}
+                },modifier=Modifier.weight(1f).heightIn(min=48.dp),shape=RoundedCornerShape(12.dp),colors=ButtonDefaults.buttonColors(containerColor=inviteGreen,contentColor=Color.White)){Text(if(state=="invite")"Play"else"Try Again")}
             }
         }
     },confirmButton={
@@ -148,18 +155,20 @@ private fun FriendSide(label: String, artwork: Int, selected: Boolean, modifier:
 @Composable internal fun FriendSessionsPanel(peer: String?, availableGameIds: Set<String>) {
     val c=LocalContext.current;val scope=rememberCoroutineScope();var quit by remember{mutableStateOf<JSONObject?>(null)};var rows by remember{mutableStateOf<List<JSONObject>>(emptyList())};var error by remember{mutableStateOf<String?>(null)};var busy by remember{mutableStateOf(false)}
     LaunchedEffect(Unit){while(isActive){try{rows=withContext(Dispatchers.IO){FriendGames.list(c)}}catch(e:Exception){error=e.message};delay(1200)}}
-    fun action(work:()->Unit){if(busy)return;busy=true;scope.launch{try{withContext(Dispatchers.IO){work()}}catch(e:Exception){error=e.message}finally{busy=false}}}
+    fun action(done:()->Unit={},work:()->Unit){if(busy)return;busy=true;scope.launch{try{withContext(Dispatchers.IO){work()};done()}catch(e:CancellationException){throw e}catch(e:Exception){error=e.message}finally{busy=false}}}
     rows.filter { it.getString("game") in availableGameIds && (peer == null || phoneKey(it.getString("peer")) == phoneKey(peer)) }
         .take(32).forEach { m ->
         val id = m.getString("id")
         val game = m.getString("game")
         val state = m.getString("status")
+        val number=m.getString("peer")
+        val contact by produceState(number,number){value=withContext(Dispatchers.IO){MessageRepository(c).contactName(number)}}
         OutlinedCard(Modifier.fillMaxWidth().padding(vertical=4.dp)){Column(Modifier.padding(12.dp)){
             Text((platformGames.firstOrNull{it.id==game}?.title?:game)+" · "+app.onklav.shared.displayPhone(m.getString("peer")))
-            Text(when(state){"invite"->"Game invitation";"active"->"Friend game · ready to play";"checking"->"Checking OnKlav…";"outgoing"->"Waiting for acceptance";else->state.replaceFirstChar{it.uppercase()}},style=MaterialTheme.typography.bodySmall)
+            Text(when(state){"invite"->"$contact wants to play with you.";"declined"->"Invitation declined";"expired"->"Invitation timed out";"active"->"Friend game · ready to play";"checking"->"Checking OnKlav…";"outgoing"->"Waiting for acceptance";else->state.replaceFirstChar{it.uppercase()}},style=MaterialTheme.typography.bodySmall)
             Row(horizontalArrangement=Arrangement.spacedBy(8.dp)){
                 when(state){
-                    "invite"->{TextButton(enabled=!busy,onClick={action{FriendGames.accept(c,id,true)}}){Text("Accept")};TextButton(enabled=!busy,onClick={action{FriendGames.accept(c,id,false)}}){Text("Decline")}}
+                    "invite"->{Button(enabled=!busy,colors=ButtonDefaults.buttonColors(containerColor=inviteRed,contentColor=Color.White),onClick={action{FriendGames.accept(c,id,false)}}){Text("Decline")};Button(enabled=!busy,colors=ButtonDefaults.buttonColors(containerColor=inviteGreen,contentColor=Color.White),onClick={action(done={WebGameActivity.launch(c,game,friend=id)}){FriendGames.accept(c,id,true)}}){Text("Play")}}
                     "active"->{TextButton(onClick={WebGameActivity.launch(c,game,friend=id)}){Text("Play")};TextButton(enabled=!busy,onClick={action{FriendGames.retry(c,id)}}){Text("Retry update")};TextButton(enabled=!busy,onClick={quit=m}){Text("Quit")}}
                     "checking","outgoing"->{TextButton(enabled=!busy,onClick={action{FriendGames.retry(c,id)}}){Text("Retry")};TextButton(enabled=!busy,onClick={action{FriendGames.quit(c,id)}}){Text("Cancel")}}
                     else->TextButton(enabled=!busy,onClick={action{FriendGames.remove(c,id)}}){Text("Remove")}

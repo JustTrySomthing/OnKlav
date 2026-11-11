@@ -24,6 +24,100 @@ internal object SdkWalkieTransport {
     private val queued=AtomicBoolean(false)
     private val jobLock=Any()
     private var visible=0
+    private const val BUILTIN = "app.onklav.walkie"
+    private fun verification(c:Context)=c.getSharedPreferences("walkie-invite-verification",Context.MODE_PRIVATE)
+
+    fun cancelVerification(c:Context) = AppSdk.carrierEgress {
+        val prefs=verification(c)
+        if(prefs.contains("status"))check(prefs.edit().remove("peer").remove("number").remove("sub").remove("at").remove("status").commit())
+    }
+
+    private fun trackCaller(c:Context,session:JSONObject):JSONObject {
+        check(verification(c).edit().putString("caller_session",session.getString("id")).commit())
+        return session
+    }
+
+    private fun verificationRemaining(c:Context):Long? {
+        val prefs=verification(c)
+        if(prefs.getString("status","")!="checking")return null
+        val elapsed=System.currentTimeMillis()-prefs.getLong("at",0)
+        return (FriendGames.INVITE_TIMEOUT-elapsed).takeIf{elapsed in 0 until FriendGames.INVITE_TIMEOUT}
+    }
+
+    private fun beginBuiltin(c:Context,args:JSONObject,owner:JSONObject):JSONObject {
+        val peer=args.getString("peer")
+        val sub=args.getInt("subscription")
+        facts(c,peer,sub,owner)
+        val current=state(c,owner)
+        check(current.optString("phase") in setOf("offline","ended")){"End the current Walkie session first."}
+        check(verificationRemaining(c)==null){"Already checking for OnKlav."}
+        val pending=verification(c)
+        val stale=current.optString("reason") in setOf("timeout","uncertain","failed") && phoneKey(current.optString("peer"))==phoneKey(peer)
+        if(!stale&&phoneKey(peer) in FriendGames.verifiedPeers(c) && pending.getString("peer","")!=phoneKey(peer)) {
+            cancelVerification(c)
+            return trackCaller(c,command(c,args,owner))
+        }
+        check(pending.edit().putString("peer",phoneKey(peer)).putString("number",peer)
+            .putInt("sub",sub).putLong("at",System.currentTimeMillis()).putString("status","checking").remove("caller_session").commit())
+        try { FriendGames.sendVerificationQuestion(c,peer,sub) }
+        catch(e:Exception) { cancelVerification(c);throw e }
+        TransportRecovery.schedule(c,FriendGames.INVITE_TIMEOUT)
+        return JSONObject().put("phase","checking").put("peer",peer).put("subscription",sub)
+    }
+
+    fun observeVerification(c:Context,peer:String,sub:Int,body:String) {
+        if(!FriendGameWire.appResponse(body))return
+        AppSdk.carrierEgress {
+            val pending=verification(c)
+            val expected=pending.getInt("sub",-1)
+            if(pending.getString("peer","")!=phoneKey(peer)||expected!=sub||verificationRemaining(c)==null)return@carrierEgress
+            val number=pending.getString("number","").orEmpty()
+            val started=runCatching {
+                val owner=SdkCarrierRoutes.builtin(c)
+                trackCaller(c,command(c,JSONObject().put("operation","begin").put("peer",number).put("subscription",expected),owner))
+            }.isSuccess
+            if(started) {cancelVerification(c);FriendGames.recordVerified(c,peer)}
+            else check(pending.edit().putString("status","failed").commit())
+            epoch.value++
+            kick(c)
+        }
+    }
+
+    /** Use the existing signed controller's Accept and offline recorder actions. */
+    fun presentBuiltin(c:Context,frame:JSONObject) {
+        val state=frame.child("state")
+        val session=state.child("meta").child("session")
+        val body=frame.optJSONArray("body") ?: return
+        val pending=verification(c)
+        val peer=state.optString("peer")
+        val samePeer=peer.isNotBlank()&&pending.getString("peer","")==phoneKey(peer)
+        val checking=samePeer&&verificationRemaining(c)!=null
+        val callerEnded=session.optString("phase")=="ended"&&!session.optBoolean("incoming")&&
+            phoneKey(session.optString("peer"))==phoneKey(peer)&&session.optString("reason") in setOf("timeout","declined","uncertain","failed")
+        val unavailable=!checking&&(samePeer||callerEnded)
+        fun nodes(key:String)=frame.optJSONArray(key)?.let{array->(0 until array.length()).mapNotNull{array.optJSONObject(it)}}.orEmpty()
+        if(session.optString("phase")=="incoming") {
+            val caller=MessageRepository(c).contactName(session.optString("peer"))
+            nodes("menu").firstOrNull{it.optString("id")=="invite.help"}?.put("text","$caller wants to talk on Walkie-Talkie.")
+            nodes("menu").firstOrNull{it.optString("id")=="invite.accept"}?.put("text","Accept call")
+        }
+        if(!checking&&!unavailable)return
+        val name=state.optString("label").ifBlank{peer}.ifBlank{"Your contact"}
+        val text=when {
+            checking->"Checking whether $name has OnKlav…"
+            callerEnded&&session.optString("reason")=="declined"->"$name declined your call. You can leave a voice message."
+            else->"$name wasn't available to take your call. You can leave a voice message."
+        }
+        val status=nodes("body").firstOrNull{it.optString("id")=="status"}
+            ?: JSONObject().put("kind","label").put("id","invite.host.status").put("center",true).also{body.put(it)}
+        status.put("text",text)
+        nodes("body").firstOrNull{it.optString("id")=="connect"}?.put("enabled",!checking)
+            ?.put("text",if(checking)"Checking OnKlav…" else "Try Again")
+        if(unavailable&&!state.optBoolean("record_panel")) {
+            // A body button keeps the existing signed action discoverable without opening the toolbar.
+            body.put(JSONObject().put("kind","button").put("id","record.toggle").put("text","Leave a message"))
+        }
+    }
     fun checkSetup(c:Context) {
         check(MessagingTransport.carrierEnabled(c) && MessagingTransport.role(c) &&
             MessagingTransport.permission(c,Manifest.permission.SEND_SMS) &&
@@ -65,7 +159,8 @@ internal object SdkWalkieTransport {
         return call(c,copy,owner) as JSONObject
     }
     fun connect(c:Context,authorized:JSONObject,owner:JSONObject?=null):JSONObject {
-        val out=command(c,authorized,owner);epoch.value++;kick(c);return out
+        val out=if(owner!=null&&owner.optString("id")==BUILTIN&&authorized.optString("operation")=="begin") AppSdk.carrierEgress{beginBuiltin(c,authorized,owner)} else command(c,authorized,owner)
+        epoch.value++;kick(c);return out
     }
     /** Reauthorize and commit under the same lock as install/removal/grant changes. */
     fun confirm(c:Context,authorize:()->JSONObject):JSONObject=confirmedRequest(authorize){request->
@@ -109,6 +204,7 @@ internal object SdkWalkieTransport {
     fun recover(c:Context):Long? {
         if(!MessagingTransport.carrierEnabled(c)||runCatching{checkSetup(c)}.isFailure)return null
         val now=System.currentTimeMillis();val next=mutableListOf<Long>()
+        verificationRemaining(c)?.let{next.add(now+it)}
         dir(c).listFiles().orEmpty().filter{it.extension=="json"}.take(64).forEach{f->runCatching{
             require(f.length()<=8192);val row=JSONObject(f.readText())
             if(row.has("callback_ok")||now-row.optLong("at")>=90000)finish(c,f.nameWithoutExtension,false,null,"uncertain")
@@ -124,6 +220,7 @@ internal object SdkWalkieTransport {
                     if(packet is JSONObject){controls++;sendControl(c,packet,owner)}
                 }
                 val current=state(c,owner);current.optLong("next_wakeup").takeIf{it>0}?.let{next.add(it)}
+                if(owner.optString("id")==BUILTIN) reportUnavailable(c,owner,current)
                 if(current.optString("phase")=="connected"){
                     val clips=AppSdk.sync(c,JSONObject().put("action","walkie_archive_list").put("owner",owner))as JSONArray
                     for(n in 0 until clips.length()){val clip=clips.getJSONObject(n)
@@ -136,6 +233,23 @@ internal object SdkWalkieTransport {
         }
         if(owners.isNotEmpty())prefs.edit().putInt("cursor",(start+1)%owners.size).apply()
         epoch.value++;return next.minOrNull()?.let{(it-now).coerceIn(1000L,15*60*1000L)}
+    }
+    private fun reportUnavailable(c:Context,owner:JSONObject,current:JSONObject) {
+        val outcome=AppSdk.carrierEgress {
+            val prefs=verification(c)
+            if(prefs.getString("status","")=="checking" && verificationRemaining(c)==null) {
+                check(prefs.edit().putString("status","expired").commit())
+                return@carrierEgress prefs.getString("number","").orEmpty() to "timeout"
+            }
+            val id=current.optString("id")
+            if(id.isEmpty()||prefs.getString("caller_session","")!=id||current.optString("phase")!="ended")return@carrierEgress null
+            check(prefs.edit().remove("caller_session").commit())
+            current.optString("reason").takeIf{it in setOf("timeout","declined","failed","uncertain")}
+                ?.let{current.optString("peer") to it}
+        } ?: return
+        val name=MessageRepository(c).contactName(outcome.first)
+        val text=if(outcome.second=="declined") "$name declined your call." else "$name wasn't available to take your call."
+        notify(c,"Walkie-Talkie", "$text Tap to leave a message.",owner)
     }
     private fun sendControl(c:Context,p:JSONObject,owner:JSONObject) {
         val peer=p.getString("peer");val sub=p.getInt("subscription");val wire=SdkCarrierRoutes.encode(owner,p.getString("wire"))
@@ -221,7 +335,9 @@ internal object SdkWalkieTransport {
         else request.put("outcome",if(result=="carrier")"accepted"else result)
         val owner=j.optJSONObject("owner")?:SdkCarrierRoutes.legacyOwner(c)
         request.put("facts",facts(c,j.getString("peer"),j.getInt("sub"),owner))
-        call(c,request,owner)
+        val resultState=call(c,request,owner) as? JSONObject
+        if(j.optString("kind")=="control"&&request.optString("operation")=="sent"&&resultState?.optString("phase")=="connected")
+            runCatching{FriendGames.recordVerified(c,j.getString("peer"))}
         check(f.delete())
         payload.delete();MessageTransferProvider.file(c,job,"blob").delete();MessageTransferProvider.file(c,job,"pdu").delete();epoch.value++
     }
@@ -242,7 +358,7 @@ internal object SdkWalkieTransport {
         return try {
             val out=command(c,JSONObject().put("operation","receive").put("peer",peer).put("subscription",sub).put("wire",inner),owner)
             if(out.optString("phase")=="connected")runCatching{FriendGames.recordVerified(c,peer)}
-            if(out.optString("phase")=="incoming")notify(c,"Walkie Talkie invitation","$peer wants to talk",owner)
+            if(out.optString("phase")=="incoming")notify(c,"Walkie Talkie invitation",MessageRepository(c).contactName(peer)+" wants to talk. Tap to accept or decline.",owner)
             epoch.value++;kick(c);true
         }catch(e:Exception){
             runCatching {checkSetup(c);val a=JSONObject().put("operation","classify").put("wire",inner).put("facts",facts(c,peer,sub,owner));(call(c,a,owner) as JSONObject).optBoolean("valid")}.getOrDefault(false)

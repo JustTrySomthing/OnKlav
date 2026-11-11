@@ -32,7 +32,8 @@ internal object RealSocial {
                 .setPeriodic(DAY).setPersisted(true).build())
     }
     private const val DAY = 86_400_000L
-    private const val HANDSHAKE = 65_000L
+    private const val HANDSHAKE = FriendGames.INVITE_TIMEOUT
+    private val awaiting = setOf("fast", "checking", "verified_waiting", "invited")
     private const val MAX_JOBS = 384
     private const val CONTROL_RESERVE = 48
     private const val MAX_WIRE = 1800
@@ -117,7 +118,13 @@ internal object RealSocial {
         state(c) { s ->
             val friends = table(s, "friends")
             val number = phoneKey(peer)
-            check(!friends.has(number) && !table(s, "blocked").has(number)) { "This person is already listed or blocked." }
+            val old=friends.optJSONObject(number)
+            check((old==null || old.optString("status")=="unconfirmed") && !table(s, "blocked").has(number)) { "This person is already listed or blocked." }
+            if(old!=null) {
+                cancelQueued(s,number)
+                table(s,"retired").put(old.getString("token"),now())
+                friends.remove(number)
+            }
             check(friends.length() < 48) { "Real Social supports up to 48 friends." }
             val f = JSONObject().put("peer", peer).put("name", name.take(100)).put("token", id())
                 .put("sub", sub).put("status", if (verified) "fast" else "checking").put("at", 0)
@@ -126,13 +133,14 @@ internal object RealSocial {
         }
         kick(c)
     }
-    fun observeVerification(c: Context, peer: String, body: String) {
+    fun observeVerification(c: Context, peer: String, body: String, sub: Int = -1) {
         if (!FriendGameWire.appResponse(body)) return
         if (!installed(c) || runCatching { FriendGames.policy(c, peer) }.isFailure) return
         val confirmed = state(c) { s ->
             val f = table(s, "friends").optJSONObject(phoneKey(peer)) ?: return@state false
             val started = f.optLong("at")
-            if (f.optString("status") != "checking" || started <= 0 || now() - started !in 0..HANDSHAKE) return@state false
+            if (f.optString("status") != "checking" || started <= 0 || now() - started !in 0..HANDSHAKE ||
+                sub >= 0 && f.optInt("sub", -1) >= 0 && sub != f.optInt("sub")) return@state false
             if (table(s,"jobs").length() < MAX_JOBS) {
                 queue(s, f, invitation(c,f))
                 f.put("status", "invited")
@@ -166,7 +174,7 @@ internal object RealSocial {
     fun accept(c: Context, number: String) {
         val peer = state(c) { s ->
             val f = table(s, "friends").getJSONObject(number)
-            check(f.optString("status") == "request")
+            check(f.optString("status") == "request" && now()-f.optLong("at") in 0..HANDSHAKE) { "This friend request has expired." }
             f.put("status", "friend")
             queue(s, f, wire(packet("accept", f.getString("token")).put("name",displayName(c))), control = true)
             history(s, f)
@@ -179,7 +187,8 @@ internal object RealSocial {
         state(c) { s ->
             val f = table(s, "friends").optJSONObject(number) ?: return@state
             cancelQueued(s, number)
-            if(f.optString("status") in setOf("friend","request","invited","fast"))
+            if(f.optString("status")=="friend" || f.optString("status") in setOf("request","invited","fast") &&
+                now()-f.optLong("at") in 0..HANDSHAKE)
                 queue(s, f, wire(packet("remove", f.getString("token"))), control = true)
             table(s, "friends").remove(number)
             table(s, "retired").put(f.getString("token"),now())
@@ -301,9 +310,12 @@ internal object RealSocial {
                     val f = friends.optJSONObject(number)
                     if (kind == "invite") {
                         if (table(s,"retired").has(token)) return@state false
-                        if ((f != null && (f.optString("status") !in setOf("fast","checking","verified_waiting","invited","unconfirmed") ||
-                            f.optString("token") <= token)) || (f == null && friends.length() >= 48) ||
-                            now()-p.optLong("at") !in -300_000L..7*DAY) return@state false
+                        val status=f?.optString("status")
+                        val stale=f!=null && (status=="unconfirmed" || (status in awaiting || status=="request") &&
+                            f.optLong("at")>0 && now()-f.optLong("at")>=HANDSHAKE)
+                        if ((f != null && (if(stale) f.optString("token")==token else status !in awaiting || f.optString("token") <= token)) ||
+                            (f == null && friends.length() >= 48) ||
+                            now()-p.optLong("at") !in -300_000L..HANDSHAKE) return@state false
                         if (f != null) {
                             table(s,"retired").put(f.getString("token"),now())
                             cancelQueued(s, number)
@@ -311,18 +323,19 @@ internal object RealSocial {
                         friends.put(number, JSONObject().put("peer",peer).put("sub",sub).put("token",token).put("status","request").put("at",now()).put("name",p.optString("name").take(60)))
                         return@state !s.optBoolean("muted")
                     }
-                    if (f == null || f.optString("token") != token) return@state false
+                    if (f == null || f.optString("token") != token ||
+                        sub >= 0 && f.optInt("sub", -1) >= 0 && sub != f.optInt("sub")) return@state false
                     if (kind == "remove") {
                         friends.remove(number); table(s,"retired").put(token,now()); removePosts(s, number)
                         cancelQueued(s, number)
                         return@state false
                     }
+                    val awaitingAccept = f.optString("status") in setOf("fast","invited") && now()-f.optLong("at") in 0..HANDSHAKE
                     if (kind == "accept") {
-                        if (f.optString("status") !in setOf("fast","checking","verified_waiting","invited","unconfirmed")) return@state false
+                        if (!awaitingAccept) return@state false
                         f.put("status","friend");if(f.optString("name").isBlank())f.put("name",p.optString("name").take(60));history(s,f);verified=true
                         return@state !s.optBoolean("muted")
                     }
-                    val awaitingAccept = f.optString("status") in setOf("fast","checking","verified_waiting","invited","unconfirmed")
                     if (f.optString("status") != "friend" && !(awaitingAccept && kind=="post")) return@state false
                     val posts = table(s, "posts")
                     if (kind == "post") {
@@ -366,7 +379,11 @@ internal object RealSocial {
             } catch (e: Exception) { if (copied) media(c,postId).delete(); throw e }
         }
         if (verified) { FriendGames.recordVerified(c, peer); kick(c) }
-        if (alert) notify(c, if (kind=="invite") "New friend request" else "New Real Social activity")
+        if (alert && kind=="invite") {
+            val name=p.optString("name").take(60).ifBlank{MessageRepository(c).contactName(peer)}
+            notify(c,"$name would like to connect with you on Real Social.")
+        }
+        if(kind=="invite")kick(c)
         return true
     }
     fun receiveMms(c: Context, pdu: JSONObject, sub: Int): Boolean {
@@ -381,7 +398,7 @@ internal object RealSocial {
         if (MessageNotifications.quiet(c)) return@runCatching
         val nm = c.getSystemService(NotificationManager::class.java)
         nm.createNotificationChannel(NotificationChannel("real-social", "Real Social", NotificationManager.IMPORTANCE_DEFAULT))
-        val tap = PendingIntent.getActivity(c, 914, Intent(c, MainActivity::class.java).putExtra("open_real_social", true)
+        val tap = PendingIntent.getActivity(c, 914, Intent(c, MainActivity::class.java).putExtra("open_real_social", true).putExtra("open_real_social_requests",true)
             .addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_SINGLE_TOP), PendingIntent.FLAG_IMMUTABLE or PendingIntent.FLAG_UPDATE_CURRENT)
         nm.notify(914, NotificationCompat.Builder(c,"real-social").setSmallIcon(app.onklav.shared.R.drawable.ref_app_social)
             .setContentTitle("Real Social").setContentText(text).setContentIntent(tap).setAutoCancel(true).build())
@@ -415,7 +432,7 @@ internal object RealSocial {
         forget.forEach { FriendGames.forgetVerified(c,it) }
         return state(c) { s ->
             if (table(s,"jobs").length()>0) 1500L
-            else values(table(s,"friends")).filter { it.optLong("at")>0 && it.optString("status") in setOf("fast","checking") }
+            else values(table(s,"friends")).filter { it.optLong("at")>0 && (it.optString("status") in awaiting || it.optString("status")=="request") }
                 .minOfOrNull { (HANDSHAKE-now()+it.optLong("at")).coerceAtLeast(1000) }
         }
     }
@@ -424,10 +441,23 @@ internal object RealSocial {
         val jobs = table(s,"jobs")
         val friends = table(s,"friends")
         val time = now()
-        for (expired in values(jobs).filter { time-it.optLong("at") > DAY }) {
+        for (expired in values(jobs).filter {
+            val friend=friends.optJSONObject(phoneKey(it.getString("peer")))
+            time-it.optLong("at") > if(friend!=null&&isInitialVerification(friend,it))HANDSHAKE else DAY
+        }) {
             jobs.remove(expired.getString("id"))
             val friend = friends.optJSONObject(phoneKey(expired.getString("peer")))
             if (friend != null && isInitialVerification(friend, expired)) friend.put("status","unconfirmed")
+        }
+        for (friend in values(friends).filter { it.optString("status") in awaiting && it.optLong("at")>0 && time-it.optLong("at")>=HANDSHAKE }) {
+            val peer=friend.getString("peer")
+            cancelQueued(s,phoneKey(peer))
+            friend.put("status","unconfirmed")
+            forget+=peer
+        }
+        for (request in values(friends).filter { it.optString("status")=="request" && time-it.optLong("at")>=HANDSHAKE }) {
+            friends.remove(phoneKey(request.getString("peer")))
+            table(s,"retired").put(request.getString("token"),time)
         }
         // Claim before carrier submission. Never replay an ambiguous send.
         val first = values(jobs).minByOrNull { it.getLong("at") }
@@ -444,18 +474,6 @@ internal object RealSocial {
         for (friend in values(friends).filter { it.optString("status") == "friend" && it.optBoolean("history_waiting") }) {
             history(s,friend)
         }
-        for (friend in values(friends).filter { it.optLong("at") > 0 && time-it.optLong("at") >= HANDSHAKE }) {
-            when (friend.optString("status")) {
-                "fast" -> if (jobs.length() < MAX_JOBS) {
-                    friend.put("status","checking").put("at",0)
-                    queue(s,friend,FriendGameWire.QUESTION)
-                }
-                "checking" -> {
-                    friend.put("status","unconfirmed")
-                    forget += friend.getString("peer")
-                }
-            }
-        }
         first
     }
 
@@ -463,7 +481,7 @@ internal object RealSocial {
         if (friend.optLong("at") != 0L) return false
         val body = job.getString("wire")
         return when (friend.optString("status")) {
-            "checking" -> body == FriendGameWire.QUESTION
+            "checking" -> FriendGameWire.isQuestion(body)
             "fast" -> decode(body)?.let {
                 it.optString("kind") == "invite" && it.optString("token") == friend.optString("token")
             } == true

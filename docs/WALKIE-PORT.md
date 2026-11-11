@@ -6,6 +6,12 @@ numbers when available, in both the panel and connection-error dialog. There is
 no extra number row for a named recipient. Floating panels/dialogs use centered
 motion; drawers/pages continue sliding. Fresh Walkie host/presentation checks
 pass; physical two-phone/carrier acceptance remains open. See RESUME-0.68.0.md.
+Unverified contacts receive `? Do you have the OnKlav App ?` first. The
+built-in Walkie-Talkie starts its native invitation only after a reply from the
+same number and SIM within the verification window. A decline or timeout lets
+the caller record and send a standard voice-message MMS. The connection does
+not retry automatically.
+
 The sections below retain the implementation and historical evidence.
 
 # Walkie-Talkie — conversion started, not a finished app
