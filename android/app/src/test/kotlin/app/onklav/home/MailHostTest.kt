@@ -77,7 +77,8 @@ class MailHostTest{
   val incoming = MailMime.error(MailSetupSignInRejected("GMX", false, rejected))
   val outgoing = MailMime.error(MailSetupSignInRejected("GMX", true, rejected))
   assertTrue(incoming.startsWith("Incoming mail (IMAP) rejected sign-in."))
-  assertTrue(incoming.contains("If you use two-factor authentication"))
+  assertTrue(incoming.contains("even if two-factor authentication is off"))
+  assertTrue(outgoing.contains("use it for outgoing mail too"))
   assertTrue(outgoing.startsWith("Outgoing mail (SMTP) rejected sign-in."))
   assertFalse((incoming + outgoing).contains("raw server response"))
  }

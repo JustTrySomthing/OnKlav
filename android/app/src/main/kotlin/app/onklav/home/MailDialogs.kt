@@ -99,7 +99,7 @@ import androidx.compose.ui.unit.dp
    }
   }
   Text(when (a.provider) {
-   "GMX" -> "Enable POP3 & IMAP in GMX. Use your GMX password, or a GMX app password if you use two-factor authentication."
+   "GMX" -> "Enable POP3 & IMAP in GMX. If GMX rejects your regular password, try a GMX app password. GMX may require one even with two-factor authentication off."
    "Gmail" -> "Enter a Google app password from your Google Account settings."
    "Yahoo" -> "Enter an app password from Yahoo Account Security."
    else -> "Use the secure IMAP and SMTP settings and credentials from your mail host."

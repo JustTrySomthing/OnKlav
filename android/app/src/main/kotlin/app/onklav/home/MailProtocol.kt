@@ -24,9 +24,9 @@ internal class MailSetupSignInRejected(provider: String, outgoing: Boolean, caus
    val username = if (outgoing) "outgoing username" else "incoming username"
    val help = when (provider) {
     "GMX" -> if (outgoing) {
-     "Check your full GMX email address and outgoing password in Server settings."
+     "Check your full GMX address in Server settings. If you created a GMX app password, use it for outgoing mail too."
     } else {
-     "Check your full GMX address and GMX password. If you use two-factor authentication, use an app password. Sign in on GMX’s website to check POP3 & IMAP access and account alerts."
+     "Check your full GMX address. If your regular password was rejected, create a GMX app password even if two-factor authentication is off. Check POP3 & IMAP access and account alerts on GMX’s website."
     }
     "Gmail" -> "Use your full Google email address and a Google app password."
     "Yahoo" -> "Use your full Yahoo email address and a Yahoo app password."
