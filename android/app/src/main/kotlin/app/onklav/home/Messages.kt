@@ -113,6 +113,28 @@ class MessageRepository(private val context: Context) {
                 }
     }
 
+    internal suspend fun contactGivenName(number: String): String? = withContext(Dispatchers.IO) {
+        if (number.isBlank() || number.any { it == ';' || it == ',' } ||
+            context.checkSelfPermission(Manifest.permission.READ_CONTACTS) != PackageManager.PERMISSION_GRANTED
+        ) return@withContext null
+        val lookup = Uri.withAppendedPath(ContactsContract.PhoneLookup.CONTENT_FILTER_URI, Uri.encode(number))
+        val givenName = runCatching {
+            val contactId = resolver.query(lookup, arrayOf(ContactsContract.PhoneLookup.CONTACT_ID), null, null, null)
+                ?.use { if (it.moveToFirst()) it.getLong(0) else null } ?: return@runCatching null
+            resolver.query(
+                ContactsContract.Data.CONTENT_URI,
+                arrayOf(ContactsContract.CommonDataKinds.StructuredName.GIVEN_NAME),
+                "contact_id=? AND mimetype=?",
+                arrayOf(contactId.toString(), ContactsContract.CommonDataKinds.StructuredName.CONTENT_ITEM_TYPE),
+                "is_super_primary DESC, is_primary DESC",
+            )?.use { cursor ->
+                generateSequence { if (cursor.moveToNext()) cursor.getString(0).orEmpty().trim() else null }
+                    .firstOrNull { it.isNotEmpty() }
+            }
+        }.getOrNull()
+        givenName ?: firstNameFromDisplayName(contactName(number), number)
+    }
+
     /** Warm directories once, avoiding one Binder query per inbox row on cold entry. */
     private fun warmDirectories() {
         if(canonical.isEmpty())runCatching {

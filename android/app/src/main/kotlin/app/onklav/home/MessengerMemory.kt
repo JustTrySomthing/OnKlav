@@ -23,7 +23,7 @@ internal class MessengerMemory:ViewModel(){
  val windows=linkedMapOf<Long,List<Message>>()
  val galleries=linkedMapOf<Long,MediaPage>()
  val initializedThreads=mutableSetOf<Long>()
- val seenReactions=mutableSetOf<String>()
+ val seenReactions=mutableMapOf<String,Map<String,ReactionMark>>()
  fun keep(thread:Long,value:List<Message>,source:List<Message> = value){if(thread<=0)return;if(windows.size>=12&&!windows.containsKey(thread)){val first=windows.keys.first();windows.remove(first);rawWindows.remove(first)};windows[thread]=value.takeLast(200);rawWindows[thread]=source.takeLast(200)}
 }
 internal fun mergeLatestMessages(previous:List<Message>,fresh:List<Message>):List<Message>{

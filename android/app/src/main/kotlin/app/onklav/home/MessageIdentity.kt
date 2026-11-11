@@ -26,6 +26,12 @@ import app.onklav.shared.R
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.withContext
 
+internal fun firstNameFromDisplayName(displayName: String, address: String): String? {
+    val name = displayName.trim()
+    if (name.isEmpty() || sameRecipients(name, address) || !name.any { it.isLetter() }) return null
+    return name.substringAfter(',').trim().takeWhile { !it.isWhitespace() }.ifEmpty { null }
+}
+
 @Composable internal fun ThemeStar(selected:Boolean,change:(Boolean)->Unit,modifier:Modifier=Modifier,ink:Color=MaterialTheme.colorScheme.primary){
  Box(modifier.size(44.dp).clickable(interactionSource=remember{MutableInteractionSource()},indication=null,onClickLabel=if(selected)"Unstar"else"Star"){change(!selected)},contentAlignment=Alignment.Center){
   Icon(painterResource(if(selected)R.drawable.ref_message_star_filled else R.drawable.ref_message_star),if(selected)"Unstar Message"else"Star Message",Modifier.size(28.dp),tint=if(selected)ink else MaterialTheme.colorScheme.onSurface)

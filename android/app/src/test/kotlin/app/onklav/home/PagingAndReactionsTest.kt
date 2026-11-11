@@ -45,6 +45,56 @@ class PagingAndReactionsTest {
   val projected=projectReactions(listOf(peer,own,mine,theirs),JSONObject());assertEquals(listOf(peer,own),projected.messages);assertEquals(listOf("❤️"),projected.emojis[peer.key]);assertEquals(listOf("🥰"),projected.emojis[own.key])
   val removed=projectReactions(listOf(peer,own,mine,theirs,Message(5,"Removed 🥰 from \"My reply\"",5,false)),JSONObject());assertTrue(removed.emojis[own.key].isNullOrEmpty())
  }
+ @Test fun carrierTapbacksMatchMultilineMessagesAndCanBeRemoved(){
+  val original=Message(1,"Here is a \"quote\"\r\nSee you soon",1,true)
+  val liked=Message(2,"Liked “Here is a \"quote\"\nSee you soon”",2,false)
+  val changed=Message(3,"Reacted with 🥰 to “Here is a \"quote\"\nSee you soon”",3,false)
+  val remove=Message(4,"Removed 🥰 from “Here is a \"quote\"\nSee you soon”",4,false)
+  val reactions=projectReactions(listOf(original,liked,changed),JSONObject())
+  assertEquals(listOf(original),reactions.messages)
+  assertEquals(ReactionMark("🥰",changed.key),reactions.marks[original.key]?.get("peer"))
+  assertEquals(listOf(original),projectReactions(listOf(original,liked,changed,remove),JSONObject()).messages)
+  assertTrue(projectReactions(listOf(original,liked,changed,remove),JSONObject()).emojis.isEmpty())
+  assertEquals(TextReaction("👍","text",true),textReaction(reactionSms("👍","text",true)))
+  assertEquals(TextReaction("‼️","text"),textReaction("Emphasized “text”"))
+  assertEquals(TextReaction("🥰","text"),textReaction("🥰 to \"text\""))
+  assertNull(textReaction("Reacted strongly to “text”"))
+ }
+ @Test fun groupQuotesAndStructuredReactionsShareTheBubbleWithoutDuplicatingTheSender(){
+  val post=Message(1,"Group post",1,true)
+  val carrierReaction=Message(2,"Liked “Group post”",2,false,sender="+1 (555) 555-0101")
+  val group=JSONObject().put("keys",JSONObject().put(post.key,"post"))
+   .put("reactions",JSONObject().put("post",JSONObject().put("You","❤️")))
+  val state=JSONObject().put("messages",JSONObject().put(post.key,JSONObject().put("reaction","❤️")))
+  val view=projectReactions(listOf(post,carrierReaction),state,group)
+  assertEquals(listOf(post),view.messages)
+  assertEquals(setOf("you","5555550101"),view.marks.getValue(post.key).keys)
+  assertEquals(setOf("❤️","👍"),view.emojis.getValue(post.key).toSet())
+  val failed=carrierReaction.copy(id=3,key="sms:3",sent=true,status="Failed")
+  assertTrue(projectReactions(listOf(post,failed),state,group).messages.contains(failed))
+ }
+ @Test fun conversationHeaderResolvesTheStructuredGivenNameFromAnAddress()=runBlocking {
+  val app=ApplicationProvider.getApplicationContext<Application>()
+  Shadows.shadowOf(app).grantPermissions(Manifest.permission.READ_CONTACTS)
+  val contacts=object:ContentProvider(){
+   override fun onCreate()=true
+   override fun query(uri:Uri,projection:Array<out String>?,selection:String?,args:Array<out String>?,sort:String?):Cursor? = when(uri.path){
+    "/phone_lookup/+15555550101" -> MatrixCursor(arrayOf("contact_id")).apply{addRow(arrayOf(42))}
+    "/data" -> MatrixCursor(arrayOf("data2")).apply{assertEquals("42",args?.first());addRow(arrayOf("Mary Jane"))}
+    else -> null
+   }
+   override fun getType(uri:Uri):String?=null
+   override fun insert(uri:Uri,values:ContentValues?):Uri?=null
+   override fun update(uri:Uri,values:ContentValues?,selection:String?,args:Array<out String>?)=0
+   override fun delete(uri:Uri,selection:String?,args:Array<out String>?)=0
+  }
+  contacts.attachInfo(app,ProviderInfo().apply{authority="com.android.contacts"})
+  ShadowContentResolver.registerProviderInternal("com.android.contacts",contacts)
+  val repo=MessageRepository(app)
+  assertEquals("Mary Jane",repo.contactGivenName("+15555550101"))
+  assertNull(repo.contactGivenName("+15555550102"))
+  assertEquals("Jane",firstNameFromDisplayName("Smith, Jane","+15555550101"))
+ }
  class Media:ContentProvider(){
   var parts=0;var lastArgs=listOf<String>()
   override fun onCreate()=true

@@ -34,6 +34,7 @@ import java.text.DateFormat
 import java.util.Date
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.sync.withLock
 import org.json.JSONArray
 import androidx.compose.ui.semantics.semantics
 import androidx.compose.ui.semantics.contentDescription
@@ -72,6 +73,10 @@ fun MessengerPane(
     var address by rememberSaveable { mutableStateOf(group?.address.orEmpty()) }
     var thread by rememberSaveable { mutableLongStateOf(group?.thread ?: 0L) }
     var title by rememberSaveable { mutableStateOf(group?.name.orEmpty()) }
+    var givenName by remember(address) { mutableStateOf<String?>(null) }
+    LaunchedEffect(address) {
+        if (group == null && address.isNotBlank()) givenName = repo.contactGivenName(address)
+    }
     var folder by rememberSaveable { mutableStateOf("Inbox") }
     var search by rememberSaveable { mutableStateOf("") }
     var chatSearch by rememberSaveable { mutableStateOf(false) }
@@ -223,26 +228,22 @@ fun MessengerPane(
             )
         }
     }
-    fun react(m:Message,reaction:String){
-        val flags=state.messageFlags(m)
-        launchJob{
-            val phrase =
-                mapOf(
-                        "❤️" to "Loved ",
-                        "👍" to "Liked ",
-                        "😂" to "Laughed at ",
-                        "😮" to "Was surprised by ",
-                        "😢" to "Was saddened by ",
-                        "🙏" to "Thanked you for ",
-                    )
-                    .getOrElse(reaction){"Reacted $reaction to "}
-            if (group != null) {
-                val target = groupFeed.child("keys").optString(m.key)
-                check(target.isNotEmpty()) { "This post has no unique reaction target in the loaded history." }
-                val wire = groupProtocol.reaction(target, if (flags.optString("reaction") == reaction) "" else reaction)
-                withContext(ChatStore.dispatcher) { MessagingTransport.sendMms(context, group.members, wire, JSONArray()) }
-            } else repo.send(address, phrase + "\"" + m.text + "\"")
-            flag(m, "reaction", if (flags.optString("reaction") == reaction) "" else reaction)
+    val reactionLock = remember { kotlinx.coroutines.sync.Mutex() }
+    fun react(m: Message, reaction: String) {
+        val peer = address
+        val messageThread = thread
+        val groupTarget = groupFeed.child("keys").optString(m.key)
+        launchJob {
+            reactionLock.withLock {
+                val remove = store.snapshot().messageFlags(m).optString("reaction") == reaction
+                if (group != null) {
+                    check(groupTarget.isNotEmpty()) { "This post has no unique reaction target in the loaded history." }
+                    val wire = groupProtocol.reaction(groupTarget, if (remove) "" else reaction)
+                    withContext(ChatStore.dispatcher) { MessagingTransport.sendMms(context, group.members, wire, JSONArray()) }
+                } else repo.send(peer, reactionSms(reaction, m.text, remove))
+                state = store.request(JSONObject().put("action", "message").put("key", m.key)
+                    .put("date", m.date).put("thread", messageThread).put("reaction", if (remove) "" else reaction))
+            }
         }
     }
     LaunchedEffect(intentEpoch) {
@@ -291,7 +292,7 @@ fun MessengerPane(
                     val ids = groupFeed.getJSONArray("visible").let { a -> List(a.length()) { a.getString(it) }.toSet() }
                     messages = loaded.filter { it.key in ids }.map { it.copy(text = groupFeed.child("texts").optString(it.key, it.text)) }
                 } else messages = loaded
-                if(memory.initializedThreads.add(thread))memory.seenReactions.addAll(projectReactions(messages,state,if(group!=null)groupFeed else null).tokens.values)
+                if(memory.initializedThreads.add(thread))memory.seenReactions.putAll(projectReactions(messages,state,if(group!=null)groupFeed else null).marks)
                 if(historyBefore==Long.MAX_VALUE)memory.keep(thread,messages,memory.raw.value)
             }
         } catch (e: Exception) { if (e is CancellationException) throw e;
@@ -328,6 +329,9 @@ fun MessengerPane(
             saveDraft(draftKey, draft, attachments)
         }
     }
+    val reactionView = remember(messages, state, groupFeed) {
+        projectReactions(messages, state, if (group != null) groupFeed else null)
+    }
     DisposableEffect(draftKey) {
         onDispose {
             if (latestLoaded && draftKey != "peer:e3b0c44298fc1c149afbf4c8996fb924")
@@ -339,8 +343,8 @@ fun MessengerPane(
             val newest=messages.lastOrNull()?.date ?: 0L
             val readState=state.thread(thread)
             if(newest>0 && (readState.optBoolean("unread") || readState.optLong("read_at")<newest))repo.markRead(thread)
-            if (messages.isNotEmpty() && search.isEmpty() && focusKey == null) {
-                if(positionedThread!=thread) list.scrollToItem(messages.size)
+            if (reactionView.messages.isNotEmpty() && search.isEmpty() && focusKey == null && panel == "Feed") {
+                if(positionedThread!=thread) list.scrollToItem(reactionView.messages.size)
                 positionedThread=thread
             }
         }
@@ -348,7 +352,7 @@ fun MessengerPane(
     LaunchedEffect(messages, focusKey, focusDate,loadingMessages) {
         val key = focusKey ?: return@LaunchedEffect
         if (address.isBlank() || messages.isEmpty() || loadingMessages) return@LaunchedEffect
-        val index = focusedMessageIndex(messages, key, focusDate)
+        val index = focusedMessageIndex(reactionView.messages, key, focusDate)
         if (index >= 0) {
             list.scrollToItem(index + 1) // The earlier-history control occupies the first item.
             focusKey = null
@@ -390,7 +394,9 @@ fun MessengerPane(
     OnKlavBackground(Modifier.matchParentSize())
     Column(Modifier.fillMaxSize().testTag("messenger-screen")) {
         HomeHeader(
-            if (!isChat) (if(folder=="Inbox") "Messages" else folder) else title,
+            if (!isChat) (if(folder=="Inbox") "Messages" else folder)
+            else if (group != null) title
+            else givenName ?: firstNameFromDisplayName(title, address) ?: address,
             titleAction = if (group != null) ({ membersVisible = true }) else null,
             back = if (isChat) ({ close() }) else null,
         ) {
@@ -534,7 +540,6 @@ fun MessengerPane(
                 Text("Group sending needs verified MMS support. Your draft stays saved.", Modifier.padding(horizontal = 12.dp, vertical = 4.dp), fontSize = 13.sp, color = MaterialTheme.colorScheme.onSurfaceVariant)
             ConversationTabs(panel){panel=it}
 
-            val reactionView=remember(messages,state,groupFeed){projectReactions(messages,state,if(group!=null)groupFeed else null)}
             val visible =
                 reactionView.messages.filter {
                     (panel != "Starred" || state.messageFlags(it).optBoolean("starred")) &&
@@ -621,7 +626,7 @@ fun MessengerPane(
 
                                 }
                             }
-                            ReactionDecoration(reactionView.emojis[m.key].orEmpty(),reactionView.tokens[m.key],memory.seenReactions)
+                            ReactionDecoration(m.key, reactionView.marks[m.key].orEmpty(), memory.seenReactions)
                             }
                         }
                     }

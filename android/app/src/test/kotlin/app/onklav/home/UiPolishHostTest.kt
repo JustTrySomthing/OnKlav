@@ -39,6 +39,30 @@ class UiPolishHostTest {
     }
     private fun pump(){repeat(4){androidx.compose.runtime.snapshots.Snapshot.sendApplyNotifications();compose.mainClock.advanceTimeBy(100);layout()}}
     private fun click(tag:String){compose.onNodeWithTag(tag).performSemanticsAction(androidx.compose.ui.semantics.SemanticsActions.OnClick){it()};pump()}
+    @Test(timeout=60000) fun newReactionAnimatesOnceAndLeavesItsBadge() {
+        compose.mainClock.autoAdvance = false
+        val old = mapOf("you" to ReactionMark("❤️", "own-heart"))
+        var marks by mutableStateOf(old)
+        val seen = mutableMapOf("sms:1" to old)
+        compose.runOnUiThread {
+            compose.activity.setContent { OnKlavTheme { Box(Modifier.fillMaxSize()) {
+                ReactionDecoration("sms:1", marks, seen)
+            } } }
+        }
+        pump()
+        compose.onNodeWithText("❤️").assertExists()
+        compose.runOnUiThread { marks = old + ("peer" to ReactionMark("👍", "sms:2")) }
+        pump()
+        compose.onNodeWithText("❤️ 👍").assertExists()
+        assertTrue(compose.onAllNodesWithText("👍").fetchSemanticsNodes().isNotEmpty())
+        compose.mainClock.advanceTimeBy(4700)
+        pump()
+        compose.onNodeWithText("❤️ 👍").assertExists()
+        compose.onAllNodesWithText("👍").assertCountEquals(0)
+        compose.runOnUiThread { marks = old }
+        pump()
+        compose.onNodeWithText("❤️").assertExists()
+    }
     @Test(timeout=90000) fun pageSlidesFromRightAndRetainsContentUntilExitCompletes(){
         kotlinx.coroutines.runBlocking{AppSdk.bootstrap(compose.activity)}
         compose.mainClock.autoAdvance=false;var route by mutableStateOf<String?>(null)
