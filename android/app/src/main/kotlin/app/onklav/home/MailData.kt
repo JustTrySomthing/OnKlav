@@ -34,6 +34,20 @@ internal data class MailAccount(val id:String=mailId(),val provider:String="Othe
   }
  }
 }
+internal fun updatedMailCredentials(provider: String, saved: JSONObject?, incoming: String, outgoing: String): JSONObject? {
+ if (incoming.isBlank() && outgoing.isBlank() && saved != null) return null
+ require(incoming.isNotBlank() || saved != null) {
+  if (provider in setOf("Gmail", "Yahoo")) "Enter your app password" else "Enter your mail password"
+ }
+ fun password(value: String): String {
+  if (provider != "Gmail") return value
+  val compact = value.filterNot(Char::isWhitespace)
+  return if (compact.matches(Regex("[A-Za-z0-9]{16}"))) compact else value
+ }
+ return JSONObject()
+  .put("password", if (incoming.isBlank()) saved!!.getString("password") else password(incoming))
+  .put("smtpPassword", password(outgoing))
+}
 internal data class MailFolder(val path:String,val name:String,val role:String="",val selectable:Boolean=true){fun json()=JSONObject().put("path",path).put("name",name).put("role",role).put("selectable",selectable);companion object{fun parse(j:JSONObject)=MailFolder(j.getString("path"),j.getString("name"),j.optString("role"),j.optBoolean("selectable",true))}}
 internal data class MailHeader(val account:String,val folder:String,val validity:Long,val uid:Long,val from:String,val to:String,val subject:String,val date:Long,val seen:Boolean,val starred:Boolean,val attachment:Boolean=false,val messageId:String="",val replyTo:String="",val cc:String="",val references:List<String> = emptyList()){
  val key get()="$account:$folder:$validity:$uid"

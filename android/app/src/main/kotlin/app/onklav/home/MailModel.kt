@@ -72,7 +72,10 @@ internal class MailModel @JvmOverloads constructor(app:Application,overrideDisk:
  val visible get()=(onlineResults?:headers).filter{(account.isEmpty()||it.account==account)&&when(tab){"Starred"->it.starred;else->if(account.isEmpty())it.folder.equals("INBOX",true)else mailSameFolder(it.folder,folder)}&&(!unread||!it.seen)&&(query.isBlank()||"${it.from} ${it.to} ${it.subject}".contains(query,true))}.distinctBy{it.key}.sortedByDescending{it.date}
  fun connect(a:MailAccount,password:String,smtpPassword:String="",finished:()->Unit){run("Connecting ${a.email}"){
   a.validate();require(accounts.none{it.id!=a.id&&it.email.equals(a.email,true)}){"This account is already added"};val old=withContext(Dispatchers.IO){disk.read("secret-${a.id}")};var committed=false
-  try{withContext(Dispatchers.IO){netVerify();run{require(password.isNotBlank()||old!=null){"Enter your app password"};if(password.isNotBlank())disk.write("secret-${a.id}",JSONObject().put("password",password).put("smtpPassword",smtpPassword))}}
+  try{withContext(Dispatchers.IO) {
+    netVerify()
+    updatedMailCredentials(a.provider, old, password, smtpPassword)?.let { disk.write("secret-${a.id}", it) }
+   }
    net.test(a);val f=net.folders(a);withContext(Dispatchers.IO){netVerify();disk.saveAccounts(accounts.filter{it.id!=a.id}+a);disk.saveFolders(a.id,f)};committed=true;accounts=accounts.filter{it.id!=a.id}+a;folders=folders+(a.id to f);accountStatus=accountStatus+(a.id to "Connected");status="Connected";finished();settingsChanged()
   }finally{if(!committed)withContext(NonCancellable+Dispatchers.IO){if(old!=null)disk.write("secret-${a.id}",old)else disk.remove("secret-${a.id}")}}
  }}
