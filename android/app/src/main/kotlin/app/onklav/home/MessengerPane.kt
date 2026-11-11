@@ -397,8 +397,10 @@ fun MessengerPane(
             saveDraft(draftKey, draft, attachments)
         }
     }
-    val reactionView = remember(messages, state, groupFeed) {
-        projectReactions(messages, state, if (group != null) groupFeed else null)
+    // AnimatedContent retains its chat content across refreshes. Read the projection
+    // as snapshot state so the retained content observes the newly loaded history.
+    val reactionView by remember(memory, group?.id) {
+        derivedStateOf { projectReactions(messages, state, if (group != null) groupFeed else null) }
     }
     DisposableEffect(draftKey) {
         onDispose {
