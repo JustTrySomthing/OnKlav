@@ -51,7 +51,12 @@ static func valid_rink(rink: Dictionary) -> bool:
 	return float(rink.x) >= -0.1 and float(rink.x) <= 1.1 and float(rink.y) >= -0.1 and float(rink.y) <= 1.1 and absf(rink.vx) <= 2 and absf(rink.vy) <= 2 and rink.player >= 0.1 and rink.player <= 0.9 and rink.opponent >= 0.1 and rink.opponent <= 0.9 and absf(rink.ai_velocity) <= [.24,.38,.52][int(difficulty)] and rink.ai_target >= 0.1 and rink.ai_target <= 0.9 and rink.tick == floor(rink.tick) and rink.ai_hits == floor(rink.ai_hits) and rink.tick >= 0 and rink.tick <= 1000000000 and rink.ai_hits >= 0 and rink.ai_hits <= 10000000
 
 static func save_current(state: RefCounted, rink: Dictionary, path: String = CURRENT) -> Error:
-	if state.phase==MatchState.Phase.FINISHED:return clear(path)
+	if state.phase==MatchState.Phase.FINISHED:
+		var storage=helper()
+		storage.init_storage()
+		# Completion is not Quit. A host tombstone would reject Play Again's next save.
+		if storage.host_storage:return storage.storage_request("save","session",{"game":"ah2","match":state.snapshot()},false)
+		return clear(path)
 	if not MatchState.new().restore(state.snapshot()) or not valid_rink(rink):return ERR_INVALID_DATA
 	return helper().save_match({"schema":"onklav.current_game.v1","game":"ah2","mode":"solo","match":state.snapshot(),"rink":rink},path)
 

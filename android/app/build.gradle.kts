@@ -5,7 +5,7 @@ android {
     namespace="app.onklav.home"
     ndkVersion="27.2.12479018"
     compileSdk=36
-    defaultConfig { applicationId="app.onklav.home.prototype";minSdk=29;targetSdk=36;versionCode=233;versionName="0.101.54-rc1";testInstrumentationRunner="androidx.test.runner.AndroidJUnitRunner";ndk {abiFilters+=onklavAbis} }
+    defaultConfig { applicationId="app.onklav.home.prototype";minSdk=29;targetSdk=36;versionCode=234;versionName="0.101.55-rc1";testInstrumentationRunner="androidx.test.runner.AndroidJUnitRunner";ndk {abiFilters+=onklavAbis} }
     buildFeatures {compose=true;buildConfig=true}
     androidResources { noCompress += "voicepack" }
     compileOptions {sourceCompatibility=JavaVersion.VERSION_17;targetCompatibility=JavaVersion.VERSION_17}

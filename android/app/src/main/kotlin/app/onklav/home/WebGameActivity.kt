@@ -188,7 +188,11 @@ class WebGameActivity : androidx.activity.ComponentActivity() {
         entryDialog?.dismiss();entryDialog=null
         entryView?.let{panel.removeView(it);it.disposeComposition()};entryView=null
         panel.setBackgroundColor(Color.rgb(7,14,24))
-        startGame()
+        try { startGame() }
+        catch(e:Exception) {
+            web?.let(::disposeRenderer)
+            failed("Could not start the game renderer.", "Android WebView startup failed (${e.javaClass.simpleName}).", retry=true)
+        }
     }
     @Suppress("DEPRECATION", "SetJavaScriptEnabled")
     private fun startGame() {
@@ -197,7 +201,7 @@ class WebGameActivity : androidx.activity.ComponentActivity() {
         }
         val view=WebView(this);web=view
         gameReady=false
-        val graphicsMonitor=if(sessionId==GamePackages.LAST_LIGHT_ID) """
+        val graphicsMonitor=if(isIncludedGame()) """
             window.addEventListener('webglcontextlost', function(event) {
                 event.preventDefault();
                 event.stopImmediatePropagation();
@@ -219,27 +223,7 @@ class WebGameActivity : androidx.activity.ComponentActivity() {
             serviceWorkerWebSettings.allowFileAccess=false;serviceWorkerWebSettings.allowContentAccess=false;serviceWorkerWebSettings.blockNetworkLoads=true
             setServiceWorkerClient(object:ServiceWorkerClient(){override fun shouldInterceptRequest(request:WebResourceRequest)=denied()})
         }
-        view.webViewClient=object:WebViewClient() {
-            override fun shouldInterceptRequest(v:WebView,r:WebResourceRequest):WebResourceResponse=resource(r.url,r.method)
-            override fun shouldOverrideUrlLoading(v:WebView,r:WebResourceRequest)=true
-            override fun onPageFinished(v:WebView,url:String){if(web===v){active=true;sendGameAction("host_state");pollTurns()}}
-            override fun onReceivedSslError(v:WebView,h:SslErrorHandler,e:android.net.http.SslError){h.cancel()}
-            override fun onRenderProcessGone(v: WebView, detail: RenderProcessGoneDetail): Boolean {
-                if (web === v) {
-                    rendererWarning?.dismiss()
-                    web = null
-                    panel.removeView(v)
-                    v.destroy()
-                    if (!closing && !isFinishing && !isDestroyed) {
-                        val message = "The game stopped. Your OnKlav apps are still available."
-                        val reason = if (detail.didCrash()) "WebView renderer crashed" else "WebView renderer was terminated"
-                        val phase=if(gameReady) "in game" else "during startup"
-                        failed(message, "$message $reason $phase (priority ${detail.rendererPriorityAtExit()}).", retry = true)
-                    }
-                }
-                return true
-            }
-        }
+        view.webViewClient=gameClient()
         view.webChromeClient=object:WebChromeClient() {
             override fun onConsoleMessage(message:ConsoleMessage):Boolean {
                 if(web!==view || closing)return false
@@ -248,15 +232,8 @@ class WebGameActivity : androidx.activity.ComponentActivity() {
                 when(message.message()) {
                     "ONKLAV_SESSION_READY" -> { gameReady=true;return true }
                     "ONKLAV_GAME_GRAPHICS_LOST" -> {
-                        if(sessionId!=GamePackages.LAST_LIGHT_ID)return false
-                        panel.post {
-                            if(web!==view || closing || isFinishing || isDestroyed)return@post
-                            rendererWarning?.dismiss()
-                            web=null
-                            panel.removeView(view)
-                            view.destroy()
-                            failed("The game lost its graphics connection.", "WebGL context lost. Reopen the last saved checkpoint.", retry=true)
-                        }
+                        if(!isIncludedGame())return false
+                        reportRendererFailure(view,"The game lost its graphics connection.","WebGL context lost. Reopen the last saved checkpoint.")
                         return true
                     }
                     "ONKLAV_GAME_EXIT" -> {
@@ -312,6 +289,51 @@ class WebGameActivity : androidx.activity.ComponentActivity() {
         if(builtin)query.add("game=$builtinId")
         if(fresh)query.add("start=new")
         view.loadUrl(origin+"/web/index.html"+(if(query.isEmpty())""else"?"+query.joinToString("&")))
+    }
+    private fun gameClient()=object:WebViewClient() {
+        override fun shouldInterceptRequest(v:WebView,r:WebResourceRequest):WebResourceResponse=resource(r.url,r.method)
+        override fun shouldOverrideUrlLoading(v:WebView,r:WebResourceRequest)=true
+        override fun onPageFinished(v:WebView,url:String){
+            if(web===v && !closing && GameWebPolicy.path(origin,Uri.parse(url),"GET")=="web/index.html") {
+                active=true;sendGameAction("host_state");pollTurns()
+            }
+        }
+        override fun onReceivedError(v:WebView,request:WebResourceRequest,error:WebResourceError){
+            if(request.isForMainFrame)reportLoadFailure(v,"WebView could not load the game page (error ${error.errorCode}).")
+        }
+        override fun onReceivedHttpError(v:WebView,request:WebResourceRequest,response:WebResourceResponse){
+            if(request.isForMainFrame)reportLoadFailure(v,"The local game page returned HTTP ${response.statusCode}.")
+        }
+        override fun onReceivedSslError(v:WebView,h:SslErrorHandler,e:android.net.http.SslError){h.cancel()}
+        override fun onRenderProcessGone(v: WebView, detail: RenderProcessGoneDetail): Boolean {
+            if (web === v) {
+                disposeRenderer(v)
+                if (!closing && !isFinishing && !isDestroyed) {
+                    val message = "The game stopped. Your OnKlav apps are still available."
+                    val reason = if (detail.didCrash()) "WebView renderer crashed" else "WebView renderer was terminated"
+                    val phase=if(gameReady) "in game" else "during startup"
+                    failed(message, "$message $reason $phase (priority ${detail.rendererPriorityAtExit()}).", retry = true)
+                }
+            }
+            return true
+        }
+    }
+    private fun disposeRenderer(view:WebView) {
+        if(web!==view)return
+        web=null
+        rendererWarning?.dismiss();rendererWarning=null
+        panel.removeView(view)
+        view.destroy()
+    }
+    private fun reportLoadFailure(view:WebView,detail:String) =
+        reportRendererFailure(view,"The game page could not load.",detail)
+    private fun reportRendererFailure(view:WebView,message:String,detail:String) {
+        // Dispose outside the WebView callback, and ignore events from a retired renderer.
+        panel.post {
+            if(web!==view || closing || isFinishing || isDestroyed)return@post
+            disposeRenderer(view)
+            failed(message,detail,retry=true)
+        }
     }
     private fun saveCommand(view:WebView,raw:String) {
         if(raw.length>GameSaveStore.LIMIT+16384 || !::saveStore.isInitialized)return
@@ -392,8 +414,8 @@ class WebGameActivity : androidx.activity.ComponentActivity() {
     }
     // Included games cannot save before their session-ready handshake. A loader
     // that has installed the JS callback must not trap Back or a different Play.
-    private fun canLeaveStartup() = !gameReady &&
-        (sessionId in BUILTINS || sessionId in setOf(GamePackages.SHROOM_ID,GamePackages.LAST_LIGHT_ID))
+    private fun isIncludedGame() = sessionId in BUILTINS || sessionId==GamePackages.SHROOM_ID || sessionId==GamePackages.LAST_LIGHT_ID
+    private fun canLeaveStartup() = !gameReady && isIncludedGame()
     private fun requestReturn() {
         // Back from a native entry/cancel/recovery screen has no running game to save.
         if((web==null && !active)||canLeaveStartup()){closing=true;finish();return}
@@ -403,8 +425,10 @@ class WebGameActivity : androidx.activity.ComponentActivity() {
             if(!supported && !isFinishing && !isDestroyed) {
                 returning=false
                 AlertDialog.Builder(this).setTitle("Return to OnKlav?")
-                    .setMessage("This game has not connected its save controls. Keep it open in the background, or stay here.")
-                    .setNegativeButton("Stay here",null).setPositiveButton("Keep game open"){_,_->returnToOnKlav()}.show()
+                    .setMessage("The game did not respond to the save request. Your last completed save stays available.")
+                    .setNegativeButton("Stay here"){_,_->pendingLaunch=null}
+                    .setOnCancelListener{pendingLaunch=null}
+                    .setPositiveButton("Leave without saving"){_,_->returnToOnKlav()}.show()
             }
         }
         // A failed save must not trap the user or leave the return control latched.
@@ -446,6 +470,8 @@ class WebGameActivity : androidx.activity.ComponentActivity() {
     private fun failed(message: String, report: String = message, retry: Boolean = false) {
         GameSessionStatus.open(this).release(sessionId)
         active=false
+        gameReady=false
+        panel.setBackgroundColor(Color.rgb(7,14,24))
         panel.removeAllViews()
         panel.addView(TextView(this).apply{text=message;setTextColor(Color.WHITE);setPadding(24,24,24,24)})
         if (retry) panel.addView(Button(this).apply {

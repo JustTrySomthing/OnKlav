@@ -16,10 +16,10 @@ func install_game_probe():
 			port.think_time=.1;port.refresh()
 		if command=="complete":
 			match game:
-				"hockey":port.state.phase=2;port.state.scores=[6,4];port.rink.stopped=true
+				"hockey":port.state.phase=1;port.state.scores.assign([5,4]);port.state.goal_order.assign([0,0,0,0,0,1,1,1,1]);port.state.rally=10;port.rink.stopped=true;port.on_point(0)
 				"four":port.model.finished=true;port.model.winner=0;port.model.match_wins=[3,0];port.active={};port.events=[]
 				"blackjack":port.model.finished=true;port.model.hand_over=true;port.model.winner=0;port.model.wins=[6,4];port.model.phase="finished";port.active={};port.events=[];port.view=port.capture()
-				"dominos":port.model.phase="match_over";port.model.match_wins=[3,0];port.model.round_winner=0;port.busy=0;port.feedback_time=0
+				"dominos":port.model.phase="match_over";port.model.scores=[100,0];port.model.winner=0;port.busy=0;port.feedback_time=0
 				"panda":port.model.phase="finished";port.model.completed=true;port.model.stars.resize(12);port.model.stars.fill(2);port.model.world=null
 				"naval":port.model.phase="finished";port.model.winner="you";port.active_event={};port.salvos=[];port.view_delay=0
 			port.refresh()
@@ -39,7 +39,7 @@ func install_game_probe():
 				var point=(transform*(rect.position+Vector2(rect.size.x*(col+.5)/7,rect.size.y*.5)))*factor;points.append([point.x,point.y])
 			state.columns=points
 		elif game=="blackjack":state.finished=port.model.finished;state.round=port.model.round;state.wins=port.model.wins
-		elif game=="dominos":state.phase=port.model.phase;state.wins=port.model.match_wins
+		elif game=="dominos":state.phase=port.model.phase;state.scores=port.model.scores
 		elif game=="panda":state.phase=port.model.phase
 		elif game=="naval":state.phase=port.model.phase
 		JavaScriptBridge.eval("window.gameTestState="+JSON.stringify(state)))

@@ -1,0 +1,14 @@
+{
+  "version": "0.101.55-rc1",
+  "version_code": 234,
+  "size_bytes": 132779796,
+  "sha256": "194857581b7e87ef4eaeab9c044edd31435775ba605e9e260ba721cb80fce873",
+  "signer_matches_previous": true,
+  "zip_alignment_16kb": true,
+  "unchanged_game_and_sdk_assets": 34,
+  "changed_game_assets": [
+    "assets/godot-builtin/index.html",
+    "assets/godot-builtin/index.pck"
+  ],
+  "physical_device_acceptance": false
+}

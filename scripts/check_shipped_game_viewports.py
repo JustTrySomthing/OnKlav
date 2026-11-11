@@ -4,6 +4,18 @@ import argparse, http.server, io, json, tempfile, threading, time, zipfile
 from pathlib import Path
 from playwright.sync_api import sync_playwright
 
+def extract_game_exports(apk_path,root):
+    with zipfile.ZipFile(apk_path) as apk:
+        runtime={Path(n).name:apk.read(n) for n in apk.namelist() if n.startswith('assets/godot-web/') and not n.endswith('/')}
+        builtin={Path(n).name:apk.read(n) for n in apk.namelist() if n.startswith('assets/godot-builtin/') and not n.endswith('/')}
+        packages={'builtin':builtin}
+        for name in ['shroom','last-light']:
+            with zipfile.ZipFile(io.BytesIO(apk.read(f'assets/included-games/{name}.zip'))) as z:
+                packages[name]={Path(n).name:z.read(n) for n in z.namelist() if n.startswith('web/') and not n.endswith('/')}
+        for name,files in packages.items():
+            folder=root/name;folder.mkdir()
+            for filename,data in (runtime|files).items():(folder/filename).write_bytes(data)
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--apk',required=True,type=Path)
@@ -13,16 +25,7 @@ def main():
     rows=[]
     with tempfile.TemporaryDirectory(prefix='onklav-shipped-viewports-') as temp:
         root=Path(temp)
-        with zipfile.ZipFile(args.apk) as apk:
-            runtime={Path(n).name:apk.read(n) for n in apk.namelist() if n.startswith('assets/godot-web/') and not n.endswith('/')}
-            builtin={Path(n).name:apk.read(n) for n in apk.namelist() if n.startswith('assets/godot-builtin/') and not n.endswith('/')}
-            packages={'builtin':builtin}
-            for name in ['shroom','last-light']:
-                with zipfile.ZipFile(io.BytesIO(apk.read(f'assets/included-games/{name}.zip'))) as z:
-                    packages[name]={Path(n).name:z.read(n) for n in z.namelist() if n.startswith('web/') and not n.endswith('/')}
-            for name,files in packages.items():
-                folder=root/name;folder.mkdir()
-                for filename,data in (runtime|files).items():(folder/filename).write_bytes(data)
+        extract_game_exports(args.apk,root)
         class Handler(http.server.SimpleHTTPRequestHandler):
             def __init__(self,*a,**k):super().__init__(*a,directory=str(root),**k)
             def log_message(self,*a):pass

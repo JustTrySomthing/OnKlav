@@ -1,0 +1,61 @@
+{
+  "scope": "Production game scenes with test-only match completion setup. Actual touch replay actions.",
+  "checks": [
+    {
+      "game": "hockey",
+      "viewport": [
+        360,
+        780
+      ],
+      "passed": true
+    },
+    {
+      "game": "hockey",
+      "viewport": [
+        640,
+        360
+      ],
+      "passed": true
+    },
+    {
+      "game": "four",
+      "viewport": [
+        360,
+        780
+      ],
+      "passed": true
+    },
+    {
+      "game": "blackjack",
+      "viewport": [
+        360,
+        780
+      ],
+      "passed": true
+    },
+    {
+      "game": "dominos",
+      "viewport": [
+        360,
+        780
+      ],
+      "passed": true
+    },
+    {
+      "game": "panda",
+      "viewport": [
+        360,
+        780
+      ],
+      "passed": true
+    },
+    {
+      "game": "naval",
+      "viewport": [
+        360,
+        780
+      ],
+      "passed": true
+    }
+  ]
+}

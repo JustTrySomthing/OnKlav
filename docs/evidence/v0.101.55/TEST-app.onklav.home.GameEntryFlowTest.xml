@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.GameEntryFlowTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2026-11-11T02:34:32" hostname="4e6a3c69280b" time="8.656">
+  <properties/>
+  <testcase name="resumeChoiceIsResolvedBeforeLoadingAndOnlyForSelectedGame" classname="app.onklav.home.GameEntryFlowTest" time="3.003"/>
+  <testcase name="explicitResumeBypassesSecondEntryDialog" classname="app.onklav.home.GameEntryFlowTest" time="0.183"/>
+  <testcase name="friendNewRetainsTheHostStorageProtocolWhenSwitchingToSolo" classname="app.onklav.home.GameEntryFlowTest" time="0.149"/>
+  <testcase name="stalledIncludedLoaderCanSwitchGamesWithoutDiscardingSavedProgress" classname="app.onklav.home.GameEntryFlowTest" time="0.165"/>
+  <testcase name="hostRejectsLateSessionSaveAfterAcknowledgedDiscard" classname="app.onklav.home.GameEntryFlowTest" time="0.056"/>
+  <testcase name="mainFrameHttpFailureOffersRetryWithoutChangingSave[29]" classname="app.onklav.home.GameEntryFlowTest" time="0.194"/>
+  <testcase name="mainFrameHttpFailureOffersRetryWithoutChangingSave" classname="app.onklav.home.GameEntryFlowTest" time="3.621"/>
+  <testcase name="noSaveShowsStartBeforeAnyWebViewAndCancelLoadsNothing" classname="app.onklav.home.GameEntryFlowTest" time="0.047"/>
+  <testcase name="retiredFriendIntentCannotSelectPandasFriendSaveSlot" classname="app.onklav.home.GameEntryFlowTest" time="0.053"/>
+  <testcase name="backFromEntryClosesToListWithoutAnySaveWarning" classname="app.onklav.home.GameEntryFlowTest" time="0.048"/>
+  <testcase name="lateNavigationFailureCannotCloseTheReplacementRenderer" classname="app.onklav.home.GameEntryFlowTest" time="0.925"/>
+  <testcase name="completedGameHasNoResumePrompt" classname="app.onklav.home.GameEntryFlowTest" time="0.044"/>
+  <testcase name="gameWindowSupportsThePortraitAndLandscapeOrientationRequests" classname="app.onklav.home.GameEntryFlowTest" time="0.024"/>
+  <testcase name="newChoiceKeepsPreviousSaveUntilStartAndQuitTombstoneOffersOnlyStart" classname="app.onklav.home.GameEntryFlowTest" time="0.099"/>
+  <testcase name="backCanLeaveIncludedLoaderBeforeSessionReady" classname="app.onklav.home.GameEntryFlowTest" time="0.043"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[Invalid ID 0x00000000.
+Invalid ID 0x00000000.
+Invalid ID 0x00000000.
+Invalid ID 0x00000000.
+Invalid ID 0x00000000.
+Invalid ID 0x00000000.
+Invalid ID 0x00000000.
+Invalid ID 0x00000000.
+Invalid ID 0x00000000.
+Invalid ID 0x00000000.
+Invalid ID 0x00000000.
+Invalid ID 0x00000000.
+Invalid ID 0x00000000.
+Invalid ID 0x00000000.
+Invalid ID 0x00000000.
+Invalid ID 0x00000000.
+]]></system-err>
+</testsuite>

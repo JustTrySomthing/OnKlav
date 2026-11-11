@@ -1,0 +1,78 @@
+{
+  "scope": "Unmodified APK exports, Android CSP/bootstrap and simulated save acknowledgements in Chromium; not Android WebView hardware",
+  "checks": [
+    {
+      "game": "hockey",
+      "passed": true,
+      "startup_ready_signal": true,
+      "saved_return": true,
+      "resumed_and_saved_again": true,
+      "shroom_movement_verified": false,
+      "train_intro_play_verified": false
+    },
+    {
+      "game": "four",
+      "passed": true,
+      "startup_ready_signal": true,
+      "saved_return": true,
+      "resumed_and_saved_again": true,
+      "shroom_movement_verified": false,
+      "train_intro_play_verified": false
+    },
+    {
+      "game": "blackjack",
+      "passed": true,
+      "startup_ready_signal": true,
+      "saved_return": true,
+      "resumed_and_saved_again": true,
+      "shroom_movement_verified": false,
+      "train_intro_play_verified": false
+    },
+    {
+      "game": "dominos",
+      "passed": true,
+      "startup_ready_signal": true,
+      "saved_return": true,
+      "resumed_and_saved_again": true,
+      "shroom_movement_verified": false,
+      "train_intro_play_verified": false
+    },
+    {
+      "game": "panda",
+      "passed": true,
+      "startup_ready_signal": true,
+      "saved_return": true,
+      "resumed_and_saved_again": true,
+      "shroom_movement_verified": false,
+      "train_intro_play_verified": false
+    },
+    {
+      "game": "naval",
+      "passed": true,
+      "startup_ready_signal": true,
+      "saved_return": true,
+      "resumed_and_saved_again": true,
+      "shroom_movement_verified": false,
+      "train_intro_play_verified": false
+    },
+    {
+      "game": "shroom",
+      "passed": true,
+      "startup_ready_signal": true,
+      "saved_return": true,
+      "resumed_and_saved_again": true,
+      "shroom_movement_verified": true,
+      "train_intro_play_verified": false
+    },
+    {
+      "game": "last-light",
+      "passed": true,
+      "startup_ready_signal": true,
+      "saved_return": true,
+      "resumed_and_saved_again": true,
+      "shroom_movement_verified": false,
+      "train_intro_play_verified": true
+    }
+  ],
+  "apk_sha256": "194857581b7e87ef4eaeab9c044edd31435775ba605e9e260ba721cb80fce873"
+}

@@ -193,6 +193,8 @@ func _ready() -> void:
 	session.save_failed.connect(func(message:String):
 		rink.set_paused(true);tone.stop();chrome.set_paused(true);save_error.text=message;save_error.show())
 	session.init_storage()
+	# Hockey owns its own session instead of calling the shared attach_session.
+	print("ONKLAV_SESSION_READY")
 	session.resume_check=func(data:Dictionary):return data.match.phase!=MatchState.Phase.FINISHED
 	if Chrome.consume_fresh_start():
 		loaded = true
@@ -245,7 +247,7 @@ func refresh() -> void:
 		result.add_child(label("MATCH COMPLETE", 13))
 		var headline:=label("VICTORY!" if state.scores[0]>state.scores[1] else "RIVAL WINS" if state.scores[0]<state.scores[1] else "MATCH DRAWN",30);headline.add_theme_color_override("font_color",Color("8fddff") if state.scores[0]>=state.scores[1] else Color("ffadc4"));headline.add_theme_color_override("font_shadow_color",Color("020b14"));headline.add_theme_constant_override("shadow_offset_y",3);result.add_child(headline)
 		result.add_child(label("%d  —  %d" % [state.scores[0], state.scores[1]], 32))
-		var again := button("Play Again", show_difficulty)
+		var again := button("Play Again", restart)
 		again.add_theme_stylebox_override("normal", style("7ee9c8", "b2ffdf"))
 		again.add_theme_color_override("font_color", Color("062b26"))
 		result.add_child(again)

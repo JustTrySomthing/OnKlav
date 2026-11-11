@@ -1,0 +1,34 @@
+{
+  "plan": {
+    "sdk_apps": "reuse",
+    "mobile_rust": "reuse",
+    "neural_speech": "reuse",
+    "games": "test/export",
+    "android_tests": "not requested",
+    "variant": "optimized",
+    "abis": [
+      "arm64-v8a"
+    ]
+  },
+  "phases": [
+    {
+      "phase": "shared-game-runtime",
+      "seconds": 148.09,
+      "returncode": 0,
+      "log": "docs/evidence/v0.101.55/shared-game-runtime.log"
+    },
+    {
+      "phase": "assemble-optimized",
+      "seconds": 64.13,
+      "returncode": 0,
+      "log": "docs/evidence/v0.101.55/assemble-optimized.log"
+    },
+    {
+      "phase": "verify-optimized",
+      "seconds": 3.12,
+      "returncode": 0,
+      "log": "docs/evidence/v0.101.55/verify-optimized.log"
+    }
+  ],
+  "status": "passed"
+}

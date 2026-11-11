@@ -4,5 +4,5 @@ ONKLAV_SESSION_READY
 ONKLAV_SESSION_READY
 ONKLAV_SESSION_READY
 GAME_SESSION_RESULT checks=31 failures=0
-WARNING: 7 ObjectDB instances were leaked at exit (run with `--verbose` for details).
+WARNING: 4 ObjectDB instances were leaked at exit (run with `--verbose` for details).
    at: cleanup (core/object/object.cpp:2536)

@@ -3,7 +3,11 @@ package app.onklav.home
 import android.app.AlertDialog
 import android.content.Intent
 import android.os.Looper
-import android.webkit.WebView
+import android.webkit.*
+import android.net.Uri
+import android.widget.Button
+import android.widget.LinearLayout
+import java.io.ByteArrayInputStream
 import org.json.JSONObject
 import org.junit.Assert.*
 import org.junit.Test
@@ -25,6 +29,52 @@ class GameEntryFlowTest {
         (field("worker").get(c.get()) as ExecutorService).submit{}.get(10,TimeUnit.SECONDS)
         Shadows.shadowOf(Looper.getMainLooper()).idle()
         return c
+    }
+    private fun client(a:WebGameActivity)=WebGameActivity::class.java.getDeclaredMethod("gameClient")
+        .apply{isAccessible=true}.invoke(a) as WebViewClient
+    private fun request(main:Boolean)=object:WebResourceRequest {
+        override fun getUrl()=Uri.parse("https://builtin.onklav.invalid/web/"+if(main)"index.html"else"missing.png")
+        override fun isForMainFrame()=main
+        override fun isRedirect()=false
+        override fun hasGesture()=false
+        override fun getMethod()="GET"
+        override fun getRequestHeaders():Map<String,String> = emptyMap()
+    }
+    private fun panel(a:WebGameActivity)=field("panel").get(a) as LinearLayout
+    private fun renderer(a:WebGameActivity):WebView {
+        (field("entryDialog").get(a) as? AlertDialog)?.dismiss()
+        val view=WebView(a);panel(a).addView(view);field("web").set(a,view);return view
+    }
+    @Test @Config(sdk=[29,35]) fun mainFrameHttpFailureOffersRetryWithoutChangingSave() {
+        val saved=store("hockey");saved.commit(saved.begin(),"resume",JSONObject().put("score",3),1,true)
+        val c=ready("hockey").visible();val a=c.get();val view=renderer(a);val callback=client(a)
+        val blocked=WebResourceResponse("text/plain","UTF-8",403,"Blocked",emptyMap(),ByteArrayInputStream(byteArrayOf()))
+        callback.onReceivedHttpError(view,request(false),blocked)
+        Shadows.shadowOf(Looper.getMainLooper()).idle()
+        assertSame("An optional resource error must not close the game",view,field("web").get(a))
+        callback.onReceivedHttpError(view,request(true),blocked)
+        Shadows.shadowOf(Looper.getMainLooper()).idle()
+        assertNull(field("web").get(a));assertFalse(field("active").getBoolean(a))
+        assertEquals(3,saved.load("resume").getJSONObject("record").getJSONObject("state").getInt("score"))
+        val retry=(0 until panel(a).childCount).map{panel(a).getChildAt(it)}.filterIsInstance<Button>().single{it.text=="Try again"}
+        retry.performClick()
+        assertEquals("hockey",Shadows.shadowOf(a).nextStartedActivity.getStringExtra("game"))
+        c.pause().stop().destroy()
+    }
+    @Test fun lateNavigationFailureCannotCloseTheReplacementRenderer() {
+        val c=ready("panda").visible();val a=c.get();val retired=renderer(a);val callback=client(a)
+        val error=WebResourceResponse("text/plain","UTF-8",404,"Not found",emptyMap(),ByteArrayInputStream(byteArrayOf()))
+        callback.onReceivedHttpError(retired,request(true),error)
+        panel(a).removeView(retired);retired.destroy()
+        val current=renderer(a)
+        Shadows.shadowOf(Looper.getMainLooper()).idle()
+        assertSame(current,field("web").get(a))
+        callback.onPageFinished(current,"about:blank")
+        assertFalse("A blank page must not activate the game",field("active").getBoolean(a))
+        callback.onReceivedHttpError(current,request(true),error)
+        Shadows.shadowOf(Looper.getMainLooper()).idle()
+        assertNull(field("web").get(a));assertFalse(field("active").getBoolean(a))
+        c.pause().stop().destroy()
     }
     @Test fun stalledIncludedLoaderCanSwitchGamesWithoutDiscardingSavedProgress() {
         val saved=store("panda");saved.commit(saved.begin(),"resume",JSONObject().put("level",4),1,true)

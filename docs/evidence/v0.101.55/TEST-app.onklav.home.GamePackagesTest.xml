@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.GamePackagesTest" tests="10" skipped="0" failures="0" errors="0" timestamp="2026-11-11T02:34:41" hostname="4e6a3c69280b" time="2.27">
+  <properties/>
+  <testcase name="updatesRejectWrongPublisherRollbackAndSameVersionChangedContent" classname="app.onklav.home.GamePackagesTest" time="1.841"/>
+  <testcase name="signedSmsModesRequireTurnBasedProfile" classname="app.onklav.home.GamePackagesTest" time="0.048"/>
+  <testcase name="includedShroomKeepsOriginalSaveOriginAndLandscape" classname="app.onklav.home.GamePackagesTest" time="0.12"/>
+  <testcase name="rejectsTraversalAndSharedEngineReplacementEvenWhenPublisherSignsThem" classname="app.onklav.home.GamePackagesTest" time="0.042"/>
+  <testcase name="userCanInstallWithoutOwnerApprovalAndRemoveWithoutErasingPublisherIdentity" classname="app.onklav.home.GamePackagesTest" time="0.038"/>
+  <testcase name="installsRealPythonSignedGodotExportWithTheProductionEngineContract" classname="app.onklav.home.GamePackagesTest" time="0.032"/>
+  <testcase name="changedStoredPackageFailsLaunchAndCannotExposeFilesystemPaths" classname="app.onklav.home.GamePackagesTest" time="0.032"/>
+  <testcase name="omittedModesRemainSinglePlayerButMalformedSignedModesAreRejected" classname="app.onklav.home.GamePackagesTest" time="0.035"/>
+  <testcase name="oldSignedPackageKeepsItsBundleAndSaveOwnerAfterPrimaryChanges" classname="app.onklav.home.GamePackagesTest" time="0.034"/>
+  <testcase name="includedShroomIgnoresOldVisibilityFlag" classname="app.onklav.home.GamePackagesTest" time="0.046"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

@@ -1,0 +1,26 @@
+[
+  {
+    "game": "hockey",
+    "viewport": [
+      360,
+      780
+    ],
+    "direct_result_replay": true,
+    "no_entry_or_help_dialog": true,
+    "save_acknowledged": true,
+    "touch_paddle": true,
+    "opening_AI_blocks": false
+  },
+  {
+    "game": "hockey",
+    "viewport": [
+      640,
+      360
+    ],
+    "direct_result_replay": true,
+    "no_entry_or_help_dialog": true,
+    "save_acknowledged": true,
+    "touch_paddle": true,
+    "opening_AI_blocks": false
+  }
+]

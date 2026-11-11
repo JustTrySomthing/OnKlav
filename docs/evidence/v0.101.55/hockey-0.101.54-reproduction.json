@@ -1,0 +1,14 @@
+{
+  "scope": "Unmodified APK exports, Android CSP/bootstrap and simulated save acknowledgements in Chromium; not Android WebView hardware",
+  "checks": [
+    {
+      "game": "hockey",
+      "passed": true,
+      "startup_ready_signal": false,
+      "saved_return": true,
+      "resumed_and_saved_again": true,
+      "shroom_movement_verified": false,
+      "train_intro_play_verified": false
+    }
+  ]
+}

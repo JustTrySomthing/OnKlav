@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.GameSaveStoreTest" tests="8" skipped="0" failures="0" errors="0" timestamp="2026-11-11T02:34:44" hostname="4e6a3c69280b" time="2.211">
+  <properties/>
+  <testcase name="invalidOrOversizedNewGamePreservesPreviousSave" classname="app.onklav.home.GameSaveStoreTest" time="1.932"/>
+  <testcase name="rebootPreservesDataAndTerminalProgressIsDistinctFromResumability" classname="app.onklav.home.GameSaveStoreTest" time="0.049"/>
+  <testcase name="slotNamesCannotEscapePrivateStorage" classname="app.onklav.home.GameSaveStoreTest" time="0.047"/>
+  <testcase name="diskFailureKeepsOldCheckpoint" classname="app.onklav.home.GameSaveStoreTest" time="0.043"/>
+  <testcase name="obsoleteRendererCannotOverwriteNewSession" classname="app.onklav.home.GameSaveStoreTest" time="0.037"/>
+  <testcase name="corruptPrimaryIsReportedAndPreviousCopyRetained" classname="app.onklav.home.GameSaveStoreTest" time="0.038"/>
+  <testcase name="everyGameAndPublisherHasItsOwnCartridge" classname="app.onklav.home.GameSaveStoreTest" time="0.029"/>
+  <testcase name="profileAndFriendSessionSurviveClearingSolo" classname="app.onklav.home.GameSaveStoreTest" time="0.034"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
