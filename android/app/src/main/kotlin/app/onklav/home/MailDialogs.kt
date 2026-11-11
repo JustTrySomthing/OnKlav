@@ -43,7 +43,7 @@ import androidx.compose.ui.unit.dp
    if (savePreferences) {
     m.updateAccount(a, onClose)
    } else if (password.isBlank() && !existing) {
-    error = if (MailSetup.requiresAppPassword(a.provider)) "Enter your app password." else "Enter your mail password."
+    error = if (a.provider == "GMX" || MailSetup.requiresAppPassword(a.provider)) "Enter your app password." else "Enter your mail password."
    } else {
     m.connect(a, password, smtpPassword, onClose)
    }
@@ -99,7 +99,7 @@ import androidx.compose.ui.unit.dp
    }
   }
   Text(when (a.provider) {
-   "GMX" -> "Enable POP3 & IMAP in GMX. If GMX rejects your regular password, try a GMX app password. GMX may require one even with two-factor authentication off."
+   "GMX" -> "Enable POP3 & IMAP in GMX. Enter the app password you create in GMX Security Options."
    "Gmail" -> "Enter a Google app password from your Google Account settings."
    "Yahoo" -> "Enter an app password from Yahoo Account Security."
    else -> "Use the secure IMAP and SMTP settings and credentials from your mail host."
@@ -110,11 +110,12 @@ import androidx.compose.ui.unit.dp
    value = password,
    onValueChange = { password = it; clearError() },
    label = { Text(when {
+    a.provider == "GMX" -> if (existing) "New GMX app password (optional)" else "GMX app password"
     existing -> "New password (optional)"
     MailSetup.requiresAppPassword(a.provider) -> "App password"
-    a.provider == "GMX" -> "GMX password or app password"
     else -> "Password"
    }) },
+   supportingText = if (a.provider == "GMX") ({ Text("Use the generated app password, not your regular GMX password.") }) else null,
    visualTransformation = if (showPassword) VisualTransformation.None else PasswordVisualTransformation(),
    keyboardOptions = KeyboardOptions(autoCorrectEnabled = false, keyboardType = KeyboardType.Password),
    singleLine = true,

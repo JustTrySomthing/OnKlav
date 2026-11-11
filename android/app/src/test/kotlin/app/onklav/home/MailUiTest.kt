@@ -1,6 +1,9 @@
 package app.onklav.home
 import androidx.activity.compose.setContent
 import androidx.compose.runtime.snapshots.Snapshot
+import android.graphics.drawable.GradientDrawable
+import android.view.View
+import android.view.ViewGroup
 import androidx.compose.ui.semantics.*
 import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.test.junit4.createAndroidComposeRule
@@ -52,6 +55,17 @@ val n=nodes().last{it.config.contains(SemanticsActions.SetText)&&contains(it)};a
   click("Folders",true);assertTrue(nodes().any{text(it,"Projects")});click("Done")
   click("Email settings",true);click("Filters");click("Add filter");input("Name","Orders");input("Contains","shop@example.org");click("Save filter");waitFor{m.rules.size==1};assertEquals("shop@example.org",m.rules.single().contains);click("Done")
   click("A weekend together");waitFor{m.body!=null};click("Reply all");waitFor{m.draft!=null};assertEquals("Alice <alice@example.org>",m.draft!!.to);assertFalse(m.draft!!.cc.contains(a.email));assertTrue(nodes().any{desc(it,"Send email")});capture("email-compose")
+  compose.runOnUiThread {
+   fun editorIn(view: View): WriteNativeEditor? = when (view) {
+    is WriteNativeEditor -> view
+    is ViewGroup -> (0 until view.childCount).firstNotNullOfOrNull { editorIn(view.getChildAt(it)) }
+    else -> null
+   }
+   val editor = requireNotNull(editorIn(compose.activity.window.decorView))
+   val cursor = editor.textCursorDrawable as GradientDrawable
+   assertEquals(editor.currentTextColor, cursor.color!!.defaultColor)
+   assertTrue(cursor.intrinsicWidth >= 2)
+  }
   click("Save draft and close",true);waitFor{m.draft==null&&!m.busy};click("Drafts");assertTrue(nodes().any{text(it,"Re: A weekend together")});assertEquals(1,disk.drafts().size)
   val saved=disk.drafts().single()
   compose.runOnUiThread{m.editDraft(saved);m.changeDraft(saved.copy(subject="Uncommitted edit"))}

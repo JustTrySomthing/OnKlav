@@ -1,5 +1,6 @@
 package app.onklav.home
 
+import android.graphics.drawable.GradientDrawable
 import androidx.compose.foundation.*
 import androidx.compose.foundation.layout.*
 import androidx.compose.foundation.shape.CircleShape
@@ -10,11 +11,20 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.*
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.toArgb
+import androidx.compose.ui.platform.LocalDensity
 import androidx.compose.ui.semantics.*
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.viewinterop.AndroidView
 
 @Composable internal fun MailCompose(m:MailModel,onAttach:()->Unit,onSend:()->Unit,onDelete:()->Unit){val d=m.draft?:return;val colors=MaterialTheme.colorScheme;var editor by remember(d.id){mutableStateOf<WriteNativeEditor?>(null)};var cc by remember(d.id){mutableStateOf(d.cc.isNotBlank()||d.bcc.isNotBlank())};var from by remember{mutableStateOf(false)};var palette by remember{mutableStateOf<String?>(null)};var link by remember{mutableStateOf(false)};var url by remember{mutableStateOf("")};var copy by remember{mutableStateOf(false)};var selection by remember{mutableIntStateOf(0)};val editable=d.phase=="draft"
+ val density = LocalDensity.current
+ val cursorColor = colors.onSurface.toArgb()
+ val cursor = remember(cursorColor, density) {
+  GradientDrawable().apply {
+   setColor(cursorColor)
+   setSize(with(density) { 2.dp.roundToPx() }, with(density) { 24.dp.roundToPx() })
+  }
+ }
  fun format(kind:String,value:String?="1"){editor?.let{e->val active=WriteFormatting.active(e.editableText,e.selectionStart,e.selectionEnd,kind);e.format(kind,if(active&&kind in listOf("bold","italic","underline","strike"))null else value);selection++}}
  BoxWithConstraints(Modifier.fillMaxSize()){val bodyHeight=(maxHeight-240.dp).coerceIn(180.dp,420.dp);Column(Modifier.fillMaxSize()){
   Row(Modifier.fillMaxWidth(),verticalAlignment=Alignment.CenterVertically){app.onklav.shared.ClosePageButton(enabled=!m.busy,description=if(editable)"Save draft and close"else"Close draft",onClick=m::closeDraft);Spacer(Modifier.weight(1f));IconButton(onClick=onDelete,enabled=!m.busy){Icon(Icons.Outlined.Delete,"Delete local draft")};IconButton(onClick=onAttach,enabled=editable&&!m.busy){Icon(Icons.Outlined.AttachFile,"Attach files")};FilledTonalButton(onClick=onSend,enabled=editable&&!m.busy&&runCatching{MailMime.addresses(d.to).isNotEmpty()}.getOrDefault(false),modifier=Modifier.semantics{contentDescription="Send email"},contentPadding=PaddingValues(horizontal=12.dp)){Icon(Icons.Outlined.Send,null,Modifier.size(18.dp));Spacer(Modifier.width(6.dp));Text("Send")}}
@@ -30,7 +40,7 @@ import androidx.compose.ui.viewinterop.AndroidView
    if(cc){MailRecipientField("Cc",d.cc,m,editable&&!m.busy){m.changeDraft(d.copy(cc=it))};MailRecipientField("Bcc",d.bcc,m,editable&&!m.busy){m.changeDraft(d.copy(bcc=it))}}
    MailField("Subject",d.subject,editable&&!m.busy){m.changeDraft(d.copy(subject=it.take(998)))}
    Surface(shape=MaterialTheme.shapes.medium,color=colors.surfaceContainerLow,modifier=Modifier.fillMaxWidth()){
-    AndroidView(factory={ctx->WriteNativeEditor(ctx,MAIL_APP).apply{hint="Write your message…";load(d.doc,0,0,0);editor=this}},update={e->editor=e;e.isEnabled=editable&&!m.busy;e.setTextColor(colors.onSurface.toArgb());e.setHintTextColor(colors.onSurfaceVariant.toArgb());e.setLinkTextColor(colors.primary.toArgb());e.setTextSize(android.util.TypedValue.COMPLEX_UNIT_SP,16f);if(e.documentId!=d.doc.id)e.load(d.doc,0,0,0);e.changed={text,_->m.draft?.let{live->m.changeDraft(live.copy(doc=WriteDocument.capture(live.doc.id,"Email",text)))}};e.selected={_,_->selection++}},modifier=Modifier.fillMaxWidth().height(bodyHeight).semantics{contentDescription="Email message body"})
+    AndroidView(factory={ctx->WriteNativeEditor(ctx,MAIL_APP).apply{hint="Write your message…";load(d.doc,0,0,0);editor=this}},update={e->editor=e;e.isEnabled=editable&&!m.busy;if(e.textCursorDrawable !== cursor)e.textCursorDrawable=cursor;e.setTextColor(cursorColor);e.setHintTextColor(colors.onSurfaceVariant.toArgb());e.setLinkTextColor(colors.primary.toArgb());e.setTextSize(android.util.TypedValue.COMPLEX_UNIT_SP,16f);if(e.documentId!=d.doc.id)e.load(d.doc,0,0,0);e.changed={text,_->m.draft?.let{live->m.changeDraft(live.copy(doc=WriteDocument.capture(live.doc.id,"Email",text)))}};e.selected={_,_->selection++}},modifier=Modifier.fillMaxWidth().height(bodyHeight).semantics{contentDescription="Email message body"})
    }
    d.files.forEach{f->Row(Modifier.fillMaxWidth(),verticalAlignment=Alignment.CenterVertically){Icon(Icons.Outlined.AttachFile,null);Column(Modifier.weight(1f).padding(8.dp)){Text(f.name,style=MaterialTheme.typography.bodyMedium);Text(mailSize(f.size),style=MaterialTheme.typography.labelSmall,color=colors.onSurfaceVariant)};if(editable)IconButton(onClick={m.removeAttachment(f)},enabled=!m.busy){Icon(Icons.Outlined.Close,"Remove ${f.name}")}}}
    Spacer(Modifier.height(16.dp))
