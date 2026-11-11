@@ -15,6 +15,7 @@ import org.robolectric.annotation.*
 @RunWith(RobolectricTestRunner::class) @Config(sdk=[29],qualifiers="w432dp-h936dp-mdpi") @GraphicsMode(GraphicsMode.Mode.NATIVE) @LooperMode(LooperMode.Mode.PAUSED)
 class MailUiTest{
  @get:Rule val compose=createAndroidComposeRule<androidx.activity.ComponentActivity>()
+    private var viewportHeight = 936
     private fun roots():List<Any>{
         val env=compose.javaClass.getDeclaredField("environment").apply{isAccessible=true}.get(compose)
         val registry=requireNotNull(env.javaClass.superclass).getDeclaredField("composeRootRegistry").apply{isAccessible=true}.get(env)
@@ -26,7 +27,7 @@ class MailUiTest{
         Snapshot.sendApplyNotifications();compose.mainClock.advanceTimeBy(32)
         org.robolectric.Shadows.shadowOf(android.os.Looper.getMainLooper()).idleFor(java.time.Duration.ofMillis(16))
         compose.runOnUiThread{roots().forEach{root->val view=root.javaClass.getMethod("getView").invoke(root) as android.view.View
-            val decor=view.rootView;decor.forceLayout();decor.measure(android.view.View.MeasureSpec.makeMeasureSpec(432,android.view.View.MeasureSpec.EXACTLY),android.view.View.MeasureSpec.makeMeasureSpec(936,android.view.View.MeasureSpec.AT_MOST));decor.layout(0,0,decor.measuredWidth,decor.measuredHeight);root.javaClass.getMethod("measureAndLayoutForTest").invoke(root)}}
+            val decor=view.rootView;decor.forceLayout();decor.measure(android.view.View.MeasureSpec.makeMeasureSpec(432,android.view.View.MeasureSpec.EXACTLY),android.view.View.MeasureSpec.makeMeasureSpec(viewportHeight,android.view.View.MeasureSpec.AT_MOST));decor.layout(0,0,decor.measuredWidth,decor.measuredHeight);root.javaClass.getMethod("measureAndLayoutForTest").invoke(root)}}
     }}
     private fun nodes():List<SemanticsNode>{val all=mutableListOf<SemanticsNode>();compose.runOnUiThread{
         fun walk(n:SemanticsNode){all.add(n);n.children.forEach(::walk)}
@@ -51,7 +52,7 @@ val n=nodes().last{it.config.contains(SemanticsActions.SetText)&&contains(it)};a
   click("Folders",true);assertTrue(nodes().any{text(it,"Projects")});click("Done")
   click("Email settings",true);click("Filters");click("Add filter");input("Name","Orders");input("Contains","shop@example.org");click("Save filter");waitFor{m.rules.size==1};assertEquals("shop@example.org",m.rules.single().contains);click("Done")
   click("A weekend together");waitFor{m.body!=null};click("Reply all");waitFor{m.draft!=null};assertEquals("Alice <alice@example.org>",m.draft!!.to);assertFalse(m.draft!!.cc.contains(a.email));assertTrue(nodes().any{desc(it,"Send email")});capture("email-compose")
-  click("Save draft");waitFor{m.draft==null&&!m.busy};click("Drafts");assertTrue(nodes().any{text(it,"Re: A weekend together")});assertEquals(1,disk.drafts().size)
+  click("Save draft and close",true);waitFor{m.draft==null&&!m.busy};click("Drafts");assertTrue(nodes().any{text(it,"Re: A weekend together")});assertEquals(1,disk.drafts().size)
   val saved=disk.drafts().single()
   compose.runOnUiThread{m.editDraft(saved);m.changeDraft(saved.copy(subject="Uncommitted edit"))}
   AppSdk.sync(app,org.json.JSONObject().put("action","permissions").put("id",MAIL_APP).put("grants",org.json.JSONArray()))
@@ -61,13 +62,33 @@ val n=nodes().last{it.config.contains(SemanticsActions.SetText)&&contains(it)};a
  @Test(timeout=90000) fun yahooAndBlankPrivateDomainFields(){
   val app=compose.activity.application;runBlocking{AppSdk.bootstrap(app)};val disk=MailDisk(app,MailTestKeys());val m=MailModel(app,disk,allowNetwork=false);val initial=MailAccount.preset("Yahoo")
   org.robolectric.shadows.ShadowChoreographer.setPaused(true);compose.mainClock.autoAdvance=false
-  compose.runOnUiThread{compose.activity.setContent{OnKlavTheme{MailAccountDialog(initial,m,{},{})}}}
+  var closed = false
+  compose.runOnUiThread{compose.activity.setContent{OnKlavTheme{MailAccountDialog(initial,m,{closed = true},{})}}}
   waitFor{!m.busy&&nodes().any{text(it,"Setup directions")}}
-  assertTrue(nodes().any{text(it,"GMX")});click("Setup directions");assertTrue(nodes().any{text(it,"Connect Yahoo")});click("Done")
+  assertTrue(nodes().any{text(it,"GMX")});click("Setup directions");assertTrue(nodes().any{text(it,"Connect Yahoo")});click("Close setup directions",true)
+  assertFalse(nodes().any{text(it,"Done")})
+  assertTrue(nodes().any{desc(it,"Close email setup")})
+  input("Email address","owner@yahoo.com")
+  input("App password","fixture-password")
+  click("Connect account")
+  waitFor{m.error && nodes().any{text(it,"Offline")}}
+  assertTrue(nodes().any{it.config.getOrNull(SemanticsProperties.EditableText)?.text=="owner@yahoo.com"})
+  assertFalse(closed)
   click("Server settings");assertTrue(nodes().any{it.config.getOrNull(SemanticsProperties.EditableText)?.text=="imap.mail.yahoo.com"});assertTrue(nodes().any{it.config.getOrNull(SemanticsProperties.EditableText)?.text=="smtp.mail.yahoo.com"})
   click("Private domain")
-  fun label(n:SemanticsNode):Boolean=text(n,"Server")||n.children.any{label(it)}
-  val servers=nodes().filter{it.config.contains(SemanticsActions.SetText)&&label(it)};assertEquals(2,servers.size);assertTrue(servers.all{it.config[SemanticsProperties.EditableText].text.isEmpty()});assertTrue(nodes().any{text(it,"Connect account")});compose.runOnUiThread{m.cancel()}
+  fun label(n:SemanticsNode):Boolean=text(n,"Incoming server")||text(n,"Outgoing server")||n.children.any{label(it)}
+  val servers=nodes().filter{it.config.contains(SemanticsActions.SetText)&&label(it)}
+  assertEquals(2,servers.size)
+  assertTrue(servers.all{it.config[SemanticsProperties.EditableText].text.isEmpty()})
+  viewportHeight = 390
+  pump()
+  val connect = nodes().first { text(it, "Connect account") }.boundsInRoot
+  assertTrue(connect.height > 0 && connect.bottom <= viewportHeight)
+  assertTrue(nodes().any{it.config.getOrNull(SemanticsProperties.EditableText)?.text=="owner@yahoo.com"})
+  assertFalse(closed)
+  click("Close email setup", true)
+  assertTrue(closed)
+  compose.runOnUiThread{m.cancel()}
  }
 
  @Test(timeout=60000) fun yahooAndGoogleFormsUseOnlyAppPasswords(){
@@ -76,8 +97,8 @@ val n=nodes().last{it.config.contains(SemanticsActions.SetText)&&contains(it)};a
   compose.runOnUiThread{compose.activity.setContent{OnKlavTheme{MailAccountDialog(MailAccount.preset("Gmail"),m,{},{})}}}
   waitFor{!m.busy&&nodes().any{text(it,"Setup directions")}}
   assertFalse(nodes().any{text(it,"Google sign-in")||text(it,"Connect with Google")});assertTrue(nodes().any{text(it,"App password")})
-  click("Setup directions");assertTrue(nodes().any{text(it,"Connect Google")});click("Done");click("Yahoo")
-  assertTrue(nodes().any{text(it,"App password")});click("Setup directions");assertTrue(nodes().any{text(it,"Connect Yahoo")});click("Done");compose.runOnUiThread{m.cancel()}
+  click("Setup directions");assertTrue(nodes().any{text(it,"Connect Google")});click("Close setup directions",true);click("Yahoo")
+  assertTrue(nodes().any{text(it,"App password")});click("Setup directions");assertTrue(nodes().any{text(it,"Connect Yahoo")});click("Close setup directions",true);compose.runOnUiThread{m.cancel()}
  }
 
 }

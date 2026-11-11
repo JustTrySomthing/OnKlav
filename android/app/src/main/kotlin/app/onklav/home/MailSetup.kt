@@ -8,7 +8,11 @@ import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.outlined.Email
 import androidx.compose.material3.*
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.window.Dialog
+import androidx.compose.ui.window.DialogProperties
+import app.onklav.shared.ClosePageButton
 import androidx.compose.ui.unit.dp
 
 /** Enrollment options only; historical accounts remain parseable and manageable. */
@@ -53,14 +57,47 @@ internal object MailSetup {
   }
  }
 }
+@Composable internal fun MailSetupPage(
+ title: String,
+ closeLabel: String,
+ onClose: () -> Unit,
+ closeEnabled: Boolean = true,
+ footer: (@Composable ColumnScope.() -> Unit)? = null,
+ content: @Composable ColumnScope.() -> Unit,
+) {
+ Dialog(
+  onDismissRequest = {},
+  properties = DialogProperties(dismissOnBackPress = false, dismissOnClickOutside = false,
+   usePlatformDefaultWidth = false, decorFitsSystemWindows = false),
+ ) {
+  Surface(Modifier.fillMaxSize(), color = MaterialTheme.colorScheme.surface) {
+   Column(Modifier.fillMaxSize().safeDrawingPadding().imePadding(), horizontalAlignment = Alignment.CenterHorizontally) {
+    Row(Modifier.widthIn(max = 560.dp).fillMaxWidth().padding(start = 20.dp, end = 8.dp),
+     verticalAlignment = Alignment.CenterVertically) {
+     Text(title, Modifier.weight(1f), style = MaterialTheme.typography.titleLarge)
+     ClosePageButton(enabled = closeEnabled, description = closeLabel, onClick = onClose)
+    }
+    HorizontalDivider()
+    Column(Modifier.weight(1f).widthIn(max = 560.dp).fillMaxWidth()
+     .verticalScroll(rememberScrollState()).padding(horizontal = 20.dp, vertical = 16.dp),
+     verticalArrangement = Arrangement.spacedBy(12.dp), content = content)
+    if (footer != null) {
+     HorizontalDivider()
+     Column(Modifier.widthIn(max = 560.dp).fillMaxWidth().padding(horizontal = 20.dp, vertical = 8.dp),
+      verticalArrangement = Arrangement.spacedBy(6.dp), content = footer)
+    }
+   }
+  }
+ }
+}
+
 @Composable internal fun MailAppPasswordDirections(provider:String,close:()->Unit,web:(String)->Unit,email:String=""){
  fun open(url: String) { close(); web(url) }
- AlertDialog(onDismissRequest=close,title={Text("Connect ${MailSetup.label(provider)}")},text={Column(Modifier.heightIn(max=420.dp).verticalScroll(rememberScrollState()),verticalArrangement=Arrangement.spacedBy(12.dp)){
+ MailSetupPage("Connect ${MailSetup.label(provider)}", "Close setup directions", close) {
   Text(MailSetup.passwordSteps(provider))
-  Text("Account settings open in your browser. Return to OnKlav when you’re ready to connect.",
-      style = MaterialTheme.typography.bodySmall)
   if (provider == "GMX") TextButton(onClick = { open(MailSetup.gmxImapHelp) }) { Text("How to enable IMAP") }
   TextButton(onClick={open(MailSetup.passwordHelp(provider))}){Text("App password instructions")}
   TextButton(onClick={open(MailSetup.accountSettings(provider, email))}){Text("Open account settings")}
- }},confirmButton={TextButton(onClick=close){Text("Done")}})
+  if (provider == "GMX") TextButton(onClick = { open(MailSetup.gmxSignup) }) { Text("Create a GMX account") }
+ }
 }

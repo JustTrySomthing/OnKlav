@@ -16,6 +16,27 @@ import javax.mail.Message as EmailMessage
 import javax.mail.internet.*
 import javax.mail.search.*
 
+internal class MailSetupSignInRejected(provider: String, outgoing: Boolean, cause: AuthenticationFailedException) :
+ IllegalStateException(message(provider, outgoing), cause) {
+ companion object {
+  private fun message(provider: String, outgoing: Boolean): String {
+   val service = if (outgoing) "Outgoing mail (SMTP)" else "Incoming mail (IMAP)"
+   val username = if (outgoing) "outgoing username" else "incoming username"
+   val help = when (provider) {
+    "GMX" -> if (outgoing) {
+     "Check your full GMX email address and outgoing password in Server settings."
+    } else {
+     "Check your full GMX address and GMX password. If you use two-factor authentication, use an app password. Sign in on GMX’s website to check POP3 & IMAP access and account alerts."
+    }
+    "Gmail" -> "Use your full Google email address and a Google app password."
+    "Yahoo" -> "Use your full Yahoo email address and a Yahoo app password."
+    else -> "Check the $username and password supplied by your mail host."
+   }
+   return "$service rejected sign-in. $help"
+  }
+ }
+}
+
 internal object MailMime{
  fun addresses(raw:String):Array<InternetAddress>{require(raw.length<=16000&&raw.none{it=='\r'||it=='\n'}){"Invalid email address"};if(raw.isBlank())return emptyArray();return InternetAddress.parse(raw.replace(';',','),true).also{require(it.size<=100){"Use up to 100 recipients"};it.forEach{a->a.validate();require(a.address.contains('@')&&!a.isGroup){"Enter a complete email address"}}}}
  fun readBounded(input:InputStream,max:Int):ByteArray{val out=ByteArrayOutputStream();val b=ByteArray(16384);while(true){val n=input.read(b);if(n<0)break;require(out.size()+n<=max){"Message is too large to display. Save the original email instead."};out.write(b,0,n)};return out.toByteArray()}
@@ -32,14 +53,33 @@ internal object MailMime{
   val alt=MimeMultipart("alternative");alt.addBodyPart(MimeBodyPart().apply{setText(d.doc.text,"UTF-8")});alt.addBodyPart(MimeBodyPart().apply{setContent(d.doc.html(),"text/html; charset=UTF-8")});val mixed=MimeMultipart("mixed");mixed.addBodyPart(MimeBodyPart().apply{setContent(alt)})
   var size=0L;d.files.forEach{f->val source=file(f.part);size+=f.size;require(size<=25_000_000){"Attachments exceed 25 MB. Remove one or share a link."};mixed.addBodyPart(MimeBodyPart().apply{dataHandler=DataHandler(source);fileName=f.name;disposition=Part.ATTACHMENT})};msg.setContent(mixed);msg.saveChanges();return msg
  }
- fun error(e:Throwable):String{val chain=generateSequence(e){it.cause}.take(10).toList();return when{chain.any{it is AuthenticationFailedException}->"Sign-in was rejected. Reconnect the account or check its app password.";chain.any{it is javax.net.ssl.SSLException}->"A secure connection could not be verified. Check the server settings.";chain.any{it is java.net.UnknownHostException}->"Mail server not found. Check the server address and your connection.";chain.any{it is java.net.SocketTimeoutException}->"The mail server took too long to respond. Try again.";chain.any{it is FolderNotFoundException}->"This folder is no longer available. Refresh the folder list.";e is IllegalArgumentException||e is IllegalStateException->e.message?.take(240)?:"The operation could not complete.";else->"Couldn’t connect to the mail server. Check your connection and try again."}}
+ fun error(e:Throwable):String{if(e is MailSetupSignInRejected)return e.message.orEmpty();val chain=generateSequence(e){it.cause}.take(10).toList();return when{chain.any{it is AuthenticationFailedException}->"Sign-in was rejected. Reconnect the account or check its app password.";chain.any{it is javax.net.ssl.SSLException}->"A secure connection could not be verified. Check the server settings.";chain.any{it is java.net.UnknownHostException}->"Mail server not found. Check the server address and your connection.";chain.any{it is java.net.SocketTimeoutException}->"The mail server took too long to respond. Try again.";chain.any{it is FolderNotFoundException}->"This folder is no longer available. Refresh the folder list.";e is IllegalArgumentException||e is IllegalStateException->e.message?.take(240)?:"The operation could not complete.";else->"Couldn’t connect to the mail server. Check your connection and try again."}}
 }
 internal data class MailPage(val headers:List<MailHeader>,val more:Boolean,val validity:Long)
 internal class MailProtocol(private val c:Context,private val disk:MailDisk,private val verify:()->Unit){
  private fun session():Session{val p=Properties();for(proto in listOf("imaps","smtp","smtps")){p["mail.$proto.connectiontimeout"]="12000";p["mail.$proto.timeout"]="25000";p["mail.$proto.writetimeout"]="25000";p["mail.$proto.ssl.checkserveridentity"]="true";p["mail.$proto.ssl.protocols"]="TLSv1.2 TLSv1.3"};p["mail.imaps.peek"]="true";p["mail.imaps.fetchsize"]="65536";p["mail.imaps.partialfetch"]="true";p["mail.smtp.starttls.enable"]="true";p["mail.smtp.starttls.required"]="true";p["mail.smtp.auth"]="true";p["mail.smtps.auth"]="true";p["mail.mime.encodefilename"]="true";p["mail.mime.decodefilename"]="true";return Session.getInstance(p)}
  private suspend fun secret(a:MailAccount,smtp:Boolean=false):String{verify();return run{val j=disk.read("secret-${a.id}")?:error("Reconnect this account");j.optString(if(smtp)"smtpPassword" else"password").ifEmpty{j.getString("password")}}}
  private suspend fun <T> connection(a:MailAccount,block:suspend(Store)->T):T=withContext(Dispatchers.IO){coroutineScope{verify();a.validate();val store=session().getStore("imaps");val watcher=launch(Dispatchers.IO,start=CoroutineStart.UNDISPATCHED){try{awaitCancellation()}finally{runCatching{store.close()}}};try{val password=secret(a);verify();store.connect(a.imap,a.imapPort,a.user,password);verify();block(store)}finally{watcher.cancel();runCatching{store.close()}}}}
- suspend fun test(a:MailAccount){connection(a){s->require(s.getFolder("INBOX").exists()){ "Inbox not found" }};withContext(Dispatchers.IO){val proto=if(a.smtpTls)"smtp" else"smtps";val t=session().getTransport(proto);try{t.connect(a.smtp,a.smtpPort,a.smtpUser,secret(a,true));verify()}finally{runCatching{t.close()}}}}
+ suspend fun test(a: MailAccount) {
+  try {
+   connection(a) { store -> require(store.getFolder("INBOX").exists()) { "Inbox not found" } }
+  } catch (e: AuthenticationFailedException) {
+   throw MailSetupSignInRejected(a.provider, outgoing = false, cause = e)
+  }
+  try {
+   withContext(Dispatchers.IO) {
+    val transport = session().getTransport(if (a.smtpTls) "smtp" else "smtps")
+    try {
+     transport.connect(a.smtp, a.smtpPort, a.smtpUser, secret(a, true))
+     verify()
+    } finally {
+     runCatching { transport.close() }
+    }
+   }
+  } catch (e: AuthenticationFailedException) {
+   throw MailSetupSignInRejected(a.provider, outgoing = true, cause = e)
+  }
+ }
  suspend fun folders(a:MailAccount):List<MailFolder> =connection(a){s->s.defaultFolder.list("*").take(500).map{f->val attrs=(f as? IMAPFolder)?.attributes.orEmpty();val role=when{attrs.any{it.equals("\\Sent",true)}->"sent";attrs.any{it.equals("\\Trash",true)}->"trash";attrs.any{it.equals("\\Archive",true)}->"archive";attrs.any{it.equals("\\Junk",true)}->"junk";attrs.any{it.equals("\\Drafts",true)}->"drafts";f.fullName.equals("INBOX",true)->"inbox";else->when(f.name.lowercase()){ "sent","sent items","sent messages"->"sent";"trash","deleted items","deleted messages"->"trash";"archive","archives"->"archive";"junk","spam","junk email"->"junk";"drafts"->"drafts";else->""}};MailFolder(f.fullName,f.fullName,role,f.type and Folder.HOLDS_MESSAGES!=0)}.sortedWith(compareBy<MailFolder>{if(it.role=="inbox")0 else 1}.thenBy{it.path.lowercase()})}
  private fun header(a:MailAccount,f:IMAPFolder,m:EmailMessage)=MailHeader(a.id,f.fullName,f.uidValidity,f.getUID(m),m.from.orEmpty().joinToString(", "){MimeUtility.decodeText(it.toString())}.take(1000),m.getRecipients(EmailMessage.RecipientType.TO).orEmpty().joinToString(", "){it.toString()}.take(1000),m.subject?.take(1000).orEmpty(),(m.receivedDate?:m.sentDate)?.time?:0,m.isSet(Flags.Flag.SEEN),m.isSet(Flags.Flag.FLAGGED),m.contentType.startsWith("multipart/mixed",true),(m as? IMAPMessage)?.messageID.orEmpty().take(998),m.replyTo.orEmpty().joinToString(", "){it.toString()}.take(1000),m.getRecipients(EmailMessage.RecipientType.CC).orEmpty().joinToString(", "){it.toString()}.take(1000),(mailMessageIds(m.getHeader("References").orEmpty().joinToString(" "))+mailMessageIds(m.getHeader("In-Reply-To").orEmpty().joinToString(" "))).distinct().take(20))
  suspend fun page(a:MailAccount,path:String,limit:Int=50,before:Long?=null,query:String=""):MailPage=connection(a){s->val f=s.getFolder(path) as IMAPFolder;f.open(Folder.READ_ONLY);try{val messages=if(query.isNotBlank()){require(query.length<=200);val term=OrTerm(arrayOf(SubjectTerm(query),FromStringTerm(query),RecipientStringTerm(EmailMessage.RecipientType.TO,query)));f.search(term).filter{before==null||f.getUID(it)<before}.takeLast(limit).toTypedArray()}else if(before!=null){val seq=f.getMessageByUID(before)?.messageNumber;if(seq!=null){if(seq<=1)emptyArray()else f.getMessages((seq-limit).coerceAtLeast(1),seq-1)}else f.getMessagesByUID(1,before-1).filterNotNull().takeLast(limit).toTypedArray()}else{val count=f.messageCount;if(count==0)emptyArray()else f.getMessages((count-limit+1).coerceAtLeast(1),count)};val profile=FetchProfile().apply{add(FetchProfile.Item.ENVELOPE);add(FetchProfile.Item.FLAGS);add(FetchProfile.Item.CONTENT_INFO);add(UIDFolder.FetchProfileItem.UID);add("References");add("In-Reply-To")};if(messages.isNotEmpty())f.fetch(messages,profile);verify();MailPage(messages.filterNot{it.isExpunged}.map{header(a,f,it)}.sortedByDescending{it.date},messages.size>=limit,f.uidValidity)}finally{f.close(false)}}
