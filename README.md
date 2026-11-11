@@ -6,7 +6,7 @@
 
 *Pronounced “Enclave,” a protected, self-contained territory.*
 
-**[Download OnKlav for Android · 133 MB APK](https://github.com/JustTrySomthing/OnKlav/releases/download/v0.101.56-rc1/OnKlav-0.101.56-RC.apk)** · [Release notes](https://github.com/JustTrySomthing/OnKlav/releases/tag/v0.101.56-rc1) · [SDK downloads](https://github.com/JustTrySomthing/OnKlav/releases/tag/v0.101.49-rc1)
+**[Download OnKlav for Android · 133 MB APK](https://github.com/JustTrySomthing/OnKlav/releases/download/v0.101.57-rc1/OnKlav-0.101.57-RC.apk)** · [Release notes](https://github.com/JustTrySomthing/OnKlav/releases/tag/v0.101.57-rc1) · [SDK downloads](https://github.com/JustTrySomthing/OnKlav/releases/tag/v0.101.49-rc1)
 
 **Updates built in.** OnKlav checks daily while open and can also check in the background. When an update appears on the Apps tab, tap **Update now** and confirm in Android’s installer. You can also check manually in **Settings → Check for updates**.
 
@@ -256,7 +256,7 @@ mediates access to supported device capabilities.
 
 One APK contains the Kotlin/Compose host, shared Rust services, signed
 internal apps, and the shared Godot Web game engine. The repository contains
-the source for OnKlav 0.101.56-rc1 and both SDKs.
+the source for OnKlav 0.101.57-rc1 and both SDKs.
 
 Start with [START-HERE.md](START-HERE.md), [current tasks](TODO.md), or the
 [SDK guide](sdk/README.md).
