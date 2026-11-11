@@ -147,15 +147,16 @@ internal object UpdateApk {
 }
 class OnKlavUpdateProvider:FileProvider()
 internal data class UpdateUi(val busy:Boolean=false,val downloading:Boolean=false,val downloaded:Long=0,val release:OnKlavRelease?=null,
-    val ready:Boolean=false,val message:String="Check GitHub for the latest OnKlav version.",val error:String?=null,
+    val ready:Boolean=false,val checking:Boolean=false,val message:String?=null,val error:String?=null,val checkedAt:Long=0,
     val prompt:Boolean=false,val installRequested:Boolean=false)
 class OnKlavUpdateModel(app:Application):AndroidViewModel(app) {
     private val c=app.applicationContext
     private val prefs=UpdateChecks.prefs(c)
+    private val bootCount=UpdateChecks.bootCount(c)
     private val dir=File(c.cacheDir,"onklav-updates").apply{mkdirs()}
     private val file=File(dir,"update.apk")
     private var job:Job?=null
-    internal var ui by mutableStateOf(UpdateUi());private set
+    internal var ui by mutableStateOf(UpdateUi(checkedAt=prefs.getLong("checked",0)));private set
     var automatic by mutableStateOf(prefs.getBoolean("automatic",true));private set
     var previews by mutableStateOf(UpdateChecks.includesPreviews(prefs));private set
     init {
@@ -163,14 +164,14 @@ class OnKlavUpdateModel(app:Application):AndroidViewModel(app) {
             UpdateChecks.cleanInstalledDownload(c)
             File(dir,"update.part").delete()
             val available=cachedRelease("available")
-            if(available!=null)ui=ui.copy(release=available,message=availableMessage(available),prompt=shouldPrompt(available))
+            if(available!=null)ui=ui.copy(release=available,prompt=shouldPrompt(available))
             else prefs.edit().remove("available").apply()
             val saved=cachedRelease("ready")
             if(saved!=null&&(available==null||available==saved)) {
                 val valid=withContext(Dispatchers.IO){runCatching{UpdateApk.verify(c,file,saved)}.isSuccess}
                 if(valid) {
                     if(available==null) prefs.edit().putString("available",saved.json().toString()).apply()
-                    ui=ui.copy(release=saved,ready=true,message="Update downloaded. Ready to install.",prompt=shouldPrompt(saved))
+                    ui=ui.copy(release=saved,ready=true,prompt=shouldPrompt(saved))
                 }
                 else clearDownload()
             } else clearDownload()
@@ -180,27 +181,27 @@ class OnKlavUpdateModel(app:Application):AndroidViewModel(app) {
     private fun cachedRelease(key:String)=UpdateChecks.cached(prefs,key)
         ?.takeIf {it.version>UpdateChecks.current()&&(previews||it.version.rc==null)}
     private fun shouldPrompt(release:OnKlavRelease)=UpdateChecks.shouldPrompt(prefs,release)
-    private fun availableMessage(release:OnKlavRelease)="OnKlav ${release.version.label} is available."
     private fun due():Boolean {
         val online=c.getSystemService(ConnectivityManager::class.java)?.activeNetwork!=null
-        return online&&UpdateChecks.due(prefs,UpdateChecks.DAY)
+        return online&&UpdateChecks.foregroundDue(prefs,bootCount)
     }
     private fun task(action:suspend()->Unit) {
         if(job?.isActive==true)return
         job=viewModelScope.launch {
             ui=ui.copy(busy=true,error=null)
             try { action() }
-            catch(e:TimeoutCancellationException){ui=ui.copy(error="The update download timed out. Please try again.")}
-            catch(e:CancellationException){ui=ui.copy(message="Download cancelled. You can try again.");throw e}
-            catch(e:java.io.IOException){ui=ui.copy(error="Could not reach GitHub. Check your connection and try again.")}
-            catch(e:Exception){ui=ui.copy(error=e.message?:"Could not connect to GitHub. Check your connection and try again.")}
-            finally {ui=ui.copy(busy=false,downloading=false)}
+            catch(e:TimeoutCancellationException){ui=ui.copy(message=null,error="Download timed out. Try again.")}
+            catch(e:CancellationException){ui=ui.copy(message="Download canceled");throw e}
+            catch(e:java.io.IOException){ui=ui.copy(message=null,error="Couldn’t reach GitHub. Try again.")}
+            catch(e:Exception){ui=ui.copy(message=null,error=e.message?:"Update failed. Try again.")}
+            finally {ui=ui.copy(busy=false,checking=false,downloading=false)}
         }
     }
     fun automaticCheck(){
         if(job?.isActive==true)return
+        val checkedAt=prefs.getLong("checked",0)
         val available=cachedRelease("available")
-        if(available!=ui.release)showResult(available,true)
+        if(available!=ui.release||checkedAt!=ui.checkedAt)showResult(available,true)
         else if(available!=null&&!ui.installRequested)ui=ui.copy(prompt=shouldPrompt(available))
         if(due())task{runCheck(true)}
     }
@@ -224,18 +225,15 @@ class OnKlavUpdateModel(app:Application):AndroidViewModel(app) {
         ui=ui.copy(ready=false,installRequested=false)
     }
     private suspend fun runCheck(silent:Boolean) {
-        if(!silent)ui=ui.copy(message="Checking GitHub…")
-        val result=UpdateChecks.check(prefs,UpdateChecks.DAY.takeIf {silent})?:return
+        ui=ui.copy(checking=true)
+        val result=UpdateChecks.check(prefs,UpdateChecks.DAY.takeIf {silent},bootCount)?:return
         if(result.release==null)UpdateChecks.cancelNotice(c)
         showResult(result.release,silent)
     }
     private fun showResult(release:OnKlavRelease?,silent:Boolean) {
         if(release!=ui.release){clearDownload()}
-        ui=ui.copy(release=release,message=when {
-            release==null->"You’re up to date."
-            ui.ready->"Update downloaded. Ready to install."
-            else->availableMessage(release)
-        },prompt=silent&&release?.let(::shouldPrompt)==true)
+        ui=ui.copy(release=release,checkedAt=prefs.getLong("checked",0),
+            message=if(release==null)"You’re up to date"else null,prompt=silent&&release?.let(::shouldPrompt)==true)
     }
     fun cancelDownload(){if(ui.downloading)job?.cancel()}
     fun updateNow() {
@@ -247,7 +245,7 @@ class OnKlavUpdateModel(app:Application):AndroidViewModel(app) {
     private fun download() {
         val release=ui.release?:return
         task {
-            clearDownload();ui=ui.copy(downloading=true,downloaded=0,message="Downloading update…",prompt=false)
+            clearDownload();ui=ui.copy(downloading=true,downloaded=0,message=null,prompt=false)
             val part=File(dir,"update.part")
             try {
                 withContext(Dispatchers.IO) {
@@ -258,7 +256,7 @@ class OnKlavUpdateModel(app:Application):AndroidViewModel(app) {
                     check(part.renameTo(file)){"Could not save the verified update. Please try again."}
                 }
                 prefs.edit().putString("ready",release.json().toString()).apply()
-                ui=ui.copy(ready=true,installRequested=true,message="Update verified. Ready to install.")
+                ui=ui.copy(ready=true,installRequested=true)
             } finally {withContext(Dispatchers.IO+NonCancellable){part.delete()}}
         }
     }
@@ -276,8 +274,7 @@ class OnKlavUpdateModel(app:Application):AndroidViewModel(app) {
                 }
             }
             context.startActivity(UpdateApk.installer(context,file))
-            ui=ui.copy(message="Confirm the update in Android’s installer. If you cancel, tap Install update to try again.")
         }
     }
-    fun installPermissionDenied(){ui=ui.copy(error="Update installation was not enabled. Tap Install update when you’re ready to allow it.")}
+    fun installPermissionDenied(){ui=ui.copy(error="Allow OnKlav to install updates, then try again.")}
 }

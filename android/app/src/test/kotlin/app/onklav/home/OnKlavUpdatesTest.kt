@@ -56,6 +56,7 @@ class OnKlavUpdatesTest {
         val current=UpdateVersion.parse(BuildConfig.VERSION_NAME)!!
         val pending=release(current.copy(patch=current.patch+1,rc=1))
         prefs.edit().putBoolean("previews",true).putString("available",pending.json().toString())
+            .putInt("foregroundBoot",UpdateChecks.bootCount(app))
             .putLong("checked",System.currentTimeMillis()).commit()
         val first=OnKlavUpdateModel(app)
         shadowOf(Looper.getMainLooper()).idle()
@@ -72,6 +73,21 @@ class OnKlavUpdatesTest {
         assertEquals(pending,dismissed.ui.release)
         assertFalse(dismissed.ui.prompt)
         assertTrue(UpdateChecks.shouldPrompt(prefs,pending,System.currentTimeMillis()+UpdateChecks.DAY))
+    }
+    @Test fun firstForegroundCheckAfterRestartIgnoresDailyCooldownOnce() {
+        val context=ApplicationProvider.getApplicationContext<Context>()
+        val prefs=UpdateChecks.prefs(context)
+        val now=System.currentTimeMillis()
+        prefs.edit().putLong("checked",now-1000).putLong("attempted",now-1000).putInt("foregroundBoot",10).commit()
+        assertFalse(UpdateChecks.foregroundDue(prefs,10,now))
+        assertTrue(UpdateChecks.foregroundDue(prefs,11,now))
+        prefs.edit().putInt("foregroundAttemptBoot",11).putLong("foregroundAttempted",now).commit()
+        assertFalse(UpdateChecks.foregroundDue(prefs,11,now+1))
+        assertTrue(UpdateChecks.foregroundDue(prefs,11,now+60*60*1000L))
+        prefs.edit().putInt("foregroundBoot",11).commit()
+        assertFalse(UpdateChecks.foregroundDue(prefs,11,now+60*60*1000L))
+        prefs.edit().putBoolean("automatic",false).commit()
+        assertFalse(UpdateChecks.foregroundDue(prefs,12,now))
     }
     @Test fun backgroundCheckIsPersistentNetworkConstrainedAndCanBeDisabled() {
         val context=ApplicationProvider.getApplicationContext<Context>()

@@ -71,6 +71,7 @@ fun ReferenceDialog(
     heading: @Composable (RowScope.() -> Unit)? = null,
     footer: @Composable RowScope.() -> Unit,
     centerTitle: Boolean = false,
+    summary: @Composable ColumnScope.() -> Unit = {},
     content: @Composable ColumnScope.() -> Unit,
 ) {
     val (motion,animateAction)=rememberDialogMotion()
@@ -122,6 +123,7 @@ fun ReferenceDialog(
                     )
                     heading?.invoke(this)
                 }
+                summary()
                 Column(
                     Modifier.weight(1f, fill = false).verticalScroll(bodyScroll),
                     content = content,

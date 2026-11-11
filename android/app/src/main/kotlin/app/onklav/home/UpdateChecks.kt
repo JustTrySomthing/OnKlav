@@ -12,6 +12,7 @@ import android.content.ComponentName
 import android.content.Context
 import android.content.Intent
 import android.content.SharedPreferences
+import android.provider.Settings
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import kotlinx.coroutines.*
@@ -31,6 +32,8 @@ internal object UpdateChecks {
 
     fun prefs(context: Context) = context.getSharedPreferences("onklav-updates", 0)
     fun current() = requireNotNull(UpdateVersion.parse(BuildConfig.VERSION_NAME))
+    fun bootCount(context: Context) =
+        Settings.Global.getInt(context.contentResolver, Settings.Global.BOOT_COUNT, -1)
     fun includesPreviews(prefs: SharedPreferences) = prefs.getBoolean("previews", current().rc != null)
     fun cached(prefs: SharedPreferences, key: String) = prefs.getString(key, null)?.let { json ->
         runCatching { OnKlavRelease.cached(JSONObject(json)) }.getOrNull()
@@ -41,6 +44,13 @@ internal object UpdateChecks {
             elapsed(prefs.getLong("checked", 0), interval, now) &&
             elapsed(prefs.getLong("attempted", 0), HOUR, now)
 
+    fun foregroundDue(prefs: SharedPreferences, boot: Int, now: Long = System.currentTimeMillis()): Boolean {
+        if (boot < 0 || prefs.getInt("foregroundBoot", -1) == boot) return due(prefs, DAY, now)
+        return prefs.getBoolean("automatic", true) &&
+            (prefs.getInt("foregroundAttemptBoot", -1) != boot ||
+                elapsed(prefs.getLong("foregroundAttempted", 0), HOUR, now))
+    }
+
     fun shouldPrompt(prefs: SharedPreferences, release: OnKlavRelease, now: Long = System.currentTimeMillis()) =
         prefs.getBoolean("automatic", true) &&
             (prefs.getString("notified", null) != release.tag || elapsed(prefs.getLong("notifiedAt", 0), DAY, now))
@@ -49,13 +59,21 @@ internal object UpdateChecks {
 
     data class Result(val release: OnKlavRelease?)
 
-    suspend fun check(prefs: SharedPreferences, interval: Long? = null): Result? = lock.withLock {
-        if (interval != null && !due(prefs, interval)) return@withLock null
-        prefs.edit().putLong("attempted", System.currentTimeMillis()).apply()
+    suspend fun check(prefs: SharedPreferences, interval: Long? = null, foregroundBoot: Int? = null): Result? = lock.withLock {
+        if (interval != null && !(foregroundBoot?.let { foregroundDue(prefs, it) } ?: due(prefs, interval))) {
+            return@withLock null
+        }
+        val attempted = System.currentTimeMillis()
+        prefs.edit().putLong("attempted", attempted).apply {
+            if (foregroundBoot != null && foregroundBoot >= 0) {
+                putInt("foregroundAttemptBoot", foregroundBoot).putLong("foregroundAttempted", attempted)
+            }
+        }.apply()
         val release = withContext(Dispatchers.IO) {
             UpdateFeed.select(UpdateFeed.releases(), current(), includesPreviews(prefs))
         }
         prefs.edit().putLong("checked", System.currentTimeMillis()).apply {
+            if (foregroundBoot != null && foregroundBoot >= 0) putInt("foregroundBoot", foregroundBoot)
             if (release == null) remove("available") else putString("available", release.json().toString())
         }.apply()
         Result(release)

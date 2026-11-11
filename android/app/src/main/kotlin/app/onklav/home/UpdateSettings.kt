@@ -3,6 +3,7 @@ package app.onklav.home
 import android.content.Intent
 import android.net.Uri
 import android.provider.Settings
+import android.text.format.DateUtils
 import androidx.activity.compose.rememberLauncherForActivityResult
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.compose.foundation.layout.*
@@ -35,30 +36,46 @@ internal fun UpdateSettingsDialog(close:()->Unit) {
                 permissionError=null
                 if(context.packageManager.canRequestPackageInstalls())model.install(context)
                 else runCatching {permission.launch(Intent(Settings.ACTION_MANAGE_UNKNOWN_APP_SOURCES,Uri.parse("package:${context.packageName}")))}
-                    .onFailure{permissionError="This phone could not open update installation permission. Try again."}
+                    .onFailure{permissionError="Couldn’t open Android’s install settings."}
             }
         }
     }
-    ReferenceDialog("OnKlav updates",close,footer={DialogAction("Close"){close()}}) {
-        Column(Modifier.fillMaxWidth().padding(horizontal=24.dp,vertical=12.dp),verticalArrangement=Arrangement.spacedBy(12.dp)) {
-            Text("Installed: OnKlav ${BuildConfig.VERSION_NAME}",style=MaterialTheme.typography.titleMedium)
-            Text("Get updates directly from OnKlav’s GitHub releases. Your apps, games, messages and settings stay on this phone.")
-            PreferenceToggle("Check automatically",model.automatic){model.changeAutomatic(it)}
-            Text("Checks daily and shows available updates on the Apps tab. Downloads start when you tap Update now.",style=MaterialTheme.typography.bodySmall)
-            PreferenceToggle("Include release candidates",model.previews,enabled=!state.busy){model.changePreviews(it)}
-            Button(onClick={model.checkNow()},enabled=!state.busy,modifier=Modifier.fillMaxWidth()) {Text(if(state.busy&&!state.downloading)"Checking…"else"Check for updates")}
-            Text(state.message)
+    ReferenceDialog("OnKlav updates",close,footer={
+        DialogAction("Close"){close()}
+        Spacer(Modifier.width(4.dp))
+        when {
+            state.downloading -> TextButton(onClick=model::cancelDownload) { Text("Cancel download") }
+            state.release!=null -> Button(onClick=model::updateNow,enabled=!state.busy) {
+                Text(if(state.ready)"Install update"else"Update now")
+            }
+            else -> Button(onClick=model::checkNow,enabled=!state.busy) { Text("Check now") }
+        }
+    },summary={
+        Column(Modifier.fillMaxWidth().padding(horizontal=24.dp,vertical=4.dp),verticalArrangement=Arrangement.spacedBy(6.dp)) {
             state.release?.let { release ->
-                Text("OnKlav ${release.version.label} · ${"%.1f".format(java.util.Locale.US,release.bytes/1_000_000.0)} MB",style=MaterialTheme.typography.titleMedium)
-                if(state.downloading) {
+                Text("${release.version.label} available",style=MaterialTheme.typography.titleMedium)
+                if (state.downloading) {
                     LinearProgressIndicator(progress={state.downloaded.toFloat()/release.bytes},modifier=Modifier.fillMaxWidth())
-                    Text("${state.downloaded*100/release.bytes}% downloaded")
-                    TextButton(onClick={model.cancelDownload()}){Text("Cancel download")}
-                } else Button(onClick={model.updateNow()},enabled=!state.busy,modifier=Modifier.fillMaxWidth()) {
-                    Text(if(state.ready)"Install update"else"Update now")
+                    Text("Downloading ${state.downloaded*100/release.bytes}%",style=MaterialTheme.typography.bodySmall)
                 }
             }
-            (permissionError?:state.error)?.let { Text(it,color=MaterialTheme.colorScheme.error) }
+            val error=permissionError?:state.error
+            val status=if(state.checking)"Checking…"else state.message
+            (error?:status)?.let {Text(it,color=if(error!=null)MaterialTheme.colorScheme.error else MaterialTheme.colorScheme.onSurface)}
+            if(state.checkedAt>0) {
+                val checked=DateUtils.formatDateTime(context,state.checkedAt,
+                    DateUtils.FORMAT_SHOW_DATE or DateUtils.FORMAT_SHOW_TIME or DateUtils.FORMAT_ABBREV_MONTH)
+                Text("Last checked $checked",style=MaterialTheme.typography.bodySmall)
+            }
+        }
+    }) {
+        Column(Modifier.fillMaxWidth().padding(horizontal=24.dp,vertical=8.dp),verticalArrangement=Arrangement.spacedBy(4.dp)) {
+            Text("Installed ${BuildConfig.VERSION_NAME}",style=MaterialTheme.typography.bodySmall)
+            PreferenceToggle("Check daily",model.automatic){model.changeAutomatic(it)}
+            PreferenceToggle("Include release candidates",model.previews,enabled=!state.busy){model.changePreviews(it)}
+            if(state.release!=null&&!state.downloading) {
+                TextButton(onClick=model::checkNow,enabled=!state.busy) {Text("Check again")}
+            }
         }
     }
 }
