@@ -30,6 +30,7 @@ import org.json.JSONObject
 internal fun filePickerAccepts(row:JSONObject,types:List<String>):Boolean{
  if(row.optBoolean("folder"))return true
  val name=row.optString("name");val reported=app.onklav.shared.Mp3Codec.mime(row.optString("mime"),name)
+ if(types.any{it in MessageMedia.vCardTypes}&&MessageMedia.isVCard(reported,name))return true
  val mime=if(reported.isBlank()||reported=="application/octet-stream")android.webkit.MimeTypeMap.getSingleton().getMimeTypeFromExtension(name.substringAfterLast('.').lowercase())?:reported else reported
  if(name.endsWith(".layers",true)&&types.contains(PhotoLayers.MIME))return true
  return types.isEmpty()||types.any{it=="*/*"||it==mime||it.endsWith("/*")&&mime.startsWith(it.substringBefore('/')+"/")}

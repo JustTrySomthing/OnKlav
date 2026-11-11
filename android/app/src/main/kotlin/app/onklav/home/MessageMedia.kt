@@ -27,20 +27,40 @@ import kotlinx.coroutines.withContext
 import org.json.JSONObject
 
 object MessageMedia {
+    internal const val VCARD_MIME = "text/x-vcard"
+    internal val vCardTypes = arrayOf(VCARD_MIME,"text/vcard","application/vcard","application/x-vcard","text/x-vcf","application/vcf")
+
+    internal fun isVCard(mime:String,name:String) =
+        mime.substringBefore(';').trim().lowercase() in vCardTypes || name.endsWith(".vcf",ignoreCase=true)
+
+    internal fun vCardName(name:String):String {
+        val base=FilesBroker.cleanName(name.ifBlank { "Contact" })
+        return if(base.endsWith(".vcf",ignoreCase=true))base else base.take(116)+".vcf"
+    }
+
+    internal fun input(c:Context,part:MessagePart):java.io.InputStream? =
+        part.inlineText?.byteInputStream(Charsets.UTF_8) ?: c.contentResolver.openInputStream(Uri.parse(part.uri))
+
     fun name(c: Context, u: Uri): String =
         c.contentResolver
             .query(u, arrayOf(OpenableColumns.DISPLAY_NAME), null, null, null)
             ?.use { if (it.moveToFirst()) it.getString(0) else null }
             ?.take(120) ?: "Attachment"
 
-    fun import(c: Context, u: Uri, budget: Int): JSONObject {
+    fun import(c:Context,u:Uri,budget:Int):JSONObject = import(c,u,budget,null)
+
+    internal fun import(c:Context,part:MessagePart,budget:Int):JSONObject =
+        import(c,Uri.parse(part.uri),budget,part)
+
+    private fun import(c:Context,u:Uri,budget:Int,part:MessagePart?):JSONObject {
+        val filename=part?.name ?: name(c,u)
         val mime =
-            app.onklav.shared.Mp3Codec.mime(c.contentResolver.getType(u)?.substringBefore(';')?.lowercase() ?: "application/octet-stream",name(c,u)).let {
-                if (it == "text/vcard") "text/x-vcard" else it
+            app.onklav.shared.Mp3Codec.mime(part?.mime ?: c.contentResolver.getType(u)?.substringBefore(';')?.lowercase() ?: "application/octet-stream",filename).let {
+                if (isVCard(it,filename)) VCARD_MIME else it
             }
         require(budget > 0) { "This message is full. Remove an attachment or shorten its text." }
         val bytes =
-            c.contentResolver.openInputStream(u)?.use {
+            (if(part!=null)input(c,part)else c.contentResolver.openInputStream(u))?.use {
                 MessageRepository.readBounded(it, if (mime.startsWith("image/") && mime != "image/gif") 30 * 1024 * 1024 else budget)
             } ?: error("Could not open the attachment")
         val normalized =
@@ -62,10 +82,10 @@ object MessageMedia {
                     "audio/mpeg",
                     "audio/mp4",
                     "audio/ogg",
-                    "text/x-vcard",
+                    VCARD_MIME,
                 )
         ) {
-            "Choose a photo, video or audio clip. Use Share via Cloud Files for other files."
+            "Choose a photo, video, audio clip or contact card. Use Share via Cloud Files for other files."
         }
         val id = MessageTransferProvider.id()
         val target = MessageTransferProvider.file(c,id)
@@ -81,7 +101,11 @@ object MessageMedia {
         return JSONObject()
             .put("file", id)
             .put("mime", type)
-            .put("name", if (type == "image/jpeg") name(c,u).substringBeforeLast('.')+".jpg" else name(c,u))
+            .put("name", when(type) {
+                VCARD_MIME -> vCardName(filename)
+                "image/jpeg" -> filename.substringBeforeLast('.')+".jpg"
+                else -> filename
+            })
             .put("bytes", normalized.size)
     }
 
@@ -155,12 +179,18 @@ object MessageMedia {
         val u = Uri.parse(p.uri)
         if (u.authority == c.packageName + ".message-files") return u
         val id = MessageTransferProvider.id()
-        c.contentResolver.openInputStream(u)?.use { input ->
-            MessageTransferProvider.file(c, id).outputStream().use { out ->
-                out.write(MessageRepository.readBounded(input, 20 * 1024 * 1024))
-                out.fd.sync()
-            }
-        } ?: error("Could not open the attachment")
+        val file=MessageTransferProvider.file(c,id)
+        try {
+            input(c,p)?.use { input ->
+                file.outputStream().use { out ->
+                    out.write(MessageRepository.readBounded(input, 20 * 1024 * 1024))
+                    out.fd.sync()
+                }
+            } ?: error("Could not open the attachment")
+        } catch(e:Exception) {
+            file.delete()
+            throw e
+        }
         return MessageTransferProvider.uri(c, id, "blob", p.mime, p.name)
     }
 

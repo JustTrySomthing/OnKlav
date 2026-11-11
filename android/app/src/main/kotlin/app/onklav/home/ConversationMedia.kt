@@ -42,7 +42,9 @@ import kotlinx.coroutines.flow.collectLatest
 import org.json.JSONObject
 
 internal data class ChatMedia(val message:Message,val part:MessagePart)
-internal fun conversationMedia(messages:List<Message>):List<ChatMedia> = messages.sortedByDescending{it.date}.flatMap{m->m.parts.filter{it.mime.startsWith("image/")||it.mime.startsWith("video/")||it.mime.startsWith("audio/")}.map{ChatMedia(m,it)}}.distinctBy{it.part.uri}
+internal fun isConversationMedia(part:MessagePart) =
+ !MessageMedia.isVCard(part.mime,part.name) && (part.mime.startsWith("image/")||part.mime.startsWith("video/")||part.mime.startsWith("audio/"))
+internal fun conversationMedia(messages:List<Message>):List<ChatMedia> = messages.sortedByDescending{it.date}.flatMap{m->m.parts.filter(::isConversationMedia).map{ChatMedia(m,it)}}.distinctBy{it.part.uri}
 internal fun mediaViewerSnapshot(items:List<ChatMedia>)=items.distinctBy{it.part.uri}.toList()
 internal object MediaPreferences {
  val decoders=kotlinx.coroutines.sync.Semaphore(2)

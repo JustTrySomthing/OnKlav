@@ -73,7 +73,8 @@ import java.io.File
    require(limit>0){"This message is full. Remove an attachment or shorten its text"}
    val (name,mime,bytes)=withContext(Dispatchers.IO){
     val name=MessageMedia.name(c,uri)
-    val mime=Mp3Codec.mime(c.contentResolver.getType(uri).orEmpty().substringBefore(';').lowercase(),name)
+    val reported=Mp3Codec.mime(c.contentResolver.getType(uri).orEmpty().substringBefore(';').lowercase(),name)
+    val mime=if(MessageMedia.isVCard(reported,name))MessageMedia.VCARD_MIME else reported
     val bytes=if(mime.startsWith("audio/")||mime.startsWith("video/"))
      runCatching{c.contentResolver.openAssetFileDescriptor(uri,"r")?.use{it.length}}.getOrNull()?:-1L
     else -1L
@@ -136,8 +137,8 @@ import java.io.File
  if(open)ReferenceDialog("Attach",close,footer={DialogAction("Cancel",onClick=close)}){
   Text("MMS · ${android.text.format.Formatter.formatShortFileSize(c,currentBudget().toLong())} available",Modifier.padding(horizontal=20.dp,vertical=8.dp),fontSize=13.sp)
   data class Choice(val label:String,val icon:Int,val click:()->Unit)
-  listOf(Choice("Take photo",R.drawable.attach_camera){close();capture(false)},Choice("Record Video",R.drawable.attach_video){close();capture(true)},Choice("Record Audio",R.drawable.attach_mic){close();if(c.checkSelfPermission(Manifest.permission.RECORD_AUDIO)==PackageManager.PERMISSION_GRANTED)record()else permission.launch(Manifest.permission.RECORD_AUDIO)},Choice("Image",R.drawable.attach_image){close();picker.launch(arrayOf("image/*"))},Choice("Video",R.drawable.attach_video){close();picker.launch(arrayOf("video/*"))},Choice("Audio",R.drawable.attach_audio){close();picker.launch(arrayOf("audio/*"))},Choice("Share via Cloud Files",app.onklav.shared.R.drawable.ref_app_cloud_files){close();cloudShare=true}).forEachIndexed{i,item->
-   if(i==3||i==7)HorizontalDivider(Modifier.padding(horizontal=20.dp,vertical=6.dp))
+  listOf(Choice("Take photo",R.drawable.attach_camera){close();capture(false)},Choice("Record Video",R.drawable.attach_video){close();capture(true)},Choice("Record Audio",R.drawable.attach_mic){close();if(c.checkSelfPermission(Manifest.permission.RECORD_AUDIO)==PackageManager.PERMISSION_GRANTED)record()else permission.launch(Manifest.permission.RECORD_AUDIO)},Choice("Image",R.drawable.attach_image){close();picker.launch(arrayOf("image/*"))},Choice("Video",R.drawable.attach_video){close();picker.launch(arrayOf("video/*"))},Choice("Audio",R.drawable.attach_audio){close();picker.launch(arrayOf("audio/*"))},Choice("Contact card (.vcf)",R.drawable.files_document){close();picker.launch(MessageMedia.vCardTypes)},Choice("Share via Cloud Files",app.onklav.shared.R.drawable.ref_app_cloud_files){close();cloudShare=true}).forEachIndexed{i,item->
+   if(i==3||item.label=="Share via Cloud Files")HorizontalDivider(Modifier.padding(horizontal=20.dp,vertical=6.dp))
    TextButton(onClick=item.click,enabled=!busy&&recorder==null,modifier=Modifier.fillMaxWidth().testTag("attach-${item.label}")){Icon(painterResource(item.icon),null,Modifier.size(24.dp));Spacer(Modifier.width(14.dp));Text(item.label,Modifier.weight(1f),fontSize=17.sp)}
   }
  }

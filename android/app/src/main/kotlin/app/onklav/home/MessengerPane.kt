@@ -69,6 +69,9 @@ fun MessengerPane(
     var rows by memory.rows
     var messages by memory.messages
     var loadingMessages by remember { mutableStateOf(false) }
+    var feedLoaded by remember { mutableStateOf(false) }
+    var feedError by remember { mutableStateOf<String?>(null) }
+    var feedOpen by remember { mutableIntStateOf(0) }
     var positionedThread by remember { mutableLongStateOf(-1L) }
     var address by rememberSaveable { mutableStateOf(group?.address.orEmpty()) }
     var thread by rememberSaveable { mutableLongStateOf(group?.thread ?: 0L) }
@@ -94,6 +97,7 @@ fun MessengerPane(
     var reactionMessage by remember { mutableStateOf<Message?>(null) }
     var historyBefore by rememberSaveable { mutableLongStateOf(Long.MAX_VALUE) }
     var mediaUri by rememberSaveable { mutableStateOf<String?>(null) }
+    var contactCard by remember { mutableStateOf<MessagePart?>(null) }
     var galleryMessages by remember { mutableStateOf(emptyList<Message>()) }
     var galleryLoading by remember { mutableStateOf(false) }
     var galleryError by remember { mutableStateOf<String?>(null) }
@@ -179,6 +183,14 @@ fun MessengerPane(
         focusNotice = false
         if (address.isNotEmpty() && draftLoaded) saveDraft(draftKey, draft, attachments)
         historyBefore=Long.MAX_VALUE
+        feedOpen++
+        feedLoaded=false
+        feedError=null
+        loadingOlder=false
+        olderFailure=false
+        positionedThread=-1L
+        mediaUri=null
+        contactCard=null
         messages=memory.windows[id].orEmpty();memory.raw.value=memory.rawWindows[id].orEmpty()
         galleryMessages=memory.galleries[id]?.messages.orEmpty();galleryCursor=memory.galleries[id]?.next;galleryMore=memory.galleries[id]?.more?:false
         hasOlder=true
@@ -258,11 +270,12 @@ fun MessengerPane(
         }
     }
     LaunchedEffect(Unit) {
-        if(!memory.recovered){store.request(JSONObject().put("action", "recover").put("at", System.currentTimeMillis()));memory.recovered=true}
         memory.watch(context)
+        if(!memory.recovered){store.request(JSONObject().put("action", "recover").put("at", System.currentTimeMillis()));memory.recovered=true}
     }
-    LaunchedEffect(epoch, revision, address, limit,historyBefore,search,folder) {
+    LaunchedEffect(epoch, revision, address, thread, feedOpen, limit,historyBefore,search,folder) {
         loadingMessages=true
+        feedError=null
         try {
             state = if(address.isEmpty())repo.reconcileGroups()else store.snapshot()
             val groupThreads = state.savedGroups().map { it.thread }.filter { it > 0 }.toSet()
@@ -277,12 +290,17 @@ fun MessengerPane(
             }
             if (address.isNotEmpty()) {
                 if (thread == 0L) {
-                    thread = repo.threadFor(address)
-                    if (group != null && group.thread == 0L && thread > 0) {
-                        store.request(JSONObject().put("action", "group_save").put("id", group.id).put("name", group.name).put("members", JSONArray(group.members)).put("thread", thread))
+                    val resolved = repo.threadFor(address)
+                    if (group != null && group.thread == 0L && resolved > 0) {
+                        store.request(JSONObject().put("action", "group_save").put("id", group.id).put("name", group.name).put("members", JSONArray(group.members)).put("thread", resolved))
                     }
+                    if(resolved>0){thread=resolved;return@LaunchedEffect}
                 }
-                val fresh = repo.messages(thread, 20, state, address,beforeDate=historyBefore)
+                var fresh = repo.messages(thread, 20, state, address,beforeDate=historyBefore)
+                if(fresh.isEmpty() && !feedLoaded && thread>0 && repo.allowed()) {
+                    delay(180)
+                    fresh=repo.messages(thread,20,state,address,beforeDate=historyBefore)
+                }
                 hasOlder=fresh.size>=20
                 val loaded=if(historyBefore==Long.MAX_VALUE)mergeLatestMessages(memory.raw.value,fresh)else fresh
                 memory.raw.value=loaded
@@ -294,21 +312,30 @@ fun MessengerPane(
                 } else messages = loaded
                 if(memory.initializedThreads.add(thread))memory.seenReactions.putAll(projectReactions(messages,state,if(group!=null)groupFeed else null).marks)
                 if(historyBefore==Long.MAX_VALUE)memory.keep(thread,messages,memory.raw.value)
+                feedLoaded=true
             }
         } catch (e: Exception) { if (e is CancellationException) throw e;
-            error = e.message
+            if(address.isNotBlank()&&messages.isEmpty())feedError=e.message?:"Could not load messages."
+            else error=e.message
         } finally {loadingMessages=false}
     }
     fun olderMessages(){
         if(loadingOlder||olderFailure||!hasOlder||messages.isEmpty())return
+        val opened=feedOpen
+        val requestedThread=thread
+        val requestedAddress=address
+        val requestedHistory=historyBefore
+        fun stillOpen()=opened==feedOpen&&requestedThread==thread&&requestedAddress==address&&requestedHistory==historyBefore
         val before=messages.first().date;val boundary=messages.filter{it.date==before};val smsId=boundary.filter{it.uri.startsWith("content://sms/")}.minOfOrNull{it.id}?:Long.MAX_VALUE;val mmsId=boundary.filter{it.uri.startsWith("content://mms/")}.minOfOrNull{it.id}?:Long.MAX_VALUE;loadingOlder=true
         launchJob{try{
-            val batch=repo.messages(thread,40,state,address,beforeDate=before,beforeSmsId=smsId,beforeMmsId=mmsId);hasOlder=batch.size>=40
+            val batch=repo.messages(requestedThread,40,state,requestedAddress,beforeDate=before,beforeSmsId=smsId,beforeMmsId=mmsId)
+            if(!stillOpen())return@launchJob
+            hasOlder=batch.size>=40
             val combined=(batch+memory.raw.value).distinctBy{it.key}.sortedBy{it.date}
             memory.raw.value=combined
-            if(group!=null){val parents=repo.groupParents(thread,groupProtocol.targets(combined));groupFeed=groupProtocol.feed((combined+parents).distinctBy{it.key});val ids=groupFeed.getJSONArray("visible").let{a->List(a.length()){a.getString(it)}.toSet()};messages=combined.filter{it.key in ids}.map{it.copy(text=groupFeed.child("texts").optString(it.key,it.text))}}else messages=combined
+            if(group!=null){val parents=repo.groupParents(requestedThread,groupProtocol.targets(combined));if(!stillOpen())return@launchJob;groupFeed=groupProtocol.feed((combined+parents).distinctBy{it.key});val ids=groupFeed.getJSONArray("visible").let{a->List(a.length()){a.getString(it)}.toSet()};messages=combined.filter{it.key in ids}.map{it.copy(text=groupFeed.child("texts").optString(it.key,it.text))}}else messages=combined
             if(historyBefore==Long.MAX_VALUE)memory.keep(thread,messages,memory.raw.value)
-        }catch(e:CancellationException){throw e}catch(e:Exception){olderFailure=true}finally{loadingOlder=false}}
+        }catch(e:CancellationException){throw e}catch(e:Exception){if(stillOpen())olderFailure=true}finally{if(opened==feedOpen)loadingOlder=false}}
     }
     LaunchedEffect(list,thread){snapshotFlow{Triple(list.isScrollInProgress&&list.firstVisibleItemIndex<12,messages.firstOrNull()?.key,loadingOlder)}.collectLatest{(nearTop,_,loading)->if(nearTop&&!loading)olderMessages()}}
     LaunchedEffect(address) {
@@ -602,15 +629,17 @@ fun MessengerPane(
                                         color = MaterialTheme.colorScheme.error,
                                         modifier = Modifier.padding(bottom = 8.dp))
                                     m.parts.forEach { p ->
-                                        if(p.mime.startsWith("audio/"))MessageMediaAction("Audio",if(!m.sent)sentColor(spec)else MaterialTheme.colorScheme.surface){mediaUri=p.uri}
+                                        if(MessageMedia.isVCard(p.mime,p.name))MessageMediaAction("Contact card",if(!m.sent)sentColor(spec)else MaterialTheme.colorScheme.surface){contactCard=p}
+                                        else if(p.mime.startsWith("audio/"))MessageMediaAction("Audio",if(!m.sent)sentColor(spec)else MaterialTheme.colorScheme.surface){mediaUri=p.uri}
                                         else MessageThumbnail(
                                             p,
                                             Modifier.fillMaxWidth().heightIn(min = 56.dp),
                                             naturalHeight = true,
                                         ) {
-                                            mediaUri=p.uri
+                                            if(isConversationMedia(p))mediaUri=p.uri
+                                            else launchJob { withContext(Dispatchers.IO){MessageMedia.open(context,p)} }
                                         }
-                                        if(p.mime.startsWith("video/"))MessageMediaAction("Video",if(!m.sent)sentColor(spec)else MaterialTheme.colorScheme.surface){mediaUri=p.uri}
+                                        if(p.mime.startsWith("video/")&&isConversationMedia(p))MessageMediaAction("Video",if(!m.sent)sentColor(spec)else MaterialTheme.colorScheme.surface){mediaUri=p.uri}
                                     }
                                     if (m.suspicious) SpamWarning(m.sender.ifBlank { address }, if (group == null) thread else 0)
                                     val messageDisplayText=if(playVideo!=null)MessageVideoLinks.displayText(m.text)else m.text
@@ -632,7 +661,13 @@ fun MessengerPane(
                         }
                     }
                 }
-                if (visible.isEmpty() && !loadingMessages)
+                if (visible.isEmpty() && (loadingMessages || !feedLoaded)) item {
+                    Column(Modifier.padding(16.dp)) {
+                        Text(feedError ?: "Loading messages…")
+                        if(feedError!=null)TextButton(onClick={feedOpen++}){Text("Try again")}
+                    }
+                }
+                else if (visible.isEmpty())
                     item {
                         Text(
                             if (panel == "Starred") "Star a message to keep it here."
@@ -814,8 +849,9 @@ fun MessengerPane(
     }
     mediaUri?.let{selected->
         val media=conversationMedia(galleryMessages+messages)
-        if(media.isNotEmpty())ConversationMediaViewer(media,selected,state,{message,value->flag(message,"starred",value)},{mediaUri=null})
+        if(media.any{it.part.uri==selected})ConversationMediaViewer(media,selected,state,{message,value->flag(message,"starred",value)},{mediaUri=null})
     }
+    contactCard?.let { part -> VCardAttachmentDialog(part) { contactCard=null } }
     messageMenu?.let { m ->
         val flags = state.messageFlags(m)
         ReferenceDialog(
@@ -860,7 +896,8 @@ fun MessengerPane(
             if (m.parts.isNotEmpty())
                 m.parts.forEach { p ->
                     SettingsChoice("Open " + p.name) {
-                        if(p.mime.startsWith("image/")||p.mime.startsWith("video/")||p.mime.startsWith("audio/"))mediaUri=p.uri
+                        if(MessageMedia.isVCard(p.mime,p.name))contactCard=p
+                        else if(isConversationMedia(p))mediaUri=p.uri
                         else launchJob { withContext(Dispatchers.IO) { MessageMedia.open(context, p) } }
                         messageMenu = null
                     }
@@ -946,7 +983,7 @@ fun MessengerPane(
                                         parts.put(
                                             MessageMedia.import(
                                                 context,
-                                                MessageMedia.grantable(context, it),
+                                                it,
                                                 280000,
                                             )
                                         )

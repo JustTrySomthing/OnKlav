@@ -39,7 +39,9 @@ data class Conversation(
     val count: Int = 0,
 )
 
-data class MessagePart(val uri: String, val mime: String, val name: String)
+data class MessagePart(val uri: String, val mime: String, val name: String, val inlineText: String?) {
+    constructor(uri:String,mime:String,name:String):this(uri,mime,name,null)
+}
 
 data class Message(
     val id: Long,
@@ -67,7 +69,7 @@ class MessageRepository(private val context: Context) {
         val observer =
             object : ContentObserver(Handler(Looper.getMainLooper())) {
                 override fun onChange(selfChange: Boolean) {
-                    inboxCache=null; messageCache.clear()
+                    inboxCache=null
                     trySend(Unit)
                 }
                 override fun onChange(selfChange:Boolean,uri:Uri?){
@@ -78,9 +80,12 @@ class MessageRepository(private val context: Context) {
         listOf(
                 Telephony.Sms.CONTENT_URI,
                 Telephony.Mms.CONTENT_URI,
+                Uri.parse("content://mms-sms"),
                 ContactsContract.Contacts.CONTENT_URI,
             )
             .forEach { runCatching { resolver.registerContentObserver(it, true, observer) } }
+        inboxCache=null
+        trySend(Unit)
         awaitClose { resolver.unregisterContentObserver(observer) }
     }
 
@@ -367,11 +372,17 @@ class MessageRepository(private val context: Context) {
             ?.use { c ->
                 var count = 0
                 while (c.moveToNext() && count++ < 64) {
-                    val type = c.getString(1).orEmpty().lowercase()
+                    val type = c.getString(1).orEmpty().substringBefore(';').trim().lowercase()
+                    val name = c.getString(3).orEmpty().ifBlank {c.getString(4).orEmpty()}
+                    val cardName = if(name.endsWith(".vcf",true))name else c.getString(4).orEmpty()
+                        .takeIf{it.endsWith(".vcf",true)} ?: name
                     val uri = "content://mms/part/${c.getLong(0)}"
-                    when (type) {
-                        "application/smil" -> {}
-                        "text/plain" -> {
+                    when {
+                        type == "application/smil" -> Unit
+                        MessageMedia.isVCard(type,cardName) -> parts += MessagePart(
+                            uri, MessageMedia.VCARD_MIME, MessageMedia.vCardName(cardName),
+                            c.getString(2)?.takeIf {it.isNotBlank()})
+                        type == "text/plain" -> {
                             val value =
                                 c.getString(2)
                                     ?: runCatching {
@@ -389,7 +400,7 @@ class MessageRepository(private val context: Context) {
                                 MessagePart(
                                     uri,
                                     type.ifBlank { "application/octet-stream" },
-                                    c.getString(3) ?: c.getString(4) ?: "Attachment",
+                                    name.ifBlank { "Attachment" },
                                 )
                     }
                 }
@@ -501,10 +512,8 @@ class MessageRepository(private val context: Context) {
     ): List<Message> =
         withContext(Dispatchers.IO) {
             val state = snapshot ?: ChatStore(context).snapshot()
-            val cacheKey="$thread:$limit:$beforeDate:$beforeSmsId:$beforeMmsId"
-            val cached=if(allowed())messageCache[cacheKey]?.takeIf{android.os.SystemClock.elapsedRealtime()-it.first<30000} else null
-            val result = cached?.second?.toMutableList() ?: mutableListOf<Message>()
-            if (cached==null && allowed() && thread > 0) {
+            val result = mutableListOf<Message>()
+            if (allowed() && thread > 0) {
                 resolver
                     .query(
                         Telephony.Sms.CONTENT_URI,
@@ -572,7 +581,6 @@ class MessageRepository(private val context: Context) {
                         }
                     }
             }
-            if(cached==null && allowed() && thread>0){if(messageCache.size>=12)messageCache.clear();messageCache[cacheKey]=android.os.SystemClock.elapsedRealtime() to result.toList()}
             val outgoing = state.child("outgoing")
             val consumed = mutableSetOf<String>()
             val combined =
@@ -706,7 +714,6 @@ class MessageRepository(private val context: Context) {
         private val canonical=ConcurrentHashMap<String,String>()
         @Volatile private var inboxCache:Pair<Long,List<Conversation>>?=null
         @Volatile private var inboxLimit=0
-        private val messageCache=ConcurrentHashMap<String,Pair<Long,List<Message>>>()
 
         fun readBounded(input: java.io.InputStream, maximum: Int): ByteArray {
             val out = java.io.ByteArrayOutputStream()

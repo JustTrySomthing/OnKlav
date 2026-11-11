@@ -11,6 +11,7 @@ import android.telephony.*
 import app.onklav.shared.NativeCore
 import java.io.File
 import java.security.MessageDigest
+import kotlinx.coroutines.flow.update
 import org.json.*
 
 /** Android carries messages; Rust owns the wire codec and durable outcome ledger. */
@@ -296,7 +297,7 @@ object MessagingTransport {
             if(!receipt.optBoolean("notified")){MessageNotifications.incoming(context,thread,address,body,fileThread=false);phase("notified")}
         }
         check(saved.delete()) { "Message was saved but its recovery record could not be removed" }
-        ChatStore.epoch.value++
+        ChatStore.epoch.update { it+1 }
     }
 
     fun retrySms(context: Context) {
@@ -433,6 +434,8 @@ object MessagingTransport {
                         }
             }
             if(receiveId!=null)check(context.contentResolver.update(uri,values("ct_l" to "onklav-received:$receiveId"),null,null)>0){"Picture receipt could not be saved"}
+            // The provider can notify when the parent row is inserted, before its parts are written.
+            runCatching {context.contentResolver.notifyChange(uri,null,0)}
             return uri
         } catch (e: Exception) {
             runCatching { context.contentResolver.delete(uri, null, null) }
@@ -581,7 +584,7 @@ object MessagingTransport {
             check(prefs.edit().putString("$id.error", e.message).putLong("$id.attempt", 0).remove("$id.retry_due").commit()){ "Download failure could not be saved. Check available storage." }
             MessageNotifications.picturePending(context,id,prefs.getString("$id.sender","").orEmpty(),"Open Messages to retry the download.")
             throw e
-        }finally{ChatStore.epoch.value++}
+        }finally{ChatStore.epoch.update { it+1 }}
     }
 
     private fun clearDecodedParts(context:Context,pdu:JSONObject){
@@ -674,7 +677,7 @@ object MessagingTransport {
             if(retry){val retries=prefs.getInt("$id.retries",0)+1;check(prefs.edit().putInt("$id.retries",retries).putLong("$id.retry_due",System.currentTimeMillis()+15000L*(1L shl (retries-1))).commit());MmsDownloadRecovery.schedule(context)}
             MessageNotifications.picturePending(context,id,prefs.getString("$id.sender","").orEmpty(),(e.message?:"Open Messages to retry.")+if(retry)" We’ll retry automatically."else "")
         }
-        ChatStore.epoch.value++
+        ChatStore.epoch.update { it+1 }
     }
 
     /** Store the private callback before applying it. A crash can replay metadata, never a send. */

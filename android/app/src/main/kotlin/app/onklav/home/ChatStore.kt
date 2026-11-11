@@ -5,6 +5,7 @@ import app.onklav.shared.NativeCore
 import java.util.concurrent.Executors
 import kotlinx.coroutines.asCoroutineDispatcher
 import kotlinx.coroutines.flow.MutableStateFlow
+import kotlinx.coroutines.flow.update
 import kotlinx.coroutines.withContext
 import org.json.JSONArray
 import org.json.JSONObject
@@ -46,7 +47,7 @@ class ChatStore(context: Context) {
         check(response.getBoolean("ok")) {
             response.optString("error", "Could not save messenger state")
         }
-        if (value.optString("action") !in setOf("snapshot", "draft", "draft_media")) epoch.value++
+        if (value.optString("action") !in setOf("snapshot", "draft", "draft_media")) epoch.update { it+1 }
         val state=response.getJSONObject("value")
         if(value.optString("action")=="arrival") {
             val thread=value.optString("key").toLongOrNull()?:0L
