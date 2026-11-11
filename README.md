@@ -8,7 +8,7 @@
 
 **[Download OnKlav for Android · 133 MB APK](https://github.com/JustTrySomthing/OnKlav/releases/download/v0.101.56-rc1/OnKlav-0.101.56-RC.apk)** · [Release notes](https://github.com/JustTrySomthing/OnKlav/releases/tag/v0.101.56-rc1) · [SDK downloads](https://github.com/JustTrySomthing/OnKlav/releases/tag/v0.101.49-rc1)
 
-**Updates built in.** Open **Settings → Check for updates** to download and install future versions. Optional automatic checks run once a day when you open OnKlav.
+**Updates built in.** OnKlav checks daily while open and can also check in the background. When an update appears on the Apps tab, tap **Update now** and confirm in Android’s installer. You can also check manually in **Settings → Check for updates**.
 
 **Android 10+ · ARM64 · Prerelease 0.101.49-rc1 · 39 built-in apps and tools · 8 games**
 

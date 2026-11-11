@@ -147,43 +147,43 @@ internal object UpdateApk {
 }
 class OnKlavUpdateProvider:FileProvider()
 internal data class UpdateUi(val busy:Boolean=false,val downloading:Boolean=false,val downloaded:Long=0,val release:OnKlavRelease?=null,
-    val ready:Boolean=false,val message:String="Check GitHub for the latest OnKlav version.",val error:String?=null,val prompt:Boolean=false)
+    val ready:Boolean=false,val message:String="Check GitHub for the latest OnKlav version.",val error:String?=null,
+    val prompt:Boolean=false,val installRequested:Boolean=false)
 class OnKlavUpdateModel(app:Application):AndroidViewModel(app) {
     private val c=app.applicationContext
-    private val prefs=c.getSharedPreferences("onklav-updates",0)
+    private val prefs=UpdateChecks.prefs(c)
     private val dir=File(c.cacheDir,"onklav-updates").apply{mkdirs()}
     private val file=File(dir,"update.apk")
     private var job:Job?=null
     internal var ui by mutableStateOf(UpdateUi());private set
     var automatic by mutableStateOf(prefs.getBoolean("automatic",true));private set
-    var previews by mutableStateOf(prefs.getBoolean("previews",UpdateVersion.parse(BuildConfig.VERSION_NAME)?.rc!=null));private set
+    var previews by mutableStateOf(UpdateChecks.includesPreviews(prefs));private set
     init {
         task {
+            UpdateChecks.cleanInstalledDownload(c)
+            File(dir,"update.part").delete()
             val available=cachedRelease("available")
             if(available!=null)ui=ui.copy(release=available,message=availableMessage(available),prompt=shouldPrompt(available))
             else prefs.edit().remove("available").apply()
             val saved=cachedRelease("ready")
             if(saved!=null&&(available==null||available==saved)) {
                 val valid=withContext(Dispatchers.IO){runCatching{UpdateApk.verify(c,file,saved)}.isSuccess}
-                if(valid)ui=ui.copy(release=saved,ready=true,message="Update downloaded. Ready to install.",prompt=shouldPrompt(saved))
+                if(valid) {
+                    if(available==null) prefs.edit().putString("available",saved.json().toString()).apply()
+                    ui=ui.copy(release=saved,ready=true,message="Update downloaded. Ready to install.",prompt=shouldPrompt(saved))
+                }
                 else clearDownload()
             } else clearDownload()
             if(due())runCheck(true)
         }
     }
-    private fun current()=requireNotNull(UpdateVersion.parse(BuildConfig.VERSION_NAME))
-    private fun cachedRelease(key:String):OnKlavRelease? {
-        val json=prefs.getString(key,null)?:return null
-        return runCatching {OnKlavRelease.cached(JSONObject(json))}.getOrNull()
-            ?.takeIf {it.version>current()&&(previews||it.version.rc==null)}
-    }
-    private fun shouldPrompt(release:OnKlavRelease)=automatic&&prefs.getString("notified",null)!=release.tag
+    private fun cachedRelease(key:String)=UpdateChecks.cached(prefs,key)
+        ?.takeIf {it.version>UpdateChecks.current()&&(previews||it.version.rc==null)}
+    private fun shouldPrompt(release:OnKlavRelease)=UpdateChecks.shouldPrompt(prefs,release)
     private fun availableMessage(release:OnKlavRelease)="OnKlav ${release.version.label} is available."
     private fun due():Boolean {
-        val now=System.currentTimeMillis();val last=prefs.getLong("checked",0)
         val online=c.getSystemService(ConnectivityManager::class.java)?.activeNetwork!=null
-        val attempted=prefs.getLong("attempted",0)
-        return automatic&&online&&(now<last||now-last>=24*60*60*1000L)&&(now<attempted||now-attempted>=60*60*1000L)
+        return online&&UpdateChecks.due(prefs,UpdateChecks.DAY)
     }
     private fun task(action:suspend()->Unit) {
         if(job?.isActive==true)return
@@ -197,23 +197,39 @@ class OnKlavUpdateModel(app:Application):AndroidViewModel(app) {
             finally {ui=ui.copy(busy=false,downloading=false)}
         }
     }
-    fun automaticCheck(){if(due())task{runCheck(true)}}
+    fun automaticCheck(){
+        if(job?.isActive==true)return
+        val available=cachedRelease("available")
+        if(available!=ui.release)showResult(available,true)
+        else if(available!=null&&!ui.installRequested)ui=ui.copy(prompt=shouldPrompt(available))
+        if(due())task{runCheck(true)}
+    }
     fun checkNow()=task{runCheck(false)}
     fun changeAutomatic(value:Boolean){
         automatic=value;prefs.edit().putBoolean("automatic",value).apply()
+        UpdateChecks.schedule(c)
         ui=ui.copy(prompt=value&&ui.release?.let(::shouldPrompt)==true)
         if(value)automaticCheck()
     }
     fun changePreviews(value:Boolean){previews=value;prefs.edit().putBoolean("previews",value).apply();if(!ui.busy)checkNow()}
-    fun dismissPrompt(){ui.release?.let{prefs.edit().putString("notified",it.tag).apply()};ui=ui.copy(prompt=false)}
-    private fun clearDownload(){file.delete();prefs.edit().remove("ready").apply();ui=ui.copy(ready=false)}
+    fun dismissPrompt(){
+        ui.release?.let {
+            prefs.edit().putString("notified",it.tag).putLong("notifiedAt",System.currentTimeMillis()).apply()
+        }
+        UpdateChecks.cancelNotice(c)
+        ui=ui.copy(prompt=false)
+    }
+    private fun clearDownload(){
+        file.delete();prefs.edit().remove("ready").apply()
+        ui=ui.copy(ready=false,installRequested=false)
+    }
     private suspend fun runCheck(silent:Boolean) {
-        prefs.edit().putLong("attempted",System.currentTimeMillis()).apply()
         if(!silent)ui=ui.copy(message="Checking GitHub…")
-        val release=withContext(Dispatchers.IO){UpdateFeed.select(UpdateFeed.releases(),current(),previews)}
-        prefs.edit().putLong("checked",System.currentTimeMillis()).apply {
-            if(release==null)remove("available") else putString("available",release.json().toString())
-        }.apply()
+        val result=UpdateChecks.check(prefs,UpdateChecks.DAY.takeIf {silent})?:return
+        if(result.release==null)UpdateChecks.cancelNotice(c)
+        showResult(result.release,silent)
+    }
+    private fun showResult(release:OnKlavRelease?,silent:Boolean) {
         if(release!=ui.release){clearDownload()}
         ui=ui.copy(release=release,message=when {
             release==null->"You’re up to date."
@@ -222,7 +238,13 @@ class OnKlavUpdateModel(app:Application):AndroidViewModel(app) {
         },prompt=silent&&release?.let(::shouldPrompt)==true)
     }
     fun cancelDownload(){if(ui.downloading)job?.cancel()}
-    fun download() {
+    fun updateNow() {
+        if(ui.busy||ui.release==null)return
+        dismissPrompt()
+        if(ui.ready)ui=ui.copy(installRequested=true,error=null) else download()
+    }
+    fun consumeInstallRequest(){ui=ui.copy(installRequested=false)}
+    private fun download() {
         val release=ui.release?:return
         task {
             clearDownload();ui=ui.copy(downloading=true,downloaded=0,message="Downloading update…",prompt=false)
@@ -236,7 +258,7 @@ class OnKlavUpdateModel(app:Application):AndroidViewModel(app) {
                     check(part.renameTo(file)){"Could not save the verified update. Please try again."}
                 }
                 prefs.edit().putString("ready",release.json().toString()).apply()
-                ui=ui.copy(ready=true,message="Update verified. Ready to install.")
+                ui=ui.copy(ready=true,installRequested=true,message="Update verified. Ready to install.")
             } finally {withContext(Dispatchers.IO+NonCancellable){part.delete()}}
         }
     }
@@ -245,7 +267,14 @@ class OnKlavUpdateModel(app:Application):AndroidViewModel(app) {
         if(!ui.ready)return
         task {
             check(context.packageManager.canRequestPackageInstalls()){ "Allow OnKlav to install updates, then tap Install update." }
-            withContext(Dispatchers.IO){UpdateApk.verify(c,file,release)}
+            withContext(Dispatchers.IO){
+                try { UpdateApk.verify(c,file,release) }
+                catch(e:Exception){
+                    if(e is CancellationException)throw e
+                    withContext(Dispatchers.Main){clearDownload()}
+                    throw e
+                }
+            }
             context.startActivity(UpdateApk.installer(context,file))
             ui=ui.copy(message="Confirm the update in Android’s installer. If you cancel, tap Install update to try again.")
         }

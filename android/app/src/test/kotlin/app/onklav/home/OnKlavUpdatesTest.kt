@@ -3,6 +3,7 @@ package app.onklav.home
 import android.content.Context
 import android.content.Intent
 import android.app.Application
+import android.app.job.JobScheduler
 import android.os.Looper
 import androidx.core.content.FileProvider
 import androidx.test.core.app.ApplicationProvider
@@ -70,6 +71,37 @@ class OnKlavUpdatesTest {
         shadowOf(Looper.getMainLooper()).idle()
         assertEquals(pending,dismissed.ui.release)
         assertFalse(dismissed.ui.prompt)
+        assertTrue(UpdateChecks.shouldPrompt(prefs,pending,System.currentTimeMillis()+UpdateChecks.DAY))
+    }
+    @Test fun backgroundCheckIsPersistentNetworkConstrainedAndCanBeDisabled() {
+        val context=ApplicationProvider.getApplicationContext<Context>()
+        val prefs=UpdateChecks.prefs(context)
+        val scheduler=context.getSystemService(JobScheduler::class.java)
+        UpdateChecks.schedule(context)
+        UpdateChecks.schedule(context)
+        val job=scheduler.allPendingJobs.single {it.service.className==OnKlavUpdateJob::class.java.name}
+        assertTrue(job.isPersisted)
+        assertTrue(job.isPeriodic)
+        assertNotNull(job.requiredNetwork)
+        assertTrue(job.intervalMillis<UpdateChecks.DAY)
+        prefs.edit().putBoolean("automatic",false).commit()
+        UpdateChecks.schedule(context)
+        assertNull(scheduler.getPendingJob(job.id))
+    }
+    @Test fun cleanupKeepsUninstalledApkAndDeletesItAfterSuccessfulUpgrade() {
+        val context=ApplicationProvider.getApplicationContext<Context>()
+        val prefs=UpdateChecks.prefs(context)
+        val apk=File(context.cacheDir,"onklav-updates/update.apk").apply {parentFile!!.mkdirs();writeBytes(payload)}
+        val part=File(apk.parentFile,"update.part").apply {writeBytes(payload)}
+        prefs.edit().putString("ready",release().json().toString()).putString("available",release().json().toString()).commit()
+        UpdateChecks.cleanInstalledDownload(context,old)
+        assertTrue(apk.isFile)
+        assertTrue(prefs.contains("ready"))
+        UpdateChecks.cleanInstalledDownload(context,next)
+        assertFalse(apk.exists())
+        assertFalse(part.exists())
+        assertFalse(prefs.contains("ready"))
+        assertFalse(prefs.contains("available"))
     }
     @Test fun unsafeMetadataCannotBecomeAnInstallCandidate() {
         val badUrl=row(release().copy(url="https://github.com/other/OnKlav/releases/evil.apk"))

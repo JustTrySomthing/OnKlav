@@ -40,12 +40,14 @@ class MainActivity : ComponentActivity() {
         launchIntent = intent
         runCatching{SdkNativeData.flush(this)}.onFailure{ChatStore.lastError.value="App cleanup remains pending: ${it.message}"}
         TransportRecovery.schedule(this)
+        UpdateChecks.schedule(this)
         // Draw the shell immediately. Package setup already runs asynchronously;
         // holding every pre-draw hid useful UI for 350ms to two seconds.
         setContent { OnKlavTheme { OnKlavScreen(launchIntent, intentEpoch) } }
     }
 
-    override fun onResume(){super.onResume();PhoneCalls.reconcile(this);androidx.lifecycle.ViewModelProvider(this)[OnKlavUpdateModel::class.java].automaticCheck()}
+    override fun onResume(){super.onResume();UpdateChecks.foreground=true;PhoneCalls.reconcile(this)}
+    override fun onPause(){UpdateChecks.foreground=false;super.onPause()}
 
     override fun onTrimMemory(level:Int) {
         super.onTrimMemory(level)
@@ -128,6 +130,10 @@ fun OnKlavScreen(launchIntent: Intent? = null, intentEpoch: Int = 0,onReady:()->
     val incomingMessageKey = launchIntent?.getStringExtra("open_message_key")
     val incomingMessageDate = launchIntent?.getLongExtra("open_message_date", 0) ?: 0
     LaunchedEffect(intentEpoch) {
+        if (launchIntent?.action == UpdateChecks.OPEN) {
+            settingsRoute = "Check for updates"
+            return@LaunchedEffect
+        }
         if(launchIntent?.getBooleanExtra("open_friend_games",false)==true){setup=false;tab=2;gameMatch=launchIntent.getStringExtra("friend_game_match");activeTool="games";return@LaunchedEffect}
         try{launchIntent?.getStringExtra("sdk_notice")?.let{token->
             val app=withContext(kotlinx.coroutines.Dispatchers.IO){SdkNotifications.resolveTap(context,token)}

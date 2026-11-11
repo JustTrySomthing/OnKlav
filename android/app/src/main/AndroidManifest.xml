@@ -88,6 +88,8 @@
     <service android:name=".SdkTransferJobService" android:exported="true" android:permission="android.permission.BIND_JOB_SERVICE"/>
     <service android:name=".SdkNotificationJobService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="true"/>
     <service android:name=".TransportRecoveryService" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="true"/>
+    <service android:name=".OnKlavUpdateJob" android:permission="android.permission.BIND_JOB_SERVICE" android:exported="true"/>
+    <receiver android:name=".OnKlavUpdateReceiver" android:exported="false"><intent-filter><action android:name="android.intent.action.MY_PACKAGE_REPLACED"/></intent-filter></receiver>
     <receiver android:name=".TransportRecoveryReceiver" android:exported="false"><intent-filter><action android:name="android.intent.action.BOOT_COMPLETED"/><action android:name="android.intent.action.MY_PACKAGE_REPLACED"/></intent-filter></receiver>
     <receiver android:name=".SdkWalkieResultReceiver" android:exported="false"/>
     <receiver android:name=".FriendGameResultReceiver" android:exported="false"/>
