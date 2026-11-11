@@ -49,6 +49,39 @@ class IncomingGroupsTest {
   val id=groups.single().id;val again=MessageRepository(c).reconcileGroups();assertEquals(id,again.savedGroups().single().id)
   val direct=MessageRepository(c).conversations(40,again,directOnly=true);assertEquals(setOf(7L,43L),direct.map{it.id}.toSet());assertTrue(phone.lastSelection.contains("NOT IN"))
  }
+ @Test fun notificationResolvesOnlyTheRequestedGroupBeforeTheListLoads() = runBlocking {
+  val repo = MessageRepository(c)
+  assertNull(repo.groupForThread(7, "sms:21"))
+  val group = repo.groupForThread(42, "mms:21")!!
+  assertEquals(listOf("5550101", "5550102"), group.members)
+  assertEquals(group, repo.groupForThread(42, "mms:22"))
+  assertEquals(listOf(42L), ChatStore(c).snapshot().savedGroups().map { it.thread })
+ }
+ @Test fun notificationUsesTheMmsEnvelopeWhileItsGroupSummaryIsMissing() = runBlocking {
+  phone.rows.removeAll { it.id == 42L }
+  val provider = object : ContentProvider() {
+   override fun onCreate() = true
+   override fun query(uri: Uri, projection: Array<out String>?, selection: String?,
+    args: Array<out String>?, sort: String?) = MatrixCursor(requireNotNull(projection)).apply {
+    when (uri.path) {
+     "/21" -> addRow(arrayOf(42L, 2L, 0))
+     "/21/addr" -> {
+      addRow(arrayOf<Any>("5550101", 137))
+      addRow(arrayOf<Any>("5550102", 151))
+      addRow(arrayOf<Any>("5550199", 151))
+     }
+    }
+   }
+   override fun getType(uri: Uri): String? = null
+   override fun insert(uri: Uri, values: ContentValues?): Uri? = null
+   override fun delete(uri: Uri, selection: String?, args: Array<out String>?) = 0
+   override fun update(uri: Uri, values: ContentValues?, selection: String?, args: Array<out String>?) = 0
+  }
+  ShadowContentResolver.registerProviderInternal("mms", provider)
+  val repo = MessageRepository(c)
+  assertNull(repo.groupForThread(44, "mms:21"))
+  assertEquals(listOf("5550101", "5550102"), repo.groupForThread(42, "mms:21")?.members)
+ }
  @Test fun discoveryPreservesArchiveNamesPinAndMuteButNewCreationReturnsToInbox()=runBlocking {
   val store=ChatStore(c);store.requestSync(JSONObject().put("action","thread").put("key","42").put("folder","Trash").put("pinned",true).put("muted",true))
   val discovered=MessageRepository(c).reconcileGroups();assertEquals("Trash",discovered.thread(42).getString("folder"))

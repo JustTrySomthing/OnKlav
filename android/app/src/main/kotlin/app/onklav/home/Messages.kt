@@ -315,27 +315,63 @@ class MessageRepository(private val context: Context) {
             )?.use { cursor ->
                 if (cursor.moveToFirst()) {
                     val peers = addresses(cursor.getString(4).orEmpty())
-                    return Conversation(cursor.getLong(0), peers,
+                    if (peers.isNotBlank()) return Conversation(cursor.getLong(0), peers,
                         peers.split(';').filter { it.isNotBlank() }.joinToString(", ") { contactName(it) }.ifBlank { "Unknown" },
                         cursor.getString(2).orEmpty(), cursor.getLong(1), cursor.getInt(3) == 0, cursor.getInt(5))
                 }
             }
         } catch (_: Exception) {
-            // OEM fallback stays constrained to the requested thread.
-            resolver.query(Telephony.Sms.CONTENT_URI,
-                arrayOf("thread_id", "address", "body", "date", "read"),
-                "thread_id=?", arrayOf(id.toString()), "date DESC")?.use { cursor ->
-                if (cursor.moveToFirst()) {
-                    val peer = cursor.getString(1).orEmpty()
-                    return Conversation(id, peer, contactName(peer), cursor.getString(2).orEmpty(),
-                        cursor.getLong(3), cursor.getInt(4) == 0)
-                }
-            }
+            // Some providers do not expose the combined threads query.
         }
-        return null
+        // The SMS row may be visible before the combined thread summary is ready.
+        return runCatching {
+            resolver.query(Telephony.Sms.CONTENT_URI, arrayOf("thread_id", "address", "body", "date", "read"),
+                "thread_id=?", arrayOf(id.toString()), "date DESC")?.use { cursor ->
+                if (!cursor.moveToFirst()) return@use null
+                val peer = cursor.getString(1).orEmpty()
+                Conversation(id, peer, contactName(peer), cursor.getString(2).orEmpty(),
+                    cursor.getLong(3), cursor.getInt(4) == 0)
+            }
+        }.getOrNull()
     }
 
     suspend fun conversation(id:Long):Conversation?=withContext(Dispatchers.IO){providerConversation(id)?.let{conversationReadState(it,ChatStore(context).snapshot())}}
+
+    private fun notificationConversation(thread: Long, messageKey: String?): Conversation? {
+        val row = providerConversation(thread)
+        val mmsId = messageKey?.takeIf { it.startsWith("mms:") }?.substringAfter(':')?.toLongOrNull()
+        if (mmsId == null || !allowed() || row?.address?.contains(';') == true) return row
+        // A new MMS thread can have a readable envelope before the combined summary is ready.
+        val mms = runCatching {
+            resolver.query(Uri.parse("content://mms/$mmsId"), arrayOf("thread_id", "date", "read"), null, null, null)
+                ?.use { if (it.moveToFirst() && it.getLong(0) == thread) it.getLong(1) * 1000 to (it.getInt(2) == 0) else null }
+        }.getOrNull() ?: return row
+        val addresses = runCatching {
+            resolver.query(Uri.parse("content://mms/$mmsId/addr"), arrayOf("address", "type"), null, null, null)
+                ?.use { cursor -> buildList {
+                    while (cursor.moveToNext()) cursor.getString(0)?.let { add(it to cursor.getInt(1)) }
+                } }
+        }.getOrNull().orEmpty()
+        val to = addresses.filter { it.second == 151 }
+        val peers = if (to.size > 1 && context.getSharedPreferences("profile", 0).getString("phone", "").orEmpty().isNotBlank())
+            addresses.filter { it.second in setOf(137, 151) } else addresses.filter { it.second == 137 }
+        val members = incomingGroupMembers(context, peers.joinToString(";") { it.first })
+        if (members.isEmpty() || (row?.address?.isNotBlank() == true && members.size == 1)) return row
+        return Conversation(thread, members.joinToString(";"), members.joinToString(", ") { contactName(it) }, "", mms.first, mms.second)
+    }
+
+    suspend fun notificationTarget(thread: Long, messageKey: String?): Conversation? = withContext(Dispatchers.IO) {
+        notificationConversation(thread, messageKey)
+    }
+
+    suspend fun groupForThread(thread: Long, messageKey: String?): SavedGroup? = withContext(Dispatchers.IO) {
+        val store = ChatStore(context)
+        val state = store.snapshot()
+        if (!allowed()) return@withContext null
+        state.savedGroups().firstOrNull { it.thread == thread } ?: notificationConversation(thread, messageKey)
+            ?.let { store.registerIncomingGroup(context, it).savedGroups().firstOrNull { group -> group.thread == thread } }
+    }
+
     suspend fun reconcileGroups():JSONObject=withContext(Dispatchers.IO){
         val store=ChatStore(context);var state=store.snapshot()
         if(!allowed())return@withContext state
@@ -457,7 +493,7 @@ class MessageRepository(private val context: Context) {
         check(allowed()){ "Allow SMS access in Setup to read conversation media" }
         if(thread<=0)return@withContext MediaPage(emptyList(),null,false)
         val result=mutableListOf<Message>();var next:MediaCursor?=null;var more=false
-        val outgoing=snapshot.child("outgoing");val tokens=outgoing.keysList().associateBy{outgoing.child(it).optString("provider_uri")}
+        val outgoing=snapshot.child("outgoing");val tokens=outgoing.keysList().associateBy{providerMessageUri(outgoing.child(it).optString("provider_uri"))}
         val selection="thread_id=? AND msg_box<>3"+if(before!=null)" AND (date<? OR (date=? AND _id<?))"else""
         val args=if(before==null)arrayOf(thread.toString())else arrayOf(thread.toString(),(before.date/1000).toString(),(before.date/1000).toString(),before.id.toString())
         val cursor=resolver.query(Telephony.Mms.CONTENT_URI,arrayOf("_id","date","msg_box"),selection,args,"date DESC, _id DESC")?:error("Conversation media could not be read")
@@ -509,6 +545,7 @@ class MessageRepository(private val context: Context) {
         beforeDate:Long=Long.MAX_VALUE,
         beforeSmsId:Long=Long.MAX_VALUE,
         beforeMmsId:Long=Long.MAX_VALUE,
+        queuedSend: String? = null,
     ): List<Message> =
         withContext(Dispatchers.IO) {
             val state = snapshot ?: ChatStore(context).snapshot()
@@ -582,29 +619,29 @@ class MessageRepository(private val context: Context) {
                     }
             }
             val outgoing = state.child("outgoing")
+            val outgoingIds = outgoing.keysList()
+            val providerUris = outgoingIds.associateWith { providerMessageUri(outgoing.child(it).optString("provider_uri")) }
             val consumed = mutableSetOf<String>()
             val combined =
                 result
                     .sortedBy { it.date }
                     .map { message ->
                         val token =
-                            outgoing
-                                .keysList()
+                            outgoingIds
                                 .filterNot { it in consumed }
                                 .filter { key ->
                                     val o = outgoing.child(key)
                                     val uri = o.optString("provider_uri")
-                                    uri == message.uri ||
+                                    message.sent && (providerUris[key] == message.uri ||
                                         (uri.isEmpty() &&
                                             o.optString("kind") != "mms" &&
-                                            message.sent &&
                                             sameRecipients(
                                                 o.optString("address"),
                                                 message.sender,
                                             ) &&
                                             o.optString("text") == message.text &&
                                             kotlin.math.abs(o.optLong("started") - message.date) <
-                                                60000)
+                                                60000))
                                 }
                                 .minByOrNull {
                                     kotlin.math.abs(
@@ -622,24 +659,27 @@ class MessageRepository(private val context: Context) {
                         }
                     }
                     .toMutableList()
-            if (address.isNotBlank())
-                for (token in outgoing.keysList().filterNot { it in consumed }) {
+            if (address.isNotBlank() && beforeDate == Long.MAX_VALUE)
+                for (token in outgoingIds.filterNot { it in consumed }) {
                     val o = outgoing.child(token)
-                    if (
-                        sameRecipients(address, o.optString("address")) &&
-                            o.optString("provider_uri").isEmpty()
+                    val uri = providerUris[token]
+                    if (!sameRecipients(address, o.optString("address"))) continue
+                    if (o.optString("provider_uri").isNotEmpty() &&
+                        (uri == null || !allowed() || (token != queuedSend &&
+                            (o.optBoolean("provider_synced") || o.optString("status") != "Sending")))) continue
+                    val id = uri?.substringAfterLast('/')?.toLongOrNull() ?: -1L
+                    combined += Message(
+                        -1L,
+                        o.optString("text"),
+                        o.optLong("started"),
+                        true,
+                        key = "out:$token",
+                        uri = "",
+                        status = o.optString("status"),
+                        parts = if (uri?.startsWith("content://mms/") == true)
+                            runCatching { parts(id).second }.getOrDefault(emptyList()) else emptyList(),
+                        error = MessagingTransport.smsDisplayError(o),
                     )
-                        combined +=
-                            Message(
-                                -1,
-                                o.optString("text"),
-                                o.optLong("started"),
-                                true,
-                                key = "out:$token",
-                                uri = "",
-                                status = o.optString("status"),
-                                error = MessagingTransport.smsDisplayError(o),
-                            )
                 }
             combined.sortedWith(compareBy<Message> { it.date }.thenBy { it.key }).takeLast(limit).map { m ->
                 if(m.sent) m else m.copy(suspicious=SpamPolicy.assess(context,m.sender.ifBlank { address },m.text))
@@ -727,4 +767,16 @@ class MessageRepository(private val context: Context) {
             return out.toByteArray()
         }
     }
+}
+
+/** Some phone providers return a folder-qualified URI from insert(). */
+private fun providerMessageUri(raw: String): String? {
+    if (raw.isEmpty()) return null
+    val uri = Uri.parse(raw)
+    val authority = uri.authority
+    if (uri.scheme != "content" || authority !in setOf("sms", "mms")) return null
+    val path = uri.pathSegments
+    if (path.size != 1 && (path.size != 2 || path.first() !in setOf("inbox", "sent", "outbox", "failed", "queued", "draft"))) return null
+    val id = path.last().toLongOrNull()?.takeIf { it > 0 } ?: return null
+    return "content://$authority/$id"
 }

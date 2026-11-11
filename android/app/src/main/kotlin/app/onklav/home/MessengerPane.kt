@@ -28,12 +28,16 @@ import androidx.compose.ui.text.AnnotatedString
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.unit.*
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.compose.LocalLifecycleOwner
+import androidx.lifecycle.compose.currentStateAsState
 import app.onklav.shared.*
 import app.onklav.shared.R
 import java.text.DateFormat
 import java.util.Date
 import kotlinx.coroutines.*
 import kotlinx.coroutines.flow.collectLatest
+import kotlinx.coroutines.flow.first
 import kotlinx.coroutines.sync.withLock
 import org.json.JSONArray
 import androidx.compose.ui.semantics.semantics
@@ -55,8 +59,10 @@ fun MessengerPane(
     openWalkie: ((String)->Unit)? = null,
     openGames: ((String,String)->Unit)? = null,
     openWeb: ((String)->Unit)? = null,
+    conversationVisible: Boolean = true,
 ) {
     val context = LocalContext.current
+    val lifecycle by LocalLifecycleOwner.current.lifecycle.currentStateAsState()
     val scope = rememberCoroutineScope()
     val store = remember { ChatStore(context) }
     val repo = remember { MessageRepository(context) }
@@ -73,6 +79,8 @@ fun MessengerPane(
     var feedError by remember { mutableStateOf<String?>(null) }
     var feedOpen by remember { mutableIntStateOf(0) }
     var positionedThread by remember { mutableLongStateOf(-1L) }
+    var focusedPosition by remember { mutableStateOf(false) }
+    var queuedSend by remember { mutableStateOf<String?>(null) }
     var address by rememberSaveable { mutableStateOf(group?.address.orEmpty()) }
     var thread by rememberSaveable { mutableLongStateOf(group?.thread ?: 0L) }
     var title by rememberSaveable { mutableStateOf(group?.name.orEmpty()) }
@@ -189,8 +197,19 @@ fun MessengerPane(
         loadingOlder=false
         olderFailure=false
         positionedThread=-1L
+        focusedPosition=false
+        queuedSend=null
         mediaUri=null
         contactCard=null
+        numberDialog=false
+        contacts=false
+        menu=null
+        messageMenu=null
+        reactionMessage=null
+        reminderMessage=null
+        activityMembers=false
+        activityPeer=null
+        membersVisible=false
         messages=memory.windows[id].orEmpty();memory.raw.value=memory.rawWindows[id].orEmpty()
         galleryMessages=memory.galleries[id]?.messages.orEmpty();galleryCursor=memory.galleries[id]?.next;galleryMore=memory.galleries[id]?.more?:false
         hasOlder=true
@@ -258,14 +277,29 @@ fun MessengerPane(
             }
         }
     }
-    LaunchedEffect(intentEpoch) {
-        if (group != null) open(group.address, group.thread, group.name, incomingMessageKey, incomingMessageDate)
-        else if (!incomingAddress.isNullOrBlank()) open(incomingAddress, targetKey = incomingMessageKey, targetDate = incomingMessageDate)
-        else if (incomingThread > 0) {
-            launchJob {
-                repo.conversation(incomingThread)
-                    ?.let { open(it.address, it.id, it.name, incomingMessageKey, incomingMessageDate) }
-                    ?: run { error = "The conversation is no longer available or message access is disabled." }
+    LaunchedEffect(intentEpoch, incomingThread, incomingAddress, incomingMessageKey) {
+        if (memory.handledLaunch == intentEpoch && (group == null || incomingMessageKey != null)) return@LaunchedEffect
+        if (group != null) {
+            open(group.address, group.thread, group.name, incomingMessageKey, incomingMessageDate)
+            if (incomingMessageKey != null) memory.handledLaunch = intentEpoch
+        } else if (!incomingAddress.isNullOrBlank()) {
+            open(incomingAddress, targetKey = incomingMessageKey, targetDate = incomingMessageDate)
+            memory.handledLaunch = intentEpoch
+        } else if (incomingThread > 0) {
+            try {
+                var conversation = repo.notificationTarget(incomingThread, incomingMessageKey)
+                if (conversation?.address.isNullOrBlank() && repo.allowed()) {
+                    delay(180)
+                    conversation = repo.notificationTarget(incomingThread, incomingMessageKey)
+                }
+                if (conversation != null && conversation.address.isNotBlank()) {
+                    open(conversation.address, conversation.id, conversation.name, incomingMessageKey, incomingMessageDate)
+                    memory.handledLaunch = intentEpoch
+                } else error = "The conversation is no longer available or message access is disabled."
+            } catch (e: CancellationException) {
+                throw e
+            } catch (e: Exception) {
+                error = e.message ?: "Could not open the conversation."
             }
         }
     }
@@ -296,17 +330,24 @@ fun MessengerPane(
                     }
                     if(resolved>0){thread=resolved;return@LaunchedEffect}
                 }
-                var fresh = repo.messages(thread, 20, state, address,beforeDate=historyBefore)
-                if(fresh.isEmpty() && !feedLoaded && thread>0 && repo.allowed()) {
+                val target = focusKey
+                val targetDate = focusDate
+                var fresh = repo.messages(thread, limit, state, address, beforeDate = historyBefore, queuedSend = queuedSend)
+                val waitingForFirstRows = fresh.isEmpty() && (!feedLoaded || messages.isNotEmpty())
+                val waitingForTarget = !feedLoaded && target != null && focusedMessageIndex(fresh, target, targetDate) < 0
+                if (thread > 0 && repo.allowed() && (waitingForFirstRows || waitingForTarget)) {
                     delay(180)
-                    fresh=repo.messages(thread,20,state,address,beforeDate=historyBefore)
+                    fresh = repo.messages(thread, limit, state, address, beforeDate = historyBefore, queuedSend = queuedSend)
                 }
-                hasOlder=fresh.size>=20
+                queuedSend?.let { token ->
+                    if (fresh.any { it.key == "out:$token" && it.id > 0 }) queuedSend = null
+                }
+                hasOlder = fresh.size >= limit
                 val loaded=if(historyBefore==Long.MAX_VALUE)mergeLatestMessages(memory.raw.value,fresh)else fresh
                 memory.raw.value=loaded
                 if (group != null) {
                     val context=repo.groupParents(thread,groupProtocol.targets(loaded))
-                    groupFeed = groupProtocol.feed((loaded+context).distinctBy{it.key})
+                    groupFeed = groupProtocol.feed((loaded + context).distinctBy { it.uri.ifBlank { it.key } })
                     val ids = groupFeed.getJSONArray("visible").let { a -> List(a.length()) { a.getString(it) }.toSet() }
                     messages = loaded.filter { it.key in ids }.map { it.copy(text = groupFeed.child("texts").optString(it.key, it.text)) }
                 } else messages = loaded
@@ -333,7 +374,7 @@ fun MessengerPane(
             hasOlder=batch.size>=40
             val combined=(batch+memory.raw.value).distinctBy{it.key}.sortedBy{it.date}
             memory.raw.value=combined
-            if(group!=null){val parents=repo.groupParents(requestedThread,groupProtocol.targets(combined));if(!stillOpen())return@launchJob;groupFeed=groupProtocol.feed((combined+parents).distinctBy{it.key});val ids=groupFeed.getJSONArray("visible").let{a->List(a.length()){a.getString(it)}.toSet()};messages=combined.filter{it.key in ids}.map{it.copy(text=groupFeed.child("texts").optString(it.key,it.text))}}else messages=combined
+            if(group!=null){val parents=repo.groupParents(requestedThread,groupProtocol.targets(combined));if(!stillOpen())return@launchJob;groupFeed=groupProtocol.feed((combined+parents).distinctBy{it.uri.ifBlank{it.key}});val ids=groupFeed.getJSONArray("visible").let{a->List(a.length()){a.getString(it)}.toSet()};messages=combined.filter{it.key in ids}.map{it.copy(text=groupFeed.child("texts").optString(it.key,it.text))}}else messages=combined
             if(historyBefore==Long.MAX_VALUE)memory.keep(thread,messages,memory.raw.value)
         }catch(e:CancellationException){throw e}catch(e:Exception){if(stillOpen())olderFailure=true}finally{if(opened==feedOpen)loadingOlder=false}}
     }
@@ -365,26 +406,49 @@ fun MessengerPane(
                 saveDraft(draftKey, latestDraft, latestAttachments)
         }
     }
-    LaunchedEffect(thread, messages.lastOrNull()?.key,messages.lastOrNull()?.date,state.thread(thread).optLong("last_incoming_at")) {
-        if (thread > 0) {
-            val newest=messages.lastOrNull()?.date ?: 0L
-            val readState=state.thread(thread)
-            if(newest>0 && (readState.optBoolean("unread") || readState.optLong("read_at")<newest))repo.markRead(thread)
-            if (reactionView.messages.isNotEmpty() && search.isEmpty() && focusKey == null && panel == "Feed") {
-                if(positionedThread!=thread) list.scrollToItem(reactionView.messages.size)
-                positionedThread=thread
+    val readState = state.thread(thread)
+    val newestDate = messages.lastOrNull()?.date ?: 0L
+    val canMarkRead = conversationVisible && lifecycle == Lifecycle.State.RESUMED && feedLoaded && thread > 0 &&
+        newestDate > 0 && focusKey == null && historyBefore == Long.MAX_VALUE
+    LaunchedEffect(thread, newestDate, readState.optLong("last_incoming_at"), canMarkRead) {
+        if (canMarkRead) {
+            snapshotFlow { loadingMessages }.first { !it }
+            val refreshed = state.thread(thread)
+            if (!refreshed.optBoolean("unread") && refreshed.optLong("read_at") >= newestDate) return@LaunchedEffect
+            try {
+                repo.markRead(thread)
+            } catch (e: CancellationException) {
+                throw e
+            } catch (_: Exception) {
+                // Leave unread state and the notification intact if Android rejects the write.
             }
         }
     }
-    LaunchedEffect(messages, focusKey, focusDate,loadingMessages) {
+    LaunchedEffect(thread, reactionView.messages.size, focusKey, panel, search) {
+        if (thread > 0 && reactionView.messages.isNotEmpty() && search.isEmpty() && focusKey == null &&
+            panel == "Feed" && positionedThread != thread) {
+            list.scrollToItem(reactionView.messages.size)
+            positionedThread = thread
+        }
+    }
+    LaunchedEffect(reactionView.messages, focusKey, focusDate, loadingMessages, feedLoaded) {
         val key = focusKey ?: return@LaunchedEffect
-        if (address.isBlank() || messages.isEmpty() || loadingMessages) return@LaunchedEffect
+        if (address.isBlank() || loadingMessages || !feedLoaded) return@LaunchedEffect
         val index = focusedMessageIndex(reactionView.messages, key, focusDate)
         if (index >= 0) {
             list.scrollToItem(index + 1) // The earlier-history control occupies the first item.
+            positionedThread = thread
+            focusedPosition = true
             focusKey = null
+        } else if (focusedMessageIndex(memory.raw.value, key, focusDate) >= 0) {
+            // Reactions and group control messages are folded into the visible feed.
+            focusKey = null
+        } else if (historyBefore == Long.MAX_VALUE && focusDate > 0 &&
+            messages.firstOrNull()?.date?.let { focusDate < it } == true) {
+            historyBefore = focusDate
         } else if (!focusNotice) {
             focusNotice = true
+            focusKey = null
             error = "This message is outside the loaded history or has been removed. Use Load Earlier Messages to look farther back."
         }
     }
@@ -574,7 +638,7 @@ fun MessengerPane(
                         (panel != "Gallery" || it.parts.isNotEmpty()) &&
                         (search.isEmpty() || it.text.contains(search, true))
                 }
-            MessageFeedAutoScroll(list, thread, sentScroll, panel=="Feed" && search.isEmpty() && focusKey==null && historyBefore==Long.MAX_VALUE)
+            MessageFeedAutoScroll(list, thread, sentScroll, panel=="Feed" && search.isEmpty() && focusKey==null && historyBefore==Long.MAX_VALUE, focusedPosition)
             Box(Modifier.weight(1f).fillMaxWidth()){
             if(loadingMessages && messages.isEmpty())LinearProgressIndicator(Modifier.fillMaxWidth())
             if(panel=="Gallery")ConversationGallery(conversationMedia(galleryMessages+messages),state,galleryLoading,galleryError,{mediaUri=it.part.uri},{galleryRetry++},{message,value->flag(message,"starred",value)},galleryMore,{scope.launch{loadGallery(true)}})
@@ -755,9 +819,10 @@ fun MessengerPane(
                     onClick = {
                         launchJob {
                             val sentText=draft;val sentParts=JSONArray(attachments.toString());val sentKey=draftKey;val sentAddress=address;val sentGroup=group
+                            val opened = feedOpen
                             sending = true
                             try {
-                                if (sentParts.length() > 0 || sentAddress.contains(';'))
+                                val token = if (sentParts.length() > 0 || sentAddress.contains(';'))
                                     withContext(ChatStore.dispatcher) {
                                         MessagingTransport.sendMms(
                                             context,
@@ -767,12 +832,26 @@ fun MessengerPane(
                                         )
                                     }
                                 else repo.send(sentAddress, sentText)
-                                if(draftKey==sentKey){if(draft.startsWith(sentText))draft=draft.removePrefix(sentText);val sentFiles=(0 until sentParts.length()).map{sentParts.getJSONObject(it).optString("file")}.toSet();attachments=JSONArray().apply{for(i in 0 until attachments.length()){val part=attachments.getJSONObject(i);if(part.optString("file") !in sentFiles)put(part)}};saveDraft(sentKey,draft,attachments)}
-                                focusKey = null
-                                search = ""
-                                panel = "Feed"
-                                historyBefore = Long.MAX_VALUE
-                                sentScroll++
+                                if (currentDraftKey == sentKey && address == sentAddress && draftLoaded) {
+                                    if (draft.startsWith(sentText)) draft = draft.removePrefix(sentText)
+                                    val sentFiles = (0 until sentParts.length()).map { sentParts.getJSONObject(it).optString("file") }.toSet()
+                                    attachments = JSONArray().apply {
+                                        for (i in 0 until attachments.length()) {
+                                            val part = attachments.getJSONObject(i)
+                                            if (part.optString("file") !in sentFiles) put(part)
+                                        }
+                                    }
+                                    saveDraft(sentKey, draft, attachments)
+                                }
+                                if (opened == feedOpen && address == sentAddress) {
+                                    queuedSend = token
+                                    focusKey = null
+                                    focusedPosition = false
+                                    search = ""
+                                    panel = "Feed"
+                                    historyBefore = Long.MAX_VALUE
+                                    sentScroll++
+                                }
                                 revision++
                             } finally {
                                 sending = false

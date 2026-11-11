@@ -129,6 +129,8 @@ fun OnKlavScreen(launchIntent: Intent? = null, intentEpoch: Int = 0,onReady:()->
     val incomingThread = launchIntent?.getLongExtra("open_thread", 0) ?: 0
     val incomingMessageKey = launchIntent?.getStringExtra("open_message_key")
     val incomingMessageDate = launchIntent?.getLongExtra("open_message_date", 0) ?: 0
+    var messageRouteEpoch by remember { mutableIntStateOf(-1) }
+    var notificationGroup by remember { mutableStateOf<SavedGroup?>(null) }
     LaunchedEffect(intentEpoch) {
         if (launchIntent?.action == UpdateChecks.OPEN) {
             settingsRoute = "Check for updates"
@@ -163,18 +165,31 @@ fun OnKlavScreen(launchIntent: Intent? = null, intentEpoch: Int = 0,onReady:()->
         if(launchIntent?.getBooleanExtra("open_walkie",false)==true){initialPeer=null;toolReturn=null;videoLaunchKey++;activeTool="walkie";return@LaunchedEffect}
         if(launchIntent?.getBooleanExtra("open_pending_pictures",false)==true){activeTool=null;browserUrl=null;setup=false;settingsRoute="Retry Pending Pictures";tab=0}
         if (incomingAddress != null || incomingThread > 0) {
-            val savedGroup = if (incomingThread > 0) runCatching {
-                MessageRepository(context).reconcileGroups().savedGroups().firstOrNull { it.thread == incomingThread }
-            }.getOrNull() else null
-            tab = if (savedGroup != null) 1 else 0
+            notificationGroup = if (incomingThread > 0) try {
+                MessageRepository(context).groupForThread(incomingThread, incomingMessageKey)
+            } catch (e: kotlinx.coroutines.CancellationException) {
+                throw e
+            } catch (_: Exception) {
+                null
+            } else null
+            messageRouteEpoch = intentEpoch
+            tab = if (notificationGroup != null) 1 else 0
             activeTool = null
+            toolReturn = null
             browserUrl = null
+            fileNote = null
+            catalogManagement = null
+            appearance = false
+            gamePeer = null
             setup = false
             settingsRoute = null
         }
     }
+    val messageRouteReady = messageRouteEpoch == intentEpoch
     /* Screens stay composed through their exit, over the retained home. */
     val pageRoute = if(platformSetup && !setup) "platform-setup" else if(setup) "setup" else settingsRoute?.takeIf { it in setOf("Apps","Games","Profile","Backups") }?.let { "settings:$it" } ?: activeTool?.takeUnless{it in setOf("power","phone","camera")}?.let { "tool:$it" }
+    val conversationsVisible = pageRoute == null && settingsRoute == null && fileNote == null &&
+        catalogManagement == null && browserUrl == null && !appearance
     val fullScreenCamera = tab==6 && cameraImmersive && pageRoute==null
     Box(Modifier.fillMaxSize()) {
     BackHandler(enabled = tab != 0 && pageRoute == null && catalogManagement == null) { tab = 0 }
@@ -198,16 +213,18 @@ fun OnKlavScreen(launchIntent: Intent? = null, intentEpoch: Int = 0,onReady:()->
                             holder.SaveableStateProvider("messages") {
                                 MessengerPane(
                                     { setup = true },
-                                    incomingAddress,
-                                    incomingThread,
+                                    incomingAddress.takeIf { messageRouteReady && notificationGroup == null },
+                                    incomingThread.takeIf { messageRouteReady && notificationGroup == null } ?: 0L,
                                     intentEpoch + permissionEpoch,
-                                    incomingMessageKey,
-                                    incomingMessageDate,
+                                    incomingMessageKey.takeIf { messageRouteReady && notificationGroup == null },
+                                    incomingMessageDate.takeIf { messageRouteReady && notificationGroup == null } ?: 0L,
                                     playVideo=::playVideo,openWeb=::browse,
-                                    openWalkie=::talkWith,openGames=::playWith,
+                                    openWalkie=::talkWith,openGames=::playWith,conversationVisible=conversationsVisible,
                                 )
                             }
-                        1 -> holder.SaveableStateProvider("groups") { GroupsPane({ setup = true }, incomingThread, intentEpoch, incomingMessageKey, incomingMessageDate,playVideo=::playVideo,openWeb=::browse,openWalkie=::talkWith,openGames=::playWith) }
+                        1 -> holder.SaveableStateProvider("groups") { GroupsPane({ setup = true }, incomingThread.takeIf { messageRouteReady && notificationGroup != null } ?: 0L,
+                            intentEpoch, incomingMessageKey, incomingMessageDate, notificationGroup.takeIf { messageRouteReady }, playVideo=::playVideo,openWeb=::browse,openWalkie=::talkWith,openGames=::playWith,
+                            conversationVisible=conversationsVisible) }
                         2 ->
                             AppsDesktop(resetKey=appsResetKey, manage={catalogManagement="Apps"}) { id ->
                                 toolReturn=null;videoLaunchKey++;initialPeer=null;initialVideo=null

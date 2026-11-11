@@ -56,7 +56,7 @@ fun groupInitials(name: String): String = name.trim().split(Regex("\\s+")).mapNo
 
 @OptIn(ExperimentalFoundationApi::class)
 @Composable
-fun GroupsPane(setup: () -> Unit, incomingThread: Long = 0, intentEpoch: Int = 0, incomingMessageKey: String? = null, incomingMessageDate: Long = 0, playVideo: ((String)->Unit)? = null, openWalkie:((String)->Unit)?=null, openGames:((String,String)->Unit)?=null, openWeb:((String)->Unit)?=null) {
+fun GroupsPane(setup: () -> Unit, incomingThread: Long = 0, intentEpoch: Int = 0, incomingMessageKey: String? = null, incomingMessageDate: Long = 0, notificationGroup: SavedGroup? = null, playVideo: ((String)->Unit)? = null, openWalkie:((String)->Unit)?=null, openGames:((String,String)->Unit)?=null, openWeb:((String)->Unit)?=null, conversationVisible: Boolean = true) {
     val context = LocalContext.current
     val store = remember { ChatStore(context) }
     val repo = remember { MessageRepository(context) }
@@ -78,9 +78,15 @@ fun GroupsPane(setup: () -> Unit, incomingThread: Long = 0, intentEpoch: Int = 0
     var error by remember { mutableStateOf<String?>(null) }
     var loaded by remember { mutableStateOf(false) }
     fun job(block: suspend () -> Unit) { scope.launch { try { block() } catch(e: Exception) { if (e is CancellationException) throw e; error = e.message ?: "Could not update group" } } }
-    LaunchedEffect(intentEpoch, incomingThread) {
-        if (incomingThread > 0) try { opened = repo.reconcileGroups().savedGroups().firstOrNull { it.thread == incomingThread }?.id }
-        catch(e: Exception) { if (e is CancellationException) throw e; error = e.message }
+    LaunchedEffect(intentEpoch, notificationGroup?.id) {
+        if (notificationGroup != null && groupMemory.handledLaunch != intentEpoch) {
+            groupMemory.handledLaunch = intentEpoch
+            editor = null
+            menu = null
+            membersSheet = null
+            deleting = null
+            opened = notificationGroup.id
+        }
     }
     LaunchedEffect(Unit) { groupMemory.watch(context) }
     LaunchedEffect(epoch, revision) {
@@ -104,7 +110,7 @@ fun GroupsPane(setup: () -> Unit, incomingThread: Long = 0, intentEpoch: Int = 0
         else store.request(JSONObject().put("action", "thread").put("key", g.key).put(key, value).put("at", System.currentTimeMillis()))
     }
     var revealedGroup by remember { mutableStateOf<String?>(null) }
-    val active = groups.firstOrNull { it.id == opened }
+    val active = groups.firstOrNull { it.id == opened } ?: notificationGroup?.takeIf { it.id == opened }
     Box(Modifier.fillMaxSize()) {
     BackHandler(enabled = selecting) { selecting = false; selected = emptySet() }
     Column(Modifier.fillMaxSize().testTag("groups-screen")) {
@@ -167,9 +173,15 @@ fun GroupsPane(setup: () -> Unit, incomingThread: Long = 0, intentEpoch: Int = 0
         }
     }
     RightSlideRoute(active) { group ->
-        MessengerPane(setup,incomingAddress=group.address,incomingThread=group.thread,
-            incomingMessageKey=incomingMessageKey,incomingMessageDate=incomingMessageDate,
-            group=group,exitGroup={opened=null},playVideo=playVideo,openWeb=openWeb,openWalkie=openWalkie,openGames=openGames)
+        key(group.id) {
+            val targeted = incomingThread > 0 && incomingThread == group.thread
+            MessengerPane(setup,incomingAddress=group.address,incomingThread=group.thread,
+                intentEpoch=if (targeted) intentEpoch else 0,
+                incomingMessageKey=incomingMessageKey.takeIf { targeted },
+                incomingMessageDate=if (targeted) incomingMessageDate else 0L,
+                group=group,exitGroup={opened=null},playVideo=playVideo,openWeb=openWeb,openWalkie=openWalkie,openGames=openGames,
+                conversationVisible=conversationVisible && opened == group.id)
+        }
     }
     }
     editor?.let { id -> GroupEditor(groups.firstOrNull { it.id == id }, { editor = null }, { _ -> if(id=="new")folder="Inbox";editor = null; opened=null }) }

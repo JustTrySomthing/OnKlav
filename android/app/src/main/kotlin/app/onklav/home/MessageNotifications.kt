@@ -52,7 +52,7 @@ object MessageNotifications {
             c,
             key?.hashCode() ?: thread.hashCode(),
             Intent(c, MainActivity::class.java)
-                .setData(key?.let { android.net.Uri.parse("onklav-reminder://open/${android.net.Uri.encode(it)}") } ?: android.net.Uri.parse("onklav-message://thread/$thread"))
+                .setData(key?.let { android.net.Uri.parse("onklav-message://thread/$thread/${android.net.Uri.encode(it)}/$date") } ?: android.net.Uri.parse("onklav-message://thread/$thread"))
                 .putExtra("open_thread", thread)
                 .putExtra("open_message_key", key)
                 .putExtra("open_message_date", date)
@@ -60,7 +60,7 @@ object MessageNotifications {
             PendingIntent.FLAG_UPDATE_CURRENT or PendingIntent.FLAG_IMMUTABLE,
         )
 
-    fun incoming(c: Context, thread: Long, address: String, body: String, fileThread:Boolean=true) {
+    fun incoming(c: Context, thread: Long, address: String, body: String, fileThread: Boolean = true, messageKey: String? = null, messageDate: Long = 0) {
         // Filing must happen before notification preferences/permissions are checked.
         val state = if(fileThread)ChatStore(c).incomingThread(thread, address)else ChatStore(c).requestSync(JSONObject().put("action","snapshot"))
         channels(c)
@@ -115,7 +115,7 @@ object MessageNotifications {
                 .setContentTitle(title)
                 .setContentText(body.take(200))
                 .setStyle(NotificationCompat.BigTextStyle().bigText(body.take(2000)))
-                .setContentIntent(open(c, thread))
+                .setContentIntent(open(c, thread, messageKey, messageDate))
                 .setAutoCancel(true)
                 .setOnlyAlertOnce(true)
                 .setCategory(NotificationCompat.CATEGORY_MESSAGE)

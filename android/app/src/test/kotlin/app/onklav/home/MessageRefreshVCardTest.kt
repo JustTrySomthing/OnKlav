@@ -72,6 +72,45 @@ class MessageRefreshVCardTest {
         } finally { staged.delete() }
     }
 
+    @Test fun queuedTextAppearsBeforeProviderIndexingAndKeepsItsIdentityAfterward() = runBlocking {
+        val app = ApplicationProvider.getApplicationContext<Application>()
+        shadowOf(app).grantPermissions(Manifest.permission.READ_SMS)
+        val provider = object : ContentProvider() {
+            var indexed = false
+            override fun onCreate() = true
+            override fun query(uri: Uri, projection: Array<out String>?, selection: String?,
+                args: Array<out String>?, sort: String?) = MatrixCursor(requireNotNull(projection)).apply {
+                if (indexed && args?.firstOrNull() == "9")
+                    addRow(arrayOf<Any>(21L, "Sent text", 1200L, 2, -1, "5550100"))
+            }
+            override fun getType(uri: Uri): String? = null
+            override fun insert(uri: Uri, values: ContentValues?): Uri? = null
+            override fun update(uri: Uri, values: ContentValues?, selection: String?, args: Array<out String>?) = 0
+            override fun delete(uri: Uri, selection: String?, args: Array<out String>?) = 0
+        }
+        ShadowContentResolver.registerProviderInternal("sms", provider)
+        val repo = MessageRepository(app)
+        val send = JSONObject().put("provider_uri", "content://sms/outbox/21").put("kind", "sms")
+            .put("status", "Sending").put("started", 1000L).put("address", "5550100").put("text", "Sent text")
+        val token = "a".repeat(32)
+        val state = JSONObject().put("outgoing", JSONObject().put(token, send))
+        val pending = repo.messages(9, 20, state, "5550100").single()
+        assertEquals("out:$token", pending.key)
+        assertEquals("Sending", pending.status)
+        assertTrue(repo.messages(10, 20, state, "5550199").isEmpty())
+        assertTrue(repo.messages(9, 20, state, "5550100", beforeDate = 500L).isEmpty())
+
+        send.put("provider_synced", true).put("status", "Sent")
+        assertTrue(repo.messages(9, 20, state, "5550100").isEmpty())
+        assertEquals(pending.key, repo.messages(9, 20, state, "5550100", queuedSend = token).single().key)
+        provider.indexed = true
+        val indexed = repo.messages(9, 20, state, "5550100")
+        val merged = mergeLatestMessages(listOf(pending), indexed).single()
+        assertEquals(pending.key, merged.key)
+        assertEquals(1200L, merged.date)
+        assertEquals("Sent", merged.status)
+    }
+
     @Test fun contactCardsStayOutOfPhotoViewerAndAppearInContactCardPicker() {
         val part=MessagePart("content://mms/part/12","application/octet-stream","Alex.VCF")
         val photo=MessagePart("content://mms/part/11","image/jpeg","photo.jpg")

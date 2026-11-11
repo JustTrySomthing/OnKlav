@@ -32,6 +32,38 @@ class RecoveryNotificationTest {
   for(i in 0..1){assertNotEquals(first.actions[i].actionIntent,second.actions[i].actionIntent);assertEquals(a,Shadows.shadowOf(first.actions[i].actionIntent).savedIntent.getLongExtra("thread",0))}
   MessageNotifications.cancel(c,a);assertEquals(listOf("thread:$b"),manager.activeNotifications.map{it.tag})
  }
+ @Test fun aNewNotificationOpensTheExactSmsOrMmsEvenWhenProviderIdsMatch() {
+  val thread = 7L
+  val manager = c.getSystemService(NotificationManager::class.java)
+  MessageNotifications.incoming(c, thread, "+15550100001", "Text", fileThread = false,
+   messageKey = "sms:21", messageDate = 1200L)
+  val sms = manager.activeNotifications.single().notification.contentIntent
+  val provider = object : ContentProvider() {
+   override fun onCreate() = true
+   override fun query(uri: Uri, projection: Array<out String>?, selection: String?,
+    args: Array<out String>?, sort: String?) = android.database.MatrixCursor(requireNotNull(projection)).apply {
+    if (uri.lastPathSegment == "21") addRow(arrayOf(thread, 2L))
+   }
+   override fun getType(uri: Uri): String? = null
+   override fun insert(uri: Uri, values: ContentValues?): Uri? = null
+   override fun delete(uri: Uri, selection: String?, args: Array<out String>?) = 0
+   override fun update(uri: Uri, values: ContentValues?, selection: String?, args: Array<out String>?) = 0
+  }
+  ShadowContentResolver.registerProviderInternal("mms", provider)
+  val transfer = "b".repeat(32)
+  c.getSharedPreferences("mms_transfers", 0).edit()
+   .putBoolean("$transfer.file_pending", true).putBoolean("$transfer.folder_filed", true)
+   .putString("$transfer.uri", "content://mms/21").putString("$transfer.sender", "+15550100001").commit()
+  assertTrue(MessagingTransport.finishReceivedMms(c, transfer))
+  val mms = manager.activeNotifications.single().notification.contentIntent
+  val feed = listOf(Message(21, "Text", 1200L, false), Message(21, "", 2000L, false, key = "mms:21"))
+  assertNotEquals(sms, mms)
+  listOf(sms, mms).forEachIndexed { index, pending ->
+   val tap = Shadows.shadowOf(pending).savedIntent
+   assertEquals(thread, tap.getLongExtra("open_thread", 0))
+   assertEquals(index, focusedMessageIndex(feed, tap.getStringExtra("open_message_key")!!, tap.getLongExtra("open_message_date", 0)))
+  }
+ }
  @Test fun remindersAttentionAndThreadsCannotOverwriteOrCancelEachOther(){
   assertEquals("Aa".hashCode(),"BB".hashCode());MessageNotifications.remind(c,"Aa",1,"A","a");MessageNotifications.remind(c,"BB",2,"B","b");MessageNotifications.attention(c,"Attention","x");MessageNotifications.incoming(c,170017,"+15550100003","Thread")
   val m=c.getSystemService(NotificationManager::class.java);assertEquals(4,m.activeNotifications.size)

@@ -272,7 +272,7 @@ object MessagingTransport {
                 )
                 ?.use { if(it.moveToFirst()) Triple(it.getLong(0),it.getLong(1),it.getLong(2))else null }
         val thread=duplicate?.second?:Telephony.Threads.getOrCreateThreadId(context,address)
-        if (duplicate==null) {
+        val messageId = if (duplicate == null) {
             if(!receipt.has("filing_at")){receipt.put("filing_at",IncomingReceiptOrder.next(context,ChatStore(context).requestSync(JSONObject().put("action","snapshot"))));persistReceipt()}
             checkNotNull(
                 context.contentResolver.insert(
@@ -288,13 +288,14 @@ object MessagingTransport {
                         "sub_id" to subscription,
                     ),
                 )
-            )
-        }
+            ).lastPathSegment?.toLongOrNull()
+        } else duplicate.first
         // Only this durable receive attempt owns filing. A later duplicate broadcast
         // must not undo a user's subsequent Archive/Trash action.
         if(duplicate==null||replay&&duplicate.third==received){
             if(!receipt.optBoolean("folder_filed")){ChatStore(context).requestSync(JSONObject().put("action","arrival").put("key",thread.toString()).put("address",address).put("at",receipt.optLong("filing_at",received)));phase("folder_filed")}
-            if(!receipt.optBoolean("notified")){MessageNotifications.incoming(context,thread,address,body,fileThread=false);phase("notified")}
+            if(!receipt.optBoolean("notified")){MessageNotifications.incoming(context, thread, address, body, fileThread = false,
+                messageKey = messageId?.let { "sms:$it" }, messageDate = duplicate?.third ?: received);phase("notified")}
         }
         check(saved.delete()) { "Message was saved but its recovery record could not be removed" }
         ChatStore.epoch.update { it+1 }
@@ -596,7 +597,9 @@ object MessagingTransport {
         val raw=prefs.getString("$id.uri",null)?:error("Missing received picture receipt")
         if(raw.isNotEmpty()){
             val uri=Uri.parse(raw)
-            val thread=context.contentResolver.query(uri,arrayOf("thread_id"),null,null,null)?.use{if(it.moveToFirst())it.getLong(0)else null}?:error("Received picture needs phone-provider recovery")
+            val (thread, messageDate) = context.contentResolver.query(uri, arrayOf("thread_id", "date"), null, null, null)
+                ?.use { if (it.moveToFirst()) it.getLong(0) to (it.getColumnIndex("date").takeIf { index -> index >= 0 }?.let { index -> it.getLong(index) * 1000 } ?: 0L) else null }
+                ?: error("Received picture needs phone-provider recovery")
             check(thread>0){"Received picture has no conversation"}
             val sender=prefs.getString("$id.sender","").orEmpty()
             if(!prefs.getBoolean("$id.folder_filed",false)){
@@ -604,7 +607,8 @@ object MessagingTransport {
                 ChatStore(context).requestSync(JSONObject().put("action","arrival").put("key",thread.toString()).put("address",sender).put("at",prefs.getLong("$id.filing_at",received)))
                 check(prefs.edit().putBoolean("$id.folder_filed",true).commit()){ "Received picture folder receipt could not be saved" }
             }
-            MessageNotifications.incoming(context,thread,sender,"Picture message",fileThread=false)
+            MessageNotifications.incoming(context, thread, sender, "Picture message", fileThread = false,
+                messageKey = uri.lastPathSegment?.toLongOrNull()?.let { "mms:$it" }, messageDate = messageDate)
         }
         check(prefs.edit().putBoolean("$id.complete",true).putBoolean("$id.file_pending",false).putLong("$id.attempt",0).remove("$id.error").remove("$id.retry_due").commit()){ "Completed message metadata could not be saved. Check available storage." }
         MessageNotifications.pictureComplete(context,id)

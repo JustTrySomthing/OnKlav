@@ -11,6 +11,7 @@ import org.json.JSONObject
 internal class MessengerMemory:ViewModel(){
  private var watching=false
  var recovered=false
+ var handledLaunch: Int? = null
  val raw=mutableStateOf<List<Message>>(emptyList())
  val rawWindows=linkedMapOf<Long,List<Message>>()
  val inboxCursor=mutableStateOf<MediaCursor?>(null)
@@ -29,7 +30,8 @@ internal class MessengerMemory:ViewModel(){
 internal fun mergeLatestMessages(previous:List<Message>,fresh:List<Message>):List<Message>{
  if(fresh.isEmpty())return emptyList()
  val from=fresh.minOf{it.date}
- return (previous.filter{it.date<from}+fresh).distinctBy{it.key}.sortedBy{it.date}
+ val currentKeys=fresh.mapTo(hashSetOf()){it.key}
+ return (previous.filter{it.date<from && it.key !in currentKeys}+fresh).sortedBy{it.date}
 }
 internal data class MediaCursor(val date:Long,val id:Long)
 internal data class MediaPage(val messages:List<Message>,val next:MediaCursor?,val more:Boolean)

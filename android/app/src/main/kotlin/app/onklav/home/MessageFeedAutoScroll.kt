@@ -5,10 +5,10 @@ import androidx.compose.runtime.*
 import kotlinx.coroutines.flow.collectLatest
 
 /** Keep the tail visible across insertions and keyboard/composer resizing, while respecting history browsing. */
-@Composable internal fun MessageFeedAutoScroll(list: LazyListState, thread: Long, sent: Int, enabled: Boolean) {
+@Composable internal fun MessageFeedAutoScroll(list: LazyListState, thread: Long, sent: Int, enabled: Boolean, preservePosition: Boolean = false) {
     LaunchedEffect(list, thread, sent, enabled) {
         if (!enabled) return@LaunchedEffect
-        var follow = true
+        var follow = !preservePosition || !list.canScrollForward
         var count = -1
         var viewport = -1
         var tail = ""

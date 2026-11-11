@@ -56,4 +56,22 @@ class MessageComposeFlowTest {
   compose.waitForIdle();compose.runOnIdle{assertEquals(before,state.firstVisibleItemIndex);sent++}
   compose.waitForIdle();compose.onNodeWithTag("row-32").assertIsDisplayed();compose.runOnIdle{assertFalse(state.canScrollForward)}
  }
+ @Test fun reopeningAutoScrollAfterNotificationFocusKeepsTheTargetOnScreen(){
+  var enabled by mutableStateOf(false)
+  var sent by mutableIntStateOf(0)
+  lateinit var state: LazyListState
+  compose.activity.setContent { OnKlavTheme {
+   state = rememberLazyListState(initialFirstVisibleItemIndex = 6)
+   MessageFeedAutoScroll(state, 1L, sent, enabled, preservePosition = sent == 0)
+   LazyColumn(Modifier.height(240.dp), state = state) {
+    items((1..30).toList(), key = { it }) { Text("Message $it", Modifier.height(60.dp)) }
+   }
+  } }
+  compose.onNodeWithText("Message 7").assertIsDisplayed()
+  compose.runOnIdle { enabled = true }
+  compose.onNodeWithText("Message 7").assertIsDisplayed()
+  compose.runOnIdle { sent++ }
+  compose.onNodeWithText("Message 30").assertIsDisplayed()
+ }
+
 }
