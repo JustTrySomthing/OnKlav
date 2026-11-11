@@ -24,6 +24,7 @@ private val settingsIcons =
         "Walkie Talkie" to app.onklav.shared.R.drawable.ref_setting_walkie_talkie,
         "Quiet Hours" to app.onklav.shared.R.drawable.ref_setting_quiet_hours,
         "Reminders" to app.onklav.shared.R.drawable.ref_setting_reminders,
+        "Check for updates" to app.onklav.shared.R.drawable.ref_setting_about,
         "About" to app.onklav.shared.R.drawable.ref_setting_about,
         "Advanced" to app.onklav.shared.R.drawable.ref_setting_advanced,
         "Help" to app.onklav.shared.R.drawable.ref_setting_help,
@@ -42,7 +43,7 @@ fun SettingsPane(open: (String) -> Unit) {
             }
             AlignedCardGrid(
                 listOf("Setup", "Sounds", "Security", "Storage", "Read Aloud", "Backups", "Games",
-                    "Apps", "Walkie Talkie", "Quiet Hours", "Reminders", "Help", "About", "Advanced"),
+                    "Apps", "Walkie Talkie", "Quiet Hours", "Reminders", "Check for updates", "Help", "About", "Advanced"),
                 maxColumns = 3,
                 gap = 8.dp,
             ) { name, modifier ->

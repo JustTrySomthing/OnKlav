@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.OnKlavUpdatesTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2026-11-11T00:42:02" hostname="4e6a3c69280b" time="2.447">
+  <properties/>
+  <testcase name="newestPublicReleaseIsSelectedRatherThanFirstListEntry" classname="app.onklav.home.OnKlavUpdatesTest" time="2.02"/>
+  <testcase name="redirectsRequireExactGithubHttpsHosts" classname="app.onklav.home.OnKlavUpdatesTest" time="0.045"/>
+  <testcase name="unsafeMetadataCannotBecomeAnInstallCandidate" classname="app.onklav.home.OnKlavUpdatesTest" time="0.031"/>
+  <testcase name="apkRequiresSamePackageSignerNewerBuildAndCompatibleAndroid" classname="app.onklav.home.OnKlavUpdatesTest" time="0.03"/>
+  <testcase name="installUsesReadOnlyContentUriAndProviderRejectsOtherPrivateFiles" classname="app.onklav.home.OnKlavUpdatesTest" time="0.096"/>
+  <testcase name="versionsOrderNumericallyIncludingReleaseCandidatesAndStable" classname="app.onklav.home.OnKlavUpdatesTest" time="0.029"/>
+  <testcase name="stableChannelSkipsPreviewsAndSdkOnlyReleases" classname="app.onklav.home.OnKlavUpdatesTest" time="0.028"/>
+  <testcase name="truncatedOversizedOrAlteredDownloadsCannotPass" classname="app.onklav.home.OnKlavUpdatesTest" time="0.071"/>
+  <testcase name="streamedDownloadChecksBytesAndDigestAndReportsProgress" classname="app.onklav.home.OnKlavUpdatesTest" time="0.031"/>
+  <testcase name="alteredCachedApkIsRejectedBeforeArchiveParsing" classname="app.onklav.home.OnKlavUpdatesTest" time="0.029"/>
+  <testcase name="cancellingDownloadStopsBeforeTheRestOfThePayloadIsWritten" classname="app.onklav.home.OnKlavUpdatesTest" time="0.036"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

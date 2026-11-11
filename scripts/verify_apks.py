@@ -105,7 +105,24 @@ for label, expected_id, path in apks:
     backup_rules=command(BUILD_TOOLS / "aapt", "dump", "xmltree", path, backup_path)
     assert "cloud-backup" in backup_rules and "device-transfer" in backup_rules and backup_rules.count("E: exclude")==18, "Private backup exclusions missing"
     assert "sharedUserId" not in manifest
-    assert "android.permission.REQUEST_INSTALL_PACKAGES" not in permissions
+    # Owner-requested host self-updates use Android's user-confirmed installer.
+    # This does not add a guest APK installation capability or privileged installer.
+    assert "android.permission.REQUEST_INSTALL_PACKAGES" in permissions
+    assert not set(permissions).intersection({"android.permission.INSTALL_PACKAGES", "android.permission.DELETE_PACKAGES"})
+    update_providers=[block for block in manifest.split("E: provider")[1:]
+                      if 'Raw: "'+package_id+'.updates"' in block]
+    assert len(update_providers)==1, "Private self-update provider missing or duplicated"
+    update_provider=update_providers[0]
+    assert "app.onklav.home.OnKlavUpdateProvider" in update_provider
+    assert re.search(r"android:exported[^\n]*0x0\b",update_provider), "Update provider must not be exported"
+    assert re.search(r"android:grantUriPermissions[^\n]*0xffffffff",update_provider)
+    update_resource=re.search(r'resource (0x[0-9a-f]+) [^\n]*:xml/update_paths:[^\n]*\n\s+\(string(?:8|16)\) "([^"]+)"',resources)
+    assert update_resource, "Update provider path resource missing"
+    update_id,update_path=update_resource.groups()
+    assert re.search(r'android:resource[^\n]*=@'+update_id+r'\b',update_provider)
+    update_rules=command(BUILD_TOOLS / "aapt", "dump", "xmltree", path, update_path)
+    assert update_rules.count("E: cache-path")==1 and "onklav-updates/" in update_rules
+    assert not any("E: "+kind in update_rules for kind in ("root-path","files-path","external-path","external-files-path","external-cache-path"))
     assert badging.count("launchable-activity:") == 1
     assert "app.onklav.home.WebGameActivity" in manifest
     assert "app.onklav.games.GameActivity" not in manifest

@@ -66,3 +66,8 @@
 -keepclassmembers class app.onklav.home.CloudModel {
     public <init>(android.app.Application);
 }
+
+# Host update screen uses the Application ViewModel constructor.
+-keepclassmembers class app.onklav.home.OnKlavUpdateModel {
+    public <init>(android.app.Application);
+}

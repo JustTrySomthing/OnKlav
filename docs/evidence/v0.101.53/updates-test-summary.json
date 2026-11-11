@@ -1,0 +1,9 @@
+{
+  "host_version": "0.101.53-rc1",
+  "checks": {
+    "OnKlavUpdatesTest": 11,
+    "UpdateSettingsTest": 1
+  },
+  "physical_android_installer_accepted": false,
+  "automatic_checks": "Daily on foreground entry while online; user can disable. APK downloads require user action."
+}

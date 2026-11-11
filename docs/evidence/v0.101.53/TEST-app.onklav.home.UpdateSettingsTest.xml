@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="app.onklav.home.UpdateSettingsTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2026-11-11T00:43:08" hostname="4e6a3c69280b" time="5.18">
+  <properties/>
+  <testcase name="settingsExposeManualCheckInstalledVersionAndAutomaticPreference" classname="app.onklav.home.UpdateSettingsTest" time="5.18"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

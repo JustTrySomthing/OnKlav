@@ -106,6 +106,7 @@ fun SettingsDialogs(route: String, close: () -> Unit) {
         "Blocked Messages" -> BlockedMessagesDialog(::back)
         "Manage Storage" -> StorageSettingsDialog(::back)
         "Backups" -> BackupSettingsDialog(::back)
+        "Check for updates" -> UpdateSettingsDialog(::back)
         "Sending SIM" -> SendingSimDialog(::back)
         "Retry Pending Pictures" -> PendingPicturesDialog(::back)
         else -> {
