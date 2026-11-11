@@ -19,6 +19,7 @@ internal object FriendGames {
     private val worker=Executors.newSingleThreadExecutor()
     private const val LIMIT=512*1024
     internal const val INVITE_TIMEOUT = 65_000L
+    private const val RETAIN_CONTROL = 7 * 86_400_000L
     fun work(action:()->Unit){worker.execute(action)}
     private fun <T> transaction(c:Context,write:Boolean=true,action:(JSONObject)->T):T = synchronized(monitor) {
         val dir=File(c.noBackupFilesDir,"friend-games").apply{check(isDirectory||mkdirs())}
@@ -44,6 +45,28 @@ internal object FriendGames {
     fun forgetVerified(c:Context,peer:String) { transaction(c){it.optJSONObject("verified_peers")?.remove(phoneKey(peer))} }
     fun verifiedPeers(c:Context):Set<String> = transaction(c,false){root->root.optJSONObject("verified_peers")?.keys()?.asSequence()?.toSet()?:emptySet()}
     internal fun sendVerificationQuestion(c: Context, peer: String, sub: Int) = raw(c, peer, sub, FriendGameWire.QUESTION, null, null)
+
+    private fun rememberControl(root:JSONObject, table:String, key:String, time:Long, limit:Int):Boolean {
+        val entries=root.optJSONObject(table)?:JSONObject().also{root.put(table,it)}
+        entries.keys().asSequence().filter{time-entries.optLong(it)>RETAIN_CONTROL}.toList().forEach{entries.remove(it)}
+        if(entries.has(key))return false
+        if(entries.length()>=limit)entries.keys().asSequence().minByOrNull{entries.optLong(it)}?.let{entries.remove(it)}
+        entries.put(key,time)
+        return true
+    }
+
+    /** Claim verification before dispatch so one carrier delivery can't answer or advance two attempts. */
+    internal fun claimVerificationSms(c:Context,id:String,received:Long):Boolean {
+        val time=now()
+        if(time-received !in 0..INVITE_TIMEOUT)return false
+        return transaction(c){rememberControl(it,"verification_receipts",id,time,512)}
+    }
+
+    private fun retiredKey(id:String,peer:String,sub:Int)="$id:${phoneKey(peer)}:$sub"
+    private fun wasRetired(root:JSONObject,id:String,peer:String,sub:Int):Boolean {
+        val entries=root.optJSONObject("retired_matches")?:return false
+        return listOf(sub,-1).any{now()-entries.optLong(retiredKey(id,peer,it)) in 0..RETAIN_CONTROL}
+    }
     fun verify(c:Context,peer:String) {
         policy(c,peer)
         val sub = MessagingTransport.manager(c).subscriptionId
@@ -155,7 +178,7 @@ internal object FriendGames {
         }
         flush(c,id)
     }
-    fun remove(c:Context,id:String){val game=find(c,id)?.optString("game");transaction(c){root->val m=root.getJSONObject("matches").optJSONObject(id)?:return@transaction;check(m.optString("status")in setOf("expired","ended","declined","needs_game"));root.getJSONObject("matches").remove(id);if(root.optString("current_match")==id)root.put("current_match","")};if(game!=null)GameSaveStore.removeFriend(c,game,id)}
+    fun remove(c:Context,id:String){val game=find(c,id)?.optString("game");transaction(c){root->val m=root.getJSONObject("matches").optJSONObject(id)?:return@transaction;check(m.optString("status")in setOf("expired","ended","declined","needs_game"));rememberControl(root,"retired_matches",retiredKey(id,m.getString("peer"),m.optInt("sub",-1)),now(),256);root.getJSONObject("matches").remove(id);if(root.optString("current_match")==id)root.put("current_match","")};if(game!=null)GameSaveStore.removeFriend(c,game,id)}
     fun state(c:Context,id:String,game:String):JSONObject {
         val row=transaction(c){root->val m=root.getJSONObject("matches").optJSONObject(id)?:error("Match not found");check(m.getString("game")==game);expire(m);JSONObject(m.toString())}
         val jobs=row.getJSONObject("jobs");val pending=jobs.keys().asSequence().any{it.startsWith("move:")&&jobs.getJSONObject(it).optString("state")!="ack"}
@@ -194,12 +217,14 @@ internal object FriendGames {
                     return@transaction}
                 val f=frame?:return@transaction
                 var m=all.optJSONObject(f.id)
+                if(m==null && f.type=="Q" && knowsPeer(root,peer)) {
+                    rememberControl(root,"retired_matches",retiredKey(f.id,peer,sub),now(),256)
+                    return@transaction
+                }
                 if(m==null && f.type=="I"){
-                    val key=phoneKey(peer)
-                    // An earlier standalone verification can establish only the caller's cache.
-                    // The recipient still recognizes that peer from the reply it sent.
-                    if(root.optJSONObject("verified_peers")?.has(key)!=true && root.getJSONObject("answers").optLong(key)<=0)return@transaction
+                    if(!knowsPeer(root,peer)||wasRetired(root,f.id,peer,sub))return@transaction
                     val game=game(c,f.data) ?: run {val answers=root.getJSONObject("answers");val key="missing:"+phoneKey(peer);if(now()-answers.optLong(key)>60000){answers.put(key,now());unavailable=FriendGameWire("N",f.id,0,f.data).encode()};return@transaction}
+                    all.keys().forEach{expire(all.getJSONObject(it))}
                     if(all.keys().asSequence().any{all.getJSONObject(it).optString("game")==game && all.getJSONObject(it).optString("status")in setOf("active","checking","outgoing","invite")})return@transaction
                     if(all.length()>=32)return@transaction
                     rememberVerified(root,peer)
@@ -210,7 +235,7 @@ internal object FriendGames {
                 if(m.optString("game") in singlePlayerOnlyGames)return@transaction
                 expire(m)
                 when(f.type){
-                    "I"->if(!m.getBoolean("host") && m.optString("status")=="active"){m.getJSONObject("jobs").optJSONObject("answer")?.put("state","queued");send+=f.id}
+                    "I"->if(!m.getBoolean("host") && m.optString("status")=="active" && f.data==m.optString("token")){m.getJSONObject("jobs").optJSONObject("answer")?.put("state","queued");send+=f.id}
                     "A"->if(m.optString("status")=="outgoing" && f.data==m.getString("token")){m.put("status","active");root.put("current_match",f.id);alerts+=f.id}
                     "N"->if(m.optString("status")=="outgoing"&&f.data==m.getString("token"))m.put("status","needs_game").put("error","Share this exact game package with your friend, then send a new invitation.")
                     "D"->if(m.optString("status")=="outgoing"&&f.data==m.getString("token")){m.put("status","declined");alerts+=f.id}
@@ -235,6 +260,10 @@ internal object FriendGames {
             alerts.forEach{id->notify(c,id)}
         }catch(_:Exception){/* Recognized frames never become ordinary chat or execute guest code. */}
         return true
+    }
+    private fun knowsPeer(root:JSONObject,peer:String):Boolean {
+        val key=phoneKey(peer)
+        return root.optJSONObject("verified_peers")?.has(key)==true || root.getJSONObject("answers").optLong(key)>0
     }
     private fun sameSim(row:JSONObject,sub:Int)=row.optInt("sub",-1).let{it<0||sub<0||it==sub}
     fun recoverInvites(c:Context):Long? {
@@ -271,8 +300,31 @@ internal object FriendGames {
         runCatching{manager.notify("friend-game-$id",420,androidx.core.app.NotificationCompat.Builder(c,"friend_games").setSmallIcon(app.onklav.shared.R.drawable.ref_nav_apps).setContentTitle(platformGames.firstOrNull{it.id==row.getString("game")}?.title?:"OnKlav game").setContentText(text).setContentIntent(open).setAutoCancel(true).setOnlyAlertOnce(true).setVisibility(androidx.core.app.NotificationCompat.VISIBILITY_PRIVATE).build())}
     }
     private fun flush(c:Context,id:String){
-        val batch=transaction(c){root->val m=root.getJSONObject("matches").getJSONObject(id);expire(m);m.getJSONObject("jobs").keys().asSequence().toList().filter{m.getJSONObject("jobs").getJSONObject(it).optString("state")=="queued"}.map{k->m.getJSONObject("jobs").getJSONObject(k).put("state","sending");Triple(k,m.getJSONObject("jobs").getJSONObject(k).getString("wire"),JSONObject(m.toString()))}}
-        for((key,body,m)in batch)try{policy(c,m.getString("peer"),m.optInt("sub",-1));raw(c,m.getString("peer"),m.optInt("sub",-1),body,id,key)}catch(_:Exception){result(c,id,key,false)}
+        val batch=transaction(c){root->
+            val m=root.getJSONObject("matches").optJSONObject(id)?:return@transaction emptyList()
+            expire(m)
+            val jobs=m.getJSONObject("jobs")
+            jobs.keys().asSequence().filter{jobs.getJSONObject(it).optString("state")=="queued" && canSubmit(m,it)}
+                .map{key->jobs.getJSONObject(key).put("state","sending");key}.toList()
+        }
+        for(key in batch)try {
+            val row=find(c,id)?:continue
+            policy(c,row.getString("peer"),row.optInt("sub",-1))
+            transaction(c){root->
+                val m=root.getJSONObject("matches").optJSONObject(id)?:return@transaction
+                expire(m)
+                val job=m.getJSONObject("jobs").optJSONObject(key)?:return@transaction
+                if(job.optString("state")=="sending" && canSubmit(m,key))
+                    raw(c,m.getString("peer"),m.optInt("sub",-1),job.getString("wire"),id,key)
+            }
+        }catch(_:Exception){result(c,id,key,false)}
+    }
+    private fun canSubmit(row:JSONObject,key:String):Boolean = when(key) {
+        "question"->row.optString("status")=="checking"
+        "invite"->row.optString("status")=="outgoing"
+        "answer"->row.optString("status") in setOf("active","declined")
+        "cancel","quit"->row.optString("status") in setOf("ended","declined")
+        else->row.optString("status")=="active"
     }
     private fun raw(c:Context,peer:String,sub:Int,body:String,id:String?,key:String?){
         val sm=MessagingTransport.manager(c,sub.takeIf{it>=0});check(sm.divideMessage(body).size==1){"Game update exceeded one SMS"}

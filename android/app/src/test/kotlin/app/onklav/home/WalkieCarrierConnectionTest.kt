@@ -75,4 +75,14 @@ class WalkieCarrierConnectionTest {
         assertEquals("connected",command("receive","+1 (555) 010-1234",wire=accept).getString("phase"))
         assertEquals("5550101234",SdkWalkieTransport.state(c).getString("peer"))
     }
+    @Test fun disabledWalkieStillKeepsValidControlTextsOutOfMessages() {
+        val c=device()
+        c.getSharedPreferences("messaging_setup",0).edit().putBoolean("carrier_trial",false).commit()
+        val id="d".repeat(32)
+        assertTrue(SdkWalkieTransport.receiveControl(c,"+15550101234",1,"!OKW1|P|$id|0|wt1"))
+        assertTrue(SdkWalkieTransport.receiveControl(c,"+15550101234",1,"!OKW1@I@$id@0@wt1"))
+        assertFalse(SdkWalkieTransport.receiveControl(c,"+15550101234",1,"!OKW1|P|$id|1|wt1"))
+        assertFalse(SdkWalkieTransport.receiveControl(c,"+15550101234",1,"A regular text"))
+        assertEquals("offline",SdkWalkieTransport.state(c).getString("phase"))
+    }
 }

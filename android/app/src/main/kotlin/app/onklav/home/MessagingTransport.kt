@@ -251,6 +251,8 @@ object MessagingTransport {
             "Multipart message sender mismatch"
         }
         val body = parts.joinToString("") { it.messageBody.orEmpty() }
+        if((FriendGameWire.isQuestion(body)||FriendGameWire.appResponse(body)) &&
+            !FriendGames.claimVerificationSms(context,rawId,received)) {check(saved.delete());return}
         if(RealSocial.receive(context,address,subscription,body)) {check(saved.delete());return}
         runCatching { RealSocial.observeVerification(context,address,body,subscription) }.onFailure { ChatStore.lastError.value=it.message }
         runCatching { SdkWalkieTransport.observeVerification(context,address,subscription,body) }.onFailure { ChatStore.lastError.value=it.message }

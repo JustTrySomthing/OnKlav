@@ -22,6 +22,7 @@ internal object SdkWalkieTransport {
     private val worker=Executors.newSingleThreadExecutor()
     private val main=Handler(Looper.getMainLooper())
     private val queued=AtomicBoolean(false)
+    private val recovering=AtomicBoolean(false)
     private val jobLock=Any()
     private var visible=0
     private const val BUILTIN = "app.onklav.walkie"
@@ -202,6 +203,10 @@ internal object SdkWalkieTransport {
     }
     /** One pass: at most16 control sends and4 clips across all eligible app owners. */
     fun recover(c:Context):Long? {
+        if(!recovering.compareAndSet(false,true))return 1000L
+        try{return recoverOnce(c)}finally{recovering.set(false)}
+    }
+    private fun recoverOnce(c:Context):Long? {
         if(!MessagingTransport.carrierEnabled(c)||runCatching{checkSetup(c)}.isFailure)return null
         val now=System.currentTimeMillis();val next=mutableListOf<Long>()
         verificationRemaining(c)?.let{next.add(now+it)}
@@ -301,7 +306,7 @@ internal object SdkWalkieTransport {
         if(!job.matches(Regex("[a-f0-9]{32}")) || intent.action!="app.onklav.WALKIE_RESULT" || intent.data!=Uri.parse("onklav-walkie://result/$job"+if(part>=0)"/$part"else""))return
         try{finish(c,job,code==Activity.RESULT_OK,intent.getByteArrayExtra(SmsManager.EXTRA_MMS_DATA),null,part)}finally{TransportRecovery.schedule(c,60_000);kick(c)}
     }
-    private fun finish(c:Context,job:String,accepted:Boolean,response:ByteArray?,forced:String?,part:Int=-1) = synchronized(jobLock) {
+    private fun finish(c:Context,job:String,accepted:Boolean,response:ByteArray?,forced:String?,part:Int=-1) = AppSdk.carrierEgress { synchronized(jobLock) {
         val f=file(c,job);if(!f.exists())return@synchronized
         require(f.length()<=8192)
         val j=JSONObject(f.readText())
@@ -340,7 +345,7 @@ internal object SdkWalkieTransport {
             runCatching{FriendGames.recordVerified(c,j.getString("peer"))}
         check(f.delete())
         payload.delete();MessageTransferProvider.file(c,job,"blob").delete();MessageTransferProvider.file(c,job,"pdu").delete();epoch.value++
-    }
+    } }
     fun packageRemoved(c:Context,appId:String="app.onklav.walkie")=synchronized(jobLock){
         dir(c).listFiles().orEmpty().filter{it.extension=="json"}.forEach{record->
             val job=record.nameWithoutExtension
@@ -352,17 +357,26 @@ internal object SdkWalkieTransport {
         c.getSystemService(NotificationManager::class.java).cancel("sdk-carrier-$appId",410)
     }
     fun receiveControl(c:Context,peer:String,sub:Int,wire:String):Boolean {
-        val routed=runCatching{SdkCarrierRoutes.decode(wire,SdkCarrierRoutes.owners(c))}.getOrNull()?:return false
+        if(!wire.startsWith("!OKW1|")&&!wire.startsWith("!OKW1@")&&!wire.startsWith("!OKW2|")&&!wire.startsWith("!OKW2@"))return false
+        val routed=runCatching{SdkCarrierRoutes.decode(wire,SdkCarrierRoutes.owners(c))}.getOrNull()
+            ?: return wire.startsWith("!OKW1")&&validControl(c,wire.replace('@','|'))
         val owner=routed.first;val inner=routed.second
         if(!inner.startsWith("!OKW1|"))return false
         return try {
             val out=command(c,JSONObject().put("operation","receive").put("peer",peer).put("subscription",sub).put("wire",inner),owner)
             if(out.optString("phase")=="connected")runCatching{FriendGames.recordVerified(c,peer)}
-            if(out.optString("phase")=="incoming")notify(c,"Walkie Talkie invitation",MessageRepository(c).contactName(peer)+" wants to talk. Tap to accept or decline.",owner)
+            if(out.optString("phase")=="incoming")runCatching{notify(c,"Walkie Talkie invitation",MessageRepository(c).contactName(peer)+" wants to talk. Tap to accept or decline.",owner)}
             epoch.value++;kick(c);true
         }catch(e:Exception){
-            runCatching {checkSetup(c);val a=JSONObject().put("operation","classify").put("wire",inner).put("facts",facts(c,peer,sub,owner));(call(c,a,owner) as JSONObject).optBoolean("valid")}.getOrDefault(false)
+            validControl(c,inner)
         }
+    }
+    /** Recognize reserved control texts even when a disabled or blocked session cannot act on them. */
+    private fun validControl(c:Context,wire:String):Boolean {
+        if(wire.startsWith("!OKW1|P|"))return Regex("!OKW1\\|P\\|[a-f0-9]{32}\\|0\\|wt1").matches(wire)
+        val input=JSONObject().put("op","walkie_rules").put("action","frame.decode")
+            .put("text",wire.replaceFirst("!OKW1|","!ICW1|"))
+        return runCatching{JSONObject(app.onklav.shared.NativeCore.dispatch(c.filesDir.absolutePath,input.toString())).optBoolean("ok")}.getOrDefault(false)
     }
     fun receiveVoice(c:Context,pdu:JSONObject,sub:Int):Boolean {
         val parts=pdu.optJSONArray("parts") ?: return false

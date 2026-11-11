@@ -31,6 +31,36 @@ class FriendGamesTest {
         return object:ContextWrapper(base){override fun getFilesDir()=File(dir,"files").apply{mkdirs()};override fun getNoBackupFilesDir()=File(dir,"private").apply{mkdirs()};override fun getApplicationContext():Context=this}
     }
     private fun sent()=Shadows.shadowOf(SmsManager.getSmsManagerForSubscriptionId(1)).lastSentTextMessageParams.text
+    @Test fun verificationDeliveryIsClaimedOnceAndStaleRecoveryCannotRestartIt() {
+        val c=device();val now=System.currentTimeMillis()
+        assertTrue(FriendGames.claimVerificationSms(c,"a".repeat(32),now))
+        assertFalse(FriendGames.claimVerificationSms(c,"a".repeat(32),now))
+        assertFalse(FriendGames.claimVerificationSms(c,"b".repeat(32),now-70_000))
+        assertTrue(FriendGames.claimVerificationSms(c,"b".repeat(32),now))
+    }
+
+    @Test fun cancelledOrExpiredInvitesCannotResurfaceOrBlockAFreshInvite() {
+        val receiver=device()
+        FriendGames.recordVerified(receiver,one)
+        fun send(type:String,id:String) = FriendGames.receive(receiver,one,1,
+            FriendGameWire(type,id,if(type=="Q")9999 else 0,if(type=="Q")"quit" else "nb1").encode())
+        val cancelled="a".repeat(32)
+        assertTrue(send("Q",cancelled));assertTrue(send("I",cancelled))
+        assertNull(FriendGames.find(receiver,cancelled))
+        val old="b".repeat(32)
+        assertTrue(send("I",old))
+        val journal=File(receiver.noBackupFilesDir,"friend-games/state.json")
+        val state=JSONObject(journal.readText())
+        state.getJSONObject("matches").getJSONObject(old).put("at",System.currentTimeMillis()-70_000)
+        journal.writeText(state.toString())
+        val fresh="c".repeat(32)
+        assertTrue(send("I",fresh))
+        assertEquals("invite",FriendGames.find(receiver,fresh)?.optString("status"))
+        FriendGames.cancelInvitation(receiver,fresh)
+        FriendGames.remove(receiver,fresh)
+        assertTrue(send("I",fresh))
+        assertNull(FriendGames.find(receiver,fresh))
+    }
     private fun pair(game:String="naval"):Triple<Context,Context,String> {
         val a=device();val b=device();val id=FriendGames.invite(a,two,game)
         assertEquals(FriendGameWire.QUESTION,sent());assertTrue(FriendGames.receive(b,one,1,sent()));val app=sent();assertTrue(app.startsWith(FriendGameWire.APP))

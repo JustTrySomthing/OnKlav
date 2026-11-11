@@ -12,6 +12,34 @@ import org.robolectric.annotation.Config
 @RunWith(RobolectricTestRunner::class)
 @Config(sdk=[29])
 class RealSocialTest {
+    @Test fun reorderedCancellationCannotReopenAnInvitation() {
+        val c=carrierContext();val peer="+15550100003";val token="a".repeat(32)
+        fun receive(kind:String,id:String,sub:Int) = RealSocial.receive(c,peer,sub,
+            RealSocial.wire(JSONObject().put("kind",kind).put("token",token).put("id",id.repeat(32)).put("at",System.currentTimeMillis())))
+        assertTrue(receive("remove","b",1))
+        assertTrue(receive("invite","c",1))
+        assertEquals(0,RealSocial.snapshot(c).getJSONObject("friends").length())
+        assertTrue(receive("invite","c",2))
+        assertEquals("request",RealSocial.snapshot(c).getJSONObject("friends").getJSONObject(phoneKey(peer)).optString("status"))
+    }
+
+    @Test fun delayedOlderReactionDoesNotReplaceTheNewerReaction() {
+        val c=carrierContext();val peer="+15550100003";val token="a".repeat(32)
+        val now=System.currentTimeMillis()
+        fun packet(kind:String,id:String,at:Long)=JSONObject().put("kind",kind).put("token",token)
+            .put("id",id.repeat(32)).put("at",at)
+        RealSocial.receive(c,peer,1,RealSocial.wire(packet("invite","b",now)))
+        RealSocial.accept(c,phoneKey(peer))
+        RealSocial.post(c,"Me","A post","",null,"")
+        val post=RealSocial.snapshot(c).getJSONObject("posts").keys().next()
+        fun react(id:String,text:String,at:Long) = RealSocial.receive(c,peer,1,
+            RealSocial.wire(packet("reaction",id,at).put("post",post).put("text",text)))
+        assertTrue(react("c","👍",now))
+        assertTrue(react("d","❤️",now-1000))
+        val replies=RealSocial.snapshot(c).getJSONObject("posts").getJSONObject(post).getJSONObject("replies")
+        assertEquals(1,replies.length())
+        assertEquals("👍",replies.getJSONObject("c".repeat(32)).getString("text"))
+    }
     @Test fun packetRoundTripsUnicodeAndRejectsInvalidIdentifiers() {
         val packet=JSONObject().put("kind","post").put("token","a".repeat(32))
             .put("id","b".repeat(32)).put("text","Hello 🌱")

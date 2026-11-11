@@ -280,14 +280,27 @@ internal object RealSocial {
     private fun addReply(post: JSONObject, row: JSONObject): Boolean {
         val replies = table(post, "replies")
         if (row.optString("kind") == "reaction") {
-            values(replies).filter {
+            val previous=values(replies).filter {
                 it.optString("kind") == "reaction" && it.optString("peer") == row.optString("peer") &&
                     it.optString("target") == row.optString("target")
-            }.forEach { replies.remove(it.getString("id")) }
+            }
+            // Carrier delivery can reverse two reactions from the same sender.
+            if(row.has("sent_at")&&previous.any{it.optLong("sent_at")>row.getLong("sent_at")})return true
+            previous.forEach { replies.remove(it.getString("id")) }
         }
         if (replies.length() >= MAX_REPLIES) return false
         replies.put(row.getString("id"), row)
         return true
+    }
+
+    private fun cancellationKey(number:String,sub:Int,token:String)="$number:$sub:$token"
+
+    private fun rememberEarlyCancellation(s:JSONObject,number:String,sub:Int,token:String,at:Long) {
+        val time=now()
+        if(time-at !in -300_000L..HANDSHAKE)return
+        val cancelled=table(s,"early_cancellations")
+        if(cancelled.length()>=256)cancelled.keys().asSequence().minByOrNull{cancelled.optLong(it)}?.let{cancelled.remove(it)}
+        cancelled.put(cancellationKey(number,sub,token),time)
     }
 
     fun receive(c: Context, peer: String, sub: Int, text: String, file: File? = null, mime: String = ""): Boolean {
@@ -310,6 +323,8 @@ internal object RealSocial {
                     val f = friends.optJSONObject(number)
                     if (kind == "invite") {
                         if (table(s,"retired").has(token)) return@state false
+                        val cancelled=table(s,"early_cancellations")
+                        if(listOf(sub,-1).any{now()-cancelled.optLong(cancellationKey(number,it,token)) in 0..HANDSHAKE})return@state false
                         val status=f?.optString("status")
                         val stale=f!=null && (status=="unconfirmed" || (status in awaiting || status=="request") &&
                             f.optLong("at")>0 && now()-f.optLong("at")>=HANDSHAKE)
@@ -323,8 +338,11 @@ internal object RealSocial {
                         friends.put(number, JSONObject().put("peer",peer).put("sub",sub).put("token",token).put("status","request").put("at",now()).put("name",p.optString("name").take(60)))
                         return@state !s.optBoolean("muted")
                     }
-                    if (f == null || f.optString("token") != token ||
-                        sub >= 0 && f.optInt("sub", -1) >= 0 && sub != f.optInt("sub")) return@state false
+                    if (f == null || f.optString("token") != token) {
+                        if(kind=="remove")rememberEarlyCancellation(s,number,sub,token,p.optLong("at"))
+                        return@state false
+                    }
+                    if(sub >= 0 && f.optInt("sub", -1) >= 0 && sub != f.optInt("sub")) return@state false
                     if (kind == "remove") {
                         friends.remove(number); table(s,"retired").put(token,now()); removePosts(s, number)
                         cancelQueued(s, number)
@@ -364,12 +382,14 @@ internal object RealSocial {
                         if (post.optString("peer").isNotEmpty() && post.optString("peer") != number) return@state false
                         val body = p.optString("text")
                         if (body.isBlank() || body.toByteArray().size > 650 || kind=="reaction" && body !in reactions) return@state false
+                        val sentAt=p.optLong("at")
+                        if(now()-sentAt !in -300_000L..30*DAY)return@state false
                         val replies = table(post, "replies")
                         val target = p.optString("target")
                         val seen = table(s,"events")
                         if (seen.has(postId) || replies.has(postId) ||
                             target.isNotEmpty() && replies.optJSONObject(target)?.optString("kind") != "comment") return@state false
-                        if (!addReply(post, JSONObject().put("id",postId).put("peer",number).put("at",now())
+                        if (!addReply(post, JSONObject().put("id",postId).put("peer",number).put("at",now()).put("sent_at",sentAt)
                                 .put("kind",kind).put("target",target).put("text",body))) return@state false
                         if(seen.length()>=8192)seen.keys().asSequence().minByOrNull { seen.optLong(it) }?.let { seen.remove(it) }
                         seen.put(postId,now())
@@ -409,6 +429,8 @@ internal object RealSocial {
             val posts = table(s,"posts")
             val retired = table(s,"retired")
             retired.keys().asSequence().filter { now()-retired.optLong(it)>30*DAY }.toList().forEach { retired.remove(it) }
+            val cancelled=table(s,"early_cancellations")
+            cancelled.keys().asSequence().filter{now()-cancelled.optLong(it)>HANDSHAKE}.toList().forEach{cancelled.remove(it)}
             values(posts).filter { it.optString("peer").isNotEmpty() && now()-it.optLong("at") > 30*DAY }
                 .forEach { posts.remove(it.getString("id")) }
             posts.keys().asSequence().toSet()
@@ -447,7 +469,10 @@ internal object RealSocial {
         }) {
             jobs.remove(expired.getString("id"))
             val friend = friends.optJSONObject(phoneKey(expired.getString("peer")))
-            if (friend != null && isInitialVerification(friend, expired)) friend.put("status","unconfirmed")
+            if (friend != null && isInitialVerification(friend, expired)) {
+                if(friend.optString("status")=="fast")forget+=friend.getString("peer")
+                friend.put("status","unconfirmed")
+            }
         }
         for (friend in values(friends).filter { it.optString("status") in awaiting && it.optLong("at")>0 && time-it.optLong("at")>=HANDSHAKE }) {
             val peer=friend.getString("peer")
