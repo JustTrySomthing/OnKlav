@@ -155,12 +155,7 @@ fun MessengerSettings(section: String, close: () -> Unit) {
                 )
                 SettingsChoice("Block Number") {
                     job {
-                        store.request(
-                            JSONObject()
-                                .put("action", "blocked")
-                                .put("address", number)
-                                .put("blocked", true)
-                        )
+                        store.setBlocked(listOf(number), true)
                         number = ""
                     }
                 }
@@ -171,17 +166,12 @@ fun MessengerSettings(section: String, close: () -> Unit) {
                         val peer = blocked.getString(i)
                         SettingsChoice(peer, "Tap to unblock") {
                             job {
-                                store.request(
-                                    JSONObject()
-                                        .put("action", "blocked")
-                                        .put("address", peer)
-                                        .put("blocked", false)
-                                )
+                                store.setBlocked(listOf(peer), false)
                             }
                         }
                     }
                 Text(
-                    "Blocked senders are silenced by OnKlav. Phone messages are retained. Your current default messenger controls its own alerts.",
+                    "OnKlav moves blocked conversations to Trash and silences their alerts.",
                     fontSize = 13.sp,
                 )
             }

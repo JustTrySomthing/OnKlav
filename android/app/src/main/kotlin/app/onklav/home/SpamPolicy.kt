@@ -9,7 +9,8 @@ import androidx.compose.material3.TextButton
 import androidx.compose.runtime.*
 import androidx.compose.ui.platform.LocalContext
 import app.onklav.shared.*
-import org.json.JSONObject
+import kotlinx.coroutines.CancellationException
+import kotlinx.coroutines.launch
 
 /** Warning only; contact lookup stays off the UI thread and fails closed. */
 internal object SpamPolicy {
@@ -38,15 +39,24 @@ internal object SpamPolicy {
 }
 
 @Composable
-internal fun SpamWarning(peer:String) {
+internal fun SpamWarning(peer: String, thread: Long) {
     val c=LocalContext.current
+    val scope=rememberCoroutineScope()
     var open by remember {mutableStateOf(false)}
     var error by remember {mutableStateOf<String?>(null)}
     TextButton(onClick={open=true}){Text("Possible Spam · Review")}
     if(open) ReferenceDialog("Possible Spam",{open=false},footer={DialogAction("Close"){open=false}}){
         SettingsChoice("Trust Sender","Stop these warnings for this number") {runCatching{SpamPolicy.trust(c,peer);open=false}.onFailure{error=it.message}}
-        SettingsChoice("Block Sender","Silence this number in OnKlav") {ChatStore(c).saveLater(JSONObject().put("action","blocked").put("address",peer).put("blocked",true));open=false}
-        Text("Verify the sender before opening links or sharing information. No message has been moved or deleted.")
+        SettingsChoice("Block Sender", "Silence this sender and move their direct conversation to Trash") {
+            scope.launch {
+                try {
+                    ChatStore(c).setBlocked(listOf(peer), true, listOfNotNull(thread.takeIf { it > 0 }?.toString()))
+                    open = false
+                } catch (e: CancellationException) { throw e }
+                catch (e: Exception) { error = e.message ?: "Could not block this sender." }
+            }
+        }
+        Text("Verify the sender before opening links or sharing information.")
     }
     ErrorDialog(error){error=null}
 }

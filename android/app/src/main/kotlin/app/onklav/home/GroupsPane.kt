@@ -124,7 +124,7 @@ fun GroupsPane(setup: () -> Unit, incomingThread: Long = 0, intentEpoch: Int = 0
             val peers=targets.flatMap{activityRecipients(it.members,context.getSharedPreferences("profile",0).getString("phone","").orEmpty())}.distinct()
             BulkConversationActions(selected.size,folder,peers.isNotEmpty()&&peers.all{conversationBlocked(state,it)},
                 move={target->targets.forEach{change(it,"folder",target)};selected=emptySet();selecting=false},
-                block={value->job{peers.forEach{store.request(JSONObject().put("action","blocked").put("address",it).put("blocked",value))};selected=emptySet();selecting=false}},
+                block={value->job{state=store.setBlocked(peers,value,targets.map{it.key});selected=emptySet();selecting=false}},
                 done={selected=emptySet();selecting=false},
                 unread={targets.forEach{change(it,"unread",true)}},
                 delete=if(folder=="Trash")({deleting=targets})else null)
@@ -146,7 +146,7 @@ fun GroupsPane(setup: () -> Unit, incomingThread: Long = 0, intentEpoch: Int = 0
                     "${if(blocked)"Unblock"else"Block"} this group's other members in OnKlav? This also affects their direct messages.",
                     onArchive={change(g,"folder",if(folder=="Inbox")"Archive"else"Inbox")},
                     onDelete={if(folder=="Trash")deleting=listOf(g)else change(g,"folder","Trash")},
-                    onBlock={job{peers.forEach{peer->store.request(JSONObject().put("action","blocked").put("address",peer).put("blocked",!blocked))}}}) {
+                    onBlock={job{state=store.setBlocked(peers,!blocked,listOf(g.key))}}) {
                 Row(Modifier.fillMaxWidth().background(
                     groupSurface(MaterialTheme.colorScheme.surface, MaterialTheme.colorScheme.primary, unread, g.id in selected),
                     RoundedCornerShape(12.dp)).combinedClickable(onClick = {

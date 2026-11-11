@@ -23,7 +23,7 @@
     "core/src/history_resume.rs": "0b1fc0bdb2e8ad22c831f1fcb3ef90c5813a09b37f314b8774cb511ae171e095",
     "core/src/lib.rs": "b1da8db4c568906e1a1e238e784484e0e650b693c0a6293c169f470a0550997f",
     "core/src/library_backup.rs": "3e8f02106230c11f560484c295d59f86c36def82b954881517fb4cd834bba4da",
-    "core/src/messaging.rs": "7c9ceec471a45e55003d6975628c60e14e142288d69bc94fc465dc07a09bf1d9",
+    "core/src/messaging.rs": "2b67e3772d08949d74ddd1f3277ff947c161d5ef414377e0210aab01aa72cf96",
     "core/src/mms.rs": "c51902d8de009de9611c141247b8aa32950ca6ac376dcea834d2a94225d52c35",
     "core/src/reader_backup.rs": "8d536eff8dc136bb7ce8c8d08ae1523f04edba3c495499d0f567c76fc23be6ce",
     "core/src/sdk.rs": "9911c6f22b3f40c7f91f67c9ae9c488419c18d942b6dff2bf3b36f322f82159d",
@@ -54,10 +54,10 @@
     "core/src/weather_us_postal.rs": "bbe29940b1ce344a35380251ed582dafaaf9d3153e7f83b7ea2289e014940a8c"
   },
   "mobile_libraries_sha256": {
-    "arm64-v8a": "345b6ca49cb01057fa12315470981e2ef3ac0d2efca9f7a470b9e7d6b339b835"
+    "arm64-v8a": "efae3344ffde112936df3852a2c513d18afa5f0aa3e59fd473dfdd25de8908bb"
   },
-  "host_library_sha256": "5b06468791df49523782f37ea17205a0c2f49d690fad0ddda20178290a1cb687",
+  "host_library_sha256": "0aa80b1608fd4f55e5ff65bc5580e82072b3ea81a8a0c878109061c86d52d578",
   "ndk": "27.2.12479018",
   "rustflags": "-C link-arg=-Wl,-z,max-page-size=16384",
-  "rust_tests": "passed; see docs/evidence/v0.100.69/rust-tests.log"
+  "rust_tests": "passed; see docs/evidence/message-block-routing/rust-tests.log"
 }

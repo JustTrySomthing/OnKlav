@@ -443,10 +443,11 @@ fun MessengerPane(
             if (!repo.allowed())
                 OnKlavTextButton(onClick = setup) { Text("Set Up Messaging Access") }
             if (selecting) {
-                val peers=rows.filter{it.id in selected}.flatMap{it.address.split(';',',')}.filter{it.isNotBlank()}.distinct()
+                val targets=rows.filter{it.id in selected}
+                val peers=targets.flatMap{it.address.split(';',',')}.filter{it.isNotBlank()}.distinct()
                 BulkConversationActions(selected.size,folder,peers.isNotEmpty()&&peers.all{conversationBlocked(state,it)},
                     move={target->selected.forEach{threadChange(it,"folder",target)};selected=emptySet();selecting=false},
-                    block={value->launchJob{peers.forEach{store.request(JSONObject().put("action","blocked").put("address",it).put("blocked",value))};selected=emptySet();selecting=false;revision++}},
+                    block={value->launchJob{state=store.setBlocked(peers,value,targets.map{it.id.toString()});selected=emptySet();selecting=false;revision++}},
                     done={selected=emptySet();selecting=false})
             }
             val visible =
@@ -457,7 +458,7 @@ fun MessengerPane(
                             it.address.contains(search, true) ||
                             it.snippet.contains(search, true))
                 }
-            val trashed=state.child("threads").keysList().mapNotNull{it.toLongOrNull()}.filter{state.thread(it).optString("folder")=="Trash"}
+            val trashed=state.directTrashIds()
             if(folder=="Trash") TrashControls(trashed.isNotEmpty(),
                 restore={launchJob{for(id in trashed){if(store.snapshot().thread(id).optString("folder")=="Trash")store.request(JSONObject().put("action","thread").put("key",id.toString()).put("folder","Inbox"))};revision++}},empty={emptyTrash=true})
             LaunchedEffect(inboxList,address,folder,search){
@@ -490,7 +491,7 @@ fun MessengerPane(
                         "${if(blocked)"Unblock"else"Block"} the sender(s) of this conversation in OnKlav?",
                         onArchive={threadChange(row.id,"folder",if(folder=="Inbox")"Archive"else"Inbox")},
                         onDelete={if(folder=="Trash")permanentDelete=row else threadChange(row.id,"folder","Trash")},
-                        onBlock={launchJob{row.address.split(';').filter{it.isNotBlank()}.forEach{peer->store.request(JSONObject().put("action","blocked").put("address",peer).put("blocked",!blocked))};revision++}}) {
+                        onBlock={launchJob{state=store.setBlocked(row.address.split(';',','),!blocked,listOf(row.id.toString()));revision++}}) {
                     Surface(
                         Modifier.fillMaxWidth()
                             .combinedClickable(
@@ -611,7 +612,7 @@ fun MessengerPane(
                                         }
                                         if(p.mime.startsWith("video/"))MessageMediaAction("Video",if(!m.sent)sentColor(spec)else MaterialTheme.colorScheme.surface){mediaUri=p.uri}
                                     }
-                                    if (m.suspicious) SpamWarning(m.sender.ifBlank { address })
+                                    if (m.suspicious) SpamWarning(m.sender.ifBlank { address }, if (group == null) thread else 0)
                                     val messageDisplayText=if(playVideo!=null)MessageVideoLinks.displayText(m.text)else m.text
                                     if (messageDisplayText.isNotEmpty())
                                         Text(
@@ -762,7 +763,7 @@ fun MessengerPane(
         DialogAction("Empty trash",destructive=true){
             emptyTrash=false
             launchJob {
-                val latest=store.snapshot();val ids=latest.child("threads").keysList().mapNotNull{it.toLongOrNull()}.filter{latest.thread(it).optString("folder")=="Trash"}
+                val ids=store.snapshot().directTrashIds()
                 repo.emptyTrash(ids)
                 val survivors=ids.mapNotNull{repo.conversation(it)};rows=(rows.filterNot{it.id in ids}+survivors).distinctBy{it.id};ids.forEach{memory.windows.remove(it);memory.rawWindows.remove(it);memory.galleries.remove(it)}
                 revision++

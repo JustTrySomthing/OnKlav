@@ -135,13 +135,17 @@ class MessageRepository(private val context: Context) {
         givenName ?: firstNameFromDisplayName(contactName(number), number)
     }
 
-    /** Warm directories once, avoiding one Binder query per inbox row on cold entry. */
-    private fun warmDirectories() {
+    private fun warmCanonicalAddresses() {
         if(canonical.isEmpty())runCatching {
             resolver.query(Uri.parse("content://mms-sms/canonical-addresses"),arrayOf("_id","address"),null,null,null)?.use { c ->
                 var count=0;while(c.moveToNext() && count++<4000)canonical[c.getString(0)]=c.getString(1).orEmpty()
             }
         }
+    }
+
+    /** Warm directories once, avoiding one Binder query per inbox row on cold entry. */
+    private fun warmDirectories() {
+        warmCanonicalAddresses()
         if(!namesWarm && context.checkSelfPermission(Manifest.permission.READ_CONTACTS)==PackageManager.PERMISSION_GRANTED)runCatching {
             resolver.query(ContactsContract.CommonDataKinds.Phone.CONTENT_URI,arrayOf(ContactsContract.CommonDataKinds.Phone.NUMBER,ContactsContract.CommonDataKinds.Phone.DISPLAY_NAME),null,null,null)?.use{c->
                 var count=0;while(c.moveToNext() && count++<2000){val number=c.getString(0).orEmpty();val name=c.getString(1).orEmpty();if(name.isNotBlank())names[phoneKey(number)]=name}
@@ -168,6 +172,35 @@ class MessageRepository(private val context: Context) {
                         ?.use { if (it.moveToFirst()) it.getString(0) else null }?.also { if(canonical.size>4000)canonical.clear();canonical[id]=it }
             }
             .joinToString(";")
+
+    internal suspend fun directThreadKeys(peers: Collection<String>): Set<String> = withContext(Dispatchers.IO) {
+        if (!allowed()) return@withContext emptySet()
+        val wanted = peers.map(::phoneKey).toSet()
+        warmCanonicalAddresses()
+        val matches = runCatching {
+            resolver.query(
+                Telephony.Threads.CONTENT_URI.buildUpon().appendQueryParameter("simple", "true").build(),
+                arrayOf("_id", "recipient_ids"), "recipient_ids NOT LIKE ?", arrayOf("% %"), null,
+            )?.use { cursor ->
+                buildSet {
+                    while (cursor.moveToNext()) {
+                        currentCoroutineContext().ensureActive()
+                        val recipient = cursor.getString(1).orEmpty().trim()
+                        if (recipient.none(Char::isWhitespace) && phoneKey(addresses(recipient)) in wanted) {
+                            cursor.getLong(0).takeIf { it > 0 }?.let { add(it.toString()) }
+                        }
+                    }
+                }
+            }
+        }.getOrElse { if (it is CancellationException) throw it else null }
+        if (matches != null) return@withContext matches
+        // OEM fallback: verify that a real conversation exists before filing the resolved ID.
+        peers.mapNotNull { peer ->
+            val id = threadFor(peer)
+            if (id > 0 && runCatching { providerConversation(id)?.let { sameRecipients(it.address, peer) } }.getOrNull() == true) id.toString()
+            else null
+        }.toSet()
+    }
 
     /** Search all provider pages independently of the currently rendered page. */
     suspend fun searchConversations(snapshot:JSONObject,query:String):List<Conversation> {

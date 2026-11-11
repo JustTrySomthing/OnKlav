@@ -160,7 +160,7 @@ pub fn dispatch(root:&Path,j:&Value)->Result<Value>{
    let t=s.threads.entry(k).or_default();
    // Filing and its receipt share the atomic messenger state write. A recovered older
    // arrival cannot undo a later user Archive/Trash action or a newer receipt.
-   if at>t.last_incoming_at {t.last_incoming_at=at;if at>=t.read_at{t.unread=Some(true);t.read_at=at;}if blocked{if t.folder.is_empty()||t.folder=="Inbox"{t.folder="Archive".into();}}else{t.folder="Inbox".into();}}
+   if at>t.last_incoming_at {t.last_incoming_at=at;if at>=t.read_at{t.unread=Some(true);t.read_at=at;}t.folder=if blocked{"Trash"}else{"Inbox"}.into();}
   },
   "thread"=>{let k=identity(j)?;let t=s.threads.entry(k).or_default();if let Some(folder)=j["folder"].as_str(){if !["Inbox","Archive","Trash"].contains(&folder){return Err("Invalid folder".into())}t.folder=folder.into()}
    if let Some(v)=j["pinned"].as_bool(){t.pinned=v}if let Some(v)=j["muted"].as_bool(){t.muted=v}if let Some(v)=j["unread"].as_bool(){t.unread=Some(v);t.read_at=j["at"].as_u64().ok_or("Missing read timestamp")?;}
@@ -171,7 +171,23 @@ pub fn dispatch(root:&Path,j:&Value)->Result<Value>{
   },
   "draft"=>{let k=identity(j)?;let text=string(j,"text")?;if text.encode_utf16().count()>10000||plain(text,10000)!=text{return Err("Draft exceeds its limits".into())}if text.is_empty(){s.drafts.remove(&k);}else{s.drafts.insert(k,text.into());}},
   "draft_media"=>{let k=identity(j)?;let items=j["parts"].as_array().ok_or("Missing attachments")?;if items.len()>10{return Err("Use up to 10 attachments".into())}for p in items{if !crate::valid_id(p["file"].as_str().unwrap_or(""))||p["mime"].as_str().is_none_or(|s|s.len()>100){return Err("Invalid draft attachment".into())}}if items.is_empty(){s.media_drafts.remove(&k);}else{s.media_drafts.insert(k,items.clone());}},
-  "blocked"=>{let p=sender_key(string(j,"address")?)?;if j["blocked"].as_bool().ok_or("Missing block state")?{s.blocked.insert(p);}else{s.blocked.remove(&p);}},
+  "blocked"=>{
+   let blocked=j["blocked"].as_bool().ok_or("Missing block state")?;
+   let senders=if let Some(addresses)=j.get("addresses"){
+    let addresses=addresses.as_array().filter(|a|!a.is_empty()&&a.len()<=5000).ok_or("Invalid blocked senders")?;
+    addresses.iter().map(|a|sender_key(a.as_str().ok_or("Invalid sender identity")?)).collect::<Result<Vec<_>>>()?
+   }else{vec![sender_key(string(j,"address")?)?]};
+   if blocked {
+    s.blocked.extend(senders);
+    if let Some(threads)=j.get("threads") {
+     let threads=threads.as_array().filter(|a|a.len()<=5000).ok_or("Invalid blocked conversations")?;
+     for id in threads {
+      let id=id.as_str().filter(|v|v.parse::<u64>().is_ok_and(|n|n>0)||v.strip_prefix("group:").is_some_and(crate::valid_id)).ok_or("Invalid blocked conversation")?;
+      s.threads.entry(id.into()).or_default().folder="Trash".into();
+     }
+    }
+   } else {for sender in senders{s.blocked.remove(&sender);}}
+  },
   "stage"=>{
    let id=string(j,"id")?;if !crate::valid_id(id)||(s.outgoing.contains_key(id)||archived(root,id)?.is_some()){return Err("Duplicate or invalid send identity".into())}
    let addresses:Vec<String>=string(j,"address")?.split(';').map(phone).collect::<Result<_>>()?;if addresses.len()>10{return Err("Use up to 10 recipients".into())}let address=addresses.join(";");if addresses.iter().any(|a|s.blocked.contains(&block_key(a))){return Err("This recipient is blocked".into())}
@@ -219,7 +235,22 @@ pub fn dispatch(root:&Path,j:&Value)->Result<Value>{
   dispatch(d.path(),&arrival).unwrap();dispatch(d.path(),&json!({"action":"thread","key":"7","folder":"Trash","pinned":true,"muted":true})).unwrap();
   let replay=dispatch(d.path(),&arrival).unwrap();assert_eq!(replay["threads"]["7"]["folder"],"Trash");
   let fresh=dispatch(d.path(),&json!({"action":"arrival","key":"7","address":"BANK","at":101})).unwrap();assert_eq!(fresh["threads"]["7"]["folder"],"Inbox");assert_eq!(fresh["threads"]["7"]["pinned"],true);assert_eq!(fresh["threads"]["7"]["muted"],true);
-  dispatch(d.path(),&json!({"action":"blocked","address":"BANK","blocked":true})).unwrap();let blocked=dispatch(d.path(),&json!({"action":"arrival","key":"7","address":"BANK","at":102})).unwrap();assert_eq!(blocked["threads"]["7"]["folder"],"Archive");
+  dispatch(d.path(),&json!({"action":"blocked","address":"BANK","blocked":true})).unwrap();let blocked=dispatch(d.path(),&json!({"action":"arrival","key":"7","address":"BANK","at":102})).unwrap();assert_eq!(blocked["threads"]["7"]["folder"],"Trash");
+ }
+ #[test] fn blocking_files_selected_threads_atomically_and_unblocking_waits_for_a_new_message(){
+  let d=tempfile::tempdir().unwrap();
+  dispatch(d.path(),&json!({"action":"thread","key":"7","folder":"Archive","pinned":true,"muted":true})).unwrap();
+  let result=dispatch(d.path(),&json!({"action":"blocked","addresses":["+1 (555) 010-0003","BANK"],"threads":["7","0"],"blocked":true}));
+  assert!(result.is_err());let state=load(d.path()).unwrap();assert!(state.blocked.is_empty());assert_eq!(state.threads["7"].folder,"Archive");
+  let result=dispatch(d.path(),&json!({"action":"blocked","addresses":["+1 (555) 010-0003","BANK"],"threads":["7","8"],"blocked":true})).unwrap();
+  assert_eq!(result["threads"]["7"]["folder"],"Trash");assert_eq!(result["threads"]["8"]["folder"],"Trash");
+  assert_eq!(result["threads"]["7"]["pinned"],true);assert_eq!(result["threads"]["7"]["muted"],true);
+  let arrival=json!({"action":"arrival","key":"9","address":"5550100003","at":100});
+  assert_eq!(dispatch(d.path(),&arrival).unwrap()["threads"]["9"]["folder"],"Trash");
+  dispatch(d.path(),&json!({"action":"blocked","address":"5550100003","blocked":false})).unwrap();
+  assert_eq!(dispatch(d.path(),&arrival).unwrap()["threads"]["9"]["folder"],"Trash");
+  let fresh=dispatch(d.path(),&json!({"action":"arrival","key":"9","address":"5550100003","at":101})).unwrap();
+  assert_eq!(fresh["threads"]["9"]["folder"],"Inbox");
  }
  #[test] fn picker_reactions_persist_and_remove_without_rejecting_supported_emoji(){
  let d=tempfile::tempdir().unwrap();

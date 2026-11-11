@@ -6,6 +6,7 @@ import java.util.concurrent.Executors
 import kotlinx.coroutines.asCoroutineDispatcher
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.withContext
+import org.json.JSONArray
 import org.json.JSONObject
 
 /** Every messenger preference and send outcome passes through the actual Rust core. */
@@ -65,8 +66,7 @@ class ChatStore(context: Context) {
         } == true
         val folder = state.thread(thread).optString("folder", "Inbox").ifEmpty { "Inbox" }
         // Blocking must keep a fresh arrival out of Inbox, not just silence its alert.
-        // Retain the message in Archive; an already trashed/archived blocked thread stays there.
-        val target = if (blocked) { if (folder == "Inbox") "Archive" else folder } else "Inbox"
+        val target = if (blocked) "Trash" else "Inbox"
         if (thread > 0 && target != folder) {
             state = requestSync(JSONObject().put("action", "thread")
                 .put("key", thread.toString()).put("folder", target))
@@ -81,6 +81,16 @@ class ChatStore(context: Context) {
         withContext(dispatcher) { requestSync(value) }
 
     suspend fun snapshot(): JSONObject = request(JSONObject().put("action", "snapshot"))
+
+    internal suspend fun setBlocked(addresses: Collection<String>, blocked: Boolean, threads: Collection<String> = emptyList()): JSONObject {
+        val peers = addresses.map(String::trim).filter(String::isNotEmpty).distinctBy(::phoneKey)
+        require(peers.isNotEmpty()) { "Enter a sender to block or unblock." }
+        val targets = if (blocked) threads.toSet() + MessageRepository(app).directThreadKeys(peers) else emptySet()
+        val state = request(JSONObject().put("action", "blocked").put("blocked", blocked)
+            .put("addresses", JSONArray(peers)).put("threads", JSONArray(targets)))
+        targets.mapNotNull(String::toLongOrNull).forEach { MessageNotifications.cancel(app, it) }
+        return state
+    }
 
     fun saveLater(value: JSONObject) {
         executor.execute {
@@ -102,5 +112,11 @@ fun JSONObject.child(key: String): JSONObject = optJSONObject(key) ?: JSONObject
 fun JSONObject.keysList(): List<String> = keys().asSequence().toList()
 
 fun JSONObject.thread(id: Long): JSONObject = child("threads").child(id.toString())
+
+internal fun JSONObject.directTrashIds(): List<Long> {
+    val groupThreads = savedGroups().map { it.thread }.toSet()
+    return child("threads").keysList().mapNotNull(String::toLongOrNull)
+        .filter { it > 0 && it !in groupThreads && thread(it).optString("folder") == "Trash" }
+}
 
 fun JSONObject.flags(key: String): JSONObject = child("messages").child(key)

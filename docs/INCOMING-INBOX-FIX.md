@@ -1,6 +1,6 @@
 # New arrivals return deleted conversations to Inbox
 
-The prior Archive fix deliberately excluded Trash. The owner now requires every new unblocked SMS/MMS to appear in Inbox even after the old conversation was deleted. ChatStore.incomingThread now restores both folders and preserves pin/mute settings. New blocked arrivals in Inbox/default are retained in Archive; blocked Archive/Trash remain unchanged. Invalid thread IDs do not create metadata. Unblocking allows the next arrival to return normally.
+Every new unblocked SMS/MMS returns an archived or trashed conversation to Inbox, including after permanent deletion of its old messages. Blocking moves the selected conversations and matching direct threads to Trash in the same state write as the block. New messages from blocked senders go to Trash. Unblocking leaves the thread in Trash until a new unblocked message arrives or the user restores it. Folder changes preserve pin and mute settings. Invalid provider thread IDs do not create metadata.
 
 MessageNotifications.picturePending now checks the block list too, removes a preceding alert when a sender is blocked, and avoids a new download/retry alert. Conversation alerts already check the same block state.
 
