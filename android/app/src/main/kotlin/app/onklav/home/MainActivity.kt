@@ -295,7 +295,9 @@ fun OnKlavScreen(launchIntent: Intent? = null, intentEpoch: Int = 0,onReady:()->
         Box(Modifier.fillMaxWidth().height(420.dp)){GamesCatalog(friendPeer=peer){}}
     }}
     settingsRoute?.takeUnless { it in setOf("Apps","Games","Profile","Backups") }?.let { SettingsDialogs(it) { settingsRoute = null } }
-    OnKlavUpdateNotice(tab==2 && pageRoute==null && browserUrl==null && fileNote==null && gamePeer==null && settingsRoute==null && !appearance){settingsRoute="Check for updates"}
+    OnKlavUpdateNotice(tab==2 && pageRoute==null && catalogManagement==null && browserUrl==null &&
+        fileNote==null && gamePeer==null && settingsRoute==null && !appearance && !powerUnavailable && error==null
+    ){settingsRoute="Check for updates"}
     if (appearance) AppearanceDialog { appearance = false }
     if(powerUnavailable)AlertDialog(onDismissRequest={powerUnavailable=false},title={Text("Power access")},text={Text(if(PowerAccessibilityService.enabled(context))"Android has not connected Power yet. Wait a moment and tap Power again."else"Enable OnKlav Power in setup to use Android’s power menu.")},confirmButton={TextButton(onClick={powerUnavailable=false;platformSetup=true}){Text("Open setup")}},dismissButton={TextButton(onClick={powerUnavailable=false}){Text("Cancel")}})
     ErrorDialog(error) { error = null }

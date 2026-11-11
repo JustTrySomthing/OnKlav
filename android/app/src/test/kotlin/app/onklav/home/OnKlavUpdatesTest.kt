@@ -2,6 +2,8 @@ package app.onklav.home
 
 import android.content.Context
 import android.content.Intent
+import android.app.Application
+import android.os.Looper
 import androidx.core.content.FileProvider
 import androidx.test.core.app.ApplicationProvider
 import kotlinx.coroutines.*
@@ -11,6 +13,7 @@ import org.junit.Assert.*
 import org.junit.Test
 import org.junit.runner.RunWith
 import org.robolectric.RobolectricTestRunner
+import org.robolectric.Shadows.shadowOf
 import org.robolectric.annotation.Config
 import java.io.ByteArrayInputStream
 import java.io.File
@@ -45,6 +48,28 @@ class OnKlavUpdatesTest {
         val sdk=row(release(UpdateVersion.parse("0.101.99")!!)).put("assets",JSONArray())
         assertEquals(stable,UpdateFeed.select(JSONArray().put(sdk).put(row()).put(row(stable)),old,false))
         assertNull(UpdateFeed.select(JSONArray().put(row()),old,false))
+    }
+    @Test fun pendingUpdateSurvivesRestartDuringDailyCooldownUntilDismissed() {
+        val app=ApplicationProvider.getApplicationContext<Application>()
+        val prefs=app.getSharedPreferences("onklav-updates",0)
+        val current=UpdateVersion.parse(BuildConfig.VERSION_NAME)!!
+        val pending=release(current.copy(patch=current.patch+1,rc=1))
+        prefs.edit().putBoolean("previews",true).putString("available",pending.json().toString())
+            .putLong("checked",System.currentTimeMillis()).commit()
+        val first=OnKlavUpdateModel(app)
+        shadowOf(Looper.getMainLooper()).idle()
+        assertEquals(pending,first.ui.release)
+        assertTrue(first.ui.prompt)
+
+        val reopened=OnKlavUpdateModel(app)
+        shadowOf(Looper.getMainLooper()).idle()
+        assertTrue(reopened.ui.prompt)
+        reopened.dismissPrompt()
+
+        val dismissed=OnKlavUpdateModel(app)
+        shadowOf(Looper.getMainLooper()).idle()
+        assertEquals(pending,dismissed.ui.release)
+        assertFalse(dismissed.ui.prompt)
     }
     @Test fun unsafeMetadataCannotBecomeAnInstallCandidate() {
         val badUrl=row(release().copy(url="https://github.com/other/OnKlav/releases/evil.apk"))

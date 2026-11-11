@@ -159,16 +159,26 @@ class OnKlavUpdateModel(app:Application):AndroidViewModel(app) {
     var previews by mutableStateOf(prefs.getBoolean("previews",UpdateVersion.parse(BuildConfig.VERSION_NAME)?.rc!=null));private set
     init {
         task {
-            val saved=runCatching {OnKlavRelease.cached(JSONObject(prefs.getString("ready","").orEmpty()))}.getOrNull()
-            if(saved!=null&&saved.version>current()&&(previews||saved.version.rc==null)) {
+            val available=cachedRelease("available")
+            if(available!=null)ui=ui.copy(release=available,message=availableMessage(available),prompt=shouldPrompt(available))
+            else prefs.edit().remove("available").apply()
+            val saved=cachedRelease("ready")
+            if(saved!=null&&(available==null||available==saved)) {
                 val valid=withContext(Dispatchers.IO){runCatching{UpdateApk.verify(c,file,saved)}.isSuccess}
-                if(valid)ui=ui.copy(release=saved,ready=true,message="Update downloaded. Ready to install.")
+                if(valid)ui=ui.copy(release=saved,ready=true,message="Update downloaded. Ready to install.",prompt=shouldPrompt(saved))
                 else clearDownload()
             } else clearDownload()
             if(due())runCheck(true)
         }
     }
     private fun current()=requireNotNull(UpdateVersion.parse(BuildConfig.VERSION_NAME))
+    private fun cachedRelease(key:String):OnKlavRelease? {
+        val json=prefs.getString(key,null)?:return null
+        return runCatching {OnKlavRelease.cached(JSONObject(json))}.getOrNull()
+            ?.takeIf {it.version>current()&&(previews||it.version.rc==null)}
+    }
+    private fun shouldPrompt(release:OnKlavRelease)=automatic&&prefs.getString("notified",null)!=release.tag
+    private fun availableMessage(release:OnKlavRelease)="OnKlav ${release.version.label} is available."
     private fun due():Boolean {
         val now=System.currentTimeMillis();val last=prefs.getLong("checked",0)
         val online=c.getSystemService(ConnectivityManager::class.java)?.activeNetwork!=null
@@ -189,7 +199,11 @@ class OnKlavUpdateModel(app:Application):AndroidViewModel(app) {
     }
     fun automaticCheck(){if(due())task{runCheck(true)}}
     fun checkNow()=task{runCheck(false)}
-    fun changeAutomatic(value:Boolean){automatic=value;prefs.edit().putBoolean("automatic",value).apply()}
+    fun changeAutomatic(value:Boolean){
+        automatic=value;prefs.edit().putBoolean("automatic",value).apply()
+        ui=ui.copy(prompt=value&&ui.release?.let(::shouldPrompt)==true)
+        if(value)automaticCheck()
+    }
     fun changePreviews(value:Boolean){previews=value;prefs.edit().putBoolean("previews",value).apply();if(!ui.busy)checkNow()}
     fun dismissPrompt(){ui.release?.let{prefs.edit().putString("notified",it.tag).apply()};ui=ui.copy(prompt=false)}
     private fun clearDownload(){file.delete();prefs.edit().remove("ready").apply();ui=ui.copy(ready=false)}
@@ -197,10 +211,15 @@ class OnKlavUpdateModel(app:Application):AndroidViewModel(app) {
         prefs.edit().putLong("attempted",System.currentTimeMillis()).apply()
         if(!silent)ui=ui.copy(message="Checking GitHub…")
         val release=withContext(Dispatchers.IO){UpdateFeed.select(UpdateFeed.releases(),current(),previews)}
-        prefs.edit().putLong("checked",System.currentTimeMillis()).apply()
+        prefs.edit().putLong("checked",System.currentTimeMillis()).apply {
+            if(release==null)remove("available") else putString("available",release.json().toString())
+        }.apply()
         if(release!=ui.release){clearDownload()}
-        ui=ui.copy(release=release,message=if(release==null)"You’re up to date."else"OnKlav ${release.version.label} is available.",
-            prompt=silent&&release!=null&&prefs.getString("notified","")!=release.tag)
+        ui=ui.copy(release=release,message=when {
+            release==null->"You’re up to date."
+            ui.ready->"Update downloaded. Ready to install."
+            else->availableMessage(release)
+        },prompt=silent&&release?.let(::shouldPrompt)==true)
     }
     fun cancelDownload(){if(ui.downloading)job?.cancel()}
     fun download() {

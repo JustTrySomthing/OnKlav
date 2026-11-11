@@ -11,8 +11,12 @@ import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
+import androidx.lifecycle.Lifecycle
+import androidx.lifecycle.compose.LocalLifecycleOwner
+import androidx.lifecycle.repeatOnLifecycle
 import androidx.lifecycle.viewmodel.compose.viewModel
 import app.onklav.shared.*
+import kotlinx.coroutines.delay
 
 @Composable
 internal fun UpdateSettingsDialog(close:()->Unit) {
@@ -28,7 +32,7 @@ internal fun UpdateSettingsDialog(close:()->Unit) {
             Text("Installed: OnKlav ${BuildConfig.VERSION_NAME}",style=MaterialTheme.typography.titleMedium)
             Text("Get updates directly from OnKlav’s GitHub releases. Your apps, games, messages and settings stay on this phone.")
             PreferenceToggle("Check automatically",model.automatic){model.changeAutomatic(it)}
-            Text("Checks once a day when you open OnKlav. Updates download only when you choose.",style=MaterialTheme.typography.bodySmall)
+            Text("Checks daily while OnKlav is open and shows available updates on the Apps tab. Downloads start only when you choose.",style=MaterialTheme.typography.bodySmall)
             PreferenceToggle("Include release candidates",model.previews,enabled=!state.busy){model.changePreviews(it)}
             Button(onClick={model.checkNow()},enabled=!state.busy,modifier=Modifier.fillMaxWidth()) {Text(if(state.busy&&!state.downloading)"Checking…"else"Check for updates")}
             Text(state.message)
@@ -57,11 +61,20 @@ internal fun UpdateSettingsDialog(close:()->Unit) {
 @Composable
 internal fun OnKlavUpdateNotice(show:Boolean,open:()->Unit) {
     val model:OnKlavUpdateModel=viewModel()
+    val lifecycle=LocalLifecycleOwner.current.lifecycle
+    LaunchedEffect(show,model.automatic,lifecycle) {
+        if(show&&model.automatic)lifecycle.repeatOnLifecycle(Lifecycle.State.RESUMED) {
+            while(true) {
+                model.automaticCheck()
+                delay(60_000L)
+            }
+        }
+    }
     val release=model.ui.release
     if(show&&model.ui.prompt&&release!=null)AlertDialog(
         onDismissRequest={model.dismissPrompt()},
         title={Text("OnKlav update available")},
-        text={Text("Version ${release.version.label} is ready to download. Update OnKlav to get the latest improvements and fixes.")},
+        text={Text(if(model.ui.ready)"Version ${release.version.label} is ready to install." else "Version ${release.version.label} is ready to download.")},
         confirmButton={TextButton(onClick={model.dismissPrompt();open()}){Text("View update")}},
         dismissButton={TextButton(onClick={model.dismissPrompt()}){Text("Later")}},
     )
