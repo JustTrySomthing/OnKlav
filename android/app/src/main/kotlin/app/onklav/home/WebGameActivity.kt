@@ -6,6 +6,7 @@ import android.content.Intent
 import android.content.pm.ActivityInfo
 import android.content.res.Configuration
 import android.graphics.Color
+import android.media.AudioManager
 import android.net.Uri
 import android.os.Bundle
 import android.view.ViewGroup
@@ -14,6 +15,8 @@ import androidx.core.view.WindowCompat
 import androidx.core.view.WindowInsetsCompat
 import androidx.core.view.WindowInsetsControllerCompat
 import androidx.core.view.ViewCompat
+import androidx.webkit.WebViewCompat
+import androidx.webkit.WebViewFeature
 import android.webkit.*
 import android.widget.*
 import org.json.JSONObject
@@ -58,6 +61,7 @@ class WebGameActivity : androidx.activity.ComponentActivity() {
         // This process never opens the OnKlav Browser's profile or authentication cookies.
         if(!profileReady) { WebView.setDataDirectorySuffix("onklav-games");profileReady=true }
         super.onCreate(state)
+        volumeControlStream = AudioManager.STREAM_MUSIC
         WindowCompat.setDecorFitsSystemWindows(window,false)
         window.statusBarColor=Color.TRANSPARENT
         window.navigationBarColor=Color.TRANSPARENT
@@ -196,10 +200,15 @@ class WebGameActivity : androidx.activity.ComponentActivity() {
     }
     @Suppress("DEPRECATION", "SetJavaScriptEnabled")
     private fun startGame() {
-        if(!androidx.webkit.WebViewFeature.isFeatureSupported(androidx.webkit.WebViewFeature.DOCUMENT_START_SCRIPT)) {
+        if(!WebViewFeature.isFeatureSupported(WebViewFeature.DOCUMENT_START_SCRIPT)) {
             failed("Update Android System WebView to run shared games safely.");return
         }
         val view=WebView(this);web=view
+        if (intent.getBooleanExtra(GameAudioSettings.EXTRA_MUTED, false) &&
+            WebViewFeature.isFeatureSupported(WebViewFeature.MUTE_AUDIO)
+        ) {
+            WebViewCompat.setAudioMuted(view, true)
+        }
         gameReady=false
         val graphicsMonitor=if(isIncludedGame()) """
             window.addEventListener('webglcontextlost', function(event) {
@@ -208,7 +217,7 @@ class WebGameActivity : androidx.activity.ComponentActivity() {
                 console.log('ONKLAV_GAME_GRAPHICS_LOST');
             }, true);
         """.trimIndent() else ""
-        androidx.webkit.WebViewCompat.addDocumentStartJavaScript(view,graphicsMonitor+"\n"+GameWebPolicy.BOOTSTRAP+"window.onklavSaveBoot="+saveBoot.toString()+";window.onklavSaveReplies={};window.onklavHosted=true;window.onklavEntryProtocol=1;window.onklavLaunchAction="+JSONObject.quote(launchAction)+";window.onklavFreshStart="+(launchAction=="new")+";window.onklavFriend="+(friend?.toString()?:"null")+";",setOf(origin))
+        WebViewCompat.addDocumentStartJavaScript(view,graphicsMonitor+"\n"+GameWebPolicy.BOOTSTRAP+"window.onklavSaveBoot="+saveBoot.toString()+";window.onklavSaveReplies={};window.onklavHosted=true;window.onklavEntryProtocol=1;window.onklavLaunchAction="+JSONObject.quote(launchAction)+";window.onklavFreshStart="+(launchAction=="new")+";window.onklavFriend="+(friend?.toString()?:"null")+";",setOf(origin))
         with(view.settings) {
             javaScriptEnabled=true;domStorageEnabled=true;databaseEnabled=false
             allowFileAccess=false;allowContentAccess=false;allowFileAccessFromFileURLs=false;allowUniversalAccessFromFileURLs=false
@@ -499,7 +508,11 @@ class WebGameActivity : androidx.activity.ComponentActivity() {
             check(!hidden(context, true, id)) { "Restore this game in Manage games first." }
             val match=if(id in singlePlayerOnlyGames)null else friend ?: if(!fresh)FriendGames.resume(context,id)else null
             FriendGames.markCurrent(context,match)
-            context.startActivity(Intent(context,WebGameActivity::class.java).putExtra("game",id).putExtra("friend_match",match).putExtra("start_menu",fresh).addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT))
+            // The launcher owns this preference. Pass its current value into the games process.
+            context.startActivity(Intent(context,WebGameActivity::class.java)
+                .putExtra("game",id).putExtra("friend_match",match).putExtra("start_menu",fresh)
+                .putExtra(GameAudioSettings.EXTRA_MUTED, !GameAudioSettings.enabled(context))
+                .addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT))
             } catch(e:Exception) { android.widget.Toast.makeText(context,e.message?:"Could not open the saved game",android.widget.Toast.LENGTH_LONG).show() }
         }
     }

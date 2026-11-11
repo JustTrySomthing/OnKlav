@@ -147,28 +147,3 @@ fun SettingsDialogs(route: String, close: () -> Unit) {
     }
     ErrorDialog(error) { error=null }
 }
-
-@Composable
-fun GameSettingsDialog(close: () -> Unit) {
-    val c=LocalContext.current
-    val prefs=remember { c.getSharedPreferences("game_preferences",0) }
-    var sounds by rememberSaveable { mutableStateOf(prefs.getBoolean("sounds",true)) }
-    var timeout by rememberSaveable { mutableFloatStateOf(prefs.getInt("timeout",30).coerceIn(30,60).toFloat()) }
-    var error by remember { mutableStateOf<String?>(null) }
-    ReferenceDialog("Game Settings",close,footer={
-        DialogAction("Cancel",onClick=close)
-        DialogAction("Save") { runCatching {
-            check(prefs.edit().putBoolean("sounds",sounds).putInt("timeout",timeout.toInt()).commit()) { "Could not save game preferences" }
-            close()
-        }.onFailure { error=it.message } }
-    }) {
-        Column(Modifier.padding(20.dp)) {
-            PreferenceToggle("Game Sounds",sounds) { sounds=it }
-            Text("Compatibility Timeout · ${timeout.toInt()} seconds",Modifier.padding(top=20.dp),fontSize=16.sp)
-            AppearanceSlider(timeout,{ timeout=it },range=30f..60f,steps=5)
-            Text("A timeout means no response yet. Late confirmations are still accepted.",Modifier.padding(top=16.dp),fontSize=14.sp)
-            Text("Saved for the game ports. Multiplayer and game audio integration are still being completed.",Modifier.padding(top=12.dp),fontSize=13.sp,color=MaterialTheme.colorScheme.onSurfaceVariant)
-        }
-    }
-    ErrorDialog(error) { error=null }
-}

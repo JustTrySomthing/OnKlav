@@ -45,6 +45,29 @@ class GameEntryFlowTest {
         (field("entryDialog").get(a) as? AlertDialog)?.dismiss()
         val view=WebView(a);panel(a).addView(view);field("web").set(a,view);return view
     }
+    @Test fun eachGameLaunchCarriesTheCurrentGlobalMuteSetting() {
+        val controller = Robolectric.buildActivity(android.app.Activity::class.java).create()
+        val activity = controller.get()
+        val launched = Shadows.shadowOf(activity)
+        val prefs = activity.getSharedPreferences("game_preferences", android.content.Context.MODE_PRIVATE)
+        // An off value saved by the retired, unwired toggle must not silently mute an upgrade.
+        assertTrue(prefs.edit().clear().putBoolean("sounds", false).commit())
+        try {
+            WebGameActivity.launch(activity, "hockey", fresh = true)
+            assertFalse(launched.nextStartedActivity.getBooleanExtra(GameAudioSettings.EXTRA_MUTED, true))
+
+            assertTrue(GameAudioSettings.save(activity, enabled = false))
+            WebGameActivity.launch(activity, "hockey", fresh = true)
+            assertTrue(launched.nextStartedActivity.getBooleanExtra(GameAudioSettings.EXTRA_MUTED, false))
+
+            assertTrue(GameAudioSettings.save(activity, enabled = true))
+            WebGameActivity.launch(activity, GamePackages.LAST_LIGHT_ID, fresh = true)
+            assertFalse(launched.nextStartedActivity.getBooleanExtra(GameAudioSettings.EXTRA_MUTED, true))
+        } finally {
+            prefs.edit().clear().commit()
+            controller.destroy()
+        }
+    }
     @Test @Config(sdk=[29,35]) fun mainFrameHttpFailureOffersRetryWithoutChangingSave() {
         val saved=store("hockey");saved.commit(saved.begin(),"resume",JSONObject().put("score",3),1,true)
         val c=ready("hockey").visible();val a=c.get();val view=renderer(a);val callback=client(a)

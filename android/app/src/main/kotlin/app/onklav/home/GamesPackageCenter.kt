@@ -20,6 +20,8 @@ import kotlinx.coroutines.withContext
 @Composable
 fun GamesPackageCenter(exit:()->Unit) {
     val context=LocalContext.current;val scope=rememberCoroutineScope()
+    val supportsGlobalMute = remember { GameAudioSettings.supportsGlobalMute() }
+    var audioEnabled by remember { mutableStateOf(GameAudioSettings.enabled(context)) }
     val removedIds = removedCatalogIds(games = true)
     var removeIncluded by remember { mutableStateOf<PlatformGame?>(null) }
     var rows by remember { mutableStateOf<List<GamePackages.Game>>(emptyList()) }
@@ -56,6 +58,22 @@ fun GamesPackageCenter(exit:()->Unit) {
     Surface(Modifier.fillMaxSize(),color=MaterialTheme.colorScheme.background){Column(Modifier.fillMaxSize().windowInsetsPadding(WindowInsets.safeDrawing)){
         PackageManagementHeader("Games", busy, exit)
         Column(Modifier.weight(1f).verticalScroll(rememberScrollState()).padding(16.dp),verticalArrangement=Arrangement.spacedBy(12.dp)){
+            OutlinedCard(Modifier.fillMaxWidth()) {
+                Column(Modifier.padding(14.dp)) {
+                    if (supportsGlobalMute) {
+                        PreferenceToggle("Game Sounds", audioEnabled, enabled = !busy) { enabled ->
+                            if (GameAudioSettings.save(context, enabled)) audioEnabled = enabled
+                            else status = "Could not save game sound settings."
+                        }
+                    }
+                    Text(
+                        if (supportsGlobalMute) "Turn off music and sound effects in all games. Use the speaker icon in a game to adjust its own audio."
+                        else "Use the speaker icon in a game to adjust its music and sound effects.",
+                        style = MaterialTheme.typography.bodySmall,
+                        color = MaterialTheme.colorScheme.onSurfaceVariant,
+                    )
+                }
+            }
             Text("Included games",fontSize=20.sp)
             platformGames.forEach{g->OutlinedCard(Modifier.fillMaxWidth()){Column(Modifier.padding(14.dp)){
                 val removed = g.id in removedIds
